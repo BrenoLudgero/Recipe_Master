@@ -1,6 +1,6 @@
 function createRMOptionsFrame()
     local frame = CreateFrame("Frame")
-    frame.name = RecipeMaster
+    frame.name = RecipeMasterName
     InterfaceOptions_AddCategory(frame)
     return frame
 end

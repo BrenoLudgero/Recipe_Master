@@ -1,3 +1,4 @@
+RecipeMaster = CreateFrame("Frame")
 RecipeMasterName = GetAddOnMetadata("RecipeMaster", "Title")
 RecipeMasterVersion = GetAddOnMetadata("RecipeMaster", "Version")
 RecipeMasterAuthor = GetAddOnMetadata("RecipeMaster", "Author")
@@ -6,7 +7,7 @@ server = GetRealmName()
 
 SLASH_RM1 = "/rm"
 SlashCmdList["RM"] = function()
-    Settings.OpenToCategory(RecipeMaster)
+    Settings.OpenToCategory(RecipeMasterName)
 end
 
 local defaultPreferences = {

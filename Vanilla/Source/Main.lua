@@ -1,7 +1,7 @@
 -- © 2024 Breno Ludgero. All Rights Reserved.
 
 -- Runs the functions below when one of the registered in-game events occur
-frame:SetScript("OnEvent", function(_, event, ...)
+RecipeMaster:SetScript("OnEvent", function(_, event, ...)
     if handleRecipeMasterLoaded then
         handleRecipeMasterLoaded(event, ...)
         handleRecipeMasterLoaded = nil

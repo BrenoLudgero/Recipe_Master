@@ -1,9 +1,9 @@
-frame:RegisterEvent("ADDON_LOADED")
-frame:RegisterEvent("SKILL_LINES_CHANGED")
-frame:RegisterEvent("TRADE_SKILL_SHOW")
-frame:RegisterEvent("TRADE_SKILL_CLOSE")
-frame:RegisterEvent("CRAFT_SHOW")
-frame:RegisterEvent("CRAFT_CLOSE")
+RecipeMaster:RegisterEvent("ADDON_LOADED")
+RecipeMaster:RegisterEvent("SKILL_LINES_CHANGED")
+RecipeMaster:RegisterEvent("TRADE_SKILL_SHOW")
+RecipeMaster:RegisterEvent("TRADE_SKILL_CLOSE")
+RecipeMaster:RegisterEvent("CRAFT_SHOW")
+RecipeMaster:RegisterEvent("CRAFT_CLOSE")
 
 function handleRecipeMasterLoaded(event, addOnName) 
     if event == "ADDON_LOADED" and addOnName == "RecipeMaster" then
@@ -14,7 +14,7 @@ function handleRecipeMasterLoaded(event, addOnName)
         updateRecipeMasterSavedCharacters = nil
         createAllFrames()
         createAllFrames = nil
-        frame:UnregisterEvent("ADDON_LOADED")
+        RecipeMaster:UnregisterEvent("ADDON_LOADED")
     end
 end
 
