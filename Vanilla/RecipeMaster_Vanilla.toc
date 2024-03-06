@@ -1,0 +1,60 @@
+## Interface: 11501
+## Version: 1.0.0
+
+## Title: Recipe Master
+## Title-esMX: Maestro de Recetas
+## Title-esES: Maestro de Recetas
+## Title-ptBR: Mestre das Receitas
+## Title-deDE: Rezeptmeister
+## Title-frFR: Maître des Recettes
+## Title-ruRU: Мастер Рецептов
+## Title-koKR: 레시피 마스터
+## Title-zhTW: 食譜大師
+## Title-zhCN: 食谱大师
+
+## Notes: Track your learned and missing recipes to master your professions!
+## Notes-esMX: ¡Lleva un registro de tus recetas aprendidas y las que te faltan para dominar tus profesiones!
+## Notes-esES: ¡Lleva un registro de tus recetas aprendidas y las que te faltan para dominar tus profesiones!
+## Notes-ptBR: Acompanhe as receitas que você aprendeu e as que estão faltando para dominar suas profissões!
+## Notes-deDE: Verfolge deine erlernten und fehlenden rezepte um deine berufe zu meistern!
+## Notes-frFR: Suivez vos recettes apprises et manquantes pour maîtriser vos professions!
+## Notes-ruRU: Отслеживайте выученные и отсутствующие рецепты чтобы овладеть своими профессиями!
+## Notes-koKR: 당신의 전문 기술을 마스터하기 위해 학습한 레시피와 부족한 레시피를 추적하세요!
+## Notes-zhTW: 跟蹤你學到的食譜和你錯過的食譜，以掌握你的職業！
+## Notes-zhCN: 跟踪你学到的食谱和你错过的食谱，以掌握你的职业！
+
+## Author: Breno Ludgero
+
+## SavedVariables: RecipeMasterProfessionsAndSkills, RecipeMasterPreferences
+
+Source/RecipeDatabase/Alchemy.lua
+Source/RecipeDatabase/Blacksmithing.lua
+Source/RecipeDatabase/Cooking.lua
+Source/RecipeDatabase/Enchanting.lua
+Source/RecipeDatabase/Engineering.lua
+Source/RecipeDatabase/Firstaid.lua
+Source/RecipeDatabase/Fishing.lua
+Source/RecipeDatabase/Leatherworking.lua
+Source/RecipeDatabase/Mining.lua
+Source/RecipeDatabase/Tailoring.lua
+
+Source/Initialization.lua
+Source/Interface/FrameSettings.lua
+Source/Localization.lua
+Source/Globals.lua
+
+Source/Handlers/Utils.lua
+Source/Handlers/ProfessionHandler.lua
+Source/Handlers/SkillHandler.lua
+Source/Handlers/RecipeHandler.lua
+
+Source/Interface/MainFrameSetup.lua
+Source/Interface/MainFrameCreation.lua
+Source/Interface/OptionsFrameSetup.lua
+Source/Interface/OptionsFrameCreation.lua
+Source/Interface/Frames.lua
+Source/Interface/FrameHandler.lua
+Source/Interface/RecipeDisplay.lua
+
+Source/Handlers/EventHandler.lua
+Source/Main.lua
