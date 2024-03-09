@@ -1,257 +1,260 @@
-function createRMFrame()
-    local mainFrame = CreateFrame("Frame", nil, nil, templates.mainFrame)
-    mainFrame:SetBackdrop(backdrops.mainFrame)
-    mainFrame:SetBackdropColor(unpack(colors.mainBackground))
+local _, rm = ...
+local L = rm.L
+
+function rm.createFrame()
+    local mainFrame = CreateFrame("Frame", nil, nil, L.templates.mainFrame)
+    mainFrame:SetBackdrop(L.backdrops.mainFrame)
+    mainFrame:SetBackdropColor(unpack(L.colors.mainBackground))
     mainFrame:SetFrameLevel(7)
     mainFrame:SetClampedToScreen(true)
     mainFrame:EnableMouse(true)
-    mainFrame:SetWidth(sizes.mainWidth)
+    mainFrame:SetWidth(L.sizes.mainWidth)
     mainFrame:Hide()
     return mainFrame
 end
 
-function createRMBorder(parent)
-    local border = CreateFrame("Frame", nil, parent, templates.mainFrameBorder)
+function rm.createBorder(parent)
+    local border = CreateFrame("Frame", nil, parent, L.templates.mainFrameBorder)
     local button = border.CloseButton
     local buttonWidth = button:GetWidth()
     local buttonHeight = button:GetHeight()
     border:SetPoint("TOPLEFT", parent, 2.5, 0)
     border:SetPoint("BOTTOMRIGHT", parent, 0, 2)
-    setUpRMButtonWithTooltip(button, buttonWidth, buttonHeight, strings.hideWindowTooltip, function(button, button, down)
-        autoOpenRecipeMaster = false
-        restoreButton:Show()
-        mainFrame:Hide()
+    rm.setUpButtonWithTooltip(button, buttonWidth, buttonHeight, L.strings.hideWindowTooltip, function(button, button, down)
+        rm.autoOpenRecipesFrame = false
+        rm.restoreButton:Show()
+        rm.mainFrame:Hide()
     end)
     return border
 end
 
-function createRMHeader(parent)
+function rm.createHeader(parent)
     local header = CreateFrame("Frame", nil, parent)
     local frameLevel = parent:GetFrameLevel() - 1
     header:SetPoint("LEFT", parent, "LEFT")
-    header:SetPoint("TOP", parent, "TOP", offsets.headerX, offsets.headerY)
-    header:SetHeight(sizes.headerTextureHeight)
+    header:SetPoint("TOP", parent, "TOP", L.offsets.headerX, L.offsets.headerY)
+    header:SetHeight(L.sizes.headerTextureHeight)
     header:SetFrameLevel(frameLevel)
     local texture = header:CreateTexture(nil)
-    texture:SetTexture(textures.header, "REPEAT", "REPEAT")
+    texture:SetTexture(L.textures.header, "REPEAT", "REPEAT")
     texture:SetHorizTile(true)
     texture:SetAllPoints(header)
     return header
 end
 
-function createRMHeaderText(parent)
-    local text = parent:CreateFontString(nil, "OVERLAY", fonts.header)
-    text:SetText(RecipeMasterName)
-    text:SetTextColor(unpack(colors.yellow))
-    text:SetPoint("CENTER", 0, offsets.headerTextY)
+function rm.createHeaderText(parent)
+    local text = parent:CreateFontString(nil, "OVERLAY", L.fonts.header)
+    text:SetText(L.title)
+    text:SetTextColor(unpack(L.colors.yellow))
+    text:SetPoint("CENTER", 0, L.offsets.headerTextY)
     return text
 end
 
-function createRMInnerBorder(parent)
-    local innerBorder = CreateFrame("Frame", nil, parent, templates.innerBorder)
+function rm.createInnerBorder(parent)
+    local innerBorder = CreateFrame("Frame", nil, parent, L.templates.innerBorder)
     local frameLevel = parent:GetFrameLevel() + 2
-    innerBorder:SetPoint("TOPLEFT", header, "BOTTOMLEFT", 1, 0)
-    innerBorder:SetPoint("BOTTOMRIGHT", mainFrameBorder, "BOTTOMRIGHT", -3.2, 2)
+    innerBorder:SetPoint("TOPLEFT", rm.header, "BOTTOMLEFT", 1, 0)
+    innerBorder:SetPoint("BOTTOMRIGHT", rm.mainFrameBorder, "BOTTOMRIGHT", -3.2, 2)
     innerBorder:SetFrameLevel(frameLevel)
-    matchParentHeight(innerBorder)
+    rm.matchParentHeight(innerBorder)
     return innerBorder
 end
 
-function createRMProgressContainer(parent)
-    local progressContainer = CreateFrame("Frame", nil, parent, templates.innerBorder)
+function rm.createProgressContainer(parent)
+    local progressContainer = CreateFrame("Frame", nil, parent, L.templates.innerBorder)
     local frameStrata = parent:GetFrameStrata()
     local frameLevel = parent:GetFrameLevel() + 1
-    progressContainer:SetSize(parent:GetWidth(), sizes.progressContainerHeight)
+    progressContainer:SetSize(parent:GetWidth(), L.sizes.progressContainerHeight)
     progressContainer:SetPoint("BOTTOM", parent, "BOTTOM", 0, 4)
-    progressContainer:SetPoint("LEFT", mainFrameBorder, 1.8, 0)
-    progressContainer:SetPoint("RIGHT", mainFrameBorder, -4.3, 0)
+    progressContainer:SetPoint("LEFT", rm.mainFrameBorder, 1.8, 0)
+    progressContainer:SetPoint("RIGHT", rm.mainFrameBorder, -4.3, 0)
     progressContainer:SetFrameStrata(frameStrata)
     progressContainer:SetFrameLevel(frameLevel)
     return progressContainer
 end
 
-function createRMDivider(parent)
-    local divider = CreateFrame("Frame", nil, parent, templates.divider)
+function rm.createDivider(parent)
+    local divider = CreateFrame("Frame", nil, parent, L.templates.divider)
     local frameLevel = parent:GetFrameLevel() + 2
-    divider:SetSize(parent:GetWidth(), sizes.dividerHeight)
+    divider:SetSize(parent:GetWidth(), L.sizes.dividerHeight)
     divider:SetFrameLevel(frameLevel)
-    divider:SetPoint("BOTTOM", parent, "BOTTOM", 0, offsets.dividerY)
+    divider:SetPoint("BOTTOM", parent, "BOTTOM", 0, L.offsets.dividerY)
     divider:SetPoint("LEFT", parent, "LEFT", -0.1, 0)
     divider:SetPoint("RIGHT", parent, "RIGHT", 0.2, 0)
     return divider
 end
 
-function createRMScrollFrame(parent)
-    local scroll = CreateFrame("ScrollFrame", nil, parent, templates.scrollFrame)
-    scroll:SetPoint("TOPLEFT", header, "BOTTOMLEFT", -0.5, -5.7)
-    scroll:SetPoint("BOTTOMRIGHT", divider, "TOPRIGHT", 0, 4.5)
-    scroll:SetPoint("RIGHT", mainFrameBorder, "RIGHT", -31.5, 0)
+function rm.createScrollFrame(parent)
+    local scroll = CreateFrame("ScrollFrame", nil, parent, L.templates.scrollFrame)
+    scroll:SetPoint("TOPLEFT", rm.header, "BOTTOMLEFT", -0.5, -5.7)
+    scroll:SetPoint("BOTTOMRIGHT", rm.divider, "TOPRIGHT", 0, 4.5)
+    scroll:SetPoint("RIGHT", rm.mainFrameBorder, "RIGHT", -31.5, 0)
     return scroll
 end
 
-function createRMRecipeContainerFrame(parent)
+function rm.createRecipeContainerFrame(parent)
     local recipeContainer = CreateFrame("Frame", nil, parent)
-    recipeContainer:SetSize(1, 1) -- Sizes are adjusted dynamically
+    recipeContainer:SetSize(1, 1) -- L.Sizes are adjusted dynamically
     recipeContainer.children = {}
     return recipeContainer
 end
 
-function createRMSearchBar(parent)
-    local searchBar = CreateFrame("EditBox", nil, parent, templates.search)
+function rm.createSearchBar(parent)
+    local searchBar = CreateFrame("EditBox", nil, parent, L.templates.search)
     local font = searchBar:GetFont()
     local frameLevel = parent:GetFrameLevel() + 1
-    searchBar:SetSize(sizes.searchWidth, sizes.searchHeight)
+    searchBar:SetSize(L.sizes.searchWidth, L.sizes.searchHeight)
     searchBar:SetFrameLevel(frameLevel)
-    searchBar:SetPoint("CENTER", parent, "LEFT", offsets.searchX, offsets.searchY)
-    searchBar:SetFont(font, fontSizes.search, "")
-    displayPlaceholderTextBasedOnFocus(searchBar)
-    showMatchingRecipesOnTop(searchBar)
+    searchBar:SetPoint("CENTER", parent, "LEFT", L.offsets.searchX, L.offsets.searchY)
+    searchBar:SetFont(font, L.fontSizes.search, "")
+    rm.displayPlaceholderTextBasedOnFocus(searchBar)
+    rm.showMatchingRecipesOnTop(searchBar)
     return searchBar
 end
 
-function createRMSortBar(parent)
-    local sortBar = CreateFrame("Button", nil, parent, templates.dropdown)
-    local font = searchBar:GetFont()
+function rm.createSortBar(parent)
+    local sortBar = CreateFrame("Button", nil, parent, L.templates.dropdown)
+    local font = rm.searchBar:GetFont()
     local frameLevel = parent:GetFrameLevel() + 1
     sortBar:SetScale(0.73)
     sortBar:SetFrameLevel(frameLevel)
-    sortBar:SetPoint("RIGHT", parent, "RIGHT", offsets.sortBarX, offsets.sortBarY)
-    sortBar.Text:SetFont(font, fontSizes.sortBar, "")
+    sortBar:SetPoint("RIGHT", parent, "RIGHT", L.offsets.sortBarX, L.offsets.sortBarY)
+    sortBar.Text:SetFont(font, L.fontSizes.sortBar, "")
     sortBar.Text:SetPoint("CENTER", 0, 2.5)
     sortBar.values = {
         {text = NAME, value = "Name"},
         {text = QUALITY, value = "Quality"},
         {text = SKILL, value = "Skill"}
     }
-    UIDropDownMenu_SetWidth(sortBar, sizes.sortBarWidth)
-    handleSortingOptions(sortBar)
-    setInitialDropdownValue(sortBar, "sortRecipesBy")
+    UIDropDownMenu_SetWidth(sortBar, L.sizes.sortBarWidth)
+    rm.handleSortingOptions(sortBar)
+    rm.setInitialDropdownValue(sortBar, "sortRecipesBy")
     return sortBar
 end
 
-function createRMSortByText(parent)
-    local text = parent:CreateFontString(nil, "OVERLAY", fonts.header)
-    text:SetText(strings.sortBy)
-    text:SetTextColor(unpack(colors.yellow))
-    text:SetPoint("RIGHT", parent, "LEFT", offsets.sortTextX, offsets.sortTextY)
+function rm.createSortByText(parent)
+    local text = parent:CreateFontString(nil, "OVERLAY", L.fonts.header)
+    text:SetText(L.strings.sortBy)
+    text:SetTextColor(unpack(L.colors.yellow))
+    text:SetPoint("RIGHT", parent, "LEFT", L.offsets.sortTextX, L.offsets.sortTextY)
     return text
 end
 
-function createRMSortOrderButton(parent)
+function rm.createSortOrderButton(parent)
     local button = CreateFrame("Button", nil, parent)
     local frameLevel = parent:GetFrameLevel() + 1
     button:SetFrameLevel(frameLevel)
-    button:SetSize(sizes.sortOrderButton, sizes.sortOrderButton)
-    button:SetPoint("CENTER", parent, "RIGHT", offsets.sortOrderX, offsets.sortOrderY)
-    button:SetNormalTexture(textures.sortOrderButton)
+    button:SetSize(L.sizes.sortOrderButton, L.sizes.sortOrderButton)
+    button:SetPoint("CENTER", parent, "RIGHT", L.offsets.sortOrderX, L.offsets.sortOrderY)
+    button:SetNormalTexture(L.textures.sortOrderButton)
     local texture = button:CreateTexture()
-    texture:SetTexture(textures.sortOrderArrow)
+    texture:SetTexture(L.textures.sortOrderArrow)
     texture:SetDrawLayer("OVERLAY")
-    updateArrowOrientation(texture)
-    updateSortOrderOnClick(button, texture)
+    rm.updateArrowOrientation(texture)
+    rm.updateSortOrderOnClick(button, texture)
     return button
 end
 
-function createRMProgressBar(parent)
+function rm.createProgressBar(parent)
     local progressBar = CreateFrame("StatusBar", nil, parent)
     local frameLevel = parent:GetFrameLevel() - 1
-    progressBar:SetSize(parent:GetWidth(), sizes.progressHeight)
-    progressBar:SetStatusBarTexture(RecipeMasterPreferences["progressTexture"])
+    progressBar:SetSize(parent:GetWidth(), L.sizes.progressHeight)
+    progressBar:SetStatusBarTexture(rm.getPreference("progressTexture"))
     progressBar:SetMinMaxValues(0, 100)
     progressBar:SetFrameLevel(frameLevel)
     progressBar:SetPoint("CENTER", parent, "CENTER", 0, 0)
     progressBar:SetPoint("LEFT", parent)
     progressBar:SetPoint("RIGHT", parent)
     local background = progressBar:CreateTexture(nil, "BACKGROUND")
-    background:SetTexture(textures.mainBackground)
+    background:SetTexture(L.textures.mainBackground)
     background:SetAllPoints(progressBar)
     return progressBar
 end
 
-function createRMProgressBarText(parent)
-    local text = parent:CreateFontString(nil, "OVERLAY", fonts.header)
+function rm.createProgressBarText(parent)
+    local text = parent:CreateFontString(nil, "OVERLAY", L.fonts.header)
     text:SetPoint("CENTER", 0, 0)
-    text:SetTextColor(unpack(colors.progressText))
+    text:SetTextColor(unpack(L.colors.progressText))
     return text
 end
 
-function createRMBottomTab(label, anchor, xOffset, active)
-    local tab = CreateFrame("Button", nil, mainFrame)
-    local frameLevel = mainFrame:GetFrameLevel() - 1
-    tab:SetSize(sizes.tabWidth, sizes.tabHeight)
+function rm.createBottomTab(label, anchor, xOffset, active)
+    local tab = CreateFrame("Button", nil, rm.mainFrame)
+    local frameLevel = rm.mainFrame:GetFrameLevel() - 1
+    tab:SetSize(L.sizes.tabWidth, L.sizes.tabHeight)
     tab:SetFrameLevel(frameLevel)
-    tab:SetPoint("TOP", mainFrameBorder, anchor, xOffset, 0)
+    tab:SetPoint("TOP", rm.mainFrameBorder, anchor, xOffset, 0)
     tab.active = active
     local texture = tab:CreateTexture()
-    texture:SetPoint("CENTER", tab, offsets.tabTextureX, offsets.tabTextureY)
-    texture:SetSize(sizes.tabTextureWidth, sizes.tabTextureHeight)
-    texture:SetTexture(textures.bottomTab)
-    tab.texture = texture
+    texture:SetPoint("CENTER", tab, L.offsets.tabTextureX, L.offsets.tabTextureY)
+    texture:SetSize(L.sizes.tabTextureWidth, L.sizes.tabTextureHeight)
+    texture:SetTexture(L.textures.bottomTab)
     if not tab.active then
         texture:SetDesaturated(true)
     end
+    tab.texture = texture
     local text = tab:CreateFontString(nil, "OVERLAY")
-    text:SetFont(fonts.bottomTab, fontSizes.bottomTab, "OUTLINE")
+    text:SetFont(L.fonts.bottomTab, L.fontSizes.bottomTab, "OUTLINE")
     text:SetText(label)
-    text:SetPoint("CENTER", texture, offsets.tabTextX, offsets.tabTextY)
+    text:SetPoint("CENTER", texture, L.offsets.tabTextX, L.offsets.tabTextY)
     tab.label = text:GetText()
-    table.insert(bottomTabs, tab)
-    handleTabSwitching(tab)
+    table.insert(rm.bottomTabs, tab)
+    rm.handleTabSwitching(tab)
     return tab
 end
 
-function createRMRestoreButton()
+function rm.createRestoreButton()
     local button = CreateFrame("Button", nil)
-    button.texture = button:CreateTexture()
-    button.texture:SetTexture(RecipeMasterPreferences["restoreButtonIconTexture"])
-    button.texture:SetAllPoints(button)
-    setUpRMButtonWithTooltip(button, sizes.restoreButton, sizes.restoreButton, RecipeMasterName, function(self, button, down)
-        autoOpenRecipeMaster = true
+    rm.setUpButtonWithTooltip(button, L.sizes.restoreButton, L.sizes.restoreButton, L.title, function(self, button, down)
+        rm.autoOpenRecipesFrame = true
         self:Hide()
-        mainFrame:Show()
+        rm.mainFrame:Show()
     end)
+    button.texture = button:CreateTexture()
+    button.texture:SetTexture(rm.getPreference("restoreButtonIconTexture"))
+    button.texture:SetAllPoints(button)
     return button
 end
 
 local function createRowIcon(recipe, yOffset)
-    local icon = recipeContainer:CreateTexture(nil)
+    local icon = rm.recipeContainer:CreateTexture(nil)
     icon:SetTexture(recipe.texture)
-    icon:SetSize(sizes.recipeIcon, sizes.recipeIcon)
-    icon:SetPoint("TOP", recipeContainer, "BOTTOMLEFT", offsets.recipeIconX, yOffset)
-    displayTooltipOnMouseover(icon, recipe)
-    chatLinkOnShiftClick(icon, recipe)
+    icon:SetSize(L.sizes.recipeIcon, L.sizes.recipeIcon)
+    icon:SetPoint("TOP", rm.recipeContainer, "BOTTOMLEFT", L.offsets.recipeIconX, yOffset)
+    rm.displayTooltipOnMouseover(icon, recipe)
+    rm.chatLinkOnShiftClick(icon, recipe)
     return icon
 end
 
 local function createRowText(recipe, rowIcon, red, green, blue)
-    local text = recipeContainer:CreateFontString(nil, "OVERLAY", fonts.recipeText)
+    local text = rm.recipeContainer:CreateFontString(nil, "OVERLAY", L.fonts.recipeText)
     text:SetText(recipe.name)
     text:SetTextColor(red, green, blue)
-    text:SetPoint("LEFT", rowIcon, "RIGHT", offsets.recipeTextX, 0)
+    text:SetPoint("LEFT", rowIcon, "RIGHT", L.offsets.recipeTextX, 0)
     text.associatedIcon = rowIcon
     return text
 end
 
 local function storeWidestRecipeTextWidth(recipeTextWidth)
-    if recipeTextWidth > widestRecipeTextWidth then
-        widestRecipeTextWidth = recipeTextWidth
+    if recipeTextWidth > rm.widestRecipeTextWidth then
+        rm.widestRecipeTextWidth = recipeTextWidth
     end
 end
 
-function createRecipeRow(recipe, red, green, blue, desaturateIcon)
-    local yOffset = -(displayedRecipesCount * (sizes.recipeIcon + RecipeMasterPreferences["rowSpacing"]))
+function rm.createRecipeRow(recipe, red, green, blue, desaturateIcon)
+    local yOffset = -(rm.displayedRecipesCount * (L.sizes.recipeIcon + rm.getPreference("rowSpacing")))
     local rowIcon = createRowIcon(recipe, yOffset)
     rowIcon:SetDesaturated(desaturateIcon)
     local rowText = createRowText(recipe, rowIcon, red, green, blue)
     local recipeTextWidth = rowText:GetWidth()
     storeWidestRecipeTextWidth(recipeTextWidth)
-    table.insert(recipeContainer.children, rowText)
-    displayedRecipesCount = displayedRecipesCount + 1
+    table.insert(rm.recipeContainer.children, rowText)
+    rm.displayedRecipesCount = rm.displayedRecipesCount + 1
 end
 
-function createRMCenteredText(parent)
+function rm.createCenteredText(parent)
     local text = parent:CreateFontString(nil, "OVERLAY")
-    text:SetFont(fonts.bottomTab, fontSizes.centeredText, "OUTLINE")
+    text:SetFont(L.fonts.bottomTab, L.fontSizes.centeredText, "OUTLINE")
     text:SetPoint("CENTER", parent)
     text:Hide()
     return text

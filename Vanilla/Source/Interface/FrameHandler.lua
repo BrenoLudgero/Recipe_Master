@@ -1,4 +1,7 @@
-function getProfessionFrame()
+local _, rm = ...
+local L = rm.L
+
+function rm.getProfessionFrame()
     local frame = false
     if SkilletFrame and SkilletFrame:IsVisible() then
         frame = SkilletFrame
@@ -14,74 +17,75 @@ local function updateSizesAndOffsetsBasedOnParent(professionFrame)
     local yOffset = 73
     if professionFrame == SkilletFrame then
         yOffset = 0
-        offsets.mainX = 0
-        offsets.mainY = 0
-        offsets.headerY = -33
-        offsets.restoreButtonX = 0.5
-        offsets.restoreButtonY = -16
-        sizes.headerTextureHeight = 40
+        L.offsets.mainX = 0
+        L.offsets.mainY = 0
+        L.offsets.headerY = -33
+        L.offsets.restoreButtonX = 0.5
+        L.offsets.restoreButtonY = -16
+        L.sizes.headerTextureHeight = 40
     end
-    mainFrame:SetScript("OnUpdate", function(self, elapsed)
+    rm.mainFrame:SetScript("OnUpdate", function(self, elapsed)
         local parentScale = professionFrame:GetEffectiveScale()
-        self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", offsets.mainX * parentScale, offsets.mainY * parentScale)
+        self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", L.offsets.mainX * parentScale, L.offsets.mainY * parentScale)
         self:SetPoint("BOTTOM", professionFrame, "BOTTOM", 0, yOffset * parentScale)
     end)
 end
 
 local function setParentDependentFramesPosition()
-    local professionFrame = getProfessionFrame()
+    local professionFrame = rm.getProfessionFrame()
     updateSizesAndOffsetsBasedOnParent(professionFrame)
-    mainFrame:SetFrameStrata(professionFrame:GetFrameStrata())
-    restoreButton:SetPoint("LEFT", professionFrame, "TOPRIGHT", offsets.restoreButtonX, offsets.restoreButtonY)
+    rm.mainFrame:SetFrameStrata(professionFrame:GetFrameStrata())
+    rm.mainFrame:SetPoint("LEFT", professionFrame, "TOPRIGHT", L.offsets.restoreButtonX, L.offsets.restoreButtonY)
+    rm.restoreButton:SetPoint("LEFT", professionFrame, "TOPRIGHT", L.offsets.restoreButtonX, L.offsets.restoreButtonY)
 end
 
 local function updateProgressBarColor()
-    if progressBar:GetValue() < 100 then
-        progressBar:SetStatusBarColor(unpack(RecipeMasterPreferences["progressColor"]))
+    if rm.progressBar:GetValue() < 100 then
+        rm.progressBar:SetStatusBarColor(unpack(rm.getPreference("progressColor")))
         return
     end
-    progressBar:SetStatusBarColor(unpack(colors.progressComplete))
+    rm.progressBar:SetStatusBarColor(unpack(L.colors.progressComplete))
 end
 
 local function getSpecializationDisplayName()
-    local specialization = getSavedSpecializationByName(displayedProfession)
-    local specializationName = ""
+    local specialization = rm.getSavedSpecializationByName(rm.displayedProfession)
     if specialization then
-        specializationName = " - "..GetSpellInfo(specialization)
+        return " - "..GetSpellInfo(specialization)
     end
-    return specializationName
+    return ""
 end
 
-function updateProgressBar()
-    if learnedPercentage > 100 then -- Happens on the first time opening a profession frame, causing an error
+function rm.updateProgressBar()
+    if rm.learnedPercentage > 100 then -- Happens on the first time opening a profession frame, causing an error
         return
     end
-    local progress = learnedRecipesCount.."/"..totalRecipesCount
+    local progress = rm.learnedRecipesCount.."/"..rm.totalRecipesCount
     local specialization = getSpecializationDisplayName()
-    progressBar:SetValue(learnedPercentage)
+    rm.progressBar:SetValue(rm.learnedPercentage)
     updateProgressBarColor()
-    progressBarText:SetText(progress.." ("..learnedPercentage.."%)"..specialization)
+    rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%)"..specialization)
 end
 
-function updateRecipesPosition()
+function rm.updateRecipesPosition()
     local yOffset = 0
-    for _, element in ipairs(recipeContainer.children) do
+    local recipeSection = rm.recipeContainer.children
+    for _, element in ipairs(recipeSection) do
         if element:IsShown() then
-            element.associatedIcon:SetPoint("TOP", recipeContainer, "BOTTOMLEFT", offsets.recipeIconX, yOffset)
-            yOffset = yOffset - (sizes.recipeIcon + RecipeMasterPreferences["rowSpacing"])
+            element.associatedIcon:SetPoint("TOP", rm.recipeContainer, "BOTTOMLEFT", L.offsets.recipeIconX, yOffset)
+            yOffset = yOffset - (L.sizes.recipeIcon + rm.getPreference("rowSpacing"))
         end
     end
 end
 
 local function resetRecipeCounts()
-    displayedRecipesCount = 0
-    learnedRecipesCount = 0
-    missingRecipesCount = 0
-    widestRecipeTextWidth = 0
+    rm.displayedRecipesCount = 0
+    rm.learnedRecipesCount = 0
+    rm.missingRecipesCount = 0
+    rm.widestRecipeTextWidth = 0
 end
 
-function clearWindowContent()
-    local recipeSection = recipeContainer.children
+function rm.clearWindowContent()
+    local recipeSection = rm.recipeContainer.children
     for _, recipeText in pairs(recipeSection) do
         recipeText:Hide()
         recipeText.associatedIcon:Hide()
@@ -90,75 +94,43 @@ function clearWindowContent()
     resetRecipeCounts()
 end
 
-function hideRecipeFrameElements()
-    scrollFrame:Hide()
-    progressContainer:Hide()
+function rm.hideRecipeFrameElements()
+    rm.scrollFrame:Hide()
+    rm.progressContainer:Hide()
 end
 
-function showDetailsTabElements()
-    hideRecipeFrameElements()
-    mainFrame:SetBackdrop(backdrops.details)
-    mainFrame:SetBackdropColor(unpack(colors.detailsBackground))
+function rm.showDetailsTabElements()
+    rm.hideRecipeFrameElements()
+    rm.mainFrame:SetBackdrop(L.backdrops.details)
+    rm.mainFrame:SetBackdropColor(unpack(L.colors.detailsBackground))
 end
 
-function showRecipeFrameElements()
-    scrollFrame:Show()
-    progressContainer:Show()
-    mainFrame:SetBackdrop(backdrops.mainFrame)
-    mainFrame:SetBackdropColor(unpack(colors.mainBackground))
+function rm.showRecipeFrameElements()
+    rm.scrollFrame:Show()
+    rm.progressContainer:Show()
+    rm.mainFrame:SetBackdrop(L.backdrops.mainFrame)
+    rm.mainFrame:SetBackdropColor(unpack(L.colors.mainBackground))
 end
 
 -- Ensures that no recipe text will be cropped
 local function updateMainWidthBasedOnWidestRecipeName()
-    local newMainFrameWidth = math.floor(widestRecipeTextWidth + 73)
-    if newMainFrameWidth >= sizes.mainWidth then
-        mainFrame:SetWidth(newMainFrameWidth)
+    local newMainFrameWidth = math.floor(rm.widestRecipeTextWidth + 73)
+    if newMainFrameWidth >= L.sizes.mainWidth then
+        rm.mainFrame:SetWidth(newMainFrameWidth)
     else
-        mainFrame:SetWidth(sizes.mainWidth)
+        rm.mainFrame:SetWidth(L.sizes.mainWidth)
     end
 end
 
-function updateRecipeDisplay(getNumSkillsFunction, getSkillInfoFunction)
-    clearWindowContent()
-    showProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
+function rm.updateRecipeDisplay(getNumSkillsFunction, getSkillInfoFunction)
+    rm.clearWindowContent()
+    rm.showProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
     updateMainWidthBasedOnWidestRecipeName()
-    updateProgressBar()
+    rm.updateProgressBar()
 end
 
-function showRecipesFrame(getNumSkillsFunction, getSkillInfoFunction)
-    if not getProfessionFrame() then
-        return
-    end
-    centeredText:Hide()
-    showRecipeFrameElements()
-    setParentDependentFramesPosition()
-    activateTabAndDesaturateOthers(recipesTab)
-    updateRecipeDisplay(getNumSkillsFunction, getSkillInfoFunction)
-    if not autoOpenRecipeMaster then
-        restoreButton:Show()
-        return
-    elseif mainFrame:IsShown() then
-        return
-    else
-        restoreButton:Hide()
-        mainFrame:Show()
-    end
-end
-
-function hideRecipeMasterFrame()
-    if not mainFrame:IsShown() and not getProfessionFrame() then
-        restoreButton:Hide()
-        return
-    elseif getProfessionFrame() then
-        setParentDependentFramesPosition()
-        return
-    end
-    clearWindowContent()
-    mainFrame:Hide()
-end
-
-function activateTabAndDesaturateOthers(tab)
-    for _, otherTab in pairs(bottomTabs) do
+function rm.activateTabAndDesaturateOthers(tab)
+    for _, otherTab in pairs(rm.bottomTabs) do
         otherTab.active = false
         otherTab.texture:SetDesaturated(true)
     end
@@ -166,8 +138,40 @@ function activateTabAndDesaturateOthers(tab)
     tab.texture:SetDesaturated(false)
 end
 
-function showCenteredText(string, color)
-    centeredText:SetText(string)
-    centeredText:SetTextColor(unpack(color))
-    centeredText:Show()
+function rm.showRecipesFrame(getNumSkillsFunction, getSkillInfoFunction)
+    if not rm.getProfessionFrame() then
+        return
+    end
+    rm.centeredText:Hide()
+    rm.showRecipeFrameElements()
+    setParentDependentFramesPosition()
+    rm.activateTabAndDesaturateOthers(rm.recipesTab)
+    rm.updateRecipeDisplay(getNumSkillsFunction, getSkillInfoFunction)
+    if not rm.autoOpenRecipesFrame then
+        rm.restoreButton:Show()
+        return
+    elseif rm.mainFrame:IsShown() then
+        return
+    else
+        rm.restoreButton:Hide()
+        rm.mainFrame:Show()
+    end
+end
+
+function rm.hideRecipeMasterFrame()
+    if not rm.mainFrame:IsShown() and not rm.getProfessionFrame() then
+        rm.restoreButton:Hide()
+        return
+    elseif rm.getProfessionFrame() then
+        setParentDependentFramesPosition()
+        return
+    end
+    rm.clearWindowContent()
+    rm.mainFrame:Hide()
+end
+
+function rm.showCenteredText(string, color)
+    rm.centeredText:SetText(string)
+    rm.centeredText:SetTextColor(unpack(color))
+    rm.centeredText:Show()
 end

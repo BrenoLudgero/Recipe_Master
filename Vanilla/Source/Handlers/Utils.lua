@@ -1,4 +1,7 @@
-function removeSpaces(string)
+local _, rm = ...
+local L = rm.L
+
+function rm.removeSpaces(string)
     if string then
         return string:gsub("%s+", "")
     end
@@ -14,8 +17,8 @@ local function capitalizeName(string)
     end
 end
 
-function removeRecipePrefix(recipeName)
-    for _, prefix in pairs(recipePrefixes) do
+function rm.removeRecipePrefix(recipeName)
+    for _, prefix in pairs(L.recipePrefixes) do
         if recipeName:sub(1, #prefix) == prefix then
             local strippedName = recipeName:sub(#prefix + 1)
             return capitalizeName(strippedName) or strippedName

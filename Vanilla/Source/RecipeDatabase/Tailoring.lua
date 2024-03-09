@@ -1,4 +1,6 @@
-id197 = {
+local _, rm = ...
+
+rm.recipes[197] = {
 	[2598] = {
 		reqSkill = 40,
 		teaches = 2572,

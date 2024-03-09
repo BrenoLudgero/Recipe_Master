@@ -1,3 +1,6 @@
+local _, rm = ...
+local L = rm.L
+
 local function isRecipeForCurrentClass(recipe)
     local _, characterClass = UnitClass("player") -- Always in English and upper case
     return not recipe.class or (string.upper(recipe.class) == characterClass)
@@ -18,12 +21,12 @@ local function isRecipeForCurrentSeason(recipe)
 end
 
 local function isRecipeForCurrentSpecialization(recipe)
-    local professionID = getProfessionID(displayedProfession)
-    local professionSpecialization = getSavedSpecializationByID(professionID)
+    local professionID = rm.getProfessionID(rm.displayedProfession)
+    local professionSpecialization = rm.getSavedSpecializationByID(professionID)
     return not recipeSpecialization or (professionSpecialization == recipe.specialization)
 end
 
-function isRecipeAvailableForCharacter(recipe)
+function rm.isRecipeAvailableForCharacter(recipe)
     return isRecipeForCurrentSeason(recipe) and isRecipeForCurrentClass(recipe) and isRecipeForCurrentSpecialization(recipe)
 end
 
@@ -36,21 +39,21 @@ local function isLearnedRankupRecipe(recipe, professionRank)
     return false
 end
 
-function isLearnedRecipe(recipe)
-    local learnedSkills = getSavedSkillsByProfessionName(displayedProfession)
-    local professionRank = getSavedProfessionRank(displayedProfession)
-    local learnedRecipe = tableContains(learnedSkills, recipe.teaches)
-    return learnedRecipe or isLearnedRankupRecipe(recipe, professionRank)
+function rm.isLearnedRecipe(recipe)
+    local learnedSkills = rm.getSavedSkillsByProfessionName(rm.displayedProfession)
+    local professionRank = getSavedProfessionRank(rm.displayedProfession)
+    local isLearnedRecipe = rm.tableContains(learnedSkills, recipe.teaches)
+    return isLearnedRecipe or isLearnedRankupRecipe(recipe, professionRank)
 end
 
-function isMissingRecipeOfCurrentFaction(recipe)
+function rm.isMissingRecipeOfCurrentFaction(recipe)
     local characterFaction = UnitFactionGroup("player") -- Always in English
     return not recipe.faction or (recipe.faction == characterFaction)
 end
 
 -- Comparing recipe.profession with displayedProfession caused Engineering recipes to not display in Korean during testing
-function isRecipeForDisplayedProfession(recipe)
-    return removeSpaces(recipe.profession) == removeSpaces(displayedProfession)
+function rm.isRecipeForDisplayedProfession(recipe)
+    return rm.removeSpaces(recipe.profession) == rm.removeSpaces(rm.displayedProfession)
 end
 
 local function isMiningSkill(recipeID)
@@ -66,10 +69,10 @@ end
 
 -- Recipes that return a profession name different than the profession's display name for some languages
 local function handleMismatchedProfessionNames(profession)
-    if displayedProfession == "Наложение чар" and profession == "Зачаровывание" then
-        return displayedProfession
-    elseif displayedProfession == "Costura" and profession == "Sastrería" then
-        return displayedProfession
+    if rm.displayedProfession == "Наложение чар" and profession == "Зачаровывание" then
+        return rm.displayedProfession
+    elseif rm.displayedProfession == "Costura" and profession == "Sastrería" then
+        return rm.displayedProfession
     end
     return profession
 end
@@ -80,11 +83,11 @@ local function getAdditionalRecipeData(id)
     if isMiningSkill(id) then
        name = GetSpellInfo(id)
        link = "|cff71d5ff|Hspell:"..id.."|h["..name.."]|h|r"
-       profession = professionNames[186]
+       profession = L.professionNames[186]
        texture = getMiningIcon(id)
     end
     if quality then -- Avoids an error when Mining is the first profession window opened
-        return removeRecipePrefix(name), link, quality, profession, texture
+        return rm.removeRecipePrefix(name), link, quality, profession, texture
     end
 end
 
@@ -108,16 +111,16 @@ end
 
 -- Compares all the available skills for the currently displayed profession 
 -- with each spell teached / item crafted by the recipes in RecipeDatabase
-function getAllProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
+function rm.getAllProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
     local professionRecipes = {}
-    local savedProfessionsAndSkills = getCharacterSavedVariables()
+    local savedProfessionsAndSkills = rm.getCharacterSavedVariables()
     local numSkills = getNumSkillsFunction()
     for i = 1, numSkills do
         local _, skillType, craftType = getSkillInfoFunction(i)
         if skillType ~= "header" and craftType ~= "header" then
             for professionID, professionData in pairs(savedProfessionsAndSkills) do
                 local professionRank = professionData["rank"]
-                local professionRecipesDatabase = _G["id"..professionID] -- e.g. id202 (RecipeDatabase/Engineering.lua)
+                local professionRecipesDatabase = rm.recipes[professionID]
                 for recipeID, recipeData in pairs(professionRecipesDatabase) do
                     local recipe = professionRecipes[recipeID]
                     if not recipe then

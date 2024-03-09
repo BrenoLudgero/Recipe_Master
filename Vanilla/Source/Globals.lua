@@ -1,14 +1,17 @@
-autoOpenRecipeMaster = true
-displayedProfession = ""
-lastDisplayedProfession = ""
-displayedRecipesCount = 0
-learnedRecipesCount = 0
-missingRecipesCount = 0
-totalRecipesCount = 0
-learnedPercentage = 0
-widestRecipeTextWidth = 0
+local _, rm = ...
+local L = rm.L
 
-function tableContains(table, item)
+rm.autoOpenRecipesFrame = true
+rm.displayedProfession = ""
+rm.lastDisplayedProfession = ""
+rm.displayedRecipesCount = 0
+rm.learnedRecipesCount = 0
+rm.missingRecipesCount = 0
+rm.totalRecipesCount = 0
+rm.learnedPercentage = 0
+rm.widestRecipeTextWidth = 0
+
+function rm.tableContains(table, item)
     for _, value in ipairs(table) do
         if value == item then
             return true
@@ -17,10 +20,10 @@ function tableContains(table, item)
     return false
 end
 
-function getCharacterSavedVariables()
-    return RecipeMasterProfessionsAndSkills[server][character]
+function rm.getCharacterSavedVariables()
+    return RecipeMasterProfessionsAndSkills[rm.server][rm.character]
 end
 
-function getProfessionID(professionName)
-    return tInvert(professionNames)[professionName]
+function rm.getProfessionID(professionName)
+    return tInvert(L.professionNames)[professionName]
 end

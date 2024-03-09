@@ -27,6 +27,11 @@
 
 ## SavedVariables: RecipeMasterProfessionsAndSkills, RecipeMasterPreferences
 
+Source/Initialization.lua
+Source/Interface/FrameSettings.lua
+Source/Localization.lua
+Source/Globals.lua
+
 Source/RecipeDatabase/Alchemy.lua
 Source/RecipeDatabase/Blacksmithing.lua
 Source/RecipeDatabase/Cooking.lua
@@ -37,11 +42,6 @@ Source/RecipeDatabase/Fishing.lua
 Source/RecipeDatabase/Leatherworking.lua
 Source/RecipeDatabase/Mining.lua
 Source/RecipeDatabase/Tailoring.lua
-
-Source/Initialization.lua
-Source/Interface/FrameSettings.lua
-Source/Localization.lua
-Source/Globals.lua
 
 Source/Handlers/Utils.lua
 Source/Handlers/ProfessionHandler.lua

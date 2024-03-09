@@ -1,13 +1,27 @@
-RecipeMaster = CreateFrame("Frame")
-RecipeMasterName = GetAddOnMetadata("RecipeMaster", "Title")
-RecipeMasterVersion = GetAddOnMetadata("RecipeMaster", "Version")
-RecipeMasterAuthor = GetAddOnMetadata("RecipeMaster", "Author")
-character = UnitName("player")
-server = GetRealmName()
+local addonName, rm = ...
+-- rm: Globals within Recipe Master (variables, functions, frames)
+rm.frame = CreateFrame("Frame")
+rm.version = GetAddOnMetadata(addonName, "Version")
+rm.author = GetAddOnMetadata(addonName, "Author")
+rm.character = UnitName("player")
+rm.locale = GetLocale()
+rm.server = GetRealmName()
+rm.recipes = {}
+rm.L = {} -- Localization and Looks
+rm.L.title = GetAddOnMetadata(addonName, "Title")
+rm.L.offsets = {}
+rm.L.sizes = {}
+rm.L.colors = {}
+rm.L.fonts = {}
+rm.L.fontSizes = {}
+rm.L.strings = {}
+rm.L.templates = {}
+rm.L.textures = {}
+rm.L.backdrops = {}
 
-SLASH_RM1 = "/rm"
-SlashCmdList["RM"] = function()
-    Settings.OpenToCategory(RecipeMasterName)
+SLASH_RECIPEMASTER1 = "/rm"
+SlashCmdList["RECIPEMASTER"] = function()
+    Settings.OpenToCategory(rm.L.title)
 end
 
 local defaultPreferences = {
@@ -25,7 +39,7 @@ local defaultPreferences = {
 
 -- Creates a table to store the characters' learned skills in SavedVariables
 -- And a second table for the user's preferences
-function createRecipeMasterSavedVariables()
+function rm.createSavedVariables()
     if not RecipeMasterProfessionsAndSkills then
         RecipeMasterProfessionsAndSkills = {}
     end
@@ -34,15 +48,23 @@ function createRecipeMasterSavedVariables()
     end
 end
 
-function resetSavedPreferences()
+function rm.resetSavedPreferences()
     RecipeMasterPreferences = defaultPreferences
 end
 
-function updateRecipeMasterSavedCharacters()
-    if not RecipeMasterProfessionsAndSkills[server] then
-        RecipeMasterProfessionsAndSkills[server] = {}
+function rm.updateSavedCharacters()
+    if not RecipeMasterProfessionsAndSkills[rm.server] then
+        RecipeMasterProfessionsAndSkills[rm.server] = {}
     end
-    if not RecipeMasterProfessionsAndSkills[server][character] then
-        RecipeMasterProfessionsAndSkills[server][character] = {}
+    if not RecipeMasterProfessionsAndSkills[rm.server][rm.character] then
+        RecipeMasterProfessionsAndSkills[rm.server][rm.character] = {}
     end
+end
+
+function rm.getPreference(preference)
+    return RecipeMasterPreferences[preference]
+end
+
+function rm.setPreference(preference, newValue)
+    RecipeMasterPreferences[preference] = newValue
 end

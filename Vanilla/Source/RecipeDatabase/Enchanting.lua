@@ -1,4 +1,6 @@
-id333 = {
+local _, rm = ...
+
+rm.recipes[333] = {
 	[215129] = {
 		season = "SoD",
 		reqSkill = 225,

@@ -1,78 +1,84 @@
+local _, rm = ...
+local L = rm.L
+
 local function deleteFrameCreationFunctions()
-    createRMFrame = nil
-    createRMHeader = nil
-    createRMBorder = nil
-    createRMSortBar = nil
-    createRMDivider = nil
-    createRMSearchBar = nil
-    createRMBottomTab = nil
-    createRMHeaderText = nil
-    createRMSortByText = nil
-    createRMOptionsText = nil
-    createRMProgressBar = nil
-    createRMScrollFrame = nil
-    createRMInnerBorder = nil
-    createRMCenteredText = nil
-    createRMOptionsFrame = nil
-    createRMSpacingSlider = nil
-    createRMOpacitySlider = nil
-    createRMProgressBarText = nil
-    createRMIconDropdown = nil
-    setUpRMButtonWithTooltip = nil
-    createRMProgressContainer = nil
-    createRMResetDefaultsButton = nil
-    createRMRecipeContainerFrame = nil
-    createRMProgressColorDropdown = nil
-    createRMShowLearnedCheckButton = nil
-    createRMProgressBrightnessDropdown = nil
+    rm.createFrame = nil
+    rm.createHeader = nil
+    rm.createBorder = nil
+    rm.createSortBar = nil
+    rm.createDivider = nil
+    rm.createSearchBar = nil
+    rm.createBottomTab = nil
+    rm.createHeaderText = nil
+    rm.createSortByText = nil
+    rm.createOptionsText = nil
+    rm.createProgressBar = nil
+    rm.createScrollFrame = nil
+    rm.createInnerBorder = nil
+    rm.createIconDropdown = nil
+    rm.createCenteredText = nil
+    rm.createOptionsFrame = nil
+    rm.createSpacingSlider = nil
+    rm.createOpacitySlider = nil
+    rm.createRestoreButton = nil
+    rm.createSortOrderButton = nil
+    rm.createProgressBarText = nil
+    rm.setUpButtonWithTooltip = nil
+    rm.createProgressContainer = nil
+    rm.createResetDefaultsButton = nil
+    rm.createRecipeContainerFrame = nil
+    rm.createProgressColorDropdown = nil
+    rm.createShowLearnedCheckButton = nil
+    rm.createProgressBrightnessDropdown = nil
 end
 
--- Called in EventHandler.handleRecipeMasterLoaded, after SavedVariables are created or loaded
-function createAllFrames()
-    colors.mainBackground = {1, 1, 1, RecipeMasterPreferences["backgroundOpacity"]}
-    colors.detailsBackground = {0.7, 0.7, 0.7, RecipeMasterPreferences["backgroundOpacity"]}
+-- Called in EventHandler.handleAddonLoaded, after SavedVariables are created or loaded
+function rm.createAllFrames()
+    L.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
+    L.colors.detailsBackground = {0.7, 0.7, 0.7, rm.getPreference("backgroundOpacity")}
     ---------- Main window ----------
-    mainFrame = createRMFrame()
-    mainFrameBorder = createRMBorder(mainFrame)
-    header = createRMHeader(mainFrameBorder)
-    local headerTitle = createRMHeaderText(header)
-    local mainFrameInnerBorder = createRMInnerBorder(mainFrame)
-    progressContainer = createRMProgressContainer(mainFrame)
-    divider = createRMDivider(progressContainer) -- The frame containing searchBar and sortBar
-    scrollFrame = createRMScrollFrame(mainFrame)
-    recipeContainer = createRMRecipeContainerFrame(scrollFrame)
-    scrollFrame:SetScrollChild(recipeContainer)
-    searchBar = createRMSearchBar(divider)
-    sortBar = createRMSortBar(divider)
-    local sortByText = createRMSortByText(sortBar)
-    local sortOrderButton = createRMSortOrderButton(sortBar)
-    progressBar = createRMProgressBar(progressContainer)
-    progressBarText = createRMProgressBarText(progressBar)
-    restoreButton = createRMRestoreButton()
-    centeredText = createRMCenteredText(mainFrameInnerBorder)
+    rm.mainFrame = rm.createFrame()
+    rm.mainFrameBorder = rm.createBorder(rm.mainFrame)
+    rm.header = rm.createHeader(rm.mainFrameBorder)
+    local headerTitle = rm.createHeaderText(rm.header)
+    local mainFrameInnerBorder = rm.createInnerBorder(rm.mainFrame)
+    rm.progressContainer = rm.createProgressContainer(rm.mainFrame)
+    rm.divider = rm.createDivider(rm.progressContainer) -- The frame containing searchBar and sortBar
+    rm.scrollFrame = rm.createScrollFrame(rm.mainFrame)
+    rm.recipeContainer = rm.createRecipeContainerFrame(rm.scrollFrame)
+    rm.scrollFrame:SetScrollChild(rm.recipeContainer)
+    rm.searchBar = rm.createSearchBar(rm.divider)
+    rm.sortBar = rm.createSortBar(rm.divider)
+    local sortByText = rm.createSortByText(rm.sortBar)
+    local sortOrderButton = rm.createSortOrderButton(rm.sortBar)
+    rm.progressBar = rm.createProgressBar(rm.progressContainer)
+    rm.progressBarText = rm.createProgressBarText(rm.progressBar)
+    rm.restoreButton = rm.createRestoreButton()
+    rm.centeredText = rm.createCenteredText(mainFrameInnerBorder)
     ---------- Bottom tabs ----------
-    bottomTabs = {}
-    recipesTab = createRMBottomTab(strings.recipesTab, "BOTTOMLEFT", offsets.recipesTabX, true)
-    recipeDetailsTab = createRMBottomTab(strings.recipeDetailsTab, "BOTTOM", 0, false)
-    fishingTab = createRMBottomTab(strings.fishingTab, "BOTTOMRIGHT", offsets.fishingTabX, false)
+    rm.bottomTabs = {}
+    rm.recipesTab = rm.createBottomTab(L.strings.recipesTab, "BOTTOMLEFT", L.offsets.recipesTabX, true)
+    rm.recipeDetailsTab = rm.createBottomTab(L.strings.recipeDetailsTab, "BOTTOM", 0, false)
+    rm.fishingTab = rm.createBottomTab(L.strings.fishingTab, "BOTTOMRIGHT", L.offsets.fishingTabX, false)
     ---------- Options window ----------
-    optionsFrame = createRMOptionsFrame()
+    rm.optionsFrame = rm.createOptionsFrame()
     ----- Texts -----
-    createRMOptionsText(fonts.title, RecipeMasterName, offsets.titlesTextX, offsets.titleY)
-    createRMOptionsText(fonts.subtitle, strings.subtitle, offsets.titlesTextX, offsets.subtitleY)
-    createRMOptionsText(fonts.optionSection, strings.general, offsets.titlesTextX, offsets.generalTextY)
-    createRMOptionsText(fonts.optionSection, strings.recipesWindow, offsets.titlesTextX, offsets.recipesWindowTextY)
-    createRMOptionsText(fonts.optionSection, strings.progressBar, offsets.titlesTextX, offsets.progressBarTextY)
+    rm.createOptionsText(L.fonts.title, L.title, L.offsets.titlesTextX, L.offsets.titleY)
+    rm.createOptionsText(L.fonts.subtitle, L.strings.subtitle, L.offsets.titlesTextX, L.offsets.subtitleY)
+    rm.createOptionsText(L.fonts.optionSection, L.strings.general, L.offsets.titlesTextX, L.offsets.generalTextY)
+    rm.createOptionsText(L.fonts.optionSection, L.strings.recipesWindow, L.offsets.titlesTextX, L.offsets.recipesWindowTextY)
+    rm.createOptionsText(L.fonts.optionSection, L.strings.progressBar, L.offsets.titlesTextX, L.offsets.progressBarTextY)
     ----- Sliders -----
-    local opacitySlider = createRMOpacitySlider()
-    local spacingSlider = createRMSpacingSlider()
+    local opacitySlider = rm.createOpacitySlider()
+    local spacingSlider = rm.createSpacingSlider()
     ----- Dropdowns -----
-    local updateRMIcon = createRMIconDropdown()
-    local updateBarBrightness = createRMProgressBrightnessDropdown()
-    local updateBarColor = createRMProgressColorDropdown()
-    ----- Other -----
-    local showLearned = createRMShowLearnedCheckButton()
-    local resetDefaults = createRMResetDefaultsButton(opacitySlider, spacingSlider, updateRMIcon, updateBarBrightness, updateBarColor, showLearned)
+    local updateRMIcon = rm.createIconDropdown()
+    local updateBarBrightness = rm.createProgressBrightnessDropdown()
+    local updateBarColor = rm.createProgressColorDropdown()
+    ----- Buttons -----
+    local showLearned = rm.createShowLearnedCheckButton()
+    local resetDefaults = rm.createResetDefaultsButton(opacitySlider, spacingSlider, updateRMIcon, updateBarBrightness, updateBarColor, showLearned)
     ----------------------------------------
     deleteFrameCreationFunctions()
+    deleteFrameCreationFunctions = nil
 end

@@ -1,4 +1,7 @@
-function setUpRMButtonWithTooltip(button, width, height, tooltipText, scriptOnClick)
+local _, rm = ...
+local L = rm.L
+
+function rm.setUpButtonWithTooltip(button, width, height, tooltipText, scriptOnClick)
     button:SetSize(width, height)
     button:EnableMouse(true)
     button:SetScript("OnEnter", function(self)
@@ -15,13 +18,13 @@ end
 
 local function isMouseInsideScrollFrame()
     local mouseX, mouseY = GetCursorPosition()
-    local frameX, frameY = scrollFrame:GetCenter()
-    local frameWidth = scrollFrame:GetWidth()
-    local frameHeight = scrollFrame:GetHeight()
+    local frameX, frameY = rm.scrollFrame:GetCenter()
+    local frameWidth = rm.scrollFrame:GetWidth()
+    local frameHeight = rm.scrollFrame:GetHeight()
     return mouseX >= (frameX - frameWidth / 2) and mouseX <= (frameX + frameWidth / 2) and mouseY >= (frameY - frameHeight / 2) and mouseY <= (frameY + frameHeight / 2)
 end
 
-function displayTooltipOnMouseover(icon, recipe)
+function rm.displayTooltipOnMouseover(icon, recipe)
     icon:SetScript("OnEnter", function(self)
         if isMouseInsideScrollFrame() then
             GameTooltip:SetOwner(self, "ANCHOR_RIGHT", 0, 0)
@@ -34,7 +37,7 @@ function displayTooltipOnMouseover(icon, recipe)
     end)
 end
 
-function chatLinkOnShiftClick(icon, recipe)
+function rm.chatLinkOnShiftClick(icon, recipe)
     icon:SetScript("OnMouseDown", function(self, button)
         if IsShiftKeyDown() and button == "LeftButton" then
             local editBox = ChatEdit_ChooseBoxForSend()
@@ -44,13 +47,13 @@ function chatLinkOnShiftClick(icon, recipe)
     end)
 end
 
-function matchParentHeight(innerBorder)
+function rm.matchParentHeight(innerBorder)
     innerBorder:SetScript("OnUpdate", function(self, elapsed)
         self:SetHeight(innerBorder:GetParent():GetHeight())
     end)
 end
 
-function displayPlaceholderTextBasedOnFocus(searchBar)
+function rm.displayPlaceholderTextBasedOnFocus(searchBar)
     searchBar:SetScript("OnEditFocusGained", function(self)
         self.Instructions:Hide()
         self.clearButton:Show()
@@ -62,11 +65,11 @@ function displayPlaceholderTextBasedOnFocus(searchBar)
     end)
 end
 
-function showMatchingRecipesOnTop(searchBar)
+function rm.showMatchingRecipesOnTop(searchBar)
     searchBar:SetScript("OnTextChanged", function(self)
         local searchText = self:GetText():lower()
         local matchedRecipes = {}
-        for _, rowText in ipairs(recipeContainer.children) do
+        for _, rowText in ipairs(rm.recipeContainer.children) do
             local recipeText = rowText:GetText():lower()
             if string.find(recipeText, searchText, 1, true) then
                 rowText:Show()
@@ -76,35 +79,37 @@ function showMatchingRecipesOnTop(searchBar)
                 rowText.associatedIcon:Hide()
             end
         end
-        updateRecipesPosition()
+        rm.updateRecipesPosition()
     end)
 end
 
-local function isSortedBySelectedValue(dropdown)
-    return sortBar.values[dropdown:GetID()].value == RecipeMasterPreferences["sortRecipesBy"]
+local function isSortedBySelectedValue(dropdown, sortBar)
+    return sortBar.values[dropdown:GetID()].value == rm.getPreference("sortRecipesBy")
 end
 
-local function updateSortBy(dropdown)
-    if not isSortedBySelectedValue(dropdown) then
+local function updateSortByPreference(dropdown, sortBar)
+    if not isSortedBySelectedValue(dropdown, sortBar) then
         local selectedValue = sortBar.values[dropdown:GetID()].value
-        RecipeMasterPreferences["sortRecipesBy"] = selectedValue
+        rm.setPreference("sortRecipesBy", selectedValue)
     end
 end
 
-local function sortRecipesByValue(dropdown)
+local function sortRecipesByValue(dropdown, sortBar)
     UIDropDownMenu_SetSelectedID(sortBar, dropdown:GetID())
-    updateSortBy(dropdown)
-    showSortedRecipes()
+    updateSortByPreference(dropdown, sortBar)
+    rm.showSortedRecipes()
 end
 
-function handleSortingOptions(sortBar)
+function rm.handleSortingOptions(sortBar)
     UIDropDownMenu_Initialize(sortBar, function(self)
         for _, option in ipairs(sortBar.values) do
             local info = UIDropDownMenu_CreateInfo()
-            info.minWidth = sizes.sortBarWidth + 15
+            info.minWidth = L.sizes.sortBarWidth + 15
             info.text = option.text
             info.value = option.value
-            info.func = sortRecipesByValue
+            info.func = function(self)
+                sortRecipesByValue(self, sortBar)
+            end
             UIDropDownMenu_AddButton(info)
         end
     end)
@@ -114,8 +119,8 @@ local function isValueAColor(value, savedValue)
     return type(value) == "table" and (unpack(value) == unpack(savedValue))
 end
 
-function setInitialDropdownValue(dropdown, savedVariable)
-    local savedValue = RecipeMasterPreferences[savedVariable]
+function rm.setInitialDropdownValue(dropdown, savedVariable)
+    local savedValue = rm.getPreference(savedVariable)
     for _, option in pairs(dropdown.values) do
         if option.value == savedValue or isValueAColor(option.value, savedValue) then
             UIDropDownMenu_SetSelectedValue(dropdown, option.value)
@@ -124,16 +129,16 @@ function setInitialDropdownValue(dropdown, savedVariable)
 end
 
 local function updateSortOrder()
-    local sortAscending = RecipeMasterPreferences["sortAscending"]
-    if not sortAscending then
-        RecipeMasterPreferences["sortAscending"] = true
+    local isSortedAscending = rm.getPreference("sortAscending")
+    if not isSortedAscending then
+        rm.setPreference("sortAscending", true)
     else
-        RecipeMasterPreferences["sortAscending"] = false
+        rm.setPreference("sortAscending", false)
     end
 end
 
-function updateArrowOrientation(texture)
-    local sortAscending = RecipeMasterPreferences["sortAscending"]
+function rm.updateArrowOrientation(texture)
+    local sortAscending = rm.getPreference("sortAscending")
     if sortAscending then
         texture:SetRotation(0)
         texture:SetPoint("CENTER", texture:GetParent(), 1.7, -1.3)
@@ -145,47 +150,47 @@ end
 
 local function toggleSortOrder(texture)
     updateSortOrder()
-    updateArrowOrientation(texture)
-    showSortedRecipes()
+    rm.updateArrowOrientation(texture)
+    rm.showSortedRecipes()
 end
 
-function updateSortOrderOnClick(button, texture)
+function rm.updateSortOrderOnClick(button, texture)
     button:SetScript("OnClick", function(self)
         toggleSortOrder(texture)
     end)
 end
 
 local function handleRecipesTab(tab)
-    if tab.label == TRADESKILL_SERVICE_LEARN then
-        showRecipeFrameElements()
-        showRecipesForProfession(lastDisplayedProfession)
+    if tab.label == L.strings.recipesTab then
+        rm.showRecipeFrameElements()
+        rm.showRecipesForProfession(rm.lastDisplayedProfession)
     end
 end
 
 local function handleDetailsTab(tab)
-    if tab.label == LFG_LIST_DETAILS then
-        showDetailsTabElements()
-        showCenteredText(strings.comingSoon, colors.green)
+    if tab.label == L.strings.recipeDetailsTab then
+        rm.showDetailsTabElements()
+        rm.showCenteredText(L.strings.comingSoon, L.colors.green)
     end
 end
 
 local function handleFishingTab(tab)
-    if tab.label == PROFESSIONS_FISHING then
-        showRecipeFrameElements()
-        if not getSavedProfessionByID(356) then
-            hideRecipeFrameElements()
-            showCenteredText(strings.fishingNotLearned, colors.yellow)
+    if tab.label == L.strings.fishingTab then
+        rm.showRecipeFrameElements()
+        if not rm.getSavedProfessionByID(356) then
+            rm.hideRecipeFrameElements()
+            rm.showCenteredText(L.strings.fishingNotLearned, L.colors.yellow)
             return
         end
-        showRecipesForProfession(professionNames[356])
+        rm.showRecipesForProfession(L.professionNames[356])
     end
 end
 
-function handleTabSwitching(tab)
+function rm.handleTabSwitching(tab)
     tab:SetScript("OnClick", function(self)
         if not tab.active then
-            centeredText:Hide()
-            activateTabAndDesaturateOthers(tab)
+            rm.centeredText:Hide()
+            rm.activateTabAndDesaturateOthers(tab)
             handleRecipesTab(tab)
             handleDetailsTab(tab)
             handleFishingTab(tab)

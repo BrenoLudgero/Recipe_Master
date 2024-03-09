@@ -1,11 +1,12 @@
 -- © 2024 Breno Ludgero. All Rights Reserved.
+local _, rm = ...
 
 -- Runs the functions below when one of the registered in-game events occur
-RecipeMaster:SetScript("OnEvent", function(_, event, ...)
-    if handleRecipeMasterLoaded then
-        handleRecipeMasterLoaded(event, ...)
-        handleRecipeMasterLoaded = nil
+rm.frame:SetScript("OnEvent", function(_, event, ...)
+    if rm.handleAddonLoaded then
+        rm.handleAddonLoaded(event, ...)
+        rm.handleAddonLoaded = nil
     end
-    handleSkillChange(event)
-    handleProfessionWindowOpened(event)
+    rm.handleSkillChange(event)
+    rm.handleProfessionWindowOpened(event)
 end)
