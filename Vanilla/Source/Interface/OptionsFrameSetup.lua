@@ -76,5 +76,6 @@ function rm.resetSavedVariablesOnClick(resetDefaultsButton, opacitySlider, spaci
         rm.setInitialDropdownValue(progressColor, "progressColor")
         UIDropDownMenu_SetText(progressColor, L.blue)
         showLearnedButton:SetChecked(rm.getPreference("showLearnedRecipes"))
+        rm.restoreButton.texture:SetTexture(rm.getPreference("restoreButtonIconTexture"))
     end)
 end
