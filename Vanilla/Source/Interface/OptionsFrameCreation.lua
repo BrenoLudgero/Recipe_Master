@@ -1,5 +1,6 @@
 local _, rm = ...
 local L = rm.L
+local F = rm.F
 
 function rm.createOptionsFrame()
     rm.frame.name = L.title
@@ -18,20 +19,20 @@ function rm.createOptionsText(font, string, xPosition, yPosition)
 end
 
 local function createSlider(yOffset, description)
-    local slider = CreateFrame("Slider", nil, rm.optionsFrame, L.templates.slider)
-    slider:SetSize(L.sizes.sliderWidth, L.sizes.sliderHeight)
+    local slider = CreateFrame("Slider", nil, rm.optionsFrame, F.templates.slider)
+    slider:SetSize(F.sizes.sliderWidth, F.sizes.sliderHeight)
     slider:SetOrientation("HORIZONTAL")
-    slider:SetPoint("TOPLEFT", L.offsets.sliderX, yOffset)
+    slider:SetPoint("TOPLEFT", F.offsets.sliderX, yOffset)
     slider.Low:AdjustPointsOffset(0, -3)
     slider.High:AdjustPointsOffset(0, -3)
-    local sliderDescription = rm.createOptionsText(L.fonts.optionDescription, description)
-    sliderDescription:SetPoint("CENTER", slider, "TOP", 0, L.offsets.sliderDescriptionY)
-    slider.valueDisplay = slider:CreateFontString(nil, "ARTWORK", L.fonts.optionDescription)
+    local sliderDescription = rm.createOptionsText(F.fonts.optionDescription, description)
+    sliderDescription:SetPoint("CENTER", slider, "TOP", 0, F.offsets.sliderDescriptionY)
+    slider.valueDisplay = slider:CreateFontString(nil, "ARTWORK", F.fonts.optionDescription)
     return slider
 end
 
 function rm.createOpacitySlider()
-    local slider = createSlider(L.offsets.opacitySliderY, L.strings.backgroundOpacity)
+    local slider = createSlider(F.offsets.opacitySliderY, L.backgroundOpacity)
     slider:SetMinMaxValues(0.4, 1)
     slider:SetValueStep(0.1)
     slider.Low:SetText("40%")
@@ -45,22 +46,22 @@ function rm.createOpacitySlider()
 end
 
 local function createOptionsDropdown(xOffset, yOffset, label)
-    local dropdown = CreateFrame("Button", nil, rm.optionsFrame, L.templates.dropdown)
+    local dropdown = CreateFrame("Button", nil, rm.optionsFrame, F.templates.dropdown)
     dropdown:SetPoint("TOPLEFT", xOffset, yOffset)
     dropdown.Text:SetPoint("CENTER", 0, 2.5)
-    local label = rm.createOptionsText(L.fonts.optionDescription, label, nil, nil)
-    label:SetPoint("CENTER", dropdown, "TOP", 0, L.offsets.optionsDropdownLabelY)
-    UIDropDownMenu_SetWidth(dropdown, L.sizes.optionsDropdownWidth)
+    local label = rm.createOptionsText(F.fonts.optionDescription, label, nil, nil)
+    label:SetPoint("CENTER", dropdown, "TOP", 0, F.offsets.optionsDropdownLabelY)
+    UIDropDownMenu_SetWidth(dropdown, F.sizes.optionsDropdownWidth)
     return dropdown
 end
 
 function rm.createIconDropdown()
-    local dropdown = createOptionsDropdown(L.offsets.updateIconDropdownX, L.offsets.updateIconDropdownY, L.strings.updateIconDropdown)
+    local dropdown = createOptionsDropdown(F.offsets.updateIconDropdownX, F.offsets.updateIconDropdownY, L.updateIconDropdown)
     dropdown.values = {
-        {text = L.strings.common, value = "Interface/Icons/INV_Scroll_03"},
-        {text = L.strings.uncommon, value = "Interface/Icons/INV_Scroll_06"},
-        {text = L.strings.rare, value = "Interface/Icons/INV_Scroll_05"},
-        {text = L.strings.epic, value = "Interface/Icons/INV_Scroll_04"}
+        {text = L.common, value = "Interface/Icons/INV_Scroll_03"},
+        {text = L.uncommon, value = "Interface/Icons/INV_Scroll_06"},
+        {text = L.rare, value = "Interface/Icons/INV_Scroll_05"},
+        {text = L.epic, value = "Interface/Icons/INV_Scroll_04"}
     }
     rm.handleTextureOptions(dropdown, "restoreButtonIconTexture", rm.restoreButton.texture)
     rm.setInitialDropdownValue(dropdown, "restoreButtonIconTexture")
@@ -68,7 +69,7 @@ function rm.createIconDropdown()
 end
 
 function rm.createSpacingSlider()
-    local slider = createSlider(L.offsets.spacingSliderY, L.strings.recipeIconSpacing)
+    local slider = createSlider(F.offsets.spacingSliderY, L.recipeIconSpacing)
     slider:SetMinMaxValues(1, 10)
     slider:SetValueStep(1)
     slider.Low:SetText("1")
@@ -82,20 +83,20 @@ function rm.createSpacingSlider()
 end
 
 function rm.createShowLearnedCheckButton()
-    local button = CreateFrame("CheckButton", nil, rm.optionsFrame, L.templates.checkButton)
-    button:SetPoint("TOPLEFT", L.offsets.showLearnedButtonX, L.offsets.showLearnedButtonY)
+    local button = CreateFrame("CheckButton", nil, rm.optionsFrame, F.templates.checkButton)
+    button:SetPoint("TOPLEFT", F.offsets.showLearnedButtonX, F.offsets.showLearnedButtonY)
     button:SetChecked(rm.getPreference("showLearnedRecipes"))
-    local label = rm.createOptionsText(L.fonts.optionDescription, L.strings.showLearned, nil, nil)
-    label:SetPoint("LEFT", button, "RIGHT", L.offsets.showLearnedTextX, 0)
+    local label = rm.createOptionsText(F.fonts.optionDescription, L.showLearned, nil, nil)
+    label:SetPoint("LEFT", button, "RIGHT", F.offsets.showLearnedTextX, 0)
     rm.toggleShowLearnedRecipesOnClick(button)
     return button
 end
 
 function rm.createProgressBrightnessDropdown()
-    local dropdown = createOptionsDropdown(L.offsets.brightnessDropdownX, L.offsets.brightnessDropdownY, L.strings.brightness)
+    local dropdown = createOptionsDropdown(F.offsets.brightnessDropdownX, F.offsets.brightnessDropdownY, L.brightness)
     dropdown.values = {
-        {text = L.strings.bright, value = "Interface/TARGETINGFRAME/BarFill2"},
-        {text = L.strings.dark, value = "Interface/CHARACTERFRAME/BarFill"}
+        {text = L.bright, value = "Interface/TARGETINGFRAME/BarFill2"},
+        {text = L.dark, value = "Interface/CHARACTERFRAME/BarFill"}
     }
     rm.handleTextureOptions(dropdown, "progressTexture", rm.progressBar)
     rm.setInitialDropdownValue(dropdown, "progressTexture")
@@ -103,13 +104,13 @@ function rm.createProgressBrightnessDropdown()
 end
 
 function rm.createProgressColorDropdown()
-    local dropdown = createOptionsDropdown(L.offsets.updateIconDropdownX, L.offsets.brightnessDropdownY, L.strings.color)
+    local dropdown = createOptionsDropdown(F.offsets.updateIconDropdownX, F.offsets.brightnessDropdownY, L.color)
     dropdown.values = {
-        {text = L.strings.blue, value = {0.00, 0.44, 0.87}},
-        {text = L.strings.gray, value = {0.62, 0.62, 0.62}},
-        {text = L.strings.green, value = {0.12, 1, 0}},
-        {text = L.strings.orange, value = {1, 0.5, 0}},
-        {text = L.strings.purple, value = {0.64, 0.21, 0.93}}
+        {text = L.blue, value = {0.00, 0.44, 0.87}},
+        {text = L.gray, value = {0.62, 0.62, 0.62}},
+        {text = L.green, value = {0.12, 1, 0}},
+        {text = L.orange, value = {1, 0.5, 0}},
+        {text = L.purple, value = {0.64, 0.21, 0.93}}
     }
     rm.handleTextureOptions(dropdown, "progressColor", nil)
     rm.setInitialDropdownValue(dropdown, "progressColor")
@@ -117,10 +118,10 @@ function rm.createProgressColorDropdown()
 end
 
 function rm.createResetDefaultsButton(opacitySlider, spacingSlider, restoreButtonDropdown, progressBrightness, progressColor, showLearnedButton)
-    local button = CreateFrame("Button", nil, rm.optionsFrame, L.templates.button)
-    button:SetText(L.strings.resetDefaults)
+    local button = CreateFrame("Button", nil, rm.optionsFrame, F.templates.button)
+    button:SetText(L.resetDefaults)
     button:SetSize(140, 35)
-    button:SetPoint("TOPLEFT", L.offsets.resetDefaultsX, L.offsets.resetDefaultsY)
+    button:SetPoint("TOPLEFT", F.offsets.resetDefaultsX, F.offsets.resetDefaultsY)
     rm.resetSavedVariablesOnClick(button, opacitySlider, spacingSlider, restoreButtonDropdown, progressBrightness, progressColor, showLearnedButton)
     return button
 end

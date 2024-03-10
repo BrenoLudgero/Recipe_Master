@@ -1,5 +1,6 @@
 local _, rm = ...
 local L = rm.L
+local F = rm.F
 
 function rm.getProfessionFrame()
     local frame = false
@@ -17,16 +18,16 @@ local function updateSizesAndOffsetsBasedOnParent(professionFrame)
     local yOffset = 73
     if professionFrame == SkilletFrame then
         yOffset = 0
-        L.offsets.mainX = 0
-        L.offsets.mainY = 0
-        L.offsets.headerY = -33
-        L.offsets.restoreButtonX = 0.5
-        L.offsets.restoreButtonY = -16
-        L.sizes.headerTextureHeight = 40
+        F.offsets.mainX = 0
+        F.offsets.mainY = 0
+        F.offsets.headerY = -33
+        F.offsets.restoreButtonX = 0.5
+        F.offsets.restoreButtonY = -16
+        F.sizes.headerTextureHeight = 40
     end
     rm.mainFrame:SetScript("OnUpdate", function(self, elapsed)
         local parentScale = professionFrame:GetEffectiveScale()
-        self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", L.offsets.mainX * parentScale, L.offsets.mainY * parentScale)
+        self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", F.offsets.mainX * parentScale, F.offsets.mainY * parentScale)
         self:SetPoint("BOTTOM", professionFrame, "BOTTOM", 0, yOffset * parentScale)
     end)
 end
@@ -35,8 +36,8 @@ local function setParentDependentFramesPosition()
     local professionFrame = rm.getProfessionFrame()
     updateSizesAndOffsetsBasedOnParent(professionFrame)
     rm.mainFrame:SetFrameStrata(professionFrame:GetFrameStrata())
-    rm.mainFrame:SetPoint("LEFT", professionFrame, "TOPRIGHT", L.offsets.restoreButtonX, L.offsets.restoreButtonY)
-    rm.restoreButton:SetPoint("LEFT", professionFrame, "TOPRIGHT", L.offsets.restoreButtonX, L.offsets.restoreButtonY)
+    rm.mainFrame:SetPoint("LEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
+    rm.restoreButton:SetPoint("LEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
 end
 
 local function updateProgressBarColor()
@@ -44,7 +45,7 @@ local function updateProgressBarColor()
         rm.progressBar:SetStatusBarColor(unpack(rm.getPreference("progressColor")))
         return
     end
-    rm.progressBar:SetStatusBarColor(unpack(L.colors.progressComplete))
+    rm.progressBar:SetStatusBarColor(unpack(F.colors.progressComplete))
 end
 
 local function getSpecializationDisplayName()
@@ -71,8 +72,8 @@ function rm.updateRecipesPosition()
     local recipeSection = rm.recipeContainer.children
     for _, element in ipairs(recipeSection) do
         if element:IsShown() then
-            element.associatedIcon:SetPoint("TOP", rm.recipeContainer, "BOTTOMLEFT", L.offsets.recipeIconX, yOffset)
-            yOffset = yOffset - (L.sizes.recipeIcon + rm.getPreference("rowSpacing"))
+            element.associatedIcon:SetPoint("TOP", rm.recipeContainer, "BOTTOMLEFT", F.offsets.recipeIconX, yOffset)
+            yOffset = yOffset - (F.sizes.recipeIcon + rm.getPreference("rowSpacing"))
         end
     end
 end
@@ -101,24 +102,24 @@ end
 
 function rm.showDetailsTabElements()
     rm.hideRecipeFrameElements()
-    rm.mainFrame:SetBackdrop(L.backdrops.details)
-    rm.mainFrame:SetBackdropColor(unpack(L.colors.detailsBackground))
+    rm.mainFrame:SetBackdrop(F.backdrops.details)
+    rm.mainFrame:SetBackdropColor(unpack(F.colors.detailsBackground))
 end
 
 function rm.showRecipeFrameElements()
     rm.scrollFrame:Show()
     rm.progressContainer:Show()
-    rm.mainFrame:SetBackdrop(L.backdrops.mainFrame)
-    rm.mainFrame:SetBackdropColor(unpack(L.colors.mainBackground))
+    rm.mainFrame:SetBackdrop(F.backdrops.mainFrame)
+    rm.mainFrame:SetBackdropColor(unpack(F.colors.mainBackground))
 end
 
 -- Ensures that no recipe text will be cropped
 local function updateMainWidthBasedOnWidestRecipeName()
     local newMainFrameWidth = math.floor(rm.widestRecipeTextWidth + 73)
-    if newMainFrameWidth >= L.sizes.mainWidth then
+    if newMainFrameWidth >= F.sizes.mainWidth then
         rm.mainFrame:SetWidth(newMainFrameWidth)
     else
-        rm.mainFrame:SetWidth(L.sizes.mainWidth)
+        rm.mainFrame:SetWidth(F.sizes.mainWidth)
     end
 end
 

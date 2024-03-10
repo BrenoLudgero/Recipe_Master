@@ -1,5 +1,6 @@
 local _, rm = ...
 local L = rm.L
+local F = rm.F
 
 function rm.updateBackgroundOpacity(opacitySlider)
     opacitySlider:SetScript("OnValueChanged", function(self, value)
@@ -7,8 +8,8 @@ function rm.updateBackgroundOpacity(opacitySlider)
         local roundedValueToTwoDecimals = roundedValue / 100
         rm.setPreference("backgroundOpacity", roundedValueToTwoDecimals)
         opacitySlider.valueDisplay:SetText((roundedValue).."%")
-        L.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
-        L.colors.detailsBackground = {0.7, 0.7, 0.7, rm.getPreference("backgroundOpacity")}
+        F.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
+        F.colors.detailsBackground = {0.7, 0.7, 0.7, rm.getPreference("backgroundOpacity")}
     end)
 end
 
@@ -31,7 +32,7 @@ function rm.handleTextureOptions(dropdown, savedVariable, frame)
     UIDropDownMenu_Initialize(dropdown, function(self)
         for _, option in ipairs(dropdown.values) do
             local info = UIDropDownMenu_CreateInfo()
-            info.minWidth = L.sizes.optionsDropdownWidth + 10
+            info.minWidth = F.sizes.optionsDropdownWidth + 10
             info.text = option.text
             info.value = option.value
             info.func = function(self)
@@ -69,11 +70,11 @@ function rm.resetSavedVariablesOnClick(resetDefaultsButton, opacitySlider, spaci
         spacingSlider:SetValue(rm.getPreference("rowSpacing"))
         spacingSlider.valueDisplay:SetText(rm.getPreference("rowSpacing"))
         rm.setInitialDropdownValue(restoreButtonDropdown, "restoreButtonIconTexture")
-        UIDropDownMenu_SetText(restoreButtonDropdown, L.strings.epic)
+        UIDropDownMenu_SetText(restoreButtonDropdown, L.epic)
         rm.setInitialDropdownValue(progressBrightness, "progressTexture")
-        UIDropDownMenu_SetText(progressBrightness, L.strings.bright)
+        UIDropDownMenu_SetText(progressBrightness, L.bright)
         rm.setInitialDropdownValue(progressColor, "progressColor")
-        UIDropDownMenu_SetText(progressColor, L.strings.blue)
+        UIDropDownMenu_SetText(progressColor, L.blue)
         showLearnedButton:SetChecked(rm.getPreference("showLearnedRecipes"))
     end)
 end

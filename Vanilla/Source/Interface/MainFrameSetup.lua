@@ -1,5 +1,6 @@
 local _, rm = ...
 local L = rm.L
+local F = rm.F
 
 function rm.setUpButtonWithTooltip(button, width, height, tooltipText, scriptOnClick)
     button:SetSize(width, height)
@@ -104,7 +105,7 @@ function rm.handleSortingOptions(sortBar)
     UIDropDownMenu_Initialize(sortBar, function(self)
         for _, option in ipairs(sortBar.values) do
             local info = UIDropDownMenu_CreateInfo()
-            info.minWidth = L.sizes.sortBarWidth + 15
+            info.minWidth = F.sizes.sortBarWidth + 15
             info.text = option.text
             info.value = option.value
             info.func = function(self)
@@ -161,25 +162,25 @@ function rm.updateSortOrderOnClick(button, texture)
 end
 
 local function handleRecipesTab(tab)
-    if tab.label == L.strings.recipesTab then
+    if tab.label == L.recipesTab then
         rm.showRecipeFrameElements()
         rm.showRecipesForProfession(rm.lastDisplayedProfession)
     end
 end
 
 local function handleDetailsTab(tab)
-    if tab.label == L.strings.recipeDetailsTab then
+    if tab.label == L.recipeDetailsTab then
         rm.showDetailsTabElements()
-        rm.showCenteredText(L.strings.comingSoon, L.colors.green)
+        rm.showCenteredText(L.comingSoon, F.colors.green)
     end
 end
 
 local function handleFishingTab(tab)
-    if tab.label == L.strings.fishingTab then
+    if tab.label == L.fishingTab then
         rm.showRecipeFrameElements()
         if not rm.getSavedProfessionByID(356) then
             rm.hideRecipeFrameElements()
-            rm.showCenteredText(L.strings.fishingNotLearned, L.colors.yellow)
+            rm.showCenteredText(L.fishingNotLearned, F.colors.yellow)
             return
         end
         rm.showRecipesForProfession(L.professionNames[356])

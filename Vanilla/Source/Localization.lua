@@ -1,5 +1,6 @@
 local _, rm = ...
 local L = rm.L
+local F = rm.F
 
 if rm.locale == "enUS" then
     L.professionNames = {
@@ -15,6 +16,19 @@ if rm.locale == "enUS" then
         [197] = "Tailoring"
     }
     L.recipePrefixes = {"Recipe: ", "Plans: ", "Formula: ", "Schematic: ", "Pattern: ", "Manual: "}
+    L.backgroundOpacity = "Background Opacity"
+    L.blue = "Blue"
+    L.bright = "Bright"
+    L.dark = "Dark"
+    L.gray = "Gray"
+    L.green = "Green"
+    L.orange = "Orange"
+    L.progressBar = "Progress Bar"
+    L.purple = "Purple"
+    L.recipeIconSpacing = "Icon Spacing"
+    L.recipesWindow = "Recipes Window"
+    L.showLearned = "Show Learned Recipes"
+    L.updateIconDropdown = "Recipe Master's Button Icon"
     return
 
 elseif rm.locale == "esMX" then
@@ -31,19 +45,19 @@ elseif rm.locale == "esMX" then
         [197] = "Sastrería"
     }
     L.recipePrefixes = {"Receta: ", "Diseño: ", "Fórmula: ", "Esquema: ", "Patrón: ", "Manual: "}
-    L.strings.backgroundOpacity = "Opacidad del Fondo"
-    L.strings.blue = "Azul"
-    L.strings.bright = "Brillante"
-    L.strings.dark = "Oscuro"
-    L.strings.gray = "Gris"
-    L.strings.green = "Verde"
-    L.strings.orange = "Naranja"
-    L.strings.progressBar = "Barra de Progreso"
-    L.strings.purple = "Morado"
-    L.strings.recipeIconSpacing = "Espaciado de Iconos"
-    L.strings.recipesWindow = "Ventana de Recetas"
-    L.strings.updateIconDropdown = "Ícono del Botón del Maestro de Recetas"
-    L.strings.showLearned = "Mostrar Recetas Aprendidas"
+    L.backgroundOpacity = "Opacidad del Fondo"
+    L.blue = "Azul"
+    L.bright = "Brillante"
+    L.dark = "Oscuro"
+    L.gray = "Gris"
+    L.green = "Verde"
+    L.orange = "Naranja"
+    L.progressBar = "Barra de Progreso"
+    L.purple = "Morado"
+    L.recipeIconSpacing = "Espaciado de Iconos"
+    L.recipesWindow = "Ventana de Recetas"
+    L.updateIconDropdown = "Ícono del Botón del Maestro de Recetas"
+    L.showLearned = "Mostrar Recetas Aprendidas"
     return
 
 elseif rm.locale == "esES" then
@@ -60,19 +74,19 @@ elseif rm.locale == "esES" then
         [197] = "Costura"
     }
     L.recipePrefixes = {"Receta: ", "Diseño: ", "Fórmula: ", "Esquema: ", "Patrón: ", "Manual: "}
-    L.strings.backgroundOpacity = "Opacidad del Fondo"
-    L.strings.blue = "Azul"
-    L.strings.bright = "Brillante"
-    L.strings.dark = "Oscuro"
-    L.strings.gray = "Gris"
-    L.strings.green = "Verde"
-    L.strings.orange = "Naranja"
-    L.strings.progressBar = "Barra de Progreso"
-    L.strings.purple = "Morado"
-    L.strings.recipeIconSpacing = "Espaciado de Iconos"
-    L.strings.recipesWindow = "Ventana de Recetas"
-    L.strings.updateIconDropdown = "Ícono del Botón del Maestro de Recetas"
-    L.strings.showLearned = "Mostrar Recetas Aprendidas"
+    L.backgroundOpacity = "Opacidad del Fondo"
+    L.blue = "Azul"
+    L.bright = "Brillante"
+    L.dark = "Oscuro"
+    L.gray = "Gris"
+    L.green = "Verde"
+    L.orange = "Naranja"
+    L.progressBar = "Barra de Progreso"
+    L.purple = "Morado"
+    L.recipeIconSpacing = "Espaciado de Iconos"
+    L.recipesWindow = "Ventana de Recetas"
+    L.updateIconDropdown = "Ícono del Botón del Maestro de Recetas"
+    L.showLearned = "Mostrar Recetas Aprendidas"
     return
 
 elseif rm.locale == "ptBR" then
@@ -89,20 +103,20 @@ elseif rm.locale == "ptBR" then
         [197] = "Alfaiataria"
     }
     L.recipePrefixes = {"Receita: ", "Instruções: ", "Fórmula: ", "Diagrama: ", "Molde: ", "Manual: "}
-    L.strings.backgroundOpacity = "Opacidade do Fundo"
-    L.strings.blue = "Azul"
-    L.strings.bright = "Claro"
-    L.strings.dark = "Escuro"
-    L.strings.gray = "Cinza"
-    L.strings.green = "Verde"
-    L.strings.orange = "Laranja"
-    L.strings.progressBar = "Barra de Progresso"
-    L.strings.purple = "Roxo"
-    L.strings.recipeIconSpacing = "Espaçamento do Ícone"
-    L.strings.recipesWindow = "Janela de Receitas"
-    L.strings.updateIconDropdown = "Ícone do Botão do Mestre das Receitas"
-    L.strings.showLearned = "Mostrar Receitas Aprendidas"        
-    L.strings.sortBy = "Ordenar:"
+    L.backgroundOpacity = "Opacidade do Fundo"
+    L.blue = "Azul"
+    L.bright = "Claro"
+    L.dark = "Escuro"
+    L.gray = "Cinza"
+    L.green = "Verde"
+    L.orange = "Laranja"
+    L.progressBar = "Barra de Progresso"
+    L.purple = "Roxo"
+    L.recipeIconSpacing = "Espaçamento do Ícone"
+    L.recipesWindow = "Janela de Receitas"
+    L.updateIconDropdown = "Ícone do Botão do Mestre das Receitas"
+    L.showLearned = "Mostrar Receitas Aprendidas"        
+    L.sortBy = "Ordenar:"
     return
 
 elseif rm.locale == "deDE" then
@@ -119,19 +133,19 @@ elseif rm.locale == "deDE" then
         [197] = "Schneiderei"
     }
     L.recipePrefixes = {"Rezept: ", "Pläne: ", "Formel: ", "Bauplan: ", "Muster: ", "Handbuch: "}
-    L.strings.backgroundOpacity = "Hintergrundopazität"
-    L.strings.blue = "Blau"
-    L.strings.bright = "Hell"
-    L.strings.dark = "Dunkel"
-    L.strings.gray = "Grau"
-    L.strings.green = "Grün"
-    L.strings.orange = "Orange"
-    L.strings.progressBar = "Fortschrittsbalken"
-    L.strings.purple = "Lila"
-    L.strings.recipeIconSpacing = "Symbolabstand"
-    L.strings.recipesWindow = "Rezepte Fenster"
-    L.strings.updateIconDropdown = "Symbol des Rezeptmeister"
-    L.strings.showLearned = "Gelernte Rezepte anzeigen"
+    L.backgroundOpacity = "Hintergrundopazität"
+    L.blue = "Blau"
+    L.bright = "Hell"
+    L.dark = "Dunkel"
+    L.gray = "Grau"
+    L.green = "Grün"
+    L.orange = "Orange"
+    L.progressBar = "Fortschrittsbalken"
+    L.purple = "Lila"
+    L.recipeIconSpacing = "Symbolabstand"
+    L.recipesWindow = "Rezepte Fenster"
+    L.updateIconDropdown = "Symbol des Rezeptmeister"
+    L.showLearned = "Gelernte Rezepte anzeigen"
     return
 
 elseif rm.locale == "frFR" then
@@ -148,19 +162,19 @@ elseif rm.locale == "frFR" then
         [197] = "Couture"
     }
     L.recipePrefixes = {"Recette : ", "Plan : ", "Plans : ", "Formule : ", "Schéma : ", "Patron : ", "Manuel : "}
-    L.strings.backgroundOpacity = "Opacité de l'Arrière-plan"
-    L.strings.blue = "Bleu"
-    L.strings.bright = "Clair"
-    L.strings.dark = "Foncé"
-    L.strings.gray = "Gris"
-    L.strings.green = "Vert"
-    L.strings.orange = "Orange"
-    L.strings.progressBar = "Barre de Progrès"
-    L.strings.purple = "Violet"
-    L.strings.recipeIconSpacing = "Espacement des Icônes"
-    L.strings.recipesWindow = "Fenêtre des Recettes"
-    L.strings.updateIconDropdown = "Icône du Bouton du Maître des Recettes"
-    L.strings.showLearned = "Afficher les Recettes Apprises"
+    L.backgroundOpacity = "Opacité de l'Arrière-plan"
+    L.blue = "Bleu"
+    L.bright = "Clair"
+    L.dark = "Foncé"
+    L.gray = "Gris"
+    L.green = "Vert"
+    L.orange = "Orange"
+    L.progressBar = "Barre de Progrès"
+    L.purple = "Violet"
+    L.recipeIconSpacing = "Espacement des Icônes"
+    L.recipesWindow = "Fenêtre des Recettes"
+    L.updateIconDropdown = "Icône du Bouton du Maître des Recettes"
+    L.showLearned = "Afficher les Recettes Apprises"
     return
 
 elseif rm.locale == "ruRU" then
@@ -177,23 +191,23 @@ elseif rm.locale == "ruRU" then
         [197] = "Портняжное дело"
     }
     L.recipePrefixes = {"Рецепт: ", "Чертеж: ", "Формула ", "Формула: ", "Схема: ", "Выкройка: ", "Учебник: "}
-    L.fonts.bottomTab = "Fonts\\FRIZQT___CYR.TTF"
-    L.offsets.headerTextY = 0
-    L.offsets.tabTextY = 5.5
-    L.strings.backgroundOpacity = "Прозрачность фона"
-    L.strings.blue = "Синий"
-    L.strings.bright = "Яркий"
-    L.strings.dark = "Тёмный"
-    L.strings.gray = "Серый"
-    L.strings.green = "Зелёный"
-    L.strings.orange = "Оранжевый"
-    L.strings.progressBar = "Полоса прогресса"
-    L.strings.purple = "Фиолетовый"
-    L.strings.recipeIconSpacing = "Промежуток между иконками"
-    L.strings.recipesWindow = "Окно рецептов"
-    L.strings.updateIconDropdown = "Иконка кнопки Мастер Рецептов"
-    L.strings.showLearned = "Показывать выученные рецепты"
-    L.strings.sortBy = "Сорт:"
+    L.backgroundOpacity = "Прозрачность фона"
+    L.blue = "Синий"
+    L.bright = "Яркий"
+    L.dark = "Тёмный"
+    L.gray = "Серый"
+    L.green = "Зелёный"
+    L.orange = "Оранжевый"
+    L.progressBar = "Полоса прогресса"
+    L.purple = "Фиолетовый"
+    L.recipeIconSpacing = "Промежуток между иконками"
+    L.recipesWindow = "Окно рецептов"
+    L.updateIconDropdown = "Иконка кнопки Мастер Рецептов"
+    L.showLearned = "Показывать выученные рецепты"
+    L.sortBy = "Сорт:"
+    F.fonts.bottomTab = "Fonts\\FRIZQT___CYR.TTF"
+    F.offsets.headerTextY = 0
+    F.offsets.tabTextY = 5.5
     return
 
 elseif rm.locale == "koKR" then
@@ -210,23 +224,23 @@ elseif rm.locale == "koKR" then
         [197] = "재봉술"
     }
     L.recipePrefixes = {"조리법: ", "도면: ", "주문식: ", "설계도: ", "도안: ", "처방전: "}
-    L.fonts.bottomTab = "Fonts\\2002.TTF"
-    L.fontSizes.bottomTab = 11
-    L.offsets.headerTextY = 0.4
-    L.offsets.tabTextY = 5.5
-    L.strings.backgroundOpacity = "배경 불투명도"
-    L.strings.blue = "파랑"
-    L.strings.bright = "밝은"
-    L.strings.dark = "어두운"
-    L.strings.gray = "회색"
-    L.strings.green = "초록"
-    L.strings.orange = "주황"
-    L.strings.progressBar = "진행 막대"
-    L.strings.purple = "보라"
-    L.strings.recipeIconSpacing = "아이콘 간격"
-    L.strings.recipesWindow = "레시피 창"
-    L.strings.updateIconDropdown = "레시피 마스터 버튼 아이콘"
-    L.strings.showLearned = "배웠던 레시피 보기"
+    L.backgroundOpacity = "배경 불투명도"
+    L.blue = "파랑"
+    L.bright = "밝은"
+    L.dark = "어두운"
+    L.gray = "회색"
+    L.green = "초록"
+    L.orange = "주황"
+    L.progressBar = "진행 막대"
+    L.purple = "보라"
+    L.recipeIconSpacing = "아이콘 간격"
+    L.recipesWindow = "레시피 창"
+    L.updateIconDropdown = "레시피 마스터 버튼 아이콘"
+    L.showLearned = "배웠던 레시피 보기"
+    F.fonts.bottomTab = "Fonts\\2002.TTF"
+    F.fontSizes.bottomTab = 11
+    F.offsets.headerTextY = 0.4
+    F.offsets.tabTextY = 5.5
     return
 
 elseif rm.locale == "zhTW" then
@@ -243,23 +257,23 @@ elseif rm.locale == "zhTW" then
         [197] = "裁縫"
     }
     L.recipePrefixes = {"食譜：", "設計圖：", "公式：", "結構圖：", "結構圖 : ", "圖樣：", "圖樣 : ", "說明書：", "手冊：", "配方："}
-    L.fonts.bottomTab = "Fonts\\blei00d.TTF"
-    L.fontSizes.bottomTab = 12
-    L.offsets.headerTextY = 0
-    L.strings.backgroundOpacity = "背景不透明度"
-    L.strings.blue = "藍色"
-    L.strings.bright = "明亮"
-    L.strings.dark = "暗色"
-    L.strings.gray = "灰色"
-    L.strings.green = "綠色"
-    L.strings.orange = "橙色"
-    L.strings.progressBar = "進度條"
-    L.strings.purple = "紫色"
-    L.strings.recipeIconSpacing = "圖示間距"
-    L.strings.recipesWindow = "食譜視窗"
-    L.strings.updateIconDropdown = "食譜大師按鈕圖示"
-    L.strings.showLearned = "顯示已學會的食譜"
-    L.strings.sortBy = "分類："
+    L.backgroundOpacity = "背景不透明度"
+    L.blue = "藍色"
+    L.bright = "明亮"
+    L.dark = "暗色"
+    L.gray = "灰色"
+    L.green = "綠色"
+    L.orange = "橙色"
+    L.progressBar = "進度條"
+    L.purple = "紫色"
+    L.recipeIconSpacing = "圖示間距"
+    L.recipesWindow = "食譜視窗"
+    L.updateIconDropdown = "食譜大師按鈕圖示"
+    L.showLearned = "顯示已學會的食譜"
+    L.sortBy = "分類："
+    F.fonts.bottomTab = "Fonts\\blei00d.TTF"
+    F.fontSizes.bottomTab = 12
+    F.offsets.headerTextY = 0
     return
 
 elseif rm.locale == "zhCN" then
@@ -276,20 +290,20 @@ elseif rm.locale == "zhCN" then
         [197] = "裁缝"
     }
     L.recipePrefixes = {"食谱：", "配方：", "设计图：", "公式：", "结构图：", "图样：", "手册："}
-    L.fonts.bottomTab = "Fonts\\ARKai_T.ttf"
-    L.fontSizes.bottomTab = 12
-    L.offsets.headerTextY = 0.8
-    L.strings.backgroundOpacity = "背景不透明度"
-    L.strings.blue = "蓝色"
-    L.strings.bright = "明亮"
-    L.strings.dark = "深色"
-    L.strings.gray = "灰色"
-    L.strings.green = "绿色"
-    L.strings.orange = "橙色"
-    L.strings.progressBar = "进度条"
-    L.strings.purple = "紫色"
-    L.strings.recipeIconSpacing = "图标间距"
-    L.strings.recipesWindow = "食谱窗口"
-    L.strings.updateIconDropdown = "食谱大师按钮图标"
-    L.strings.showLearned = "显示已学会的食谱"
+    L.backgroundOpacity = "背景不透明度"
+    L.blue = "蓝色"
+    L.bright = "明亮"
+    L.dark = "深色"
+    L.gray = "灰色"
+    L.green = "绿色"
+    L.orange = "橙色"
+    L.progressBar = "进度条"
+    L.purple = "紫色"
+    L.recipeIconSpacing = "图标间距"
+    L.recipesWindow = "食谱窗口"
+    L.updateIconDropdown = "食谱大师按钮图标"
+    L.showLearned = "显示已学会的食谱"
+    F.fonts.bottomTab = "Fonts\\ARKai_T.ttf"
+    F.fontSizes.bottomTab = 12
+    F.offsets.headerTextY = 0.8
 end

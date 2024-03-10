@@ -1,5 +1,6 @@
 local _, rm = ...
 local L = rm.L
+local F = rm.F
 
 local function deleteFrameCreationFunctions()
     rm.createFrame = nil
@@ -34,8 +35,8 @@ end
 
 -- Called in EventHandler.handleAddonLoaded, after SavedVariables are created or loaded
 function rm.createAllFrames()
-    L.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
-    L.colors.detailsBackground = {0.7, 0.7, 0.7, rm.getPreference("backgroundOpacity")}
+    F.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
+    F.colors.detailsBackground = {0.7, 0.7, 0.7, rm.getPreference("backgroundOpacity")}
     ---------- Main window ----------
     rm.mainFrame = rm.createFrame()
     rm.mainFrameBorder = rm.createBorder(rm.mainFrame)
@@ -57,17 +58,17 @@ function rm.createAllFrames()
     rm.centeredText = rm.createCenteredText(mainFrameInnerBorder)
     ---------- Bottom tabs ----------
     rm.bottomTabs = {}
-    rm.recipesTab = rm.createBottomTab(L.strings.recipesTab, "BOTTOMLEFT", L.offsets.recipesTabX, true)
-    rm.recipeDetailsTab = rm.createBottomTab(L.strings.recipeDetailsTab, "BOTTOM", 0, false)
-    rm.fishingTab = rm.createBottomTab(L.strings.fishingTab, "BOTTOMRIGHT", L.offsets.fishingTabX, false)
+    rm.recipesTab = rm.createBottomTab(L.recipesTab, "BOTTOMLEFT", F.offsets.recipesTabX, true)
+    rm.recipeDetailsTab = rm.createBottomTab(L.recipeDetailsTab, "BOTTOM", 0, false)
+    rm.fishingTab = rm.createBottomTab(L.fishingTab, "BOTTOMRIGHT", F.offsets.fishingTabX, false)
     ---------- Options window ----------
     rm.optionsFrame = rm.createOptionsFrame()
     ----- Texts -----
-    rm.createOptionsText(L.fonts.title, L.title, L.offsets.titlesTextX, L.offsets.titleY)
-    rm.createOptionsText(L.fonts.subtitle, L.strings.subtitle, L.offsets.titlesTextX, L.offsets.subtitleY)
-    rm.createOptionsText(L.fonts.optionSection, L.strings.general, L.offsets.titlesTextX, L.offsets.generalTextY)
-    rm.createOptionsText(L.fonts.optionSection, L.strings.recipesWindow, L.offsets.titlesTextX, L.offsets.recipesWindowTextY)
-    rm.createOptionsText(L.fonts.optionSection, L.strings.progressBar, L.offsets.titlesTextX, L.offsets.progressBarTextY)
+    rm.createOptionsText(F.fonts.title, L.title, F.offsets.titlesTextX, F.offsets.titleY)
+    rm.createOptionsText(F.fonts.subtitle, L.subtitle, F.offsets.titlesTextX, F.offsets.subtitleY)
+    rm.createOptionsText(F.fonts.optionSection, L.general, F.offsets.titlesTextX, F.offsets.generalTextY)
+    rm.createOptionsText(F.fonts.optionSection, L.recipesWindow, F.offsets.titlesTextX, F.offsets.recipesWindowTextY)
+    rm.createOptionsText(F.fonts.optionSection, L.progressBar, F.offsets.titlesTextX, F.offsets.progressBarTextY)
     ----- Sliders -----
     local opacitySlider = rm.createOpacitySlider()
     local spacingSlider = rm.createSpacingSlider()
