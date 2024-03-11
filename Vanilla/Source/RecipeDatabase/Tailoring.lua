@@ -538,6 +538,7 @@ rm.recipes[197] = {
 		teaches = 22655,
 	},
 	[14514] = {
+		class = "Warlock",
 		reqSkill = 300,
 		teaches = 14153,
 	},
@@ -590,7 +591,6 @@ rm.recipes[197] = {
 		teaches = 14140,
 	},
 	[17018] = {
-		class = "Priest",
 		reqSkill = 300,
 		teaches = 16979,
 	},
