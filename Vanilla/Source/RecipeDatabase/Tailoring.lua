@@ -344,7 +344,6 @@ rm.recipes[197] = {
 		teaches = 14046,
 	},
 	[21358] = {
-		class = "Warlock",
 		reqSkill = 260,
 		teaches = 21340,
 	},
@@ -441,7 +440,6 @@ rm.recipes[197] = {
 		teaches = 14136,
 	},
 	[21369] = {
-		class = "Warlock",
 		reqSkill = 285,
 		teaches = 21341,
 	},
@@ -504,7 +502,6 @@ rm.recipes[197] = {
 		teaches = 19682,
 	},
 	[21371] = {
-		class = "Warlock",
 		reqSkill = 300,
 		teaches = 21342,
 	},
@@ -517,7 +514,6 @@ rm.recipes[197] = {
 		teaches = 22249,
 	},
 	[14511] = {
-		class = "Priest",
 		reqSkill = 300,
 		teaches = 14146,
 	},
@@ -542,7 +538,6 @@ rm.recipes[197] = {
 		teaches = 22655,
 	},
 	[14514] = {
-		class = "Warlock",
 		reqSkill = 300,
 		teaches = 14153,
 	},
