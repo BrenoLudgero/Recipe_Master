@@ -13,13 +13,13 @@ rm.recipes[197] = {
 		reqSkill = 55,
 		teaches = 6239,
 	},
-	[5771] = {
-		reqSkill = 70,
-		teaches = 5762,
-	},
 	[6272] = {
 		reqSkill = 70,
 		teaches = 6242,
+	},
+	[5771] = {
+		reqSkill = 70,
+		teaches = 5762,
 	},
 	[6273] = {
 		reqSkill = 90,
@@ -57,30 +57,30 @@ rm.recipes[197] = {
 		reqSkill = 120,
 		teaches = 6385,
 	},
-	[6390] = {
+	[10316] = {
 		reqSkill = 120,
-		teaches = 6384,
+		teaches = 10048,
 	},
 	[4347] = {
 		reqSkill = 120,
 		teaches = 4315,
 	},
-	[10316] = {
+	[6390] = {
 		reqSkill = 120,
-		teaches = 10048,
+		teaches = 6384,
 	},
 	[211247] = {
 		season = "SoD",
 		reqSkill = 125,
 		teaches = 210781,
 	},
-	[4349] = {
-		reqSkill = 125,
-		teaches = 4317,
-	},
 	[4348] = {
 		reqSkill = 125,
 		teaches = 4331,
+	},
+	[4349] = {
+		reqSkill = 125,
+		teaches = 4317,
 	},
 	[14627] = {
 		reqSkill = 135,
@@ -209,13 +209,13 @@ rm.recipes[197] = {
 		reqSkill = 200,
 		teaches = 213379,
 	},
-	[10728] = {
-		reqSkill = 200,
-		teaches = 4336,
-	},
 	[4355] = {
 		reqSkill = 200,
 		teaches = 4327,
+	},
+	[10728] = {
+		reqSkill = 200,
+		teaches = 4336,
 	},
 	[7088] = {
 		reqSkill = 205,
@@ -242,10 +242,6 @@ rm.recipes[197] = {
 		reqSkill = 220,
 		teaches = 10052,
 	},
-	[10304] = {
-		reqSkill = 220,
-		teaches = 10011,
-	},
 	[10303] = {
 		reqSkill = 220,
 		teaches = 10010,
@@ -255,13 +251,13 @@ rm.recipes[197] = {
 		reqSkill = 225,
 		teaches = 215111,
 	},
-	[10312] = {
-		reqSkill = 225,
-		teaches = 10018,
-	},
 	[22307] = {
 		reqSkill = 225,
 		teaches = 22246,
+	},
+	[10312] = {
+		reqSkill = 225,
+		teaches = 10018,
 	},
 	[10313] = {
 		reqSkill = 225,
@@ -331,13 +327,13 @@ rm.recipes[197] = {
 		reqSkill = 250,
 		teaches = 10039,
 	},
-	[14467] = {
-		reqSkill = 255,
-		teaches = 13868,
-	},
 	[14466] = {
 		reqSkill = 255,
 		teaches = 13869,
+	},
+	[14467] = {
+		reqSkill = 255,
+		teaches = 13868,
 	},
 	[14468] = {
 		reqSkill = 260,
@@ -371,6 +367,10 @@ rm.recipes[197] = {
 		reqSkill = 265,
 		teaches = 13860,
 	},
+	[14478] = {
+		reqSkill = 270,
+		teaches = 14100,
+	},
 	[14479] = {
 		reqSkill = 270,
 		teaches = 14101,
@@ -378,10 +378,6 @@ rm.recipes[197] = {
 	[14476] = {
 		reqSkill = 270,
 		teaches = 14043,
-	},
-	[14478] = {
-		reqSkill = 270,
-		teaches = 14100,
 	},
 	[14477] = {
 		reqSkill = 270,
@@ -399,21 +395,17 @@ rm.recipes[197] = {
 		reqSkill = 275,
 		teaches = 22251,
 	},
-	[14483] = {
-		reqSkill = 275,
-		teaches = 14107,
-	},
 	[22308] = {
 		reqSkill = 275,
 		teaches = 22248,
 	},
+	[14483] = {
+		reqSkill = 275,
+		teaches = 14107,
+	},
 	[14486] = {
 		reqSkill = 275,
 		teaches = 14134,
-	},
-	[14484] = {
-		reqSkill = 275,
-		teaches = 14103,
 	},
 	[14480] = {
 		reqSkill = 275,
@@ -423,13 +415,17 @@ rm.recipes[197] = {
 		reqSkill = 275,
 		teaches = 14132,
 	},
-	[14488] = {
-		reqSkill = 280,
-		teaches = 13864,
+	[14484] = {
+		reqSkill = 275,
+		teaches = 14103,
 	},
 	[14490] = {
 		reqSkill = 280,
 		teaches = 14045,
+	},
+	[14488] = {
+		reqSkill = 280,
+		teaches = 13864,
 	},
 	[14489] = {
 		reqSkill = 280,
@@ -463,6 +459,10 @@ rm.recipes[197] = {
 		reqSkill = 290,
 		teaches = 14111,
 	},
+	[14495] = {
+		reqSkill = 290,
+		teaches = 14144,
+	},
 	[19215] = {
 		reqSkill = 290,
 		teaches = 19047,
@@ -470,10 +470,6 @@ rm.recipes[197] = {
 	[19216] = {
 		reqSkill = 290,
 		teaches = 19056,
-	},
-	[14495] = {
-		reqSkill = 290,
-		teaches = 14144,
 	},
 	[14498] = {
 		reqSkill = 295,
@@ -492,75 +488,123 @@ rm.recipes[197] = {
 		reqSkill = 300,
 		teaches = 14152,
 	},
-	[14512] = {
-		class = "Priest",
+	[21371] = {
 		reqSkill = 300,
-		teaches = 14154,
+		teaches = 21342,
 	},
 	[19764] = {
 		reqSkill = 300,
 		teaches = 19682,
 	},
-	[21371] = {
+	[14512] = {
+		class = "Priest",
 		reqSkill = 300,
-		teaches = 21342,
-	},
-	[19765] = {
-		reqSkill = 300,
-		teaches = 19683,
-	},
-	[22309] = {
-		reqSkill = 300,
-		teaches = 22249,
+		teaches = 14154,
 	},
 	[14511] = {
 		reqSkill = 300,
 		teaches = 14146,
-	},
-	[18415] = {
-		reqSkill = 300,
-		teaches = 18407,
-	},
-	[19766] = {
-		reqSkill = 300,
-		teaches = 19684,
-	},
-	[22685] = {
-		reqSkill = 300,
-		teaches = 22658,
-	},
-	[22312] = {
-		reqSkill = 300,
-		teaches = 22252,
-	},
-	[22687] = {
-		reqSkill = 300,
-		teaches = 22655,
 	},
 	[14514] = {
 		class = "Warlock",
 		reqSkill = 300,
 		teaches = 14153,
 	},
-	[22683] = {
+	[22685] = {
 		reqSkill = 300,
-		teaches = 22660,
+		teaches = 22658,
 	},
-	[20548] = {
+	[19765] = {
 		reqSkill = 300,
-		teaches = 20539,
+		teaches = 19683,
+	},
+	[19766] = {
+		reqSkill = 300,
+		teaches = 19684,
+	},
+	[18415] = {
+		reqSkill = 300,
+		teaches = 18407,
+	},
+	[22309] = {
+		reqSkill = 300,
+		teaches = 22249,
 	},
 	[14506] = {
 		reqSkill = 300,
 		teaches = 14106,
 	},
+	[22683] = {
+		reqSkill = 300,
+		teaches = 22660,
+	},
+	[22774] = {
+		reqSkill = 300,
+		teaches = 22756,
+	},
+	[14507] = {
+		reqSkill = 300,
+		teaches = 14139,
+	},
+	[14508] = {
+		reqSkill = 300,
+		teaches = 14112,
+	},
+	[22686] = {
+		reqSkill = 300,
+		teaches = 22652,
+	},
+	[22687] = {
+		reqSkill = 300,
+		teaches = 22655,
+	},
+	[18487] = {
+		reqSkill = 300,
+		teaches = 18486,
+	},
 	[19220] = {
 		reqSkill = 300,
 		teaches = 19165,
 	},
-	[18265] = {
+	[22773] = {
 		reqSkill = 300,
-		teaches = 18263,
+		teaches = 22757,
+	},
+	[22684] = {
+		reqSkill = 300,
+		teaches = 22654,
+	},
+	[19217] = {
+		reqSkill = 300,
+		teaches = 19059,
+	},
+	[20546] = {
+		reqSkill = 300,
+		teaches = 20538,
+	},
+	[14501] = {
+		reqSkill = 300,
+		teaches = 14138,
+	},
+	[18414] = {
+		reqSkill = 300,
+		teaches = 18405,
+	},
+	[20548] = {
+		reqSkill = 300,
+		teaches = 20539,
+	},
+	[14509] = {
+		reqSkill = 300,
+		teaches = 14140,
+	},
+	[22312] = {
+		reqSkill = 300,
+		teaches = 22252,
+	},
+	[18418] = {
+		reqSkill = 300,
+		teaches = 18413,
 	},
 	[20547] = {
 		reqSkill = 300,
@@ -570,53 +614,25 @@ rm.recipes[197] = {
 		reqSkill = 300,
 		teaches = 13867,
 	},
+	[18265] = {
+		reqSkill = 300,
+		teaches = 18263,
+	},
+	[18417] = {
+		reqSkill = 300,
+		teaches = 18409,
+	},
 	[22772] = {
 		reqSkill = 300,
 		teaches = 22758,
-	},
-	[14508] = {
-		reqSkill = 300,
-		teaches = 14112,
-	},
-	[22774] = {
-		reqSkill = 300,
-		teaches = 22756,
-	},
-	[18414] = {
-		reqSkill = 300,
-		teaches = 18405,
-	},
-	[14509] = {
-		reqSkill = 300,
-		teaches = 14140,
-	},
-	[17018] = {
-		reqSkill = 300,
-		teaches = 16979,
-	},
-	[14507] = {
-		reqSkill = 300,
-		teaches = 14139,
-	},
-	[18487] = {
-		reqSkill = 300,
-		teaches = 18486,
 	},
 	[19219] = {
 		reqSkill = 300,
 		teaches = 19156,
 	},
-	[22686] = {
+	[14505] = {
 		reqSkill = 300,
-		teaches = 22652,
-	},
-	[14501] = {
-		reqSkill = 300,
-		teaches = 14138,
-	},
-	[19217] = {
-		reqSkill = 300,
-		teaches = 19059,
+		teaches = 14130,
 	},
 	[18416] = {
 		reqSkill = 300,
@@ -626,36 +642,16 @@ rm.recipes[197] = {
 		reqSkill = 300,
 		teaches = 19050,
 	},
-	[18418] = {
-		reqSkill = 300,
-		teaches = 18413,
-	},
 	[17017] = {
 		reqSkill = 300,
 		teaches = 16980,
-	},
-	[20546] = {
-		reqSkill = 300,
-		teaches = 20538,
-	},
-	[22773] = {
-		reqSkill = 300,
-		teaches = 22757,
 	},
 	[14500] = {
 		reqSkill = 300,
 		teaches = 14128,
 	},
-	[22684] = {
+	[17018] = {
 		reqSkill = 300,
-		teaches = 22654,
-	},
-	[14505] = {
-		reqSkill = 300,
-		teaches = 14130,
-	},
-	[18417] = {
-		reqSkill = 300,
-		teaches = 18409,
+		teaches = 16979,
 	},
 }
