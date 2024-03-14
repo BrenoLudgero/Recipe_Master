@@ -11,6 +11,8 @@ function rm.handleAddonLoaded(event, addon)
         rm.isEventFirstOpen = {TRADE_SKILL_SHOW = true, CRAFT_SHOW = true}
         rm.createSavedVariables()
         rm.createSavedVariables = nil
+        rm.updateSavedVariables()
+        rm.updateSavedVariables = nil
         rm.updateSavedCharacters()
         rm.updateSavedCharacters = nil
         rm.createAllFrames()
@@ -54,10 +56,13 @@ function rm.handleProfessionWindowOpened(event)
         handleWindowOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine, event)
     elseif event == "TRADE_SKILL_CLOSE" or event == "CRAFT_CLOSE" then
         -- A trade skill window is still opened after closing the craft window, show recipes for it
-        if rm.getProfessionFrame() then
-            handleWindowOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
-        else
-            rm.hideRecipeMasterFrame()
-        end
+        -- Delayed for one frame in case TradeSkillMaster is enabled, its frame is not considered closed immediately
+        RunNextFrame(function()
+            if not rm.getProfessionFrame() then
+                rm.hideRecipeMasterFrame()
+                return
+            end
+        end)
+        handleWindowOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
     end
 end

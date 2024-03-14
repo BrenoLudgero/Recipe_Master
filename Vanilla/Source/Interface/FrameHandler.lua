@@ -6,6 +6,8 @@ function rm.getProfessionFrame()
     local frame = false
     if SkilletFrame and SkilletFrame:IsVisible() then
         frame = SkilletFrame
+    elseif TSM_API and TSM_API.IsUIVisible("CRAFTING") then
+        frame = UIParent
     elseif (TradeSkillFrame and TradeSkillFrame:IsVisible()) and not (CraftFrame and CraftFrame:IsVisible()) then
         frame = TradeSkillFrame
     elseif CraftFrame and CraftFrame:IsVisible() then
@@ -14,7 +16,7 @@ function rm.getProfessionFrame()
     return frame
 end
 
-local function updateSizesAndOffsetsBasedOnParent(professionFrame)
+local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidth)
     local yOffset = 73
     if professionFrame == SkilletFrame then
         yOffset = 0
@@ -25,19 +27,43 @@ local function updateSizesAndOffsetsBasedOnParent(professionFrame)
         F.offsets.restoreButtonY = -16
         F.sizes.headerTextureHeight = 40
     end
-    rm.mainFrame:SetScript("OnUpdate", function(self, elapsed)
-        local parentScale = professionFrame:GetEffectiveScale()
-        self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", F.offsets.mainX * parentScale, F.offsets.mainY * parentScale)
-        self:SetPoint("BOTTOM", professionFrame, "BOTTOM", 0, yOffset * parentScale)
-    end)
+    if professionFrame ~= UIParent then
+        rm.mainFrame:SetPoint("LEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
+        rm.restoreButton:SetPoint("LEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
+        rm.mainFrame:SetScript("OnUpdate", function(self, elapsed)
+            local parentScale = professionFrame:GetEffectiveScale()
+            self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", F.offsets.mainX * parentScale, F.offsets.mainY * parentScale)
+            self:SetPoint("BOTTOM", professionFrame, "BOTTOM", 0, yOffset * parentScale)
+        end)
+    else
+        rm.mainFrameBorder.CloseButton:Disable(true)
+        rm.mainFrame:SetSize(1, 413)
+        rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPLEFT", unpack(rm.getPreference("mainFrameOffsets")))
+        rm.mainFrame:SetMovable(true)
+        rm.mainFrame:RegisterForDrag("LeftButton", "RightButton")
+        rm.mainFrame:EnableMouse(true)
+        rm.mainFrame:SetResizable(true)
+        rm.mainFrame:SetResizeBounds(mainFrameWidth, 296, mainFrameWidth, 700)
+        rm.mainFrame:SetScript("OnDragStart", function(self, button)
+            if button == "LeftButton" then
+                self:StartMoving()
+            elseif button == "RightButton" then
+                self:StartSizing()
+            end
+        end)
+        rm.mainFrame:SetScript("OnDragStop", function(self)
+            local _, _, _, xOffset, yOffset = self:GetPoint()
+            self:StopMovingOrSizing()
+            rm.setPreference("mainFrameOffsets", {xOffset, yOffset})
+        end)
+    end
+    rm.mainFrame:SetFrameStrata(professionFrame:GetFrameStrata())
 end
 
 local function setParentDependentFramesPosition()
     local professionFrame = rm.getProfessionFrame()
-    updateSizesAndOffsetsBasedOnParent(professionFrame)
-    rm.mainFrame:SetFrameStrata(professionFrame:GetFrameStrata())
-    rm.mainFrame:SetPoint("LEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
-    rm.restoreButton:SetPoint("LEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
+    local mainFrameWidth = rm.mainFrame:GetWidth()
+    updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidth)
 end
 
 local function updateProgressBarColor()

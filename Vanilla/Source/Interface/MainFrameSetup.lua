@@ -41,9 +41,9 @@ end
 function rm.chatLinkOnShiftClick(icon, recipe)
     icon:SetScript("OnMouseDown", function(self, button)
         if IsShiftKeyDown() and button == "LeftButton" then
-            local editBox = ChatEdit_ChooseBoxForSend()
-            ChatEdit_ActivateChat(editBox)
-            editBox:Insert(recipe.link)
+            local chatBox = ChatEdit_ChooseBoxForSend()
+            ChatEdit_ActivateChat(chatBox)
+            chatBox:Insert(recipe.link)
         end
     end)
 end

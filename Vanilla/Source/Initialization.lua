@@ -34,6 +34,7 @@ local defaultPreferences = {
     rowSpacing = 2,
     showLearnedRecipes = true,
     -- Recipes window --
+    mainFrameOffsets = {605, -150},
     sortAscending = true,
     sortRecipesBy = "Name"
 }
@@ -46,6 +47,15 @@ function rm.createSavedVariables()
     end
     if not RecipeMasterPreferences then
         RecipeMasterPreferences = defaultPreferences
+    end
+end
+
+-- Inserts new variables created after an update
+function rm.updateSavedVariables()
+    for key, value in pairs(defaultPreferences) do
+        if not RecipeMasterPreferences[key] then
+            RecipeMasterPreferences[key] = value
+        end
     end
 end
 
