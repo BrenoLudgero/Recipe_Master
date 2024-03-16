@@ -2,11 +2,11 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-local function tradeSkillFrameIsVisible()
+local function isTradeSkillFrameVisible()
     return TradeSkillFrame and TradeSkillFrame:IsVisible()
 end
 
-local function craftFrameIsVilisble()
+local function isCraftFrameVisible()
     return CraftFrame and CraftFrame:IsVisible()
 end
 
@@ -14,11 +14,11 @@ function rm.getProfessionFrame()
     local frame = false
     if SkilletFrame and SkilletFrame:IsVisible() then
         return SkilletFrame
-    elseif TSM_API and (TSM_API.IsUIVisible("CRAFTING") or tradeSkillFrameIsVisible() or craftFrameIsVilisble()) then
+    elseif TSM_API and (TSM_API.IsUIVisible("CRAFTING") or isTradeSkillFrameVisible() or isCraftFrameVisible()) then
         return UIParent
-    elseif (tradeSkillFrameIsVisible()) and not (craftFrameIsVilisble()) then
+    elseif isTradeSkillFrameVisible() and not isCraftFrameVisible() then
         frame = TradeSkillFrame
-    elseif craftFrameIsVilisble() then
+    elseif isCraftFrameVisible() then
         frame = CraftFrame
     end
     return frame
