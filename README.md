@@ -18,7 +18,7 @@
 * Sort the recipes list by name, quality or required skill (ascending or descending)
 * Type /RM to quickly open the add-on's options interface
 * (TSM only) Move the window with Left-Click
-* (TSM only) Rezise the window vertically with Right-Click
+* (TSM only) Resize the window vertically with Right-Click
 
 ## Add-on compatibility
 The following add-ons have been thoroughly tested with Recipe Master:
