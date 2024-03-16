@@ -17,6 +17,14 @@
 * Shift + Left-Click a recipe icon to create a chat link
 * Sort the recipes list by name, quality or required skill (ascending or descending)
 * Type /RM to quickly open the add-on's options interface
+* (TSM only) Move the window with Left-Click
+* (TSM only) Rezise the window vertically with Right-Click
+
+## Add-on compatibility
+The following add-ons have been thoroughly tested with Recipe Master:
+* MoveAny
+* Skillet
+* TradeSkillMaster (TSM)
 
 ## Contribute
-If you'd like to improve Recipe Master by any means, please open an [issue](https://github.com/BrenoLudgero/Recipe_Master/issues "Issues Tab") with a tag related to your improvement (bug fix, feature request, translation, etc..) or leave a comment in one of the pages linked to the buttons above
+If you'd like to improve Recipe Master by any means, please open an [issue](https://github.com/BrenoLudgero/Recipe_Master/issues "Issues Tab") with a tag related to your improvement (bug fix, feature request, translation update, etc..) or leave a comment in one of the pages linked to the buttons above
