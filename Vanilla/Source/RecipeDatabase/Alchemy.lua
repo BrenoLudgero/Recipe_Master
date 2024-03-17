@@ -17,10 +17,6 @@ rm.recipes[171] = {
 		reqSkill = 60,
 		teaches = 5631,
 	},
-	[2556] = {
-		reqSkill = 70,
-		teaches = 2460,
-	},
 	[210709] = {
 		season = "SoD",
 		reqSkill = 90,
@@ -41,10 +37,6 @@ rm.recipes[171] = {
 	[3394] = {
 		reqSkill = 120,
 		teaches = 3386,
-	},
-	[5641] = {
-		reqSkill = 125,
-		teaches = 5632,
 	},
 	[6054] = {
 		reqSkill = 135,
@@ -169,13 +161,13 @@ rm.recipes[171] = {
 		reqSkill = 250,
 		teaches = 3387,
 	},
-	[9301] = {
-		reqSkill = 250,
-		teaches = 9264,
-	},
 	[21547] = {
 		reqSkill = 250,
 		teaches = 21546,
+	},
+	[9301] = {
+		reqSkill = 250,
+		teaches = 9264,
 	},
 	[9300] = {
 		reqSkill = 250,
@@ -201,13 +193,13 @@ rm.recipes[171] = {
 		reqSkill = 275,
 		teaches = 12360,
 	},
-	[13481] = {
-		reqSkill = 275,
-		teaches = 13453,
-	},
 	[13480] = {
 		reqSkill = 275,
 		teaches = 13446,
+	},
+	[13481] = {
+		reqSkill = 275,
+		teaches = 13453,
 	},
 	[20011] = {
 		reqSkill = 275,
@@ -221,10 +213,6 @@ rm.recipes[171] = {
 		reqSkill = 275,
 		teaches = 7076,
 	},
-	[13484] = {
-		reqSkill = 275,
-		teaches = 7080,
-	},
 	[13489] = {
 		reqSkill = 275,
 		teaches = 12803,
@@ -233,21 +221,25 @@ rm.recipes[171] = {
 		reqSkill = 275,
 		teaches = 7082,
 	},
-	[13482] = {
+	[13484] = {
 		reqSkill = 275,
-		teaches = 7078,
+		teaches = 7080,
 	},
 	[13487] = {
 		reqSkill = 275,
 		teaches = 12808,
 	},
-	[20012] = {
+	[13482] = {
 		reqSkill = 275,
-		teaches = 20002,
+		teaches = 7078,
 	},
 	[13483] = {
 		reqSkill = 275,
 		teaches = 7076,
+	},
+	[20012] = {
+		reqSkill = 275,
+		teaches = 20002,
 	},
 	[13491] = {
 		reqSkill = 280,
@@ -281,21 +273,17 @@ rm.recipes[171] = {
 		reqSkill = 290,
 		teaches = 13459,
 	},
-	[13495] = {
-		reqSkill = 290,
-		teaches = 13456,
-	},
 	[13497] = {
 		reqSkill = 290,
 		teaches = 13461,
 	},
+	[13495] = {
+		reqSkill = 290,
+		teaches = 13456,
+	},
 	[20014] = {
 		reqSkill = 290,
 		teaches = 20004,
-	},
-	[13500] = {
-		reqSkill = 290,
-		teaches = 13460,
 	},
 	[13501] = {
 		reqSkill = 295,
@@ -320,10 +308,6 @@ rm.recipes[171] = {
 	[20761] = {
 		reqSkill = 300,
 		teaches = 7068,
-	},
-	[13517] = {
-		reqSkill = 300,
-		teaches = 13503,
 	},
 	[18257] = {
 		reqSkill = 300,

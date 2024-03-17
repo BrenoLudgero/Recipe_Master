@@ -54,14 +54,14 @@ rm.recipes[202] = {
 		reqSkill = 145,
 		teaches = 4383,
 	},
+	[18648] = {
+		reqSkill = 150,
+		teaches = 9313,
+	},
 	[18649] = {
 		faction = "Alliance",
 		reqSkill = 150,
 		teaches = 9312,
-	},
-	[18648] = {
-		reqSkill = 150,
-		teaches = 9313,
 	},
 	[18647] = {
 		faction = "Horde",
@@ -88,17 +88,17 @@ rm.recipes[202] = {
 		reqSkill = 175,
 		teaches = 10499,
 	},
-	[21729] = {
+	[21728] = {
 		reqSkill = 175,
-		teaches = 21592,
+		teaches = 21590,
 	},
 	[21727] = {
 		reqSkill = 175,
 		teaches = 21589,
 	},
-	[21728] = {
+	[21729] = {
 		reqSkill = 175,
-		teaches = 21590,
+		teaches = 21592,
 	},
 	[13310] = {
 		reqSkill = 180,
@@ -124,18 +124,18 @@ rm.recipes[202] = {
 		reqSkill = 200,
 		teaches = 4396,
 	},
-	[215429] = {
-		season = "SoD",
+	[7742] = {
 		reqSkill = 200,
-		teaches = 213383,
+		teaches = 4397,
 	},
 	[18650] = {
 		reqSkill = 200,
 		teaches = 18588,
 	},
-	[7742] = {
+	[215429] = {
+		season = "SoD",
 		reqSkill = 200,
-		teaches = 4397,
+		teaches = 213383,
 	},
 	[4417] = {
 		reqSkill = 200,
@@ -171,13 +171,13 @@ rm.recipes[202] = {
 		reqSkill = 225,
 		teaches = 215115,
 	},
-	[10605] = {
-		reqSkill = 225,
-		teaches = 10502,
-	},
 	[10606] = {
 		reqSkill = 225,
 		teaches = 10518,
+	},
+	[10605] = {
+		reqSkill = 225,
+		teaches = 10502,
 	},
 	[215153] = {
 		season = "SoD",
@@ -198,10 +198,6 @@ rm.recipes[202] = {
 		reqSkill = 225,
 		teaches = 21569,
 	},
-	[21732] = {
-		reqSkill = 225,
-		teaches = 21576,
-	},
 	[21730] = {
 		reqSkill = 225,
 		teaches = 21571,
@@ -209,6 +205,10 @@ rm.recipes[202] = {
 	[21731] = {
 		reqSkill = 225,
 		teaches = 21574,
+	},
+	[21732] = {
+		reqSkill = 225,
+		teaches = 21576,
 	},
 	[10607] = {
 		reqSkill = 230,
@@ -234,11 +234,6 @@ rm.recipes[202] = {
 		reqSkill = 260,
 		teaches = 18631,
 	},
-	[18661] = {
-		reqSkill = 260,
-		specialization = 20219,
-		teaches = 18660,
-	},
 	[16041] = {
 		reqSkill = 260,
 		teaches = 15993,
@@ -246,6 +241,11 @@ rm.recipes[202] = {
 	[18652] = {
 		reqSkill = 260,
 		teaches = 18634,
+	},
+	[18661] = {
+		reqSkill = 260,
+		specialization = 20219,
+		teaches = 18660,
 	},
 	[16043] = {
 		reqSkill = 260,
@@ -269,13 +269,13 @@ rm.recipes[202] = {
 		reqSkill = 270,
 		teaches = 15999,
 	},
-	[16046] = {
-		reqSkill = 275,
-		teaches = 16023,
-	},
 	[16047] = {
 		reqSkill = 275,
 		teaches = 16000,
+	},
+	[16046] = {
+		reqSkill = 275,
+		teaches = 16023,
 	},
 	[18656] = {
 		reqSkill = 275,
@@ -285,45 +285,41 @@ rm.recipes[202] = {
 		reqSkill = 275,
 		teaches = 16004,
 	},
-	[18655] = {
-		reqSkill = 275,
-		teaches = 18637,
-	},
-	[21735] = {
-		reqSkill = 275,
-		teaches = 21718,
-	},
 	[21737] = {
 		reqSkill = 275,
 		teaches = 21570,
 	},
-	[21733] = {
+	[18655] = {
 		reqSkill = 275,
-		teaches = 21714,
+		teaches = 18637,
 	},
 	[22729] = {
 		reqSkill = 275,
 		teaches = 22728,
 	},
+	[21733] = {
+		reqSkill = 275,
+		teaches = 21714,
+	},
 	[21734] = {
 		reqSkill = 275,
 		teaches = 21716,
 	},
-	[16051] = {
-		reqSkill = 285,
-		teaches = 15997,
+	[21735] = {
+		reqSkill = 275,
+		teaches = 21718,
 	},
 	[16050] = {
 		reqSkill = 285,
 		teaches = 16006,
 	},
+	[16051] = {
+		reqSkill = 285,
+		teaches = 15997,
+	},
 	[16049] = {
 		reqSkill = 285,
 		teaches = 16005,
-	},
-	[16052] = {
-		reqSkill = 290,
-		teaches = 16009,
 	},
 	[18657] = {
 		reqSkill = 290,
@@ -332,6 +328,10 @@ rm.recipes[202] = {
 	[16053] = {
 		reqSkill = 290,
 		teaches = 16008,
+	},
+	[16052] = {
+		reqSkill = 290,
+		teaches = 16009,
 	},
 	[18235] = {
 		reqSkill = 300,
@@ -349,21 +349,17 @@ rm.recipes[202] = {
 		reqSkill = 300,
 		teaches = 16040,
 	},
-	[18658] = {
-		reqSkill = 300,
-		teaches = 18639,
-	},
 	[18291] = {
 		reqSkill = 300,
 		teaches = 18168,
 	},
+	[18658] = {
+		reqSkill = 300,
+		teaches = 18639,
+	},
 	[16056] = {
 		reqSkill = 300,
 		teaches = 16007,
-	},
-	[20001] = {
-		reqSkill = 300,
-		teaches = 19998,
 	},
 	[18292] = {
 		reqSkill = 300,
@@ -372,5 +368,9 @@ rm.recipes[202] = {
 	[20000] = {
 		reqSkill = 300,
 		teaches = 19999,
+	},
+	[20001] = {
+		reqSkill = 300,
+		teaches = 19998,
 	},
 }
