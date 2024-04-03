@@ -78,7 +78,7 @@ local function handleMismatchedProfessionNames(profession)
 end
 
 local function getAdditionalRecipeData(id)
-   local name, link, quality, _, _, _, profession, _, _, texture = GetItemInfo(id)
+   local name, link, quality, _, _, _, profession, _, _, texture = C_Item.GetItemInfo(id)
    profession = handleMismatchedProfessionNames(profession)
     if isMiningSkill(id) then
        name = GetSpellInfo(id)

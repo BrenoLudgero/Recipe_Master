@@ -15,7 +15,7 @@ local function handleMissingRecipe(recipe)
     if not rm.isMissingRecipeOfCurrentFaction(recipe) or rm.isLearnedRecipe(recipe) then
         return
     end
-    local r, g, b = GetItemQualityColor(recipe.quality)
+    local r, g, b = C_Item.GetItemQualityColor(recipe.quality)
     rm.createRecipeRow(recipe, r, g, b)
     rm.missingRecipesCount = rm.missingRecipesCount + 1
 end
