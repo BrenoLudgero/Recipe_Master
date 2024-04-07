@@ -102,7 +102,7 @@ local function saveRecipeData(recipeID, recipeData)
         profession = rProfession, 
         quality = rQuality, 
         season = recipeData["season"] , 
-        skill = recipeData["reqSkill"], 
+        skill = recipeData["skill"], 
         texture = rTexture,
         specialization = recipeData["specialization"], 
         teaches = recipeData["teaches"]

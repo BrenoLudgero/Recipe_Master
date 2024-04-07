@@ -227,7 +227,7 @@ local function createRowIcon(recipe, yOffset)
     return icon
 end
 
-local function getMissingRequirementsText(recipe, recipeInfo)
+local function getRequirementsText(recipe, recipeInfo)
     local missingRequirements = ""
     if recipe.skill > rm.getSavedProfessionLevelByName(rm.displayedProfession) then
         missingRequirements = missingRequirements..L.skill..": "..recipe.skill.."   "
@@ -258,7 +258,7 @@ local function createRowText(recipe, rowIcon, red, green, blue)
         recipeInfo:SetText(L.learned)
         recipeInfo:SetTextColor(red, green, blue)
     else
-        getMissingRequirementsText(recipe, recipeInfo)
+        getRequirementsText(recipe, recipeInfo)
     end
     recipeName.aditionalInfo = recipeInfo
     return recipeName

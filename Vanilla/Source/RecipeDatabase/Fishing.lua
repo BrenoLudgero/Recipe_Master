@@ -2,11 +2,11 @@ local _, rm = ...
 
 rm.recipes[356] = {
 	[16083] = {
-		reqSkill = 125,
+		skill = 125,
 		teaches = "Expert",
 	},
 	[16082] = {
-		reqSkill = 200,
+		skill = 200,
 		teaches = "Artisan",
 	},
 }
