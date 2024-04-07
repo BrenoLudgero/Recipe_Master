@@ -8,6 +8,10 @@ function rm.getSavedSkillsByProfessionName(profession)
     return rm.getSavedProfessionByName(profession)["skills"]
 end
 
+function rm.getSavedProfessionLevelByName(profession)
+    return rm.getSavedProfessionByName(profession)["level"]
+end
+
 local function skillNotSavedYet(skillLineID, skillID)
     --      Profession exists in savedVariables  and     the skill is not saved yet
     return rm.getSavedProfessionByID(skillLineID) and not rm.tableContains(getSavedSkillsByProfessionID(skillLineID), skillID)

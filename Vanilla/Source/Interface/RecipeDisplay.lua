@@ -68,9 +68,10 @@ end
 
 local function showAllRecipeRows()
     local recipeSection = rm.recipeContainer.children
-    for _, rowText in pairs(recipeSection) do
-        rowText:Show()
-        rowText.associatedIcon:Show()
+    for _, rowIcon in pairs(recipeSection) do
+        rowIcon:Show()
+        rowIcon.associatedText:Show()
+        rowIcon.associatedText.aditionalInfo:Show()
     end
 end
 
@@ -84,7 +85,7 @@ local function isCraft(profession)
     return profession == L.professionNames[333] -- Enchanting
 end
 
-function rm.showRecipesForProfession(profession)
+function rm.showRecipesForSpecificProfession(profession)
     rm.displayedProfession = profession
     if not isCraft(rm.displayedProfession) then
         rm.updateRecipeDisplay(GetNumTradeSkills, GetTradeSkillInfo)
@@ -95,8 +96,8 @@ end
 
 function rm.showSortedRecipes()
     if rm.displayedProfession == L.professionNames[356] then -- Fishing
-        rm.showRecipesForProfession(rm.displayedProfession)
+        rm.showRecipesForSpecificProfession(rm.displayedProfession)
         return
     end
-    rm.showRecipesForProfession(rm.lastDisplayedProfession)
+    rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
 end

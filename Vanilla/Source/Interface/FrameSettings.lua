@@ -11,11 +11,15 @@ L.fishingNotLearned = SPELL_FAILED_NOT_KNOWN -- "Spell not learned"
 L.fishingTab = PROFESSIONS_FISHING
 L.general = GENERAL
 L.hideWindowTooltip = HIDE
+L.learned = TRADE_SKILLS_LEARNED_TAB
 L.rare = ITEM_QUALITY3_DESC
 L.recipeDetailsTab = LFG_LIST_DETAILS -- "Details"
 L.recipesTab = TRADESKILL_SERVICE_LEARN -- "Recipes"
+L.reputation = REPUTATION
 L.resetDefaults = RESET_TO_DEFAULT
+L.skill = SKILL
 L.sortBy = select(1, strsplit(" ", RAID_FRAME_SORT_LABEL))..":" -- The first word of "Sort By" + ":"
+L.specialization = SPECIALIZATION
 L.subtitle = string.format(PETITION_CREATOR, rm.author).."\n"..GAME_VERSION_LABEL.." "..rm.version -- "Created by Breno Ludgero \n Version x.x.x"
 L.uncommon = ITEM_QUALITY2_DESC
 
@@ -91,6 +95,7 @@ F.colors.green = {0.1, 1, 0.1, 1} -- GameFontGreen color
 F.colors.progressComplete = {1, 0.8431, 0, 1} -- Gold
 F.colors.progressText = {1, 1, 1, 1} -- White
 F.colors.yellow = {1, 0.81960791349411, 0, 1} -- GameFontNormal color
+F.colors.red = {1, 0.1, 0.1, 1}
 
 F.fonts.bottomTab = "Fonts\\FRIZQT__.TTF"
 F.fonts.header = "SystemFont_Outline_Small"

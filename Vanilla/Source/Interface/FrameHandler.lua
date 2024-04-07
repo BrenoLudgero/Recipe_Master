@@ -124,9 +124,9 @@ end
 function rm.updateRecipesPosition()
     local yOffset = 0
     local recipeSection = rm.recipeContainer.children
-    for _, element in ipairs(recipeSection) do
-        if element:IsShown() then
-            element.associatedIcon:SetPoint("TOP", rm.recipeContainer, "BOTTOMLEFT", F.offsets.recipeIconX, yOffset)
+    for _, rowIcon in ipairs(recipeSection) do
+        if rowIcon:IsShown() then
+            rowIcon:SetPoint("TOP", rm.recipeContainer, "BOTTOMLEFT", F.offsets.recipeIconX, yOffset)
             yOffset = yOffset - (F.sizes.recipeIcon + rm.getPreference("rowSpacing"))
         end
     end
@@ -141,9 +141,10 @@ end
 
 function rm.clearWindowContent()
     local recipeSection = rm.recipeContainer.children
-    for _, recipeText in pairs(recipeSection) do
-        recipeText:Hide()
-        recipeText.associatedIcon:Hide()
+    for _, rowIcon in pairs(recipeSection) do
+        rowIcon:Hide()
+        rowIcon.associatedText:Hide()
+        rowIcon.associatedText.aditionalInfo:Hide()
     end
     wipe(recipeSection)
     resetRecipeCounts()

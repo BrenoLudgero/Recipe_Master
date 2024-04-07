@@ -31,7 +31,7 @@ local defaultPreferences = {
     progressColor = {0.00, 0.44, 0.87},
     progressTexture = "Interface/TARGETINGFRAME/BarFill2",
     restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
-    rowSpacing = 2,
+    rowSpacing = 5,
     showLearnedRecipes = true,
     -- Recipes window --
     mainFrameOffsets = {605, -150},

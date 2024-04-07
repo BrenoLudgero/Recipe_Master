@@ -70,14 +70,16 @@ function rm.showMatchingRecipesOnTop(searchBar)
     searchBar:SetScript("OnTextChanged", function(self)
         local searchText = self:GetText():lower()
         local matchedRecipes = {}
-        for _, rowText in ipairs(rm.recipeContainer.children) do
-            local recipeText = rowText:GetText():lower()
+        for _, rowIcon in ipairs(rm.recipeContainer.children) do
+            local recipeText = rowIcon.associatedText:GetText():lower()
             if string.find(recipeText, searchText, 1, true) then
-                rowText:Show()
-                rowText.associatedIcon:Show()
+                rowIcon:Show()
+                rowIcon.associatedText:Show()
+                rowIcon.associatedText.aditionalInfo:Show()
             else
-                rowText:Hide()
-                rowText.associatedIcon:Hide()
+                rowIcon:Hide()
+                rowIcon.associatedText:Hide()
+                rowIcon.associatedText.aditionalInfo:Hide()
             end
         end
         rm.updateRecipesPosition()
@@ -131,10 +133,10 @@ end
 
 local function updateSortOrder()
     local isSortedAscending = rm.getPreference("sortAscending")
-    if not isSortedAscending then
-        rm.setPreference("sortAscending", true)
-    else
+    if isSortedAscending then
         rm.setPreference("sortAscending", false)
+    else
+        rm.setPreference("sortAscending", true)
     end
 end
 
@@ -164,7 +166,7 @@ end
 local function handleRecipesTab(tab)
     if tab.label == L.recipesTab then
         rm.showRecipeFrameElements()
-        rm.showRecipesForProfession(rm.lastDisplayedProfession)
+        rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
     end
 end
 
@@ -183,7 +185,7 @@ local function handleFishingTab(tab)
             rm.showCenteredText(L.fishingNotLearned, F.colors.yellow)
             return
         end
-        rm.showRecipesForProfession(L.professionNames[356])
+        rm.showRecipesForSpecificProfession(L.professionNames[356])
     end
 end
 
