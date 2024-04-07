@@ -39,8 +39,9 @@ end
 
 local function compareRecipes(a, b)
     local valueA, valueB = getComparisonValues(a, b)
+    local sortAscending = rm.getPreference("sortAscending")
     if valueA and valueB then
-        if rm.getPreference("sortAscending") == true then
+        if sortAscending then
             return valueA < valueB
         end
         return valueA > valueB

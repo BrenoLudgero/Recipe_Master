@@ -6,9 +6,10 @@ rm.frame:RegisterEvent("TRADE_SKILL_CLOSE")
 rm.frame:RegisterEvent("CRAFT_SHOW")
 rm.frame:RegisterEvent("CRAFT_CLOSE")
 
+local isEventFirstOpen = {TRADE_SKILL_SHOW = true, CRAFT_SHOW = true}
+
 function rm.handleAddonLoaded(event, addon) 
     if event == "ADDON_LOADED" and addon == addonName then
-        rm.isEventFirstOpen = {TRADE_SKILL_SHOW = true, CRAFT_SHOW = true}
         rm.createSavedVariables()
         rm.createSavedVariables = nil
         rm.updateSavedVariables()
@@ -34,13 +35,13 @@ local function handleWindowOpened(getNumSkillsFunction, getSkillInfoFunction, ge
     rm.displayedProfession = getDisplaySkillLineFunction() -- e.g. Engineering
     rm.lastDisplayedProfession = rm.displayedProfession -- Last profession displayed before opening the fishing tab
     if rm.getProfessionID(rm.displayedProfession) then
-        if not rm.isEventFirstOpen[event] then
+        if not isEventFirstOpen[event] then
             C_Timer.After(0.04, function() rm.saveNewTradeSkills(getNumSkillsFunction, getSkillInfoFunction, getItemLinkFunction) end)
             C_Timer.After(0.1, function() rm.showRecipesFrame(getNumSkillsFunction, getSkillInfoFunction) end)
             return
         end
         -- This ensures that the trade skills are loaded, saved and displayed on the first time opening a profession window
-        rm.isEventFirstOpen[event] = false
+        isEventFirstOpen[event] = false
         C_Timer.After(0.04, function() rm.saveNewTradeSkills(getNumSkillsFunction, getSkillInfoFunction, getItemLinkFunction) end)
         C_Timer.After(0.1, function() rm.showRecipesFrame(getNumSkillsFunction, getSkillInfoFunction) end)
         C_Timer.After(0.11, rm.clearWindowContent)

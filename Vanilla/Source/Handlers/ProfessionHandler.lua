@@ -38,18 +38,6 @@ local function getAllLearnedProfessions()
     return currentProfessions
 end
 
-function rm.getSavedProfessionByID(professionID)
-    return rm.getCharacterSavedVariables()[professionID]
-end
-
-function rm.getSavedProfessionByName(profession)
-    return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]
-end
-
-function getSavedProfessionRank(profession)
-    return rm.getSavedProfessionByName(profession)["rank"]
-end
-
 local specializationIDs = {
     [164] = {9788, 17041, 17040, 17039, 9787},
     [202] = {20219, 20222},
@@ -77,6 +65,26 @@ local function getAllProfessionsSpecialization()
     return currentSpecializations
 end
 
+function rm.getSavedProfessionByID(professionID)
+    return rm.getCharacterSavedVariables()[professionID]
+end
+
+function rm.getSavedProfessionByName(profession)
+    return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]
+end
+
+function getSavedProfessionRank(profession)
+    return rm.getSavedProfessionByName(profession)["rank"]
+end
+
+function rm.getSavedSpecializationByID(professionID)
+    return rm.getCharacterSavedVariables()[professionID]["specialization"]
+end
+
+function rm.getSavedSpecializationByName(profession)
+    return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"]
+end
+
 -- Stores the character's current professions in SavedVariables if not saved yet
 local function saveCharacterProfessions(currentProfessions)
     for professionID in pairs(currentProfessions) do
@@ -95,14 +103,6 @@ local function removeAbandonedProfessions(currentProfessions, professionID)
     if professionAbandoned(currentProfessions, professionID) then
         rm.getCharacterSavedVariables()[professionID] = nil
     end
-end
-
-function rm.getSavedSpecializationByID(professionID)
-    return rm.getCharacterSavedVariables()[professionID]["specialization"]
-end
-
-function rm.getSavedSpecializationByName(profession)
-    return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"]
 end
 
 -- Saves all current professions' specializations if any
