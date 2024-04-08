@@ -34,7 +34,7 @@ local defaultPreferences = {
     rowSpacing = 5,
     showLearnedRecipes = true,
     -- Recipes window --
-    mainFrameOffsets = {605, -150},
+    mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
     sortAscending = false,
     sortRecipesBy = "Skill"
 }
