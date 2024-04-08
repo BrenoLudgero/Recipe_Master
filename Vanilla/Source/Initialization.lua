@@ -35,8 +35,8 @@ local defaultPreferences = {
     showLearnedRecipes = true,
     -- Recipes window --
     mainFrameOffsets = {605, -150},
-    sortAscending = true,
-    sortRecipesBy = "Name"
+    sortAscending = false,
+    sortRecipesBy = "Skill"
 }
 
 -- Creates a table to store the characters' learned skills in SavedVariables
@@ -50,7 +50,7 @@ function rm.createSavedVariables()
     end
 end
 
--- Inserts new variables created after an update
+-- Inserts new options created after an update in SavedVariables
 function rm.updateSavedVariables()
     for key, value in pairs(defaultPreferences) do
         if not RecipeMasterPreferences[key] then

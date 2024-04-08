@@ -28,20 +28,20 @@ local function populateRecipeRow(recipe)
 end
 
 local function getComparisonValues(a, b)
-    if rm.getPreference("sortRecipesBy") == "Name" then
+    local sortBy = rm.getPreference("sortRecipesBy")
+    if sortBy == "Name" then
         return a.name, b.name
-    elseif rm.getPreference("sortRecipesBy") == "Quality" then
+    elseif sortBy == "Quality" then
         return a.quality, b.quality
-    elseif rm.getPreference("sortRecipesBy") == "Skill" then
+    elseif sortBy == "Skill" then
         return a.skill, b.skill
     end
 end
 
 local function compareRecipes(a, b)
     local valueA, valueB = getComparisonValues(a, b)
-    local sortAscending = rm.getPreference("sortAscending")
     if valueA and valueB then
-        if sortAscending then
+        if rm.getPreference("sortAscending") then
             return valueA < valueB
         end
         return valueA > valueB

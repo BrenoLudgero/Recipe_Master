@@ -63,8 +63,7 @@ function rm.getRequirementsText(recipe, recipeInfo)
         missingRequirements = missingRequirements..reputationInfo
     end
     if missingRequirements ~= "" then
-        -- Replaces all "  " with ", " when followed by a character
-        recipeInfo:SetText(missingRequirements:gsub("(%s%s)(%a)", ", %2"))
+        recipeInfo:SetText(missingRequirements:gsub("(%s%s)(%a)", ", %2")) -- Replaces all "  " with ", " when followed by a character
         recipeInfo:SetTextColor(unpack(F.colors.red))
     else
         recipeInfo:SetText(L.canLearn)
@@ -164,8 +163,7 @@ function rm.setInitialDropdownValue(dropdown, savedVariable)
 end
 
 local function updateSortOrder()
-    local isSortedAscending = rm.getPreference("sortAscending")
-    if isSortedAscending then
+    if rm.getPreference("sortAscending") then
         rm.setPreference("sortAscending", false)
     else
         rm.setPreference("sortAscending", true)
@@ -173,8 +171,7 @@ local function updateSortOrder()
 end
 
 function rm.updateArrowOrientation(texture)
-    local sortAscending = rm.getPreference("sortAscending")
-    if sortAscending then
+    if rm.getPreference("sortAscending") then
         texture:SetRotation(0)
         texture:SetPoint("CENTER", texture:GetParent(), 1.7, -1.3)
     else
