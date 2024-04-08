@@ -35,6 +35,7 @@ local defaultPreferences = {
     showLearnedRecipes = true,
     -- Recipes window --
     mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
+    mainFrameHeight = 413, -- Used when TradeSkillMaster is enabled
     sortAscending = false,
     sortRecipesBy = "Skill"
 }
