@@ -23,7 +23,7 @@ end
 local function isRecipeForCurrentSpecialization(recipe)
     local professionID = rm.getProfessionID(rm.displayedProfession)
     local professionSpecialization = rm.getSavedSpecializationByID(professionID)
-    return not recipeSpecialization or (professionSpecialization == recipe.specialization)
+    return not recipe.specialization or not professionSpecialization or (professionSpecialization == recipe.specialization)
 end
 
 function rm.isRecipeAvailableForCharacter(recipe)
