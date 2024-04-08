@@ -227,26 +227,6 @@ local function createRowIcon(recipe, yOffset)
     return icon
 end
 
-local function getRequirementsText(recipe, recipeInfo)
-    local missingRequirements = ""
-    if recipe.skill > rm.getSavedProfessionLevelByName(rm.displayedProfession) then
-        missingRequirements = missingRequirements..L.skill..": "..recipe.skill.."   "
-    end
-    if recipe.specialization then
-        missingRequirements = missingRequirements..L.specialization.."   "
-    end
-    --if recipe.repLevel and ? then
-        --missingRequirements = missingRequirements..L.reputation.."   "
-    --end
-    if missingRequirements ~= "" then
-        recipeInfo:SetText(missingRequirements)
-        recipeInfo:SetTextColor(unpack(F.colors.red))
-    else
-        recipeInfo:SetText(L.canLearn)
-        recipeInfo:SetTextColor(unpack(F.colors.yellow))
-    end
-end
-
 local function createRowText(recipe, rowIcon, red, green, blue)
     local recipeName = rm.recipeContainer:CreateFontString(nil, "OVERLAY", F.fonts.recipeText)
     recipeName:SetText(recipe.name)
@@ -258,26 +238,22 @@ local function createRowText(recipe, rowIcon, red, green, blue)
         recipeInfo:SetText(L.learned)
         recipeInfo:SetTextColor(red, green, blue)
     else
-        getRequirementsText(recipe, recipeInfo)
+        rm.getRequirementsText(recipe, recipeInfo)
     end
     recipeName.aditionalInfo = recipeInfo
     return recipeName
-end
-
-local function storeWidestRecipeTextWidth(recipeTextWidth)
-    if recipeTextWidth > rm.widestRecipeTextWidth then
-        rm.widestRecipeTextWidth = recipeTextWidth
-    end
 end
 
 function rm.createRecipeRow(recipe, red, green, blue, desaturateIcon)
     local yOffset = -(rm.displayedRecipesCount * (F.sizes.recipeIcon + rm.getPreference("rowSpacing")))
     local rowIcon = createRowIcon(recipe, yOffset)
     rowIcon:SetDesaturated(desaturateIcon)
-    local rowText = createRowText(recipe, rowIcon, red, green, blue)
-    local recipeTextWidth = rowText:GetWidth()
-    storeWidestRecipeTextWidth(recipeTextWidth)
-    rowIcon.associatedText = rowText
+    local recipeNameText = createRowText(recipe, rowIcon, red, green, blue)
+    local recipeInfoText = recipeNameText.aditionalInfo
+    local recipeTextWidth = recipeNameText:GetWidth()
+    local recipeInfoWidth = recipeInfoText:GetWidth()
+    rm.storeWidestRecipeTextWidth(recipeTextWidth, recipeInfoWidth)
+    rowIcon.associatedText = recipeNameText
     table.insert(rm.recipeContainer.children, rowIcon)
     rm.displayedRecipesCount = rm.displayedRecipesCount + 1
 end

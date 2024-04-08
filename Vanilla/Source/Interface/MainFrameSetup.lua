@@ -48,6 +48,38 @@ function rm.chatLinkOnShiftClick(icon, recipe)
     end)
 end
 
+function rm.getRequirementsText(recipe, recipeInfo)
+    local missingRequirements = ""
+    if recipe.skill > rm.getSavedProfessionLevelByName(rm.displayedProfession) then
+        local skillInfo = L.skill..": "..recipe.skill.."  "
+        missingRequirements = missingRequirements..skillInfo
+    end
+    if recipe.specialization then 
+        local specializationInfo = rm.getSpecializationName(recipe.specialization).."  "
+        missingRequirements = missingRequirements..specializationInfo
+    end
+    if recipe.repLevel and not rm.isReputationRequirementMet(recipe) then
+        local reputationInfo = rm.getFactionName(recipe.repFaction).."  "
+        missingRequirements = missingRequirements..reputationInfo
+    end
+    if missingRequirements ~= "" then
+        -- Replaces all "  " with ", " when followed by a character
+        recipeInfo:SetText(missingRequirements:gsub("(%s%s)(%a)", ", %2"))
+        recipeInfo:SetTextColor(unpack(F.colors.red))
+    else
+        recipeInfo:SetText(L.canLearn)
+        recipeInfo:SetTextColor(unpack(F.colors.yellow))
+    end
+end
+
+function rm.storeWidestRecipeTextWidth(recipeNameWidth, recipeInfoWidth)
+    if recipeNameWidth > rm.widestRecipeTextWidth then
+        rm.widestRecipeTextWidth = recipeNameWidth
+    elseif recipeInfoWidth > rm.widestRecipeTextWidth then
+        rm.widestRecipeTextWidth = recipeInfoWidth
+    end
+end
+
 function rm.matchParentHeight(innerBorder)
     innerBorder:SetScript("OnUpdate", function(self, elapsed)
         self:SetHeight(innerBorder:GetParent():GetHeight())

@@ -170,7 +170,7 @@ end
 
 -- Ensures that no recipe text will be cropped
 local function updateMainWidthBasedOnWidestRecipeName()
-    local newMainFrameWidth = math.floor(rm.widestRecipeTextWidth + 73)
+    local newMainFrameWidth = math.floor(rm.widestRecipeTextWidth + 68)
     if newMainFrameWidth >= F.sizes.mainWidth then
         rm.mainFrame:SetWidth(newMainFrameWidth)
     else

@@ -35,6 +35,11 @@ function rm.getSavedSpecializationByName(profession)
     return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"]
 end
 
+function rm.getSpecializationName(specializationID)
+    local specializationName = GetSpellInfo(specializationID)
+    return specializationName
+end
+
 -- Saves all current professions' specializations if any
 function rm.saveProfessionsSpecializations(currentSpecializations)
     for professionID, specializationID in pairs(currentSpecializations) do
