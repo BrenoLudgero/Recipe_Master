@@ -1,5 +1,18 @@
 local _, rm = ...
 
+function rm.getSavedSpecializationByID(professionID)
+    return rm.getCharacterSavedVariables()[professionID]["specialization"]
+end
+
+function rm.getSavedSpecializationByName(profession)
+    return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"]
+end
+
+function rm.getSpecializationName(specializationID)
+    local specializationName = GetSpellInfo(specializationID)
+    return specializationName
+end
+
 local specializationIDs = {
     [164] = {9788, 17041, 17040, 17039, 9787},
     [202] = {20219, 20222},
@@ -25,19 +38,6 @@ function rm.getAllProfessionsSpecialization()
         end
     end
     return currentSpecializations
-end
-
-function rm.getSavedSpecializationByID(professionID)
-    return rm.getCharacterSavedVariables()[professionID]["specialization"]
-end
-
-function rm.getSavedSpecializationByName(profession)
-    return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"]
-end
-
-function rm.getSpecializationName(specializationID)
-    local specializationName = GetSpellInfo(specializationID)
-    return specializationName
 end
 
 -- Saves all current professions' specializations if any

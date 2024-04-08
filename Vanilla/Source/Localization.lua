@@ -2,6 +2,27 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
+L.brightness = OPTIONS_BRIGHTNESS
+L.color = COLOR
+L.comingSoon = SPLASH_OPENS_SOON
+L.common = ITEM_QUALITY1_DESC
+L.epic = ITEM_QUALITY4_DESC
+L.fishingNotLearned = SPELL_FAILED_NOT_KNOWN -- "Spell not learned"
+L.fishingTab = PROFESSIONS_FISHING
+L.general = GENERAL
+L.hideWindowTooltip = HIDE
+L.learned = TRADE_SKILLS_LEARNED_TAB
+L.rare = ITEM_QUALITY3_DESC
+L.recipeDetailsTab = LFG_LIST_DETAILS -- "Details"
+L.recipesTab = TRADESKILL_SERVICE_LEARN -- "Recipes"
+--L.reputation = REPUTATION
+L.resetDefaults = RESET_TO_DEFAULT
+L.skill = SKILL
+L.sortBy = select(1, strsplit(" ", RAID_FRAME_SORT_LABEL))..":" -- The first word of "Sort By" + ":"
+--L.specialization = SPECIALIZATION
+L.subtitle = string.format(PETITION_CREATOR, rm.author).."\n"..GAME_VERSION_LABEL.." "..rm.version -- "Created by Breno Ludgero \n Version x.x.x"
+L.uncommon = ITEM_QUALITY2_DESC
+
 if rm.locale == "enUS" then
     L.professionNames = {
         [171] = "Alchemy",

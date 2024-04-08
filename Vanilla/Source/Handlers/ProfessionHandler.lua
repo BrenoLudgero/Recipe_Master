@@ -1,6 +1,18 @@
 local _, rm = ...
 local L = rm.L
 
+function rm.getSavedProfessionByID(professionID)
+    return rm.getCharacterSavedVariables()[professionID]
+end
+
+function rm.getSavedProfessionByName(profession)
+    return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]
+end
+
+function getSavedProfessionRank(profession)
+    return rm.getSavedProfessionByName(profession)["rank"]
+end
+
 local function getRankName(skillMaxRank)
     if skillMaxRank > 225 then
         return "Artisan"
@@ -36,18 +48,6 @@ local function getAllLearnedProfessions()
         end
     end
     return currentProfessions
-end
-
-function rm.getSavedProfessionByID(professionID)
-    return rm.getCharacterSavedVariables()[professionID]
-end
-
-function rm.getSavedProfessionByName(profession)
-    return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]
-end
-
-function getSavedProfessionRank(profession)
-    return rm.getSavedProfessionByName(profession)["rank"]
 end
 
 -- Stores the character's current professions in SavedVariables if not saved yet
