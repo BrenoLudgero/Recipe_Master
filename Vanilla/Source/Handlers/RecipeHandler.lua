@@ -41,7 +41,7 @@ end
 
 function rm.isLearnedRecipe(recipe)
     local learnedSkills = rm.getSavedSkillsByProfessionName(rm.displayedProfession)
-    local professionRank = getSavedProfessionRank(rm.displayedProfession)
+    local professionRank = rm.getSavedProfessionRank(rm.displayedProfession)
     local isLearnedRecipe = rm.tableContains(learnedSkills, recipe.teaches)
     return isLearnedRecipe or isLearnedRankupRecipe(recipe, professionRank)
 end

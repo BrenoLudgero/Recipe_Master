@@ -9,7 +9,7 @@ function rm.getSavedProfessionByName(profession)
     return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]
 end
 
-function getSavedProfessionRank(profession)
+function rm.getSavedProfessionRank(profession)
     return rm.getSavedProfessionByName(profession)["rank"]
 end
 

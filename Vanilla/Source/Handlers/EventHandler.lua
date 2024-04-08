@@ -45,7 +45,7 @@ local function handleWindowOpened(getNumSkillsFunction, getSkillInfoFunction, ge
         C_Timer.After(0.04, function() rm.saveNewTradeSkills(getNumSkillsFunction, getSkillInfoFunction, getItemLinkFunction) end)
         C_Timer.After(0.1, function() rm.showRecipesFrame(getNumSkillsFunction, getSkillInfoFunction) end)
         C_Timer.After(0.11, rm.clearWindowContent)
-        C_Timer.After(0.19, function () rm.showProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction) end)
+        C_Timer.After(0.19, function () rm.showRecipesForSpecificProfession(rm.displayedProfession) end)
         C_Timer.After(0.2, rm.updateProgressBar)
     end
 end
