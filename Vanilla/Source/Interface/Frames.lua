@@ -56,7 +56,7 @@ function rm.createAllFrames()
     rm.progressBarText = rm.createProgressBarText(rm.progressBar)
     rm.restoreButton = rm.createRestoreButton()
     rm.centeredText = rm.createCenteredText(mainFrameInnerBorder)
-    ---------- Bottom tabs ----------
+    ----- Bottom tabs -----
     rm.bottomTabs = {}
     rm.recipesTab = rm.createBottomTab(L.recipesTab, "BOTTOMLEFT", F.offsets.recipesTabX, true)
     rm.recipeDetailsTab = rm.createBottomTab(L.recipeDetailsTab, "BOTTOM", 0, false)
@@ -69,16 +69,18 @@ function rm.createAllFrames()
     rm.createOptionsText(F.fonts.optionSection, L.general, F.offsets.titlesTextX, F.offsets.generalTextY)
     rm.createOptionsText(F.fonts.optionSection, L.recipesWindow, F.offsets.titlesTextX, F.offsets.recipesWindowTextY)
     rm.createOptionsText(F.fonts.optionSection, L.progressBar, F.offsets.titlesTextX, F.offsets.progressBarTextY)
-    ----- Sliders -----
-    local opacitySlider = rm.createOpacitySlider()
-    local spacingSlider = rm.createSpacingSlider()
-    ----- Dropdowns -----
-    local updateRMIcon = rm.createIconDropdown()
-    local updateBarBrightness = rm.createProgressBrightnessDropdown()
-    local updateBarColor = rm.createProgressColorDropdown()
-    ----- Buttons -----
-    local showLearned = rm.createShowLearnedCheckButton()
-    local resetDefaults = rm.createResetDefaultsButton(opacitySlider, spacingSlider, updateRMIcon, updateBarBrightness, updateBarColor, showLearned)
+    local options = {
+        ----- Sliders -----
+        opacitySlider = rm.createOpacitySlider(),
+        spacingSlider = rm.createSpacingSlider(),
+        ----- Dropdowns -----
+        progressBrightness = rm.createProgressBrightnessDropdown(),
+        progressColor = rm.createProgressColorDropdown(),
+        restoreButton = rm.createIconDropdown(),
+        ----- Buttons -----
+        showLearnedButton = rm.createShowLearnedCheckButton()
+    }
+    local resetDefaultsButton = rm.createResetDefaultsButton(options)
     ----------------------------------------
     deleteFrameCreationFunctions()
     deleteFrameCreationFunctions = nil

@@ -119,11 +119,11 @@ function rm.createProgressColorDropdown()
     return dropdown
 end
 
-function rm.createResetDefaultsButton(opacitySlider, spacingSlider, restoreButtonDropdown, progressBrightness, progressColor, showLearnedButton)
+function rm.createResetDefaultsButton(options)
     local button = CreateFrame("Button", nil, rm.optionsFrame, F.templates.button)
     button:SetText(L.resetDefaults)
     button:SetSize(140, 35)
     button:SetPoint("TOPLEFT", F.offsets.resetDefaultsX, F.offsets.resetDefaultsY)
-    rm.resetSavedVariablesOnClick(button, opacitySlider, spacingSlider, restoreButtonDropdown, progressBrightness, progressColor, showLearnedButton)
+    rm.resetSavedVariablesOnClick(button, options)
     return button
 end
