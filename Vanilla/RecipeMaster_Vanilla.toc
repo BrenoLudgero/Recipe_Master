@@ -25,7 +25,7 @@
 
 ## Author: Breno Ludgero
 
-## SavedVariables: RecipeMasterProfessionsAndSkills, RecipeMasterPreferences
+## SavedVariables: RecipeMasterProfessionsAndSkills, RecipeMasterMainWindowPreferences, RecipeMasterOptionsWindowPreferences
 
 Source/Initialization.lua
 Source/Interface/FrameSettings.lua

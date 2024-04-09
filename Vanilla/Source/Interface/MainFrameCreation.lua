@@ -95,7 +95,7 @@ end
 
 function rm.createRecipeContainerFrame(parent)
     local recipeContainer = CreateFrame("Frame", nil, parent)
-    recipeContainer:SetSize(1, 1) -- F.sizes are adjusted dynamically
+    recipeContainer:SetSize(1, 1) -- Sizes are adjusted dynamically
     recipeContainer.children = {}
     return recipeContainer
 end
@@ -245,7 +245,7 @@ local function createRowText(recipe, rowIcon, red, green, blue)
 end
 
 function rm.createRecipeRow(recipe, red, green, blue, desaturateIcon)
-    local yOffset = -(rm.displayedRecipesCount * (F.sizes.recipeIcon + rm.getPreference("rowSpacing")))
+    local yOffset = -(rm.displayedRecipesCount * (F.sizes.recipeIcon + rm.getPreference("iconSpacing")))
     local rowIcon = createRowIcon(recipe, yOffset)
     rowIcon:SetDesaturated(desaturateIcon)
     local recipeNameText = createRowText(recipe, rowIcon, red, green, blue)

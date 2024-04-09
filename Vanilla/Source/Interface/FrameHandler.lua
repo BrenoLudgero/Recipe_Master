@@ -128,7 +128,7 @@ function rm.updateRecipesPosition()
     for _, rowIcon in ipairs(recipeSection) do
         if rowIcon:IsShown() then
             rowIcon:SetPoint("TOP", rm.recipeContainer, "BOTTOMLEFT", F.offsets.recipeIconX, yOffset)
-            yOffset = yOffset - (F.sizes.recipeIcon + rm.getPreference("rowSpacing"))
+            yOffset = yOffset - (F.sizes.recipeIcon + rm.getPreference("iconSpacing"))
         end
     end
 end

@@ -5,7 +5,8 @@ local function handleLearnedRecipe(recipe)
     if not rm.isLearnedRecipe(recipe) then
         return
     end
-    if rm.getPreference("showLearnedRecipes") then
+    local showLearned = rm.getPreference("showLearnedRecipes")
+    if showLearned then
         rm.createRecipeRow(recipe, 0.5, 0.5, 0.5, true) -- Gray text and desaturated icon
     end
     rm.learnedRecipesCount = rm.learnedRecipesCount + 1
@@ -41,7 +42,8 @@ end
 local function compareRecipes(a, b)
     local valueA, valueB = getComparisonValues(a, b)
     if valueA and valueB then
-        if rm.getPreference("sortAscending") then
+        local sortAscending = rm.getPreference("sortAscending")
+        if sortAscending then
             return valueA < valueB
         end
         return valueA > valueB

@@ -25,43 +25,63 @@ SlashCmdList["RECIPEMASTER"] = function()
     Settings.OpenToCategory(rm.L.title)
 end
 
-local defaultPreferences = {
-    -- Options window --
+local defaultMainWindowPreferences = {
+    mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
+    mainFrameHeight = 413, -- Used when TradeSkillMaster is enabled
+    sortAscending = false,
+    sortRecipesBy = "Name"
+}
+
+local defaultOptionsWindowPreferences = {
     backgroundOpacity = 1,
     progressColor = {0.00, 0.44, 0.87},
     progressTexture = "Interface/TARGETINGFRAME/BarFill2",
     restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
-    rowSpacing = 5,
-    showLearnedRecipes = true,
-    -- Recipes window --
-    mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
-    mainFrameHeight = 413, -- Used when TradeSkillMaster is enabled
-    sortAscending = false,
-    sortRecipesBy = "Skill"
+    iconSpacing = 5,
+    showLearnedRecipes = false,
 }
 
--- Creates a table to store the characters' learned skills in SavedVariables
--- And a second table for the user's preferences
+function rm.resetOptionsWindowPreferences()
+    RecipeMasterOptionsWindowPreferences = defaultOptionsWindowPreferences
+    -- When set to true in defaultPreferences, boolean options
+    -- are always loaded from SavedVariables as true for some reason
+    RecipeMasterOptionsWindowPreferences["showLearnedRecipes"] = true
+end
+
+local function oldPreferencesFound()
+    return RecipeMasterPreferences
+end
+
+-- Detects if the old preferences exists ("RecipeMasterPreferences") and deletes it (1.0.3 -> 1.1.0)
+-- Or creates tables to store the characters' learned skills and user preferences in SavedVariables
 function rm.createSavedVariables()
+    if oldPreferencesFound() then
+        RecipeMasterPreferences = nil
+    end
     if not RecipeMasterProfessionsAndSkills then
         RecipeMasterProfessionsAndSkills = {}
     end
-    if not RecipeMasterPreferences then
-        RecipeMasterPreferences = defaultPreferences
+    if not RecipeMasterMainWindowPreferences then
+        RecipeMasterMainWindowPreferences = defaultMainWindowPreferences
+        RecipeMasterMainWindowPreferences["sortAscending"] = true
+    end
+    if not RecipeMasterOptionsWindowPreferences then
+        rm.resetOptionsWindowPreferences()
     end
 end
 
 -- Inserts new options created after an update in SavedVariables
 function rm.updateSavedVariables()
-    for key, value in pairs(defaultPreferences) do
-        if not RecipeMasterPreferences[key] then
-            RecipeMasterPreferences[key] = value
+    for key, value in pairs(defaultMainWindowPreferences) do
+        if not RecipeMasterMainWindowPreferences[key] then
+            RecipeMasterMainWindowPreferences[key] = value
         end
     end
-end
-
-function rm.resetSavedPreferences()
-    RecipeMasterPreferences = defaultPreferences
+    for key, value in pairs(defaultOptionsWindowPreferences) do
+        if not RecipeMasterOptionsWindowPreferences[key] then
+            RecipeMasterOptionsWindowPreferences[key] = value
+        end
+    end
 end
 
 function rm.updateSavedCharacters()
@@ -74,9 +94,17 @@ function rm.updateSavedCharacters()
 end
 
 function rm.getPreference(preference)
-    return RecipeMasterPreferences[preference]
+    if RecipeMasterMainWindowPreferences[preference] ~= nil then
+        return RecipeMasterMainWindowPreferences[preference]
+    elseif RecipeMasterOptionsWindowPreferences[preference] ~= nil then
+        return RecipeMasterOptionsWindowPreferences[preference]
+    end
 end
 
 function rm.setPreference(preference, newValue)
-    RecipeMasterPreferences[preference] = newValue
+    if RecipeMasterMainWindowPreferences[preference] ~= nil then
+        RecipeMasterMainWindowPreferences[preference] = newValue
+    elseif RecipeMasterOptionsWindowPreferences[preference] ~= nil then
+        RecipeMasterOptionsWindowPreferences[preference] = newValue
+    end
 end

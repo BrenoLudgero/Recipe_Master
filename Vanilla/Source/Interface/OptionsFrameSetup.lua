@@ -46,7 +46,7 @@ end
 function rm.updateRowSpacing(spacingSlider, valueDisplay)
     spacingSlider:SetScript("OnValueChanged", function(self, value)
         local integerValue = math.floor(value * 1)
-        rm.setPreference("rowSpacing", integerValue)
+        rm.setPreference("iconSpacing", value)
         valueDisplay:SetText(integerValue)
     end)
 end
@@ -64,11 +64,11 @@ end
 
 function rm.resetSavedVariablesOnClick(resetDefaultsButton, opacitySlider, spacingSlider, restoreButtonDropdown, progressBrightness, progressColor, showLearnedButton)
     resetDefaultsButton:SetScript("OnClick", function(self)
-        rm.resetSavedPreferences()
+        rm.resetOptionsWindowPreferences()
         opacitySlider:SetValue(rm.getPreference("backgroundOpacity"))
         opacitySlider.valueDisplay:SetText((rm.getPreference("backgroundOpacity") * 100).."%")
-        spacingSlider:SetValue(rm.getPreference("rowSpacing"))
-        spacingSlider.valueDisplay:SetText(rm.getPreference("rowSpacing"))
+        spacingSlider:SetValue(rm.getPreference("iconSpacing"))
+        spacingSlider.valueDisplay:SetText(rm.getPreference("iconSpacing"))
         rm.setInitialDropdownValue(restoreButtonDropdown, "restoreButtonIconTexture")
         UIDropDownMenu_SetText(restoreButtonDropdown, L.epic)
         rm.setInitialDropdownValue(progressBrightness, "progressTexture")
