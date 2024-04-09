@@ -33,13 +33,14 @@ end
 
 function rm.createOpacitySlider()
     local slider = createSlider(F.offsets.opacitySliderY, L.backgroundOpacity)
-    slider:SetMinMaxValues(0.40, 1)
-    slider:SetValueStep(0.01)
+    slider:SetMinMaxValues(40, 100)
+    slider:SetValueStep(1)
+    slider:SetObeyStepOnDrag(true)
     slider.Low:SetText("40%")
     slider.High:SetText("100%")
-    local initialValue = rm.getPreference("backgroundOpacity")
+    local initialValue = rm.getPreference("backgroundOpacity") * 100
     slider:SetValue(initialValue)
-    slider.valueDisplay:SetText((initialValue * 100).."%")
+    slider.valueDisplay:SetText(initialValue.."%")
     slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, 2)
     rm.updateBackgroundOpacity(slider)
     return slider
@@ -79,7 +80,7 @@ function rm.createSpacingSlider()
     slider:SetValue(initialValue)
     slider.valueDisplay:SetText(initialValue)
     slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, 2)
-    rm.updateRowSpacing(slider, slider.valueDisplay)
+    rm.updateIconSpacing(slider, slider.valueDisplay)
     return slider
 end
 

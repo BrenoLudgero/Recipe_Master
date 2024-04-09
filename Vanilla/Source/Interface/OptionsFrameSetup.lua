@@ -4,12 +4,11 @@ local F = rm.F
 
 function rm.updateBackgroundOpacity(opacitySlider)
     opacitySlider:SetScript("OnValueChanged", function(self, value)
-        local roundedValue = math.floor(value * 100)
-        local roundedValueToTwoDecimals = roundedValue / 100
-        rm.setPreference("backgroundOpacity", roundedValueToTwoDecimals)
-        opacitySlider.valueDisplay:SetText((roundedValue).."%")
-        F.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
-        F.colors.detailsBackground = {0.7, 0.7, 0.7, rm.getPreference("backgroundOpacity")}
+        local valueToTwoDecimals = value / 100
+        rm.setPreference("backgroundOpacity", valueToTwoDecimals)
+        opacitySlider.valueDisplay:SetText(value.."%")
+        F.colors.mainBackground = {1, 1, 1, valueToTwoDecimals}
+        F.colors.detailsBackground = {0.7, 0.7, 0.7, valueToTwoDecimals}
     end)
 end
 
@@ -43,11 +42,10 @@ function rm.handleTextureOptions(dropdown, savedVariable, frame)
     end)
 end
 
-function rm.updateRowSpacing(spacingSlider, valueDisplay)
+function rm.updateIconSpacing(spacingSlider, valueDisplay)
     spacingSlider:SetScript("OnValueChanged", function(self, value)
-        local integerValue = math.floor(value * 1)
+        valueDisplay:SetText(value)
         rm.setPreference("iconSpacing", value)
-        valueDisplay:SetText(integerValue)
     end)
 end
 
@@ -65,7 +63,7 @@ end
 function rm.resetSavedVariablesOnClick(resetDefaultsButton, opacitySlider, spacingSlider, restoreButtonDropdown, progressBrightness, progressColor, showLearnedButton)
     resetDefaultsButton:SetScript("OnClick", function(self)
         rm.resetOptionsWindowPreferences()
-        opacitySlider:SetValue(rm.getPreference("backgroundOpacity"))
+        opacitySlider:SetValue(rm.getPreference("backgroundOpacity") * 100)
         opacitySlider.valueDisplay:SetText((rm.getPreference("backgroundOpacity") * 100).."%")
         spacingSlider:SetValue(rm.getPreference("iconSpacing"))
         spacingSlider.valueDisplay:SetText(rm.getPreference("iconSpacing"))
