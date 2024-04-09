@@ -74,7 +74,7 @@ end
 function rm.storeWidestRecipeTextWidth(recipeNameWidth, recipeInfoWidth)
     if recipeNameWidth > rm.widestRecipeTextWidth then
         rm.widestRecipeTextWidth = recipeNameWidth
-    elseif recipeInfoWidth > rm.widestRecipeTextWidth then
+    elseif recipeInfoWidth and recipeInfoWidth > rm.widestRecipeTextWidth then
         rm.widestRecipeTextWidth = recipeInfoWidth
     end
 end
@@ -106,11 +106,15 @@ function rm.showMatchingRecipesOnTop(searchBar)
             if string.find(recipeText, searchText, 1, true) then
                 rowIcon:Show()
                 rowIcon.associatedText:Show()
-                rowIcon.associatedText.aditionalInfo:Show()
+                if rowIcon.associatedText.aditionalInfo then
+                    rowIcon.associatedText.aditionalInfo:Show()
+                end
             else
                 rowIcon:Hide()
                 rowIcon.associatedText:Hide()
-                rowIcon.associatedText.aditionalInfo:Hide()
+                if rowIcon.associatedText.aditionalInfo then
+                    rowIcon.associatedText.aditionalInfo:Hide()
+                end
             end
         end
         rm.updateRecipesPosition()

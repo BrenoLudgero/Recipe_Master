@@ -1,5 +1,6 @@
 local _, rm = ...
 local L = rm.L
+local F = rm.F
 
 local function handleLearnedRecipe(recipe)
     if not rm.isLearnedRecipe(recipe) then
@@ -7,7 +8,7 @@ local function handleLearnedRecipe(recipe)
     end
     local showLearned = rm.getPreference("showLearnedRecipes")
     if showLearned then
-        rm.createRecipeRow(recipe, 0.5, 0.5, 0.5, true) -- Gray text and desaturated icon
+        rm.createRecipeRow(recipe, F.colors.gray, true) -- Gray text and desaturated icon
     end
     rm.learnedRecipesCount = rm.learnedRecipesCount + 1
 end
@@ -17,7 +18,7 @@ local function handleMissingRecipe(recipe)
         return
     end
     local r, g, b = C_Item.GetItemQualityColor(recipe.quality)
-    rm.createRecipeRow(recipe, r, g, b)
+    rm.createRecipeRow(recipe, {r, g, b})
     rm.missingRecipesCount = rm.missingRecipesCount + 1
 end
 
@@ -73,7 +74,9 @@ local function showAllRecipeRows()
     for _, rowIcon in pairs(recipeSection) do
         rowIcon:Show()
         rowIcon.associatedText:Show()
-        rowIcon.associatedText.aditionalInfo:Show()
+        if rowIcon.associatedText.aditionalInfo then
+            rowIcon.associatedText.aditionalInfo:Show()
+        end
     end
 end
 

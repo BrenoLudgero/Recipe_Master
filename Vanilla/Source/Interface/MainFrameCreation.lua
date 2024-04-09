@@ -175,7 +175,7 @@ end
 function rm.createProgressBarText(parent)
     local text = parent:CreateFontString(nil, "OVERLAY", F.fonts.header)
     text:SetPoint("CENTER", 0, 0)
-    text:SetTextColor(unpack(F.colors.progressText))
+    text:SetTextColor(unpack(F.colors.white))
     return text
 end
 
@@ -227,31 +227,43 @@ local function createRowIcon(recipe, yOffset)
     return icon
 end
 
-local function createRowText(recipe, rowIcon, red, green, blue)
-    local recipeName = rm.recipeContainer:CreateFontString(nil, "OVERLAY", F.fonts.recipeText)
-    recipeName:SetText(recipe.name)
-    recipeName:SetTextColor(red, green, blue)
-    recipeName:SetPoint("LEFT", rowIcon, "TOPRIGHT", F.offsets.recipeTextX, -6)
-    local recipeInfo = rm.recipeContainer:CreateFontString(nil, "OVERLAY", F.fonts.recipeText)
-    recipeInfo:SetPoint("TOPLEFT", recipeName, "BOTTOMLEFT", 0, -3)
+local function createAditionalInfoText(recipe, recipeName, recipeInfo, color)
     if rm.isLearnedRecipe(recipe) then
         recipeInfo:SetText(L.learned)
-        recipeInfo:SetTextColor(red, green, blue)
+        recipeInfo:SetTextColor(unpack(color)) -- Gray
     else
         rm.getRequirementsText(recipe, recipeInfo)
     end
     recipeName.aditionalInfo = recipeInfo
+end
+
+local function createRowText(recipe, rowIcon, color)
+    local recipeName = rm.recipeContainer:CreateFontString(nil, "OVERLAY", F.fonts.recipeText)
+    recipeName:SetText(recipe.name)
+    recipeName:SetTextColor(unpack(color))
+    local showRecipesInfo = rm.getPreference("showRecipesInfo")
+    if showRecipesInfo then
+        local recipeInfo = rm.recipeContainer:CreateFontString(nil, "OVERLAY", F.fonts.recipeText)
+        recipeName:SetPoint("LEFT", rowIcon, "TOPRIGHT", F.offsets.recipeTextX, -6)
+        recipeInfo:SetPoint("TOPLEFT", recipeName, "BOTTOMLEFT", 0, F.offsets.recipeInfoY)
+        createAditionalInfoText(recipe, recipeName, recipeInfo, color)
+    else
+        recipeName:SetPoint("LEFT", rowIcon, "RIGHT", F.offsets.recipeTextX, 0)
+    end
     return recipeName
 end
 
-function rm.createRecipeRow(recipe, red, green, blue, desaturateIcon)
+function rm.createRecipeRow(recipe, color, desaturateIcon)
     local yOffset = -(rm.displayedRecipesCount * (F.sizes.recipeIcon + rm.getPreference("iconSpacing")))
     local rowIcon = createRowIcon(recipe, yOffset)
     rowIcon:SetDesaturated(desaturateIcon)
-    local recipeNameText = createRowText(recipe, rowIcon, red, green, blue)
-    local recipeInfoText = recipeNameText.aditionalInfo
+    local recipeNameText = createRowText(recipe, rowIcon, color)
     local recipeTextWidth = recipeNameText:GetWidth()
-    local recipeInfoWidth = recipeInfoText:GetWidth()
+    local recipeInfoWidth
+    if recipeNameText.aditionalInfo then
+        recipeInfoText = recipeNameText.aditionalInfo
+        recipeInfoWidth = recipeInfoText:GetWidth()
+    end
     rm.storeWidestRecipeTextWidth(recipeTextWidth, recipeInfoWidth)
     rowIcon.associatedText = recipeNameText
     table.insert(rm.recipeContainer.children, rowIcon)

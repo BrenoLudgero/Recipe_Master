@@ -3,7 +3,8 @@ local F = rm.F
 
 -- Some offsets and sizes change if Skillet is turned on (FrameHandler.updateSizesAndOffsetsBasedOnParent())
 F.offsets.brightnessDropdownX = 15
-F.offsets.brightnessDropdownY = -300
+F.offsets.brightnessDropdownY = -350
+F.offsets.checkButtonTextX = 5
 F.offsets.fishingTabX = -55.1
 F.offsets.generalTextY = -85
 F.offsets.headerX = -10
@@ -13,10 +14,11 @@ F.offsets.mainX = -34
 F.offsets.mainY = -12
 F.offsets.opacitySliderY = -128
 F.offsets.optionsDropdownLabelY = 12
-F.offsets.progressBarTextY = -255
+F.offsets.progressBarTextY = -305
 F.offsets.recipeIconX = 20
-F.offsets.recipesTabX = 55
+F.offsets.recipeInfoY = -3
 F.offsets.recipeTextX = 6
+F.offsets.recipesTabX = 55
 F.offsets.recipesWindowTextY = -170
 F.offsets.resetDefaultsX = 500
 F.offsets.resetDefaultsY = -25
@@ -24,9 +26,9 @@ F.offsets.restoreButtonX = -22
 F.offsets.restoreButtonY = -25
 F.offsets.searchX = 80
 F.offsets.searchY = -0.4
-F.offsets.showLearnedButtonX = 267
-F.offsets.showLearnedButtonY = -209
-F.offsets.showLearnedTextX = 5
+F.offsets.showLearnedButtonX = 278
+F.offsets.showRecipesInfoButtonX = 32
+F.offsets.showRecipesInfoButtonY = -260
 F.offsets.sliderX = 32
 F.offsets.sliderDescriptionY = 12
 F.offsets.sortTextX = 14
@@ -43,7 +45,7 @@ F.offsets.tabTextureX = -2.5
 F.offsets.tabTextureY = -6
 F.offsets.titleY = -15
 F.offsets.titlesTextX = 15
-F.offsets.updateIconDropdownX = F.offsets.sliderX + 220
+F.offsets.updateIconDropdownX = F.offsets.sliderX + 233
 F.offsets.updateIconDropdownY = F.offsets.opacitySliderY
 
 F.sizes.detailsBackgroundTile = 250
@@ -69,11 +71,15 @@ F.sizes.tabTextureHeight = 75
 
 F.offsets.dividerY = F.sizes.progressContainerHeight + 1
 
-F.colors.green = {0.1, 1, 0.1, 1} -- GameFontGreen color
-F.colors.progressComplete = {1, 0.8431, 0, 1} -- Gold
-F.colors.progressText = {1, 1, 1, 1} -- White
-F.colors.yellow = {1, 0.81960791349411, 0, 1} -- GameFontNormal color
-F.colors.red = {1, 0.1, 0.1, 1}
+F.colors.blue = {0.00, 0.44, 0.87}
+F.colors.gray = {0.62, 0.62, 0.62}
+F.colors.green = {0.1, 1, 0.1} -- GameFontGreen color
+F.colors.orange = {1, 0.5, 0}
+F.colors.progressComplete = {1, 0.8431, 0} -- Gold
+F.colors.purple = {0.64, 0.21, 0.93}
+F.colors.red = {1, 0.1, 0.1}
+F.colors.white = {1, 1, 1}
+F.colors.yellow = {1, 0.81960791349411, 0} -- GameFontNormal color
 
 F.fonts.bottomTab = "Fonts\\FRIZQT__.TTF"
 F.fonts.header = "SystemFont_Outline_Small"

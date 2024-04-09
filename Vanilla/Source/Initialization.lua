@@ -39,6 +39,7 @@ local defaultOptionsWindowPreferences = {
     restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
     iconSpacing = 5,
     showLearnedRecipes = false,
+    showRecipesInfo = false,
 }
 
 function rm.resetOptionsWindowPreferences()
@@ -46,6 +47,7 @@ function rm.resetOptionsWindowPreferences()
     -- When set to true in defaultPreferences, boolean options
     -- are always loaded from SavedVariables as true for some reason
     RecipeMasterOptionsWindowPreferences["showLearnedRecipes"] = true
+    RecipeMasterOptionsWindowPreferences["showRecipesInfo"] = true
 end
 
 local function oldPreferencesFound()

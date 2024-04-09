@@ -78,6 +78,7 @@ function rm.createAllFrames()
         progressColor = rm.createProgressColorDropdown(),
         restoreButton = rm.createIconDropdown(),
         ----- Buttons -----
+        showRecipesInfo = rm.createShowRecipesInfoCheckButton(),
         showLearnedButton = rm.createShowLearnedCheckButton()
     }
     local resetDefaultsButton = rm.createResetDefaultsButton(options)

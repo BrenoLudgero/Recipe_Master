@@ -84,14 +84,34 @@ function rm.createSpacingSlider()
     return slider
 end
 
-function rm.createShowLearnedCheckButton()
-    local button = CreateFrame("CheckButton", nil, rm.optionsFrame, F.templates.checkButton)
-    button:SetPoint("TOPLEFT", F.offsets.showLearnedButtonX, F.offsets.showLearnedButtonY)
-    button:SetChecked(rm.getPreference("showLearnedRecipes"))
-    local label = rm.createOptionsText(F.fonts.optionDescription, L.showLearned, nil, nil)
-    label:SetPoint("LEFT", button, "RIGHT", F.offsets.showLearnedTextX, 0)
-    rm.toggleShowLearnedRecipesOnClick(button)
+local function createCheckButton(parentFrame, xOffset, yOffset, savedVariable, labelText)
+    local button = CreateFrame("CheckButton", nil, parentFrame, F.templates.checkButton)
+    button:SetPoint("TOPLEFT", xOffset, yOffset)
+    button:SetChecked(rm.getPreference(savedVariable))
+    local label = rm.createOptionsText(F.fonts.optionDescription, labelText, nil, nil)
+    label:SetPoint("LEFT", button, "RIGHT", F.offsets.checkButtonTextX, 0)
+    rm.toggleCheckButtonPreferenceOnClick(button, savedVariable)
     return button
+end
+
+function rm.createShowRecipesInfoCheckButton()
+    return createCheckButton(
+        rm.optionsFrame, 
+        F.offsets.showRecipesInfoButtonX, 
+        F.offsets.showRecipesInfoButtonY, 
+        "showRecipesInfo", 
+        L.showRecipesInfo
+    )
+end
+
+function rm.createShowLearnedCheckButton()
+    return createCheckButton(
+        rm.optionsFrame, 
+        F.offsets.showLearnedButtonX, 
+        F.offsets.showRecipesInfoButtonY, 
+        "showLearnedRecipes", 
+        L.showLearned
+    )
 end
 
 function rm.createProgressBrightnessDropdown()
@@ -108,13 +128,13 @@ end
 function rm.createProgressColorDropdown()
     local dropdown = createOptionsDropdown(F.offsets.updateIconDropdownX, F.offsets.brightnessDropdownY, L.color)
     dropdown.values = {
-        {text = L.blue, value = {0.00, 0.44, 0.87}},
-        {text = L.gray, value = {0.62, 0.62, 0.62}},
-        {text = L.green, value = {0.12, 1, 0}},
-        {text = L.orange, value = {1, 0.5, 0}},
-        {text = L.purple, value = {0.64, 0.21, 0.93}}
+        {text = L.blue, value = F.colors.blue},
+        {text = L.gray, value = F.colors.gray},
+        {text = L.green, value = F.colors.green}, --{0.12, 1, 0}},
+        {text = L.orange, value = F.colors.orange},
+        {text = L.purple, value = F.colors.purple}
     }
-    rm.handleTextureOptions(dropdown, "progressColor", nil)
+    rm.handleTextureOptions(dropdown, "progressColor", rm.progressBar)
     rm.setInitialDropdownValue(dropdown, "progressColor")
     return dropdown
 end

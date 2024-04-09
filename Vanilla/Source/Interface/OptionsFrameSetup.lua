@@ -24,7 +24,11 @@ local function updatePreferenceAndTexture(dropdown, selectedID, savedVariable, f
     UIDropDownMenu_SetSelectedID(dropdown, selectedID)
     local selectedValue = dropdown.values[selectedID].value
     rm.setPreference(savedVariable, selectedValue)
-    updateFrameTexture(frame, savedVariable)
+    if savedVariable == "progressColor" then
+        frame:SetStatusBarColor(unpack(rm.getPreference(savedVariable)))
+    else
+        updateFrameTexture(frame, savedVariable)
+    end
 end
 
 function rm.handleTextureOptions(dropdown, savedVariable, frame)
@@ -49,14 +53,14 @@ function rm.updateIconSpacing(spacingSlider, valueDisplay)
     end)
 end
 
-function rm.toggleShowLearnedRecipesOnClick(showLearnedButton)
-    showLearnedButton:SetScript("OnClick", function(self)
-        local showLearned = rm.getPreference("showLearnedRecipes")
-        if showLearned then
-            rm.setPreference("showLearnedRecipes", false)
+function rm.toggleCheckButtonPreferenceOnClick(button, preference)
+    button:SetScript("OnClick", function(self)
+        local isPreferenceTrue = rm.getPreference(preference)
+        if isPreferenceTrue then
+            rm.setPreference(preference, false)
             return
         end
-        rm.setPreference("showLearnedRecipes", true)
+        rm.setPreference(preference, true)
     end)
 end
 
@@ -67,6 +71,7 @@ function rm.resetSavedVariablesOnClick(resetDefaultsButton, options)
         local spacing = rm.getPreference("iconSpacing")
         local progressColorPref = rm.getPreference("progressColor")
         local restoreButtonIconTexture = rm.getPreference("restoreButtonIconTexture")
+        local showRecipesInfoPref = rm.getPreference("showRecipesInfo")
         local showLearnedRecipes = rm.getPreference("showLearnedRecipes")
         options.opacitySlider:SetValue(opacity * 100)
         options.opacitySlider.valueDisplay:SetText((opacity * 100) .. "%")
@@ -78,6 +83,7 @@ function rm.resetSavedVariablesOnClick(resetDefaultsButton, options)
         rm.progressBar:SetStatusBarColor(unpack(progressColorPref))
         UIDropDownMenu_SetText(options.restoreButton, L.epic)
         rm.restoreButton.texture:SetTexture(restoreButtonIconTexture)
+        options.showRecipesInfo:SetChecked(showRecipesInfoPref)
         options.showLearnedButton:SetChecked(showLearnedRecipes)
     end)
 end

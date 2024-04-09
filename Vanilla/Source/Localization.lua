@@ -50,7 +50,8 @@ if rm.locale == "enUS" then
     L.recipeIconSpacing = "Icon Spacing"
     L.recipesWindow = "Recipes Window"
     L.showLearned = "Show Learned Recipes"
-    L.updateIconDropdown = "Recipe Master's Button Icon"
+    L.showRecipesInfo = "Show Recipe Details"
+    L.updateIconDropdown = "Restore Window Icon"
     return
 
 elseif rm.locale == "esMX" then
@@ -71,7 +72,7 @@ elseif rm.locale == "esMX" then
     L.blue = "Azul"
     L.bright = "Brillante"
     L.canLearn = "Puede Aprender"
-    L.dark = "Oscuro"
+    L.dark = "Oscura"
     L.gray = "Gris"
     L.green = "Verde"
     L.orange = "Naranja"
@@ -79,8 +80,9 @@ elseif rm.locale == "esMX" then
     L.purple = "Morado"
     L.recipeIconSpacing = "Espaciado de Iconos"
     L.recipesWindow = "Ventana de Recetas"
-    L.updateIconDropdown = "Ícono del Botón del Maestro de Recetas"
     L.showLearned = "Mostrar Recetas Aprendidas"
+    L.showRecipesInfo = "Mostrar Detalles de la Receta"
+    L.updateIconDropdown = "Ícono de Restauración de la Ventana"
     return
 
 elseif rm.locale == "esES" then
@@ -101,7 +103,7 @@ elseif rm.locale == "esES" then
     L.blue = "Azul"
     L.bright = "Brillante"
     L.canLearn = "Puede Aprender"
-    L.dark = "Oscuro"
+    L.dark = "Oscura"
     L.gray = "Gris"
     L.green = "Verde"
     L.orange = "Naranja"
@@ -109,8 +111,9 @@ elseif rm.locale == "esES" then
     L.purple = "Morado"
     L.recipeIconSpacing = "Espaciado de Iconos"
     L.recipesWindow = "Ventana de Recetas"
-    L.updateIconDropdown = "Ícono del Botón del Maestro de Recetas"
     L.showLearned = "Mostrar Recetas Aprendidas"
+    L.showRecipesInfo = "Mostrar Detalles de la Receta"
+    L.updateIconDropdown = "Ícono de Restauración de la Ventana"
     return
 
 elseif rm.locale == "ptBR" then
@@ -129,9 +132,9 @@ elseif rm.locale == "ptBR" then
     L.recipePrefixes = {"Receita: ", "Instruções: ", "Fórmula: ", "Diagrama: ", "Molde: ", "Manual: "}
     L.backgroundOpacity = "Opacidade do Fundo"
     L.blue = "Azul"
-    L.bright = "Claro"
+    L.bright = "Clara"
     L.canLearn = "Pode Aprender"
-    L.dark = "Escuro"
+    L.dark = "Escura"
     L.gray = "Cinza"
     L.green = "Verde"
     L.orange = "Laranja"
@@ -139,9 +142,10 @@ elseif rm.locale == "ptBR" then
     L.purple = "Roxo"
     L.recipeIconSpacing = "Espaçamento do Ícone"
     L.recipesWindow = "Janela de Receitas"
-    L.updateIconDropdown = "Ícone do Botão do Mestre das Receitas"
-    L.showLearned = "Mostrar Receitas Aprendidas"        
+    L.showLearned = "Mostrar Receitas Aprendidas"
+    L.showRecipesInfo = "Mostrar Detalhes da Receita"
     L.sortBy = "Ordenar:"
+    L.updateIconDropdown = "Ícone do Botão de Restaurar Janela"
     return
 
 elseif rm.locale == "deDE" then
@@ -170,8 +174,9 @@ elseif rm.locale == "deDE" then
     L.purple = "Lila"
     L.recipeIconSpacing = "Symbolabstand"
     L.recipesWindow = "Rezepte Fenster"
-    L.updateIconDropdown = "Symbol des Rezeptmeister"
-    L.showLearned = "Gelernte Rezepte anzeigen"
+    L.showLearned = "Gelernte Rezepte Anzeigen"
+    L.showRecipesInfo = "Rezeptdetails Anzeigen"
+    L.updateIconDropdown = "Symbol für Fenster Wiederherstellen"
     return
 
 elseif rm.locale == "frFR" then
@@ -200,8 +205,9 @@ elseif rm.locale == "frFR" then
     L.purple = "Violet"
     L.recipeIconSpacing = "Espacement des Icônes"
     L.recipesWindow = "Fenêtre des Recettes"
-    L.updateIconDropdown = "Icône du Bouton du Maître des Recettes"
     L.showLearned = "Afficher les Recettes Apprises"
+    L.showRecipesInfo = "Afficher les Détails de la Recette"
+    L.updateIconDropdown = "Icône de Restauration de la Fenêtre"
     return
 
 elseif rm.locale == "ruRU" then
@@ -230,9 +236,10 @@ elseif rm.locale == "ruRU" then
     L.purple = "Фиолетовый"
     L.recipeIconSpacing = "Промежуток между иконками"
     L.recipesWindow = "Окно рецептов"
-    L.updateIconDropdown = "Иконка кнопки Мастер Рецептов"
     L.showLearned = "Показывать выученные рецепты"
+    L.showRecipesInfo = "Показать Подробности Рецепта"
     L.sortBy = "Сорт:"
+    L.updateIconDropdown = "Значок окна Восстановления"
     F.fonts.bottomTab = "Fonts\\FRIZQT___CYR.TTF"
     F.offsets.headerTextY = 0
     F.offsets.tabTextY = 5.5
@@ -264,8 +271,9 @@ elseif rm.locale == "koKR" then
     L.purple = "보라"
     L.recipeIconSpacing = "아이콘 간격"
     L.recipesWindow = "레시피 창"
-    L.updateIconDropdown = "레시피 마스터 버튼 아이콘"
     L.showLearned = "배웠던 레시피 보기"
+    L.showRecipesInfo = "레시피 세부 정보 표시"
+    L.updateIconDropdown = "복원 창 아이콘"
     F.fonts.bottomTab = "Fonts\\2002.TTF"
     F.fontSizes.bottomTab = 11
     F.offsets.headerTextY = 0.4
@@ -298,12 +306,15 @@ elseif rm.locale == "zhTW" then
     L.purple = "紫色"
     L.recipeIconSpacing = "圖示間距"
     L.recipesWindow = "食譜視窗"
-    L.updateIconDropdown = "食譜大師按鈕圖示"
     L.showLearned = "顯示已學會的食譜"
+    L.showRecipesInfo = "顯示食譜詳細信息"
     L.sortBy = "分類："
+    L.updateIconDropdown = "恢復視窗圖示"
     F.fonts.bottomTab = "Fonts\\blei00d.TTF"
     F.fontSizes.bottomTab = 12
+    F.fonts.recipeText = "GameFontHighlightSmall2"
     F.offsets.headerTextY = 0
+    F.offsets.recipeInfoY = 0
     return
 
 elseif rm.locale == "zhCN" then
@@ -332,9 +343,12 @@ elseif rm.locale == "zhCN" then
     L.purple = "紫色"
     L.recipeIconSpacing = "图标间距"
     L.recipesWindow = "食谱窗口"
-    L.updateIconDropdown = "食谱大师按钮图标"
     L.showLearned = "显示已学会的食谱"
+    L.showRecipesInfo = "显示食谱详细信息"
+    L.updateIconDropdown = "恢复窗口图标"
     F.fonts.bottomTab = "Fonts\\ARKai_T.ttf"
+    F.fonts.recipeText = "GameFontHighlightSmall2"
     F.fontSizes.bottomTab = 12
     F.offsets.headerTextY = 0.8
+    F.offsets.recipeInfoY = 0
 end

@@ -145,7 +145,9 @@ function rm.clearWindowContent()
     for _, rowIcon in pairs(recipeSection) do
         rowIcon:Hide()
         rowIcon.associatedText:Hide()
-        rowIcon.associatedText.aditionalInfo:Hide()
+        if rowIcon.associatedText.aditionalInfo then
+            rowIcon.associatedText.aditionalInfo:Hide()
+        end
     end
     wipe(recipeSection)
     resetRecipeCounts()
@@ -172,7 +174,7 @@ end
 -- Ensures that no recipe text will be cropped
 local function updateMainWidthBasedOnWidestRecipeName()
     local newMainFrameWidth = math.floor(rm.widestRecipeTextWidth + 68)
-    if newMainFrameWidth >= F.sizes.mainWidth then
+    if newMainFrameWidth > F.sizes.mainWidth then
         rm.mainFrame:SetWidth(newMainFrameWidth)
     else
         rm.mainFrame:SetWidth(F.sizes.mainWidth)
