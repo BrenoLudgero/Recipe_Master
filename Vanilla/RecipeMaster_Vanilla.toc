@@ -49,13 +49,13 @@ Source/Handlers/ProfessionHandler.lua
 Source/Handlers/SkillHandler.lua
 Source/Handlers/ReputationHandler.lua
 Source/Handlers/RecipeHandler.lua
+Source/Handlers/FrameHandler.lua
 
 Source/Interface/MainFrameSetup.lua
 Source/Interface/MainFrameCreation.lua
 Source/Interface/OptionsFrameSetup.lua
 Source/Interface/OptionsFrameCreation.lua
 Source/Interface/Frames.lua
-Source/Interface/FrameHandler.lua
 Source/Interface/RecipeDisplay.lua
 
 Source/Handlers/EventHandler.lua
