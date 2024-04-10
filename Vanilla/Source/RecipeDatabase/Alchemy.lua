@@ -125,13 +125,13 @@ rm.recipes[171] = {
 		skill = 225,
 		teaches = 215162,
 	},
-	[9305] = {
-		skill = 225,
-		teaches = 6037,
-	},
 	[9294] = {
 		skill = 225,
 		teaches = 9144,
+	},
+	[9305] = {
+		skill = 225,
+		teaches = 6037,
 	},
 	[9304] = {
 		skill = 225,
@@ -161,13 +161,13 @@ rm.recipes[171] = {
 		skill = 250,
 		teaches = 21546,
 	},
-	[3395] = {
-		skill = 250,
-		teaches = 3387,
-	},
 	[9301] = {
 		skill = 250,
 		teaches = 9264,
+	},
+	[3395] = {
+		skill = 250,
+		teaches = 3387,
 	},
 	[9300] = {
 		skill = 250,
@@ -211,27 +211,17 @@ rm.recipes[171] = {
 		skill = 275,
 		teaches = 20007,
 	},
-	[13486] = {
+	[13488] = {
 		skill = 275,
-		teaches = 7080,
+		teaches = 7076,
 	},
 	[13487] = {
 		skill = 275,
 		teaches = 12808,
 	},
-	[13484] = {
-		repFaction = 576,
-		repLevel = "Friendly",
+	[13486] = {
 		skill = 275,
 		teaches = 7080,
-	},
-	[13489] = {
-		skill = 275,
-		teaches = 12803,
-	},
-	[13488] = {
-		skill = 275,
-		teaches = 7076,
 	},
 	[13482] = {
 		repFaction = 529,
@@ -239,15 +229,25 @@ rm.recipes[171] = {
 		skill = 275,
 		teaches = 7078,
 	},
+	[13483] = {
+		skill = 275,
+		teaches = 7076,
+	},
+	[13489] = {
+		skill = 275,
+		teaches = 12803,
+	},
+	[13484] = {
+		repFaction = 576,
+		repLevel = "Friendly",
+		skill = 275,
+		teaches = 7080,
+	},
 	[20012] = {
 		repFaction = 270,
 		repLevel = "Friendly",
 		skill = 275,
 		teaches = 20002,
-	},
-	[13483] = {
-		skill = 275,
-		teaches = 7076,
 	},
 	[13491] = {
 		skill = 280,
@@ -261,15 +261,15 @@ rm.recipes[171] = {
 		skill = 285,
 		teaches = 13454,
 	},
+	[13492] = {
+		skill = 285,
+		teaches = 13462,
+	},
 	[20013] = {
 		repFaction = 270,
 		repLevel = "Exalted",
 		skill = 285,
 		teaches = 20008,
-	},
-	[13492] = {
-		skill = 285,
-		teaches = 13462,
 	},
 	[13496] = {
 		skill = 290,
@@ -279,23 +279,23 @@ rm.recipes[171] = {
 		skill = 290,
 		teaches = 13459,
 	},
-	[13494] = {
-		skill = 290,
-		teaches = 13457,
-	},
-	[13495] = {
-		skill = 290,
-		teaches = 13456,
-	},
-	[13497] = {
-		skill = 290,
-		teaches = 13461,
-	},
 	[20014] = {
 		repFaction = 270,
 		repLevel = "Honored",
 		skill = 290,
 		teaches = 20004,
+	},
+	[13494] = {
+		skill = 290,
+		teaches = 13457,
+	},
+	[13497] = {
+		skill = 290,
+		teaches = 13461,
+	},
+	[13495] = {
+		skill = 290,
+		teaches = 13456,
 	},
 	[13501] = {
 		skill = 295,

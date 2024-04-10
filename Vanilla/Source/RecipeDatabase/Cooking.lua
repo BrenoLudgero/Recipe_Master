@@ -55,13 +55,13 @@ rm.recipes[185] = {
 		skill = 50,
 		teaches = 5477,
 	},
-	[6329] = {
-		skill = 50,
-		teaches = 6316,
-	},
 	[5485] = {
 		skill = 50,
 		teaches = 5476,
+	},
+	[6329] = {
+		skill = 50,
+		teaches = 6316,
 	},
 	[2697] = {
 		skill = 50,
@@ -168,6 +168,10 @@ rm.recipes[185] = {
 		skill = 150,
 		teaches = 3728,
 	},
+	[12229] = {
+		skill = 175,
+		teaches = 13851,
+	},
 	[6369] = {
 		skill = 175,
 		teaches = 4594,
@@ -180,33 +184,29 @@ rm.recipes[185] = {
 		skill = 175,
 		teaches = 12210,
 	},
-	[12229] = {
+	[3737] = {
 		skill = 175,
-		teaches = 13851,
-	},
-	[12231] = {
-		skill = 175,
-		teaches = 12212,
+		teaches = 3729,
 	},
 	[12232] = {
 		skill = 175,
 		teaches = 12213,
 	},
-	[3737] = {
+	[12231] = {
 		skill = 175,
-		teaches = 3729,
+		teaches = 12212,
 	},
 	[21219] = {
 		skill = 175,
 		teaches = 21217,
 	},
-	[4609] = {
-		skill = 175,
-		teaches = 4457,
-	},
 	[12233] = {
 		skill = 175,
 		teaches = 12214,
+	},
+	[4609] = {
+		skill = 175,
+		teaches = 4457,
 	},
 	[6039] = {
 		skill = 175,
@@ -232,25 +232,25 @@ rm.recipes[185] = {
 		skill = 225,
 		teaches = 18045,
 	},
-	[13939] = {
-		skill = 225,
-		teaches = 6887,
-	},
 	[13941] = {
 		skill = 225,
 		teaches = 13930,
+	},
+	[13939] = {
+		skill = 225,
+		teaches = 6887,
 	},
 	[16110] = {
 		skill = 225,
 		teaches = 12218,
 	},
-	[16111] = {
-		skill = 225,
-		teaches = 12216,
-	},
 	[13940] = {
 		skill = 225,
 		teaches = 13927,
+	},
+	[16111] = {
+		skill = 225,
+		teaches = 12216,
 	},
 	[13942] = {
 		skill = 240,
@@ -268,13 +268,13 @@ rm.recipes[185] = {
 		skill = 250,
 		teaches = 13932,
 	},
-	[18267] = {
-		skill = 275,
-		teaches = 18254,
-	},
 	[13948] = {
 		skill = 275,
 		teaches = 13934,
+	},
+	[18267] = {
+		skill = 275,
+		teaches = 18254,
 	},
 	[13949] = {
 		skill = 275,

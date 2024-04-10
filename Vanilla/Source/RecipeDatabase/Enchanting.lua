@@ -13,13 +13,13 @@ rm.recipes[333] = {
 		skill = 60,
 		teaches = 7766,
 	},
-	[6347] = {
-		skill = 80,
-		teaches = 7782,
-	},
 	[6346] = {
 		skill = 80,
 		teaches = 7776,
+	},
+	[6347] = {
+		skill = 80,
+		teaches = 7782,
 	},
 	[6348] = {
 		skill = 90,
@@ -67,13 +67,13 @@ rm.recipes[333] = {
 		skill = 140,
 		teaches = 13536,
 	},
-	[11151] = {
-		skill = 145,
-		teaches = 13617,
-	},
 	[11152] = {
 		skill = 145,
 		teaches = 13620,
+	},
+	[11151] = {
+		skill = 145,
+		teaches = 13617,
 	},
 	[11150] = {
 		skill = 145,
@@ -135,15 +135,15 @@ rm.recipes[333] = {
 		skill = 225,
 		teaches = 13868,
 	},
-	[215129] = {
-		season = "SoD",
-		skill = 225,
-		teaches = 435481,
-	},
 	[215138] = {
 		season = "SoD",
 		skill = 225,
 		teaches = 435903,
+	},
+	[215129] = {
+		season = "SoD",
+		skill = 225,
+		teaches = 435481,
 	},
 	[215141] = {
 		season = "SoD",
@@ -182,13 +182,13 @@ rm.recipes[333] = {
 		skill = 260,
 		teaches = 20020,
 	},
-	[11207] = {
-		skill = 265,
-		teaches = 13898,
-	},
 	[16217] = {
 		skill = 265,
 		teaches = 20017,
+	},
+	[11207] = {
+		skill = 265,
+		teaches = 13898,
 	},
 	[16216] = {
 		skill = 265,
@@ -230,10 +230,6 @@ rm.recipes[333] = {
 		skill = 285,
 		teaches = 20029,
 	},
-	[16243] = {
-		skill = 290,
-		teaches = 16207,
-	},
 	[19444] = {
 		skill = 290,
 		teaches = 23799,
@@ -243,6 +239,10 @@ rm.recipes[333] = {
 		repLevel = "Honored",
 		skill = 290,
 		teaches = 23800,
+	},
+	[16243] = {
+		skill = 290,
+		teaches = 16207,
 	},
 	[22392] = {
 		repFaction = 576,
@@ -260,25 +260,25 @@ rm.recipes[333] = {
 		skill = 290,
 		teaches = 23801,
 	},
-	[16246] = {
-		skill = 295,
-		teaches = 20010,
-	},
 	[16245] = {
 		skill = 295,
 		teaches = 20023,
+	},
+	[16246] = {
+		skill = 295,
+		teaches = 20010,
 	},
 	[16244] = {
 		skill = 295,
 		teaches = 20013,
 	},
-	[16248] = {
-		skill = 295,
-		teaches = 20033,
-	},
 	[16247] = {
 		skill = 295,
 		teaches = 20030,
+	},
+	[16248] = {
+		skill = 295,
+		teaches = 20033,
 	},
 	[16252] = {
 		skill = 300,
@@ -292,6 +292,10 @@ rm.recipes[333] = {
 		skill = 300,
 		teaches = 23804,
 	},
+	[16251] = {
+		skill = 300,
+		teaches = 20011,
+	},
 	[20756] = {
 		repFaction = 270,
 		repLevel = "Honored",
@@ -302,25 +306,37 @@ rm.recipes[333] = {
 		skill = 300,
 		teaches = 22749,
 	},
-	[16251] = {
-		skill = 300,
-		teaches = 20011,
-	},
-	[20731] = {
-		skill = 300,
-		teaches = 25080,
-	},
 	[20757] = {
 		repFaction = 270,
 		repLevel = "Friendly",
 		skill = 300,
 		teaches = 20748,
 	},
+	[20731] = {
+		skill = 300,
+		teaches = 25080,
+	},
 	[19447] = {
 		repFaction = 529,
 		repLevel = "Revered",
 		skill = 300,
 		teaches = 23802,
+	},
+	[16250] = {
+		skill = 300,
+		teaches = 20031,
+	},
+	[19448] = {
+		skill = 300,
+		teaches = 23803,
+	},
+	[16249] = {
+		skill = 300,
+		teaches = 20036,
+	},
+	[20729] = {
+		skill = 300,
+		teaches = 25078,
 	},
 	[18260] = {
 		skill = 300,
@@ -330,14 +346,6 @@ rm.recipes[333] = {
 		skill = 300,
 		teaches = 25079,
 	},
-	[19448] = {
-		skill = 300,
-		teaches = 23803,
-	},
-	[16250] = {
-		skill = 300,
-		teaches = 20031,
-	},
 	[16254] = {
 		skill = 300,
 		teaches = 20032,
@@ -346,31 +354,13 @@ rm.recipes[333] = {
 		skill = 300,
 		teaches = 25073,
 	},
-	[16249] = {
+	[20734] = {
 		skill = 300,
-		teaches = 20036,
-	},
-	[20732] = {
-		repFaction = 609,
-		repLevel = "Friendly",
-		skill = 300,
-		teaches = 25081,
-	},
-	[20729] = {
-		skill = 300,
-		teaches = 25078,
-	},
-	[20728] = {
-		skill = 300,
-		teaches = 25074,
+		teaches = 25083,
 	},
 	[20736] = {
 		skill = 300,
 		teaches = 25086,
-	},
-	[20734] = {
-		skill = 300,
-		teaches = 25083,
 	},
 	[20733] = {
 		repFaction = 609,
@@ -378,16 +368,26 @@ rm.recipes[333] = {
 		skill = 300,
 		teaches = 25082,
 	},
+	[16255] = {
+		skill = 300,
+		teaches = 20035,
+	},
+	[20728] = {
+		skill = 300,
+		teaches = 25074,
+	},
 	[20735] = {
 		skill = 300,
 		teaches = 25084,
 	},
+	[20732] = {
+		repFaction = 609,
+		repLevel = "Friendly",
+		skill = 300,
+		teaches = 25081,
+	},
 	[20726] = {
 		skill = 300,
 		teaches = 25072,
-	},
-	[16255] = {
-		skill = 300,
-		teaches = 20035,
 	},
 }
