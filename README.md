@@ -1,7 +1,7 @@
 # Recipe Master
 [![CF](https://img.shields.io/badge/Download-CurseForge-orange)](https://www.curseforge.com/wow/addons/recipe-master) [![WowInterface](https://img.shields.io/badge/Download-WoWInterface%20(Vanilla)-blue)](https://www.wowinterface.com/downloads/info26701-RecipeMasterVanilla.html)
 
-![Main Window](/Images/Main%20Window.jpg)
+![Main Window](/Images/Main_Window.jpg)
 
 ## Features
 * Complete Recipe Catalog:\
