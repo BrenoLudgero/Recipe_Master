@@ -63,7 +63,7 @@ function rm.getRequirementsText(recipe, recipeInfo)
         missingRequirements = missingRequirements..reputationInfo
     end
     if missingRequirements ~= "" then
-        recipeInfo:SetText(missingRequirements:gsub("(%s%s)(%a)", ", %2")) -- Replaces all "  " with ", " when followed by a character
+        recipeInfo:SetText(missingRequirements:gsub("(%s%s)(%C)", ", %2")) -- Replaces all "  " with ", " when followed by a character
         recipeInfo:SetTextColor(unpack(F.colors.red))
     else
         recipeInfo:SetText(L.canLearn)
