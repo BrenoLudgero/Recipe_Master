@@ -11,7 +11,7 @@
 * Class, Specialization, Faction and Season:\
   Displayed recipes are always compatible with your character's unique attributes and the current season.
 * Localization:\
-  Recipe Master is compatible and localized to all available languages.
+  Recipe Master is localized and compatible with all available languages.
 
 ## Functionalities
 * Shift + Left-Click a recipe icon to create a chat link
