@@ -198,21 +198,21 @@ function rm.updateSortOrderOnClick(button, texture)
 end
 
 local function handleRecipesTab(tab)
-    if tab.label == L.recipesTab then
+    if tab.label == L.recipes then
         rm.showRecipeFrameElements()
         rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
     end
 end
 
 local function handleDetailsTab(tab)
-    if tab.label == L.recipeDetailsTab then
+    if tab.label == L.details then
         rm.showDetailsTabElements()
         rm.showCenteredText(L.comingSoon, F.colors.green)
     end
 end
 
 local function handleFishingTab(tab)
-    if tab.label == L.fishingTab then
+    if tab.label == L.fishing then
         rm.showRecipeFrameElements()
         if not rm.getSavedProfessionByID(356) then
             rm.hideRecipeFrameElements()

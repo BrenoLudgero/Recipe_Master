@@ -21,7 +21,7 @@ function rm.createBorder(parent)
     local buttonHeight = button:GetHeight()
     border:SetPoint("TOPLEFT", parent, 2.5, 0)
     border:SetPoint("BOTTOMRIGHT", parent, 0, 2)
-    rm.setUpButtonWithTooltip(button, buttonWidth, buttonHeight, L.hideWindowTooltip, function(button, button, down)
+    rm.setUpButtonWithTooltip(button, buttonWidth, buttonHeight, L.hideWindow, function(button, button, down)
         rm.autoOpenRecipesFrame = false
         rm.restoreButton:Show()
         rm.mainFrame:Hide()
