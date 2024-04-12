@@ -49,6 +49,7 @@ Source/Handlers/ProfessionHandler.lua
 Source/Handlers/SkillHandler.lua
 Source/Handlers/ReputationHandler.lua
 Source/Handlers/RecipeHandler.lua
+Source/Handlers/TooltipHandler.lua
 Source/Handlers/FrameHandler.lua
 
 Source/Interface/MainFrameSetup.lua

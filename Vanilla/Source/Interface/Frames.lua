@@ -44,7 +44,7 @@ function rm.createAllFrames()
     local headerTitle = rm.createHeaderText(rm.header)
     local mainFrameInnerBorder = rm.createInnerBorder(rm.mainFrame)
     rm.progressContainer = rm.createProgressContainer(rm.mainFrame)
-    rm.divider = rm.createDivider(rm.progressContainer) -- The frame containing searchBar and sortBar
+    rm.divider = rm.createDivider(rm.progressContainer) -- The background frame containing searchBar and sortBar
     rm.scrollFrame = rm.createScrollFrame(rm.mainFrame)
     rm.recipeContainer = rm.createRecipeContainerFrame(rm.scrollFrame)
     rm.scrollFrame:SetScrollChild(rm.recipeContainer)

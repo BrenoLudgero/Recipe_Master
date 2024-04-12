@@ -23,16 +23,45 @@ end
 local function isRecipeForCurrentSpecialization(recipe)
     local professionID = rm.getProfessionID(rm.displayedProfession)
     local professionSpecialization = rm.getSavedSpecializationByID(professionID)
-    return not recipe.specialization or not professionSpecialization or (professionSpecialization == recipe.specialization)
+    return (
+        not recipe.specialization 
+        or not professionSpecialization 
+        or (professionSpecialization == recipe.specialization)
+    )
 end
 
 function rm.isRecipeAvailableForCharacter(recipe)
-    return isRecipeForCurrentSeason(recipe) and isRecipeForCurrentClass(recipe) and isRecipeForCurrentSpecialization(recipe)
+    return (
+        isRecipeForCurrentSeason(recipe) 
+        and isRecipeForCurrentClass(recipe) 
+        and isRecipeForCurrentSpecialization(recipe)
+    )
+end
+
+local function isRankupRecipe(recipe)
+    return type(recipe.teaches) == "string"
+end
+
+function rm.getAllCharactersRecipeStatus(recipe, professionID)
+    local characters = rm.getCharactersSkillsForProfession(professionID)
+    local charactersMissingRecipeSkill = {}
+    local charactersWithRecipeSkill = {}
+    for character in pairs(characters) do
+        local characterProfession = characters[character][professionID]
+        if character ~= rm.currentCharacter and not isRankupRecipe(recipe) and characterProfession then
+            if not rm.tableContains(characterProfession, recipe.teaches) then
+                table.insert(charactersMissingRecipeSkill, character)
+            else
+                table.insert(charactersWithRecipeSkill, character)
+            end
+        end
+    end
+    return charactersMissingRecipeSkill, charactersWithRecipeSkill
 end
 
 -- Identifies all rankup recipes that teach a rank equal to or lower than the current profession rank
 local function isLearnedRankupRecipe(recipe, professionRank)
-    if type(recipe.teaches) == "string" then
+    if isRankupRecipe(recipe) then
         local rankOrder = {Apprentice = 1, Journeyman = 2, Expert = 3, Artisan = 4}
         return rankOrder[recipe.teaches] <= rankOrder[professionRank]
     end
@@ -51,7 +80,7 @@ function rm.isMissingRecipeOfCurrentFaction(recipe)
     return not recipe.faction or (recipe.faction == characterFaction)
 end
 
--- Comparing recipe.profession with displayedProfession caused Engineering recipes to not display in Korean during testing
+-- Removing spaces is required for Engineering and Leatherworking in Korean
 function rm.isRecipeForDisplayedProfession(recipe)
     return rm.removeSpaces(recipe.profession) == rm.removeSpaces(rm.displayedProfession)
 end
@@ -68,18 +97,22 @@ local function getMiningIcon(recipeID)
 end
 
 -- Recipes that return a profession name different than the profession's display name for some languages
-local function handleMismatchedProfessionNames(profession)
-    if rm.displayedProfession == "Наложение чар" and profession == "Зачаровывание" then
-        return rm.displayedProfession
-    elseif rm.displayedProfession == "Costura" and profession == "Sastrería" then
-        return rm.displayedProfession
+function rm.handleMismatchedProfessionNames(professionName)
+    if professionName == "가죽세공" then
+        return "가죽 세공"
+    elseif professionName == "기계 공학" then
+        return "기계공학"
+    elseif professionName == "Зачаровывание" then
+        return "Наложение чар"
+    elseif professionName == "Sastrería" and rm.locale == "esES" then
+        return "Costura"
     end
-    return profession
+    return professionName
 end
 
 local function getAdditionalRecipeData(id)
    local name, link, quality, _, _, _, profession, _, _, texture = C_Item.GetItemInfo(id)
-   profession = handleMismatchedProfessionNames(profession)
+   profession = rm.handleMismatchedProfessionNames(profession)
     if isMiningSkill(id) then
        name = GetSpellInfo(id)
        link = "|cff71d5ff|Hspell:"..id.."|h["..name.."]|h|r"
@@ -87,7 +120,7 @@ local function getAdditionalRecipeData(id)
        texture = getMiningIcon(id)
     end
     if quality then -- Avoids an error when Mining is the first profession window opened
-        return rm.removeRecipePrefix(name), link, quality, profession, texture
+        return rm.removeRecipePrefix(name, true), link, quality, profession, texture
     end
 end
 

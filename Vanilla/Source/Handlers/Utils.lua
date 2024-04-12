@@ -17,12 +17,21 @@ local function capitalizeName(string)
     end
 end
 
-function rm.removeRecipePrefix(recipeName)
+function rm.removeRecipePrefix(recipeName, capitalize)
     for _, prefix in pairs(L.recipePrefixes) do
         if recipeName:sub(1, #prefix) == prefix then
             local strippedName = recipeName:sub(#prefix + 1)
-            return capitalizeName(strippedName) or strippedName
+            if capitalize then
+                return capitalizeName(strippedName) or strippedName
+            end
+            return strippedName
         end
     end
     return recipeName
+end
+
+function rm.getIdFromItemLink(link)
+    local strippedLink = select(2, strsplit(":", link))
+    local id = tonumber(string.match(strippedLink, "%d+")) -- Extract only numerical part
+    return id
 end

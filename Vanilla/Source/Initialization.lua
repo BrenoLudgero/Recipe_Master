@@ -3,7 +3,7 @@ local addonName, rm = ...
 rm.frame = CreateFrame("Frame")
 rm.version = GetAddOnMetadata(addonName, "Version")
 rm.author = GetAddOnMetadata(addonName, "Author")
-rm.character = UnitName("player")
+rm.currentCharacter = UnitName("player")
 rm.locale = GetLocale()
 rm.server = GetRealmName()
 rm.recipes = {}
@@ -90,8 +90,8 @@ function rm.updateSavedCharacters()
     if not RecipeMasterProfessionsAndSkills[rm.server] then
         RecipeMasterProfessionsAndSkills[rm.server] = {}
     end
-    if not RecipeMasterProfessionsAndSkills[rm.server][rm.character] then
-        RecipeMasterProfessionsAndSkills[rm.server][rm.character] = {}
+    if not RecipeMasterProfessionsAndSkills[rm.server][rm.currentCharacter] then
+        RecipeMasterProfessionsAndSkills[rm.server][rm.currentCharacter] = {}
     end
 end
 

@@ -12,23 +12,36 @@ function rm.getSavedProfessionLevelByName(profession)
     return rm.getSavedProfessionByName(profession)["level"]
 end
 
+function rm.getCharactersSkillsForProfession(professionID)
+    local characters = {}
+    for character in pairs(rm.getSavedVariablesForServer()) do
+        characters[character] = {}
+        characters[character][professionID] = {}
+        if rm.getSavedVariablesForServer()[character][professionID] then
+            characters[character][professionID] = rm.getSavedVariablesForServer()[character][professionID]["skills"]
+        else
+            characters[character][professionID] = false
+        end
+    end
+    return characters
+end
+
+local function getSkillID(i, getItemLinkFunction)
+    local itemLink = getItemLinkFunction(i)
+    if itemLink then
+        local skillID = rm.getIdFromItemLink(itemLink)
+        return skillID
+    end
+end
+
 local function skillNotSavedYet(skillLineID, skillID)
-    --      Profession exists in savedVariables  and     the skill is not saved yet
+    --      Profession exists in SavedVariables       the skill was not found in SavedVariables
     return rm.getSavedProfessionByID(skillLineID) and not rm.tableContains(getSavedSkillsByProfessionID(skillLineID), skillID)
 end
 
 local function saveNewSkill(skillLineID, skillID)
     if skillNotSavedYet(skillLineID, skillID) then
         table.insert(getSavedSkillsByProfessionID(skillLineID), skillID)
-    end
-end
-
-local function getSkillID(i, getItemLinkFunction)
-    local itemLink = getItemLinkFunction(i)
-    if itemLink then
-        local _, splitLink = strsplit(":", itemLink)
-        local skillID = tonumber(string.match(splitLink, "%d+")) -- Extract only numerical part
-        return skillID
     end
 end
 

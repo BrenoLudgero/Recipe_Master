@@ -20,8 +20,12 @@ function rm.tableContains(table, item)
     return false
 end
 
+function rm.getSavedVariablesForServer()
+    return RecipeMasterProfessionsAndSkills[rm.server]
+end
+
 function rm.getCharacterSavedVariables()
-    return RecipeMasterProfessionsAndSkills[rm.server][rm.character]
+    return rm.getSavedVariablesForServer()[rm.currentCharacter]
 end
 
 function rm.getProfessionID(professionName)
