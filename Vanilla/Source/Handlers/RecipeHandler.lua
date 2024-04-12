@@ -6,17 +6,8 @@ local function isRecipeForCurrentClass(recipe)
     return not recipe.class or (string.upper(recipe.class) == characterClass)
 end
 
-local function getSeason()
-    local season = C_Seasons.GetActiveSeason()
-    local seasonName = {
-        [Enum.SeasonID.SeasonOfMastery] = "SoM",
-        [Enum.SeasonID.SeasonOfDiscovery] = "SoD"
-    }
-    return seasonName[season]
-end
-
 local function isRecipeForCurrentSeason(recipe)
-    local serverSeason = getSeason()
+    local serverSeason = rm.getSeason()
     return not recipe.season or (recipe.season == serverSeason)
 end
 

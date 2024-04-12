@@ -1,7 +1,9 @@
 local _, rm = ...
 
 function rm.getSavedSpecializationByID(professionID)
-    return rm.getCharacterSavedVariables()[professionID]["specialization"]
+    if rm.getCharacterSavedVariables()[professionID] then -- Avoids an error when unlearning a profession
+        return rm.getCharacterSavedVariables()[professionID]["specialization"]
+    end
 end
 
 function rm.getSavedSpecializationByName(profession)

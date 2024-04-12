@@ -31,3 +31,12 @@ end
 function rm.getProfessionID(professionName)
     return tInvert(L.professionNames)[professionName]
 end
+
+function rm.getSeason()
+    local season = C_Seasons.GetActiveSeason()
+    local seasonNames = {
+        [Enum.SeasonID.SeasonOfMastery] = "SoM",
+        [Enum.SeasonID.SeasonOfDiscovery] = "SoD"
+    }
+    return seasonNames[season]
+end

@@ -51,13 +51,44 @@ local function compareRecipes(a, b)
     end
 end
 
-local function sortRecipes(professionRecipes)
-    local sortedRecipes = {}
+local function splitSeasonalRecipes(professionRecipes)
+    local sodRecipes = {}
+    local regularRecipes = {}
     for _, recipe in pairs(professionRecipes) do
-        table.insert(sortedRecipes, recipe)
+        if recipe.season then
+            table.insert(sodRecipes, recipe)
+        else
+            table.insert(regularRecipes, recipe)
+        end
     end
-    table.sort(sortedRecipes, compareRecipes)
-    return sortedRecipes
+    return sodRecipes, regularRecipes
+end
+
+local function insertNonDuplicateRecipe(recipe, sodRecipes)
+    local sameName = false
+    for _, sodRecipe in pairs(sodRecipes) do
+        if recipe.name == sodRecipe.name then
+            sameName = true
+            break
+        end
+    end
+    if not sameName then
+        table.insert(sodRecipes, recipe)
+    end
+end
+
+local function sortRecipes(professionRecipes)
+    local season = rm.getSeason()
+    local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
+    if season == "SoD" then
+        for _, recipe in pairs(regularRecipes) do
+            insertNonDuplicateRecipe(recipe, sodRecipes)
+        end
+        table.sort(sodRecipes, compareRecipes)
+        return sodRecipes
+    end
+    table.sort(regularRecipes, compareRecipes)
+    return regularRecipes
 end
 
 local function populateAllRecipeRows(professionRecipes)
