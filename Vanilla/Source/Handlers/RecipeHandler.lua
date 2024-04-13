@@ -30,7 +30,14 @@ function rm.isRecipeAvailableForCharacter(recipe)
 end
 
 local function isRankupRecipe(recipe)
-    return type(recipe.teaches) == "string"
+    return type(recipe.teachedSpell) == "string"
+end
+
+local function isSkillLearnedByCharacter(characterSkills, recipe)
+    return (
+        rm.tableContains(characterSkills, recipe.teachedItem)
+        or rm.tableContains(characterSkills, recipe.teachedSpell)
+    )
 end
 
 function rm.getAllCharactersRecipeStatus(recipe, professionID)
@@ -38,9 +45,9 @@ function rm.getAllCharactersRecipeStatus(recipe, professionID)
     local charactersMissingRecipeSkill = {}
     local charactersWithRecipeSkill = {}
     for character in pairs(characters) do
-        local characterProfession = characters[character][professionID]
-        if character ~= rm.currentCharacter and not isRankupRecipe(recipe) and characterProfession then
-            if not rm.tableContains(characterProfession, recipe.teaches) then
+        local characterSkills = characters[character][professionID]
+        if character ~= rm.currentCharacter and not isRankupRecipe(recipe) and characterSkills then
+            if not isSkillLearnedByCharacter(characterSkills, recipe) then
                 table.insert(charactersMissingRecipeSkill, character)
             else
                 table.insert(charactersWithRecipeSkill, character)
@@ -54,7 +61,7 @@ end
 local function isLearnedRankupRecipe(recipe, professionRank)
     if isRankupRecipe(recipe) then
         local rankOrder = {Apprentice = 1, Journeyman = 2, Expert = 3, Artisan = 4}
-        return rankOrder[recipe.teaches] <= rankOrder[professionRank]
+        return rankOrder[recipe.teachedSpell] <= rankOrder[professionRank]
     end
     return false
 end
@@ -62,7 +69,7 @@ end
 function rm.isLearnedRecipe(recipe)
     local learnedSkills = rm.getSavedSkillsByProfessionName(rm.displayedProfession)
     local professionRank = rm.getSavedProfessionRank(rm.displayedProfession)
-    local isLearnedRecipe = rm.tableContains(learnedSkills, recipe.teaches)
+    local isLearnedRecipe = isSkillLearnedByCharacter(learnedSkills, recipe)
     return isLearnedRecipe or isLearnedRankupRecipe(recipe, professionRank)
 end
 
@@ -74,17 +81,6 @@ end
 -- Removing spaces is required for Engineering and Leatherworking in Korean
 function rm.isRecipeForDisplayedProfession(recipe)
     return rm.removeSpaces(recipe.profession) == rm.removeSpaces(rm.displayedProfession)
-end
-
-local function isMiningSkill(recipeID)
-    return recipeID == 14891 or recipeID == 22967
-end
-
-local function getMiningIcon(recipeID)
-    if recipeID == 14891 then
-        return 133233
-    end
-    return 133235
 end
 
 -- Recipes that return a profession name different than the profession's display name for some languages
@@ -101,6 +97,10 @@ function rm.handleMismatchedProfessionNames(professionName)
     return professionName
 end
 
+local function isMiningSkill(recipeID)
+    return recipeID == 14891 or recipeID == 22967
+end
+
 local function getAdditionalRecipeData(id)
    local name, link, quality, _, _, _, profession, _, _, texture = C_Item.GetItemInfo(id)
    profession = rm.handleMismatchedProfessionNames(profession)
@@ -108,7 +108,7 @@ local function getAdditionalRecipeData(id)
        name = GetSpellInfo(id)
        link = "|cff71d5ff|Hspell:"..id.."|h["..name.."]|h|r"
        profession = L.professionNames[186]
-       texture = getMiningIcon(id)
+       texture = rm.recipes[186][id].icon
     end
     if quality then -- Avoids an error when Mining is the first profession window opened
         return rm.removeRecipePrefix(name, true), link, quality, profession, texture
@@ -129,9 +129,10 @@ local function saveRecipeData(recipeID, recipeData)
         repLevel = recipeData["repLevel"], 
         season = recipeData["season"], 
         skill = recipeData["skill"], 
-        texture = rTexture,
         specialization = recipeData["specialization"], 
-        teaches = recipeData["teaches"]
+        teachedItem = recipeData["teachedItem"], 
+        teachedSpell = recipeData["teachedSpell"], 
+        texture = rTexture
     }
 end
 
