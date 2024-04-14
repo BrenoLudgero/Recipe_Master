@@ -43,7 +43,7 @@ function rm.getAllProfessionsSpecialization()
 end
 
 -- Saves all current professions' specializations if any
-function rm.saveProfessionsSpecializations(currentSpecializations)
+function rm.saveNewProfessionsSpecializations(currentSpecializations)
     for professionID, specializationID in pairs(currentSpecializations) do
         if not rm.getSavedSpecializationByID(professionID) then
             rm.getSavedProfessionByID(professionID)["specialization"] = specializationID

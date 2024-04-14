@@ -13,27 +13,30 @@ function rm.getSavedProfessionRank(profession)
     return rm.getSavedProfessionByName(profession)["rank"]
 end
 
-local function getRankName(skillMaxRank)
-    if skillMaxRank > 225 then
+function rm.getSavedProfessionLevelByName(profession)
+    return rm.getSavedProfessionByName(profession)["level"]
+end
+
+local function getRankName(maxSkillRank)
+    if maxSkillRank > 225 then
         return "Artisan"
-    elseif skillMaxRank > 150 then
+    elseif maxSkillRank > 150 then
         return "Expert"
-    elseif skillMaxRank > 75 then
+    elseif maxSkillRank > 75 then
         return "Journeyman"
     end
     return "Apprentice"
 end
 
-local function storeLearnedProfession(currentProfessions, skillName, skillRank, skillMaxRank)
-    for professionID, professionName in pairs(L.professionNames) do
-        if professionName == skillName then
-            currentProfessions[professionID] = {
-                ["level"] = skillRank,
-                ["rank"] = getRankName(skillMaxRank),
-                ["skills"] = {},
-                ["specialization"] = false
-            }
-        end
+local function storeLearnedProfession(currentProfessions, skillName, skillRank, maxSkillRank)
+    local professionID = rm.getProfessionID(skillName)
+    if professionID then
+        currentProfessions[professionID] = {
+            ["level"] = skillRank,
+            ["rank"] = getRankName(maxSkillRank),
+            ["skills"] = {},
+            ["specialization"] = false
+        }
     end
 end
 
@@ -42,16 +45,14 @@ local function getAllLearnedProfessions()
     local currentProfessions = {}
     local numSkillLines = GetNumSkillLines()
     for i = 1, numSkillLines do
-        local skillName, _, _, skillRank, _, _, skillMaxRank = GetSkillLineInfo(i)
-        if rm.getProfessionID(skillName) then
-            storeLearnedProfession(currentProfessions, skillName, skillRank, skillMaxRank)
-        end
+        local skillName, _, _, skillRank, _, _, maxSkillRank = GetSkillLineInfo(i)
+        storeLearnedProfession(currentProfessions, skillName, skillRank, maxSkillRank)
     end
     return currentProfessions
 end
 
 -- Stores the character's current professions in SavedVariables if not saved yet
-local function saveCharacterProfessions(currentProfessions)
+local function saveNewCharacterProfessions(currentProfessions)
     for professionID in pairs(currentProfessions) do
         if not rm.getSavedProfessionByID(professionID) then
             rm.getCharacterSavedVariables()[professionID] = currentProfessions[professionID]
@@ -70,11 +71,32 @@ local function removeAbandonedProfession(currentProfessions, professionID)
     end
 end
 
+local function updateSavedProfessions(currentProfessions)
+    for professionID, professionData in pairs(currentProfessions) do
+        local professionLevel = professionData["level"]
+        local savedProfessionLevel = rm.getSavedProfessionByID(professionID)["level"]
+        local professionRank = professionData["rank"]
+        local savedProfessionRank = rm.getSavedProfessionByID(professionID)["rank"]
+        local professionSpecialization = professionData["specialization"]
+        local savedProfessionSpecialization = rm.getSavedSpecializationByID(professionID)
+        if professionLevel ~= savedProfessionLevel then
+            rm.getCharacterSavedVariables()[professionID]["level"] = professionLevel
+        elseif professionRank ~= savedProfessionRank then
+            rm.getCharacterSavedVariables()[professionID]["rank"] = professionRank
+        elseif professionSpecialization and professionSpecialization ~= savedProfessionSpecialization then
+            rm.getCharacterSavedVariables()[professionID]["specialization"] = savedProfessionSpecialization
+        elseif isProfessionAbandoned(currentProfessions, professionID) then
+            rm.getCharacterSavedVariables()[professionID] = nil
+        end
+    end
+end
+
 function rm.updateCharacterProfessions()
     local currentProfessions = getAllLearnedProfessions()
     local currentSpecializations = rm.getAllProfessionsSpecialization()
-    saveCharacterProfessions(currentProfessions)
-    rm.saveProfessionsSpecializations(currentSpecializations)
+    saveNewCharacterProfessions(currentProfessions)
+    rm.saveNewProfessionsSpecializations(currentSpecializations)
+    updateSavedProfessions(currentProfessions)
     for professionID in pairs(rm.getCharacterSavedVariables()) do
         removeAbandonedProfession(currentProfessions, professionID)
         rm.removeAbandonedSpecialization(currentSpecializations, professionID)

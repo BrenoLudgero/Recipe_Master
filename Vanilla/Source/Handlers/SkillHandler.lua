@@ -8,10 +8,6 @@ function rm.getSavedSkillsByProfessionName(profession)
     return rm.getSavedProfessionByName(profession)["skills"]
 end
 
-function rm.getSavedProfessionLevelByName(profession)
-    return rm.getSavedProfessionByName(profession)["level"]
-end
-
 function rm.getCharactersSkillsForProfession(professionID)
     local characters = {}
     for character in pairs(rm.getSavedVariablesForServer()) do

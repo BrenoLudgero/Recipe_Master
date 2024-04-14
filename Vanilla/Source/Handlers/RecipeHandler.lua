@@ -13,11 +13,11 @@ end
 
 local function isRecipeForCurrentSpecialization(recipe)
     local professionID = rm.getProfessionID(rm.displayedProfession)
-    local professionSpecialization = rm.getSavedSpecializationByID(professionID)
+    local currentSpecialization = rm.getSavedSpecializationByID(professionID)
     return (
         not recipe.specialization 
-        or not professionSpecialization 
-        or (professionSpecialization == recipe.specialization)
+        or not currentSpecialization 
+        or (currentSpecialization == recipe.specialization)
     )
 end
 
