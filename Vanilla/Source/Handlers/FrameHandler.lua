@@ -38,6 +38,16 @@ local function anchorFrameToProfessionWindow(professionFrame, yOffset)
     keepFrameHeightSameAsProfessionWindow(professionFrame, yOffset)
 end
 
+local function showRecipeTextureOnHideWindowButton()
+    local hideButton = rm.mainFrameBorder.CloseButton
+    hideButton:Disable(true)
+    hideButton:Hide()
+    local newTexture = rm.mainFrame:CreateTexture()
+    newTexture:SetPoint("CENTER", hideButton, -0.4, 0)
+    newTexture:SetSize(18, 18)
+    newTexture:SetTexture("Interface/Icons/INV_Scroll_11")
+end
+
 local function updateFramePositionAndHeightOnDrag(professionFrame, mainFrameWidth)
     rm.mainFrame:RegisterForDrag("LeftButton", "RightButton")
     rm.mainFrame:SetResizeBounds(mainFrameWidth, 296, mainFrameWidth, 700)
@@ -60,7 +70,6 @@ local function saveFramePositionOnDragStop(professionFrame)
 end
 
 local function setFrameMovableAndResizable(professionFrame, mainFrameWidth)
-    rm.mainFrameBorder.CloseButton:Disable(true)
     rm.mainFrame:SetSize(1, rm.getPreference("mainFrameHeight"))
     rm.mainFrame:ClearAllPoints()
     rm.mainFrame:SetPoint("TOPLEFT", professionFrame, unpack(rm.getPreference("mainFrameOffsets")))
@@ -82,6 +91,7 @@ local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidt
         F.sizes.headerTextureHeight = 40
     end
     if professionFrame == UIParent then -- TSM is enabled
+        showRecipeTextureOnHideWindowButton()
         setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     else
         anchorFrameToProfessionWindow(professionFrame, yOffset)

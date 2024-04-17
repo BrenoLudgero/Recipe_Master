@@ -16,7 +16,7 @@ end
 
 function rm.createBorder(parent)
     local border = CreateFrame("Frame", nil, parent, F.templates.mainFrameBorder)
-    local button = border.CloseButton
+    local button = border.CloseButton -- Hide window
     local buttonWidth = button:GetWidth()
     local buttonHeight = button:GetHeight()
     border:SetPoint("TOPLEFT", parent, 2.5, 0)
