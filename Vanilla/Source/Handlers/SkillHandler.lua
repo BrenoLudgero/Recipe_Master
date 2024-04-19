@@ -8,13 +8,13 @@ function rm.getSavedSkillsByProfessionName(profession)
     return rm.getSavedProfessionByName(profession)["skills"]
 end
 
-function rm.getCharactersSkillsForProfession(professionID)
+function rm.getProfessionSkillsForAllCharacters(professionID)
     local characters = {}
-    for character in pairs(rm.getSavedVariablesForServer()) do
+    for character in pairs(rm.getServerSavedVariables()) do
         characters[character] = {}
         characters[character][professionID] = {}
-        if rm.getSavedVariablesForServer()[character][professionID] then
-            characters[character][professionID] = rm.getSavedVariablesForServer()[character][professionID]["skills"]
+        if rm.getServerSavedVariables()[character][professionID] then
+            characters[character][professionID] = rm.getServerSavedVariables()[character][professionID]["skills"]
         else
             characters[character][professionID] = false
         end
@@ -22,10 +22,10 @@ function rm.getCharactersSkillsForProfession(professionID)
     return characters
 end
 
-local function getSkillID(i, getItemLinkFunction)
-    local itemLink = getItemLinkFunction(i)
+local function getSkillID(i, getItemLink)
+    local itemLink = getItemLink(i)
     if itemLink then
-        local skillID = rm.getIdFromItemLink(itemLink)
+        local skillID = rm.getIDFromLink(itemLink)
         return skillID
     end
 end
@@ -42,13 +42,13 @@ local function saveNewSkill(skillLineID, skillID)
 end
 
 -- Saves the ID of all the skills / crafts available for the profession
-function rm.saveNewTradeSkills(getNumSkillsFunction, getSkillInfoFunction, getItemLinkFunction)
-    local numSkills = getNumSkillsFunction()
+function rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
+    local numSkills = getNumSkills()
     local skillLineID = rm.getProfessionID(rm.displayedProfession) -- e.g. 202 (Engineering)
     for i = 1, numSkills do
-        local _, skillType, craftType = getSkillInfoFunction(i)
+        local _, skillType, craftType = getSkillInfo(i)
         if skillType ~= "header" and craftType ~= "header" then
-            local skillID = getSkillID(i, getItemLinkFunction)
+            local skillID = getSkillID(i, getItemLink)
             saveNewSkill(skillLineID, skillID)
         end
     end

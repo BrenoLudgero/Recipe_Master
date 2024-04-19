@@ -31,19 +31,19 @@ function rm.handleSkillChange(event)
 end
 
 -- Trade skills may not be available immediately after opening the profession window, hence the delays
-local function handleWindowOpened(getNumSkillsFunction, getSkillInfoFunction, getItemLinkFunction, getDisplaySkillLineFunction, event)
-    rm.displayedProfession = getDisplaySkillLineFunction() -- e.g. Engineering
+local function handleWindowOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill, event)
+    rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
     rm.lastDisplayedProfession = rm.displayedProfession -- Last profession displayed before opening the fishing tab
     if rm.getProfessionID(rm.displayedProfession) then
         if not isEventFirstOpen[event] then
-            C_Timer.After(0.04, function() rm.saveNewTradeSkills(getNumSkillsFunction, getSkillInfoFunction, getItemLinkFunction) end)
-            C_Timer.After(0.1, function() rm.showRecipesFrame(getNumSkillsFunction, getSkillInfoFunction) end)
+            C_Timer.After(0.04, function() rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink) end)
+            C_Timer.After(0.1, function() rm.showRecipesFrame(getNumSkills, getSkillInfo) end)
             return
         end
         -- This ensures that the trade skills are loaded, saved and displayed on the first time opening a profession window
         isEventFirstOpen[event] = false
-        C_Timer.After(0.04, function() rm.saveNewTradeSkills(getNumSkillsFunction, getSkillInfoFunction, getItemLinkFunction) end)
-        C_Timer.After(0.1, function() rm.showRecipesFrame(getNumSkillsFunction, getSkillInfoFunction) end)
+        C_Timer.After(0.04, function() rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink) end)
+        C_Timer.After(0.1, function() rm.showRecipesFrame(getNumSkills, getSkillInfo) end)
         C_Timer.After(0.11, rm.clearWindowContent)
         C_Timer.After(0.19, function () rm.showRecipesForSpecificProfession(rm.displayedProfession) end)
         C_Timer.After(0.2, rm.updateProgressBar)

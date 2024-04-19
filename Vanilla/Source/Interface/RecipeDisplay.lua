@@ -111,8 +111,8 @@ local function showAllRecipeRows()
     end
 end
 
-function rm.showProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
-    local professionRecipes = rm.getAllProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
+function rm.showProfessionRecipes(getNumSkills, getSkillInfo)
+    local professionRecipes = rm.getAllProfessionRecipes(getNumSkills, getSkillInfo)
     populateAllRecipeRows(professionRecipes)
     showAllRecipeRows()
 end

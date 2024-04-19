@@ -30,8 +30,8 @@ function rm.removeRecipePrefix(recipeName, capitalize)
     return recipeName
 end
 
-function rm.getIdFromItemLink(link)
+function rm.getIDFromLink(link)
     local strippedLink = select(2, strsplit(":", link))
-    local id = tonumber(string.match(strippedLink, "%d+")) -- Extract only numerical part
-    return id
+    local ID = tonumber(string.match(strippedLink, "%d+")) -- Extracts only numerical part
+    return ID
 end

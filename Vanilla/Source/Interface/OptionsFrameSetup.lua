@@ -64,7 +64,7 @@ function rm.toggleCheckButtonPreferenceOnClick(button, preference)
     end)
 end
 
-function rm.resetSavedVariablesOnClick(resetDefaultsButton, options)
+function rm.resetSavedOptionsOnClick(resetDefaultsButton, options)
     resetDefaultsButton:SetScript("OnClick", function(self)
         rm.resetOptionsWindowPreferences()
         local opacity = rm.getPreference("backgroundOpacity")

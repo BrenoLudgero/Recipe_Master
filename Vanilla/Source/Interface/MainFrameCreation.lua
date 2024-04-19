@@ -258,13 +258,13 @@ function rm.createRecipeRow(recipe, color, desaturateIcon)
     local rowIcon = createRowIcon(recipe, yOffset)
     rowIcon:SetDesaturated(desaturateIcon)
     local recipeNameText = createRowText(recipe, rowIcon, color)
-    local recipeTextWidth = recipeNameText:GetWidth()
+    local recipeNameWidth = recipeNameText:GetWidth()
     local recipeInfoWidth
     if recipeNameText.aditionalInfo then
         recipeInfoText = recipeNameText.aditionalInfo
         recipeInfoWidth = recipeInfoText:GetWidth()
     end
-    rm.storeWidestRecipeTextWidth(recipeTextWidth, recipeInfoWidth)
+    rm.storeWidestRecipeTextWidth(recipeNameWidth, recipeInfoWidth)
     rowIcon.associatedText = recipeNameText
     table.insert(rm.recipeContainer.children, rowIcon)
     rm.displayedRecipesCount = rm.displayedRecipesCount + 1

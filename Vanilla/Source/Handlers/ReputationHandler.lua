@@ -1,31 +1,31 @@
 local _, rm = ...
 
-function rm.getFactionReputationStanding(factionID)
-    local _, _, standingID = GetFactionInfoByID(factionID)
-    if standingID == 0 then
+local function getFactionReputationLevel(factionID)
+    local _, _, level = GetFactionInfoByID(factionID)
+    if level == 0 then
         return "Unknown"
-    elseif standingID == 1 then
+    elseif level == 1 then
         return "Hated"
-    elseif standingID == 2 then
+    elseif level == 2 then
         return "Hostile"
-    elseif standingID == 3 then
+    elseif level == 3 then
         return "Unfriendly"
-    elseif standingID == 4 then
+    elseif level == 4 then
         return "Neutral"
-    elseif standingID == 5 then
+    elseif level == 5 then
         return "Friendly"
-    elseif standingID == 6 then
+    elseif level == 6 then
         return "Honored"
-    elseif standingID == 7 then
+    elseif level == 7 then
         return "Revered"
-    elseif standingID == 8 then
+    elseif level == 8 then
         return "Exalted"
     end
 end
 
 function rm.isReputationRequirementMet(recipe)
     local factionID = recipe.repFaction
-    local currentRepLevel = rm.getFactionReputationStanding(factionID)
+    local currentRepLevel = getFactionReputationLevel(factionID)
     local standOrder = {
         Unknown = 0, 
         Hated = 1, 

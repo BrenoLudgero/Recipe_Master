@@ -144,6 +144,6 @@ function rm.createResetDefaultsButton(options)
     button:SetText(L.resetDefaults)
     button:SetSize(140, 35)
     button:SetPoint("TOPLEFT", F.offsets.resetDefaultsX, F.offsets.resetDefaultsY)
-    rm.resetSavedVariablesOnClick(button, options)
+    rm.resetSavedOptionsOnClick(button, options)
     return button
 end

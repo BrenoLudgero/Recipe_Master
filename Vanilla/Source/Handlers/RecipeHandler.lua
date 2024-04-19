@@ -1,14 +1,14 @@
 local _, rm = ...
 local L = rm.L
 
-local function isRecipeForCurrentClass(recipe)
-    local _, characterClass = UnitClass("player") -- Always in English and upper case
-    return not recipe.class or (string.upper(recipe.class) == characterClass)
-end
-
 local function isRecipeForCurrentSeason(recipe)
     local serverSeason = rm.getSeason()
     return not recipe.season or (recipe.season == serverSeason)
+end
+
+local function isRecipeForCurrentClass(recipe)
+    local _, characterClass = UnitClass("player") -- Always in English and upper case
+    return not recipe.class or (string.upper(recipe.class) == characterClass)
 end
 
 local function isRecipeForCurrentSpecialization(recipe)
@@ -41,7 +41,7 @@ local function isSkillLearnedByCharacter(characterSkills, recipe)
 end
 
 function rm.getAllCharactersRecipeStatus(recipe, professionID)
-    local characters = rm.getCharactersSkillsForProfession(professionID)
+    local characters = rm.getProfessionSkillsForAllCharacters(professionID)
     local charactersMissingRecipeSkill = {}
     local charactersWithRecipeSkill = {}
     for character in pairs(characters) do
@@ -101,14 +101,14 @@ local function isMiningSkill(recipeID)
     return recipeID == 14891 or recipeID == 22967
 end
 
-local function getAdditionalRecipeData(id)
-   local name, link, quality, _, _, _, profession, _, _, texture = C_Item.GetItemInfo(id)
+local function getAdditionalRecipeData(ID)
+   local name, link, quality, _, _, _, profession, _, _, texture = C_Item.GetItemInfo(ID)
    profession = rm.handleMismatchedProfessionNames(profession)
-    if isMiningSkill(id) then
-       name = GetSpellInfo(id)
-       link = "|cff71d5ff|Hspell:"..id.."|h["..name.."]|h|r"
+    if isMiningSkill(ID) then
+       name = GetSpellInfo(ID)
+       link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
        profession = L.professionNames[186]
-       texture = rm.recipes[186][id].icon
+       texture = rm.recipes[186][ID].icon
     end
     if quality then -- Avoids an error when Mining is the first profession window opened
         return rm.removeRecipePrefix(name, true), link, quality, profession, texture
@@ -118,7 +118,6 @@ end
 local function saveRecipeData(recipeID, recipeData)
     local rName, rLink, rQuality, rProfession, rTexture = getAdditionalRecipeData(recipeID)
     return {
-        id = recipeID, 
         class = recipeData["class"], 
         faction = recipeData["faction"], 
         link = rLink,
@@ -140,7 +139,7 @@ end
 -- with each spell teached / item crafted by the recipes in RecipeDatabase
 function rm.getAllProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
     local professionRecipes = {}
-    local savedProfessionsAndSkills = rm.getCharacterSavedVariables()
+    local savedProfessionsAndSkills = rm.getCurrentCharacterSavedVariables()
     local numSkills = getNumSkillsFunction()
     for i = 1, numSkills do
         local _, skillType, craftType = getSkillInfoFunction(i)

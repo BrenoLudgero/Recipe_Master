@@ -55,7 +55,7 @@ local function oldPreferencesFound()
 end
 
 -- Detects if the old preferences exists ("RecipeMasterPreferences") and deletes it (1.0.3 -> 1.1.0)
--- Or creates tables to store the characters' learned skills and user preferences in SavedVariables
+-- or creates tables to store the characters' learned skills and user preferences in SavedVariables
 function rm.createSavedVariables()
     if oldPreferencesFound() then
         RecipeMasterPreferences = nil

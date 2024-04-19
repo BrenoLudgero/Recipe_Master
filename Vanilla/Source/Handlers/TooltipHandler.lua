@@ -51,7 +51,7 @@ end
 GameTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
     local itemName, itemLink = tooltip:GetItem()
     if itemName and isItemRecipe(itemName) then
-        local recipeID = rm.getIdFromItemLink(itemLink)
+        local recipeID = rm.getIDFromLink(itemLink)
         local professionName = select(7, C_Item.GetItemInfo(itemLink))
         professionName = rm.handleMismatchedProfessionNames(professionName)
         local professionID = rm.getProfessionID(professionName)

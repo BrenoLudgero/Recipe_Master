@@ -38,7 +38,7 @@ local function anchorFrameToProfessionWindow(professionFrame, yOffset)
     keepFrameHeightSameAsProfessionWindow(professionFrame, yOffset)
 end
 
-local function showRecipeTextureOnHideWindowButton()
+local function replaceHideWindowButtonWithRecipeTexture()
     local hideButton = rm.mainFrameBorder.CloseButton
     hideButton:Disable(true)
     hideButton:Hide()
@@ -91,7 +91,7 @@ local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidt
         F.sizes.headerTextureHeight = 40
     end
     if professionFrame == UIParent then -- TSM is enabled
-        showRecipeTextureOnHideWindowButton()
+        replaceHideWindowButtonWithRecipeTexture()
         setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     else
         anchorFrameToProfessionWindow(professionFrame, yOffset)
@@ -191,9 +191,9 @@ local function updateMainWidthBasedOnWidestRecipeName()
     end
 end
 
-function rm.updateRecipeDisplay(getNumSkillsFunction, getSkillInfoFunction)
+function rm.updateRecipeDisplay(getNumSkills, getSkillInfo)
     rm.clearWindowContent()
-    rm.showProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
+    rm.showProfessionRecipes(getNumSkills, getSkillInfo)
     updateMainWidthBasedOnWidestRecipeName()
     rm.updateProgressBar()
 end
@@ -207,7 +207,7 @@ function rm.activateTabAndDesaturateOthers(tab)
     tab.texture:SetDesaturated(false)
 end
 
-function rm.showRecipesFrame(getNumSkillsFunction, getSkillInfoFunction)
+function rm.showRecipesFrame(getNumSkills, getSkillInfo)
     if not rm.getProfessionFrame() then
         return
     end
@@ -215,7 +215,7 @@ function rm.showRecipesFrame(getNumSkillsFunction, getSkillInfoFunction)
     rm.showRecipeFrameElements()
     setParentDependentFramesPosition()
     rm.activateTabAndDesaturateOthers(rm.recipesTab)
-    rm.updateRecipeDisplay(getNumSkillsFunction, getSkillInfoFunction)
+    rm.updateRecipeDisplay(getNumSkills, getSkillInfo)
     if not rm.autoOpenRecipesFrame then
         rm.restoreButton:Show()
         return

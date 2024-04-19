@@ -1,13 +1,13 @@
 local _, rm = ...
 
 function rm.getSavedSpecializationByID(professionID)
-    if rm.getCharacterSavedVariables()[professionID] then -- Avoids an error when unlearning a profession
-        return rm.getCharacterSavedVariables()[professionID]["specialization"]
+    if rm.getCurrentCharacterSavedVariables()[professionID] then -- Avoids an error when unlearning a profession
+        return rm.getCurrentCharacterSavedVariables()[professionID]["specialization"]
     end
 end
 
 function rm.getSavedSpecializationByName(profession)
-    return rm.getCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"]
+    return rm.getCurrentCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"]
 end
 
 function rm.getSpecializationName(specializationID)
@@ -29,7 +29,7 @@ local function storeCurrentSpecializations(currentSpecializations, spellID)
     end
 end
 
-function rm.getAllProfessionsSpecialization()
+function rm.getAllSpecializations()
     local currentSpecializations = {}
     local numSpellTabs = GetNumSpellTabs()
     for i = 1, numSpellTabs do
@@ -42,8 +42,7 @@ function rm.getAllProfessionsSpecialization()
     return currentSpecializations
 end
 
--- Saves all current professions' specializations if any
-function rm.saveNewProfessionsSpecializations(currentSpecializations)
+function rm.saveNewSpecializations(currentSpecializations)
     for professionID, specializationID in pairs(currentSpecializations) do
         if not rm.getSavedSpecializationByID(professionID) then
             rm.getSavedProfessionByID(professionID)["specialization"] = specializationID
