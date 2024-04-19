@@ -22,7 +22,7 @@ local function getRecipeTooltipMessage(recipe, profession)
         end
     end
     if #charactersMissingRecipeSkill > 0 then
-        message = message..newLine..WrapTextInColorCode(L.missing, "FFFFB6C1") -- Light red
+        message = message..newLine..WrapTextInColorCode(L.unlearned, "FFFFB6C1") -- Light red
         for _, character in pairs(charactersMissingRecipeSkill) do
             local characterProfessionLevel = rm.getSavedProfessionLeveForCharacter(character, profession)
             message = message..newLineInfo..character.." ("..characterProfessionLevel..")"
