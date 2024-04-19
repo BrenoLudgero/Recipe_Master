@@ -17,6 +17,10 @@ function rm.getSavedProfessionLevelByName(profession)
     return rm.getSavedProfessionByName(profession)["level"]
 end
 
+function rm.getSavedProfessionLeveForCharacter(character, profession)
+    return rm.getSavedVariablesForServer()[character][profession]["level"]
+end
+
 local function getRankName(maxSkillRank)
     if maxSkillRank > 225 then
         return "Artisan"

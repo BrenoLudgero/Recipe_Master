@@ -24,7 +24,8 @@ local function getRecipeTooltipMessage(recipe, profession)
     if #charactersMissingRecipeSkill > 0 then
         message = message..newLine..WrapTextInColorCode(L.missing, "FFFFB6C1") -- Light red
         for _, character in pairs(charactersMissingRecipeSkill) do
-            message = message..newLineInfo..character
+            local characterProfessionLevel = rm.getSavedProfessionLeveForCharacter(character, profession)
+            message = message..newLineInfo..character.." ("..characterProfessionLevel..")"
         end
     end
     return rm.L.title..WrapTextInColorCode(message, "FFFFFFFF") -- White
@@ -32,7 +33,9 @@ end
 
 -- Ensures that the message is not displayed twice
 local function isTooltipMessageDisplayed(i, tooltip, message)
-    return string.find(_G[tooltip:GetName().."TextLeft"..i]:GetText(), message)
+    local lineText = _G[tooltip:GetName().."TextLeft"..i]:GetText()
+    lineText = lineText:gsub("^%s*(.-)%s*$", "%1") -- Removes blank spaces and new lines
+    return lineText == message
 end
 
 local function showTooltipMessage(tooltip, message)
