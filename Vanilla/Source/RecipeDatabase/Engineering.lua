@@ -6,15 +6,15 @@ rm.recipes[202] = {
 		teachedItem = 4401,
 		teachedSpell = 3928,
 	},
-	[6716] = {
-		skill = 100,
-		teachedItem = 6714,
-		teachedSpell = 8339,
-	},
 	[4409] = {
 		skill = 100,
 		teachedItem = 4367,
 		teachedSpell = 3933,
+	},
+	[6716] = {
+		skill = 100,
+		teachedItem = 6714,
+		teachedSpell = 8339,
 	},
 	[4410] = {
 		skill = 120,
@@ -26,15 +26,15 @@ rm.recipes[202] = {
 		teachedItem = 4372,
 		teachedSpell = 3939,
 	},
-	[4411] = {
-		skill = 125,
-		teachedItem = 4376,
-		teachedSpell = 3944,
-	},
 	[7560] = {
 		skill = 125,
 		teachedItem = 7506,
 		teachedSpell = 9269,
+	},
+	[4411] = {
+		skill = 125,
+		teachedItem = 4376,
+		teachedSpell = 3944,
 	},
 	[21726] = {
 		skill = 125,
@@ -67,6 +67,12 @@ rm.recipes[202] = {
 		teachedItem = 4383,
 		teachedSpell = 3954,
 	},
+	[18647] = {
+		faction = "Horde",
+		skill = 150,
+		teachedItem = 9318,
+		teachedSpell = 23066,
+	},
 	[18648] = {
 		skill = 150,
 		teachedItem = 9313,
@@ -77,12 +83,6 @@ rm.recipes[202] = {
 		skill = 150,
 		teachedItem = 9312,
 		teachedSpell = 23067,
-	},
-	[18647] = {
-		faction = "Horde",
-		skill = 150,
-		teachedItem = 9318,
-		teachedSpell = 23066,
 	},
 	[13308] = {
 		skill = 155,
@@ -109,6 +109,11 @@ rm.recipes[202] = {
 		teachedItem = 10499,
 		teachedSpell = 12587,
 	},
+	[21728] = {
+		skill = 175,
+		teachedItem = 21590,
+		teachedSpell = 26421,
+	},
 	[21727] = {
 		skill = 175,
 		teachedItem = 21589,
@@ -118,11 +123,6 @@ rm.recipes[202] = {
 		skill = 175,
 		teachedItem = 21592,
 		teachedSpell = 26422,
-	},
-	[21728] = {
-		skill = 175,
-		teachedItem = 21590,
-		teachedSpell = 26421,
 	},
 	[13310] = {
 		skill = 180,
@@ -164,16 +164,16 @@ rm.recipes[202] = {
 		teachedItem = 4396,
 		teachedSpell = 3969,
 	},
-	[18650] = {
-		skill = 200,
-		teachedItem = 18588,
-		teachedSpell = 23069,
-	},
 	[215429] = {
 		season = "SoD",
 		skill = 200,
 		teachedItem = 213383,
 		teachedSpell = 435956,
+	},
+	[18650] = {
+		skill = 200,
+		teachedItem = 18588,
+		teachedSpell = 23069,
 	},
 	[212230] = {
 		season = "SoD",
@@ -204,21 +204,16 @@ rm.recipes[202] = {
 		teachedItem = 11826,
 		teachedSpell = 15633,
 	},
-	[221339] = {
+	[221333] = {
 		season = "SoD",
 		skill = 205,
-		teachedItem = 7189,
-		teachedSpell = 8895,
+		teachedItem = 10726,
+		teachedSpell = 12907,
 	},
 	[11828] = {
 		skill = 205,
 		teachedItem = 11825,
 		teachedSpell = 15628,
-	},
-	[221337] = {
-		season = "SoD",
-		skill = 205,
-		teachedItem = 10577,
 	},
 	[221343] = {
 		season = "SoD",
@@ -226,23 +221,28 @@ rm.recipes[202] = {
 		teachedItem = 10588,
 		teachedSpell = 12758,
 	},
-	[221333] = {
-		season = "SoD",
-		skill = 205,
-		teachedItem = 10726,
-		teachedSpell = 12907,
-	},
-	[221329] = {
-		season = "SoD",
-		skill = 205,
-		teachedItem = 10720,
-		teachedSpell = 12902,
-	},
 	[221330] = {
 		season = "SoD",
 		skill = 205,
 		teachedItem = 10721,
 		teachedSpell = 12903,
+	},
+	[221336] = {
+		season = "SoD",
+		skill = 205,
+		teachedItem = 10542,
+		teachedSpell = 12717,
+	},
+	[221337] = {
+		season = "SoD",
+		skill = 205,
+		teachedItem = 10577,
+	},
+	[221339] = {
+		season = "SoD",
+		skill = 205,
+		teachedItem = 7189,
+		teachedSpell = 8895,
 	},
 	[221331] = {
 		season = "SoD",
@@ -255,6 +255,18 @@ rm.recipes[202] = {
 		skill = 205,
 		teachedItem = 10716,
 		teachedSpell = 12899,
+	},
+	[221329] = {
+		season = "SoD",
+		skill = 205,
+		teachedItem = 10720,
+		teachedSpell = 12902,
+	},
+	[221335] = {
+		season = "SoD",
+		skill = 205,
+		teachedItem = 10543,
+		teachedSpell = 12718,
 	},
 	[221342] = {
 		season = "SoD",
@@ -274,43 +286,31 @@ rm.recipes[202] = {
 		teachedItem = 10545,
 		teachedSpell = 12897,
 	},
-	[221336] = {
-		season = "SoD",
-		skill = 205,
-		teachedItem = 10542,
-		teachedSpell = 12717,
-	},
-	[221335] = {
-		season = "SoD",
-		skill = 205,
-		teachedItem = 10543,
-		teachedSpell = 12718,
-	},
 	[10602] = {
 		skill = 210,
 		teachedItem = 10546,
 		teachedSpell = 12597,
-	},
-	[10603] = {
-		skill = 220,
-		teachedItem = 10501,
-		teachedSpell = 12607,
 	},
 	[10604] = {
 		skill = 220,
 		teachedItem = 10510,
 		teachedSpell = 12614,
 	},
-	[10606] = {
-		skill = 225,
-		teachedItem = 10518,
-		teachedSpell = 12616,
+	[10603] = {
+		skill = 220,
+		teachedItem = 10501,
+		teachedSpell = 12607,
 	},
 	[215156] = {
 		season = "SoD",
 		skill = 225,
 		teachedItem = 215115,
 		teachedSpell = 435960,
+	},
+	[10606] = {
+		skill = 225,
+		teachedItem = 10518,
+		teachedSpell = 12616,
 	},
 	[10605] = {
 		skill = 225,
@@ -344,16 +344,16 @@ rm.recipes[202] = {
 		teachedItem = 21576,
 		teachedSpell = 26425,
 	},
-	[21738] = {
-		skill = 225,
-		teachedItem = 21569,
-		teachedSpell = 26442,
-	},
 	[215431] = {
 		season = "SoD",
 		skill = 225,
 		teachedItem = 215127,
 		teachedSpell = 435964,
+	},
+	[21738] = {
+		skill = 225,
+		teachedItem = 21569,
+		teachedSpell = 26442,
 	},
 	[10607] = {
 		skill = 230,
@@ -395,16 +395,16 @@ rm.recipes[202] = {
 		teachedItem = 15995,
 		teachedSpell = 19792,
 	},
+	[18652] = {
+		skill = 260,
+		teachedItem = 18634,
+		teachedSpell = 23077,
+	},
 	[18661] = {
 		skill = 260,
 		specialization = 20219,
 		teachedItem = 18660,
 		teachedSpell = 23129,
-	},
-	[18652] = {
-		skill = 260,
-		teachedItem = 18634,
-		teachedSpell = 23077,
 	},
 	[18653] = {
 		skill = 265,
@@ -443,40 +443,40 @@ rm.recipes[202] = {
 		teachedItem = 18594,
 		teachedSpell = 23080,
 	},
-	[18655] = {
+	[22729] = {
 		skill = 275,
-		teachedItem = 18637,
-		teachedSpell = 23079,
+		teachedItem = 22728,
+		teachedSpell = 28327,
 	},
 	[16048] = {
 		skill = 275,
 		teachedItem = 16004,
 		teachedSpell = 19796,
 	},
+	[18655] = {
+		skill = 275,
+		teachedItem = 18637,
+		teachedSpell = 23079,
+	},
 	[21737] = {
 		skill = 275,
 		teachedItem = 21570,
 		teachedSpell = 26443,
 	},
-	[22729] = {
+	[21735] = {
 		skill = 275,
-		teachedItem = 22728,
-		teachedSpell = 28327,
-	},
-	[21733] = {
-		skill = 275,
-		teachedItem = 21714,
-		teachedSpell = 26426,
+		teachedItem = 21718,
+		teachedSpell = 26428,
 	},
 	[21734] = {
 		skill = 275,
 		teachedItem = 21716,
 		teachedSpell = 26427,
 	},
-	[21735] = {
+	[21733] = {
 		skill = 275,
-		teachedItem = 21718,
-		teachedSpell = 26428,
+		teachedItem = 21714,
+		teachedSpell = 26426,
 	},
 	[16051] = {
 		skill = 285,
@@ -498,15 +498,15 @@ rm.recipes[202] = {
 		teachedItem = 18638,
 		teachedSpell = 23081,
 	},
-	[16052] = {
-		skill = 290,
-		teachedItem = 16009,
-		teachedSpell = 19819,
-	},
 	[16053] = {
 		skill = 290,
 		teachedItem = 16008,
 		teachedSpell = 19825,
+	},
+	[16052] = {
+		skill = 290,
+		teachedItem = 16009,
+		teachedSpell = 19819,
 	},
 	[16054] = {
 		skill = 300,
@@ -543,12 +543,10 @@ rm.recipes[202] = {
 		teachedItem = 16007,
 		teachedSpell = 19833,
 	},
-	[20001] = {
-		repFaction = 270,
-		repLevel = "Friendly",
+	[18292] = {
 		skill = 300,
-		teachedItem = 19998,
-		teachedSpell = 24357,
+		teachedItem = 18282,
+		teachedSpell = 22795,
 	},
 	[20000] = {
 		repFaction = 270,
@@ -557,9 +555,11 @@ rm.recipes[202] = {
 		teachedItem = 19999,
 		teachedSpell = 24356,
 	},
-	[18292] = {
+	[20001] = {
+		repFaction = 270,
+		repLevel = "Friendly",
 		skill = 300,
-		teachedItem = 18282,
-		teachedSpell = 22795,
+		teachedItem = 19998,
+		teachedSpell = 24357,
 	},
 }
