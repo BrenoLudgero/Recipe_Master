@@ -32,16 +32,16 @@ Source/Interface/FrameSettings.lua
 Source/Localization.lua
 Source/Globals.lua
 
-Source/RecipeDatabase/Alchemy.lua
-Source/RecipeDatabase/Blacksmithing.lua
-Source/RecipeDatabase/Cooking.lua
-Source/RecipeDatabase/Enchanting.lua
-Source/RecipeDatabase/Engineering.lua
-Source/RecipeDatabase/Firstaid.lua
-Source/RecipeDatabase/Fishing.lua
-Source/RecipeDatabase/Leatherworking.lua
-Source/RecipeDatabase/Mining.lua
-Source/RecipeDatabase/Tailoring.lua
+Source/Database/Recipes/Alchemy.lua
+Source/Database/Recipes/Blacksmithing.lua
+Source/Database/Recipes/Cooking.lua
+Source/Database/Recipes/Enchanting.lua
+Source/Database/Recipes/Engineering.lua
+Source/Database/Recipes/Firstaid.lua
+Source/Database/Recipes/Fishing.lua
+Source/Database/Recipes/Leatherworking.lua
+Source/Database/Recipes/Mining.lua
+Source/Database/Recipes/Tailoring.lua
 
 Source/Handlers/Utils.lua
 Source/Handlers/SpecializationHandler.lua
