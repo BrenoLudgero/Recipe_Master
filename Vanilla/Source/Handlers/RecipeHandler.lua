@@ -30,13 +30,13 @@ function rm.isRecipeAvailableForCharacter(recipe)
 end
 
 local function isRankupRecipe(recipe)
-    return type(recipe.teachedSpell) == "string"
+    return type(recipe.teachesSpell) == "string"
 end
 
 local function isSkillLearnedByCharacter(characterSkills, recipe)
     return (
-        rm.tableContains(characterSkills, recipe.teachedItem)
-        or rm.tableContains(characterSkills, recipe.teachedSpell)
+        rm.tableContains(characterSkills, recipe.teachesItem)
+        or rm.tableContains(characterSkills, recipe.teachesSpell)
     )
 end
 
@@ -61,7 +61,7 @@ end
 local function isLearnedRankupRecipe(recipe, professionRank)
     if isRankupRecipe(recipe) then
         local rankOrder = {Apprentice = 1, Journeyman = 2, Expert = 3, Artisan = 4}
-        return rankOrder[recipe.teachedSpell] <= rankOrder[professionRank]
+        return rankOrder[recipe.teachesSpell] <= rankOrder[professionRank]
     end
     return false
 end
@@ -129,8 +129,8 @@ local function saveRecipeData(recipeID, recipeData)
         season = recipeData["season"], 
         skill = recipeData["skill"], 
         specialization = recipeData["specialization"], 
-        teachedItem = recipeData["teachedItem"], 
-        teachedSpell = recipeData["teachedSpell"], 
+        teachesItem = recipeData["teachesItem"], 
+        teachesSpell = recipeData["teachesSpell"], 
         texture = rTexture
     }
 end
