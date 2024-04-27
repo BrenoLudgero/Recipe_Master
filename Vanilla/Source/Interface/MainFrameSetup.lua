@@ -22,7 +22,12 @@ local function isMouseInsideScrollFrame()
     local frameX, frameY = rm.scrollFrame:GetCenter()
     local frameWidth = rm.scrollFrame:GetWidth()
     local frameHeight = rm.scrollFrame:GetHeight()
-    return mouseX >= (frameX - frameWidth / 2) and mouseX <= (frameX + frameWidth / 2) and mouseY >= (frameY - frameHeight / 2) and mouseY <= (frameY + frameHeight / 2)
+    return (
+        mouseX >= (frameX - frameWidth / 2) 
+        and mouseX <= (frameX + frameWidth / 2) 
+        and mouseY >= (frameY - frameHeight / 2) 
+        and mouseY <= (frameY + frameHeight / 2)
+    )
 end
 
 function rm.displayTooltipOnMouseover(icon, recipe)

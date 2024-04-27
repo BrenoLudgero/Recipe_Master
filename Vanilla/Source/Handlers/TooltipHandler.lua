@@ -11,19 +11,19 @@ local function isItemRecipe(itemName)
 end
 
 local function getRecipeTooltipMessage(recipe, profession)
-    local charactersMissingRecipeSkill, charactersWithRecipeSkill = rm.getAllCharactersRecipeStatus(recipe, profession)
+    local charactersMissingRecipe, charactersWhoCraftRecipe = rm.getAllCharactersRecipeStatus(recipe, profession)
     local message = ""
     local newLine = "\n"
     local newLineInfo = "\n    "
-    if #charactersWithRecipeSkill > 0 then
+    if #charactersWhoCraftRecipe > 0 then
         message = message..newLine..WrapTextInColorCode(L.crafters, "FF90EE90") -- Light green
-        for _, character in pairs(charactersWithRecipeSkill) do
+        for _, character in pairs(charactersWhoCraftRecipe) do
             message = message..newLineInfo..character
         end
     end
-    if #charactersMissingRecipeSkill > 0 then
+    if #charactersMissingRecipe > 0 then
         message = message..newLine..WrapTextInColorCode(L.unlearned, "FFFFB6C1") -- Light red
-        for _, character in pairs(charactersMissingRecipeSkill) do
+        for _, character in pairs(charactersMissingRecipe) do
             local characterProfessionLevel = rm.getSavedProfessionLeveForCharacter(character, profession)
             message = message..newLineInfo..character.." ("..characterProfessionLevel..")"
         end
