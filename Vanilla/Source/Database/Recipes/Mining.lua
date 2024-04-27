@@ -8,7 +8,7 @@ rm.recipes[186] = {
 	},
 	[22967] = {
 		icon = 133235,
-		skill = 310,
+		skill = 300,
 		teachesItem = 17771,
 	},
 }
