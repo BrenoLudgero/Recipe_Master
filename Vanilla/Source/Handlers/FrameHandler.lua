@@ -122,9 +122,6 @@ local function getSpecializationDisplayName()
 end
 
 function rm.updateProgressBar()
-    if rm.learnedPercentage > 100 then -- Happens on the first time opening a profession frame, causing an error
-        return
-    end
     local progress = rm.learnedRecipesCount.."/"..rm.totalRecipesCount
     local specialization = getSpecializationDisplayName()
     rm.progressBar:SetValue(rm.learnedPercentage)
@@ -208,9 +205,6 @@ function rm.activateTabAndDesaturateOthers(tab)
 end
 
 function rm.showRecipesFrame(getNumSkills, getSkillInfo)
-    if not rm.getProfessionFrame() then
-        return
-    end
     rm.centeredText:Hide()
     rm.showRecipeFrameElements()
     setParentDependentFramesPosition()

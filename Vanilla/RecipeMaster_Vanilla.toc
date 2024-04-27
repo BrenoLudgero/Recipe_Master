@@ -59,5 +59,6 @@ Source/Interface/OptionsFrameCreation.lua
 Source/Interface/Frames.lua
 Source/Interface/RecipeDisplay.lua
 
+Source/Cacher.lua
 Source/Handlers/EventHandler.lua
 Source/Main.lua

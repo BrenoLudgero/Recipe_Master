@@ -6,10 +6,12 @@ rm.frame:RegisterEvent("TRADE_SKILL_CLOSE")
 rm.frame:RegisterEvent("CRAFT_SHOW")
 rm.frame:RegisterEvent("CRAFT_CLOSE")
 
-local isEventFirstOpen = {TRADE_SKILL_SHOW = true, CRAFT_SHOW = true}
-
 function rm.handleAddonLoaded(event, addon) 
     if event == "ADDON_LOADED" and addon == addonName then
+        rm.cacheAllRecipes()
+        rm.cacheAllRecipes = nil
+        rm.cacheAllTradeSkills()
+        rm.cacheAllTradeSkills = nil
         rm.createSavedVariables()
         rm.createSavedVariables = nil
         rm.updateSavedVariables()
@@ -26,35 +28,27 @@ end
 -- This event also fires after every login / reload
 function rm.handleSkillChange(event)
     if event == "SKILL_LINES_CHANGED" then
-        C_Timer.After(0.02, rm.updateCharacterProfessions)
+        rm.updateCharacterProfessions()
     end
 end
 
--- Trade skills may not be available immediately after opening the profession window, hence the delays
-local function handleWindowOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill, event)
+local function handleWindowOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
     rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
     rm.lastDisplayedProfession = rm.displayedProfession -- Last profession displayed before opening the fishing tab
     if rm.getProfessionID(rm.displayedProfession) then
-        if not isEventFirstOpen[event] then
-            C_Timer.After(0.04, function() rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink) end)
-            C_Timer.After(0.1, function() rm.showRecipesFrame(getNumSkills, getSkillInfo) end)
-            return
+        rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
+        while not rm.getProfessionFrame() do -- Wait for a skill window to be available
+            do end
         end
-        -- This ensures that the trade skills are loaded, saved and displayed on the first time opening a profession window
-        isEventFirstOpen[event] = false
-        C_Timer.After(0.04, function() rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink) end)
-        C_Timer.After(0.1, function() rm.showRecipesFrame(getNumSkills, getSkillInfo) end)
-        C_Timer.After(0.11, rm.clearWindowContent)
-        C_Timer.After(0.19, function () rm.showRecipesForSpecificProfession(rm.displayedProfession) end)
-        C_Timer.After(0.2, rm.updateProgressBar)
+        RunNextFrame(function() rm.showRecipesFrame(getNumSkills, getSkillInfo) end)
     end
 end
 
 function rm.handleProfessionWindowOpened(event)
     if event == "TRADE_SKILL_SHOW" then
-        handleWindowOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine, event)
+        handleWindowOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
     elseif event == "CRAFT_SHOW" then
-        handleWindowOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine, event)
+        handleWindowOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
     elseif event == "TRADE_SKILL_CLOSE" or event == "CRAFT_CLOSE" then
         -- A trade skill window is still opened after closing the craft window, show recipes for it
         -- Delayed for one frame in case TradeSkillMaster is enabled, its frame is not considered closed immediately

@@ -110,9 +110,7 @@ local function getAdditionalRecipeData(ID)
        profession = L.professionNames[186]
        texture = rm.recipes[186][ID].icon
     end
-    if quality then -- Avoids an error when Mining is the first profession window opened
-        return rm.removeRecipePrefix(name, true), link, quality, profession, texture
-    end
+    return rm.removeRecipePrefix(name, true), link, quality, profession, texture
 end
 
 local function saveRecipeData(recipeID, recipeData)
