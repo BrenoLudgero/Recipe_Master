@@ -8,6 +8,8 @@
   Explore the specifics of all recipes thanks to a built-in database extracted from Wowhead.
 * Learned and Missing Recipes:\
   Track your crafting progress effortlessly – know what you've mastered and what's yet to be discovered.
+* Cross-character Support: \
+Check which of your characters have or have not learned the recipe's craft directly from its tooltip.
 * Class, Specialization, Faction and Season:\
   Displayed recipes are always compatible with your character's unique attributes and the current season.
 * Localization:\
