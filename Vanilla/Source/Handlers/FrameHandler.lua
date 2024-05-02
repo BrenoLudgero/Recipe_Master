@@ -122,6 +122,9 @@ local function getSpecializationDisplayName()
 end
 
 function rm.updateProgressBar()
+    if rm.learnedPercentage > 100 then -- Avoids an error when using the add-on for the first time
+        return
+    end
     local progress = rm.learnedRecipesCount.."/"..rm.totalRecipesCount
     local specialization = getSpecializationDisplayName()
     rm.progressBar:SetValue(rm.learnedPercentage)
