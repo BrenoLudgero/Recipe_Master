@@ -118,7 +118,7 @@ function rm.showProfessionRecipes(getNumSkills, getSkillInfo)
 end
 
 local function isCraft(profession)
-    return profession == L.professionNames[333] -- Enchanting
+    return profession == L.professions[333] -- Enchanting
 end
 
 function rm.showRecipesForSpecificProfession(profession)
@@ -131,7 +131,7 @@ function rm.showRecipesForSpecificProfession(profession)
 end
 
 function rm.showSortedRecipes()
-    if rm.displayedProfession == L.professionNames[356] then -- Fishing
+    if rm.displayedProfession == L.professions[356] then -- Fishing
         rm.showRecipesForSpecificProfession(rm.displayedProfession)
         return
     end

@@ -29,7 +29,7 @@ function rm.getCurrentCharacterSavedVariables()
 end
 
 function rm.getProfessionID(professionName)
-    return tInvert(L.professionNames)[professionName]
+    return tInvert(L.professions)[professionName]
 end
 
 function rm.getSeason()

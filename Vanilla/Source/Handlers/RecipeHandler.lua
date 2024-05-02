@@ -107,7 +107,7 @@ local function getAdditionalRecipeData(ID)
     if isMiningSkill(ID) then
        name = GetSpellInfo(ID)
        link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
-       profession = L.professionNames[186]
+       profession = L.professions[186]
        texture = rm.recipes[186][ID].icon
     end
     return rm.removeRecipePrefix(name, true), link, quality, profession, texture

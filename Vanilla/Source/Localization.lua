@@ -26,7 +26,7 @@ L.subtitle = string.format(PETITION_CREATOR, rm.author).."\n"..GAME_VERSION_LABE
 L.uncommon = ITEM_QUALITY2_DESC
 
 if rm.locale == "enUS" then
-    L.professionNames = {
+    L.professions = {
         [171] = "Alchemy",
         [164] = "Blacksmithing",
         [185] = "Cooking",
@@ -57,7 +57,7 @@ if rm.locale == "enUS" then
     return
 
 elseif rm.locale == "esMX" then
-    L.professionNames = {
+    L.professions = {
         [171] = "Alquimia",
         [164] = "Herrería",
         [185] = "Cocina",
@@ -88,7 +88,7 @@ elseif rm.locale == "esMX" then
     return
 
 elseif rm.locale == "esES" then
-    L.professionNames = {
+    L.professions = {
         [171] = "Alquimia",
         [164] = "Herrería",
         [185] = "Cocina",
@@ -119,7 +119,7 @@ elseif rm.locale == "esES" then
     return
 
 elseif rm.locale == "ptBR" then
-    L.professionNames = {
+    L.professions = {
         [171] = "Alquimia",
         [164] = "Ferraria",
         [185] = "Culinária",
@@ -151,7 +151,7 @@ elseif rm.locale == "ptBR" then
     return
 
 elseif rm.locale == "deDE" then
-    L.professionNames = {
+    L.professions = {
         [171] = "Alchimie",
         [164] = "Schmiedekunst",
         [185] = "Kochkunst",
@@ -182,7 +182,7 @@ elseif rm.locale == "deDE" then
     return
 
 elseif rm.locale == "frFR" then
-    L.professionNames = {
+    L.professions = {
         [171] = "Alchimie",
         [164] = "Forge",
         [185] = "Cuisine",
@@ -213,7 +213,7 @@ elseif rm.locale == "frFR" then
     return
 
 elseif rm.locale == "ruRU" then
-    L.professionNames = {
+    L.professions = {
         [171] = "Алхимия",
         [164] = "Кузнечное дело",
         [185] = "Кулинария",
@@ -248,7 +248,7 @@ elseif rm.locale == "ruRU" then
     return
 
 elseif rm.locale == "koKR" then
-    L.professionNames = {
+    L.professions = {
         [171] = "연금술",
         [164] = "대장기술",
         [185] = "요리",
@@ -283,7 +283,7 @@ elseif rm.locale == "koKR" then
     return
 
 elseif rm.locale == "zhTW" then
-    L.professionNames = {
+    L.professions = {
         [171] = "鍊金術",
         [164] = "鍛造",
         [185] = "烹飪",
@@ -320,7 +320,7 @@ elseif rm.locale == "zhTW" then
     return
 
 elseif rm.locale == "zhCN" then
-    L.professionNames = {
+    L.professions = {
         [171] = "炼金术",
         [164] = "锻造",
         [185] = "烹饪",

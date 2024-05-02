@@ -224,7 +224,7 @@ local function handleFishingTab(tab)
             rm.showCenteredText(L.fishingNotLearned, F.colors.yellow)
             return
         end
-        rm.showRecipesForSpecificProfession(L.professionNames[356])
+        rm.showRecipesForSpecificProfession(L.professions[356])
     end
 end
 
