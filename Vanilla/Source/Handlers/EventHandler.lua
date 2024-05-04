@@ -1,4 +1,5 @@
 local addonName, rm = ...
+
 rm.frame:RegisterEvent("ADDON_LOADED")
 rm.frame:RegisterEvent("SKILL_LINES_CHANGED")
 rm.frame:RegisterEvent("TRADE_SKILL_SHOW")
@@ -8,10 +9,8 @@ rm.frame:RegisterEvent("CRAFT_CLOSE")
 
 function rm.handleAddonLoaded(event, addon) 
     if event == "ADDON_LOADED" and addon == addonName then
-        rm.cacheAllRecipes()
-        rm.cacheAllRecipes = nil
-        rm.cacheAllTradeSkills()
-        rm.cacheAllTradeSkills = nil
+        rm.cacheAllAssets()
+        rm.cacheAllAssets = nil
         rm.createSavedVariables()
         rm.createSavedVariables = nil
         rm.updateSavedVariables()
@@ -32,37 +31,56 @@ function rm.handleSkillChange(event)
     end
 end
 
-local function handleWindowOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
+local function waitForProfessionFrame()
+    while not rm.getProfessionFrame() do
+        do end
+    end
+end
+
+-- Happens on the first time opening the window after login
+local function noRecipesDisplayed()
+    return #rm.recipeContainer.children == 0
+end
+
+local function showRecipeMasterWindow(getNumSkills, getSkillInfo)
+    rm.showRecipesFrame(getNumSkills, getSkillInfo) 
+    if noRecipesDisplayed() then
+        RunNextFrame(function() 
+            rm.updateRecipeDisplay(getNumSkills, getSkillInfo) 
+        end)
+    end
+end
+
+local function handleProfessionWindowOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
     rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
     rm.lastDisplayedProfession = rm.displayedProfession -- Last profession displayed before opening the fishing tab
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
-        while not rm.getProfessionFrame() do -- Wait for a skill window to be available
-            do end
-        end
-        RunNextFrame(function() rm.showRecipesFrame(getNumSkills, getSkillInfo) end)
-        if #rm.recipeContainer.children == 0 then
-            RunNextFrame(function() 
-                rm.updateRecipeDisplay(getNumSkills, getSkillInfo) 
-            end)
-        end
+        waitForProfessionFrame()
+        RunNextFrame(function() 
+            showRecipeMasterWindow(getNumSkills, getSkillInfo) 
+        end)
     end
 end
 
-function rm.handleProfessionWindowOpened(event)
+local function handleProfessionWindowClosed(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
+    -- Delayed for one frame in case TradeSkillMaster is enabled, its frame is not considered closed immediately
+    RunNextFrame(function()
+        if not rm.getProfessionFrame() then
+            rm.hideRecipeMasterFrame()
+            return
+        end
+    end)
+    -- The tradeskill window is still open after closing the craft window, show recipes for it (default interface)
+    handleProfessionWindowOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
+end
+
+function rm.handleProfessionWindow(event)
     if event == "TRADE_SKILL_SHOW" then
-        handleWindowOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+        handleProfessionWindowOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
     elseif event == "CRAFT_SHOW" then
-        handleWindowOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
+        handleProfessionWindowOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
     elseif event == "TRADE_SKILL_CLOSE" or event == "CRAFT_CLOSE" then
-        -- A trade skill window is still opened after closing the craft window, show recipes for it
-        -- Delayed for one frame in case TradeSkillMaster is enabled, its frame is not considered closed immediately
-        RunNextFrame(function()
-            if not rm.getProfessionFrame() then
-                rm.hideRecipeMasterFrame()
-                return
-            end
-        end)
-        handleWindowOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+        handleProfessionWindowClosed(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
     end
 end

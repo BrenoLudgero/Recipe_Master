@@ -171,7 +171,7 @@ function rm.setInitialDropdownValue(dropdown, savedVariable)
     end
 end
 
-local function updateSortOrder(sortAscending)
+local function toggleSortOrder(sortAscending)
     if sortAscending then
         rm.setPreference("sortAscending", false)
     else
@@ -189,42 +189,49 @@ function rm.updateArrowOrientation(texture, sortAscending)
     end
 end
 
-local function toggleSortOrder(texture)
+local function updateSortOrder(texture)
     local sortAscending = rm.getPreference("sortAscending")
-    updateSortOrder(sortAscending)
+    toggleSortOrder(sortAscending)
     rm.updateArrowOrientation(texture, sortAscending)
     rm.showSortedRecipes()
 end
 
 function rm.updateSortOrderOnClick(button, texture)
     button:SetScript("OnClick", function(self)
-        toggleSortOrder(texture)
+        updateSortOrder(texture)
     end)
 end
 
-local function handleRecipesTab(tab)
+local function handleRecipesTab()
+    rm.showRecipeFrameElements()
+    rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
+end
+
+local function handleDetailsTab()
+    rm.showDetailsTabElements()
+    rm.showCenteredText(L.comingSoon, F.colors.green)
+end
+
+local function handleFishingTab()
+    rm.showRecipeFrameElements()
+    if not rm.getSavedProfessionByID(356) then -- Fishing is not learned
+        rm.hideRecipeFrameElements()
+        rm.showCenteredText(L.fishingNotLearned, F.colors.yellow)
+        return
+    end
+    rm.showRecipesForSpecificProfession(L.professions[356])
+end
+
+local function handleCurrentTab(tab)
     if tab.label == L.recipes then
-        rm.showRecipeFrameElements()
-        rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
-    end
-end
-
-local function handleDetailsTab(tab)
-    if tab.label == L.details then
-        rm.showDetailsTabElements()
-        rm.showCenteredText(L.comingSoon, F.colors.green)
-    end
-end
-
-local function handleFishingTab(tab)
-    if tab.label == L.fishing then
-        rm.showRecipeFrameElements()
-        if not rm.getSavedProfessionByID(356) then
-            rm.hideRecipeFrameElements()
-            rm.showCenteredText(L.fishingNotLearned, F.colors.yellow)
-            return
-        end
-        rm.showRecipesForSpecificProfession(L.professions[356])
+        handleRecipesTab()
+        return
+    elseif tab.label == L.details then
+        handleDetailsTab()
+        return
+    elseif tab.label == L.fishing then
+        handleFishingTab()
+        return
     end
 end
 
@@ -233,9 +240,7 @@ function rm.handleTabSwitching(tab)
         if not tab.active then
             rm.centeredText:Hide()
             rm.activateTabAndDesaturateOthers(tab)
-            handleRecipesTab(tab)
-            handleDetailsTab(tab)
-            handleFishingTab(tab)
+            handleCurrentTab(tab)
         end   
     end)
 end
