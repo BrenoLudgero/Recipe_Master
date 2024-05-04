@@ -8,7 +8,7 @@ function rm.updateBackgroundOpacity(opacitySlider)
         rm.setPreference("backgroundOpacity", valueToTwoDecimals)
         opacitySlider.valueDisplay:SetText(value.."%")
         F.colors.mainBackground = {1, 1, 1, valueToTwoDecimals}
-        F.colors.detailsBackground = {0.7, 0.7, 0.7, valueToTwoDecimals}
+        F.colors.sourcesBackground = {0.7, 0.7, 0.7, valueToTwoDecimals}
     end)
 end
 

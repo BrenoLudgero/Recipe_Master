@@ -48,7 +48,6 @@ F.offsets.titlesTextX = 15
 F.offsets.updateIconDropdownX = F.offsets.sliderX + 233
 F.offsets.updateIconDropdownY = F.offsets.opacitySliderY
 
-F.sizes.detailsBackgroundTile = 250
 F.sizes.dividerHeight = 25
 F.sizes.headerTextureHeight = 20
 F.sizes.mainBackgroundTile = 300
@@ -64,6 +63,7 @@ F.sizes.sliderWidth = 150
 F.sizes.sliderHeight = 18
 F.sizes.sortBarWidth = 100
 F.sizes.sortOrderButton = 32 -- Width and height
+F.sizes.sourcesBackgroundTile = 250
 F.sizes.tabWidth = 90
 F.sizes.tabHeight = 25
 F.sizes.tabTextureWidth = 120
@@ -108,7 +108,7 @@ F.templates.slider = "OptionsSliderTemplate"
 F.textures.bottomTab = "Interface/SPELLBOOK/UI-SpellBook-Tab1-Selected"
 F.textures.header = "Interface/BankFrame/Bank-Background"
 F.textures.mainBackground = "Interface/FrameGeneral/UI-Background-Marble"
-F.textures.detailsBackground = "Interface/AdventureMap/AdventureMapParchmentTile"
+F.textures.sourcesBackground = "Interface/AdventureMap/AdventureMapParchmentTile"
 F.textures.sortBar = "Interface/COMMON/Common-Input-Border"
 F.textures.sortOrderArrow = "Interface/TradeSkillFrame/UI-TradeSkill-Multiskill"
 F.textures.sortOrderButton = "Interface/Buttons/LockButton-Border"
@@ -119,9 +119,9 @@ F.backdrops.mainFrame = {
     tileSize = F.sizes.mainBackgroundTile,
     insets = {left = 4, right = 3, top = 4, bottom = 4}
 }
-F.backdrops.details = {
-    bgFile = F.textures.detailsBackground,
+F.backdrops.sources = {
+    bgFile = F.textures.sourcesBackground,
     tile = true,
-    tileSize = F.sizes.detailsBackgroundTile,
+    tileSize = F.sizes.sourcesBackgroundTile,
     insets = {left = 4, right = 3, top = 4, bottom = 4}
 }

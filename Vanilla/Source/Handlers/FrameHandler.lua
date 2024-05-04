@@ -168,10 +168,10 @@ function rm.hideRecipeFrameElements()
     rm.progressContainer:Hide()
 end
 
-function rm.showDetailsTabElements()
+function rm.showSourcesTabElements()
     rm.hideRecipeFrameElements()
-    rm.mainFrame:SetBackdrop(F.backdrops.details)
-    rm.mainFrame:SetBackdropColor(unpack(F.colors.detailsBackground))
+    rm.mainFrame:SetBackdrop(F.backdrops.sources)
+    rm.mainFrame:SetBackdropColor(unpack(F.colors.sourcesBackground))
 end
 
 function rm.showRecipeFrameElements()

@@ -207,8 +207,8 @@ local function handleRecipesTab()
     rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
 end
 
-local function handleDetailsTab()
-    rm.showDetailsTabElements()
+local function handleSourcesTab()
+    rm.showSourcesTabElements()
     rm.showCenteredText(L.comingSoon, F.colors.green)
 end
 
@@ -226,8 +226,8 @@ local function handleCurrentTab(tab)
     if tab.label == L.recipes then
         handleRecipesTab()
         return
-    elseif tab.label == L.details then
-        handleDetailsTab()
+    elseif tab.label == L.sources then
+        handleSourcesTab()
         return
     elseif tab.label == L.fishing then
         handleFishingTab()

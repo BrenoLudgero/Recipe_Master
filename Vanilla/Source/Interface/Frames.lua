@@ -36,7 +36,7 @@ end
 -- Called in EventHandler.handleAddonLoaded, after SavedVariables are created or loaded
 function rm.createAllFrames()
     F.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
-    F.colors.detailsBackground = {0.7, 0.7, 0.7, rm.getPreference("backgroundOpacity")}
+    F.colors.sourcesBackground = {0.7, 0.7, 0.7, rm.getPreference("backgroundOpacity")}
     ---------- Main window ----------
     rm.mainFrame = rm.createFrame()
     rm.mainFrameBorder = rm.createBorder(rm.mainFrame)
@@ -59,7 +59,7 @@ function rm.createAllFrames()
     ----- Bottom tabs -----
     rm.bottomTabs = {}
     rm.recipesTab = rm.createBottomTab(L.recipes, "BOTTOMLEFT", F.offsets.recipesTabX, true)
-    rm.recipeDetailsTab = rm.createBottomTab(L.details, "BOTTOM", 0, false)
+    rm.recipeSourcesTab = rm.createBottomTab(L.sources, "BOTTOM", 0, false)
     rm.fishingTab = rm.createBottomTab(L.fishing, "BOTTOMRIGHT", F.offsets.fishingTabX, false)
     ---------- Options window ----------
     rm.optionsFrame = rm.createOptionsFrame()
