@@ -1,23 +1,23 @@
 local _, rm = ...
 
 rm.recipes[129] = {
+	[16084] = {
+		skill = 125,
+		teachesSpell = "Expert",
+	},
 	[6454] = {
 		skill = 130,
 		teachesItem = 6453,
 		teachesSpell = 7935,
 	},
-	[16084] = {
-		skill = 125,
-		teachesSpell = "Expert",
-	},
-	[16085] = {
-		skill = 200,
-		teachesSpell = "Artisan",
-	},
 	[16112] = {
 		skill = 180,
 		teachesItem = 6451,
 		teachesSpell = 7929,
+	},
+	[16085] = {
+		skill = 200,
+		teachesSpell = "Artisan",
 	},
 	[16113] = {
 		skill = 210,
