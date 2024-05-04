@@ -45,7 +45,7 @@ end
 local function showRecipeMasterWindow(getNumSkills, getSkillInfo)
     rm.showRecipesFrame(getNumSkills, getSkillInfo) 
     if noRecipesDisplayed() then
-        RunNextFrame(function() 
+        C_Timer.After(0.1, function() 
             rm.updateRecipeDisplay(getNumSkills, getSkillInfo) 
         end)
     end
