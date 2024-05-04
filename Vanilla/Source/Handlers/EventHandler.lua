@@ -41,6 +41,11 @@ local function handleWindowOpened(getNumSkills, getSkillInfo, getItemLink, getDi
             do end
         end
         RunNextFrame(function() rm.showRecipesFrame(getNumSkills, getSkillInfo) end)
+        if #rm.recipeContainer.children == 0 then
+            RunNextFrame(function() 
+                rm.updateRecipeDisplay(getNumSkills, getSkillInfo) 
+            end)
+        end
     end
 end
 
