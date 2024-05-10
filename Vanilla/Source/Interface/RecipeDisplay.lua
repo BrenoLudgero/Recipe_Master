@@ -105,8 +105,8 @@ local function showAllRecipeRows()
     for _, rowIcon in pairs(recipeSection) do
         rowIcon:Show()
         rowIcon.associatedText:Show()
-        if rowIcon.associatedText.aditionalInfo then
-            rowIcon.associatedText.aditionalInfo:Show()
+        if rowIcon.associatedText.additionalInfo then
+            rowIcon.associatedText.additionalInfo:Show()
         end
     end
 end

@@ -111,14 +111,14 @@ function rm.showMatchingRecipesOnTop(searchBar)
             if string.find(recipeText, searchText, 1, true) then
                 rowIcon:Show()
                 rowIcon.associatedText:Show()
-                if rowIcon.associatedText.aditionalInfo then
-                    rowIcon.associatedText.aditionalInfo:Show()
+                if rowIcon.associatedText.additionalInfo then
+                    rowIcon.associatedText.additionalInfo:Show()
                 end
             else
                 rowIcon:Hide()
                 rowIcon.associatedText:Hide()
-                if rowIcon.associatedText.aditionalInfo then
-                    rowIcon.associatedText.aditionalInfo:Hide()
+                if rowIcon.associatedText.additionalInfo then
+                    rowIcon.associatedText.additionalInfo:Hide()
                 end
             end
         end

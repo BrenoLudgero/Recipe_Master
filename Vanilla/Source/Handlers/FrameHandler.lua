@@ -155,8 +155,8 @@ function rm.clearWindowContent()
     for _, rowIcon in pairs(recipeSection) do
         rowIcon:Hide()
         rowIcon.associatedText:Hide()
-        if rowIcon.associatedText.aditionalInfo then
-            rowIcon.associatedText.aditionalInfo:Hide()
+        if rowIcon.associatedText.additionalInfo then
+            rowIcon.associatedText.additionalInfo:Hide()
         end
     end
     wipe(recipeSection)

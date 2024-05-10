@@ -227,14 +227,14 @@ local function createRowIcon(recipe, yOffset)
     return icon
 end
 
-local function createAditionalInfoText(recipe, recipeName, recipeInfo, color)
+local function createAdditionalInfoText(recipe, recipeName, recipeInfo, color)
     if rm.isLearnedRecipe(recipe) then
         recipeInfo:SetText(L.learned)
         recipeInfo:SetTextColor(unpack(color)) -- Gray
     else
         rm.getRequirementsText(recipe, recipeInfo)
     end
-    recipeName.aditionalInfo = recipeInfo
+    recipeName.additionalInfo = recipeInfo
 end
 
 local function createRowText(recipe, rowIcon, color)
@@ -246,7 +246,7 @@ local function createRowText(recipe, rowIcon, color)
         local recipeInfo = rm.recipeContainer:CreateFontString(nil, "OVERLAY", F.fonts.recipeText)
         recipeName:SetPoint("LEFT", rowIcon, "TOPRIGHT", F.offsets.recipeTextX, -6)
         recipeInfo:SetPoint("TOPLEFT", recipeName, "BOTTOMLEFT", 0, F.offsets.recipeInfoY)
-        createAditionalInfoText(recipe, recipeName, recipeInfo, color)
+        createAdditionalInfoText(recipe, recipeName, recipeInfo, color)
     else
         recipeName:SetPoint("LEFT", rowIcon, "RIGHT", F.offsets.recipeTextX, 0)
     end
@@ -260,8 +260,8 @@ function rm.createRecipeRow(recipe, color, desaturateIcon)
     local recipeNameText = createRowText(recipe, rowIcon, color)
     local recipeNameWidth = recipeNameText:GetWidth()
     local recipeInfoWidth
-    if recipeNameText.aditionalInfo then
-        recipeInfoText = recipeNameText.aditionalInfo
+    if recipeNameText.additionalInfo then
+        recipeInfoText = recipeNameText.additionalInfo
         recipeInfoWidth = recipeInfoText:GetWidth()
     end
     rm.storeWidestRecipeTextWidth(recipeNameWidth, recipeInfoWidth)
