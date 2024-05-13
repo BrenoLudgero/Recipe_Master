@@ -74,7 +74,7 @@ function rm.isLearnedRecipe(recipe)
 end
 
 function rm.isMissingRecipeOfCurrentFaction(recipe)
-    local characterFaction = UnitFactionGroup("player") -- Always in English
+    local characterFaction = rm.currentFaction
     return not recipe.faction or (recipe.faction == characterFaction)
 end
 
@@ -134,7 +134,7 @@ local function saveRecipeData(recipeID, recipeData)
 end
 
 -- Compares all the available skills for the currently displayed profession 
--- with each spell teached / item crafted by the recipes in RecipeDatabase
+-- with each spell teached / item crafted by the recipes in the database
 function rm.getAllProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
     local professionRecipes = {}
     local savedProfessionsAndSkills = rm.getCurrentCharacterSavedVariables()

@@ -38,7 +38,7 @@ local function anchorFrameToProfessionWindow(professionFrame, yOffset)
     keepFrameHeightSameAsProfessionWindow(professionFrame, yOffset)
 end
 
-local function replaceHideWindowButtonWithRecipeTexture()
+local function replaceHideWindowButtonWithScrollTexture()
     local hideButton = rm.mainFrameBorder.CloseButton
     hideButton:Disable(true)
     hideButton:Hide()
@@ -91,7 +91,7 @@ local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidt
         F.sizes.headerTextureHeight = 40
     end
     if professionFrame == UIParent then -- TSM is enabled
-        replaceHideWindowButtonWithRecipeTexture()
+        replaceHideWindowButtonWithScrollTexture()
         setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     else
         anchorFrameToProfessionWindow(professionFrame, yOffset)

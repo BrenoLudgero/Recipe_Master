@@ -36,13 +36,22 @@ end
 -- Called in EventHandler.handleAddonLoaded, after SavedVariables are created or loaded
 function rm.createAllFrames()
     F.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
-    F.colors.sourcesBackground = {0.7, 0.7, 0.7, rm.getPreference("backgroundOpacity")}
-    ---------- Main window ----------
+    F.colors.sourcesBackground = {0.55, 0.55, 0.55, rm.getPreference("backgroundOpacity")}
+
+    ----------------------------- Main frame -----------------------------
     rm.mainFrame = rm.createFrame()
     rm.mainFrameBorder = rm.createBorder(rm.mainFrame)
     rm.header = rm.createHeader(rm.mainFrameBorder)
     local headerTitle = rm.createHeaderText(rm.header)
     local mainFrameInnerBorder = rm.createInnerBorder(rm.mainFrame)
+
+    ---------------------------- Bottom tabs -----------------------------
+    rm.bottomTabs = {}
+    rm.recipesTab = rm.createBottomTab(L.recipes, "BOTTOMLEFT", F.offsets.recipesTabX, true)
+    rm.recipeSourcesTab = rm.createBottomTab(L.sources, "BOTTOM", 0, false)
+    rm.fishingTab = rm.createBottomTab(L.fishing, "BOTTOMRIGHT", F.offsets.fishingTabX, false)
+
+    ----------------------- Recipes / Fishing tab ------------------------
     rm.progressContainer = rm.createProgressContainer(rm.mainFrame)
     rm.divider = rm.createDivider(rm.progressContainer) -- The background frame containing searchBar and sortBar
     rm.scrollFrame = rm.createScrollFrame(rm.mainFrame)
@@ -56,33 +65,29 @@ function rm.createAllFrames()
     rm.progressBarText = rm.createProgressBarText(rm.progressBar)
     rm.restoreButton = rm.createRestoreButton()
     rm.centeredText = rm.createCenteredText(mainFrameInnerBorder)
-    ----- Bottom tabs -----
-    rm.bottomTabs = {}
-    rm.recipesTab = rm.createBottomTab(L.recipes, "BOTTOMLEFT", F.offsets.recipesTabX, true)
-    rm.recipeSourcesTab = rm.createBottomTab(L.sources, "BOTTOM", 0, false)
-    rm.fishingTab = rm.createBottomTab(L.fishing, "BOTTOMRIGHT", F.offsets.fishingTabX, false)
-    ---------- Options window ----------
+
+    --------------------------- Options window ---------------------------
     rm.optionsFrame = rm.createOptionsFrame()
-    ----- Texts -----
+    ---------------- Texts ----------------
     rm.createOptionsText(F.fonts.title, L.title, F.offsets.titlesTextX, F.offsets.titleY)
     rm.createOptionsText(F.fonts.subtitle, L.subtitle, F.offsets.titlesTextX, F.offsets.subtitleY)
     rm.createOptionsText(F.fonts.optionSection, L.general, F.offsets.titlesTextX, F.offsets.generalTextY)
     rm.createOptionsText(F.fonts.optionSection, L.recipesWindow, F.offsets.titlesTextX, F.offsets.recipesWindowTextY)
     rm.createOptionsText(F.fonts.optionSection, L.progressBar, F.offsets.titlesTextX, F.offsets.progressBarTextY)
     local options = {
-        ----- Sliders -----
+        ---------------- Sliders ----------------
         opacitySlider = rm.createOpacitySlider(),
         spacingSlider = rm.createSpacingSlider(),
-        ----- Dropdowns -----
+        ---------------- Dropdowns ----------------
         progressBrightness = rm.createProgressBrightnessDropdown(),
         progressColor = rm.createProgressColorDropdown(),
         restoreButton = rm.createIconDropdown(),
-        ----- Buttons -----
+        ---------------- Buttons ----------------
         showRecipesInfo = rm.createShowRecipesInfoCheckButton(),
         showLearnedButton = rm.createShowLearnedCheckButton()
     }
     local resetDefaultsButton = rm.createResetDefaultsButton(options)
-    ----------------------------------------
+    ----------------------------------------------------------------------
     deleteFrameCreationFunctions()
     deleteFrameCreationFunctions = nil
 end

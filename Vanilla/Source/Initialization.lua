@@ -4,6 +4,7 @@ rm.frame = CreateFrame("Frame")
 rm.version = GetAddOnMetadata(addonName, "Version")
 rm.author = GetAddOnMetadata(addonName, "Author")
 rm.currentCharacter = UnitName("player")
+rm.currentFaction = UnitFactionGroup("player") -- Alliance/Horde, always in English
 rm.locale = GetLocale()
 rm.server = GetRealmName()
 rm.recipes = {}
