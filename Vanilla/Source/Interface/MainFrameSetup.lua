@@ -202,35 +202,15 @@ function rm.updateSortOrderOnClick(button, texture)
     end)
 end
 
-local function handleRecipesTab()
-    rm.showRecipeFrameElements()
-    rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
-end
-
-local function handleSourcesTab()
-    rm.showSourcesTabElements()
-    rm.showCenteredText(L.comingSoon, F.colors.green)
-end
-
-local function handleFishingTab()
-    rm.showRecipeFrameElements()
-    if not rm.getSavedProfessionByID(356) then -- Fishing is not learned
-        rm.hideRecipeFrameElements()
-        rm.showCenteredText(L.fishingNotLearned, F.colors.yellow)
-        return
-    end
-    rm.showRecipesForSpecificProfession(L.professions[356])
-end
-
-local function handleCurrentTab(tab)
+local function handleActiveTab(tab)
     if tab.label == L.recipes then
-        handleRecipesTab()
+        rm.handleRecipesTabClick()
         return
     elseif tab.label == L.sources then
-        handleSourcesTab()
+        rm.handleSourcesTabClick()
         return
     elseif tab.label == L.fishing then
-        handleFishingTab()
+        rm.handleFishingTabClick()
         return
     end
 end
@@ -240,7 +220,7 @@ function rm.handleTabSwitching(tab)
         if not tab.active then
             rm.centeredText:Hide()
             rm.activateTabAndDesaturateOthers(tab)
-            handleCurrentTab(tab)
+            handleActiveTab(tab)
         end   
     end)
 end

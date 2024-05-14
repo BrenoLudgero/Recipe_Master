@@ -241,3 +241,23 @@ function rm.showCenteredText(string, color)
     rm.centeredText:SetTextColor(unpack(color))
     rm.centeredText:Show()
 end
+
+function rm.handleRecipesTabClick()
+    rm.showRecipesWindowElements()
+    rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
+end
+
+function rm.handleSourcesTabClick()
+    rm.showSourcesWindowElements()
+    rm.showCenteredText("Click a recipe icon to show its sources", F.colors.green) -- VISUAL INSTRUCTION
+end
+
+function rm.handleFishingTabClick()
+    rm.showRecipesWindowElements()
+    if not rm.getSavedProfessionByID(356) then -- Fishing is not learned
+        rm.hideRecipesWindowElements()
+        rm.showCenteredText(L.fishingNotLearned, F.colors.yellow)
+        return
+    end
+    rm.showRecipesForSpecificProfession(L.professions[356])
+end
