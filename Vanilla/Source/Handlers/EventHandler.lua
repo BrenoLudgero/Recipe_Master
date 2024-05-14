@@ -56,10 +56,12 @@ local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLi
     rm.lastDisplayedProfession = rm.displayedProfession -- Last profession displayed before opening the fishing frame
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
-        waitForProfessionFrame()
-        RunNextFrame(function() 
-            showRecipeMasterFrame(getNumSkills, getSkillInfo) 
-        end)
+        if not SettingsPanel:IsShown() then
+            waitForProfessionFrame()
+            RunNextFrame(function() 
+                showRecipeMasterFrame(getNumSkills, getSkillInfo) 
+            end)
+        end
     end
 end
 
