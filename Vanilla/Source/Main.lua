@@ -7,5 +7,5 @@ rm.frame:SetScript("OnEvent", function(_, event, ...)
         rm.handleAddonLoaded = nil
     end
     rm.handleSkillChange(event)
-    rm.handleProfessionWindow(event)
+    rm.handleProfessionFrame(event)
 end)

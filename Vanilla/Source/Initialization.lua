@@ -26,14 +26,14 @@ SlashCmdList["RECIPEMASTER"] = function()
     Settings.OpenToCategory(rm.L.title)
 end
 
-local defaultMainWindowPreferences = {
+local defaultMainFramePreferences = {
     mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
     mainFrameHeight = 413, -- Used when TradeSkillMaster is enabled
     sortAscending = false,
     sortRecipesBy = "Name"
 }
 
-local defaultOptionsWindowPreferences = {
+local defaultOptionsFramePreferences = {
     backgroundOpacity = 1,
     progressColor = {0.00, 0.44, 0.87},
     progressTexture = "Interface/TARGETINGFRAME/BarFill2",
@@ -43,12 +43,12 @@ local defaultOptionsWindowPreferences = {
     showRecipesInfo = false,
 }
 
-function rm.resetOptionsWindowPreferences()
-    RecipeMasterOptionsWindowPreferences = defaultOptionsWindowPreferences
+function rm.resetOptionsFramePreferences()
+    RecipeMasterOptionsFramePreferences = defaultOptionsFramePreferences
     -- When set to true in defaultPreferences, boolean options
     -- are always loaded from SavedVariables as true for some reason
-    RecipeMasterOptionsWindowPreferences["showLearnedRecipes"] = true
-    RecipeMasterOptionsWindowPreferences["showRecipesInfo"] = true
+    RecipeMasterOptionsFramePreferences["showLearnedRecipes"] = true
+    RecipeMasterOptionsFramePreferences["showRecipesInfo"] = true
 end
 
 local function oldPreferencesFound()
@@ -64,25 +64,25 @@ function rm.createSavedVariables()
     if not RecipeMasterProfessionsAndSkills then
         RecipeMasterProfessionsAndSkills = {}
     end
-    if not RecipeMasterMainWindowPreferences then
-        RecipeMasterMainWindowPreferences = defaultMainWindowPreferences
-        RecipeMasterMainWindowPreferences["sortAscending"] = true
+    if not RecipeMasterMainFramePreferences then
+        RecipeMasterMainFramePreferences = defaultMainFramePreferences
+        RecipeMasterMainFramePreferences["sortAscending"] = true
     end
-    if not RecipeMasterOptionsWindowPreferences then
-        rm.resetOptionsWindowPreferences()
+    if not RecipeMasterOptionsFramePreferences then
+        rm.resetOptionsFramePreferences()
     end
 end
 
 -- Inserts new options created after an update in SavedVariables
 function rm.updateSavedVariables()
-    for key, value in pairs(defaultMainWindowPreferences) do
-        if not RecipeMasterMainWindowPreferences[key] then
-            RecipeMasterMainWindowPreferences[key] = value
+    for key, value in pairs(defaultMainFramePreferences) do
+        if not RecipeMasterMainFramePreferences[key] then
+            RecipeMasterMainFramePreferences[key] = value
         end
     end
-    for key, value in pairs(defaultOptionsWindowPreferences) do
-        if not RecipeMasterOptionsWindowPreferences[key] then
-            RecipeMasterOptionsWindowPreferences[key] = value
+    for key, value in pairs(defaultOptionsFramePreferences) do
+        if not RecipeMasterOptionsFramePreferences[key] then
+            RecipeMasterOptionsFramePreferences[key] = value
         end
     end
 end
@@ -97,17 +97,17 @@ function rm.updateSavedCharacters()
 end
 
 function rm.getPreference(preference)
-    if RecipeMasterMainWindowPreferences[preference] ~= nil then
-        return RecipeMasterMainWindowPreferences[preference]
-    elseif RecipeMasterOptionsWindowPreferences[preference] ~= nil then
-        return RecipeMasterOptionsWindowPreferences[preference]
+    if RecipeMasterMainFramePreferences[preference] ~= nil then
+        return RecipeMasterMainFramePreferences[preference]
+    elseif RecipeMasterOptionsFramePreferences[preference] ~= nil then
+        return RecipeMasterOptionsFramePreferences[preference]
     end
 end
 
 function rm.setPreference(preference, newValue)
-    if RecipeMasterMainWindowPreferences[preference] ~= nil then
-        RecipeMasterMainWindowPreferences[preference] = newValue
-    elseif RecipeMasterOptionsWindowPreferences[preference] ~= nil then
-        RecipeMasterOptionsWindowPreferences[preference] = newValue
+    if RecipeMasterMainFramePreferences[preference] ~= nil then
+        RecipeMasterMainFramePreferences[preference] = newValue
+    elseif RecipeMasterOptionsFramePreferences[preference] ~= nil then
+        RecipeMasterOptionsFramePreferences[preference] = newValue
     end
 end

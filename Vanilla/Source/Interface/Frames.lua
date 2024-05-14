@@ -34,7 +34,7 @@ local function deleteFrameCreationFunctions()
 end
 
 -- Called in EventHandler.handleAddonLoaded, after SavedVariables are created or loaded
-function rm.createAllFrames()
+function rm.createAllFrameElements()
     F.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
     F.colors.sourcesBackground = {0.55, 0.55, 0.55, rm.getPreference("backgroundOpacity")}
 
@@ -51,7 +51,7 @@ function rm.createAllFrames()
     rm.recipeSourcesTab = rm.createBottomTab(L.sources, "BOTTOM", 0, false)
     rm.fishingTab = rm.createBottomTab(L.fishing, "BOTTOMRIGHT", F.offsets.fishingTabX, false)
 
-    ----------------------- Recipes / Fishing tab ------------------------
+    ----------------------- Recipes / Fishing frame ------------------------
     rm.progressContainer = rm.createProgressContainer(rm.mainFrame)
     rm.divider = rm.createDivider(rm.progressContainer) -- The background frame containing searchBar and sortBar
     rm.scrollFrame = rm.createScrollFrame(rm.mainFrame)

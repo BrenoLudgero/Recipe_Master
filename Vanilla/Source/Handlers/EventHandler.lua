@@ -17,8 +17,8 @@ function rm.handleAddonLoaded(event, addon)
         rm.updateSavedVariables = nil
         rm.updateSavedCharacters()
         rm.updateSavedCharacters = nil
-        rm.createAllFrames()
-        rm.createAllFrames = nil
+        rm.createAllFrameElements()
+        rm.createAllFrameElements = nil
         rm.frame:UnregisterEvent("ADDON_LOADED")
     end
 end
@@ -37,12 +37,12 @@ local function waitForProfessionFrame()
     end
 end
 
--- Happens on the first time opening the window after login
+-- Happens on the first time opening Recipe Master after login
 local function noRecipesDisplayed()
     return #rm.recipeContainer.children == 0
 end
 
-local function showRecipeMasterWindow(getNumSkills, getSkillInfo)
+local function showRecipeMasterFrame(getNumSkills, getSkillInfo)
     rm.showRecipesFrame(getNumSkills, getSkillInfo) 
     if noRecipesDisplayed() then
         C_Timer.After(0.1, function() 
@@ -51,19 +51,19 @@ local function showRecipeMasterWindow(getNumSkills, getSkillInfo)
     end
 end
 
-local function handleProfessionWindowOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
+local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
     rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
-    rm.lastDisplayedProfession = rm.displayedProfession -- Last profession displayed before opening the fishing tab
+    rm.lastDisplayedProfession = rm.displayedProfession -- Last profession displayed before opening the fishing frame
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
         waitForProfessionFrame()
         RunNextFrame(function() 
-            showRecipeMasterWindow(getNumSkills, getSkillInfo) 
+            showRecipeMasterFrame(getNumSkills, getSkillInfo) 
         end)
     end
 end
 
-local function handleProfessionWindowClosed(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
+local function handleProfessionFrameClosed(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
     -- Delayed for one frame in case TradeSkillMaster is enabled, its frame is not considered closed immediately
     RunNextFrame(function()
         if not rm.getProfessionFrame() then
@@ -71,16 +71,16 @@ local function handleProfessionWindowClosed(getNumSkills, getSkillInfo, getItemL
             return
         end
     end)
-    -- The tradeskill window is still open after closing the craft window, show recipes for it (default interface)
-    handleProfessionWindowOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
+    -- The tradeskill frame is still open after closing the craft frame, show recipes for it (default interface)
+    handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
 end
 
-function rm.handleProfessionWindow(event)
+function rm.handleProfessionFrame(event)
     if event == "TRADE_SKILL_SHOW" then
-        handleProfessionWindowOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+        handleProfessionFrameOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
     elseif event == "CRAFT_SHOW" then
-        handleProfessionWindowOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
+        handleProfessionFrameOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
     elseif event == "TRADE_SKILL_CLOSE" or event == "CRAFT_CLOSE" then
-        handleProfessionWindowClosed(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+        handleProfessionFrameClosed(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
     end
 end

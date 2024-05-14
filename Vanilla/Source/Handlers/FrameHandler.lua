@@ -24,7 +24,7 @@ function rm.getProfessionFrame()
     return frame
 end
 
-local function keepFrameHeightSameAsProfessionWindow(professionFrame, yOffset)
+local function keepMainFrameHeightSameAsProfessionFrame(professionFrame, yOffset)
     rm.mainFrame:SetScript("OnUpdate", function(self, elapsed)
         local parentScale = professionFrame:GetEffectiveScale()
         self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", F.offsets.mainX * parentScale, F.offsets.mainY * parentScale)
@@ -32,13 +32,13 @@ local function keepFrameHeightSameAsProfessionWindow(professionFrame, yOffset)
     end)
 end
 
-local function anchorFrameToProfessionWindow(professionFrame, yOffset)
+local function anchorFrameToProfessionFrame(professionFrame, yOffset)
     rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
     rm.restoreButton:SetPoint("LEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
-    keepFrameHeightSameAsProfessionWindow(professionFrame, yOffset)
+    keepMainFrameHeightSameAsProfessionFrame(professionFrame, yOffset)
 end
 
-local function replaceHideWindowButtonWithScrollTexture()
+local function replaceHideFrameButtonWithScrollTexture()
     local hideButton = rm.mainFrameBorder.CloseButton
     hideButton:Disable(true)
     hideButton:Hide()
@@ -91,10 +91,10 @@ local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidt
         F.sizes.headerTextureHeight = 40
     end
     if professionFrame == UIParent then -- TSM is enabled
-        replaceHideWindowButtonWithScrollTexture()
+        replaceHideFrameButtonWithScrollTexture()
         setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     else
-        anchorFrameToProfessionWindow(professionFrame, yOffset)
+        anchorFrameToProfessionFrame(professionFrame, yOffset)
     end
     rm.mainFrame:SetFrameStrata(professionFrame:GetFrameStrata())
 end
@@ -132,7 +132,7 @@ function rm.updateProgressBar()
     rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%)"..specialization)
 end
 
-function rm.updateRecipesPosition()
+function rm.updateRecipesFrameElementsPosition()
     local yOffset = 0
     local recipeSection = rm.recipeContainer.children
     for _, rowIcon in ipairs(recipeSection) do
@@ -150,7 +150,7 @@ local function resetRecipeCounts()
     rm.widestRecipeTextWidth = 0
 end
 
-function rm.clearWindowContent()
+local function clearRecipesFrameContent()
     local recipeSection = rm.recipeContainer.children
     for _, rowIcon in pairs(recipeSection) do
         rowIcon:Hide()
@@ -160,25 +160,29 @@ function rm.clearWindowContent()
         end
     end
     wipe(recipeSection)
+end
+
+function rm.clearFrameContent()
+    clearRecipesFrameContent()
     resetRecipeCounts()
 end
 
-function rm.hideRecipeFrameElements()
-    rm.scrollFrame:Hide()
-    rm.progressContainer:Hide()
-end
-
-function rm.showSourcesTabElements()
-    rm.hideRecipeFrameElements()
+function rm.showSourcesFrameElements()
+    rm.hideRecipesFrameElements()
     rm.mainFrame:SetBackdrop(F.backdrops.sources)
     rm.mainFrame:SetBackdropColor(unpack(F.colors.sourcesBackground))
 end
 
-function rm.showRecipeFrameElements()
+function rm.showRecipesFrameElements()
     rm.scrollFrame:Show()
     rm.progressContainer:Show()
     rm.mainFrame:SetBackdrop(F.backdrops.mainFrame)
     rm.mainFrame:SetBackdropColor(unpack(F.colors.mainBackground))
+end
+
+function rm.hideRecipesFrameElements()
+    rm.scrollFrame:Hide()
+    rm.progressContainer:Hide()
 end
 
 -- Ensures that no recipe text will be cropped
@@ -192,7 +196,7 @@ local function updateMainWidthBasedOnWidestRecipeName()
 end
 
 function rm.updateRecipeDisplay(getNumSkills, getSkillInfo)
-    rm.clearWindowContent()
+    rm.clearFrameContent()
     rm.showProfessionRecipes(getNumSkills, getSkillInfo)
     updateMainWidthBasedOnWidestRecipeName()
     rm.updateProgressBar()
@@ -209,7 +213,7 @@ end
 
 function rm.showRecipesFrame(getNumSkills, getSkillInfo)
     rm.centeredText:Hide()
-    rm.showRecipeFrameElements()
+    rm.showRecipesFrameElements()
     setParentDependentFramesPosition()
     rm.activateTabAndDesaturateOthers(rm.recipesTab)
     rm.updateRecipeDisplay(getNumSkills, getSkillInfo)
@@ -232,7 +236,7 @@ function rm.hideRecipeMasterFrame()
         setParentDependentFramesPosition()
         return
     end
-    rm.clearWindowContent()
+    rm.clearFrameContent()
     rm.mainFrame:Hide()
 end
 
@@ -243,19 +247,19 @@ function rm.showCenteredText(string, color)
 end
 
 function rm.handleRecipesTabClick()
-    rm.showRecipesWindowElements()
+    rm.showRecipesFrameElements()
     rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
 end
 
 function rm.handleSourcesTabClick()
-    rm.showSourcesWindowElements()
+    rm.showSourcesFrameElements()
     rm.showCenteredText("Click a recipe icon to show its sources", F.colors.green) -- VISUAL INSTRUCTION
 end
 
 function rm.handleFishingTabClick()
-    rm.showRecipesWindowElements()
+    rm.showRecipesFrameElements()
     if not rm.getSavedProfessionByID(356) then -- Fishing is not learned
-        rm.hideRecipesWindowElements()
+        rm.hideRecipesFrameElements()
         rm.showCenteredText(L.fishingNotLearned, F.colors.yellow)
         return
     end

@@ -122,7 +122,7 @@ function rm.showMatchingRecipesOnTop(searchBar)
                 end
             end
         end
-        rm.updateRecipesPosition()
+        rm.updateRecipesFrameElementsPosition()
     end)
 end
 

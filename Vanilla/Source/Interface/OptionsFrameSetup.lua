@@ -66,7 +66,7 @@ end
 
 function rm.resetSavedOptionsOnClick(resetDefaultsButton, options)
     resetDefaultsButton:SetScript("OnClick", function(self)
-        rm.resetOptionsWindowPreferences()
+        rm.resetOptionsFramePreferences()
         local opacity = rm.getPreference("backgroundOpacity")
         local spacing = rm.getPreference("iconSpacing")
         local progressColorPref = rm.getPreference("progressColor")
