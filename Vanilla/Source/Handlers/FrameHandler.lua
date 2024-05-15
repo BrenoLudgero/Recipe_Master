@@ -144,7 +144,6 @@ function rm.updateRecipesFrameElementsPosition()
 end
 
 local function resetRecipeCounts()
-    rm.displayedRecipesCount = 0
     rm.learnedRecipesCount = 0
     rm.missingRecipesCount = 0
     rm.widestRecipeTextWidth = 0

@@ -4,7 +4,6 @@ local L = rm.L
 rm.autoOpenRecipesFrame = true
 rm.displayedProfession = ""
 rm.lastDisplayedProfession = ""
-rm.displayedRecipesCount = 0
 rm.learnedRecipesCount = 0
 rm.missingRecipesCount = 0
 rm.totalRecipesCount = 0
