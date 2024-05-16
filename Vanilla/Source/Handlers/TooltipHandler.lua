@@ -47,13 +47,27 @@ local function showTooltipMessage(tooltip, message)
     tooltip:AddLine("\n"..message.."\n")
 end
 
+-- Recipes that have a profession name different than the profession's display name for some languages
+local function handleMismatchedProfessionNames(professionName)
+    if professionName == "가죽세공" then
+        return "가죽 세공"
+    elseif professionName == "기계 공학" then
+        return "기계공학"
+    elseif professionName == "Зачаровывание" then
+        return "Наложение чар"
+    elseif professionName == "Sastrería" and rm.locale == "esES" then
+        return "Costura"
+    end
+    return professionName
+end
+
 -- Appends the message to a recipe's tooltip
 GameTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
     local itemName, itemLink = tooltip:GetItem()
     if itemName and isItemRecipe(itemName) then
         local recipeID = rm.getIDFromLink(itemLink)
         local professionName = select(7, C_Item.GetItemInfo(itemLink))
-        professionName = rm.handleMismatchedProfessionNames(professionName)
+        professionName = handleMismatchedProfessionNames(professionName)
         local professionID = rm.getProfessionID(professionName)
         local recipe = rm.recipes[professionID][recipeID]
         local message = getRecipeTooltipMessage(recipe, professionID)

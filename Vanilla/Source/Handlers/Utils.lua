@@ -1,12 +1,6 @@
 local _, rm = ...
 local L = rm.L
 
-function rm.removeSpaces(string)
-    if string then
-        return string:gsub("%s+", "")
-    end
-end
-
 local function isCapitalized(string)
     return string:sub(1, 1):upper() == string:sub(1, 1)
 end

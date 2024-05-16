@@ -53,7 +53,7 @@ end
 
 local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
     rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
-    rm.lastDisplayedProfession = rm.displayedProfession -- Last profession displayed before opening the fishing frame
+    rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
         if not SettingsPanel:IsShown() then

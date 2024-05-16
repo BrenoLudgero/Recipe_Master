@@ -23,7 +23,7 @@ local function handleMissingRecipe(recipe)
 end
 
 local function populateRecipeRow(recipe)
-    if rm.isRecipeForDisplayedProfession(recipe) and rm.isRecipeAvailableForCharacter(recipe) then
+    if rm.isRecipeAvailableForCharacter(recipe) then
         handleLearnedRecipe(recipe)
         handleMissingRecipe(recipe)
     end
@@ -112,7 +112,7 @@ local function showAllRecipeRows()
 end
 
 function rm.showProfessionRecipes(getSkillInfo)
-    local professionRecipes = rm.getAllProfessionRecipes(getSkillInfo)
+    local professionRecipes = rm.getProfessionRecipes(getSkillInfo)
     populateAllRecipeRows(professionRecipes)
     showAllRecipeRows()
 end

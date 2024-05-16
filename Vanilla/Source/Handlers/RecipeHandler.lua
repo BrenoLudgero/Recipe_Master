@@ -78,49 +78,27 @@ function rm.isMissingRecipeOfCurrentFaction(recipe)
     return not recipe.faction or (recipe.faction == characterFaction)
 end
 
--- Removing spaces is required for Engineering and Leatherworking in Korean
-function rm.isRecipeForDisplayedProfession(recipe)
-    return rm.removeSpaces(recipe.profession) == rm.removeSpaces(rm.displayedProfession)
-end
-
--- Recipes that return a profession name different than the profession's display name for some languages
-function rm.handleMismatchedProfessionNames(professionName)
-    if professionName == "가죽세공" then
-        return "가죽 세공"
-    elseif professionName == "기계 공학" then
-        return "기계공학"
-    elseif professionName == "Зачаровывание" then
-        return "Наложение чар"
-    elseif professionName == "Sastrería" and rm.locale == "esES" then
-        return "Costura"
-    end
-    return professionName
-end
-
 local function isMiningSkill(recipeID)
     return recipeID == 14891 or recipeID == 22967
 end
 
 local function getAdditionalRecipeData(ID)
-   local name, link, quality, _, _, _, profession, _, _, texture = C_Item.GetItemInfo(ID)
-   profession = rm.handleMismatchedProfessionNames(profession)
+   local name, link, quality, _, _, _, _, _, _, texture = C_Item.GetItemInfo(ID)
     if isMiningSkill(ID) then
-       name = GetSpellInfo(ID)
-       link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
-       profession = L.professions[186]
-       texture = rm.recipes[186][ID].icon
+        name = GetSpellInfo(ID)
+        link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
+        texture = rm.recipes[186][ID].icon
     end
-    return rm.removeRecipePrefix(name, true), link, quality, profession, texture
+    return rm.removeRecipePrefix(name, true), link, qualit, texture
 end
 
 local function saveRecipeData(recipeID, recipeData)
-    local rName, rLink, rQuality, rProfession, rTexture = getAdditionalRecipeData(recipeID)
+    local rName, rLink, rQuality, rTexture = getAdditionalRecipeData(recipeID)
     return {
         class = recipeData["class"], 
         faction = recipeData["faction"], 
         link = rLink,
         name = rName, 
-        profession = rProfession, 
         quality = rQuality, 
         repFaction = recipeData["repFaction"], 
         repLevel = recipeData["repLevel"], 
@@ -133,19 +111,24 @@ local function saveRecipeData(recipeID, recipeData)
     }
 end
 
--- Compares all the available skills for the currently displayed profession 
--- with each spell teached / item crafted by the recipes in the database
-function rm.getAllProfessionRecipes(getSkillInfoFunction)
+local function isTheDisplayedProfession(professionID)
+    return L.professions[professionID] == rm.displayedProfession
+end
+
+-- Stores all the recipe data for the currently displayed profession
+function rm.getProfessionRecipes(getSkillInfoFunction)
     local professionRecipes = {}
     local savedProfessionsAndSkills = rm.getCurrentCharacterSavedVariables()
     for professionID, professionData in pairs(savedProfessionsAndSkills) do
-        local professionRank = professionData["rank"]
-        local professionRecipesDatabase = rm.recipes[professionID]
-        for recipeID, recipeData in pairs(professionRecipesDatabase) do
-            if not professionRecipes[recipeID] then
-                local recipe = saveRecipeData(recipeID, recipeData, professionID)
-                professionRecipes[recipeID] = recipe
+        if isTheDisplayedProfession(professionID) then
+            local professionRecipesDatabase = rm.recipes[professionID]
+            for recipeID, recipeData in pairs(professionRecipesDatabase) do
+                if not professionRecipes[recipeID] then
+                    local recipe = saveRecipeData(recipeID, recipeData)
+                    professionRecipes[recipeID] = recipe
+                end
             end
+            break
         end
     end
     return professionRecipes
