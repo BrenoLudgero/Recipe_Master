@@ -111,8 +111,8 @@ local function showAllRecipeRows()
     end
 end
 
-function rm.showProfessionRecipes(getNumSkills, getSkillInfo)
-    local professionRecipes = rm.getAllProfessionRecipes(getNumSkills, getSkillInfo)
+function rm.showProfessionRecipes(getSkillInfo)
+    local professionRecipes = rm.getAllProfessionRecipes(getSkillInfo)
     populateAllRecipeRows(professionRecipes)
     showAllRecipeRows()
 end
@@ -124,10 +124,10 @@ end
 function rm.showRecipesForSpecificProfession(profession)
     rm.displayedProfession = profession
     if not isCraft(rm.displayedProfession) then
-        rm.updateRecipeDisplay(GetNumTradeSkills, GetTradeSkillInfo)
+        rm.updateRecipeDisplay(GetTradeSkillInfo)
         return
     end
-    rm.updateRecipeDisplay(GetNumCrafts, GetCraftInfo)
+    rm.updateRecipeDisplay(GetCraftInfo)
 end
 
 function rm.showSortedRecipes()

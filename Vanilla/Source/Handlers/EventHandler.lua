@@ -42,11 +42,11 @@ local function noRecipesDisplayed()
     return #rm.recipeContainer.children == 0
 end
 
-local function showRecipeMasterFrame(getNumSkills, getSkillInfo)
-    rm.showRecipesFrame(getNumSkills, getSkillInfo) 
+local function showRecipeMasterFrame(getSkillInfo)
+    rm.showRecipesFrame(getSkillInfo) 
     if noRecipesDisplayed() then
         C_Timer.After(0.1, function() 
-            rm.updateRecipeDisplay(getNumSkills, getSkillInfo) 
+            rm.updateRecipeDisplay(getSkillInfo) 
         end)
     end
 end

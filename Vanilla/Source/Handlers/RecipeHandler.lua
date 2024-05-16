@@ -135,23 +135,16 @@ end
 
 -- Compares all the available skills for the currently displayed profession 
 -- with each spell teached / item crafted by the recipes in the database
-function rm.getAllProfessionRecipes(getNumSkillsFunction, getSkillInfoFunction)
+function rm.getAllProfessionRecipes(getSkillInfoFunction)
     local professionRecipes = {}
     local savedProfessionsAndSkills = rm.getCurrentCharacterSavedVariables()
-    local numSkills = getNumSkillsFunction()
-    for i = 1, numSkills do
-        local _, skillType, craftType = getSkillInfoFunction(i)
-        if skillType ~= "header" and craftType ~= "header" then
-            for professionID, professionData in pairs(savedProfessionsAndSkills) do
-                local professionRank = professionData["rank"]
-                local professionRecipesDatabase = rm.recipes[professionID]
-                for recipeID, recipeData in pairs(professionRecipesDatabase) do
-                    local recipe = professionRecipes[recipeID]
-                    if not recipe then
-                        recipe = saveRecipeData(recipeID, recipeData)
-                        professionRecipes[recipeID] = recipe
-                    end
-                end
+    for professionID, professionData in pairs(savedProfessionsAndSkills) do
+        local professionRank = professionData["rank"]
+        local professionRecipesDatabase = rm.recipes[professionID]
+        for recipeID, recipeData in pairs(professionRecipesDatabase) do
+            if not professionRecipes[recipeID] then
+                local recipe = saveRecipeData(recipeID, recipeData, professionID)
+                professionRecipes[recipeID] = recipe
             end
         end
     end

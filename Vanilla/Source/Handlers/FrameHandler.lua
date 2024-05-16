@@ -194,9 +194,9 @@ local function updateMainWidthBasedOnWidestRecipeName()
     end
 end
 
-function rm.updateRecipeDisplay(getNumSkills, getSkillInfo)
+function rm.updateRecipeDisplay(getSkillInfo)
     rm.clearFrameContent()
-    rm.showProfessionRecipes(getNumSkills, getSkillInfo)
+    rm.showProfessionRecipes(getSkillInfo)
     updateMainWidthBasedOnWidestRecipeName()
     rm.updateProgressBar()
 end
@@ -210,12 +210,12 @@ function rm.activateTabAndDesaturateOthers(tab)
     tab.texture:SetDesaturated(false)
 end
 
-function rm.showRecipesFrame(getNumSkills, getSkillInfo)
+function rm.showRecipesFrame(getSkillInfo)
     rm.centeredText:Hide()
     rm.showRecipesFrameElements()
     setParentDependentFramesPosition()
     rm.activateTabAndDesaturateOthers(rm.recipesTab)
-    rm.updateRecipeDisplay(getNumSkills, getSkillInfo)
+    rm.updateRecipeDisplay(getSkillInfo)
     if not rm.autoOpenRecipesFrame then
         rm.restoreButton:Show()
         return
