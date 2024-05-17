@@ -51,12 +51,16 @@ local function showRecipeMasterFrame(getSkillInfo)
     end
 end
 
+local function isSystemWindowOpen()
+    return SettingsPanel:IsShown() or GameMenuFrame:IsShown() or HelpFrame:IsShown()
+end
+
 local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
     rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
     rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
-        if not SettingsPanel:IsShown() then
+        if not isSystemWindowOpen() then
             waitForProfessionFrame()
             RunNextFrame(function() 
                 showRecipeMasterFrame(getNumSkills, getSkillInfo) 
