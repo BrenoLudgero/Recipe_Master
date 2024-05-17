@@ -29,7 +29,7 @@ local function storeCurrentSpecializations(currentSpecializations, spellID)
     end
 end
 
-function rm.getAllSpecializations()
+function rm.getLearnedSpecializations()
     local currentSpecializations = {}
     local numSpellTabs = GetNumSpellTabs()
     for i = 1, numSpellTabs do

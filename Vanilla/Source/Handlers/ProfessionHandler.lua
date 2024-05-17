@@ -97,7 +97,7 @@ end
 
 function rm.updateCharacterProfessions()
     local currentProfessions = getCurrentCharacterLearnedProfessions()
-    local currentSpecializations = rm.getAllSpecializations()
+    local currentSpecializations = rm.getLearnedSpecializations()
     saveNewProfessions(currentProfessions)
     rm.saveNewSpecializations(currentSpecializations)
     updateSavedProfessions(currentProfessions)
