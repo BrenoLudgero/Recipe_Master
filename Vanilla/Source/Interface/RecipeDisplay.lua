@@ -100,21 +100,9 @@ local function populateAllRecipeRows(professionRecipes)
     rm.learnedPercentage = math.floor((rm.learnedRecipesCount / rm.totalRecipesCount) * 100)
 end
 
-local function showAllRecipeRows()
-    local recipeSection = rm.recipeContainer.children
-    for _, rowIcon in pairs(recipeSection) do
-        rowIcon:Show()
-        rowIcon.associatedText:Show()
-        if rowIcon.associatedText.additionalInfo then
-            rowIcon.associatedText.additionalInfo:Show()
-        end
-    end
-end
-
 function rm.showProfessionRecipes(getSkillInfo)
     local professionRecipes = rm.getProfessionRecipes(getSkillInfo)
     populateAllRecipeRows(professionRecipes)
-    showAllRecipeRows()
 end
 
 local function isCraft(profession)
