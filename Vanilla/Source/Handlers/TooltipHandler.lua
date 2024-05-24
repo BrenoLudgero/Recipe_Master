@@ -1,5 +1,6 @@
 local _, rm = ...
 local L = rm.L
+local F = rm.F
 
 local function isItemRecipe(itemName)
     for _, prefix in pairs(L.recipePrefixes) do
@@ -8,43 +9,6 @@ local function isItemRecipe(itemName)
         end
     end
     return false
-end
-
-local function getRecipeTooltipMessage(recipe, profession)
-    local charactersMissingRecipe, charactersWhoCraftRecipe = rm.getAllCharactersRecipeStatus(recipe, profession)
-    local message = ""
-    local newLine = "\n"
-    local newLineInfo = "\n    "
-    if #charactersWhoCraftRecipe > 0 then
-        message = message..newLine..WrapTextInColorCode(L.crafters, "FF90EE90") -- Light green
-        for _, character in pairs(charactersWhoCraftRecipe) do
-            message = message..newLineInfo..character
-        end
-    end
-    if #charactersMissingRecipe > 0 then
-        message = message..newLine..WrapTextInColorCode(L.unlearned, "FFFFB6C1") -- Light red
-        for _, character in pairs(charactersMissingRecipe) do
-            local characterProfessionLevel = rm.getSavedProfessionLeveForCharacter(character, profession)
-            message = message..newLineInfo..character.." ("..characterProfessionLevel..")"
-        end
-    end
-    return rm.L.title..WrapTextInColorCode(message, "FFFFFFFF") -- White
-end
-
--- Ensures that the message is not displayed twice
-local function isTooltipMessageDisplayed(i, tooltip, message)
-    local lineText = _G[tooltip:GetName().."TextLeft"..i]:GetText()
-    lineText = lineText:gsub("^%s*(.-)%s*$", "%1") -- Removes blank spaces and new lines
-    return lineText == message
-end
-
-local function showTooltipMessage(tooltip, message)
-    for i = 1, tooltip:NumLines() do
-        if isTooltipMessageDisplayed(i, tooltip, message) then
-            return
-        end
-    end
-    tooltip:AddLine("\n"..message.."\n")
 end
 
 -- Recipes that have a profession name different than the profession's display name for some languages
@@ -61,19 +25,73 @@ local function handleMismatchedProfessionNames(professionName)
     return professionName
 end
 
+local function getRecipeTooltipMessage(recipe, profession)
+    local charactersMissingRecipe, charactersWhoCraftRecipe = rm.getAllCharactersRecipeStatus(recipe, profession)
+    local message = ""
+    local newLine = "\n"
+    local newLineInfo = "\n    "
+    if #charactersWhoCraftRecipe > 0 then
+        message = message..newLine..WrapTextInColorCode(L.crafters, F.colors.lightGreenHex)
+        for _, character in pairs(charactersWhoCraftRecipe) do
+            message = message..newLineInfo..character
+        end
+    end
+    if #charactersMissingRecipe > 0 then
+        message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightRedHex)
+        for _, character in pairs(charactersMissingRecipe) do
+            local characterProfessionLevel = rm.getSavedProfessionLeveForCharacter(character, profession)
+            message = message..newLineInfo..character.." ("..characterProfessionLevel..")"
+        end
+    end
+    return rm.L.title..WrapTextInColorCode(message, F.colors.whiteHex)
+end
+
+-- Ensures that the message is not displayed twice
+local function isTooltipMessageDisplayed(i, tooltip, message)
+    local lineText = _G[tooltip:GetName().."TextLeft"..i]:GetText()
+    lineText = lineText:gsub("^%s*(.-)%s*$", "%1") -- Removes blank spaces and new lines
+    return lineText == message
+end
+
+local function appendMessage(tooltip, message)
+    for i = 1, tooltip:NumLines() do
+        if isTooltipMessageDisplayed(i, tooltip, message) then
+            return
+        end
+    end
+    tooltip:AddLine("\n"..message.."\n")
+end
+
+local function getRecipeInfo(itemName, itemLink)
+    local recipeID = rm.getIDFromLink(itemLink)
+    local professionName = select(7, C_Item.GetItemInfo(itemLink))
+    professionName = handleMismatchedProfessionNames(professionName)
+    local professionID = rm.getProfessionID(professionName)
+    local recipe = rm.recipeDB[professionID][recipeID]
+    return recipe, professionID
+end
+
+local function showMessageInTooltip(tooltip, itemName, itemLink)
+    local recipe, professionID = getRecipeInfo(itemName, itemLink)
+    local message = getRecipeTooltipMessage(recipe, professionID)
+    local messageLineCount = select(2, message:gsub("\n", "\n"))
+    if messageLineCount > 0 then -- Not counting the "Recipe Master" header
+        appendMessage(tooltip, message)
+    end
+end
+
 -- Appends the message to a recipe's tooltip
 GameTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
     local itemName, itemLink = tooltip:GetItem()
     if itemName and isItemRecipe(itemName) then
-        local recipeID = rm.getIDFromLink(itemLink)
-        local professionName = select(7, C_Item.GetItemInfo(itemLink))
-        professionName = handleMismatchedProfessionNames(professionName)
-        local professionID = rm.getProfessionID(professionName)
-        local recipe = rm.recipes[professionID][recipeID]
-        local message = getRecipeTooltipMessage(recipe, professionID)
-        local messageLineCount = select(2, message:gsub("\n", "\n"))
-        if messageLineCount > 0 then -- Not counting the "Recipe Master" header
-            showTooltipMessage(tooltip, message)
-        end
+        showMessageInTooltip(tooltip, itemName, itemLink)
+    end
+end)
+
+-- Appends the message to a chat link tooltip
+ItemRefTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
+    local itemName, itemLink = tooltip:GetItem()
+    if itemName and isItemRecipe(itemName) then
+        showMessageInTooltip(tooltip, itemName, itemLink)
     end
 end)

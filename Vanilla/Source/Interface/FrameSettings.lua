@@ -74,11 +74,14 @@ F.offsets.dividerY = F.sizes.progressContainerHeight + 1
 F.colors.blue = {0.00, 0.44, 0.87}
 F.colors.gray = {0.62, 0.62, 0.62}
 F.colors.green = {0.1, 1, 0.1} -- GameFontGreen color
+F.colors.lightGreenHex = "ff90EE90"
+F.colors.lightRedHex = "ffFFB6C1"
 F.colors.orange = {1, 0.5, 0}
 F.colors.progressComplete = {1, 0.8431, 0} -- Gold
 F.colors.purple = {0.64, 0.21, 0.93}
 F.colors.red = {1, 0.1, 0.1}
 F.colors.white = {1, 1, 1}
+F.colors.whiteHex = "ffFFFFFF"
 F.colors.yellow = {1, 0.81960791349411, 0} -- GameFontNormal color
 
 F.fonts.bottomTab = "Fonts\\FRIZQT__.TTF"
