@@ -52,18 +52,19 @@ local function showRecipeMasterFrame(getSkillInfo)
 end
 
 local function isSystemWindowOpen()
-    return SettingsPanel:IsShown() or GameMenuFrame:IsShown() or HelpFrame:IsShown()
+    local isMapOpenInFullScreen = WorldMapFrame:IsShown() and GetCVar("miniWorldMap") == "0"
+    return SettingsPanel:IsShown() or GameMenuFrame:IsShown() or HelpFrame:IsShown() or isMapOpenInFullScreen
 end
 
 local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
     rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
-    rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
         if not isSystemWindowOpen() then
             waitForProfessionFrame()
             RunNextFrame(function() 
                 showRecipeMasterFrame(getNumSkills, getSkillInfo) 
+                rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
             end)
         end
     end
@@ -77,7 +78,8 @@ local function handleProfessionFrameClosed(getNumSkills, getSkillInfo, getItemLi
             return
         end
     end)
-    -- The tradeskill frame is still open after closing the craft frame, show recipes for it (default interface)
+    -- A profession frame is still open after closing the Enchanting frame, show recipes for it
+    -- Does not apply if Skillet or TradeSkillMaster is enabled
     handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
 end
 
