@@ -1,6 +1,6 @@
 local _, rm = ...
 
-rm.recipes[129] = {
+rm.recipeDB[129] = {
 	[16084] = {
 		skill = 125,
 		teachesSpell = "Expert",

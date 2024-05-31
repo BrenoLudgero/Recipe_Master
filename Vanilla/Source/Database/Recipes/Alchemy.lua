@@ -1,6 +1,6 @@
 local _, rm = ...
 
-rm.recipes[171] = {
+rm.recipeDB[171] = {
 	[2553] = {
 		skill = 50,
 		teachesItem = 2457,
@@ -92,26 +92,26 @@ rm.recipes[171] = {
 		teachesItem = 3826,
 		teachesSpell = 3451,
 	},
+	[17709] = {
+		skill = 190,
+		teachesItem = 17708,
+		teachesSpell = 21923,
+	},
 	[6057] = {
 		skill = 190,
 		teachesItem = 6052,
 		teachesSpell = 7259,
 	},
-	[17709] = {
+	[6056] = {
 		skill = 190,
-		teachesItem = 17708,
-		teachesSpell = 21923,
+		teachesItem = 6050,
+		teachesSpell = 7258,
 	},
 	[217399] = {
 		season = "SoD",
 		skill = 190,
 		teachesItem = 217398,
 		teachesSpell = 439960,
-	},
-	[6056] = {
-		skill = 190,
-		teachesItem = 6050,
-		teachesSpell = 7258,
 	},
 	[3832] = {
 		skill = 195,
@@ -155,11 +155,6 @@ rm.recipes[171] = {
 		teachesItem = 215162,
 		teachesSpell = 435971,
 	},
-	[9294] = {
-		skill = 225,
-		teachesItem = 9144,
-		teachesSpell = 11458,
-	},
 	[9305] = {
 		skill = 225,
 		teachesItem = 6037,
@@ -169,6 +164,11 @@ rm.recipes[171] = {
 		skill = 225,
 		teachesItem = 3577,
 		teachesSpell = 11479,
+	},
+	[9294] = {
+		skill = 225,
+		teachesItem = 9144,
+		teachesSpell = 11458,
 	},
 	[9295] = {
 		skill = 235,
@@ -200,15 +200,15 @@ rm.recipes[171] = {
 		teachesItem = 21546,
 		teachesSpell = 26277,
 	},
-	[9300] = {
-		skill = 250,
-		teachesItem = 9224,
-		teachesSpell = 11477,
-	},
 	[3395] = {
 		skill = 250,
 		teachesItem = 3387,
 		teachesSpell = 3175,
+	},
+	[9300] = {
+		skill = 250,
+		teachesItem = 9224,
+		teachesSpell = 11477,
 	},
 	[9301] = {
 		skill = 250,
@@ -235,25 +235,32 @@ rm.recipes[171] = {
 		teachesItem = 13447,
 		teachesSpell = 17555,
 	},
+	[12958] = {
+		skill = 275,
+		teachesItem = 12360,
+		teachesSpell = 17187,
+	},
 	[13480] = {
 		skill = 275,
 		teachesItem = 13446,
 		teachesSpell = 17556,
 	},
-	[12958] = {
+	[13481] = {
 		skill = 275,
-		teachesItem = 12360,
-		teachesSpell = 17187,
+		teachesItem = 13453,
+		teachesSpell = 17557,
 	},
 	[13485] = {
 		skill = 275,
 		teachesItem = 7082,
 		teachesSpell = 17562,
 	},
-	[13481] = {
+	[20011] = {
+		repFaction = 270,
+		repLevel = 7,
 		skill = 275,
-		teachesItem = 13453,
-		teachesSpell = 17557,
+		teachesItem = 20007,
+		teachesSpell = 24365,
 	},
 	[13486] = {
 		skill = 275,
@@ -265,34 +272,10 @@ rm.recipes[171] = {
 		teachesItem = 7076,
 		teachesSpell = 17565,
 	},
-	[20011] = {
-		repFaction = 270,
-		repLevel = 7,
-		skill = 275,
-		teachesItem = 20007,
-		teachesSpell = 24365,
-	},
 	[13489] = {
 		skill = 275,
 		teachesItem = 12803,
 		teachesSpell = 17566,
-	},
-	[13487] = {
-		skill = 275,
-		teachesItem = 12808,
-		teachesSpell = 17564,
-	},
-	[13483] = {
-		skill = 275,
-		teachesItem = 7076,
-		teachesSpell = 17560,
-	},
-	[13482] = {
-		repFaction = 529,
-		repLevel = 6,
-		skill = 275,
-		teachesItem = 7078,
-		teachesSpell = 17559,
 	},
 	[13484] = {
 		repFaction = 576,
@@ -301,12 +284,29 @@ rm.recipes[171] = {
 		teachesItem = 7080,
 		teachesSpell = 17561,
 	},
+	[13487] = {
+		skill = 275,
+		teachesItem = 12808,
+		teachesSpell = 17564,
+	},
+	[13482] = {
+		repFaction = 529,
+		repLevel = 6,
+		skill = 275,
+		teachesItem = 7078,
+		teachesSpell = 17559,
+	},
 	[20012] = {
 		repFaction = 270,
 		repLevel = 5,
 		skill = 275,
 		teachesItem = 20002,
 		teachesSpell = 24366,
+	},
+	[13483] = {
+		skill = 275,
+		teachesItem = 7076,
+		teachesSpell = 17560,
 	},
 	[13491] = {
 		skill = 280,
@@ -323,17 +323,17 @@ rm.recipes[171] = {
 		teachesItem = 13454,
 		teachesSpell = 17573,
 	},
+	[13492] = {
+		skill = 285,
+		teachesItem = 13462,
+		teachesSpell = 17572,
+	},
 	[20013] = {
 		repFaction = 270,
 		repLevel = 8,
 		skill = 285,
 		teachesItem = 20008,
 		teachesSpell = 24367,
-	},
-	[13492] = {
-		skill = 285,
-		teachesItem = 13462,
-		teachesSpell = 17572,
 	},
 	[13496] = {
 		skill = 290,
@@ -377,15 +377,15 @@ rm.recipes[171] = {
 		teachesItem = 13506,
 		teachesSpell = 17634,
 	},
-	[13521] = {
-		skill = 300,
-		teachesItem = 13512,
-		teachesSpell = 17637,
-	},
 	[13519] = {
 		skill = 300,
 		teachesItem = 13510,
 		teachesSpell = 17635,
+	},
+	[13521] = {
+		skill = 300,
+		teachesItem = 13512,
+		teachesSpell = 17637,
 	},
 	[13520] = {
 		skill = 300,
