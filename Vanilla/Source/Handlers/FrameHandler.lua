@@ -96,13 +96,15 @@ local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidt
     else
         anchorFrameToProfessionFrame(professionFrame, yOffset)
     end
-    rm.mainFrame:SetFrameStrata(professionFrame:GetFrameStrata())
 end
 
 local function setParentDependentFramesPosition()
     local professionFrame = rm.getProfessionFrame()
-    local mainFrameWidth = rm.mainFrame:GetWidth()
-    updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidth)
+    if professionFrame then
+        local mainFrameWidth = rm.mainFrame:GetWidth()
+        updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidth)
+        rm.mainFrame:SetFrameStrata(professionFrame:GetFrameStrata())
+    end
 end
 
 local function updateProgressBarColor()
@@ -230,9 +232,6 @@ end
 function rm.hideRecipeMasterFrame()
     if not rm.mainFrame:IsShown() and not rm.getProfessionFrame() then
         rm.restoreButton:Hide()
-        return
-    elseif rm.getProfessionFrame() then
-        setParentDependentFramesPosition()
         return
     end
     rm.clearFrameContent()

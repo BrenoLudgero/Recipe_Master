@@ -254,7 +254,7 @@ local function createRowText(recipe, rowIcon, color)
 end
 
 function rm.createRecipeRow(recipe, color, desaturateIcon)
-    local yOffset = -(#rm.recipesContainer.children * (F.sizes.recipeIcon + rm.getPreference("iconSpacing")))
+    local yOffset = -(#rm.recipeContainer.children * (F.sizes.recipeIcon + rm.getPreference("iconSpacing")))
     local rowIcon = createRowIcon(recipe, yOffset)
     rowIcon:SetDesaturated(desaturateIcon)
     local recipeNameText = createRowText(recipe, rowIcon, color)
@@ -266,7 +266,7 @@ function rm.createRecipeRow(recipe, color, desaturateIcon)
     end
     rm.storeWidestRecipeTextWidth(recipeNameWidth, recipeInfoWidth)
     rowIcon.associatedText = recipeNameText
-    table.insert(rm.recipesContainer.children, rowIcon)
+    table.insert(rm.recipeContainer.children, rowIcon)
 end
 
 function rm.createCenteredText(parent)

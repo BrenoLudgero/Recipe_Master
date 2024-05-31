@@ -45,7 +45,7 @@ end
 local function showRecipeMasterFrame(getSkillInfo)
     rm.showRecipesFrame(getSkillInfo) 
     if noRecipesDisplayed() then
-        C_Timer.After(0.1, function() 
+        C_Timer.After(0.01, function() 
             rm.updateRecipeDisplay(getSkillInfo) 
         end)
     end
@@ -71,8 +71,8 @@ local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLi
 end
 
 local function handleProfessionFrameClosed(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
-    -- Delayed for one frame in case TradeSkillMaster is enabled, its frame is not considered closed immediately
-    RunNextFrame(function()
+    -- Delayed in case TradeSkillMaster or Skillet is enabled, their frames are not considered closed immediately
+    C_Timer.After(0.01, function()
         if not rm.getProfessionFrame() then
             rm.hideRecipeMasterFrame()
             return
