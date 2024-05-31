@@ -83,13 +83,13 @@ local function isMiningSkill(recipeID)
 end
 
 local function getAdditionalRecipeData(ID)
-   local name, link, quality, _, _, _, _, _, _, texture = C_Item.GetItemInfo(ID)
+    local name, link, quality, _, _, _, _, _, _, texture = C_Item.GetItemInfo(ID)
     if isMiningSkill(ID) then
         name = GetSpellInfo(ID)
         link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
-        texture = rm.recipes[186][ID].icon
+        texture = rm.recipeDB[186][ID].icon
     end
-    return rm.removeRecipePrefix(name, true), link, qualit, texture
+    return rm.removeRecipePrefix(name, true), link, quality, texture
 end
 
 local function saveRecipeData(recipeID, recipeData)
@@ -121,7 +121,7 @@ function rm.getProfessionRecipes(getSkillInfoFunction)
     local savedProfessionsAndSkills = rm.getCurrentCharacterSavedVariables()
     for professionID, professionData in pairs(savedProfessionsAndSkills) do
         if isTheDisplayedProfession(professionID) then
-            local professionRecipesDatabase = rm.recipes[professionID]
+            local professionRecipesDatabase = rm.recipeDB[professionID]
             for recipeID, recipeData in pairs(professionRecipesDatabase) do
                 if not professionRecipes[recipeID] then
                     local recipe = saveRecipeData(recipeID, recipeData)

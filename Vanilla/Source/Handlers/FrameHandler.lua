@@ -252,7 +252,7 @@ end
 
 function rm.handleSourcesTabClick()
     rm.showSourcesFrameElements()
-    rm.showCenteredText("Click a recipe icon to show its sources", F.colors.green) -- VISUAL INSTRUCTION
+    rm.showCenteredText(L.comingSoon, F.colors.green)
 end
 
 function rm.handleFishingTabClick()

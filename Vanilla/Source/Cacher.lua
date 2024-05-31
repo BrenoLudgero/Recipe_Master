@@ -3,7 +3,7 @@ local L = rm.L
 
 local function cacheAllRecipes()
     for professionID in pairs(L.professions) do
-        for recipeID in pairs(rm.recipes[professionID]) do
+        for recipeID in pairs(rm.recipeDB[professionID]) do
             local info = C_Item.GetItemInfo(recipeID)
             if not info then
                 info = GetSpellInfo(recipeID)
