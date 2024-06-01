@@ -11,8 +11,21 @@ local function isItemRecipe(itemName)
     return false
 end
 
+local function isSpecialLeatherworkingRecipe(recipeID)
+    return (
+        recipeID == 22694 
+        or recipeID == 22695 
+        or recipeID == 22697 
+        or recipeID == 22698
+    )
+end
+
 -- Recipes that have a profession name different than the profession's display name for some languages
-local function handleMismatchedProfessionNames(professionName)
+local function handleMismatchedProfessionNames(recipeID, itemLink)
+    if isSpecialLeatherworkingRecipe(recipeID) then
+        return L.professions[165]
+    end
+    local professionName = select(7, C_Item.GetItemInfo(itemLink))
     if professionName == "가죽세공" then
         return "가죽 세공"
     elseif professionName == "기계 공학" then
@@ -64,8 +77,7 @@ end
 
 local function getRecipeInfo(itemName, itemLink)
     local recipeID = rm.getIDFromLink(itemLink)
-    local professionName = select(7, C_Item.GetItemInfo(itemLink))
-    professionName = handleMismatchedProfessionNames(professionName)
+    local professionName = handleMismatchedProfessionNames(recipeID, itemLink)
     local professionID = rm.getProfessionID(professionName)
     local recipe = rm.recipeDB[professionID][recipeID]
     return recipe, professionID
