@@ -8,4 +8,5 @@ rm.frame:SetScript("OnEvent", function(_, event, ...)
     end
     rm.handleSkillChange(event)
     rm.handleProfessionFrame(event)
+    rm.scaleInterfaceElements(event)
 end)

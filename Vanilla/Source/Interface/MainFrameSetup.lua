@@ -19,6 +19,8 @@ end
 
 local function isMouseInsideScrollFrame()
     local mouseX, mouseY = GetCursorPosition()
+    local scale = rm.scrollFrame:GetEffectiveScale()
+    mouseX, mouseY = mouseX/scale, mouseY/scale
     local frameX, frameY = rm.scrollFrame:GetCenter()
     local frameWidth = rm.scrollFrame:GetWidth()
     local frameHeight = rm.scrollFrame:GetHeight()

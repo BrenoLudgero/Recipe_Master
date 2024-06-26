@@ -1,11 +1,21 @@
 local addonName, rm = ...
 
 rm.frame:RegisterEvent("ADDON_LOADED")
+rm.frame:RegisterEvent("UI_SCALE_CHANGED")
 rm.frame:RegisterEvent("SKILL_LINES_CHANGED")
 rm.frame:RegisterEvent("TRADE_SKILL_SHOW")
 rm.frame:RegisterEvent("TRADE_SKILL_CLOSE")
 rm.frame:RegisterEvent("CRAFT_SHOW")
 rm.frame:RegisterEvent("CRAFT_CLOSE")
+
+-- Adjusts all interface elements based on the user's UI Scale setting
+-- This fires when the setting is updated and after every login / reload
+function rm.scaleInterfaceElements(event)
+    if event == "UI_SCALE_CHANGED" then
+        local uiScale = UIParent:GetScale()
+        rm.mainFrame:SetScale(uiScale + 0.1)
+    end
+end
 
 function rm.handleAddonLoaded(event, addon) 
     if event == "ADDON_LOADED" and addon == addonName then
