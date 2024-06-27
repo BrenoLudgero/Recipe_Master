@@ -74,13 +74,13 @@ rm.recipeDB[333] = {
 		skill = 145,
 		teachesItem = 13617,
 	},
-	[11152] = {
-		skill = 145,
-		teachesItem = 13620,
-	},
 	[11150] = {
 		skill = 145,
 		teachesItem = 13612,
+	},
+	[11152] = {
+		skill = 145,
+		teachesItem = 13620,
 	},
 	[20752] = {
 		skill = 150,
@@ -140,11 +140,6 @@ rm.recipeDB[333] = {
 		skill = 225,
 		teachesItem = 13868,
 	},
-	[215138] = {
-		season = "SoD",
-		skill = 225,
-		teachesItem = 435903,
-	},
 	[215129] = {
 		season = "SoD",
 		skill = 225,
@@ -156,17 +151,22 @@ rm.recipeDB[333] = {
 		teachesItem = 217308,
 		teachesSpell = 439156,
 	},
+	[215138] = {
+		season = "SoD",
+		skill = 225,
+		teachesItem = 435903,
+	},
 	[11208] = {
 		skill = 230,
 		teachesItem = 13915,
 	},
-	[11224] = {
-		skill = 235,
-		teachesItem = 13933,
-	},
 	[11223] = {
 		skill = 235,
 		teachesItem = 13931,
+	},
+	[11224] = {
+		skill = 235,
+		teachesItem = 13933,
 	},
 	[11225] = {
 		skill = 245,
@@ -231,22 +231,18 @@ rm.recipeDB[333] = {
 		skill = 280,
 		teachesItem = 20016,
 	},
-	[16224] = {
-		skill = 285,
-		teachesItem = 20015,
-	},
 	[16223] = {
 		skill = 285,
 		teachesItem = 20029,
+	},
+	[16224] = {
+		skill = 285,
+		teachesItem = 20015,
 	},
 	[16243] = {
 		skill = 290,
 		teachesItem = 16207,
 		teachesSpell = 20051,
-	},
-	[19444] = {
-		skill = 290,
-		teachesItem = 23799,
 	},
 	[19445] = {
 		repFaction = 576,
@@ -254,15 +250,19 @@ rm.recipeDB[333] = {
 		skill = 290,
 		teachesItem = 23800,
 	},
-	[16242] = {
-		skill = 290,
-		teachesItem = 20028,
-	},
 	[22392] = {
 		repFaction = 576,
 		repLevel = 5,
 		skill = 290,
 		teachesItem = 27837,
+	},
+	[19444] = {
+		skill = 290,
+		teachesItem = 23799,
+	},
+	[16242] = {
+		skill = 290,
+		teachesItem = 20028,
 	},
 	[19446] = {
 		repFaction = 529,
@@ -298,10 +298,6 @@ rm.recipeDB[333] = {
 		skill = 300,
 		teachesItem = 20025,
 	},
-	[19449] = {
-		skill = 300,
-		teachesItem = 23804,
-	},
 	[16251] = {
 		skill = 300,
 		teachesItem = 20011,
@@ -310,6 +306,10 @@ rm.recipeDB[333] = {
 		skill = 300,
 		teachesItem = 22749,
 	},
+	[19449] = {
+		skill = 300,
+		teachesItem = 23804,
+	},
 	[20756] = {
 		repFaction = 270,
 		repLevel = 6,
@@ -317,9 +317,21 @@ rm.recipeDB[333] = {
 		teachesItem = 20749,
 		teachesSpell = 25129,
 	},
+	[20730] = {
+		skill = 300,
+		teachesItem = 25079,
+	},
 	[20731] = {
 		skill = 300,
 		teachesItem = 25080,
+	},
+	[18260] = {
+		skill = 300,
+		teachesItem = 22750,
+	},
+	[16254] = {
+		skill = 300,
+		teachesItem = 20032,
 	},
 	[20757] = {
 		repFaction = 270,
@@ -328,29 +340,9 @@ rm.recipeDB[333] = {
 		teachesItem = 20748,
 		teachesSpell = 25130,
 	},
-	[16249] = {
+	[16250] = {
 		skill = 300,
-		teachesItem = 20036,
-	},
-	[18260] = {
-		skill = 300,
-		teachesItem = 22750,
-	},
-	[19448] = {
-		skill = 300,
-		teachesItem = 23803,
-	},
-	[16254] = {
-		skill = 300,
-		teachesItem = 20032,
-	},
-	[20730] = {
-		skill = 300,
-		teachesItem = 25079,
-	},
-	[20734] = {
-		skill = 300,
-		teachesItem = 25083,
+		teachesItem = 20031,
 	},
 	[19447] = {
 		repFaction = 529,
@@ -358,9 +350,9 @@ rm.recipeDB[333] = {
 		skill = 300,
 		teachesItem = 23802,
 	},
-	[16250] = {
+	[20734] = {
 		skill = 300,
-		teachesItem = 20031,
+		teachesItem = 25083,
 	},
 	[20732] = {
 		repFaction = 609,
@@ -368,17 +360,13 @@ rm.recipeDB[333] = {
 		skill = 300,
 		teachesItem = 25081,
 	},
-	[20727] = {
-		skill = 300,
-		teachesItem = 25073,
-	},
-	[20729] = {
-		skill = 300,
-		teachesItem = 25078,
-	},
 	[20736] = {
 		skill = 300,
 		teachesItem = 25086,
+	},
+	[16249] = {
+		skill = 300,
+		teachesItem = 20036,
 	},
 	[20735] = {
 		skill = 300,
@@ -388,18 +376,30 @@ rm.recipeDB[333] = {
 		skill = 300,
 		teachesItem = 25074,
 	},
+	[20727] = {
+		skill = 300,
+		teachesItem = 25073,
+	},
+	[19448] = {
+		skill = 300,
+		teachesItem = 23803,
+	},
+	[20729] = {
+		skill = 300,
+		teachesItem = 25078,
+	},
 	[20733] = {
 		repFaction = 609,
 		repLevel = 6,
 		skill = 300,
 		teachesItem = 25082,
 	},
-	[20726] = {
-		skill = 300,
-		teachesItem = 25072,
-	},
 	[16255] = {
 		skill = 300,
 		teachesItem = 20035,
+	},
+	[20726] = {
+		skill = 300,
+		teachesItem = 25072,
 	},
 }
