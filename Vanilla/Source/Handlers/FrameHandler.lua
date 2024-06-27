@@ -24,18 +24,21 @@ function rm.getProfessionFrame()
     return frame
 end
 
-local function keepMainFrameHeightSameAsProfessionFrame(professionFrame, yOffset)
+local function keepMainFrameHeightSameAsProfessionFrame(professionFrame, uiScale)
+    xOffset = -(F.offsets.mainX * uiScale)
     rm.mainFrame:SetScript("OnUpdate", function(self, elapsed)
-        local parentScale = professionFrame:GetEffectiveScale()
-        self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", F.offsets.mainX * parentScale, F.offsets.mainY * parentScale)
-        self:SetPoint("BOTTOM", professionFrame, "BOTTOM", 0, yOffset * parentScale)
+        self:ClearAllPoints()
+        self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", xOffset, F.offsets.mainTop)
+        self:SetPoint("BOTTOM", professionFrame, "BOTTOM", 0, F.offsets.mainBottom)
     end)
 end
 
-local function anchorFrameToProfessionFrame(professionFrame, yOffset)
-    rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
-    rm.restoreButton:SetPoint("LEFT", professionFrame, "TOPRIGHT", F.offsets.restoreButtonX, F.offsets.restoreButtonY)
-    keepMainFrameHeightSameAsProfessionFrame(professionFrame, yOffset)
+local function anchorFrameToProfessionFrame(professionFrame)
+    local uiScale = UIParent:GetScale()
+    local xOffset = -(F.offsets.restoreButtonX * uiScale)
+    rm.restoreButton:ClearAllPoints()
+    rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", xOffset, F.offsets.restoreButtonY)
+    keepMainFrameHeightSameAsProfessionFrame(professionFrame, uiScale)
 end
 
 local function replaceHideFrameButtonWithScrollTexture()
@@ -80,21 +83,21 @@ local function setFrameMovableAndResizable(professionFrame, mainFrameWidth)
 end
 
 local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidth)
-    local yOffset = 73
     if professionFrame == SkilletFrame then
         yOffset = 0
         F.offsets.mainX = 0
-        F.offsets.mainY = 0
+        F.offsets.mainTop = 0
+        F.offsets.mainBottom = 0
         F.offsets.headerY = -33
-        F.offsets.restoreButtonX = 0.5
-        F.offsets.restoreButtonY = -16
+        F.offsets.restoreButtonX = 0
+        F.offsets.restoreButtonY = 1.5
         F.sizes.headerTextureHeight = 40
     end
     if professionFrame == UIParent then -- TSM is enabled
         replaceHideFrameButtonWithScrollTexture()
         setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     else
-        anchorFrameToProfessionFrame(professionFrame, yOffset)
+        anchorFrameToProfessionFrame(professionFrame)
     end
 end
 
