@@ -14,6 +14,7 @@ function rm.scaleInterfaceElements(event)
     if event == "UI_SCALE_CHANGED" then
         local uiScale = UIParent:GetScale()
         rm.mainFrame:SetScale(uiScale + 0.1)
+        rm.restoreButton:SetScale(uiScale + 0.1)
     end
 end
 
