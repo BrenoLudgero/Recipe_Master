@@ -29,7 +29,7 @@ end
 local defaultMainFramePreferences = {
     mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
     mainFrameHeight = 413, -- Used when TradeSkillMaster is enabled
-    sortAscending = false,
+    sortAscending = true,
     sortRecipesBy = "Name"
 }
 
@@ -39,16 +39,12 @@ local defaultOptionsFramePreferences = {
     progressTexture = "Interface/TARGETINGFRAME/BarFill2",
     restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
     iconSpacing = 5,
-    showLearnedRecipes = false,
-    showRecipesInfo = false,
+    showLearnedRecipes = true,
+    showRecipesInfo = true,
 }
 
 function rm.resetOptionsFramePreferences()
     RecipeMasterOptionsFramePreferences = defaultOptionsFramePreferences
-    -- When set to true in defaultPreferences, boolean options
-    -- are always loaded from SavedVariables as true for some reason
-    RecipeMasterOptionsFramePreferences["showLearnedRecipes"] = true
-    RecipeMasterOptionsFramePreferences["showRecipesInfo"] = true
 end
 
 local function oldPreferencesFound()
@@ -66,7 +62,6 @@ function rm.createSavedVariables()
     end
     if not RecipeMasterMainFramePreferences then
         RecipeMasterMainFramePreferences = defaultMainFramePreferences
-        RecipeMasterMainFramePreferences["sortAscending"] = true
     end
     if not RecipeMasterOptionsFramePreferences then
         rm.resetOptionsFramePreferences()
@@ -76,12 +71,12 @@ end
 -- Inserts new options created after an update in SavedVariables
 function rm.updateSavedVariables()
     for key, value in pairs(defaultMainFramePreferences) do
-        if not RecipeMasterMainFramePreferences[key] then
+        if RecipeMasterMainFramePreferences[key] == nil then
             RecipeMasterMainFramePreferences[key] = value
         end
     end
     for key, value in pairs(defaultOptionsFramePreferences) do
-        if not RecipeMasterOptionsFramePreferences[key] then
+        if RecipeMasterOptionsFramePreferences[key] == nil then
             RecipeMasterOptionsFramePreferences[key] = value
         end
     end
