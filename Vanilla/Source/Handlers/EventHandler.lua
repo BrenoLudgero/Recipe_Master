@@ -42,12 +42,6 @@ function rm.handleSkillChange(event)
     end
 end
 
-local function waitForProfessionFrame()
-    while not rm.getProfessionFrame() do
-        do end
-    end
-end
-
 -- Happens on the first time opening Recipe Master after login
 local function noRecipesDisplayed()
     return #rm.recipeContainer.children == 0
@@ -62,22 +56,14 @@ local function showRecipeMasterFrame(getSkillInfo)
     end
 end
 
-local function isSystemWindowOpen()
-    local isMapOpenInFullScreen = WorldMapFrame:IsShown() and GetCVar("miniWorldMap") == "0"
-    return SettingsPanel:IsShown() or GameMenuFrame:IsShown() or HelpFrame:IsShown() or isMapOpenInFullScreen
-end
-
 local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
     rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
-        if not isSystemWindowOpen() then
-            waitForProfessionFrame()
-            RunNextFrame(function() 
-                showRecipeMasterFrame(getNumSkills, getSkillInfo) 
-                rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
-            end)
-        end
+        RunNextFrame(function() 
+            showRecipeMasterFrame(getSkillInfo) 
+            rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
+        end)
     end
 end
 
