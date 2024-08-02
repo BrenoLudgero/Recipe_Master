@@ -53,6 +53,11 @@ Source/Database/Sources/Leatherworking.lua
 Source/Database/Sources/Mining.lua
 Source/Database/Sources/Tailoring.lua
 
+Source/Database/NPCs.lua
+Source/Database/Objects.lua
+Source/Database/Quests.lua
+Source/Database/Unique.lua
+
 Source/Handlers/SpecializationHandler.lua
 Source/Handlers/ProfessionHandler.lua
 Source/Handlers/SkillHandler.lua
