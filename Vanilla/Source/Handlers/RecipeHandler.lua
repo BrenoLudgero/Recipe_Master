@@ -82,6 +82,26 @@ local function isMiningSkill(recipeID)
     return recipeID == 14891 or recipeID == 22967
 end
 
+local function isCapitalized(string)
+    return string:sub(1, 1):upper() == string:sub(1, 1)
+end
+
+local function capitalizeName(string)
+    if not isCapitalized(string) then
+        return string:gsub("^%l", string.upper)
+    end
+end
+
+local function removeRecipePrefix(recipeName)
+    for _, prefix in pairs(L.recipePrefixes) do
+        if recipeName:sub(1, #prefix) == prefix then
+            local strippedName = recipeName:sub(#prefix + 1)
+            return capitalizeName(strippedName) or strippedName
+        end
+    end
+    return recipeName
+end
+
 local function getAdditionalRecipeData(ID)
     local name, link, quality, _, _, _, _, _, _, texture = C_Item.GetItemInfo(ID)
     if isMiningSkill(ID) then

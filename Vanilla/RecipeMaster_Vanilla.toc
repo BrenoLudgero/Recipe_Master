@@ -43,7 +43,6 @@ Source/Database/Recipes/Leatherworking.lua
 Source/Database/Recipes/Mining.lua
 Source/Database/Recipes/Tailoring.lua
 
-Source/Handlers/Utils.lua
 Source/Handlers/SpecializationHandler.lua
 Source/Handlers/ProfessionHandler.lua
 Source/Handlers/SkillHandler.lua

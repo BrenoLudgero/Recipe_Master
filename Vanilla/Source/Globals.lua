@@ -31,6 +31,12 @@ function rm.getProfessionID(professionName)
     return tInvert(L.professions)[professionName]
 end
 
+function rm.getIDFromLink(link)
+    local strippedLink = select(2, strsplit(":", link))
+    local ID = tonumber(string.match(strippedLink, "%d+")) -- Extracts only numerical part
+    return ID
+end
+
 function rm.getSeason()
     local season = C_Seasons.GetActiveSeason()
     local seasonNames = {
