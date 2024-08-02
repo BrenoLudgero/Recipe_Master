@@ -26,6 +26,4 @@ end
 function rm.cacheAllAssets()
     cacheAllRecipes()
     cacheAllSkills()
-    cacheAllRecipes = nil
-    cacheAllSkills = nil
 end

@@ -2,41 +2,10 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-local function deleteFrameCreationFunctions()
-    rm.createFrame = nil
-    rm.createHeader = nil
-    rm.createBorder = nil
-    rm.createSortBar = nil
-    rm.createDivider = nil
-    rm.createSearchBar = nil
-    rm.createBottomTab = nil
-    rm.createHeaderText = nil
-    rm.createSortByText = nil
-    rm.createOptionsText = nil
-    rm.createProgressBar = nil
-    rm.createScrollFrame = nil
-    rm.createInnerBorder = nil
-    rm.createIconDropdown = nil
-    rm.createCenteredText = nil
-    rm.createOptionsFrame = nil
-    rm.createSpacingSlider = nil
-    rm.createOpacitySlider = nil
-    rm.createRestoreButton = nil
-    rm.createSortOrderButton = nil
-    rm.createProgressBarText = nil
-    rm.setUpButtonWithTooltip = nil
-    rm.createProgressContainer = nil
-    rm.createResetDefaultsButton = nil
-    rm.createRecipeContainerFrame = nil
-    rm.createProgressColorDropdown = nil
-    rm.createShowLearnedCheckButton = nil
-    rm.createProgressBrightnessDropdown = nil
-end
-
 -- Called in EventHandler.handleAddonLoaded, after SavedVariables are created or loaded
 function rm.createAllFrameElements()
     F.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
-    F.colors.sourcesBackground = {0.55, 0.55, 0.55, rm.getPreference("backgroundOpacity")}
+    F.colors.sourcesBackground = {0.6, 0.6, 0.6, rm.getPreference("backgroundOpacity")}
 
     ---------------------------- Main frame ------------------------------
     rm.mainFrame = rm.createFrame()

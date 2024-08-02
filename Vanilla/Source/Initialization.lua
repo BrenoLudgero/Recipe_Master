@@ -21,9 +21,10 @@ rm.F = { -- Frame settings
     textures = {}
 }
 
+-- Creates the chat command "/rm" to open the add-on's options menu
 SLASH_RECIPEMASTER1 = "/rm"
 SlashCmdList["RECIPEMASTER"] = function()
-    Settings.OpenToCategory(rm.L.title)
+    Settings.OpenToCategory(rm.frame.name)
 end
 
 local defaultMainFramePreferences = {
@@ -40,7 +41,7 @@ local defaultOptionsFramePreferences = {
     restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
     iconSpacing = 5,
     showLearnedRecipes = true,
-    showRecipesInfo = true,
+    showRecipesInfo = true
 }
 
 function rm.resetOptionsFramePreferences()
@@ -51,8 +52,8 @@ local function oldPreferencesFound()
     return RecipeMasterPreferences
 end
 
--- Detects if the old preferences exists ("RecipeMasterPreferences") and deletes it (1.0.3 -> 1.1.0)
--- or creates tables to store the characters' learned skills and user preferences in SavedVariables
+-- Detects and deletes the old preferences table "RecipeMasterPreferences" (1.0.3 -> 1.1.0)
+-- and/or creates new tables to store the characters' learned skills and user preferences in SavedVariables
 function rm.createSavedVariables()
     if oldPreferencesFound() then
         RecipeMasterPreferences = nil
@@ -88,21 +89,5 @@ function rm.updateSavedCharacters()
     end
     if not RecipeMasterProfessionsAndSkills[rm.server][rm.currentCharacter] then
         RecipeMasterProfessionsAndSkills[rm.server][rm.currentCharacter] = {}
-    end
-end
-
-function rm.getPreference(preference)
-    if RecipeMasterMainFramePreferences[preference] ~= nil then
-        return RecipeMasterMainFramePreferences[preference]
-    elseif RecipeMasterOptionsFramePreferences[preference] ~= nil then
-        return RecipeMasterOptionsFramePreferences[preference]
-    end
-end
-
-function rm.setPreference(preference, newValue)
-    if RecipeMasterMainFramePreferences[preference] ~= nil then
-        RecipeMasterMainFramePreferences[preference] = newValue
-    elseif RecipeMasterOptionsFramePreferences[preference] ~= nil then
-        RecipeMasterOptionsFramePreferences[preference] = newValue
     end
 end

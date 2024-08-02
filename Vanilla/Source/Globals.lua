@@ -10,6 +10,10 @@ rm.totalRecipesCount = 0
 rm.learnedPercentage = 0
 rm.widestRecipeTextWidth = 0
 
+function rm.isRecipeListEmpty()
+    return #rm.recipesList.children == 0
+end
+
 function rm.tableContains(table, item)
     for _, value in ipairs(table) do
         if value == item then
@@ -44,4 +48,20 @@ function rm.getSeason()
         [Enum.SeasonID.SeasonOfDiscovery] = "SoD"
     }
     return seasonNames[season]
+end
+
+function rm.getPreference(preference)
+    if RecipeMasterMainFramePreferences[preference] ~= nil then
+        return RecipeMasterMainFramePreferences[preference]
+    elseif RecipeMasterOptionsFramePreferences[preference] ~= nil then
+        return RecipeMasterOptionsFramePreferences[preference]
+    end
+end
+
+function rm.setPreference(preference, newValue)
+    if RecipeMasterMainFramePreferences[preference] ~= nil then
+        RecipeMasterMainFramePreferences[preference] = newValue
+    elseif RecipeMasterOptionsFramePreferences[preference] ~= nil then
+        RecipeMasterOptionsFramePreferences[preference] = newValue
+    end
 end
