@@ -68,11 +68,6 @@ rm.recipeDB[185] = {
 		teachesItem = 5477,
 		teachesSpell = 6416,
 	},
-	[2697] = {
-		skill = 50,
-		teachesItem = 724,
-		teachesSpell = 2542,
-	},
 	[6329] = {
 		skill = 50,
 		teachesItem = 6316,
@@ -82,6 +77,11 @@ rm.recipeDB[185] = {
 		skill = 50,
 		teachesItem = 5476,
 		teachesSpell = 6415,
+	},
+	[2697] = {
+		skill = 50,
+		teachesItem = 724,
+		teachesSpell = 2542,
 	},
 	[18160] = {
 		class = "Rogue",
@@ -144,15 +144,20 @@ rm.recipeDB[185] = {
 		teachesItem = 1017,
 		teachesSpell = 2549,
 	},
+	[5488] = {
+		skill = 100,
+		teachesItem = 5479,
+		teachesSpell = 6418,
+	},
 	[2699] = {
 		skill = 100,
 		teachesItem = 1082,
 		teachesSpell = 2547,
 	},
-	[5488] = {
-		skill = 100,
-		teachesItem = 5479,
-		teachesSpell = 6418,
+	[5489] = {
+		skill = 110,
+		teachesItem = 5480,
+		teachesSpell = 6419,
 	},
 	[3734] = {
 		skill = 110,
@@ -163,11 +168,6 @@ rm.recipeDB[185] = {
 		skill = 110,
 		teachesItem = 3666,
 		teachesSpell = 3377,
-	},
-	[5489] = {
-		skill = 110,
-		teachesItem = 5480,
-		teachesSpell = 6419,
 	},
 	[2700] = {
 		skill = 110,
@@ -218,40 +218,40 @@ rm.recipeDB[185] = {
 		teachesItem = 12210,
 		teachesSpell = 15855,
 	},
-	[6369] = {
-		skill = 175,
-		teachesItem = 4594,
-		teachesSpell = 7828,
-	},
 	[17062] = {
 		skill = 175,
 		teachesItem = 8364,
 		teachesSpell = 20916,
 	},
-	[12232] = {
+	[6369] = {
 		skill = 175,
-		teachesItem = 12213,
-		teachesSpell = 15863,
+		teachesItem = 4594,
+		teachesSpell = 7828,
 	},
 	[12231] = {
 		skill = 175,
 		teachesItem = 12212,
 		teachesSpell = 15861,
 	},
+	[12232] = {
+		skill = 175,
+		teachesItem = 12213,
+		teachesSpell = 15863,
+	},
 	[21219] = {
 		skill = 175,
 		teachesItem = 21217,
 		teachesSpell = 25954,
 	},
-	[12233] = {
-		skill = 175,
-		teachesItem = 12214,
-		teachesSpell = 15865,
-	},
 	[3737] = {
 		skill = 175,
 		teachesItem = 3729,
 		teachesSpell = 3400,
+	},
+	[12233] = {
+		skill = 175,
+		teachesItem = 12214,
+		teachesSpell = 15865,
 	},
 	[4609] = {
 		skill = 175,
@@ -302,15 +302,15 @@ rm.recipeDB[185] = {
 		teachesItem = 13930,
 		teachesSpell = 18241,
 	},
-	[16111] = {
-		skill = 225,
-		teachesItem = 12216,
-		teachesSpell = 15915,
-	},
 	[13940] = {
 		skill = 225,
 		teachesItem = 13927,
 		teachesSpell = 18239,
+	},
+	[16111] = {
+		skill = 225,
+		teachesItem = 12216,
+		teachesSpell = 15915,
 	},
 	[13942] = {
 		skill = 240,

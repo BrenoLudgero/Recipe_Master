@@ -42,7 +42,10 @@ local function getRecipeTooltipMessage(recipe, profession)
     local charactersMissingRecipe, charactersWhoCraftRecipe = rm.getAllCharactersRecipeStatus(recipe, profession)
     local message = ""
     local newLine = "\n"
-    local newLineInfo = "\n    "
+    local newLineInfo = "\n  "
+    if recipe.purchasable then
+        message = message..newLine..WrapTextInColorCode(L.purchasableRecipe, F.colors.lightBlueHex)
+    end
     if #charactersWhoCraftRecipe > 0 then
         message = message..newLine..WrapTextInColorCode(L.crafters, F.colors.lightGreenHex)
         for _, character in pairs(charactersWhoCraftRecipe) do
@@ -80,6 +83,7 @@ local function getRecipeInfo(itemName, itemLink)
     local professionName = handleMismatchedProfessionNames(recipeID, itemLink)
     local professionID = rm.getProfessionID(professionName)
     local recipe = rm.recipeDB[professionID][recipeID]
+    recipe.purchasable = rm.sourceDB[professionID][recipeID] and rm.sourceDB[professionID][recipeID]["vendor"] ~= nil
     return recipe, professionID
 end
 

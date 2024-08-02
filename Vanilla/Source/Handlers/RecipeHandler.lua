@@ -113,7 +113,7 @@ local function getAdditionalRecipeData(ID)
     return name, link, quality, texture
 end
 
-local function saveRecipeData(recipeID, recipeData)
+local function saveRecipeData(recipeID, recipeData, professionID)
     local rName, rLink, rQuality, rTexture = getAdditionalRecipeData(recipeID)
     return {
         class = recipeData["class"], 
@@ -124,6 +124,7 @@ local function saveRecipeData(recipeID, recipeData)
         repFaction = recipeData["repFaction"], 
         repLevel = recipeData["repLevel"], 
         season = recipeData["season"], 
+        sources = rm.sourceDB[professionID][recipeID],
         skill = recipeData["skill"], 
         specialization = recipeData["specialization"], 
         teachesItem = recipeData["teachesItem"], 
@@ -132,10 +133,10 @@ local function saveRecipeData(recipeID, recipeData)
     }
 end
 
-local function storeRecipeData(recipesDatabase, professionRecipes)
+local function storeRecipeData(recipesDatabase, professionRecipes, professionID)
     for recipeID, recipeData in pairs(recipesDatabase) do
         if not professionRecipes[recipeID] then
-            local recipe = saveRecipeData(recipeID, recipeData)
+            local recipe = saveRecipeData(recipeID, recipeData, professionID)
             professionRecipes[recipeID] = recipe
         end
     end
@@ -152,7 +153,7 @@ function rm.getProfessionRecipes(getSkillInfoFunction)
     for professionID, professionData in pairs(savedProfessionsAndSkills) do
         if isDisplayedProfession(professionID) then
             local professionRecipesDatabase = rm.recipeDB[professionID]
-            storeRecipeData(professionRecipesDatabase, professionRecipes)
+            storeRecipeData(professionRecipesDatabase, professionRecipes, professionID)
             break
         end
     end
