@@ -25,15 +25,10 @@ end
 function rm.handleAddonLoaded(event, addon) 
     if event == "ADDON_LOADED" and addon == addonName then
         rm.cacheAllAssets()
-        rm.cacheAllAssets = nil
         rm.createSavedVariables()
-        rm.createSavedVariables = nil
         rm.updateSavedVariables()
-        rm.updateSavedVariables = nil
         rm.updateSavedCharacters()
-        rm.updateSavedCharacters = nil
         rm.createAllFrameElements()
-        rm.createAllFrameElements = nil
         rm.frame:UnregisterEvent("ADDON_LOADED")
     end
 end
@@ -46,12 +41,7 @@ function rm.handleSkillChange(event)
     end
 end
 
--- Happens on the first time opening Recipe Master after login
-local function noRecipesDisplayed()
-    return #rm.recipeContainer.children == 0
-end
-
-local function showRecipeMasterFrame(getSkillInfo)
+local function showMainFrame(getSkillInfo)
     rm.showRecipesFrame(getSkillInfo) 
     if rm.isRecipeListEmpty() then -- Happens on the first time opening Recipe Master after login
         C_Timer.After(0.01, function() 
@@ -65,7 +55,7 @@ local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLi
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
         RunNextFrame(function() 
-            showRecipeMasterFrame(getSkillInfo) 
+            showMainFrame(getSkillInfo) 
             rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
         end)
     end
