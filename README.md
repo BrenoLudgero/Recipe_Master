@@ -1,7 +1,7 @@
 # Recipe Master
 [![CF](https://img.shields.io/badge/Download-CurseForge-orange)](https://www.curseforge.com/wow/addons/recipe-master) [![WowInterface](https://img.shields.io/badge/Download-WoWInterface%20(Vanilla)-blue)](https://www.wowinterface.com/downloads/info26701-RecipeMasterVanilla.html)
 
-![Main Window](/Images/Recipes_Window.png)
+![Recipes Window](/Images/Recipes_Window.png)
 
 ## Features
 * Complete Recipe Catalog:\
@@ -14,6 +14,8 @@
   Displayed recipes are always compatible with your character's unique attributes and the current season
 * Localization:\
   Recipe Master is localized and compatible with all available languages
+
+![Sources Window](/Images/Sources_Window.png)
 
 ## Functionalities
 * Click a recipe icon to show its sources
