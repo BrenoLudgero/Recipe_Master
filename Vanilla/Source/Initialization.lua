@@ -8,6 +8,7 @@ rm.currentFaction = UnitFactionGroup("player") -- Alliance/Horde, always in Engl
 rm.locale = GetLocale()
 rm.server = GetRealmName()
 rm.recipeDB = {}
+rm.sourceDB = {}
 rm.L = {} -- Localized text
 rm.L.title = GetAddOnMetadata(addonName, "Title")
 rm.F = { -- Frame settings

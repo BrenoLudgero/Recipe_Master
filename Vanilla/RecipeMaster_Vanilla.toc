@@ -42,6 +42,17 @@ Source/Database/Recipes/Leatherworking.lua
 Source/Database/Recipes/Mining.lua
 Source/Database/Recipes/Tailoring.lua
 
+Source/Database/Sources/Alchemy.lua
+Source/Database/Sources/Blacksmithing.lua
+Source/Database/Sources/Cooking.lua
+Source/Database/Sources/Enchanting.lua
+Source/Database/Sources/Engineering.lua
+Source/Database/Sources/Firstaid.lua
+Source/Database/Sources/Fishing.lua
+Source/Database/Sources/Leatherworking.lua
+Source/Database/Sources/Mining.lua
+Source/Database/Sources/Tailoring.lua
+
 Source/Handlers/SpecializationHandler.lua
 Source/Handlers/ProfessionHandler.lua
 Source/Handlers/SkillHandler.lua
