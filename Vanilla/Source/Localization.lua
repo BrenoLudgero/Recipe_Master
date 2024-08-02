@@ -1,29 +1,46 @@
 local _, rm = ...
 local L = rm.L
-local F = rm.F
 
+L.boss = BOSS
 L.brightness = OPTIONS_BRIGHTNESS
+L.chance = GARRISON_MISSION_CHANCE
 L.color = COLOR
-L.comingSoon = SPLASH_OPENS_SOON
 L.common = ITEM_QUALITY1_DESC
+L.congratulations = SPLASH_BOOST_HEADER
 L.crafters = GUILD_TRADE_SKILL_CRAFTERS_COLON
+L.drop = LOOT
+L.dungeon = LFG_TYPE_DUNGEON
+L.elite = ELITE
 L.epic = ITEM_QUALITY4_DESC
-L.fishingNotLearned = SPELL_FAILED_NOT_KNOWN -- "Spell not learned"
 L.fishing = PROFESSIONS_FISHING
+L.fishingNotLearned = SPELL_FAILED_NOT_KNOWN -- "Spell not learned"
 L.general = GENERAL
 L.hideWindow = HIDE
+L.item = HELPFRAME_ITEM_TITLE
 L.learned = TRADE_SKILLS_LEARNED_TAB
-L.unlearned = TRADE_SKILLS_UNLEARNED_TAB..":"
+L.level = GUILD_RECRUITMENT_LEVEL
+L.minimum = MINIMUM
+L.name = NAME
+L.object = SPELL_TARGET_TYPE7_DESC:gsub("^%l", string.upper) -- Capitalized "object"
+L.price = AUCTION_PRICE
+L.quality = QUALITY
+L.quest = TRANSMOG_SOURCE_2
 L.rare = ITEM_QUALITY3_DESC
+L.rareElite = L.rare.." "..L.elite
 L.recipes = TRADESKILL_SERVICE_LEARN
---L.reputation = REPUTATION
 L.resetDefaults = RESET_TO_DEFAULT
+L.show = SHOW
 L.skill = SKILL
 L.sortBy = select(1, strsplit(" ", RAID_FRAME_SORT_LABEL))..":" -- The first word of "Sort By" + ":"
 L.sources = SOURCES
---L.specialization = SPECIALIZATION
 L.subtitle = string.format(PETITION_CREATOR, rm.author).."\n"..GAME_VERSION_LABEL.." "..rm.version -- "Created by Breno Ludgero \n Version x.x.x"
 L.uncommon = ITEM_QUALITY2_DESC
+L.unique = ITEM_UNIQUE
+L.unlearned = TRADE_SKILLS_UNLEARNED_TAB..":"
+L.unlimited = UNLIMITED
+L.unknown = UNKNOWN
+L.vendor = TRANSMOG_SOURCE_3
+L.zone = ZONE
 
 if rm.locale == "enUS" then
     L.professions = {
@@ -48,15 +65,19 @@ if rm.locale == "enUS" then
     L.green = "Green"
     L.orange = "Orange"
     L.progressBar = "Progress Bar"
+    L.purchasableRecipe = "This recipe is sold by an NPC"
     L.purple = "Purple"
     L.recipeIconSpacing = "Icon Spacing"
     L.recipesWindow = "Recipes Window"
     L.showLearned = "Show Learned Recipes"
     L.showRecipesInfo = "Show Recipe Details"
+    L.stock = "Stock"
     L.updateIconDropdown = "Restore Window Icon"
+    L.pickpocket = "Pickpocket"
+    L.trainer = "Trainer"
     return
 
-elseif rm.locale == "esMX" then
+elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.professions = {
         [171] = "Alquimia",
         [164] = "Herrería",
@@ -69,6 +90,9 @@ elseif rm.locale == "esMX" then
         [186] = "Minería",
         [197] = "Sastrería"
     }
+    if rm.locale == "esES" then
+        L.professions[197] = "Costura"
+    end
     L.recipePrefixes = {"Receta: ", "Diseño: ", "Fórmula: ", "Esquema: ", "Patrón: ", "Manual: "}
     L.backgroundOpacity = "Opacidad del Fondo"
     L.blue = "Azul"
@@ -77,45 +101,19 @@ elseif rm.locale == "esMX" then
     L.dark = "Oscura"
     L.gray = "Gris"
     L.green = "Verde"
+    L.item = "Ítem"
     L.orange = "Naranja"
     L.progressBar = "Barra de Progreso"
+    L.purchasableRecipe = "Esta receta es vendida por un PNJ"
     L.purple = "Morado"
     L.recipeIconSpacing = "Espaciado de Iconos"
     L.recipesWindow = "Ventana de Recetas"
     L.showLearned = "Mostrar Recetas Aprendidas"
     L.showRecipesInfo = "Mostrar Detalles de la Receta"
+    L.stock = "Reserva"
     L.updateIconDropdown = "Ícono de Restauración de la Ventana"
-    return
-
-elseif rm.locale == "esES" then
-    L.professions = {
-        [171] = "Alquimia",
-        [164] = "Herrería",
-        [185] = "Cocina",
-        [333] = "Encantamiento",
-        [202] = "Ingeniería",
-        [129] = "Primeros auxilios",
-        [356] = "Pesca",
-        [165] = "Peletería",
-        [186] = "Minería",
-        [197] = "Costura"
-    }
-    L.recipePrefixes = {"Receta: ", "Diseño: ", "Fórmula: ", "Esquema: ", "Patrón: ", "Manual: "}
-    L.backgroundOpacity = "Opacidad del Fondo"
-    L.blue = "Azul"
-    L.bright = "Brillante"
-    L.canLearn = "Puede Aprender"
-    L.dark = "Oscura"
-    L.gray = "Gris"
-    L.green = "Verde"
-    L.orange = "Naranja"
-    L.progressBar = "Barra de Progreso"
-    L.purple = "Morado"
-    L.recipeIconSpacing = "Espaciado de Iconos"
-    L.recipesWindow = "Ventana de Recetas"
-    L.showLearned = "Mostrar Recetas Aprendidas"
-    L.showRecipesInfo = "Mostrar Detalles de la Receta"
-    L.updateIconDropdown = "Ícono de Restauración de la Ventana"
+    L.pickpocket = "Robo"
+    L.trainer = "Instructor"
     return
 
 elseif rm.locale == "ptBR" then
@@ -141,13 +139,17 @@ elseif rm.locale == "ptBR" then
     L.green = "Verde"
     L.orange = "Laranja"
     L.progressBar = "Barra de Progresso"
+    L.purchasableRecipe = "Essa receita é vendida por um PNJ"
     L.purple = "Roxo"
     L.recipeIconSpacing = "Espaçamento do Ícone"
     L.recipesWindow = "Janela de Receitas"
     L.showLearned = "Mostrar Receitas Aprendidas"
     L.showRecipesInfo = "Mostrar Detalhes da Receita"
+    L.stock = "Estoque"
     L.sortBy = "Ordenar:"
     L.updateIconDropdown = "Ícone do Botão de Restaurar Janela"
+    L.pickpocket = "Bater carteira"
+    L.trainer = "Instrutor"
     return
 
 elseif rm.locale == "deDE" then
@@ -173,12 +175,16 @@ elseif rm.locale == "deDE" then
     L.green = "Grün"
     L.orange = "Orange"
     L.progressBar = "Fortschrittsbalken"
+    L.purchasableRecipe = "Dieses Rezept wird von einem NPC verkauft"
     L.purple = "Lila"
     L.recipeIconSpacing = "Symbolabstand"
     L.recipesWindow = "Rezepte Fenster"
     L.showLearned = "Gelernte Rezepte Anzeigen"
     L.showRecipesInfo = "Rezeptdetails Anzeigen"
+    L.stock = "Lager"
     L.updateIconDropdown = "Symbol für Fenster Wiederherstellen"
+    L.pickpocket = "Taschendieb"
+    L.trainer = "Lehrer"
     return
 
 elseif rm.locale == "frFR" then
@@ -199,17 +205,23 @@ elseif rm.locale == "frFR" then
     L.blue = "Bleu"
     L.bright = "Clair"
     L.canLearn = "Peut Apprendre"
+    L.chance = "Chance"
     L.dark = "Foncé"
     L.gray = "Gris"
     L.green = "Vert"
+    L.object = "Chose"
     L.orange = "Orange"
     L.progressBar = "Barre de Progrès"
+    L.purchasableRecipe = "Cette recette est vendue par un PNJ"
     L.purple = "Violet"
     L.recipeIconSpacing = "Espacement des Icônes"
     L.recipesWindow = "Fenêtre des Recettes"
     L.showLearned = "Afficher les Recettes Apprises"
     L.showRecipesInfo = "Afficher les Détails de la Recette"
+    L.stock = "Réserve"
     L.updateIconDropdown = "Icône de Restauration de la Fenêtre"
+    L.pickpocket = "Vol à la tire"
+    L.trainer = "Maître"
     return
 
 elseif rm.locale == "ruRU" then
@@ -230,21 +242,23 @@ elseif rm.locale == "ruRU" then
     L.blue = "Синий"
     L.bright = "Яркий"
     L.canLearn = "Может Учиться"
+    L.chance = "Шанс"
     L.dark = "Тёмный"
     L.gray = "Серый"
     L.green = "Зелёный"
     L.orange = "Оранжевый"
     L.progressBar = "Полоса прогресса"
+    L.purchasableRecipe = "Этот рецепт продается у NPC"
     L.purple = "Фиолетовый"
     L.recipeIconSpacing = "Промежуток между иконками"
     L.recipesWindow = "Окно рецептов"
     L.showLearned = "Показывать выученные рецепты"
     L.showRecipesInfo = "Показать Подробности Рецепта"
     L.sortBy = "Сорт:"
+    L.stock = "Склад"
     L.updateIconDropdown = "Значок окна Восстановления"
-    F.fonts.bottomTab = "Fonts\\FRIZQT___CYR.TTF"
-    F.offsets.headerTextY = 0
-    F.offsets.tabTextY = 5.5
+    L.pickpocket = "Карманник"
+    L.trainer = "Учитель"
     return
 
 elseif rm.locale == "koKR" then
@@ -270,16 +284,16 @@ elseif rm.locale == "koKR" then
     L.green = "초록"
     L.orange = "주황"
     L.progressBar = "진행 막대"
+    L.purchasableRecipe = "이 레시피는 NPC가 판매합니다"
     L.purple = "보라"
     L.recipeIconSpacing = "아이콘 간격"
     L.recipesWindow = "레시피 창"
     L.showLearned = "배웠던 레시피 보기"
     L.showRecipesInfo = "레시피 세부 정보 표시"
+    L.stock = "재고"
     L.updateIconDropdown = "복원 창 아이콘"
-    F.fonts.bottomTab = "Fonts\\2002.TTF"
-    F.fontSizes.bottomTab = 11
-    F.offsets.headerTextY = 0.4
-    F.offsets.tabTextY = 5.5
+    L.pickpocket = "훔치기"
+    L.trainer = "트레이너"
     return
 
 elseif rm.locale == "zhTW" then
@@ -305,18 +319,17 @@ elseif rm.locale == "zhTW" then
     L.green = "綠色"
     L.orange = "橙色"
     L.progressBar = "進度條"
+    L.purchasableRecipe = "此配方由一名 NPC 出售"
     L.purple = "紫色"
     L.recipeIconSpacing = "圖示間距"
     L.recipesWindow = "食譜視窗"
     L.showLearned = "顯示已學會的食譜"
     L.showRecipesInfo = "顯示食譜詳細信息"
     L.sortBy = "分類："
+    L.stock = "存貨"
     L.updateIconDropdown = "恢復視窗圖示"
-    F.fonts.bottomTab = "Fonts\\blei00d.TTF"
-    F.fontSizes.bottomTab = 12
-    F.fonts.recipeText = "GameFontHighlightSmall2"
-    F.offsets.headerTextY = 0
-    F.offsets.recipeInfoY = 0
+    L.pickpocket = "搜索"
+    L.trainer = "訓練師"
     return
 
 elseif rm.locale == "zhCN" then
@@ -342,15 +355,14 @@ elseif rm.locale == "zhCN" then
     L.green = "绿色"
     L.orange = "橙色"
     L.progressBar = "进度条"
+    L.purchasableRecipe = "此配方由一名 NPC 出售"
     L.purple = "紫色"
     L.recipeIconSpacing = "图标间距"
     L.recipesWindow = "食谱窗口"
     L.showLearned = "显示已学会的食谱"
     L.showRecipesInfo = "显示食谱详细信息"
+    L.stock = "存货"
     L.updateIconDropdown = "恢复窗口图标"
-    F.fonts.bottomTab = "Fonts\\ARKai_T.ttf"
-    F.fonts.recipeText = "GameFontHighlightSmall2"
-    F.fontSizes.bottomTab = 12
-    F.offsets.headerTextY = 0.8
-    F.offsets.recipeInfoY = 0
+    L.pickpocket = "搜索"
+    L.trainer = "训练师"
 end

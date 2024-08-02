@@ -28,7 +28,6 @@
 ## SavedVariables: RecipeMasterProfessionsAndSkills, RecipeMasterMainFramePreferences, RecipeMasterOptionsFramePreferences
 
 Source/Initialization.lua
-Source/Interface/FrameSettings.lua
 Source/Localization.lua
 Source/Globals.lua
 
@@ -49,14 +48,26 @@ Source/Handlers/SkillHandler.lua
 Source/Handlers/ReputationHandler.lua
 Source/Handlers/RecipeHandler.lua
 Source/Handlers/TooltipHandler.lua
-Source/Handlers/FrameHandler.lua
 
-Source/Interface/MainFrameSetup.lua
-Source/Interface/MainFrameCreation.lua
-Source/Interface/OptionsFrameSetup.lua
-Source/Interface/OptionsFrameCreation.lua
+Source/Interface/FrameSettings.lua
+
+Source/Interface/Setup/MainFrameSetup.lua
+Source/Interface/Setup/RecipesFrameSetup.lua
+Source/Interface/Setup/BottomTabSetup.lua
+Source/Interface/Setup/OptionsFrameSetup.lua
+
+Source/Interface/Creation/MainFrameCreation.lua
+Source/Interface/Creation/RecipesFrameCreation.lua
+Source/Interface/Creation/BottomTabCreation.lua
+Source/Interface/Creation/OptionsFrameCreation.lua
+
+Source/Interface/Management/MainFrameManager.lua
+Source/Interface/Management/RecipesFrameManager.lua
+Source/Interface/Management/BottomTabManager.lua
+
+Source/Interface/Display/RecipesDisplay.lua
+
 Source/Interface/Frames.lua
-Source/Interface/RecipeDisplay.lua
 
 Source/Cacher.lua
 Source/Handlers/EventHandler.lua

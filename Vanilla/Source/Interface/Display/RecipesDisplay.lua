@@ -2,6 +2,73 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
+local function getComparisonValues(a, b)
+    local sortBy = rm.getPreference("sortRecipesBy")
+    if sortBy == "Name" then
+        return a.name, b.name
+    elseif sortBy == "Quality" then
+        return a.quality, b.quality
+    elseif sortBy == "Skill" then
+        return a.skill, b.skill
+    end
+end
+
+local function splitSeasonalRecipes(professionRecipes)
+    local sodRecipes = {}
+    local regularRecipes = {}
+    for _, recipe in pairs(professionRecipes) do
+        if recipe.season then
+            table.insert(sodRecipes, recipe)
+        else
+            table.insert(regularRecipes, recipe)
+        end
+    end
+    return sodRecipes, regularRecipes
+end
+
+local function storeNonDuplicateRecipe(regularRecipe, sodRecipes)
+    local sameName = false
+    for _, sodRecipe in pairs(sodRecipes) do
+        if regularRecipe.name == sodRecipe.name then
+            sameName = true
+            break
+        end
+    end
+    if not sameName then
+        table.insert(sodRecipes, regularRecipe)
+    end
+end
+
+local function filterSeasonalRecipes(professionRecipes)
+    local currentSeason = rm.getSeason()
+    local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
+    if currentSeason == "SoD" then
+        for _, recipe in pairs(regularRecipes) do
+            storeNonDuplicateRecipe(recipe, sodRecipes)
+        end
+        return sodRecipes
+    end
+    return regularRecipes
+end
+
+local function compareRecipes(a, b)
+    local valueA, valueB = getComparisonValues(a, b)
+    if valueA and valueB then
+        local sortAscending = rm.getPreference("sortAscending")
+        if sortAscending then
+            return valueA < valueB
+        end
+        return valueA > valueB
+    end
+end
+
+local function sortRecipes(professionRecipes)
+    local currentSeason = rm.getSeason()
+    local filteredRecipes = filterSeasonalRecipes(professionRecipes)
+    table.sort(filteredRecipes, compareRecipes)
+    return filteredRecipes
+end
+
 local function handleLearnedRecipe(recipe)
     if not rm.isLearnedRecipe(recipe) then
         return
@@ -27,68 +94,6 @@ local function populateRecipeRow(recipe)
         handleLearnedRecipe(recipe)
         handleMissingRecipe(recipe)
     end
-end
-
-local function getComparisonValues(a, b)
-    local sortBy = rm.getPreference("sortRecipesBy")
-    if sortBy == "Name" then
-        return a.name, b.name
-    elseif sortBy == "Quality" then
-        return a.quality, b.quality
-    elseif sortBy == "Skill" then
-        return a.skill, b.skill
-    end
-end
-
-local function compareRecipes(a, b)
-    local valueA, valueB = getComparisonValues(a, b)
-    if valueA and valueB then
-        local sortAscending = rm.getPreference("sortAscending")
-        if sortAscending then
-            return valueA < valueB
-        end
-        return valueA > valueB
-    end
-end
-
-local function splitSeasonalRecipes(professionRecipes)
-    local sodRecipes = {}
-    local regularRecipes = {}
-    for _, recipe in pairs(professionRecipes) do
-        if recipe.season then
-            table.insert(sodRecipes, recipe)
-        else
-            table.insert(regularRecipes, recipe)
-        end
-    end
-    return sodRecipes, regularRecipes
-end
-
-local function insertNonDuplicateRecipe(recipe, sodRecipes)
-    local sameName = false
-    for _, sodRecipe in pairs(sodRecipes) do
-        if recipe.name == sodRecipe.name then
-            sameName = true
-            break
-        end
-    end
-    if not sameName then
-        table.insert(sodRecipes, recipe)
-    end
-end
-
-local function sortRecipes(professionRecipes)
-    local season = rm.getSeason()
-    local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
-    if season == "SoD" then
-        for _, recipe in pairs(regularRecipes) do
-            insertNonDuplicateRecipe(recipe, sodRecipes)
-        end
-        table.sort(sodRecipes, compareRecipes)
-        return sodRecipes
-    end
-    table.sort(regularRecipes, compareRecipes)
-    return regularRecipes
 end
 
 local function populateAllRecipeRows(professionRecipes)

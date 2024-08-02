@@ -2,55 +2,43 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-function rm.setUpButtonWithTooltip(button, width, height, tooltipText, scriptOnClick)
-    button:SetSize(width, height)
-    button:EnableMouse(true)
-    button:SetScript("OnEnter", function(self)
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-        GameTooltip:SetText(tooltipText)
-        GameTooltip:Show()
-    end)
-    button:SetScript("OnLeave", function()
-        GameTooltip:Hide()
-    end)
-    button:SetScript("OnClick", scriptOnClick)
-    return button
+local function showTooltipOnMouseover(icon, recipe)
+    GameTooltip:SetOwner(icon, "ANCHOR_RIGHT", 0, 0)
+    GameTooltip:SetHyperlink(recipe.link)
+    GameTooltip:Show()
 end
 
-local function isMouseInsideScrollFrame()
-    local mouseX, mouseY = GetCursorPosition()
-    local scale = rm.scrollFrame:GetEffectiveScale()
-    mouseX, mouseY = mouseX/scale, mouseY/scale
-    local frameX, frameY = rm.scrollFrame:GetCenter()
-    local frameWidth = rm.scrollFrame:GetWidth()
-    local frameHeight = rm.scrollFrame:GetHeight()
-    return (
-        mouseX >= (frameX - frameWidth / 2) 
-        and mouseX <= (frameX + frameWidth / 2) 
-        and mouseY >= (frameY - frameHeight / 2) 
-        and mouseY <= (frameY + frameHeight / 2)
-    )
-end
-
-function rm.displayTooltipOnMouseover(icon, recipe)
-    icon:SetScript("OnEnter", function(self)
-        if isMouseInsideScrollFrame() then
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT", 0, 0)
-            GameTooltip:SetHyperlink(recipe.link)
-            GameTooltip:Show()
-        end
+function rm.displayInspectIconAndTooltipOnMouseover(icon, recipe)
+    icon:HookScript("OnEnter", function(self)
+        ShowInspectCursor()
+        showTooltipOnMouseover(self, recipe)
     end)
-    icon:SetScript("OnLeave", function(self)
+    icon:HookScript("OnLeave", function()
+        ResetCursor()
         GameTooltip:Hide()
     end)
 end
 
-function rm.chatLinkOnShiftClick(icon, recipe)
-    icon:SetScript("OnMouseDown", function(self, button)
+local function createChatLink(recipe)
+    local chatBox = ChatEdit_ChooseBoxForSend()
+    ChatEdit_ActivateChat(chatBox)
+    chatBox:Insert(recipe.link)
+end
+
+local function showSourcesForRecipe(recipe)
+    rm.showSourcesFrameElements()
+    rm.activateBottomTabAndDesaturateOthers(rm.recipeSourcesTab)
+    rm.showAllSources(recipe)
+end
+
+function rm.createChatLinkOrDisplaySourcesOnClick(icon, recipe)
+    icon:HookScript("OnMouseDown", function(self, button)
         if IsShiftKeyDown() and button == "LeftButton" then
-            local chatBox = ChatEdit_ChooseBoxForSend()
-            ChatEdit_ActivateChat(chatBox)
-            chatBox:Insert(recipe.link)
+            createChatLink(recipe)
+        elseif not IsShiftKeyDown() then
+            rm.clearFrameContent()
+            rm.mainFrame:SetWidth(F.sizes.sourcesFrameWidth)
+            showSourcesForRecipe(recipe)
         end
     end)
 end
@@ -81,15 +69,10 @@ end
 function rm.storeWidestRecipeTextWidth(recipeNameWidth, recipeInfoWidth)
     if recipeNameWidth > rm.widestRecipeTextWidth then
         rm.widestRecipeTextWidth = recipeNameWidth
-    elseif recipeInfoWidth and recipeInfoWidth > rm.widestRecipeTextWidth then
+    end
+    if recipeInfoWidth and recipeInfoWidth > rm.widestRecipeTextWidth then
         rm.widestRecipeTextWidth = recipeInfoWidth
     end
-end
-
-function rm.matchParentHeight(innerBorder)
-    innerBorder:SetScript("OnUpdate", function(self, elapsed)
-        self:SetHeight(innerBorder:GetParent():GetHeight())
-    end)
 end
 
 function rm.displayPlaceholderTextBasedOnFocus(searchBar)
@@ -104,13 +87,16 @@ function rm.displayPlaceholderTextBasedOnFocus(searchBar)
     end)
 end
 
+local function isSearchInRecipeName(rowIcon, searchText)
+    local recipeName = rowIcon.associatedText:GetText():lower()
+    return string.find(recipeName, searchText, 1, true)
+end
+
 function rm.showMatchingRecipesOnTop(searchBar)
     searchBar:SetScript("OnTextChanged", function(self)
         local searchText = self:GetText():lower()
-        local matchedRecipes = {}
-        for _, rowIcon in ipairs(rm.recipeContainer.children) do
-            local recipeText = rowIcon.associatedText:GetText():lower()
-            if string.find(recipeText, searchText, 1, true) then
+        for _, rowIcon in ipairs(rm.recipesList.children) do
+            if isSearchInRecipeName(rowIcon, searchText) then
                 rowIcon:Show()
                 rowIcon.associatedText:Show()
                 if rowIcon.associatedText.additionalInfo then
@@ -173,56 +159,32 @@ function rm.setInitialDropdownValue(dropdown, savedVariable)
     end
 end
 
-local function toggleSortOrder(sortAscending)
-    if sortAscending then
+local function toggleSortOrder()
+    if rm.getPreference("sortAscending") then
         rm.setPreference("sortAscending", false)
     else
         rm.setPreference("sortAscending", true)
     end
 end
 
-function rm.updateArrowOrientation(texture, sortAscending)
-    if sortAscending then
+function rm.updateArrowOrientation(texture)
+    if rm.getPreference("sortAscending") then
         texture:SetRotation(0)
-        texture:SetPoint("CENTER", texture:GetParent(), 1.7, -1.3)
+        texture:SetPoint("CENTER", texture:GetParent(), 1.2, -1.5)
     else
         texture:SetRotation(math.pi)
-        texture:SetPoint("CENTER", texture:GetParent(), -2.5, 1.7)
+        texture:SetPoint("CENTER", texture:GetParent(), -2.5, 1.8)
     end
 end
 
 local function updateSortOrder(texture)
-    local sortAscending = rm.getPreference("sortAscending")
-    toggleSortOrder(sortAscending)
-    rm.updateArrowOrientation(texture, sortAscending)
+    toggleSortOrder()
+    rm.updateArrowOrientation(texture)
     rm.showSortedRecipes()
 end
 
 function rm.updateSortOrderOnClick(button, texture)
     button:SetScript("OnClick", function(self)
         updateSortOrder(texture)
-    end)
-end
-
-local function handleActiveTab(tab)
-    if tab.label == L.recipes then
-        rm.handleRecipesTabClick()
-        return
-    elseif tab.label == L.sources then
-        rm.handleSourcesTabClick()
-        return
-    elseif tab.label == L.fishing then
-        rm.handleFishingTabClick()
-        return
-    end
-end
-
-function rm.handleTabSwitching(tab)
-    tab:SetScript("OnClick", function(self)
-        if not tab.active then
-            rm.centeredText:Hide()
-            rm.activateTabAndDesaturateOthers(tab)
-            handleActiveTab(tab)
-        end   
     end)
 end

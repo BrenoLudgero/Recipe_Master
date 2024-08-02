@@ -4,7 +4,9 @@ local F = rm.F
 
 function rm.createOptionsFrame()
     rm.frame.name = L.title
-    InterfaceOptions_AddCategory(rm.frame)
+    local category = Settings.RegisterCanvasLayoutCategory(rm.frame, rm.frame.name)
+    category.ID = rm.frame.name
+    Settings.RegisterAddOnCategory(category)
     return rm.frame
 end
 
@@ -23,8 +25,8 @@ local function createSlider(yOffset, description)
     slider:SetSize(F.sizes.sliderWidth, F.sizes.sliderHeight)
     slider:SetOrientation("HORIZONTAL")
     slider:SetPoint("TOPLEFT", F.offsets.sliderX, yOffset)
-    slider.Low:AdjustPointsOffset(0, -3)
-    slider.High:AdjustPointsOffset(0, -3)
+    slider.Low:AdjustPointsOffset(0, F.offsets.sliderMinMaxTextY)
+    slider.High:AdjustPointsOffset(0, F.offsets.sliderMinMaxTextY)
     local sliderDescription = rm.createOptionsText(F.fonts.optionDescription, description)
     sliderDescription:SetPoint("CENTER", slider, "TOP", 0, F.offsets.sliderDescriptionY)
     slider.valueDisplay = slider:CreateFontString(nil, "ARTWORK", F.fonts.optionDescription)
@@ -41,7 +43,7 @@ function rm.createOpacitySlider()
     local initialValue = rm.getPreference("backgroundOpacity") * 100
     slider:SetValue(initialValue)
     slider.valueDisplay:SetText(initialValue.."%")
-    slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, 2)
+    slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, F.offsets.sliderValueY)
     rm.updateBackgroundOpacity(slider)
     return slider
 end
@@ -56,7 +58,7 @@ local function createOptionsDropdown(xOffset, yOffset, label)
     return dropdown
 end
 
-function rm.createIconDropdown()
+function rm.createRestoreIconDropdown()
     local dropdown = createOptionsDropdown(F.offsets.updateIconDropdownX, F.offsets.updateIconDropdownY, L.updateIconDropdown)
     dropdown.values = {
         {text = L.common, value = "Interface/Icons/INV_Scroll_03"},
@@ -79,7 +81,7 @@ function rm.createSpacingSlider()
     local initialValue = rm.getPreference("iconSpacing")
     slider:SetValue(initialValue)
     slider.valueDisplay:SetText(initialValue)
-    slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, 2)
+    slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, F.offsets.sliderValueY)
     rm.updateIconSpacing(slider, slider.valueDisplay)
     return slider
 end
@@ -130,7 +132,7 @@ function rm.createProgressColorDropdown()
     dropdown.values = {
         {text = L.blue, value = F.colors.blue},
         {text = L.gray, value = F.colors.gray},
-        {text = L.green, value = F.colors.green}, --{0.12, 1, 0}},
+        {text = L.green, value = F.colors.green},
         {text = L.orange, value = F.colors.orange},
         {text = L.purple, value = F.colors.purple}
     }
@@ -142,7 +144,7 @@ end
 function rm.createResetDefaultsButton(options)
     local button = CreateFrame("Button", nil, rm.optionsFrame, F.templates.button)
     button:SetText(L.resetDefaults)
-    button:SetSize(140, 35)
+    button:SetSize(F.sizes.resetDefaultsButtonWidth, F.sizes.resetDefaultsButtonHeight)
     button:SetPoint("TOPLEFT", F.offsets.resetDefaultsX, F.offsets.resetDefaultsY)
     rm.resetSavedOptionsOnClick(button, options)
     return button

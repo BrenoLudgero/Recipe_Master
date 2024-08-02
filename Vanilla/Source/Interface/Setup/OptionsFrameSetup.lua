@@ -6,7 +6,7 @@ function rm.updateBackgroundOpacity(opacitySlider)
     opacitySlider:SetScript("OnValueChanged", function(self, value)
         local valueToTwoDecimals = value / 100
         rm.setPreference("backgroundOpacity", valueToTwoDecimals)
-        opacitySlider.valueDisplay:SetText(value.."%")
+        self.valueDisplay:SetText(value.."%")
         F.colors.mainBackground = {1, 1, 1, valueToTwoDecimals}
         F.colors.sourcesBackground = {0.7, 0.7, 0.7, valueToTwoDecimals}
     end)

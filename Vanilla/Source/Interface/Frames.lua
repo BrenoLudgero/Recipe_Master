@@ -38,12 +38,15 @@ function rm.createAllFrameElements()
     F.colors.mainBackground = {1, 1, 1, rm.getPreference("backgroundOpacity")}
     F.colors.sourcesBackground = {0.55, 0.55, 0.55, rm.getPreference("backgroundOpacity")}
 
-    ----------------------------- Main frame -----------------------------
+    ---------------------------- Main frame ------------------------------
     rm.mainFrame = rm.createFrame()
     rm.mainFrameBorder = rm.createBorder(rm.mainFrame)
     rm.header = rm.createHeader(rm.mainFrameBorder)
-    local headerTitle = rm.createHeaderText(rm.header)
-    local mainFrameInnerBorder = rm.createInnerBorder(rm.mainFrame)
+    rm.createHeaderText(rm.header)
+    rm.createInnerBorder(rm.mainFrame)
+    rm.restoreButton = rm.createRestoreButton() -- Displayed after clicking the "X" button to restore the mainFrame
+    rm.centeredText = rm.createCenteredText(rm.mainFrame)
+    rm.sourcesInstructions = rm.createSourcesInstructions(rm.mainFrame)
 
     ---------------------------- Bottom tabs -----------------------------
     rm.bottomTabs = {}
@@ -51,43 +54,38 @@ function rm.createAllFrameElements()
     rm.recipeSourcesTab = rm.createBottomTab(L.sources, "BOTTOM", 0, false)
     rm.fishingTab = rm.createBottomTab(L.fishing, "BOTTOMRIGHT", F.offsets.fishingTabX, false)
 
-    ----------------------- Recipes / Fishing frame ------------------------
+    ----------------------- Recipes / Fishing frame ----------------------
     rm.progressContainer = rm.createProgressContainer(rm.mainFrame)
     rm.divider = rm.createDivider(rm.progressContainer) -- The background frame containing searchBar and sortBar
-    rm.scrollFrame = rm.createScrollFrame(rm.mainFrame)
-    rm.recipeContainer = rm.createRecipeContainerFrame(rm.scrollFrame)
-    rm.scrollFrame:SetScrollChild(rm.recipeContainer)
+    rm.recipesScrollFrame = rm.createRecipesScrollFrame(rm.mainFrame)
+    rm.recipesList = rm.createRecipesList(rm.recipesScrollFrame)
+    rm.recipesScrollFrame:SetScrollChild(rm.recipesList)
     rm.searchBar = rm.createSearchBar(rm.divider)
     rm.sortBar = rm.createSortBar(rm.divider)
-    local sortByText = rm.createSortByText(rm.sortBar)
-    local sortOrderButton = rm.createSortOrderButton(rm.sortBar)
+    rm.createSortByText(rm.sortBar)
+    rm.createSortOrderButton(rm.sortBar)
     rm.progressBar = rm.createProgressBar(rm.progressContainer)
     rm.progressBarText = rm.createProgressBarText(rm.progressBar)
-    rm.restoreButton = rm.createRestoreButton()
-    rm.centeredText = rm.createCenteredText(mainFrameInnerBorder)
 
-    --------------------------- Options window ---------------------------
+    --------------------------- Options frame ----------------------------
     rm.optionsFrame = rm.createOptionsFrame()
-    ---------------- Texts ----------------
-    rm.createOptionsText(F.fonts.title, L.title, F.offsets.titlesTextX, F.offsets.titleY)
-    rm.createOptionsText(F.fonts.subtitle, L.subtitle, F.offsets.titlesTextX, F.offsets.subtitleY)
-    rm.createOptionsText(F.fonts.optionSection, L.general, F.offsets.titlesTextX, F.offsets.generalTextY)
-    rm.createOptionsText(F.fonts.optionSection, L.recipesWindow, F.offsets.titlesTextX, F.offsets.recipesWindowTextY)
-    rm.createOptionsText(F.fonts.optionSection, L.progressBar, F.offsets.titlesTextX, F.offsets.progressBarTextY)
+    -------------------- Texts ------------------
+    rm.createOptionsText(F.fonts.title, L.title, F.offsets.titleTextX, F.offsets.titleY)
+    rm.createOptionsText(F.fonts.subtitle, L.subtitle, F.offsets.titleTextX, F.offsets.subtitleY)
+    rm.createOptionsText(F.fonts.optionSection, L.general, F.offsets.titleTextX, F.offsets.generalTextY)
+    rm.createOptionsText(F.fonts.optionSection, L.recipesWindow, F.offsets.titleTextX, F.offsets.recipesWindowTextY)
+    rm.createOptionsText(F.fonts.optionSection, L.progressBar, F.offsets.titleTextX, F.offsets.progressBarTextY)
     local options = {
         ---------------- Sliders ----------------
         opacitySlider = rm.createOpacitySlider(),
         spacingSlider = rm.createSpacingSlider(),
-        ---------------- Dropdowns ----------------
+        --------------- Dropdowns ---------------
         progressBrightness = rm.createProgressBrightnessDropdown(),
         progressColor = rm.createProgressColorDropdown(),
-        restoreButton = rm.createIconDropdown(),
+        restoreButton = rm.createRestoreIconDropdown(),
         ---------------- Buttons ----------------
         showRecipesInfo = rm.createShowRecipesInfoCheckButton(),
         showLearnedButton = rm.createShowLearnedCheckButton()
     }
-    local resetDefaultsButton = rm.createResetDefaultsButton(options)
-    ----------------------------------------------------------------------
-    deleteFrameCreationFunctions()
-    deleteFrameCreationFunctions = nil
+    rm.createResetDefaultsButton(options)
 end

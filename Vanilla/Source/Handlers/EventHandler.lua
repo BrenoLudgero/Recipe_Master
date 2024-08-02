@@ -53,7 +53,7 @@ end
 
 local function showRecipeMasterFrame(getSkillInfo)
     rm.showRecipesFrame(getSkillInfo) 
-    if noRecipesDisplayed() then
+    if rm.isRecipeListEmpty() then -- Happens on the first time opening Recipe Master after login
         C_Timer.After(0.01, function() 
             rm.updateRecipeDisplay(getSkillInfo) 
         end)
@@ -75,7 +75,7 @@ local function handleProfessionFrameClosed(getNumSkills, getSkillInfo, getItemLi
     -- Delayed in case TradeSkillMaster or Skillet is enabled, their frames are not considered closed immediately
     C_Timer.After(0.01, function()
         if not rm.getProfessionFrame() then
-            rm.hideRecipeMasterFrame()
+            rm.hideMainFrame()
             return
         end
     end)
