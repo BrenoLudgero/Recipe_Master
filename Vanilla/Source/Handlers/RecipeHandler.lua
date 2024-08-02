@@ -2,8 +2,8 @@ local _, rm = ...
 local L = rm.L
 
 local function isRecipeForCurrentSeason(recipe)
-    local serverSeason = rm.getSeason()
-    return not recipe.season or (recipe.season == serverSeason)
+    local currentSeason = rm.getSeason()
+    return not recipe.season or (recipe.season == currentSeason)
 end
 
 local function isRecipeForCurrentClass(recipe)
@@ -109,7 +109,8 @@ local function getAdditionalRecipeData(ID)
         link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
         texture = rm.recipeDB[186][ID].icon
     end
-    return rm.removeRecipePrefix(name, true), link, quality, texture
+    name = removeRecipePrefix(name)
+    return name, link, quality, texture
 end
 
 local function saveRecipeData(recipeID, recipeData)
@@ -131,23 +132,27 @@ local function saveRecipeData(recipeID, recipeData)
     }
 end
 
-local function isTheDisplayedProfession(professionID)
+local function storeRecipeData(recipesDatabase, professionRecipes)
+    for recipeID, recipeData in pairs(recipesDatabase) do
+        if not professionRecipes[recipeID] then
+            local recipe = saveRecipeData(recipeID, recipeData)
+            professionRecipes[recipeID] = recipe
+        end
+    end
+end
+
+local function isDisplayedProfession(professionID)
     return L.professions[professionID] == rm.displayedProfession
 end
 
--- Stores all the recipe data for the currently displayed profession
+-- Retrieves all the recipe data for the currently displayed profession
 function rm.getProfessionRecipes(getSkillInfoFunction)
     local professionRecipes = {}
     local savedProfessionsAndSkills = rm.getCurrentCharacterSavedVariables()
     for professionID, professionData in pairs(savedProfessionsAndSkills) do
-        if isTheDisplayedProfession(professionID) then
+        if isDisplayedProfession(professionID) then
             local professionRecipesDatabase = rm.recipeDB[professionID]
-            for recipeID, recipeData in pairs(professionRecipesDatabase) do
-                if not professionRecipes[recipeID] then
-                    local recipe = saveRecipeData(recipeID, recipeData)
-                    professionRecipes[recipeID] = recipe
-                end
-            end
+            storeRecipeData(professionRecipesDatabase, professionRecipes)
             break
         end
     end
