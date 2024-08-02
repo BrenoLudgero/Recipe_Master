@@ -63,25 +63,30 @@ Source/Handlers/ProfessionHandler.lua
 Source/Handlers/SkillHandler.lua
 Source/Handlers/ReputationHandler.lua
 Source/Handlers/RecipeHandler.lua
+Source/Handlers/SourceHandler.lua
 Source/Handlers/TooltipHandler.lua
 
 Source/Interface/FrameSettings.lua
 
 Source/Interface/Setup/MainFrameSetup.lua
 Source/Interface/Setup/RecipesFrameSetup.lua
+Source/Interface/Setup/SourcesFrameSetup.lua
 Source/Interface/Setup/BottomTabSetup.lua
 Source/Interface/Setup/OptionsFrameSetup.lua
 
 Source/Interface/Creation/MainFrameCreation.lua
 Source/Interface/Creation/RecipesFrameCreation.lua
+Source/Interface/Creation/SourcesFrameCreation.lua
 Source/Interface/Creation/BottomTabCreation.lua
 Source/Interface/Creation/OptionsFrameCreation.lua
 
 Source/Interface/Management/MainFrameManager.lua
 Source/Interface/Management/RecipesFrameManager.lua
+Source/Interface/Management/SourcesFrameManager.lua
 Source/Interface/Management/BottomTabManager.lua
 
 Source/Interface/Display/RecipesDisplay.lua
+Source/Interface/Display/SourcesDisplay.lua
 
 Source/Interface/Frames.lua
 

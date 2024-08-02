@@ -36,6 +36,16 @@ function rm.createAllFrameElements()
     rm.progressBar = rm.createProgressBar(rm.progressContainer)
     rm.progressBarText = rm.createProgressBarText(rm.progressBar)
 
+    --------------------------- Sources frame ----------------------------
+    rm.sourcesHeader = rm.createSourcesHeader(rm.mainFrame) -- Recipe icon and name
+    rm.sourcesListTabs = {}
+    rm.sourcesScrollFame = rm.createSourcesScrollFrame(rm.mainFrame)
+    rm.sourcesList = rm.createSourcesList(rm.mainFrame)
+    rm.sourcesScrollFame:SetScrollChild(rm.sourcesList)
+    rm.sourcesColumnsContainer = rm.createColumnsContainer(rm.sourcesList)
+    rm.sourcesListColumns = {}
+    rm.uniqueSourceText = rm.createUniqueSourceText(rm.sourcesList)
+
     --------------------------- Options frame ----------------------------
     rm.optionsFrame = rm.createOptionsFrame()
     -------------------- Texts ------------------

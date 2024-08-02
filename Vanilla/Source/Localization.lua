@@ -42,6 +42,137 @@ L.unknown = UNKNOWN
 L.vendor = TRANSMOG_SOURCE_3
 L.zone = ZONE
 
+L.uniqueSourceInstructions = {
+    [16365] = {
+        ["deDE"] = "Er ist in einem Käfig im Militärviertel eingesperrt",
+        ["enUS"] = "He is locked in a cage located inside The Millitary Quarter",
+        ["esES"] = "Está encerrado en una jaula ubicada en el Arrabal Militar",
+        ["esMX"] = "Está encerrado en una jaula ubicada en el Arrabal Militar",
+        ["frFR"] = "Il est enfermé dans une cage située dans le Quartier Militaire",
+        ["koKR"] = "그는 밀리터리 쿼터 안에 위치한 철창에 갇혀 있습니다",
+        ["ptBR"] = "Ele está preso em uma jaula localizada no Bairro Militar",
+        ["ruRU"] = "Он заперт в клетке, расположенной в Военный Квартал",
+        ["zhCN"] = "他被关在军事区的笼子里",
+        ["zhTW"] = "他被關在軍事區的籠子裡"
+        -- Tomon, Wowhead.com
+    },
+    [8983] = {
+        ["deDE"] = "Das Rezept ist eine Schriftrolle auf dem Boden,\n"..
+                "die sich im selben Raum wie dieser Gegner befindet",
+        ["enUS"] = "The recipe is a scroll on the ground,\n"..
+                "found in the same room as this enemy",
+        ["esES"] = "La receta es un pergamino en el suelo,\n"..
+                "que se encuentra en la misma sala que este enemigo",
+        ["esMX"] = "La receta es un pergamino en el suelo,\n"..
+                "que se encuentra en la misma sala que este enemigo",
+        ["frFR"] = "La recette est un parchemin sur le sol,\n"..
+                "trouvé dans la même pièce que cet ennemi",
+        ["koKR"] = "레시피는 이 적과 같은 방에서 발견되는 바닥에 있는 두루마리입니다",
+        ["ptBR"] = "A receita está em um pergaminho no chão,\n"..
+                "encontrado na mesma sala que este inimigo",
+        ["ruRU"] = "Рецепт находится в свитке на земле,\n"..
+                "найденном в той же комнате, что и этот враг",
+        ["zhCN"] = "配方就在地上的卷轴上，在与这个敌人相同的房间里可以找到",
+        ["zhTW"] = "配方就在地上的捲軸上，在與這個敵人相同的房間里可以找到"
+        -- Palumtra, Wowhead.com
+    },
+    [9037] = {
+        ["deDE"] = "Sprich mit ihm und er wird den folgenden Tribut verlangen:\n"..
+                "2 Sternrubin\n"..
+                "10 Echtsilberbarren\n"..
+                "20 Goldbarren\n"..
+                "Leg den Tribut in den Kelch und sprich erneut mit ihm",
+        ["enUS"] = "Talk to him and he'll ask for the following tribute:\n"..
+                "2 Star Ruby\n"..
+                "10 Truesilver Bar\n"..
+                "20 Gold Bar\n"..
+                "Place the tribute in the chalice and talk to him again",
+        ["esES"] = "Habla con él y te pedirá el siguiente tributo:\n"..
+                "2 Rubí estrella\n"..
+                "10 Lingote de veraplata\n"..
+                "20 Lingote de oro\n"..
+                "Pon el tributo en el cáliz y vuelve a hablar con él",
+        ["esMX"] = "Habla con él y te pedirá el siguiente tributo:\n"..
+                "2 Rubí estrella\n"..
+                "10 Lingote de veraplata\n"..
+                "20 Lingote de oro\n"..
+                "Pon el tributo en el cáliz y vuelve a hablar con él",
+        ["frFR"] = "Parlez-lui et il vous demandera le tribut suivant:\n"..
+                "2 Rubis étoilé\n"..
+                "10 Barre de vrai-argent\n"..
+                "20 Barre d'or\n"..
+                "Mettez le tribut dans le calice et parlez-lui à nouveau",
+        ["koKR"] = "그에게 말을 걸면 다음과 같은 공물을 요구할 것입니다:\n"..
+                "2 별루비\n"..
+                "10 진은 주괴\n"..
+                "20 금괴\n"..
+                "공물을 성배에 넣고 다시 그에게 말하세요",
+        ["ptBR"] = "Fale com ele e ele lhe pedirá o seguinte tributo:\n"..
+                "2 Rubi-estrela\n"..
+                "10 Barra de Veraprata\n"..
+                "20 Barra de Ouro\n"..
+                "Coloque o tributo no cálice e fale com ele novamente",
+        ["ruRU"] = "Поговорите с ним, и он попросит следующую дань:\n"..
+                "2 Звездный рубин\n"..
+                "10 Слиток истинного серебра\n"..
+                "20 Золотой слиток\n"..
+                "Положите дань в чашу и поговорите с ним снова",
+        ["zhCN"] = "跟他谈谈，他会要以下贡品：\n"..
+                "2 红宝石\n"..
+                "10 真银锭\n"..
+                "20 金锭\n"..
+                "把贡品放进圣杯，再和他谈谈",
+        ["zhTW"] = "跟他談談，他會要以下貢品：\n"..
+                "2 紅寶石\n"..
+                "10 真銀錠\n"..
+                "20 金錠\n"..
+                "把貢品放進聖杯，再和他談談"
+        -- 4238, Wowhead.com
+    },
+    [14401] = {
+        ["deDE"] = "Er kann von einem priester kontrolliert werden, der\n"..
+                "dann das Rezept an Spieler in der Nähe weitergeben kann",
+        ["enUS"] = "He can be mindcontrolled by a priest,\n"..
+                "who can then teach the recipe to nearby players",
+        ["esES"] = "Puede ser controlado mentalmente por un sacerdote,\n"..
+                "que luego puede enseñar la receta a los jugadores cercanos",
+        ["esMX"] = "Puede ser controlado mentalmente por un sacerdote,\n"..
+                "que luego puede enseñar la receta a los jugadores cercanos",
+        ["frFR"] = "Il peut être contrôlé par un prêtre,\n"..
+                "qui peut alors enseigner la recette aux joueurs voisins",
+        ["koKR"] = "사제가 마인드컨트롤할 수 있으며,\n"..
+                "사제는 주변 플레이어에게 레시피를 가르칠 수 있습니다",
+        ["ptBR"] = "Ele pode ter a mente controlada por um sacerdote,\n"..
+                "que pode então ensinar a receita aos jogadores próximos",
+        ["ruRU"] = "Его сознанием может управлять жрец,\n"..
+                "который затем может научить рецепту ближайших игроков",
+        ["zhCN"] = "他可以被牧师控制心智，\n"..
+                "然后牧师可以将配方传授给附近的玩家",
+        ["zhTW"] = "他可以被牧師控制心智，\n"..
+                "然後牧師可以將配方傳授給附近的玩家"
+        -- Eihrister, Wowhead.com
+    },
+    [10503] = {
+        ["deDE"] = "Sie wird ein Buch mit dem Rezept fallen lassen,\n"..
+                "nachdem sie besiegt wurde",
+        ["enUS"] = "She'll drop a book containing the recipe\n"..
+                "after being defeated",
+        ["esES"] = "Dejará caer un libro que contiene la receta\n"..
+                "después de ser derrotada",
+        ["esMX"] = "Dejará caer un libro que contiene la receta\n"..
+                "después de ser derrotada",
+        ["frFR"] = "Elle laissera tomber un livre contenant la recette\n"..
+                "après avoir été vaincue",
+        ["koKR"] = "패배 후 레시피가 담긴 책을 떨어뜨린다",
+        ["ptBR"] = "Ela deixará cair um livro contendo a receita\n"..
+                "depois de ser derrotada",
+        ["ruRU"] = "После поражения она уронит книгу с рецептом",
+        ["zhCN"] = "她被打败后会掉落一本记载秘方的书",
+        ["zhTW"] = "她被打敗後會掉落一本記載秘方的書"
+        -- J0057Mith, Wowhead.com
+    }
+}
+
 if rm.locale == "enUS" then
     L.professions = {
         [171] = "Alchemy",
