@@ -15,21 +15,13 @@ function rm.highlightTabOnMouseover(tab)
     end)
 end
 
-local function showMessageIfEmpty()
-    if rm.isRecipeListEmpty() then
-        rm.showCenteredText(L.congratulations, F.colors.gold)
-    end
-end
-
 local function handleActiveTab(tab)
     if tab.label == L.recipes then
         rm.handleRecipesTabClick()
-        showMessageIfEmpty()
     elseif tab.label == L.sources then
         rm.handleSourcesTabClick()
     elseif tab.label == L.fishing then
         rm.handleFishingTabClick()
-        showMessageIfEmpty()
     end
 end
 
