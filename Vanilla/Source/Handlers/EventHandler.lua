@@ -43,11 +43,11 @@ end
 
 local function showMainFrame(getSkillInfo)
     rm.showRecipesFrame(getSkillInfo) 
-    if rm.isRecipeListEmpty() then -- Happens on the first time opening Recipe Master after login
-        C_Timer.After(0.01, function() 
-            rm.updateRecipeDisplay(getSkillInfo) 
-        end)
-    end
+    C_Timer.After(0.01, function() 
+        if rm.isRecipeListEmpty() then -- Might happen when opening Recipe Master after login
+            rm.updateRecipeDisplay(getSkillInfo)
+        end
+    end)
 end
 
 local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)

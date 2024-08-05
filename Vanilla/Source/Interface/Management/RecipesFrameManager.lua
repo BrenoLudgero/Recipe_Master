@@ -1,33 +1,6 @@
 local _, rm = ...
 local F = rm.F
 
-local function getSpecializationDisplayName()
-    local specialization = rm.getSavedSpecializationByName(rm.displayedProfession)
-    if specialization then
-        return GetSpellInfo(specialization)
-    end
-    return ""
-end
-
-local function updateProgressBarColor()
-    if rm.progressBar:GetValue() < 100 then
-        rm.progressBar:SetStatusBarColor(unpack(rm.getPreference("progressColor")))
-        return
-    end
-    rm.progressBar:SetStatusBarColor(unpack(F.colors.gold))
-end
-
-function rm.updateProgressBar()
-    if rm.learnedPercentage > 100 then -- Avoids an error when using the add-on for the first time
-        return
-    end
-    local progress = rm.learnedRecipesCount.."/"..rm.totalRecipesCount
-    local specialization = getSpecializationDisplayName()
-    rm.progressBar:SetValue(rm.learnedPercentage)
-    updateProgressBarColor()
-    rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%) "..specialization)
-end
-
 function rm.updateRecipesFrameElementsPosition()
     local yOffset = 0
     local recipesSection = rm.recipesList.children
@@ -69,11 +42,41 @@ local function updateMainWidthBasedOnWidestRecipeName()
     end
 end
 
+local function getSpecializationDisplayName()
+    local specialization = rm.getSavedSpecializationByName(rm.displayedProfession)
+    if specialization then
+        return GetSpellInfo(specialization)
+    end
+    return ""
+end
+
+local function updateProgressBarColor()
+    if rm.progressBar:GetValue() < 100 then
+        rm.progressBar:SetStatusBarColor(unpack(rm.getPreference("progressColor")))
+        return
+    end
+    rm.progressBar:SetStatusBarColor(unpack(F.colors.gold))
+end
+
+local function updateProgressBar()
+    -- If Skillet is enabled, avoids an error when switching from a 
+    -- trade skill window to a craft window (enchanting) and vice versa
+    -- or when using the default UI and the mentioned windows are closed in quick succession
+    if rm.learnedPercentage > 100 then
+        return
+    end
+    local progress = rm.learnedRecipesCount.."/"..rm.totalRecipesCount
+    local specialization = getSpecializationDisplayName()
+    rm.progressBar:SetValue(rm.learnedPercentage)
+    rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%) "..specialization)
+    updateProgressBarColor()
+end
+
 function rm.updateRecipeDisplay(getSkillInfo)
     rm.clearFrameContent()
     rm.showProfessionRecipes(getSkillInfo)
     updateMainWidthBasedOnWidestRecipeName()
-    rm.updateProgressBar()
+    updateProgressBar()
 end
 
 function rm.showRecipesFrame(getSkillInfo)

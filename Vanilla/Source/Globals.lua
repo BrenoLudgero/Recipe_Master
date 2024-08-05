@@ -11,7 +11,7 @@ rm.learnedPercentage = 0
 rm.widestRecipeTextWidth = 0
 
 function rm.isRecipeListEmpty()
-    return #rm.recipesList.children == 0
+    return rm.mainFrame:IsShown() and #rm.recipesList.children == 0
 end
 
 function rm.tableContains(table, item)

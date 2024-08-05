@@ -17,7 +17,7 @@ function rm.getSavedProfessionLevelByName(profession)
     return rm.getSavedProfessionByName(profession)["level"]
 end
 
-function rm.getSavedProfessionLeveForCharacter(character, profession)
+function rm.getSavedProfessionLevelForCharacter(character, profession)
     return rm.getServerSavedVariables()[character][profession]["level"]
 end
 

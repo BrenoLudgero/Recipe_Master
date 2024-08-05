@@ -4,6 +4,6 @@ local _, rm = ...
 rm.frame:SetScript("OnEvent", function(_, event, ...)
     rm.handleAddonLoaded(event, ...)
     rm.handleSkillChange(event)
-    rm.handleProfessionFrame(event)
     rm.handleScaleChange(event)
+    rm.handleProfessionFrame(event)
 end)
