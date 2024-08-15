@@ -1,8 +1,8 @@
 local addonName, rm = ...
 -- rm: Globals within Recipe Master (variables, functions, frames)
 rm.frame = CreateFrame("Frame")
-rm.version = GetAddOnMetadata(addonName, "Version")
-rm.author = GetAddOnMetadata(addonName, "Author")
+rm.version = C_AddOns.GetAddOnMetadata(addonName, "Version")
+rm.author = C_AddOns.GetAddOnMetadata(addonName, "Author")
 rm.currentCharacter = UnitName("player")
 rm.currentFaction = UnitFactionGroup("player") -- Alliance/Horde, always in English
 rm.locale = GetLocale()
@@ -10,7 +10,7 @@ rm.server = GetRealmName()
 rm.recipeDB = {}
 rm.sourceDB = {}
 rm.L = {} -- Localized text
-rm.L.title = GetAddOnMetadata(addonName, "Title")
+rm.L.title = C_AddOns.GetAddOnMetadata(addonName, "Title")
 rm.F = { -- Frame settings
     backdrops = {},
     colors = {},
