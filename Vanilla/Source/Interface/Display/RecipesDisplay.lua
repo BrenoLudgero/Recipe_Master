@@ -2,17 +2,6 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-local function getComparisonValues(a, b)
-    local sortBy = rm.getPreference("sortRecipesBy")
-    if sortBy == "Name" then
-        return a.name, b.name
-    elseif sortBy == "Quality" then
-        return a.quality, b.quality
-    elseif sortBy == "Skill" then
-        return a.skill, b.skill
-    end
-end
-
 local function splitSeasonalRecipes(professionRecipes)
     local sodRecipes = {}
     local regularRecipes = {}
@@ -40,15 +29,25 @@ local function storeNonDuplicateRecipe(regularRecipe, sodRecipes)
 end
 
 local function filterSeasonalRecipes(professionRecipes)
-    local currentSeason = rm.getSeason()
     local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
-    if currentSeason == "SoD" then
+    if rm.getCurrentSeason() == "SoD" then
         for _, recipe in pairs(regularRecipes) do
             storeNonDuplicateRecipe(recipe, sodRecipes)
         end
         return sodRecipes
     end
     return regularRecipes
+end
+
+local function getComparisonValues(a, b)
+    local sortBy = rm.getPreference("sortRecipesBy")
+    if sortBy == "Name" then
+        return a.name, b.name
+    elseif sortBy == "Quality" then
+        return a.quality, b.quality
+    elseif sortBy == "Skill" then
+        return a.skill, b.skill
+    end
 end
 
 local function compareRecipes(a, b)
@@ -63,7 +62,6 @@ local function compareRecipes(a, b)
 end
 
 local function sortRecipes(professionRecipes)
-    local currentSeason = rm.getSeason()
     local filteredRecipes = filterSeasonalRecipes(professionRecipes)
     table.sort(filteredRecipes, compareRecipes)
     return filteredRecipes

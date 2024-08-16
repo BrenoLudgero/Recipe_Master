@@ -185,7 +185,7 @@ elseif rm.locale == "zhTW" or rm.locale == "zhCN" then
     F.sizes.sourcesListExtraBorderHeight = 4.4
 end
 
-F.colors.black ={0, 0, 0}
+F.colors.black = {0, 0, 0}
 F.colors.blue = {0.00, 0.44, 0.87}
 F.colors.gray = {0.62, 0.62, 0.62}
 F.colors.grayishBlueHex = "ff73A7BC"

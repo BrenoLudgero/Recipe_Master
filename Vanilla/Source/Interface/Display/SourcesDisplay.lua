@@ -69,17 +69,6 @@ local function getSourceColumns(sourceType)
     return columns[sourceType]
 end
 
---[[ local function isSourceForCurrentSeason(source)
-    local currentSeason = rm.getSeason()
-    return not source["season"] or (source["season"] == currentSeason)
-end
-
-local function storeSourceInfo(source, infoTable)
-    if source and isSourceForCurrentSeason(source) then
-        table.insert(infoTable, source)
-    end
-end ]]
-
 local function getAllSourcesInfo(sourceType, recipeSource)
     local info = {}
     for sourceID, sourceData in pairs(recipeSource) do
@@ -139,8 +128,6 @@ local function showFirstTabRows(sources)
         break
     end
 end
-
--- trainer, vendor, quest, drop, pickpocket, object, item, fishing, unique
 
 -- Called in RecipesFrameSetup.createChatLinkOrDisplaySourcesOnClick
 function rm.showAllSources(recipe)

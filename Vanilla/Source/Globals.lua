@@ -41,7 +41,7 @@ function rm.getIDFromLink(link)
     return ID
 end
 
-function rm.getSeason()
+function rm.getCurrentSeason()
     local season = C_Seasons.GetActiveSeason()
     local seasonNames = {
         [Enum.SeasonID.SeasonOfMastery] = "SoM",

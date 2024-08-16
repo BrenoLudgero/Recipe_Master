@@ -28,6 +28,12 @@ local function cacheAllItemNames()
     end
 end
 
+local function cacheAllQuests()
+    for questID in pairs(rm.questDB) do
+        local quest = C_QuestLog.GetQuestInfo(questID)
+    end
+end
+
 local function cacheAllTradeSkills()
     local numTradeSkills = GetNumTradeSkills()
     for i = 1, numTradeSkills do
@@ -42,16 +48,10 @@ local function cacheAllCrafts()
     end
 end
 
-local function cacheAllQuests()
-    for questID in pairs(rm.questDB) do
-        local quest = C_QuestLog.GetQuestInfo(questID)
-    end
-end
-
 function rm.cacheAllAssets()
     cacheAllRecipes()
     cacheAllItemNames()
+    cacheAllQuests()
     cacheAllTradeSkills()
     cacheAllCrafts()
-    cacheAllQuests()
 end

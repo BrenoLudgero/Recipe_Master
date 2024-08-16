@@ -2,8 +2,7 @@ local _, rm = ...
 local L = rm.L
 
 local function isRecipeForCurrentSeason(recipe)
-    local currentSeason = rm.getSeason()
-    return not recipe.season or (recipe.season == currentSeason)
+    return not recipe.season or (recipe.season == rm.getCurrentSeason())
 end
 
 local function isRecipeForCurrentClass(recipe)
@@ -133,6 +132,10 @@ local function saveRecipeData(recipeID, recipeData, professionID)
     }
 end
 
+local function isDisplayedProfession(professionID)
+    return L.professions[professionID] == rm.displayedProfession
+end
+
 local function storeRecipeData(recipesDatabase, professionRecipes, professionID)
     for recipeID, recipeData in pairs(recipesDatabase) do
         if not professionRecipes[recipeID] then
@@ -140,10 +143,6 @@ local function storeRecipeData(recipesDatabase, professionRecipes, professionID)
             professionRecipes[recipeID] = recipe
         end
     end
-end
-
-local function isDisplayedProfession(professionID)
-    return L.professions[professionID] == rm.displayedProfession
 end
 
 -- Retrieves all the recipe data for the currently displayed profession
