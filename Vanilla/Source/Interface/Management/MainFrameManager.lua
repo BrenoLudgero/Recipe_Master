@@ -36,7 +36,7 @@ local function replaceHideFrameButtonWithScrollTexture()
     closeButton:Disable(true)
     closeButton:Hide()
     local newTexture = rm.mainFrame:CreateTexture()
-    newTexture:SetPoint("CENTER", closeButton, -0.4, 0)
+    newTexture:SetPoint("CENTER", closeButton, -0.6, 0)
     newTexture:SetSize(18, 18)
     newTexture:SetTexture("Interface/Icons/INV_Scroll_11")
 end
@@ -72,39 +72,33 @@ local function setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     saveFramePositionOnDragStop(professionFrame)
 end
 
-local function keepMainFrameHeightSameAsProfessionFrame(professionFrame, uiScale)
-    xOffset = -(F.offsets.mainX * uiScale)
+local function keepMainFrameHeightSameAsProfessionFrame(professionFrame)
     rm.mainFrame:SetScript("OnUpdate", function(self, elapsed)
         self:ClearAllPoints()
-        self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", xOffset, F.offsets.mainTopY)
-        self:SetPoint("BOTTOM", professionFrame, 0, F.offsets.mainBottomY)
+        rm.restoreButton:ClearAllPoints()
+        if professionFrame == SkilletFrame then
+            rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 0, -1)
+            self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 0, -1)
+            self:SetPoint("BOTTOM", professionFrame)
+        elseif professionFrame == TradeSkillFrame then
+            rm.restoreButton:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", -2, -4)
+            self:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", -2, -4)
+            self:SetPoint("BOTTOMLEFT", TradeSkillCancelButton, "BOTTOMRIGHT", 0, -5)
+        elseif professionFrame == CraftFrame then
+            rm.restoreButton:SetPoint("TOPLEFT", CraftFrameCloseButton, "TOPRIGHT", -2, -4)
+            self:SetPoint("TOPLEFT", CraftFrameCloseButton, "TOPRIGHT", -2, -4)
+            self:SetPoint("BOTTOMLEFT", CraftCancelButton, "BOTTOMRIGHT", 0, -5)
+        end
     end)
-end
-
-local function anchorToProfessionFrame(professionFrame)
-    local uiScale = UIParent:GetScale()
-    local xOffset = -(F.offsets.restoreButtonX * uiScale)
-    rm.restoreButton:ClearAllPoints()
-    rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", xOffset, F.offsets.restoreButtonY)
-    keepMainFrameHeightSameAsProfessionFrame(professionFrame, uiScale)
 end
 
 local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidth)
     if professionFrame == UIParent then -- TSM is enabled
         replaceHideFrameButtonWithScrollTexture()
         setFrameMovableAndResizable(professionFrame, mainFrameWidth)
-        return
-    elseif professionFrame == SkilletFrame then -- Skillet is enabled
-        yOffset = 0
-        F.offsets.mainX = 0
-        F.offsets.mainTopY = -1.5
-        F.offsets.mainBottomY = 0
-        F.offsets.headerY = -33
-        F.offsets.restoreButtonX = 0
-        F.offsets.restoreButtonY = -1.5
-        F.sizes.headerTextureHeight = 40
+    else
+        keepMainFrameHeightSameAsProfessionFrame(professionFrame)
     end
-    anchorToProfessionFrame(professionFrame)
 end
 
 function rm.setParentDependentFramesPosition()

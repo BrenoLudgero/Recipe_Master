@@ -33,9 +33,8 @@ end
 function rm.createMainHeader(parent)
     local header = CreateFrame("Frame", nil, parent)
     local frameLevel = parent:GetFrameLevel() - 1
-    header:SetPoint("LEFT")
-    header:SetPoint("TOP", F.offsets.headerX, F.offsets.headerY)
-    header:SetHeight(F.sizes.headerHeight)
+    header:SetPoint("TOPLEFT")
+    header:SetPoint("BOTTOMRIGHT", rm.mainFrameBorder.CloseButton, "BOTTOMLEFT", F.offsets.headerX, F.offsets.headerY)
     header:SetFrameLevel(frameLevel)
     local texture = header:CreateTexture(nil)
     texture:SetTexture(F.textures.header)
