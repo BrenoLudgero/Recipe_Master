@@ -2,7 +2,7 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-function rm.createFrame()
+function rm.createMainFrame()
     local mainFrame = CreateFrame("Frame", nil, nil, F.templates.mainFrame)
     mainFrame:SetBackdrop(F.backdrops.recipesFrame)
     mainFrame:SetBackdropColor(unpack(F.colors.mainBackground))
@@ -30,7 +30,7 @@ function rm.createBorder(parent)
     return border
 end
 
-function rm.createHeader(parent)
+function rm.createMainHeader(parent)
     local header = CreateFrame("Frame", nil, parent)
     local frameLevel = parent:GetFrameLevel() - 1
     header:SetPoint("LEFT")
@@ -43,7 +43,7 @@ function rm.createHeader(parent)
     return header
 end
 
-function rm.createHeaderText(parent)
+function rm.createMainHeaderText(parent)
     local text = parent:CreateFontString(nil, "OVERLAY", F.fonts.header)
     text:SetText(L.title)
     text:SetTextColor(unpack(F.colors.yellow))

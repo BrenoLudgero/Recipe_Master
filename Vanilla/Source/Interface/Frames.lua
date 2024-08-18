@@ -8,10 +8,10 @@ function rm.createAllFrameElements()
     F.colors.sourcesBackground = {0.6, 0.6, 0.6, rm.getPreference("backgroundOpacity")}
 
     ---------------------------- Main frame ------------------------------
-    rm.mainFrame = rm.createFrame()
+    rm.mainFrame = rm.createMainFrame()
     rm.mainFrameBorder = rm.createBorder(rm.mainFrame)
-    rm.header = rm.createHeader(rm.mainFrameBorder)
-    rm.createHeaderText(rm.header)
+    rm.header = rm.createMainHeader(rm.mainFrameBorder)
+    rm.createMainHeaderText(rm.header)
     rm.createInnerBorder(rm.mainFrame)
     rm.restoreButton = rm.createRestoreButton() -- Displayed after clicking the "X" button to restore the mainFrame
     rm.centeredText = rm.createCenteredText(rm.mainFrame)

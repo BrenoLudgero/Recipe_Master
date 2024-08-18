@@ -57,12 +57,12 @@ function rm.getRequirementsText(recipe, recipeInfo)
         local reputationInfo = rm.getFactionName(recipe.repFaction).."  "
         missingRequirements = missingRequirements..reputationInfo
     end
-    if missingRequirements ~= "" then
-        recipeInfo:SetText(missingRequirements:gsub("(%s%s)(%C)", ", %2")) -- Replaces all "  " with ", " when followed by a character
-        recipeInfo:SetTextColor(unpack(F.colors.red))
-    else
+    if missingRequirements == "" then
         recipeInfo:SetText(L.canLearn)
         recipeInfo:SetTextColor(unpack(F.colors.yellow))
+    else
+        recipeInfo:SetText(missingRequirements:gsub("(%s%s)(%C)", ", %2")) -- Replaces all "  " with ", " when followed by a character
+        recipeInfo:SetTextColor(unpack(F.colors.red))
     end
 end
 
