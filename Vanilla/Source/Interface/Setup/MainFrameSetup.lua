@@ -1,19 +1,31 @@
 local _, rm = ...
 local F = rm.F
 
-function rm.setUpButtonWithTooltip(button, width, height, tooltipText, scriptOnClick)
-    button:SetSize(width, height)
-    button:EnableMouse(true)
-    button:SetScript("OnEnter", function(self)
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+function rm.showTooltipTextOnMouseover(element, tooltipText, anchorPoint)
+    element:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, anchorPoint)
         GameTooltip:SetText(tooltipText)
         GameTooltip:Show()
     end)
-    button:SetScript("OnLeave", function()
+    element:SetScript("OnLeave", function()
         GameTooltip:Hide()
     end)
-    button:SetScript("OnClick", scriptOnClick)
-    return button
+end
+
+function rm.minimizeMainFrameOnClick(button)
+    button:SetScript("OnClick", function(self)
+        rm.autoOpenRecipesFrame = false
+        rm.restoreButton:Show()
+        rm.mainFrame:Hide()
+    end)
+end
+
+function rm.restoreMainFrameOnClick(restoreButton)
+    restoreButton:SetScript("OnClick", function(self)
+        rm.autoOpenRecipesFrame = true
+        self:Hide()
+        rm.mainFrame:Show()
+    end)
 end
 
 function rm.matchParentHeight(innerBorder)

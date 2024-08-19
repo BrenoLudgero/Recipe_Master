@@ -16,17 +16,12 @@ end
 
 function rm.createBorder(parent)
     local border = CreateFrame("Frame", nil, parent, F.templates.mainFrameBorder)
-    local button = border.CloseButton -- "X"
-    local buttonWidth = button:GetWidth()
-    local buttonHeight = button:GetHeight()
+    local minimizeButton = border.CloseButton
     border:SetFrameLevel(9)
     border:SetPoint("TOPLEFT", 2.5, 0)
     border:SetPoint("BOTTOMRIGHT", 0, 2)
-    rm.setUpButtonWithTooltip(button, buttonWidth, buttonHeight, L.hideWindow, function(button, button, down)
-        rm.autoOpenRecipesFrame = false
-        rm.restoreButton:Show()
-        rm.mainFrame:Hide()
-    end)
+    rm.showTooltipTextOnMouseover(minimizeButton, L.minimizeWindow, "ANCHOR_TOP")
+    rm.minimizeMainFrameOnClick(minimizeButton)
     return border
 end
 
@@ -102,11 +97,9 @@ end
 
 function rm.createRestoreButton()
     local button = CreateFrame("Button", nil)
-    rm.setUpButtonWithTooltip(button, F.sizes.restoreButton, F.sizes.restoreButton, L.title, function(self, button, down)
-        rm.autoOpenRecipesFrame = true
-        self:Hide()
-        rm.mainFrame:Show()
-    end)
+    button:SetSize(F.sizes.restoreButton, F.sizes.restoreButton)
+    rm.showTooltipTextOnMouseover(button, L.title, "ANCHOR_RIGHT")
+    rm.restoreMainFrameOnClick(button)
     button.texture = button:CreateTexture()
     button.texture:SetTexture(rm.getPreference("restoreButtonIconTexture"))
     button.texture:SetAllPoints(button)

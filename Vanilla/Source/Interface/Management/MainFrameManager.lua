@@ -31,12 +31,12 @@ function rm.getProfessionFrame()
     return frame
 end
 
-local function replaceHideFrameButtonWithScrollTexture()
-    local closeButton = rm.mainFrameBorder.CloseButton
-    closeButton:Disable(true)
-    closeButton:Hide()
+local function replaceMinimizeButtonWithScrollTexture()
+    local minimizeButton = rm.mainFrameBorder.CloseButton
+    minimizeButton:Disable(true)
+    minimizeButton:Hide()
     local newTexture = rm.mainFrame:CreateTexture()
-    newTexture:SetPoint("CENTER", closeButton, -0.6, 0)
+    newTexture:SetPoint("CENTER", minimizeButton, -0.6, 0)
     newTexture:SetSize(18, 18)
     newTexture:SetTexture("Interface/Icons/INV_Scroll_11")
 end
@@ -94,7 +94,7 @@ end
 
 local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidth)
     if professionFrame == UIParent then -- TSM is enabled
-        replaceHideFrameButtonWithScrollTexture()
+        replaceMinimizeButtonWithScrollTexture()
         setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     else
         keepMainFrameHeightSameAsProfessionFrame(professionFrame)
