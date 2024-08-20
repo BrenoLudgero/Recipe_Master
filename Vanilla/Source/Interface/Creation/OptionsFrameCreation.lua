@@ -10,11 +10,11 @@ function rm.createOptionsFrame()
     return rm.frame
 end
 
-function rm.createOptionsText(font, string, xPosition, yPosition)
+function rm.createOptionsText(font, string, xOffset, yOffset)
     local text = rm.optionsFrame:CreateFontString(nil, "ARTWORK", font)
     text:SetText(string)
-    if xPosition and yPosition then
-        text:SetPoint("TOPLEFT", xPosition, yPosition)
+    if xOffset and yOffset then
+        text:SetPoint("TOPLEFT", xOffset, yOffset)
     end
     text:SetJustifyH("LEFT")
     return text
@@ -31,6 +31,7 @@ local function createSlider(yOffset, description)
     local sliderDescription = rm.createOptionsText(F.fonts.optionDescription, description)
     sliderDescription:SetPoint("CENTER", slider, "TOP", 0, F.offsets.sliderDescriptionY)
     slider.valueDisplay = slider:CreateFontString(nil, "ARTWORK", F.fonts.optionDescription)
+    slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, F.offsets.sliderValueY)
     return slider
 end
 
@@ -43,7 +44,6 @@ function rm.createOpacitySlider()
     local initialValue = rm.getPreference("backgroundOpacity") * 100
     slider:SetValue(initialValue)
     slider.valueDisplay:SetText(initialValue.."%")
-    slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, F.offsets.sliderValueY)
     rm.updateBackgroundOpacity(slider)
     return slider
 end
@@ -80,7 +80,6 @@ function rm.createSpacingSlider()
     local initialValue = rm.getPreference("iconSpacing")
     slider:SetValue(initialValue)
     slider.valueDisplay:SetText(initialValue)
-    slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, F.offsets.sliderValueY)
     rm.updateIconSpacing(slider, slider.valueDisplay)
     return slider
 end

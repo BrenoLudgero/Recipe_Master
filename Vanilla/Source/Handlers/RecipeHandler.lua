@@ -2,7 +2,7 @@ local _, rm = ...
 local L = rm.L
 
 local function isRecipeForCurrentSeason(recipe)
-    return not recipe.season or (recipe.season == rm.getCurrentSeason())
+    return not recipe.season or (recipe.season == rm.season)
 end
 
 local function isRecipeForCurrentClass(recipe)

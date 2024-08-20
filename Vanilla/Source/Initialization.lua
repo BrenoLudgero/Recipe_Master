@@ -1,11 +1,22 @@
 local addonName, rm = ...
 -- rm: Globals within Recipe Master (variables, functions, frames)
+
+local function getCurrentSeason()
+    local season = C_Seasons.GetActiveSeason()
+    local seasonNames = {
+        [Enum.SeasonID.SeasonOfMastery] = "SoM",
+        [Enum.SeasonID.SeasonOfDiscovery] = "SoD"
+    }
+    return seasonNames[season]
+end
+
 rm.frame = CreateFrame("Frame")
 rm.version = C_AddOns.GetAddOnMetadata(addonName, "Version")
 rm.author = C_AddOns.GetAddOnMetadata(addonName, "Author")
 rm.currentCharacter = UnitName("player")
 rm.currentFaction = UnitFactionGroup("player") -- Alliance/Horde, always in English
 rm.locale = GetLocale()
+rm.season = getCurrentSeason()
 rm.server = GetRealmName()
 rm.recipeDB = {}
 rm.sourceDB = {}
@@ -45,12 +56,12 @@ local defaultOptionsFramePreferences = {
     showRecipesInfo = true
 }
 
-function rm.resetOptionsFramePreferences()
-    RecipeMasterOptionsFramePreferences = defaultOptionsFramePreferences
-end
-
 local function oldPreferencesFound()
     return RecipeMasterPreferences
+end
+
+function rm.resetOptionsFramePreferences()
+    RecipeMasterOptionsFramePreferences = defaultOptionsFramePreferences
 end
 
 -- Detects and deletes the old preferences table "RecipeMasterPreferences" (1.0.3 -> 1.1.0)

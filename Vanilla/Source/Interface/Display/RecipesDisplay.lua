@@ -30,7 +30,7 @@ end
 
 local function filterSeasonalRecipes(professionRecipes)
     local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
-    if rm.getCurrentSeason() == "SoD" then
+    if rm.season == "SoD" then
         for _, recipe in pairs(regularRecipes) do
             storeNonDuplicateRecipe(recipe, sodRecipes)
         end

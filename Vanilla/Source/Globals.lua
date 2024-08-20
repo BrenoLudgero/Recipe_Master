@@ -41,15 +41,6 @@ function rm.getIDFromLink(link)
     return ID
 end
 
-function rm.getCurrentSeason()
-    local season = C_Seasons.GetActiveSeason()
-    local seasonNames = {
-        [Enum.SeasonID.SeasonOfMastery] = "SoM",
-        [Enum.SeasonID.SeasonOfDiscovery] = "SoD"
-    }
-    return seasonNames[season]
-end
-
 function rm.getPreference(preference)
     if RecipeMasterMainFramePreferences[preference] ~= nil then
         return RecipeMasterMainFramePreferences[preference]
