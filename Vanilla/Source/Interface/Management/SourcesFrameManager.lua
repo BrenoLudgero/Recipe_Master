@@ -25,15 +25,15 @@ end
 local function updateTabAppearance(tab)
     tab.text:ClearAllPoints()
     if tab.active then
-        tab.texture:SetTexture(F.textures.sourcesListTabActive)
+        tab.texture:SetTexture(F.textures.sourcesListActiveTab)
         tab.texture:SetAlpha(1)
         tab.text:SetAlpha(1)
-        tab.text:SetPoint("CENTER", tab.texture, F.offsets.sourcesListTabTextX, -3)
+        tab.text:SetPoint("CENTER", tab.texture, F.offsets.sourcesListTabTextX, F.offsets.sourcesListActiveTabY)
     else
-        tab.texture:SetTexture(F.textures.sourcesListTabInactive)
+        tab.texture:SetTexture(F.textures.sourcesListInactiveTab)
         tab.texture:SetAlpha(0.8)
         tab.text:SetAlpha(0.8)
-        tab.text:SetPoint("CENTER", tab.texture, F.offsets.sourcesListTabTextX, -5.4)
+        tab.text:SetPoint("CENTER", tab.texture, F.offsets.sourcesListTabTextX, F.offsets.sourcesListInactiveTabY)
     end
 end
 
@@ -50,7 +50,7 @@ end
 
 function rm.updateListHeight()
     local listHeight = (#rm.sourcesList.children * F.sizes.sourcesListRowHeight) + F.sizes.sourcesListColumnHeight
-    rm.sourcesList:SetHeight(listHeight + F.offsets.sourcesColumnsContainerY + F.sizes.sourcesListExtraBorderHeight)
+    rm.sourcesList:SetHeight(listHeight + F.offsets.columnsContainerY + F.sizes.sourcesListExtraBorderHeight)
 end
 
 function rm.clearSourcesColumns()

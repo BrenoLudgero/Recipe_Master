@@ -28,9 +28,9 @@ end
 
 function rm.createRecipesScrollFrame(parent)
     local scroll = CreateFrame("ScrollFrame", nil, parent, F.templates.scrollFrame)
-    scroll:SetPoint("TOPLEFT", rm.header, "BOTTOMLEFT", 0, F.offsets.recipesScrollTopY)
-    scroll:SetPoint("BOTTOMRIGHT", rm.divider, "TOPRIGHT", 0, F.offsets.recipesScrollBottomY)
-    scroll:SetPoint("RIGHT", rm.mainFrameBorder, F.offsets.recipesScrollX, 0)
+    scroll:SetPoint("TOPLEFT", rm.header, "BOTTOMLEFT", 0, F.offsets.recipesListScrollTopY)
+    scroll:SetPoint("BOTTOMRIGHT", rm.divider, "TOPRIGHT", 0, F.offsets.recipesListScrollBottomY)
+    scroll:SetPoint("RIGHT", rm.mainFrameBorder, F.offsets.recipesListScrollX, 0)
     return scroll
 end
 
@@ -49,7 +49,7 @@ function rm.createSearchBar(parent)
     searchBar:SetFrameLevel(frameLevel)
     searchBar:SetPoint("TOPLEFT", F.offsets.searchBarX, 0)
     searchBar:SetPoint("BOTTOMLEFT")
-    searchBar:SetFont(font, F.fontSizes.search, "")
+    searchBar:SetFont(font, F.fontSizes.searchBar, "")
     rm.displayPlaceholderTextBasedOnFocus(searchBar)
     rm.showMatchingRecipesOnTop(searchBar)
     return searchBar

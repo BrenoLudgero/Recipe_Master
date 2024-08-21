@@ -20,23 +20,23 @@ function rm.createOptionsText(font, string, xOffset, yOffset)
     return text
 end
 
-local function createSlider(yOffset, description)
+local function createSlider(xOffset, yOffset, description)
     local slider = CreateFrame("Slider", nil, rm.optionsFrame, F.templates.slider)
     slider:SetSize(F.sizes.sliderWidth, F.sizes.sliderHeight)
     slider:SetOrientation("HORIZONTAL")
-    slider:SetPoint("TOPLEFT", F.offsets.sliderX, yOffset)
+    slider:SetPoint("TOPLEFT", xOffset, yOffset)
     slider:SetObeyStepOnDrag(true)
     slider.Low:AdjustPointsOffset(0, F.offsets.sliderMinMaxTextY)
     slider.High:AdjustPointsOffset(0, F.offsets.sliderMinMaxTextY)
-    local sliderDescription = rm.createOptionsText(F.fonts.optionDescription, description)
-    sliderDescription:SetPoint("CENTER", slider, "TOP", 0, F.offsets.sliderDescriptionY)
+    slider.label = rm.createOptionsText(F.fonts.optionDescription, description)
+    slider.label:SetPoint("CENTER", slider, "TOP", 0, F.offsets.sliderDescriptionY)
     slider.valueDisplay = slider:CreateFontString(nil, "ARTWORK", F.fonts.optionDescription)
     slider.valueDisplay:SetPoint("TOP", slider.BottomEdge, "BOTTOM", 0, F.offsets.sliderValueY)
     return slider
 end
 
 function rm.createOpacitySlider()
-    local slider = createSlider(F.offsets.opacitySliderY, L.backgroundOpacity)
+    local slider = createSlider(F.offsets.firstColumnX, F.offsets.opacitySliderY, L.backgroundOpacity)
     slider:SetMinMaxValues(40, 100)
     slider:SetValueStep(1)
     slider.Low:SetText("40%")
@@ -52,14 +52,14 @@ local function createOptionsDropdown(xOffset, yOffset, label)
     local dropdown = CreateFrame("Button", nil, rm.optionsFrame, F.templates.dropdown)
     dropdown:SetPoint("TOPLEFT", xOffset, yOffset)
     dropdown.Text:SetPoint("CENTER", 0, 2.5)
-    local label = rm.createOptionsText(F.fonts.optionDescription, label, nil, nil)
-    label:SetPoint("CENTER", dropdown, "TOP", 0, F.offsets.optionsDropdownLabelY)
+    local label = rm.createOptionsText(F.fonts.optionDescription, label)
+    label:SetPoint("CENTER", dropdown, "TOP", 0, F.offsets.dropdownLabelY)
     UIDropDownMenu_SetWidth(dropdown, F.sizes.optionsDropdownWidth)
     return dropdown
 end
 
 function rm.createRestoreIconDropdown()
-    local dropdown = createOptionsDropdown(F.offsets.updateIconDropdownX, F.offsets.updateIconDropdownY, L.updateIconDropdown)
+    local dropdown = createOptionsDropdown(F.offsets.iconDropdownX, F.offsets.iconDropdownY, L.updateIconDropdown)
     dropdown.values = {
         {text = L.common, value = "Interface/Icons/INV_Scroll_03"},
         {text = L.uncommon, value = "Interface/Icons/INV_Scroll_06"},
@@ -72,7 +72,7 @@ function rm.createRestoreIconDropdown()
 end
 
 function rm.createSpacingSlider()
-    local slider = createSlider(F.offsets.spacingSliderY, L.recipeIconSpacing)
+    local slider = createSlider(F.offsets.firstColumnX, F.offsets.spacingSliderY, L.recipeIconSpacing)
     slider:SetMinMaxValues(1, 10)
     slider:SetValueStep(1)
     slider.Low:SetText("1")
@@ -88,7 +88,7 @@ local function createCheckButton(parentFrame, xOffset, yOffset, savedVariable, l
     local button = CreateFrame("CheckButton", nil, parentFrame, F.templates.checkButton)
     button:SetPoint("TOPLEFT", xOffset, yOffset)
     button:SetChecked(rm.getPreference(savedVariable))
-    local label = rm.createOptionsText(F.fonts.optionDescription, labelText, nil, nil)
+    local label = rm.createOptionsText(F.fonts.optionDescription, labelText)
     label:SetPoint("LEFT", button, "RIGHT", F.offsets.checkButtonTextX, 0)
     rm.toggleCheckButtonPreferenceOnClick(button, savedVariable)
     return button
@@ -97,8 +97,8 @@ end
 function rm.createShowRecipesInfoCheckButton()
     return createCheckButton(
         rm.optionsFrame, 
-        F.offsets.showRecipesInfoButtonX, 
-        F.offsets.showRecipesInfoButtonY, 
+        F.offsets.showDetailsCheckX, 
+        F.offsets.showDetailsCheckY, 
         "showRecipesInfo", 
         L.showRecipesInfo
     )
@@ -107,8 +107,8 @@ end
 function rm.createShowLearnedCheckButton()
     return createCheckButton(
         rm.optionsFrame, 
-        F.offsets.showLearnedButtonX, 
-        F.offsets.showRecipesInfoButtonY, 
+        F.offsets.showLearnedCheckX, 
+        F.offsets.showDetailsCheckY, 
         "showLearnedRecipes", 
         L.showLearned
     )
@@ -126,7 +126,7 @@ function rm.createProgressBrightnessDropdown()
 end
 
 function rm.createProgressColorDropdown()
-    local dropdown = createOptionsDropdown(F.offsets.updateIconDropdownX, F.offsets.brightnessDropdownY, L.color)
+    local dropdown = createOptionsDropdown(F.offsets.progressColorDropdownX, F.offsets.brightnessDropdownY, L.color)
     dropdown.values = {
         {text = L.blue, value = F.colors.blue},
         {text = L.gray, value = F.colors.gray},

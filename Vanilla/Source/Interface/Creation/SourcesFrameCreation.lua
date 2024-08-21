@@ -59,7 +59,7 @@ end
 function rm.createSourcesScrollFrame(parent)
     local scrollFrame = CreateFrame("ScrollFrame", nil, parent, F.templates.scrollFrame)
     scrollFrame:SetPoint("TOPLEFT", F.offsets.sourcesListX, F.offsets.sourcesListY)
-    scrollFrame:SetPoint("BOTTOMRIGHT", F.offsets.sourcesListScrollX, 10)
+    scrollFrame:SetPoint("BOTTOMRIGHT", F.offsets.sourcesListScrollX, F.offsets.sourcesListScrollY)
     scrollFrame:Hide()
     return scrollFrame
 end
@@ -75,7 +75,7 @@ end
 function rm.createColumnsContainer(parent)
     local container = CreateFrame("Frame", nil, parent)
     container:SetSize(F.sizes.sourcesListWidth, F.sizes.sourcesListColumnHeight)
-    container:SetPoint("TOPLEFT", F.offsets.sourcesColumnsContainerX, -F.offsets.sourcesColumnsContainerY)
+    container:SetPoint("TOPLEFT", F.offsets.columnsContainerX, -F.offsets.columnsContainerY)
     container.texture = container:CreateTexture()
     container.texture:SetAllPoints()
     container.texture:SetColorTexture(unpack(F.colors.black))
