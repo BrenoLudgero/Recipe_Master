@@ -195,9 +195,7 @@ end
 local function getNameAndChance(getNameFunction, firstColumn, sourceID, sourceData)
     local info = {}
     local name = getNameFunction(sourceID)
-    if #name > F.sizes.sourcesCellTextLength["firstOfTwoColumns"] then
-        info["fullName"] = name
-    end
+    info["fullName"] = name
     info[firstColumn] = shortenLongName(name, F.sizes.sourcesCellTextLength["firstOfTwoColumns"])
     info[L.chance] = sourceData
     return info
