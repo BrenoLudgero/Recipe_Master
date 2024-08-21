@@ -57,6 +57,7 @@ function rm.createAllFrameElements()
     local options = {
         ---------- Sliders ----------
         opacitySlider = rm.createOpacitySlider(),
+        scaleSlider = rm.createScaleSlider(),
         spacingSlider = rm.createSpacingSlider(),
         ---------- Dropdowns ----------
         progressBrightness = rm.createProgressBrightnessDropdown(),

@@ -8,17 +8,13 @@ rm.frame:RegisterEvent("TRADE_SKILL_CLOSE")
 rm.frame:RegisterEvent("CRAFT_SHOW")
 rm.frame:RegisterEvent("CRAFT_CLOSE")
 
-local function scaleInterfaceElements()
-    local uiScale = UIParent:GetScale()
-    rm.mainFrame:SetScale(uiScale + 0.1)
-    rm.restoreButton:SetScale(uiScale + 0.1)
-end
-
--- Adjusts all interface elements based on the user's UI Scale setting
+-- Scales the interface elements based on the UI Scale setting + scale preference
 -- This fires when the setting is updated and after every login / reload
 function rm.handleScaleChange(event)
     if event == "UI_SCALE_CHANGED" then
-        scaleInterfaceElements()
+        local interfaceScale = UIParent:GetEffectiveScale() + rm.getPreference("interfaceScale")
+        rm.mainFrame:SetScale(interfaceScale)
+        rm.restoreButton:SetScale(interfaceScale)
     end
 end
 

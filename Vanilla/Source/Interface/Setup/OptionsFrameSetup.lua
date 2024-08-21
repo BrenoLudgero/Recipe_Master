@@ -12,6 +12,17 @@ function rm.updateBackgroundOpacity(opacitySlider)
     end)
 end
 
+function rm.updateInterfaceScale(scaleSlider)
+    scaleSlider:SetScript("OnValueChanged", function(self, value)
+        local valueToTwoDecimals = math.floor(value * 100 + 0.5) / 100
+        rm.setPreference("interfaceScale", valueToTwoDecimals)
+        local valueToHundreds = (valueToTwoDecimals + 1) * 100
+        self.valueDisplay:SetText(valueToHundreds.."%")
+        rm.mainFrame:SetScale(UIParent:GetEffectiveScale() + rm.getPreference("interfaceScale"))
+        rm.restoreButton:SetScale(UIParent:GetEffectiveScale() + rm.getPreference("interfaceScale"))
+    end)
+end
+
 local function updateFrameTexture(frame, savedVariable)
     if frame and frame ~= rm.progressBar then
         frame:SetTexture(rm.getPreference(savedVariable))
@@ -68,13 +79,18 @@ function rm.resetSavedOptionsOnClick(resetDefaultsButton, options)
     resetDefaultsButton:SetScript("OnClick", function(self)
         rm.resetOptionsFramePreferences()
         local opacity = rm.getPreference("backgroundOpacity")
+        local scale = rm.getPreference("interfaceScale")
         local spacing = rm.getPreference("iconSpacing")
         local progressColorPref = rm.getPreference("progressColor")
         local restoreButtonIconTexture = rm.getPreference("restoreButtonIconTexture")
         local showRecipesInfoPref = rm.getPreference("showRecipesInfo")
         local showLearnedRecipes = rm.getPreference("showLearnedRecipes")
         options.opacitySlider:SetValue(opacity * 100)
-        options.opacitySlider.valueDisplay:SetText((opacity * 100) .. "%")
+        options.opacitySlider.valueDisplay:SetText((opacity * 100).."%")
+        options.scaleSlider:SetValue(scale)
+        options.scaleSlider.valueDisplay:SetText(((scale + 1) * 100).."%")
+        rm.mainFrame:SetScale(UIParent:GetEffectiveScale() + scale)
+        rm.restoreButton:SetScale(UIParent:GetEffectiveScale() + scale)
         options.spacingSlider:SetValue(spacing)
         options.spacingSlider.valueDisplay:SetText(spacing)
         UIDropDownMenu_SetText(options.progressBrightness, L.bright)

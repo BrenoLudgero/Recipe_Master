@@ -161,6 +161,8 @@ F.offsets.titleY = -15
 F.offsets.titlesTextX = 13
 --------------- Sliders ---------------
 F.offsets.opacitySliderY = F.offsets.firstRowY
+F.offsets.scaleSliderX = F.offsets.secondColumnX
+F.offsets.scaleSliderY = F.offsets.firstRowY
 F.offsets.spacingSliderY = F.offsets.secondRowY
 --------------- Dropdowns ---------------
 F.offsets.brightnessDropdownX = F.offsets.firstColumnX - 19

@@ -135,7 +135,6 @@ function rm.handleSortingOptions(sortBar)
     UIDropDownMenu_Initialize(sortBar, function(self)
         for _, option in ipairs(sortBar.values) do
             local info = UIDropDownMenu_CreateInfo()
-            info.minWidth = F.sizes.sortBarWidth + 15
             info.text = option.text
             info.value = option.value
             info.func = function(self)
@@ -170,10 +169,10 @@ end
 function rm.updateArrowOrientation(texture)
     if rm.getPreference("sortAscending") then
         texture:SetRotation(0)
-        texture:SetPoint("CENTER", texture:GetParent(), 1.2, -1.5)
+        texture:SetPoint("CENTER", texture:GetParent(), 1.5, -1.5)
     else
         texture:SetRotation(math.pi)
-        texture:SetPoint("CENTER", texture:GetParent(), -2.5, 1.8)
+        texture:SetPoint("CENTER", texture:GetParent(), -2, 2)
     end
 end
 

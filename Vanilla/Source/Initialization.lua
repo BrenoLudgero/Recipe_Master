@@ -40,18 +40,19 @@ SlashCmdList["RECIPEMASTER"] = function()
 end
 
 local defaultMainFramePreferences = {
-    mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
     mainFrameHeight = 413, -- Used when TradeSkillMaster is enabled
+    mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
     sortAscending = true,
     sortRecipesBy = "Name"
 }
 
 local defaultOptionsFramePreferences = {
     backgroundOpacity = 1,
+    iconSpacing = 5,
+    interfaceScale = 0.1,
     progressColor = {0.00, 0.44, 0.87},
     progressTexture = "Interface/TARGETINGFRAME/BarFill2",
     restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
-    iconSpacing = 5,
     showLearnedRecipes = true,
     showRecipesInfo = true
 }

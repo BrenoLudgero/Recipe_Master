@@ -34,6 +34,7 @@ L.skill = SKILL
 L.sortBy = select(1, strsplit(" ", RAID_FRAME_SORT_LABEL))..":" -- The first word of "Sort By" + ":"
 L.sources = SOURCES
 L.subtitle = string.format(PETITION_CREATOR, rm.author).."\n"..GAME_VERSION_LABEL.." "..rm.version -- "Created by Breno Ludgero \n Version x.x.x"
+L.uiScale = UI_SCALE
 L.uncommon = ITEM_QUALITY2_DESC
 L.unique = ITEM_UNIQUE
 L.unlearned = TRADE_SKILLS_UNLEARNED_TAB..":"

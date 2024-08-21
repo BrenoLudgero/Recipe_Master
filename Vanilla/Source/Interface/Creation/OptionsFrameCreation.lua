@@ -48,6 +48,21 @@ function rm.createOpacitySlider()
     return slider
 end
 
+function rm.createScaleSlider()
+    local slider = createSlider(F.offsets.scaleSliderX, F.offsets.scaleSliderY, L.uiScale)
+    slider:SetMinMaxValues(0.0, 0.4)
+    slider:SetValueStep(0.01)
+    slider.Low:SetText("100%")
+    slider.High:SetText("140%")
+    local initialValue = rm.getPreference("interfaceScale")
+    slider:SetValue(initialValue)
+    local roundedValue = math.floor(initialValue * 100 + 0.5) / 100
+    local valueToHundreds = (roundedValue + 1) * 100
+    slider.valueDisplay:SetText(valueToHundreds.."%")
+    rm.updateInterfaceScale(slider)
+    return slider
+end
+
 local function createOptionsDropdown(xOffset, yOffset, label)
     local dropdown = CreateFrame("Button", nil, rm.optionsFrame, F.templates.dropdown)
     dropdown:SetPoint("TOPLEFT", xOffset, yOffset)
