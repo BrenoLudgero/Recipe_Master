@@ -15,7 +15,7 @@ function rm.clearRecipesFrameContent()
     for _, row in pairs(rm.recipesList.children) do
         row:Hide()
     end
-    wipe(recipesSection)
+    wipe(rm.recipesList.children)
 end
 
 function rm.showRecipesFrameElements()
