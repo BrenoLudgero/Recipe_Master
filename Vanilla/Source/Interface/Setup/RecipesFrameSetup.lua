@@ -87,27 +87,19 @@ function rm.displayPlaceholderTextBasedOnFocus(searchBar)
     end)
 end
 
-local function isSearchInRecipeName(rowIcon, searchText)
-    local recipeName = rowIcon.associatedText:GetText():lower()
+local function isSearchInRecipeName(row, searchText)
+    local recipeName = row.recipeText:GetText():lower()
     return string.find(recipeName, searchText, 1, true)
 end
 
 function rm.showMatchingRecipesOnTop(searchBar)
     searchBar:SetScript("OnTextChanged", function(self)
         local searchText = self:GetText():lower()
-        for _, rowIcon in ipairs(rm.recipesList.children) do
-            if isSearchInRecipeName(rowIcon, searchText) then
-                rowIcon:Show()
-                rowIcon.associatedText:Show()
-                if rowIcon.associatedText.additionalInfo then
-                    rowIcon.associatedText.additionalInfo:Show()
-                end
+        for _, row in ipairs(rm.recipesList.children) do
+            if isSearchInRecipeName(row, searchText) then
+                row:Show()
             else
-                rowIcon:Hide()
-                rowIcon.associatedText:Hide()
-                if rowIcon.associatedText.additionalInfo then
-                    rowIcon.associatedText.additionalInfo:Hide()
-                end
+                row:Hide()
             end
         end
         rm.updateRecipesFrameElementsPosition()

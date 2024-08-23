@@ -148,10 +148,12 @@ end
 
 local function createRowText(recipe, rowIcon, color)
     local recipeName = rm.recipesList:CreateFontString(nil, "OVERLAY", F.fonts.recipeText)
+    recipeName:SetParent(rowIcon)
     recipeName:SetText(recipe.name)
     recipeName:SetTextColor(unpack(color))
     if rm.getPreference("showRecipesInfo") then
         local recipeInfo = rm.recipesList:CreateFontString(nil, "OVERLAY", F.fonts.recipeText)
+        recipeInfo:SetParent(rowIcon)
         recipeName:SetPoint("LEFT", rowIcon, "TOPRIGHT", F.offsets.recipeTextX, -6)
         recipeInfo:SetPoint("TOPLEFT", recipeName, "BOTTOMLEFT", 0, F.offsets.recipeInfoY)
         createAdditionalInfoText(recipe, recipeName, recipeInfo, color)
@@ -173,6 +175,6 @@ function rm.createRecipeRow(recipe, color, desaturateIcon)
         recipeInfoWidth = recipeInfoText:GetWidth()
     end
     rm.storeWidestRecipeTextWidth(recipeNameWidth, recipeInfoWidth)
-    rowIcon.associatedText = recipeNameText
+    rowIcon.recipeText = recipeNameText
     table.insert(rm.recipesList.children, rowIcon)
 end

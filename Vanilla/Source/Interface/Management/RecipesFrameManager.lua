@@ -3,8 +3,7 @@ local F = rm.F
 
 function rm.updateRecipesFrameElementsPosition()
     local yOffset = 0
-    local recipesSection = rm.recipesList.children
-    for _, rowIcon in ipairs(recipesSection) do
+    for _, rowIcon in ipairs(rm.recipesList.children) do
         if rowIcon:IsShown() then
             rowIcon:SetPoint("TOP", rm.recipesList, "BOTTOMLEFT", F.offsets.recipeIconX, yOffset)
             yOffset = yOffset - (F.sizes.recipeIcon + rm.getPreference("iconSpacing"))
@@ -13,13 +12,8 @@ function rm.updateRecipesFrameElementsPosition()
 end
 
 function rm.clearRecipesFrameContent()
-    local recipesSection = rm.recipesList.children
-    for _, rowIcon in pairs(recipesSection) do
-        rowIcon:Hide()
-        rowIcon.associatedText:Hide()
-        if rowIcon.associatedText.additionalInfo then
-            rowIcon.associatedText.additionalInfo:Hide()
-        end
+    for _, row in pairs(rm.recipesList.children) do
+        row:Hide()
     end
     wipe(recipesSection)
 end
