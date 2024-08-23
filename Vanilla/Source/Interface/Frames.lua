@@ -54,7 +54,7 @@ function rm.createAllFrameElements()
     rm.createOptionsText(F.fonts.optionSection, L.general, F.offsets.titlesTextX, F.offsets.generalTextY)
     rm.createOptionsText(F.fonts.optionSection, L.recipesWindow, F.offsets.titlesTextX, F.offsets.recipesWindowTextY)
     rm.createOptionsText(F.fonts.optionSection, L.progressBar, F.offsets.titlesTextX, F.offsets.progressBarTextY)
-    local options = {
+    rm.optionsFrameElements = {
         ---------- Sliders ----------
         opacitySlider = rm.createOpacitySlider(),
         scaleSlider = rm.createScaleSlider(),
@@ -67,5 +67,5 @@ function rm.createAllFrameElements()
         showRecipesInfo = rm.createShowRecipesInfoCheckButton(),
         showLearnedButton = rm.createShowLearnedCheckButton()
     }
-    rm.createResetDefaultsButton(options)
+    rm.createResetDefaultsButton(rm.optionsFrameElements)
 end
