@@ -6,8 +6,16 @@ local function isRecipeForCurrentSeason(recipe)
 end
 
 local function isRecipeForCurrentClass(recipe)
-    local _, characterClass = UnitClass("player") -- Always in English and upper case
-    return not recipe.class or (string.upper(recipe.class) == characterClass)
+    if not recipe.class then
+        return true
+    else
+        local _, characterClass = UnitClass("player") -- Always in English and upper case
+        if type(recipe.class) == "string" then
+            return string.upper(recipe.class) == characterClass
+        else
+            return rm.tableContains(recipe.class, characterClass)
+        end
+    end
 end
 
 local function isRecipeForCurrentSpecialization(recipe)
