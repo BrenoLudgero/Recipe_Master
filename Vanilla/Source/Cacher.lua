@@ -4,10 +4,10 @@ local L = rm.L
 local function cacheAllRecipes()
     for professionID in pairs(L.professions) do
         for recipeID in pairs(rm.recipeDB[professionID]) do
-            local info = C_Item.GetItemInfo(recipeID)
-            if not info then
-                info = GetSpellInfo(recipeID)
-            end
+            local recipe = Item:CreateFromItemID(recipeID)
+            recipe:ContinueOnItemLoad(function()
+                do end
+            end)
         end
     end
 end
@@ -18,8 +18,11 @@ local function cacheAllItemNames()
             if type(sources) == "table" then
                 for sourceType, values in pairs(sources) do
                     if sourceType == "item" and type(values) == "table" then
-                        for item in pairs(values) do
-                            local info = C_Item.GetItemInfo(item)
+                        for itemID in pairs(values) do
+                            local item = Item:CreateFromItemID(itemID)
+                            item:ContinueOnItemLoad(function()
+                                do end
+                            end)
                         end
                     end
                 end
