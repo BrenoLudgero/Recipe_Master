@@ -17,7 +17,8 @@ local function getLocalizedSourceType(sourceType)
     return types[sourceType]
 end
 
--- The first character of each column is used to sort the columns alphabetically, ensuring the order of the columns
+-- The first character ("a", "b", etc..) is used to sort the tabs and columns
+-- alphabetically in SourcesFrameCreation.createSourcesListColumns, guaranteeing a fixed order
 local function getSourceColumns(sourceType)
     local columns = {
         ["drop"] = {

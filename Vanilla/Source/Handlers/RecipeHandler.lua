@@ -59,7 +59,12 @@ end
 -- Identifies all rankup recipes that teach a rank equal to or lower than the current profession rank
 local function isLearnedRankupRecipe(recipe, professionRank)
     if isRankupRecipe(recipe) then
-        local rankOrder = {Apprentice = 1, Journeyman = 2, Expert = 3, Artisan = 4}
+        local rankOrder = {
+            Apprentice = 1, 
+            Journeyman = 2, 
+            Expert = 3, 
+            Artisan = 4
+        }
         return rankOrder[recipe.teachesSpell] <= rankOrder[professionRank]
     end
     return false

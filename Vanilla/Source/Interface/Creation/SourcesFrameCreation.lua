@@ -96,7 +96,6 @@ end
 
 function rm.createSourcesListColumns(sourceColumns, tabLabel)
     local sortedColumns = sortListColumns(sourceColumns)
-    local numColumns = #sortedColumns
     local columns = {}
     for i, column in ipairs(sortedColumns) do
         local columnName = string.sub(column, 2) -- Removes the first letter
