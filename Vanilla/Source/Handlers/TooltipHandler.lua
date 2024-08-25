@@ -82,7 +82,7 @@ local function getRecipeInfo(itemName, itemLink)
     local recipeID = rm.getIDFromLink(itemLink)
     local professionName = handleMismatchedProfessionNames(recipeID, itemLink)
     local professionID = rm.getProfessionID(professionName)
-    local recipe = rm.recipeDB[professionID][recipeID]
+    local recipe = rm.cachedRecipes[professionID][recipeID]
     recipe.purchasable = rm.sourceDB[professionID][recipeID] and rm.sourceDB[professionID][recipeID]["vendor"] ~= nil
     return recipe, professionID
 end

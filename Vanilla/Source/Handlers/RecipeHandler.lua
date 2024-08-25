@@ -114,7 +114,7 @@ local function removeRecipePrefix(recipeName)
     return recipeName
 end
 
-local function getAdditionalRecipeData(ID)
+local function getInitialRecipeData(ID)
     local name, link, quality, _, _, _, _, _, _, texture = C_Item.GetItemInfo(ID)
     if isMiningSkill(ID) then
         name = GetSpellInfo(ID)
@@ -126,7 +126,7 @@ local function getAdditionalRecipeData(ID)
 end
 
 local function getRecipeData(recipeID, recipeData, professionID)
-    local rName, rLink, rQuality, rTexture = getAdditionalRecipeData(recipeID)
+    local rName, rLink, rQuality, rTexture = getInitialRecipeData(recipeID)
     return {
         class = recipeData["class"], 
         faction = recipeData["faction"], 
@@ -145,19 +145,16 @@ local function getRecipeData(recipeID, recipeData, professionID)
     }
 end
 
-local function storeRecipeData(recipesDatabase, professionRecipes, professionID)
-    for recipeID, recipeData in pairs(recipesDatabase) do
-        local recipe = getRecipeData(recipeID, recipeData, professionID)
-        professionRecipes[recipeID] = recipe
-    end
+-- Called in Cacher.cacheAndStoreAllRecipes
+function rm.storeRecipeData(recipeID, recipeData, professionID)
+    local recipe = getRecipeData(recipeID, recipeData, professionID)
+    rm.cachedRecipes[professionID][recipeID] = recipe
 end
 
--- Retrieves all the recipe data for the currently displayed profession
+-- Retrieves all cached recipe data for the currently displayed profession
 function rm.getProfessionRecipes(getSkillInfoFunction)
-    local professionRecipes = {}
     local savedProfessionsAndSkills = rm.getCurrentCharacterSavedVariables()
     local displayedProfessionID = rm.getProfessionID(rm.displayedProfession)
-    local professionRecipesDatabase = rm.recipeDB[displayedProfessionID]
-    storeRecipeData(professionRecipesDatabase, professionRecipes, displayedProfessionID)
-    return professionRecipes
+    local professionRecipesDatabase = rm.cachedRecipes[displayedProfessionID]
+    return professionRecipesDatabase
 end

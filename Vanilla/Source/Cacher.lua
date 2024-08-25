@@ -1,12 +1,17 @@
 local _, rm = ...
 local L = rm.L
 
-local function cacheAllRecipes()
+rm.cachedRecipes = {}
+
+-- Stores all recipe data for each profession in rm.cachedRecipes
+-- to be retrieved locally instead of constantly querying the server
+local function cacheAndStoreAllRecipes()
     for professionID in pairs(L.professions) do
-        for recipeID in pairs(rm.recipeDB[professionID]) do
+        rm.cachedRecipes[professionID] = {}
+        for recipeID, recipeData in pairs(rm.recipeDB[professionID]) do
             local recipe = Item:CreateFromItemID(recipeID)
             recipe:ContinueOnItemLoad(function()
-                do end
+                rm.storeRecipeData(recipeID, recipeData, professionID)
             end)
         end
     end
@@ -19,10 +24,7 @@ local function cacheAllItemNames()
                 for sourceType, values in pairs(sources) do
                     if sourceType == "item" and type(values) == "table" then
                         for itemID in pairs(values) do
-                            local item = Item:CreateFromItemID(itemID)
-                            item:ContinueOnItemLoad(function()
-                                do end
-                            end)
+                            local item = C_Item.GetItemInfo(itemID)
                         end
                     end
                 end
@@ -52,7 +54,7 @@ local function cacheAllCrafts()
 end
 
 function rm.cacheAllAssets()
-    cacheAllRecipes()
+    cacheAndStoreAllRecipes()
     cacheAllItemNames()
     cacheAllQuests()
     cacheAllTradeSkills()
