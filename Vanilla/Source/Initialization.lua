@@ -15,9 +15,9 @@ rm.version = C_AddOns.GetAddOnMetadata(addonName, "Version")
 rm.author = C_AddOns.GetAddOnMetadata(addonName, "Author")
 rm.currentCharacter = UnitName("player")
 rm.currentFaction = UnitFactionGroup("player") -- Alliance/Horde, always in English
+rm.currentSeason = getCurrentSeason()
+rm.currentServer = GetRealmName()
 rm.locale = GetLocale()
-rm.season = getCurrentSeason()
-rm.server = GetRealmName()
 rm.recipeDB = {}
 rm.sourceDB = {}
 rm.L = {} -- Localized text
@@ -97,10 +97,10 @@ function rm.updateSavedVariables()
 end
 
 function rm.updateSavedCharacters()
-    if not RecipeMasterProfessionsAndSkills[rm.server] then
-        RecipeMasterProfessionsAndSkills[rm.server] = {}
+    if not RecipeMasterProfessionsAndSkills[rm.currentServer] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer] = {}
     end
-    if not RecipeMasterProfessionsAndSkills[rm.server][rm.currentCharacter] then
-        RecipeMasterProfessionsAndSkills[rm.server][rm.currentCharacter] = {}
+    if not RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentCharacter] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentCharacter] = {}
     end
 end

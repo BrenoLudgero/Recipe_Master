@@ -1,7 +1,7 @@
 local _, rm = ...
 local L = rm.L
 
-rm.autoOpenRecipesFrame = true
+rm.isMainFrameMaximized = true
 rm.displayedProfession = ""
 rm.lastDisplayedProfession = ""
 rm.learnedRecipesCount = 0
@@ -24,7 +24,7 @@ function rm.tableContains(table, item)
 end
 
 function rm.getServerSavedVariables()
-    return RecipeMasterProfessionsAndSkills[rm.server]
+    return RecipeMasterProfessionsAndSkills[rm.currentServer]
 end
 
 function rm.getCurrentCharacterSavedVariables()

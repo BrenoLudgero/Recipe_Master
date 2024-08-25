@@ -14,7 +14,7 @@ end
 
 function rm.minimizeMainFrameOnClick(button)
     button:SetScript("OnClick", function(self)
-        rm.autoOpenRecipesFrame = false
+        rm.isMainFrameMaximized = false
         rm.restoreButton:Show()
         rm.mainFrame:Hide()
     end)
@@ -22,7 +22,7 @@ end
 
 function rm.restoreMainFrameOnClick(restoreButton)
     restoreButton:SetScript("OnClick", function(self)
-        rm.autoOpenRecipesFrame = true
+        rm.isMainFrameMaximized = true
         self:Hide()
         rm.mainFrame:Show()
     end)

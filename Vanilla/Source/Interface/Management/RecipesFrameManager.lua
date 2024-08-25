@@ -66,9 +66,9 @@ local function updateProgressBar()
     updateProgressBarColor()
 end
 
-function rm.updateRecipeDisplay(getSkillInfo)
+function rm.updateRecipesList(getSkillInfo)
     rm.clearFrameContent()
-    rm.showProfessionRecipes(getSkillInfo)
+    rm.listProfessionRecipes(getSkillInfo)
     updateMainWidthBasedOnWidestRecipeName()
     updateProgressBar()
 end
@@ -78,8 +78,8 @@ function rm.showRecipesFrame(getSkillInfo)
     rm.showRecipesFrameElements()
     rm.setParentDependentFramesPosition()
     rm.activateBottomTabAndDesaturateOthers(rm.recipesTab)
-    rm.updateRecipeDisplay(getSkillInfo)
-    if not rm.autoOpenRecipesFrame then
+    rm.updateRecipesList(getSkillInfo)
+    if not rm.isMainFrameMaximized then
         rm.restoreButton:Show()
         return
     elseif rm.mainFrame:IsShown() then

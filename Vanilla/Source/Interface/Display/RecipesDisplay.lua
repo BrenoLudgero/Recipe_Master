@@ -30,7 +30,7 @@ end
 
 local function filterSeasonalRecipes(professionRecipes)
     local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
-    if rm.season == "SoD" then
+    if rm.currentSeason == "SoD" then
         for _, recipe in pairs(regularRecipes) do
             storeNonDuplicateRecipe(recipe, sodRecipes)
         end
@@ -103,7 +103,7 @@ local function populateAllRecipeRows(professionRecipes)
     rm.learnedPercentage = math.floor((rm.learnedRecipesCount / rm.totalRecipesCount) * 100)
 end
 
-function rm.showProfessionRecipes(getSkillInfo)
+function rm.listProfessionRecipes(getSkillInfo)
     local professionRecipes = rm.getProfessionRecipes(getSkillInfo)
     populateAllRecipeRows(professionRecipes)
 end
@@ -114,17 +114,21 @@ end
 
 function rm.showRecipesForSpecificProfession(profession)
     rm.displayedProfession = profession
-    if not isCraft(rm.displayedProfession) then
-        rm.updateRecipeDisplay(GetTradeSkillInfo)
-        return
+    if isCraft(rm.displayedProfession) then
+        rm.updateRecipesList(GetCraftInfo)
+    else
+        rm.updateRecipesList(GetTradeSkillInfo)
     end
-    rm.updateRecipeDisplay(GetCraftInfo)
+end
+
+local function isFishingDisplayed()
+    return rm.displayedProfession == L.professions[356]
 end
 
 function rm.showSortedRecipes()
-    if rm.displayedProfession == L.professions[356] then -- Fishing
+    if isFishingDisplayed() then
         rm.showRecipesForSpecificProfession(rm.displayedProfession)
-        return
+    else
+        rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
     end
-    rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
 end

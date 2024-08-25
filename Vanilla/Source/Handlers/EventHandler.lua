@@ -50,7 +50,7 @@ local function showMainFrame(getSkillInfo)
     rm.showRecipesFrame(getSkillInfo) 
     C_Timer.After(0.01, function() 
         if rm.isRecipeListEmpty() then -- Might happen when opening Recipe Master after login
-            rm.updateRecipeDisplay(getSkillInfo)
+            rm.updateRecipesList(getSkillInfo)
         end
     end)
 end
