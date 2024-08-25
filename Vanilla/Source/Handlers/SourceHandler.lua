@@ -7,7 +7,7 @@ local function getFactionIcon(data)
 end
 
 local function shortenLongName(str, maxLength)
-    if #str > maxLength then
+    if #str > maxLength + 3 then
         return string.sub(str, 1, maxLength).."..."
     end
     return str
