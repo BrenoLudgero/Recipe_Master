@@ -2,6 +2,7 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
+------------------------- Shared -------------------------
 local function getFactionIcon(data)
     return "|T"..F.textures.factionIcons[data["faction"]]..":14.5:14.5:-1.5:-0.5:32:32:4:32:4:32|t"
 end
@@ -11,12 +12,6 @@ local function shortenLongName(str, maxLength)
         return string.sub(str, 1, maxLength).."..."
     end
     return str
-end
-
-local function getObjectName(object)
-    local fullName = object["names"][rm.locale] or object["names"]["enUS"]
-    local displayName = shortenLongName(fullName, F.sizes.sourcesCellTextLength["object"])
-    return displayName, fullName
 end
 
 local function getNPCName(npc)
@@ -29,18 +24,20 @@ local function getNPCName(npc)
     return displayName, fullName
 end
 
-local function getQuestName(sourceID, quest)
-    local fullName = C_QuestLog.GetQuestInfo(sourceID)
-    local displayName = ""
-    if quest["faction"] then
-        displayName = getFactionIcon(quest)
+local function getLocalizedClassification(data)
+    local class = data["classification"]
+    if class == "Boss" then
+        return L.boss
+    elseif class == "Rare" then
+        return L.rare
+    elseif class == "Elite" then
+        return L.elite
+    elseif class == "Rare Elite" then
+        return L.rareElite
+    elseif class == "Dungeon" then
+        return L.dungeon
     end
-    if fullName then
-        displayName = displayName..shortenLongName(fullName, F.sizes.sourcesCellTextLength["quest"])
-    else
-        displayName = displayName..L.unknown
-    end
-    return displayName, fullName
+    return false
 end
 
 local function getZoneName(infoTable, subject)
@@ -63,20 +60,10 @@ local function getZoneName(infoTable, subject)
     end
 end
 
-local function getLocalizedClassification(data)
-    local class = data["classification"]
-    if class == "Boss" then
-        return L.boss
-    elseif class == "Rare" then
-        return L.rare
-    elseif class == "Elite" then
-        return L.elite
-    elseif class == "Rare Elite" then
-        return L.rareElite
-    elseif class == "Dungeon" then
-        return L.dungeon
-    end
-    return false
+local function storeCommonNPCInfo(infoTable, npc)
+    infoTable[L.name], infoTable["fullName"] = getNPCName(npc)
+    infoTable["classification"] = getLocalizedClassification(npc)
+    infoTable[L.zone], infoTable["fullZoneName"] = getZoneName(infoTable, npc)
 end
 
 local function getClassificationColor(classification)
@@ -95,6 +82,80 @@ local function getColoredLevelBasedOnClassification(data)
     local level = data["level"] or L.unknown
     local classificationColor = getClassificationColor(classification)
     return WrapTextInColorCode(level, classificationColor)
+end
+
+------------------------- Drop, Pickpocket -------------------------
+function rm.getCreatureInfo(sourceID, sourceData)
+    local npcInfo = {}
+    local npc = rm.npcDB[sourceID]
+    storeCommonNPCInfo(npcInfo, npc)
+    npcInfo[L.level] = getColoredLevelBasedOnClassification(npc)
+    npcInfo[L.chance] = sourceData
+    return npcInfo
+end
+
+------------------------- Vendor -------------------------
+local function getCost(cost, currencyCharacter)
+    return tonumber(cost:match("(%d+)"..currencyCharacter)) or 0
+end
+
+local function getFormattedCost(cost)
+    local gold = getCost(cost, "g")
+    local silver = getCost(cost, "s")
+    local copper = getCost(cost, "c")
+    local exchangeTicket = getCost(cost, "t")
+    local formattedCost = ""
+    if gold > 0 then
+        formattedCost = formattedCost.." "..gold..F.textures.goldIcon
+    end
+    if silver > 0 then
+        formattedCost = formattedCost.." "..silver..F.textures.silverIcon
+    end
+    if copper > 0 then
+        formattedCost = formattedCost.." "..copper..F.textures.copperIcon
+    end
+    if exchangeTicket > 0 then
+        formattedCost = formattedCost.." "..exchangeTicket..F.textures.exchangeTicket
+    end
+    return formattedCost
+end
+
+local function storeVendorSupply(sourceData, vendorInfo)
+    local cost = sourceData["cost"]
+    local stock = sourceData["stock"]
+    if cost then
+        vendorInfo[L.price] = getFormattedCost(cost)
+    else
+        vendorInfo[L.price] = L.unknown
+    end
+    if stock ~= nil then
+        vendorInfo[L.stock] = stock
+    else
+        vendorInfo[L.stock] = L.unlimited
+    end
+end
+
+function rm.getVendorInfo(sourceID, sourceData)
+    local vendorInfo = {}
+    local vendor = rm.npcDB[sourceID]
+    storeCommonNPCInfo(vendorInfo, vendor)
+    storeVendorSupply(sourceData, vendorInfo)
+    return vendorInfo
+end
+
+------------------------- Quest -------------------------
+local function getQuestName(sourceID, quest)
+    local fullName = C_QuestLog.GetQuestInfo(sourceID)
+    local displayName = ""
+    if quest["faction"] then
+        displayName = getFactionIcon(quest)
+    end
+    if fullName then
+        displayName = displayName..shortenLongName(fullName, F.sizes.sourcesCellTextLength["quest"])
+    else
+        displayName = displayName..L.unknown
+    end
+    return displayName, fullName
 end
 
 local function getClassAndRaceColor(class, race)
@@ -167,69 +228,6 @@ local function getFormattedClassAndRaceInfo(class, race)
     return formattedInfo:gsub("%%s, ", "") -- Replaces all "%s, " at the start of each formatted info with ""
 end
 
-local function storeCommonNPCInfo(infoTable, npc)
-    infoTable[L.name], infoTable["fullName"] = getNPCName(npc)
-    infoTable["classification"] = getLocalizedClassification(npc)
-    infoTable[L.zone], infoTable["fullZoneName"] = getZoneName(infoTable, npc)
-end
-
-local function getCost(cost, currencyCharacter)
-    return tonumber(cost:match("(%d+)"..currencyCharacter)) or 0
-end
-
-local function getFormattedCost(cost)
-    local gold = getCost(cost, "g")
-    local silver = getCost(cost, "s")
-    local copper = getCost(cost, "c")
-    local exchangeTicket = getCost(cost, "t")
-    local formattedCost = ""
-    if gold > 0 then
-        formattedCost = formattedCost.." "..gold..F.textures.goldIcon
-    end
-    if silver > 0 then
-        formattedCost = formattedCost.." "..silver..F.textures.silverIcon
-    end
-    if copper > 0 then
-        formattedCost = formattedCost.." "..copper..F.textures.copperIcon
-    end
-    if exchangeTicket > 0 then
-        formattedCost = formattedCost.." "..exchangeTicket..F.textures.exchangeTicket
-    end
-    return formattedCost
-end
-
-local function storeVendorSupply(sourceData, vendorInfo)
-    local cost = sourceData["cost"]
-    local stock = sourceData["stock"]
-    if cost then
-        vendorInfo[L.price] = getFormattedCost(cost)
-    else
-        vendorInfo[L.price] = L.unknown
-    end
-    if stock ~= nil then
-        vendorInfo[L.stock] = stock
-    else
-        vendorInfo[L.stock] = L.unlimited
-    end
-end
-
-function rm.getVendorInfo(sourceID, sourceData)
-    local vendorInfo = {}
-    local vendor = rm.npcDB[sourceID]
-    storeCommonNPCInfo(vendorInfo, vendor)
-    storeVendorSupply(sourceData, vendorInfo)
-    return vendorInfo
-end
-
-function rm.getCreatureInfo(sourceID, sourceData)
-    local npcInfo = {}
-    local npc = rm.npcDB[sourceID]
-    storeCommonNPCInfo(npcInfo, npc)
-    npcInfo[L.level] = getColoredLevelBasedOnClassification(npc)
-    npcInfo[L.chance] = sourceData
-    return npcInfo
-end
-
 function rm.getQuestInfo(sourceID)
     local questInfo = {}
     local quest = rm.questDB[sourceID]
@@ -245,6 +243,7 @@ function rm.getQuestInfo(sourceID)
     return questInfo
 end
 
+------------------------- Unique NPC -------------------------
 function rm.getUniqueNPCInfo(sourceID)
     local uniqueNPCInfo = {}
     local uniqueNPC = rm.uniqueDB[sourceID]
@@ -252,6 +251,13 @@ function rm.getUniqueNPCInfo(sourceID)
     uniqueNPCInfo[L.level] = getColoredLevelBasedOnClassification(uniqueNPC)
     uniqueNPCInfo["instructions"] = L.uniqueSourceInstructions[sourceID][rm.locale]
     return uniqueNPCInfo
+end
+
+------------------------- Object -------------------------
+local function getObjectName(object)
+    local fullName = object["names"][rm.locale] or object["names"]["enUS"]
+    local displayName = shortenLongName(fullName, F.sizes.sourcesCellTextLength["object"])
+    return displayName, fullName
 end
 
 function rm.getObjectInfo(sourceID, sourceData)
@@ -263,6 +269,7 @@ function rm.getObjectInfo(sourceID, sourceData)
     return objectInfo
 end
 
+------------------------- Trainer -------------------------
 function rm.getTrainerInfo(sourceID)
     local trainerInfo = {}
     local trainer = rm.npcDB[sourceID]
@@ -270,6 +277,7 @@ function rm.getTrainerInfo(sourceID)
     return trainerInfo
 end
 
+------------------------- Fishing, Item -------------------------
 local function getNameAndChance(getNameFunction, firstColumn, sourceID, sourceData)
     local info = {}
     local name = getNameFunction(sourceID)
