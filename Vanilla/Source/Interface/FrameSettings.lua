@@ -10,66 +10,61 @@ local function setLocaleSpecificOffsets()
     if rm.locale == "esES" or rm.locale == "esMX" then
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 10
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 165, 213, 319}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 165, 213, 319}
-        F.offsets.sourcesListColumnsX[L.object] = {3, 214, 319}
-        F.offsets.sourcesListColumnsX[L.trainer] = {3, 302}
-        F.offsets.sourcesListColumnsX[L.fishing] = {3, 302}
-        F.offsets.sourcesListColumnsX[L.item] = {3, 302}
     elseif rm.locale == "ptBR" then
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 10
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 180, 238, 319}
-        F.offsets.sourcesListColumnsX[L.quest] = {3, 255, 329}
+        F.offsets.sourcesListTabX = 2
     elseif rm.locale == "deDE" then
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 22
-        F.offsets.sourcesListTabX = 3
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 162, 235, 319}
+        F.offsets.sourcesListTabX = 0
+        F.offsets.sourcesListColumnsX[L.vendor] = {3, 162, 234, 314}
     elseif rm.locale == "frFR" then
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 4
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 45
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 165, 230, 319}
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 175, 235, 319}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 175, 235, 319}
+        F.offsets.sourcesListColumnsX[L.drop] = {3, 177, 230, 314}
+        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 177, 230, 314}
     elseif rm.locale == "ruRU" then
-        F.offsets.bottomTabTextY = 5.5
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 5
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 45
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 165, 240, 298}
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 180, 249, 298}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 180, 249, 298}
-        F.offsets.sourcesListColumnsX[L.quest] = {3, 255, 320}
-        F.offsets.sourcesListColumnsX[L.unique] = {3, 236, 298}
-        F.offsets.sourcesListColumnsX[L.object] = {3, 249, 298}
-        F.offsets.sourcesListColumnsX[L.trainer] = {3, 298}
-        F.offsets.sourcesListColumnsX[L.fishing] = {3, 340}
-        F.offsets.sourcesListColumnsX[L.item] = {3, 340}
+        F.offsets.bottomTabTextY = 6.2
+        F.offsets.sourcesListTabX = 0
+        F.offsets.sourcesListTabTextX = 2
+        F.offsets.sourcesListColumnsX[L.vendor] = {3, 180, 249, 296}
+        F.offsets.sourcesListColumnsX[L.drop] = {3, 180, 249, 296}
+        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 180, 249, 296}
+        F.offsets.sourcesListColumnsX[L.quest] = {3, 249, 320}
+        F.offsets.sourcesListColumnsX[L.unique] = {3, 230, 296}
+        F.offsets.sourcesListColumnsX[L.object] = {3, 249, 296}
+        F.offsets.sourcesListColumnsX[L.trainer] = {3, 296}
+        F.offsets.sourcesListColumnsX[L.fishing] = {3, 343}
+        F.offsets.sourcesListColumnsX[L.item] = {3, 343}
     elseif rm.locale == "koKR" then
         F.offsets.bottomTabTextY = 5.5
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 192, 268, 335}
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 220, 270, 335}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 220, 270, 335}
-        F.offsets.sourcesListColumnsX[L.quest] = {3, 295, 350}
-        F.offsets.sourcesListColumnsX[L.object] = {3, 270, 335}
-        F.offsets.sourcesListColumnsX[L.trainer] = {3, 319}
-        F.offsets.sourcesListColumnsX[L.fishing] = {3, 344}
-        F.offsets.sourcesListColumnsX[L.item] = {3, 344}
+        F.offsets.sourcesListColumnsX[L.vendor] = {3, 180, 260, 330}
+        F.offsets.sourcesListColumnsX[L.drop] = {3, 196, 252, 330}
+        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 196, 252, 330}
+        F.offsets.sourcesListColumnsX[L.quest] = {3, 252, 330}
+        F.offsets.sourcesListColumnsX[L.unique] = {3, 252, 330}
+        F.offsets.sourcesListColumnsX[L.object] = {3, 252, 330}
     elseif rm.locale == "zhTW" then
         F.offsets.recipeInfoY = 2
         F.offsets.sourcesListCellY = 2
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 179, 256, 326}
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 204, 256, 326}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 204, 256, 326}
-        F.offsets.sourcesListColumnsX[L.object] = {3, 256, 326}
-        F.offsets.sourcesListColumnsX[L.quest] = {3, 275, 335}
+        F.offsets.sourcesListColumnsX[L.vendor] = {3, 177, 260, 327}
+        F.offsets.sourcesListColumnsX[L.drop] = {3, 193, 249, 327}
+        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 196, 249, 327}
+        F.offsets.sourcesListColumnsX[L.quest] = {3, 249, 327}
+        F.offsets.sourcesListColumnsX[L.unique] = {3, 249, 327}
+        F.offsets.sourcesListColumnsX[L.object] = {3, 249, 327}
     elseif rm.locale == "zhCN" then
         F.offsets.recipeInfoY = 2
+        F.offsets.bottomTabTextY = 6.2
         F.offsets.sourcesListCellY = 2
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 179, 256, 326}
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 204, 262, 326}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 204, 262, 326}
-        F.offsets.sourcesListColumnsX[L.object] = {3, 262, 326}
-        F.offsets.sourcesListColumnsX[L.quest] = {3, 275, 335}
+        F.offsets.sourcesListColumnsX[L.vendor] = {3, 177, 260, 327}
+        F.offsets.sourcesListColumnsX[L.drop] = {3, 193, 254, 327}
+        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 196, 254, 327}
+        F.offsets.sourcesListColumnsX[L.quest] = {3, 254, 327}
+        F.offsets.sourcesListColumnsX[L.unique] = {3, 254, 327}
+        F.offsets.sourcesListColumnsX[L.object] = {3, 254, 327}
     end
 end
 
@@ -117,13 +112,13 @@ F.offsets.columnsContainerX = 4
 F.offsets.columnsContainerY = 3.5
 F.offsets.sourcesListColumnsX = {
 -- [Tab label] = {columns' xOffset}
-    [L.vendor] = {3, 165, 235, 319},
-    [L.drop] = {3, 180, 235, 319},
-    [L.pickpocket] = {3, 180, 235, 319},
-    [L.quest] = {3, 245, 319},
-    [L.unique] = {3, 242, 319},
-    [L.object] = {3, 230, 319},
-    [L.trainer] = {3, 319},
+    [L.vendor] = {3, 162, 230, 314},
+    [L.drop] = {3, 180, 230, 314},
+    [L.pickpocket] = {3, 180, 230, 314},
+    [L.quest] = {3, 230, 314},
+    [L.unique] = {3, 230, 314},
+    [L.object] = {3, 230, 314},
+    [L.trainer] = {3, 314},
     [L.fishing] = {3, 330},
     [L.item] = {3, 330}
 }
@@ -185,9 +180,14 @@ setLocaleSpecificOffsets()
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 local function setLocaleSpecificSizes()
-    if rm.locale == "ruRU" then
+    if rm.locale == "ptBR" then
+        F.sizes.sourcesListExtraTabWidth = 19
+    elseif rm.locale == "deDE" then
+        F.sizes.sourcesListExtraTabWidth = 18
+    elseif rm.locale == "ruRU" then
+        F.sizes.sourcesListExtraTabWidth = 16
         F.sizes.sourcesCellTextLength["firstOfTwoColumns"] = 94
-        F.sizes.sourcesCellTextLength["npc"] = 39
+        F.sizes.sourcesCellTextLength["npc"] = 40
         F.sizes.sourcesCellTextLength["object"] = 70
         F.sizes.sourcesCellTextLength["quest"] = 70
         F.sizes.sourcesCellTextLength["zone"] = 25
@@ -195,14 +195,14 @@ local function setLocaleSpecificSizes()
         F.sizes.sourcesCellTextLength["firstOfTwoColumns"] = 90
         F.sizes.sourcesCellTextLength["npc"] = 38
         F.sizes.sourcesCellTextLength["object"] = 70
-        F.sizes.sourcesCellTextLength["quest"] = 70
+        F.sizes.sourcesCellTextLength["quest"] = 66
         F.sizes.sourcesCellTextLength["zone"] = 18
     elseif rm.locale == "zhTW" or rm.locale == "zhCN" then
         F.sizes.sourcesListExtraBorderHeight = 4.4
-        F.sizes.sourcesCellTextLength["firstOfTwoColumns"] = 68
+        F.sizes.sourcesCellTextLength["firstOfTwoColumns"] = 66
         F.sizes.sourcesCellTextLength["npc"] = 27
-        F.sizes.sourcesCellTextLength["object"] = 45
-        F.sizes.sourcesCellTextLength["quest"] = 50
+        F.sizes.sourcesCellTextLength["object"] = 50
+        F.sizes.sourcesCellTextLength["quest"] = 47
     end
 end
 
@@ -229,10 +229,10 @@ F.sizes.sortOrderButton = 32 -- Width and height
 ------------------------- Sources frame -------------------------
 F.sizes.sourcesBackgroundTile = 220
 F.sizes.sourcesCellTextLength = {
-    ["firstOfTwoColumns"] = 56,
-    ["npc"] = 21,
+    ["firstOfTwoColumns"] = 53,
+    ["npc"] = 19,
     ["object"] = 36,
-    ["quest"] = 35,
+    ["quest"] = 33,
     ["zone"] = 14
 }
 F.sizes.sourcesFrameWidth = 430
@@ -242,6 +242,7 @@ F.sizes.sourcesInstructionsCursor = 60 -- Width and height
 F.sizes.sourcesInstructionsClickTexture = 40 -- Width and height
 F.sizes.sourcesInstructionsRecipe = 85 -- Width and height
 F.sizes.sourcesListColumnHeight = 16
+F.sizes.sourcesListExtraTabWidth = 20
 F.sizes.sourcesListExtraBorderHeight = 2.6
 F.sizes.sourcesListRowHeight = 17
 F.sizes.sourcesListTabHeight = 25
@@ -310,25 +311,13 @@ F.fonts.title = "GameFontNormalLarge"
 
 local function setLocaleSpecificFontSizes()
     if rm.locale == "ruRU" then
-        F.fontSizes.bottomTab = 9
-        F.fontSizes.sourcesFrameHeader = 15
-        F.fontSizes.sourcesListCell = 9.5
-        F.fontSizes.sourcesListTab = 10
-        F.fontSizes.uniqueInstructions = 13
+        F.fontSizes.bottomTab = 10
     elseif rm.locale == "koKR" then
         F.fontSizes.bottomTab = 11
         F.fontSizes.sourcesFrameHeader = 16
         F.fontSizes.sourcesListCell = 10.5
-        F.fontSizes.sourcesListTab = 10
-        F.fontSizes.uniqueInstructions = 13
-    elseif rm.locale == "zhTW" then
-        F.fontSizes.bottomTab = 13
-        F.fontSizes.sourcesFrameHeader = 17
-        F.fontSizes.sourcesListCell = 13
-        F.fontSizes.sourcesListTab = 13
-        F.fontSizes.uniqueInstructions = 15
-    elseif rm.locale == "zhCN" then
-        F.fontSizes.bottomTab = 13
+    elseif rm.locale == "zhTW" or rm.locale == "zhCN"then
+        F.fontSizes.bottomTab = 14
         F.fontSizes.sourcesFrameHeader = 17
         F.fontSizes.sourcesListCell = 13
         F.fontSizes.sourcesListTab = 13

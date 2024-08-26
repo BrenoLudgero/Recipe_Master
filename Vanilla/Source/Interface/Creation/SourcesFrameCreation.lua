@@ -48,7 +48,7 @@ function rm.createSourceTypeTab(string, label, xOffset, sources)
     tab.label = label -- Source type (drop, quest, etc...)
     tab.texture = createTabTexture(tab)
     tab.text = createTabText(tab, string)
-    tab:SetSize(tab.text:GetWidth() + 20, F.sizes.sourcesListTabHeight)
+    tab:SetSize(tab.text:GetWidth() + F.sizes.sourcesListExtraTabWidth, F.sizes.sourcesListTabHeight)
     rm.showSourcesOnTabClick(tab, sources)
     rm.highlightInactiveOnMouseover(tab)
     rm.sourcesListTabs[label] = tab
