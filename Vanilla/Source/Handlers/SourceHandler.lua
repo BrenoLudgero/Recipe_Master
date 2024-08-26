@@ -79,7 +79,7 @@ local function getLocalizedClassification(data)
     return false
 end
 
-local function getClassificationColor(class)
+local function getClassificationColor(classification)
     local colors = {
         ["Boss"] = F.colors.redHex,
         ["Rare"] = F.colors.grayishBlueHex,
@@ -87,14 +87,84 @@ local function getClassificationColor(class)
         ["Rare Elite"] = F.colors.lightPurpleHex,
         ["Dungeon"] =  F.colors.lightBrownHex
     }
-    return colors[class] or F.colors.whiteHex
+    return colors[classification] or F.colors.whiteHex
 end
 
 local function getColoredLevelBasedOnClassification(data)
-    local class = data["classification"]
+    local classification = data["classification"]
     local level = data["level"] or L.unknown
-    local classColor = getClassificationColor(class)
-    return WrapTextInColorCode(level, classColor)
+    local classificationColor = getClassificationColor(classification)
+    return WrapTextInColorCode(level, classificationColor)
+end
+
+local function getClassAndRaceColor(class, race)
+    if not class and not race then
+        return F.colors.whiteHex
+    elseif class and race then
+        return F.colors.yellowHex
+    elseif class then
+        return F.colors.skyBlueHex
+    elseif race then
+        return F.colors.jadeHex
+    end
+end
+
+local function colorQuestNameIfClassRaceOrCompleted(quest, class, race)
+    if quest["completed"] then
+        quest[L.name] = WrapTextInColorCode(quest[L.name], F.colors.grayHex)
+    else
+        local classAndRaceColor = getClassAndRaceColor(class, race)
+        quest[L.name] = WrapTextInColorCode(quest[L.name], classAndRaceColor)
+    end
+end
+
+local function getClassName(classNumber)
+    return C_CreatureInfo.GetClassInfo(classNumber).className
+end
+
+local function getFormattedClassNames(class)
+    local formattedClasses = ""
+    if class then
+        formattedClasses = L.classes
+        if type(class) == "table" then
+            for _, classNumber in pairs(class) do
+                formattedClasses = formattedClasses..", "..getClassName(classNumber)
+            end
+        else
+            formattedClasses = formattedClasses..", "..getClassName(class)
+        end
+    end
+    return formattedClasses
+end
+
+local function getRaceName(raceNumber)
+    return C_CreatureInfo.GetRaceInfo(raceNumber).raceName
+end
+
+local function getFormattedRaceNames(race)
+    local formattedRaces = ""
+    if race then
+        formattedRaces = L.races
+        if type(race) == "table" then
+            for _, raceNumber in pairs(race) do
+                formattedRaces = formattedRaces..", "..getRaceName(raceNumber)
+            end
+        else
+            formattedRaces = formattedRaces..", "..getRaceName(race)
+        end
+    end
+    return formattedRaces
+end
+
+local function getFormattedClassAndRaceInfo(class, race)
+    local formattedInfo = ""
+    formattedInfo = formattedInfo..getFormattedClassNames(class)
+    if formattedInfo == "" then
+        formattedInfo = formattedInfo..getFormattedRaceNames(race)
+    else
+        formattedInfo = formattedInfo.."\n"..getFormattedRaceNames(race)
+    end
+    return formattedInfo:gsub("%%s, ", "") -- Replaces all "%s, " at the start of each formatted info with ""
 end
 
 local function storeCommonNPCInfo(infoTable, npc)
@@ -163,10 +233,15 @@ end
 function rm.getQuestInfo(sourceID)
     local questInfo = {}
     local quest = rm.questDB[sourceID]
-    questInfo["classification"] = getLocalizedClassification(quest)
+    local class = quest["class"]
+    local race = quest["race"]
     questInfo[L.name], questInfo["fullName"] = getQuestName(sourceID, quest)
+    questInfo["completed"] = C_QuestLog.IsQuestFlaggedCompleted(sourceID)
+    colorQuestNameIfClassRaceOrCompleted(questInfo, class, race)
     questInfo[L.level] = getColoredLevelBasedOnClassification(quest)
     questInfo[L.minimum] = quest["reqLevel"]
+    questInfo["classAndRace"] = getFormattedClassAndRaceInfo(class, race)
+    questInfo["classification"] = getLocalizedClassification(quest)
     return questInfo
 end
 

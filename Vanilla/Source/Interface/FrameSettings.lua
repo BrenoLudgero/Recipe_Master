@@ -362,12 +362,14 @@ setLocaleSpecificFontSizes()
 
 F.colors.black = {0, 0, 0}
 F.colors.blue = {0.00, 0.44, 0.87}
-F.colors.gray = {0.62, 0.62, 0.62}
+F.colors.gray = {0.659, 0.659, 0.659}
 F.colors.grayishBlueHex = "ff73A7BC"
+F.colors.grayHex = "ffA8A8A8"
 F.colors.gold = {1, 0.8431, 0}
 F.colors.green = {0.098, 1, 0.098} -- GameFontGreen color
+F.colors.jadeHex = "ff0BBE76"
 F.colors.lightBlueHex = "ff82C5FF"
-F.colors.lightBrownHex = "ffB78F6A"
+F.colors.lightBrownHex = "ffAC885D"
 F.colors.lightGreenHex = "ff90EE90"
 F.colors.lightPurpleHex = "ff956DD1"
 F.colors.lightRedHex = "ffFFB6C1"
@@ -376,9 +378,11 @@ F.colors.orangeHex = "ffFF9900"
 F.colors.purple = {0.482, 0.192, 0.824}
 F.colors.red = {1, 0.125, 0.125}
 F.colors.redHex = "ffFF2020"
+F.colors.skyBlueHex = "ff57C8EA"
 F.colors.white = {1, 1, 1}
 F.colors.whiteHex = "ffFFFFFF"
 F.colors.yellow = {1, 0.824, 0} -- GameFontNormal color
+F.colors.yellowHex = "ffFFD100" -- GameFontNormal color
 
 
 

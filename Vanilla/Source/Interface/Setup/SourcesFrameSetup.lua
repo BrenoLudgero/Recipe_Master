@@ -1,4 +1,5 @@
 local _, rm = ...
+local L = rm.L
 local F = rm.F
 
 function rm.highlightInactiveOnMouseover(tab)
@@ -22,39 +23,52 @@ local function isCellUnderFirstColumn(cell)
     return cellParentXOffset < 4
 end
 
-local function showFullNameOnTooltip(tooltip, cell, data)
-    if isCellUnderFirstColumn(cell) then
-        tooltip:SetText(data["fullName"])
-    else
-        tooltip:SetText(data["fullZoneName"][cell:GetText()] or data["fullZoneName"])
-    end
-end
-
-local function showFullNameIfShortened(tooltip, cell, data)
-    if cell:GetText():sub(-3) == "..." then -- Cell text ends with "..."
-        showFullNameOnTooltip(tooltip, cell, data)
+local function showUnshortenedName(tooltip, cell, data)
+    if string.find(cell:GetText(), "...", 0, true) then -- Cell text contains "..."
+        if isCellUnderFirstColumn(cell) then
+            tooltip:SetText(data["fullName"])
+        else
+            tooltip:SetText(data["fullZoneName"][cell:GetText()] or data["fullZoneName"])
+        end
         tooltip:Show()
     end
 end
 
--- Only cells under the Level column have a defined color
-local function showClassificationIfColored(tooltip, cell, data)
+local function getColoredCellInfo(cell, cellColor, data)
+    local cellParentColumnText = select(2, cell:GetPoint()):GetText()
+    if cellParentColumnText == L.name and cellColor ~= F.colors.grayHex then
+        return data["classAndRace"]
+    elseif cellColor == F.colors.grayHex then
+        return L.questCompleted
+    else
+        return data["classification"]
+    end
+end
+
+-- Only cells under the Level or Quest Name column have a defined color
+local function showColoredCellInfo(tooltip, cell, data)
     local cellColor = string.match(cell:GetText(), "|c(%x%x%x%x%x%x%x%x)")
     if cellColor and cellColor ~= F.colors.whiteHex then
-        tooltip:SetText(data["classification"])
+        local info = getColoredCellInfo(cell, cellColor, data)
+        local tooltipText = _G[tooltip:GetName().."TextLeft"..1]:GetText()
+        if tooltipText then -- Tooltip already has an unshortened name
+            tooltip:SetText(tooltipText.."\n\n"..info)
+        else
+            tooltip:SetText(info)
+        end
         tooltip:Show()
     end
 end
 
 function rm.showTooltipOnMouseover(cell, data)
-        cell:SetScript("OnEnter", function(self)
-            GameTooltip:SetOwner(self, "ANCHOR_TOP")
-            showFullNameIfShortened(GameTooltip, cell, data)
-            showClassificationIfColored(GameTooltip, cell, data)
-        end)
-        cell:SetScript("OnLeave", function()
-            GameTooltip:Hide()
-        end)
+    cell:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        showUnshortenedName(GameTooltip, cell, data)
+        showColoredCellInfo(GameTooltip, cell, data)
+    end)
+    cell:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
 end
 
 local function hideSourceColumns(columnList)
