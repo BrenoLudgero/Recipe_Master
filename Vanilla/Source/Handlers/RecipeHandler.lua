@@ -153,8 +153,6 @@ end
 
 -- Retrieves all cached recipe data for the currently displayed profession
 function rm.getProfessionRecipes(getSkillInfoFunction)
-    local savedProfessionsAndSkills = rm.getCurrentCharacterSavedVariables()
     local displayedProfessionID = rm.getProfessionID(rm.displayedProfession)
-    local professionRecipesDatabase = rm.cachedRecipes[displayedProfessionID]
-    return professionRecipesDatabase
+    return rm.cachedRecipes[displayedProfessionID]
 end

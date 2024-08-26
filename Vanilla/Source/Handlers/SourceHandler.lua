@@ -103,39 +103,42 @@ local function storeCommonNPCInfo(infoTable, npc)
     infoTable[L.zone], infoTable["fullZoneName"] = getZoneName(infoTable, npc)
 end
 
+local function getCost(cost, currencyCharacter)
+    return tonumber(cost:match("(%d+)"..currencyCharacter)) or 0
+end
+
 local function getFormattedCost(cost)
-    if not cost then
-        return L.unknown
-    end
-    local gold = tonumber(cost:match("(%d+)g")) or 0
-    local silver = tonumber(cost:match("(%d+)s")) or 0
-    local copper = tonumber(cost:match("(%d+)c")) or 0
-    local ticket = tonumber(cost:match("(%d+)t")) or 0
+    local gold = getCost(cost, "g")
+    local silver = getCost(cost, "s")
+    local copper = getCost(cost, "c")
+    local exchangeTicket = getCost(cost, "t")
     local formattedCost = ""
     if gold > 0 then
-        formattedCost = formattedCost.." "..gold.."|T"..F.textures.goldIcon..":11:10:2:0.5:64:64:4:60:4:60|t"
+        formattedCost = formattedCost.." "..gold..F.textures.goldIcon
     end
     if silver > 0 then
-        formattedCost = formattedCost.." "..silver.."|T"..F.textures.silverIcon..":11:10:2:0.5:64:64:4:60:4:60|t"
+        formattedCost = formattedCost.." "..silver..F.textures.silverIcon
     end
     if copper > 0 then
-        formattedCost = formattedCost.." "..copper.."|T"..F.textures.copperIcon..":11:10:2:0.5:64:64:4:60:4:60|t"
+        formattedCost = formattedCost.." "..copper..F.textures.copperIcon
     end
-    if ticket > 0 then
-        formattedCost = formattedCost.." "..ticket.."|T"..F.textures.exchangeTicket..":11:10:2:0.5:64:64:4:60:4:60|t"
+    if exchangeTicket > 0 then
+        formattedCost = formattedCost.." "..exchangeTicket..F.textures.exchangeTicket
     end
     return formattedCost
 end
 
 local function storeVendorSupply(sourceData, vendorInfo)
-    for dataType, value in pairs(sourceData) do
-        if dataType == "cost" then
-            vendorInfo[L.price] = getFormattedCost(value)
-        elseif dataType == "stock" then
-            vendorInfo[L.stock] = value
-        end
+    local cost = sourceData["cost"]
+    local stock = sourceData["stock"]
+    if cost then
+        vendorInfo[L.price] = getFormattedCost(cost)
+    else
+        vendorInfo[L.price] = L.unknown
     end
-    if not sourceData["stock"] then
+    if stock ~= nil then
+        vendorInfo[L.stock] = stock
+    else
         vendorInfo[L.stock] = L.unlimited
     end
 end

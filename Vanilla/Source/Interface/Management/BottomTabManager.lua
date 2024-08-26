@@ -3,12 +3,15 @@ local L = rm.L
 local F = rm.F
 
 function rm.activateBottomTabAndDesaturateOthers(tab)
-    for _, otherTab in pairs(rm.bottomTabs) do
-        otherTab.active = false
-        otherTab.texture:SetDesaturated(true)
+    for _, bottomTab in pairs(rm.bottomTabs) do
+        if bottomTab == tab then
+            bottomTab.active = true
+            bottomTab.texture:SetDesaturated(false)
+        else
+            bottomTab.active = false
+            bottomTab.texture:SetDesaturated(true)
+        end
     end
-    tab.active = true
-    tab.texture:SetDesaturated(false)
 end
 
 local function congratulateIfEmptyList()

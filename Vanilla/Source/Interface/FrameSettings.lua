@@ -405,19 +405,19 @@ F.templates.slider = "OptionsSliderTemplate"
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 F.textures.bottomTab = "Interface/SPELLBOOK/UI-SpellBook-Tab1-Selected"
-F.textures.copperIcon = "Interface/MoneyFrame/UI-CopperIcon"
+F.textures.copperIcon = "|TInterface/MoneyFrame/UI-CopperIcon:11:10:2:0.5:64:64:4:60:4:60|t"
 F.textures.commonRecipe = "Interface/Icons/INV_Scroll_03"
 F.textures.cursor = "Interface/CURSOR/Point"
 F.textures.cursorClick = "Interface/Buttons/GLOWSTAR"
-F.textures.exchangeTicket = "Interface/Icons/Inv_inscription_parchment"
+F.textures.exchangeTicket = "|TInterface/Icons/Inv_inscription_parchment:11:10:2:0.5:64:64:4:60:4:60|t"
 F.textures.factionIcons = {
     ["Alliance"] = "Interface/WorldStateFrame/AllianceIcon",
     ["Horde"] = "Interface/WorldStateFrame/HordeIcon"
 }
-F.textures.goldIcon = "Interface/MoneyFrame/UI-GoldIcon"
+F.textures.goldIcon = "|TInterface/MoneyFrame/UI-GoldIcon:11:10:2:0.5:64:64:4:60:4:60|t"
 F.textures.header = "Interface/BankFrame/Bank-Background"
 F.textures.mainBackground = "Interface/FrameGeneral/UI-Background-Marble"
-F.textures.silverIcon = "Interface/MoneyFrame/UI-SilverIcon"
+F.textures.silverIcon = "|TInterface/MoneyFrame/UI-SilverIcon:11:10:2:0.5:64:64:4:60:4:60|t"
 F.textures.sourcesBackground = "Interface/AdventureMap/AdventureMapParchmentTile"
 F.textures.sourcesListBackground = "Interface/TutorialFrame/TutorialFrameBackground"
 F.textures.sourcesListEdge = "Interface/Tooltips/UI-Tooltip-Border"
