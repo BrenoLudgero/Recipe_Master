@@ -67,10 +67,12 @@ local function updateProgressBar()
 end
 
 function rm.updateRecipesList(getSkillInfo)
-    rm.clearFrameContent()
-    rm.listProfessionRecipes(getSkillInfo)
-    updateMainWidthBasedOnWidestRecipeName()
-    updateProgressBar()
+    if rm.getProfessionFrame() then -- Avoids the same Skillet error described in the previous function
+        rm.clearFrameContent()
+        rm.listProfessionRecipes(getSkillInfo)
+        updateMainWidthBasedOnWidestRecipeName()
+        updateProgressBar()
+    end
 end
 
 function rm.showRecipesFrame(getSkillInfo)
