@@ -53,7 +53,7 @@ local function getRecipeTooltipMessage(recipe, profession)
         end
     end
     if #charactersMissingRecipe > 0 then
-        message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightRedHex)
+        message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightPinkHex)
         for _, character in pairs(charactersMissingRecipe) do
             local characterProfessionLevel = rm.getSavedProfessionLevelForCharacter(character, profession)
             message = message..newLineInfo..character.." ("..characterProfessionLevel..")"

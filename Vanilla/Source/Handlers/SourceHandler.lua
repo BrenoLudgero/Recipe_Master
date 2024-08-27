@@ -69,10 +69,10 @@ end
 local function getClassificationColor(classification)
     local colors = {
         ["Boss"] = F.colors.redHex,
-        ["Rare"] = F.colors.grayishBlueHex,
+        ["Rare"] = F.colors.cadetBlueHex,
         ["Elite"] = F.colors.orangeHex,
         ["Rare Elite"] = F.colors.lightPurpleHex,
-        ["Dungeon"] =  F.colors.lightBrownHex
+        ["Dungeon"] =  F.colors.tanHex
     }
     return colors[classification] or F.colors.whiteHex
 end
@@ -166,7 +166,7 @@ local function getClassAndRaceColor(class, race)
     elseif class then
         return F.colors.skyBlueHex
     elseif race then
-        return F.colors.jadeHex
+        return F.colors.emeraldHex
     end
 end
 
@@ -225,7 +225,7 @@ local function getFormattedClassAndRaceInfo(class, race)
     else
         formattedInfo = formattedInfo.."\n"..getFormattedRaceNames(race)
     end
-    return formattedInfo:gsub("%%s, ", "") -- Replaces all "%s, " at the start of each formatted info with ""
+    return formattedInfo:gsub("%%s, ", "") -- Removes every "%s, " found in formattedInfo
 end
 
 function rm.getQuestInfo(sourceID)
