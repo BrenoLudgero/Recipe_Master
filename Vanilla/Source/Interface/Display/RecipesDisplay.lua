@@ -2,43 +2,6 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-local function splitSeasonalRecipes(professionRecipes)
-    local sodRecipes = {}
-    local regularRecipes = {}
-    for _, recipe in pairs(professionRecipes) do
-        if recipe.season then
-            table.insert(sodRecipes, recipe)
-        else
-            table.insert(regularRecipes, recipe)
-        end
-    end
-    return sodRecipes, regularRecipes
-end
-
-local function storeNonDuplicateRecipe(regularRecipe, sodRecipes)
-    local sameName = false
-    for _, sodRecipe in pairs(sodRecipes) do
-        if regularRecipe.name == sodRecipe.name then
-            sameName = true
-            break
-        end
-    end
-    if not sameName then
-        table.insert(sodRecipes, regularRecipe)
-    end
-end
-
-local function filterSeasonalRecipes(professionRecipes)
-    local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
-    if rm.currentSeason == "SoD" then
-        for _, recipe in pairs(regularRecipes) do
-            storeNonDuplicateRecipe(recipe, sodRecipes)
-        end
-        return sodRecipes
-    end
-    return regularRecipes
-end
-
 local function getComparisonValues(a, b)
     local sortBy = rm.getPreference("sortRecipesBy")
     if sortBy == "Name" then
@@ -53,8 +16,7 @@ end
 local function compareRecipes(a, b)
     local valueA, valueB = getComparisonValues(a, b)
     if valueA and valueB then
-        local sortAscending = rm.getPreference("sortAscending")
-        if sortAscending then
+        if rm.getPreference("sortAscending") then
             return valueA < valueB
         end
         return valueA > valueB
@@ -62,17 +24,19 @@ local function compareRecipes(a, b)
 end
 
 local function sortRecipes(professionRecipes)
-    local filteredRecipes = filterSeasonalRecipes(professionRecipes)
-    table.sort(filteredRecipes, compareRecipes)
-    return filteredRecipes
+    local sortedRecipes = {}
+    for _, recipe in pairs(professionRecipes) do
+        table.insert(sortedRecipes, recipe)
+    end
+    table.sort(sortedRecipes, compareRecipes)
+    return sortedRecipes
 end
 
 local function handleLearnedRecipe(recipe)
     if not rm.isLearnedRecipe(recipe) then
         return
     end
-    local showLearned = rm.getPreference("showLearnedRecipes")
-    if showLearned then
+    if rm.getPreference("showLearnedRecipes") then
         rm.createRecipeRow(recipe, F.colors.gray, true) -- Gray text and desaturated icon
     end
     rm.learnedRecipesCount = rm.learnedRecipesCount + 1

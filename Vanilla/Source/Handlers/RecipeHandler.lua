@@ -1,10 +1,6 @@
 local _, rm = ...
 local L = rm.L
 
-local function isRecipeForCurrentSeason(recipe)
-    return not recipe.season or (recipe.season == rm.currentSeason)
-end
-
 local function isRecipeForCurrentClass(recipe)
     if not recipe.class then
         return true
@@ -24,14 +20,13 @@ local function isRecipeForCurrentSpecialization(recipe)
     return (
         not recipe.specialization 
         or not currentSpecialization 
-        or (currentSpecialization == recipe.specialization)
+        or currentSpecialization == recipe.specialization
     )
 end
 
 function rm.isRecipeAvailableForCharacter(recipe)
     return (
-        isRecipeForCurrentSeason(recipe) 
-        and isRecipeForCurrentClass(recipe) 
+        isRecipeForCurrentClass(recipe) 
         and isRecipeForCurrentSpecialization(recipe)
     )
 end
