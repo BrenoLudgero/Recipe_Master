@@ -423,6 +423,7 @@ F.textures.sourcesListColumn = "Interface/Glues/CharacterSelect/Glues-CharacterS
 F.textures.sourcesListRow = "Interface/Tooltips/UI-Tooltip-Background"
 F.textures.sourcesListActiveTab = "Interface/HELPFRAME/HelpFrameTab-Active"
 F.textures.sourcesListInactiveTab = "Interface/HELPFRAME/HelpFrameTab-Inactive"
+F.textures.tarnishedUndermineReal = "|TInterface/Icons/INV_Misc_Coin_16:11:10:2:0.5:64:64:4:60:4:60|t"
 
 
 

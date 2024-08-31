@@ -3225,7 +3225,7 @@ rm.sourceDB[171] = {
 		},
 		vendor = {
 			[227853] = {
-				cost = "50t",
+				cost = "50ur",
 			},
 		},
 	},
@@ -3235,7 +3235,7 @@ rm.sourceDB[171] = {
 		},
 		vendor = {
 			[227853] = {
-				cost = "50t",
+				cost = "50ur",
 			},
 		},
 	},
@@ -3245,7 +3245,7 @@ rm.sourceDB[171] = {
 		},
 		vendor = {
 			[227853] = {
-				cost = "50t",
+				cost = "50ur",
 			},
 		},
 	},
@@ -3255,7 +3255,7 @@ rm.sourceDB[171] = {
 		},
 		vendor = {
 			[227853] = {
-				cost = "50t",
+				cost = "50ur",
 			},
 		},
 	},
@@ -3265,7 +3265,7 @@ rm.sourceDB[171] = {
 		},
 		vendor = {
 			[227853] = {
-				cost = "50t",
+				cost = "50ur",
 			},
 		},
 	},

@@ -104,6 +104,7 @@ local function getFormattedCost(cost)
     local silver = getCost(cost, "s")
     local copper = getCost(cost, "c")
     local exchangeTicket = getCost(cost, "t")
+    local tarnishedUndermineReal = getCost(cost, "ur")
     local formattedCost = ""
     if gold > 0 then
         formattedCost = formattedCost.." "..gold..F.textures.goldIcon
@@ -116,6 +117,9 @@ local function getFormattedCost(cost)
     end
     if exchangeTicket > 0 then
         formattedCost = formattedCost.." "..exchangeTicket..F.textures.exchangeTicket
+    end
+    if tarnishedUndermineReal > 0 then
+        formattedCost = formattedCost.." "..tarnishedUndermineReal..F.textures.tarnishedUndermineReal
     end
     return formattedCost
 end
