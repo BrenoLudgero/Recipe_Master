@@ -10,8 +10,10 @@ end
 
 function rm.displayInspectIconAndTooltipOnMouseover(icon, recipe)
     icon:HookScript("OnEnter", function(self)
-        ShowInspectCursor()
         showTooltipOnMouseover(self, recipe)
+        if recipe.sources then
+            ShowInspectCursor()
+        end
     end)
     icon:HookScript("OnLeave", function()
         ResetCursor()
@@ -35,7 +37,7 @@ function rm.createChatLinkOrDisplaySourcesOnClick(icon, recipe)
     icon:HookScript("OnMouseDown", function(self, button)
         if IsShiftKeyDown() and button == "LeftButton" then
             createChatLink(recipe)
-        elseif not IsShiftKeyDown() then
+        elseif not IsShiftKeyDown() and recipe.sources then
             rm.clearFrameContent()
             rm.mainFrame:SetWidth(F.sizes.sourcesFrameWidth)
             showSourcesForRecipe(recipe)

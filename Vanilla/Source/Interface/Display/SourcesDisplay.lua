@@ -17,8 +17,8 @@ local function getLocalizedSourceType(sourceType)
     return types[sourceType]
 end
 
--- The first character ("a", "b", etc..) is used to sort the tabs and columns
--- alphabetically in SourcesFrameCreation.createSourcesListColumns, guaranteeing a fixed order
+-- The first character ("a", "b", etc..) is used to sort the columns alphabetically
+-- in SourcesFrameCreation.createSourcesListColumns, guaranteeing a fixed order
 local function getSourceColumns(sourceType)
     local columns = {
         ["drop"] = {
@@ -148,7 +148,5 @@ function rm.showAllSources(recipe)
             tabXOffset = tabXOffset + sourceTab:GetWidth() + F.offsets.sourcesListTabX
         end
         showFirstTabRows(sources)
-    else
-        rm.showCenteredText(L.unknown, F.colors.white)
     end
 end
