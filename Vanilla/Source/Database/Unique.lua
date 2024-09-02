@@ -1,6 +1,19 @@
 local _, rm = ...
 
 rm.uniqueDB = {
+	[8696] = {
+		names = {
+			enUS = "Henry Stern",
+			koKR = "헨리 스턴",
+			ruRU = "Генри Штерн",
+			zhCN = "亨利 斯特恩",
+			zhTW = "亨利 斯特恩",
+		},
+		level = "36",
+		zones = {
+			722,
+		},
+	},
 	[8983] = {
 		names = {
 			deDE = "Golemlord Argelmach",
@@ -50,6 +63,25 @@ rm.uniqueDB = {
 		level = "61",
 		zones = {
 			2057,
+		},
+	},
+	[11340] = {
+		names = {
+			deDE = "Blutpriester Der Hakkari",
+			enUS = "Hakkari Blood Priest",
+			esES = "Sacerdote De Sangre Hakkari",
+			esMX = "Sacerdote De Sangre Hakkari",
+			frFR = "Grand Prêtre Hakkari",
+			koKR = "학카르부족 혈사제",
+			ptBR = "Sacerdote Sangrento Hakkari",
+			ruRU = "Жрец Крови Из Племени Хаккари",
+			zhCN = "哈卡高阶祭司",
+			zhTW = "哈卡高階祭司",
+		},
+		classification = "Elite",
+		level = "61",
+		zones = {
+			1977,
 		},
 	},
 	[14401] = {

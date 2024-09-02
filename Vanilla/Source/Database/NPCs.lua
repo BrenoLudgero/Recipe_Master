@@ -755,6 +755,21 @@ rm.npcDB = {
 			10,
 		},
 	},
+	[223] = {
+		names = {
+			enUS = "Dan Golthas",
+			koKR = "단 골다스",
+			ptBR = "Danilo Meira",
+			ruRU = "Дэн Голтас",
+			zhCN = "丹 戈萨斯",
+			zhTW = "丹 戈薩斯",
+		},
+		faction = "Horde",
+		level = "23",
+		zones = {
+			1497,
+		},
+	},
 	[232] = {
 		names = {
 			deDE = "Bauer Ray",
@@ -1807,6 +1822,25 @@ rm.npcDB = {
 		level = "14 - 15",
 		zones = {
 			40,
+		},
+	},
+	[514] = {
+		names = {
+			deDE = "Schmied Argus",
+			enUS = "Smith Argus",
+			esES = "Herrero Argus",
+			esMX = "Herrero Argus",
+			frFR = "Argus Le Forgeron",
+			koKR = "대장장이 아거스",
+			ptBR = "Ferreiro Argus",
+			ruRU = "Кузнец Аргус",
+			zhCN = "铁匠阿古斯",
+			zhTW = "鐵匠阿古斯",
+		},
+		faction = "Alliance",
+		level = "24",
+		zones = {
+			12,
 		},
 	},
 	[515] = {
@@ -4782,6 +4816,21 @@ rm.npcDB = {
 			10,
 		},
 	},
+	[957] = {
+		names = {
+			enUS = "Dane Lindgren",
+			koKR = "데인 린드그렌",
+			ptBR = "Bino Galizeu",
+			ruRU = "Дейн Линдгрен",
+			zhCN = "丹恩 林德雷",
+			zhTW = "丹恩 林德雷",
+		},
+		faction = "Alliance",
+		level = "30",
+		zones = {
+			1519,
+		},
+	},
 	[976] = {
 		names = {
 			deDE = "Kurzens Kriegstiger",
@@ -5919,6 +5968,21 @@ rm.npcDB = {
 		level = "34 - 35",
 		zones = {
 			33,
+		},
+	},
+	[1103] = {
+		names = {
+			enUS = "Eldrin",
+			koKR = "엘드린",
+			ptBR = "Elgin",
+			ruRU = "Элдрин",
+			zhCN = "艾尔丁",
+			zhTW = "艾爾丁",
+		},
+		faction = "Alliance",
+		level = "22",
+		zones = {
+			12,
 		},
 	},
 	[1108] = {
@@ -7238,6 +7302,25 @@ rm.npcDB = {
 			1,
 		},
 	},
+	[1215] = {
+		names = {
+			deDE = "Alchimist Mallory",
+			enUS = "Alchemist Mallory",
+			esES = "Alquimista Mallory",
+			esMX = "Alquimista Mallory",
+			frFR = "Alchimiste Mallory",
+			koKR = "연금술사 말로리",
+			ptBR = "Alquimista Malheiro",
+			ruRU = "Алхимик Маллори",
+			zhCN = "炼金师玛洛瑞",
+			zhTW = "煉金師瑪洛瑞",
+		},
+		faction = "Alliance",
+		level = "26",
+		zones = {
+			12,
+		},
+	},
 	[1216] = {
 		names = {
 			deDE = "Küstenkriecher",
@@ -7309,6 +7392,37 @@ rm.npcDB = {
 		level = "12 - 13",
 		zones = {
 			40,
+		},
+	},
+	[1241] = {
+		names = {
+			enUS = "Tognus Flintfire",
+			esES = "Tognus Fuegosílex",
+			esMX = "Tognus Fuegosílex",
+			koKR = "토그너스 플린트파이어",
+			ptBR = "Tognus Pederfogo",
+			ruRU = "Тогнус Огниво",
+			zhCN = "托格努斯 燧火",
+			zhTW = "托格努斯 燧火",
+		},
+		faction = "Alliance",
+		level = "30",
+		zones = {
+			1,
+		},
+	},
+	[1246] = {
+		names = {
+			enUS = "Vosur Brakthel",
+			koKR = "보수르 브락셀",
+			ruRU = "Восур Брактел",
+			zhCN = "沃萨 布拉克塞尔",
+			zhTW = "沃薩 布拉剋塞爾",
+		},
+		faction = "Alliance",
+		level = "30",
+		zones = {
+			1537,
 		},
 	},
 	[1250] = {
@@ -7418,6 +7532,21 @@ rm.npcDB = {
 			1,
 		},
 	},
+	[1300] = {
+		names = {
+			enUS = "Lawrence Schneider",
+			koKR = "로렌스 슈나이더",
+			ptBR = "Lawrence Armarinho",
+			ruRU = "Лоуренс Шнайдер",
+			zhCN = "劳伦斯 瑟尼德",
+			zhTW = "勞倫斯 瑟尼德",
+		},
+		faction = "Alliance",
+		level = "25",
+		zones = {
+			1519,
+		},
+	},
 	[1304] = {
 		names = {
 			enUS = "Darian Singh",
@@ -7447,6 +7576,21 @@ rm.npcDB = {
 			1519,
 		},
 	},
+	[1317] = {
+		names = {
+			enUS = "Lucan Cordell",
+			koKR = "루칸 코르델",
+			ptBR = "Lucas Cordel",
+			ruRU = "Лукан Корделл",
+			zhCN = "鲁坎 考迪尔",
+			zhTW = "魯坎 考迪爾",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1519,
+		},
+	},
 	[1318] = {
 		names = {
 			enUS = "Jessara Cordell",
@@ -7458,6 +7602,20 @@ rm.npcDB = {
 		},
 		faction = "Alliance",
 		level = "30",
+		zones = {
+			1519,
+		},
+	},
+	[1346] = {
+		names = {
+			enUS = "Georgio Bolero",
+			koKR = "조르지오 볼레로",
+			ruRU = "Джорджио Болеро",
+			zhCN = "乔吉奥 波利罗",
+			zhTW = "喬吉奧 波利羅",
+		},
+		faction = "Alliance",
+		level = "46",
 		zones = {
 			1519,
 		},
@@ -7494,6 +7652,25 @@ rm.npcDB = {
 			11,
 		},
 	},
+	[1355] = {
+		names = {
+			deDE = "Koch Ghilm",
+			enUS = "Cook Ghilm",
+			esES = "Cocinero Ghilm",
+			esMX = "Cocinero Ghilm",
+			frFR = "Cuisinier Ghilm",
+			koKR = "요리사 길름",
+			ptBR = "Cozinheiro Ghilm",
+			ruRU = "Повар Гильм",
+			zhCN = "厨师格瑞姆",
+			zhTW = "廚師格瑞姆",
+		},
+		faction = "Alliance",
+		level = "8 - 11",
+		zones = {
+			1,
+		},
+	},
 	[1364] = {
 		names = {
 			deDE = "Balgaras Der Niederträchtige",
@@ -7524,6 +7701,68 @@ rm.npcDB = {
 		level = "10",
 		zones = {
 			38,
+		},
+	},
+	[1382] = {
+		names = {
+			enUS = "Mudduk",
+			koKR = "머덕",
+			ruRU = "Маддьюк",
+			zhCN = "玛杜克",
+			zhTW = "瑪杜剋",
+		},
+		faction = "Horde",
+		level = "40",
+		zones = {
+			33,
+		},
+	},
+	[1383] = {
+		names = {
+			enUS = "Snarl",
+			esES = "Gruños",
+			esMX = "Gruños",
+			koKR = "스나알",
+			ptBR = "Rosnado",
+			ruRU = "Рык",
+			zhCN = "斯纳尔",
+			zhTW = "斯納爾",
+		},
+		faction = "Horde",
+		level = "31",
+		zones = {
+			1637,
+		},
+	},
+	[1385] = {
+		names = {
+			enUS = "Brawn",
+			esES = "Mole",
+			esMX = "Mole",
+			koKR = "브로운",
+			ptBR = "Briggo",
+			ruRU = "Браун",
+			zhCN = "布劳恩",
+			zhTW = "布勞恩",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			33,
+		},
+	},
+	[1386] = {
+		names = {
+			enUS = "Rogvar",
+			koKR = "로그바",
+			ruRU = "Рогвар",
+			zhCN = "罗格瓦尔",
+			zhTW = "羅格瓦爾",
+		},
+		faction = "Horde",
+		level = "53",
+		zones = {
+			8,
 		},
 	},
 	[1388] = {
@@ -7663,6 +7902,20 @@ rm.npcDB = {
 			40,
 		},
 	},
+	[1430] = {
+		names = {
+			enUS = "Tomas",
+			koKR = "토마스",
+			ruRU = "Томас",
+			zhCN = "厨师托马斯",
+			zhTW = "廚師托馬斯",
+		},
+		faction = "Alliance",
+		level = "10",
+		zones = {
+			12,
+		},
+	},
 	[1454] = {
 		names = {
 			enUS = "Jennabink Powerseam",
@@ -7691,6 +7944,40 @@ rm.npcDB = {
 		},
 		faction = "Alliance",
 		level = "15",
+		zones = {
+			38,
+		},
+	},
+	[1466] = {
+		names = {
+			enUS = "Gretta Finespindle",
+			esES = "Gretta Bueneje",
+			esMX = "Gretta Bueneje",
+			koKR = "그레타 파인스핀들",
+			ptBR = "Gretta Fusofino",
+			ruRU = "Гретта Остроигл",
+			zhCN = "格雷塔",
+			zhTW = "格雷塔",
+		},
+		faction = "Alliance",
+		level = "24",
+		zones = {
+			1537,
+		},
+	},
+	[1470] = {
+		names = {
+			enUS = "Ghak Healtouch",
+			esES = "Ghak Sanadón",
+			esMX = "Ghak Sanadón",
+			koKR = "가크 힐터치",
+			ptBR = "Ghak Toquecura",
+			ruRU = "Гхак Целитель",
+			zhCN = "加克",
+			zhTW = "加剋",
+		},
+		faction = "Alliance",
+		level = "25",
 		zones = {
 			38,
 		},
@@ -8566,6 +8853,21 @@ rm.npcDB = {
 			33,
 		},
 	},
+	[1632] = {
+		names = {
+			enUS = "Adele Fielder",
+			koKR = "아델레 필더",
+			ptBR = "Adélia Campeira",
+			ruRU = "Адель Филдер",
+			zhCN = "艾德勒 费欧德",
+			zhTW = "艾德勒 費歐德",
+		},
+		faction = "Alliance",
+		level = "22",
+		zones = {
+			12,
+		},
+	},
 	[1653] = {
 		names = {
 			deDE = "Hochmagus Der Blutsegelbukaniere",
@@ -8812,6 +9114,40 @@ rm.npcDB = {
 			85,
 		},
 	},
+	[1676] = {
+		names = {
+			enUS = "Finbus Geargrind",
+			esES = "Finbus Rompegranajes",
+			esMX = "Finbus Rompegranajes",
+			koKR = "핀버스 기어그린드",
+			ptBR = "Finbus Mancalfiado",
+			ruRU = "Финбус Шестерлязг",
+			zhCN = "芬布斯",
+			zhTW = "芬布斯",
+		},
+		faction = "Alliance",
+		level = "31",
+		zones = {
+			10,
+		},
+	},
+	[1681] = {
+		names = {
+			enUS = "Brock Stoneseeker",
+			esES = "Brock Buscapiedras",
+			esMX = "Brock Buscapiedras",
+			koKR = "브록 스톤시커",
+			ptBR = "Brock Buscapedra",
+			ruRU = "Брок Камнекоп",
+			zhCN = "布洛克 寻石者",
+			zhTW = "布洛剋 尋石者",
+		},
+		faction = "Alliance",
+		level = "15",
+		zones = {
+			38,
+		},
+	},
 	[1684] = {
 		names = {
 			enUS = "Khara Deepwater",
@@ -8899,6 +9235,68 @@ rm.npcDB = {
 		level = "24",
 		zones = {
 			717,
+		},
+	},
+	[1699] = {
+		names = {
+			enUS = "Gremlock Pilsnor",
+			koKR = "그렘록 필스노르",
+			ruRU = "Гремлок Пилзнор",
+			zhCN = "格雷姆罗克 匹斯诺尔",
+			zhTW = "格雷姆羅剋 匹斯諾爾",
+		},
+		faction = "Alliance",
+		level = "10",
+		zones = {
+			1,
+		},
+	},
+	[1701] = {
+		names = {
+			enUS = "Dank Drizzlecut",
+			esES = "Dank Cortefiel",
+			esMX = "Dank Cortefiel",
+			koKR = "당크 드리즐컷",
+			ptBR = "Dank Chuviscorte",
+			ruRU = "Данк Дождерез",
+			zhCN = "丹克 利刃",
+			zhTW = "丹剋 利刃",
+		},
+		faction = "Alliance",
+		level = "10",
+		zones = {
+			1,
+		},
+	},
+	[1702] = {
+		names = {
+			enUS = "Bronk Guzzlegear",
+			esES = "Bronk Comengranaje",
+			esMX = "Bronk Comengranaje",
+			koKR = "브롱크 거즐기어",
+			ptBR = "Bronk Gargrenagem",
+			ruRU = "Бронк Пропойца",
+			zhCN = "布隆克",
+			zhTW = "布隆剋",
+		},
+		faction = "Alliance",
+		level = "24",
+		zones = {
+			1,
+		},
+	},
+	[1703] = {
+		names = {
+			enUS = "Uthrar Threx",
+			koKR = "우슬라 스렉스",
+			ruRU = "Утрар Трекс",
+			zhCN = "阿斯拉 瑞克斯",
+			zhTW = "阿斯拉 瑞剋斯",
+		},
+		faction = "Alliance",
+		level = "24",
+		zones = {
+			1537,
 		},
 	},
 	[1706] = {
@@ -11948,6 +12346,22 @@ rm.npcDB = {
 			130,
 		},
 	},
+	[2132] = {
+		names = {
+			enUS = "Carolai Anise",
+			esES = "Carolai Anís",
+			esMX = "Carolai Anís",
+			koKR = "캐롤라이 아니즈",
+			ruRU = "Каролай Аниса",
+			zhCN = "卡罗莱 安尼斯",
+			zhTW = "卡羅萊 安尼斯",
+		},
+		faction = "Horde",
+		level = "25",
+		zones = {
+			85,
+		},
+	},
 	[2149] = {
 		names = {
 			deDE = "Räuber Der Dunkeleisenzwerge",
@@ -13503,6 +13917,49 @@ rm.npcDB = {
 			148,
 		},
 	},
+	[2326] = {
+		names = {
+			enUS = "Thamner Pol",
+			koKR = "탐네르 폴",
+			ruRU = "Тамнер Пол",
+			zhCN = "萨姆诺 普尔",
+			zhTW = "薩姆諾 普爾",
+		},
+		faction = "Alliance",
+		level = "8 - 12",
+		zones = {
+			1,
+		},
+	},
+	[2327] = {
+		names = {
+			enUS = "Shaina Fuller",
+			koKR = "샤이나 풀러",
+			ptBR = "Suzi Lira",
+			ruRU = "Шайна Корпия",
+			zhCN = "珊娜 弗勒",
+			zhTW = "珊娜 弗勒",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1519,
+		},
+	},
+	[2329] = {
+		names = {
+			enUS = "Michelle Belle",
+			koKR = "미셸 벨르",
+			ruRU = "Мишель Белль",
+			zhCN = "米歇尔 贝利",
+			zhTW = "米歇爾 貝利",
+		},
+		faction = "Alliance",
+		level = "11",
+		zones = {
+			12,
+		},
+	},
 	[2332] = {
 		names = {
 			enUS = "Valdred Moray",
@@ -13531,6 +13988,7 @@ rm.npcDB = {
 			zhCN = "波恩塞德镇长",
 			zhTW = "波恩塞德鎮長",
 		},
+		faction = "Alliance",
 		level = "30",
 		zones = {
 			267,
@@ -14133,6 +14591,21 @@ rm.npcDB = {
 			267,
 		},
 	},
+	[2391] = {
+		names = {
+			enUS = "Serge Hinott",
+			koKR = "서지 히노트",
+			ptBR = "Serguei Hinoto",
+			ruRU = "Серж Хинотт",
+			zhCN = "瑟尔格 希诺特",
+			zhTW = "瑟爾格 希諾特",
+		},
+		faction = "Horde",
+		level = "32",
+		zones = {
+			267,
+		},
+	},
 	[2393] = {
 		names = {
 			enUS = "Christoph Jeffcoat",
@@ -14178,6 +14651,21 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "32",
+		zones = {
+			267,
+		},
+	},
+	[2399] = {
+		names = {
+			enUS = "Daryl Stack",
+			koKR = "다릴 스택",
+			ptBR = "Dario Pilha",
+			ruRU = "Дэрил Стак",
+			zhCN = "达瑞尔 斯塔克",
+			zhTW = "達瑞爾 斯塔剋",
+		},
+		faction = "Horde",
+		level = "56",
 		zones = {
 			267,
 		},
@@ -15717,6 +16205,22 @@ rm.npcDB = {
 			33,
 		},
 	},
+	[2627] = {
+		names = {
+			enUS = "Grarnik Goodstitch",
+			esES = "Grarnik Cortefino",
+			esMX = "Grarnik Cortefino",
+			koKR = "그라닉 굿스티치",
+			ptBR = "Grarnik Pontobom",
+			ruRU = "Грарник Ладноскрой",
+			zhCN = "格拉尼克 古斯提",
+			zhTW = "格拉尼剋 古斯提",
+		},
+		level = "34",
+		zones = {
+			33,
+		},
+	},
 	[2628] = {
 		names = {
 			deDE = "Tagelöhner Von Dalaran",
@@ -17189,6 +17693,23 @@ rm.npcDB = {
 			45,
 		},
 	},
+	[2798] = {
+		names = {
+			enUS = "Pand Stonebinder",
+			esES = "Pand Amarrapiedra",
+			esMX = "Pand Amarrapiedra",
+			koKR = "판드 스톤바인더",
+			ptBR = "Pand Junta Pedras",
+			ruRU = "Панд Камневяз",
+			zhCN = "潘德 缚石",
+			zhTW = "潘德 縛石",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1638,
+		},
+	},
 	[2803] = {
 		names = {
 			enUS = "Malygen",
@@ -17379,6 +17900,35 @@ rm.npcDB = {
 			3,
 		},
 	},
+	[2836] = {
+		names = {
+			enUS = "Brikk Keencraft",
+			esES = "Brikk Finoficio",
+			esMX = "Brikk Finoficio",
+			koKR = "브리크 킨크래프트",
+			ptBR = "Brikk Belofício",
+			ruRU = "Брикк Мастерец",
+			zhCN = "布里克 基克拉夫",
+			zhTW = "布裏剋 基剋拉夫",
+		},
+		level = "54",
+		zones = {
+			33,
+		},
+	},
+	[2837] = {
+		names = {
+			enUS = "Jaxin Chong",
+			koKR = "야신 총",
+			ruRU = "Джаксин Чонг",
+			zhCN = "加克森",
+			zhTW = "加剋森",
+		},
+		level = "46",
+		zones = {
+			33,
+		},
+	},
 	[2838] = {
 		names = {
 			enUS = "Crazk Sparks",
@@ -17438,6 +17988,35 @@ rm.npcDB = {
 		level = "45",
 		zones = {
 			33,
+		},
+	},
+	[2855] = {
+		names = {
+			enUS = "Snang",
+			koKR = "스낭",
+			ruRU = "Снанг",
+			zhCN = "斯诺恩",
+			zhTW = "斯諾恩",
+		},
+		faction = "Horde",
+		level = "24",
+		zones = {
+			1637,
+		},
+	},
+	[2857] = {
+		names = {
+			enUS = "Thund",
+			koKR = "선드",
+			ptBR = "Tunda",
+			ruRU = "Тунд",
+			zhCN = "桑德",
+			zhTW = "桑德",
+		},
+		faction = "Horde",
+		level = "23",
+		zones = {
+			1637,
 		},
 	},
 	[2892] = {
@@ -18090,6 +18669,55 @@ rm.npcDB = {
 			215,
 		},
 	},
+	[2998] = {
+		names = {
+			enUS = "Karn Stonehoof",
+			esES = "Karn Pezuñapétrea",
+			esMX = "Karn Pezuñapétrea",
+			koKR = "카른 스톤후프",
+			ptBR = "Karn Casco de Pedra",
+			ruRU = "Карн Каменное Копыто",
+			zhCN = "卡恩 石蹄",
+			zhTW = "卡恩 石蹄",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1638,
+		},
+	},
+	[3001] = {
+		names = {
+			enUS = "Brek Stonehoof",
+			esES = "Brek Pezuñapétrea",
+			esMX = "Brek Pezuñapétrea",
+			koKR = "브렉 스톤후프",
+			ptBR = "Brek Casco de Pedra",
+			ruRU = "Брек Каменное Копыто",
+			zhCN = "布瑞克 石蹄",
+			zhTW = "布瑞剋 石蹄",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1638,
+		},
+	},
+	[3004] = {
+		names = {
+			enUS = "Tepa",
+			koKR = "테파",
+			ptBR = "Thepa",
+			ruRU = "Тепа",
+			zhCN = "坦帕",
+			zhTW = "坦帕",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1638,
+		},
+	},
 	[3005] = {
 		names = {
 			enUS = "Mahu",
@@ -18100,6 +18728,68 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "30",
+		zones = {
+			1638,
+		},
+	},
+	[3007] = {
+		names = {
+			enUS = "Una",
+			koKR = "우나",
+			ruRU = "Уна",
+			zhCN = "犹纳",
+			zhTW = "猶納",
+		},
+		faction = "Horde",
+		level = "46",
+		zones = {
+			1638,
+		},
+	},
+	[3008] = {
+		names = {
+			enUS = "Mak",
+			koKR = "마크",
+			ruRU = "Мак",
+			zhCN = "马克",
+			zhTW = "馬剋",
+		},
+		faction = "Horde",
+		level = "24",
+		zones = {
+			1638,
+		},
+	},
+	[3009] = {
+		names = {
+			enUS = "Bena Winterhoof",
+			esES = "Bena Pezuña Invernal",
+			esMX = "Bena Pezuña Invernal",
+			koKR = "베나 윈터후프",
+			ptBR = "Bena Casco Invernal",
+			ruRU = "Бена Заиндевевшее Копыто",
+			zhCN = "本娜 冰蹄",
+			zhTW = "本娜 冰蹄",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1638,
+		},
+	},
+	[3011] = {
+		names = {
+			enUS = "Teg Dawnstrider",
+			esES = "Teg Caminalba",
+			esMX = "Teg Caminalba",
+			koKR = "테그 던스트라이더",
+			ptBR = "Teg Andarilho da Aurora",
+			ruRU = "Тег Рассветный Странник",
+			zhCN = "泰戈 黎明行者",
+			zhTW = "泰戈 黎明行者",
+		},
+		faction = "Horde",
+		level = "35",
 		zones = {
 			1638,
 		},
@@ -18117,6 +18807,23 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "30",
+		zones = {
+			1638,
+		},
+	},
+	[3026] = {
+		names = {
+			enUS = "Aska Mistrunner",
+			esES = "Aska Correbruma",
+			esMX = "Aska Correbruma",
+			koKR = "아스카 미스트러너",
+			ptBR = "Aska Corre com a Névoa",
+			ruRU = "Аска Вестница Туманов",
+			zhCN = "阿丝卡 迷雾行者",
+			zhTW = "阿絲卡 迷霧行者",
+		},
+		faction = "Horde",
+		level = "45",
 		zones = {
 			1638,
 		},
@@ -18210,6 +18917,40 @@ rm.npcDB = {
 			1638,
 		},
 	},
+	[3067] = {
+		names = {
+			enUS = "Pyall Silentstride",
+			esES = "Pyall Trancosilencio",
+			esMX = "Pyall Trancosilencio",
+			koKR = "피알 사일런트스트라이드",
+			ptBR = "Pyall Passo Tranquilo",
+			ruRU = "Пиалл Тихая Поступь",
+			zhCN = "派尔 沉默行者",
+			zhTW = "派爾 沉默行者",
+		},
+		faction = "Horde",
+		level = "12",
+		zones = {
+			215,
+		},
+	},
+	[3069] = {
+		names = {
+			enUS = "Chaw Stronghide",
+			esES = "Chaw Pellejofuerte",
+			esMX = "Chaw Pellejofuerte",
+			koKR = "초우 스트롱하이드",
+			ptBR = "Chau Couro Forte",
+			ruRU = "Чоу Толстая Шкура",
+			zhCN = "查尔 硬皮",
+			zhTW = "查爾 硬皮",
+		},
+		faction = "Horde",
+		level = "23",
+		zones = {
+			215,
+		},
+	},
 	[3081] = {
 		names = {
 			enUS = "Wunna Darkmane",
@@ -18238,6 +18979,23 @@ rm.npcDB = {
 		},
 		faction = "Alliance",
 		level = "20",
+		zones = {
+			44,
+		},
+	},
+	[3087] = {
+		names = {
+			enUS = "Crystal Boughman",
+			esES = "Ramacho De Cristal",
+			esMX = "Ramacho De Cristal",
+			koKR = "크리스탈 바우맨",
+			ptBR = "Christiane Justa",
+			ruRU = "Кристал Боумен",
+			zhCN = "克里斯托 鲍曼",
+			zhTW = "剋裏斯托 鮑曼",
+		},
+		faction = "Alliance",
+		level = "22",
 		zones = {
 			44,
 		},
@@ -18744,6 +19502,66 @@ rm.npcDB = {
 			10,
 		},
 	},
+	[3136] = {
+		names = {
+			enUS = "Clarise Gnarltree",
+			esES = "Clarise Nudárbol",
+			esMX = "Clarise Nudárbol",
+			koKR = "클라리즈 나알트리",
+			ptBR = "Clarissa Roecasca",
+			ruRU = "Клариса Гнутодрев",
+			zhCN = "克拉莉斯 纳尔特里",
+			zhTW = "剋拉莉斯 納爾特裏",
+		},
+		faction = "Alliance",
+		level = "31",
+		zones = {
+			10,
+		},
+	},
+	[3137] = {
+		names = {
+			enUS = "Matt Johnson",
+			koKR = "매트 존슨",
+			ptBR = "Mateus João",
+			ruRU = "Мэтт Джонсон",
+			zhCN = "玛特 约翰森",
+			zhTW = "瑪特 約翰森",
+		},
+		faction = "Alliance",
+		level = "20",
+		zones = {
+			10,
+		},
+	},
+	[3174] = {
+		names = {
+			enUS = "Dwukk",
+			koKR = "드우크",
+			ruRU = "Двукк",
+			zhCN = "杜克",
+			zhTW = "杜剋",
+		},
+		faction = "Horde",
+		level = "27",
+		zones = {
+			14,
+		},
+	},
+	[3175] = {
+		names = {
+			enUS = "Krunn",
+			koKR = "크룬",
+			ruRU = "Крунн",
+			zhCN = "克鲁恩",
+			zhTW = "剋魯恩",
+		},
+		faction = "Horde",
+		level = "16",
+		zones = {
+			14,
+		},
+	},
 	[3178] = {
 		names = {
 			enUS = "Stuart Fleming",
@@ -18756,6 +19574,38 @@ rm.npcDB = {
 		level = "25",
 		zones = {
 			11,
+		},
+	},
+	[3181] = {
+		names = {
+			enUS = "Fremal Doohickey",
+			esES = "Fremal Tornichup",
+			esMX = "Fremal Tornichup",
+			koKR = "프레말 두히키",
+			ptBR = "Fremal Dotreco",
+			ruRU = "Фремаль Ерундец",
+			zhCN = "弗雷玛尔",
+			zhTW = "弗雷瑪爾",
+		},
+		faction = "Alliance",
+		level = "30",
+		zones = {
+			11,
+		},
+	},
+	[3184] = {
+		names = {
+			enUS = "Miaozan",
+			koKR = "미아오잔",
+			ptBR = "Miao'zan",
+			ruRU = "Мяозан",
+			zhCN = "米奥赞",
+			zhTW = "米奧贊",
+		},
+		faction = "Horde",
+		level = "25",
+		zones = {
+			14,
 		},
 	},
 	[3192] = {
@@ -19840,6 +20690,23 @@ rm.npcDB = {
 			17,
 		},
 	},
+	[3290] = {
+		names = {
+			enUS = "Deek Fizzlebizz",
+			esES = "Deek Malnegocio",
+			esMX = "Deek Malnegocio",
+			koKR = "디크 피즐비즈",
+			ptBR = "Deek Crepitante",
+			ruRU = "Сыщ Жужело",
+			zhCN = "迪克",
+			zhTW = "迪剋",
+		},
+		faction = "Alliance",
+		level = "27",
+		zones = {
+			38,
+		},
+	},
 	[3333] = {
 		names = {
 			enUS = "Shankys",
@@ -19868,6 +20735,20 @@ rm.npcDB = {
 			1637,
 		},
 	},
+	[3345] = {
+		names = {
+			enUS = "Godan",
+			koKR = "고단",
+			ruRU = "Годан",
+			zhCN = "古丹",
+			zhTW = "古丹",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1637,
+		},
+	},
 	[3346] = {
 		names = {
 			enUS = "Kithas",
@@ -19875,6 +20756,20 @@ rm.npcDB = {
 			ruRU = "Китхас",
 			zhCN = "基萨斯",
 			zhTW = "基薩斯",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1637,
+		},
+	},
+	[3347] = {
+		names = {
+			enUS = "Yelmak",
+			koKR = "옐마크",
+			ruRU = "Йелмак",
+			zhCN = "耶尔玛克",
+			zhTW = "耶爾瑪剋",
 		},
 		faction = "Horde",
 		level = "35",
@@ -19897,6 +20792,23 @@ rm.npcDB = {
 			1637,
 		},
 	},
+	[3355] = {
+		names = {
+			enUS = "Saru Steelfury",
+			esES = "Saru Furiacerada",
+			esMX = "Saru Furiacerada",
+			koKR = "사루 스틸퓨리",
+			ptBR = "Saru Furiácero",
+			ruRU = "Сару Холодная Ярость",
+			zhCN = "萨鲁 钢怒",
+			zhTW = "薩魯 鋼怒",
+		},
+		faction = "Horde",
+		level = "45",
+		zones = {
+			1637,
+		},
+	},
 	[3356] = {
 		names = {
 			enUS = "Sumi",
@@ -19907,6 +20819,34 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "30",
+		zones = {
+			1637,
+		},
+	},
+	[3357] = {
+		names = {
+			enUS = "Makaru",
+			koKR = "마카루",
+			ruRU = "Макару",
+			zhCN = "马卡鲁",
+			zhTW = "馬卡魯",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1637,
+		},
+	},
+	[3363] = {
+		names = {
+			enUS = "Magar",
+			koKR = "마가르",
+			ruRU = "Магар",
+			zhCN = "玛加尔",
+			zhTW = "瑪加爾",
+		},
+		faction = "Horde",
+		level = "35",
 		zones = {
 			1637,
 		},
@@ -19925,6 +20865,20 @@ rm.npcDB = {
 			1637,
 		},
 	},
+	[3365] = {
+		names = {
+			enUS = "Karolek",
+			koKR = "카롤렉",
+			ruRU = "Каролек",
+			zhCN = "卡洛雷克",
+			zhTW = "卡洛雷剋",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1637,
+		},
+	},
 	[3366] = {
 		names = {
 			enUS = "Tamar",
@@ -19935,6 +20889,20 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "30",
+		zones = {
+			1637,
+		},
+	},
+	[3373] = {
+		names = {
+			enUS = "Arnok",
+			koKR = "아르녹",
+			ruRU = "Арнок",
+			zhCN = "阿诺克",
+			zhTW = "阿諾剋",
+		},
+		faction = "Horde",
+		level = "35",
 		zones = {
 			1637,
 		},
@@ -20284,6 +21252,20 @@ rm.npcDB = {
 			17,
 		},
 	},
+	[3399] = {
+		names = {
+			enUS = "Zamja",
+			koKR = "잠자",
+			ruRU = "Замджа",
+			zhCN = "扎姆沙",
+			zhTW = "紮姆沙",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1637,
+		},
+	},
 	[3400] = {
 		names = {
 			enUS = "Xento",
@@ -20295,6 +21277,20 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "30",
+		zones = {
+			1637,
+		},
+	},
+	[3412] = {
+		names = {
+			enUS = "Nogg",
+			koKR = "노그",
+			ruRU = "Ногг",
+			zhCN = "诺格",
+			zhTW = "諾格",
+		},
+		faction = "Horde",
+		level = "35",
 		zones = {
 			1637,
 		},
@@ -20779,6 +21775,20 @@ rm.npcDB = {
 			17,
 		},
 	},
+	[3478] = {
+		names = {
+			enUS = "Traugh",
+			koKR = "트라우그",
+			ruRU = "Трауг",
+			zhCN = "特劳弗",
+			zhTW = "特勞弗",
+		},
+		faction = "Horde",
+		level = "31",
+		zones = {
+			17,
+		},
+	},
 	[3482] = {
 		names = {
 			enUS = "Tariqa",
@@ -20790,6 +21800,21 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "14",
+		zones = {
+			17,
+		},
+	},
+	[3484] = {
+		names = {
+			enUS = "Kilhala",
+			koKR = "킬할라",
+			ptBR = "Kil'hala",
+			ruRU = "Килхала",
+			zhCN = "基尔哈拉",
+			zhTW = "基爾哈拉",
+		},
+		faction = "Horde",
+		level = "25",
 		zones = {
 			17,
 		},
@@ -20833,6 +21858,22 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "30",
+		zones = {
+			17,
+		},
+	},
+	[3494] = {
+		names = {
+			enUS = "Tinkerwiz",
+			esES = "Manitas De Oro",
+			esMX = "Manitas De Oro",
+			koKR = "팅커위즈",
+			ptBR = "Guariba",
+			ruRU = "Оловень",
+			zhCN = "廷克维斯",
+			zhTW = "廷剋維斯",
+		},
+		level = "25",
 		zones = {
 			17,
 		},
@@ -20892,6 +21933,22 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "11",
+		zones = {
+			85,
+		},
+	},
+	[3523] = {
+		names = {
+			enUS = "Bowen Brisboise",
+			esES = "Bowen Bribuesa",
+			esMX = "Bowen Bribuesa",
+			koKR = "보웬 브리스부아즈",
+			ruRU = "Боуэн Брисбойс",
+			zhCN = "博文 布里斯博埃斯",
+			zhTW = "博文 布裏斯博埃斯",
+		},
+		faction = "Horde",
+		level = "24",
 		zones = {
 			85,
 		},
@@ -20988,6 +22045,21 @@ rm.npcDB = {
 			267,
 		},
 	},
+	[3549] = {
+		names = {
+			enUS = "Shelene Rhobart",
+			koKR = "셸렌 로버트",
+			ptBR = "Lenita Ravais",
+			ruRU = "Шелена Робарт",
+			zhCN = "舍伦尼 洛巴尔特",
+			zhTW = "捨倫尼 洛巴爾特",
+		},
+		faction = "Horde",
+		level = "25",
+		zones = {
+			85,
+		},
+	},
 	[3550] = {
 		names = {
 			enUS = "Martine Tramblay",
@@ -21003,6 +22075,21 @@ rm.npcDB = {
 			85,
 		},
 	},
+	[3555] = {
+		names = {
+			enUS = "Johan Focht",
+			koKR = "요한 폭히트",
+			ptBR = "Jordão Focht",
+			ruRU = "Йохан Фогт",
+			zhCN = "乔汉 弗彻",
+			zhTW = "喬漢 弗徹",
+		},
+		faction = "Horde",
+		level = "19",
+		zones = {
+			130,
+		},
+	},
 	[3556] = {
 		names = {
 			enUS = "Andrew Hilbert",
@@ -21014,6 +22101,22 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "18 - 20",
+		zones = {
+			130,
+		},
+	},
+	[3557] = {
+		names = {
+			deDE = "Geraldine Sorouy",
+			enUS = "Guillaume Sorouy",
+			frFR = "Guillemette Sorouy",
+			koKR = "기욤 소로이",
+			ruRU = "Гийом Сорю",
+			zhCN = "古拉摩 索洛伊",
+			zhTW = "古拉摩 索洛伊",
+		},
+		faction = "Horde",
+		level = "28",
 		zones = {
 			130,
 		},
@@ -21054,6 +22157,57 @@ rm.npcDB = {
 		level = "19",
 		zones = {
 			1581,
+		},
+	},
+	[3603] = {
+		names = {
+			enUS = "Cyndra Kindwhisper",
+			esES = "Cyndra Suavesurro",
+			esMX = "Cyndra Suavesurro",
+			koKR = "킨드라 카인드위스퍼",
+			ptBR = "Cyndra Murmuramável",
+			ruRU = "Циндра Ласковый Шепот",
+			zhCN = "塞恩德拉 细语者",
+			zhTW = "塞恩德拉 細語者",
+		},
+		faction = "Alliance",
+		level = "28",
+		zones = {
+			141,
+		},
+	},
+	[3605] = {
+		names = {
+			enUS = "Nadyia Maneweaver",
+			esES = "Nadyia Tejecrín",
+			esMX = "Nadyia Tejecrín",
+			koKR = "나디야 메인위버",
+			ptBR = "Nadyia Tecegrenhas",
+			ruRU = "Надайя Гривопряд",
+			zhCN = "纳迪娅 织发",
+			zhTW = "納迪婭 織發",
+		},
+		faction = "Alliance",
+		level = "30",
+		zones = {
+			141,
+		},
+	},
+	[3606] = {
+		names = {
+			enUS = "Alanna Raveneye",
+			esES = "Alanna Cuervojo",
+			esMX = "Alanna Cuervojo",
+			koKR = "알란나 레이븐아이",
+			ptBR = "Aline Corvolhar",
+			ruRU = "Аланна Око Ворона",
+			zhCN = "奥兰纳 鸦眼",
+			zhTW = "奧蘭納 鴉眼",
+		},
+		faction = "Alliance",
+		level = "29",
+		zones = {
+			141,
 		},
 	},
 	[3630] = {
@@ -21439,6 +22593,37 @@ rm.npcDB = {
 			zhTW = "吉剋尼庫",
 		},
 		level = "32",
+		zones = {
+			17,
+		},
+	},
+	[3703] = {
+		names = {
+			enUS = "Krulmoo Fullmoon",
+			esES = "Krulmoo Lunallena",
+			esMX = "Krulmoo Lunallena",
+			koKR = "크룰무 풀문",
+			ptBR = "Krulmoo Lua Cheia",
+			ruRU = "Крульмоо Полная Луна",
+			zhCN = "克鲁姆 满月",
+			zhTW = "剋魯姆 滿月",
+		},
+		faction = "Horde",
+		level = "42",
+		zones = {
+			17,
+		},
+	},
+	[3704] = {
+		names = {
+			enUS = "Mahani",
+			koKR = "마하니",
+			ruRU = "Махани",
+			zhCN = "马哈尼",
+			zhTW = "馬哈尼",
+		},
+		faction = "Horde",
+		level = "31",
 		zones = {
 			17,
 		},
@@ -23483,6 +24668,37 @@ rm.npcDB = {
 			331,
 		},
 	},
+	[3964] = {
+		names = {
+			enUS = "Kylanna",
+			koKR = "킬란나",
+			ruRU = "Кайланна",
+			zhCN = "凯兰娜",
+			zhTW = "凱蘭娜",
+		},
+		faction = "Alliance",
+		level = "31",
+		zones = {
+			331,
+		},
+	},
+	[3967] = {
+		names = {
+			enUS = "Aayndia Floralwind",
+			esES = "Aayndia Vientofloral",
+			esMX = "Aayndia Vientofloral",
+			koKR = "아얀디아 플로럴윈드",
+			ptBR = "Aayndia Floréolas",
+			ruRU = "Айндия Душистый Ветер",
+			zhCN = "艾蒂安 花丛之风",
+			zhTW = "艾蒂安 花叢之風",
+		},
+		faction = "Alliance",
+		level = "37",
+		zones = {
+			331,
+		},
+	},
 	[3974] = {
 		names = {
 			deDE = "Hundemeister Loksey",
@@ -25336,6 +26552,35 @@ rm.npcDB = {
 			400,
 		},
 	},
+	[4159] = {
+		names = {
+			enUS = "Melynn",
+			koKR = "메린",
+			ptBR = "Me'lynn",
+			ruRU = "Мелинн",
+			zhCN = "迈里恩",
+			zhTW = "邁裏恩",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1657,
+		},
+	},
+	[4160] = {
+		names = {
+			enUS = "Ainethil",
+			koKR = "에이네실",
+			ruRU = "Айнетиль",
+			zhCN = "安尼希尔",
+			zhTW = "安尼希爾",
+		},
+		faction = "Alliance",
+		level = "46",
+		zones = {
+			1657,
+		},
+	},
 	[4168] = {
 		names = {
 			enUS = "Elynna",
@@ -25378,6 +26623,23 @@ rm.npcDB = {
 			148,
 		},
 	},
+	[4193] = {
+		names = {
+			enUS = "Grondal Moonbreeze",
+			esES = "Grondal Brisaluna",
+			esMX = "Grondal Brisaluna",
+			koKR = "그론달 문브리즈",
+			ptBR = "Grondal Brisaluna",
+			ruRU = "Грондаль Лунный Бриз",
+			zhCN = "格隆达尔 月风",
+			zhTW = "格隆達爾 月風",
+		},
+		faction = "Alliance",
+		level = "29",
+		zones = {
+			148,
+		},
+	},
 	[4200] = {
 		names = {
 			enUS = "Laird",
@@ -25390,6 +26652,62 @@ rm.npcDB = {
 		level = "14",
 		zones = {
 			148,
+		},
+	},
+	[4210] = {
+		names = {
+			enUS = "Alegorn",
+			koKR = "알레고른",
+			ruRU = "Элегорн",
+			zhCN = "阿雷贡",
+			zhTW = "阿雷貢",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1657,
+		},
+	},
+	[4211] = {
+		names = {
+			enUS = "Dannelor",
+			koKR = "단넬로르",
+			ruRU = "Даннелор",
+			zhCN = "丹纳罗尔",
+			zhTW = "丹納羅爾",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1657,
+		},
+	},
+	[4212] = {
+		names = {
+			enUS = "Telonis",
+			koKR = "텔로니스",
+			ruRU = "Телонис",
+			zhCN = "泰龙尼斯",
+			zhTW = "泰龍尼斯",
+		},
+		faction = "Alliance",
+		level = "46",
+		zones = {
+			1657,
+		},
+	},
+	[4213] = {
+		names = {
+			enUS = "Taladan",
+			koKR = "탈라단",
+			ruRU = "Таладан",
+			zhCN = "塔兰丹",
+			zhTW = "塔蘭丹",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1657,
 		},
 	},
 	[4223] = {
@@ -25498,6 +26816,40 @@ rm.npcDB = {
 		zones = {
 			400,
 			357,
+		},
+	},
+	[4254] = {
+		names = {
+			enUS = "Geofram Bouldertoe",
+			esES = "Geofram Dedorroca",
+			esMX = "Geofram Dedorroca",
+			koKR = "지오프람 보울더토",
+			ptBR = "Geofram Digisseixo",
+			ruRU = "Геофрам Твердопал",
+			zhCN = "吉尔弗拉姆 石趾",
+			zhTW = "吉爾弗拉姆 石趾",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1537,
+		},
+	},
+	[4258] = {
+		names = {
+			enUS = "Bengus Deepforge",
+			esES = "Bengus Forjahonda",
+			esMX = "Bengus Forjahonda",
+			koKR = "벤구스 딥포지",
+			ptBR = "Bengus Baixaforja",
+			ruRU = "Бенгус Подземная Кузня",
+			zhCN = "本古斯 深炉",
+			zhTW = "本古斯 深爐",
+		},
+		faction = "Alliance",
+		level = "45",
+		zones = {
+			1537,
 		},
 	},
 	[4260] = {
@@ -28186,6 +29538,21 @@ rm.npcDB = {
 			400,
 		},
 	},
+	[4552] = {
+		names = {
+			enUS = "Eunice Burch",
+			koKR = "유니스 버치",
+			ptBR = "Eunice Amora",
+			ruRU = "Эвника Барч",
+			zhCN = "尤奈斯 伯奇",
+			zhTW = "尤奈斯 伯奇",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1497,
+		},
+	},
 	[4553] = {
 		names = {
 			enUS = "Ronald Burch",
@@ -28233,6 +29600,21 @@ rm.npcDB = {
 			1497,
 		},
 	},
+	[4576] = {
+		names = {
+			enUS = "Josef Gregorian",
+			koKR = "조셉 그레고리안",
+			ptBR = "Josefo Gregório",
+			ruRU = "Джозеф Грегориан",
+			zhCN = "乔瑟夫 格里高利",
+			zhTW = "喬瑟夫 格裏高利",
+		},
+		faction = "Horde",
+		level = "45",
+		zones = {
+			1497,
+		},
+	},
 	[4577] = {
 		names = {
 			enUS = "Millie Gregorian",
@@ -28244,6 +29626,51 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "30",
+		zones = {
+			1497,
+		},
+	},
+	[4578] = {
+		names = {
+			enUS = "Josephine Lister",
+			koKR = "조세핀 리스터",
+			ptBR = "Josefina Calisto",
+			ruRU = "Джозефина Листер",
+			zhCN = "约瑟芬 李斯特",
+			zhTW = "約瑟芬 李斯特",
+		},
+		faction = "Horde",
+		level = "45",
+		zones = {
+			1497,
+		},
+	},
+	[4586] = {
+		names = {
+			enUS = "Graham Van Talen",
+			koKR = "그레이엄 반 탈렌",
+			ptBR = "Gontrão Henriques",
+			ruRU = "Грэхем Ван Тален",
+			zhCN = "格拉哈姆 范 塔伦",
+			zhTW = "格拉哈姆 範 塔倫",
+		},
+		faction = "Horde",
+		level = "26",
+		zones = {
+			1497,
+		},
+	},
+	[4588] = {
+		names = {
+			enUS = "Arthur Moore",
+			koKR = "아서 무어",
+			ptBR = "Arturo Moura",
+			ruRU = "Артур Мур",
+			zhCN = "亚瑟 摩尔",
+			zhTW = "亞瑟 摩爾",
+		},
+		faction = "Horde",
+		level = "35",
 		zones = {
 			1497,
 		},
@@ -28263,6 +29690,83 @@ rm.npcDB = {
 			1497,
 		},
 	},
+	[4591] = {
+		names = {
+			enUS = "Mary Edras",
+			koKR = "메리 에드라스",
+			ptBR = "Maria do Socorro",
+			ruRU = "Мэри Эдрас",
+			zhCN = "玛丽 艾塔斯",
+			zhTW = "瑪麗 艾塔斯",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1497,
+		},
+	},
+	[4596] = {
+		names = {
+			enUS = "James Van Brunt",
+			koKR = "제임스 반 브런트",
+			ptBR = "Jaime Ferraz",
+			ruRU = "Джеймс Ван Брюнт",
+			zhCN = "詹姆斯 范 布朗特",
+			zhTW = "詹姆斯 範 布朗特",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1497,
+		},
+	},
+	[4598] = {
+		names = {
+			enUS = "Brom Killian",
+			koKR = "브롬 킬리안",
+			ptBR = "Brom Morgado",
+			ruRU = "Бром Килиан",
+			zhCN = "布罗姆 基里安",
+			zhTW = "布羅姆 基裏安",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1497,
+		},
+	},
+	[4605] = {
+		names = {
+			enUS = "Basil Frye",
+			koKR = "바실 프라이",
+			ptBR = "Basílio Frias",
+			ruRU = "Базиль Фрай",
+			zhCN = "巴兹尔 弗莱伊",
+			zhTW = "巴茲爾 弗萊伊",
+		},
+		faction = "Horde",
+		level = "26",
+		zones = {
+			1497,
+		},
+	},
+	[4609] = {
+		names = {
+			deDE = "Doktor Marsh",
+			enUS = "Doctor Marsh",
+			frFR = "Docteur Marsh",
+			koKR = "학자 마쉬",
+			ptBR = "Doutor Charco",
+			ruRU = "Доктор Марш",
+			zhCN = "马尔什医生",
+			zhTW = "馬爾什醫生",
+		},
+		faction = "Horde",
+		level = "35",
+		zones = {
+			1497,
+		},
+	},
 	[4610] = {
 		names = {
 			enUS = "Algernon",
@@ -28273,6 +29777,38 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "30",
+		zones = {
+			1497,
+		},
+	},
+	[4611] = {
+		names = {
+			deDE = "Doktor Herbert Halsey",
+			enUS = "Doctor Herbert Halsey",
+			frFR = "Docteur Herbert Halsey",
+			koKR = "학자 허버트 핼시",
+			ptBR = "Doutor Herberto Vianna",
+			ruRU = "Доктор Герберт Галси",
+			zhCN = "赫伯特 哈尔希医生",
+			zhTW = "赫伯特 哈爾希醫生",
+		},
+		faction = "Horde",
+		level = "50",
+		zones = {
+			1497,
+		},
+	},
+	[4616] = {
+		names = {
+			enUS = "Lavinia Crowe",
+			koKR = "라비니아 크로위",
+			ptBR = "Lavínia Queiroz",
+			ruRU = "Лавиния Кроу",
+			zhCN = "拉文尼亚 克洛文",
+			zhTW = "拉文尼亞 剋洛文",
+		},
+		faction = "Horde",
+		level = "35",
 		zones = {
 			1497,
 		},
@@ -30537,6 +32073,25 @@ rm.npcDB = {
 			15,
 		},
 	},
+	[4900] = {
+		names = {
+			deDE = "Alchimist Narett",
+			enUS = "Alchemist Narett",
+			esES = "Alquimista Narett",
+			esMX = "Alquimista Narett",
+			frFR = "Alchimiste Narett",
+			koKR = "연금술사 나레트",
+			ptBR = "Alquimista Narett",
+			ruRU = "Алхимик Наретт",
+			zhCN = "炼金师纳瑞特",
+			zhTW = "煉金師納瑞特",
+		},
+		faction = "Alliance",
+		level = "37",
+		zones = {
+			15,
+		},
+	},
 	[4969] = {
 		names = {
 			deDE = "Raufbold Der Altstadt",
@@ -30665,6 +32220,23 @@ rm.npcDB = {
 			718,
 		},
 	},
+	[5127] = {
+		names = {
+			enUS = "Fimble Finespindle",
+			esES = "Fimble Bueneje",
+			esMX = "Fimble Bueneje",
+			koKR = "핌블 파인스핀들",
+			ptBR = "Fimble Fusofino",
+			ruRU = "Фимбл Остроигл",
+			zhCN = "费布 钢轴",
+			zhTW = "費布 鋼軸",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1537,
+		},
+	},
 	[5128] = {
 		names = {
 			enUS = "Bombus Finespindle",
@@ -30682,6 +32254,57 @@ rm.npcDB = {
 			1537,
 		},
 	},
+	[5150] = {
+		names = {
+			enUS = "Nissa Firestone",
+			esES = "Nissa Pirorroca",
+			esMX = "Nissa Pirorroca",
+			koKR = "니사 파이어스톤",
+			ptBR = "Nissa Pederneira",
+			ruRU = "Нисса Огневик",
+			zhCN = "尼莎 火石",
+			zhTW = "尼莎 火石",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1537,
+		},
+	},
+	[5153] = {
+		names = {
+			enUS = "Jormund Stonebrow",
+			esES = "Jormund Petrocejas",
+			esMX = "Jormund Petrocejas",
+			koKR = "요르문트 스톤브로우",
+			ptBR = "Iormund Pedracenho",
+			ruRU = "Джормунд Камнелоб",
+			zhCN = "约莫德 石眉",
+			zhTW = "約莫德 石眉",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1537,
+		},
+	},
+	[5157] = {
+		names = {
+			enUS = "Gimble Thistlefuzz",
+			esES = "Gimble Cardopelusa",
+			esMX = "Gimble Cardopelusa",
+			koKR = "김블 시슬퍼즈",
+			ptBR = "Gimbo Cardunça",
+			ruRU = "Гимбл Чертополуш",
+			zhCN = "吉布 草须",
+			zhTW = "吉布 草須",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1537,
+		},
+	},
 	[5158] = {
 		names = {
 			enUS = "Tilli Thistlefuzz",
@@ -30695,6 +32318,21 @@ rm.npcDB = {
 		},
 		faction = "Alliance",
 		level = "30",
+		zones = {
+			1537,
+		},
+	},
+	[5159] = {
+		names = {
+			enUS = "Daryl Riknussun",
+			koKR = "다릴 리크너선",
+			ptBR = "Daryl Ricinum",
+			ruRU = "Дэрил Рикнуссун",
+			zhCN = "达瑞尔 瑞克努索",
+			zhTW = "達瑞爾 瑞剋努索",
+		},
+		faction = "Alliance",
+		level = "35",
 		zones = {
 			1537,
 		},
@@ -30731,6 +32369,40 @@ rm.npcDB = {
 			1537,
 		},
 	},
+	[5164] = {
+		names = {
+			enUS = "Grumnus Steelshaper",
+			esES = "Grumnus Forjacero",
+			esMX = "Grumnus Forjacero",
+			koKR = "그룸누스 스틸셰이퍼",
+			ptBR = "Grumnus Mold'aço",
+			ruRU = "Грумнус Сталевар",
+			zhCN = "格鲁努斯 削钢",
+			zhTW = "格魯努斯 削鋼",
+		},
+		faction = "Alliance",
+		level = "60",
+		zones = {
+			1537,
+		},
+	},
+	[5174] = {
+		names = {
+			enUS = "Springspindle Fizzlegear",
+			esES = "Muello Saltarín",
+			esMX = "Muello Saltarín",
+			koKR = "스프링스핀들 피즐기어",
+			ptBR = "Carretemola Fungrenagem",
+			ruRU = "Пружиннер Шумотор",
+			zhCN = "宾斯匹德",
+			zhTW = "賓斯匹德",
+		},
+		faction = "Alliance",
+		level = "45",
+		zones = {
+			1537,
+		},
+	},
 	[5175] = {
 		names = {
 			enUS = "Gearcutter Cogspinner",
@@ -30744,6 +32416,23 @@ rm.npcDB = {
 		},
 		faction = "Alliance",
 		level = "30",
+		zones = {
+			1537,
+		},
+	},
+	[5177] = {
+		names = {
+			enUS = "Tally Berryfizz",
+			esES = "Tally Burbubaya",
+			esMX = "Tally Burbubaya",
+			koKR = "탈리 베리피즈",
+			ptBR = "Altina Frisamora",
+			ruRU = "Талли Гонобобельзз",
+			zhCN = "塔雷 浆泡",
+			zhTW = "塔雷 漿泡",
+		},
+		faction = "Alliance",
+		level = "35",
 		zones = {
 			1537,
 		},
@@ -32181,6 +33870,23 @@ rm.npcDB = {
 			357,
 		},
 	},
+	[5392] = {
+		names = {
+			enUS = "Yarr Hammerstone",
+			esES = "Yarr Martillal",
+			esMX = "Yarr Martillal",
+			koKR = "얄 해머스톤",
+			ptBR = "Yarr Malhapedra",
+			ruRU = "Ярр Камнедроб",
+			zhCN = "亚尔 锤石",
+			zhTW = "亞爾 錘石",
+		},
+		faction = "Alliance",
+		level = "10",
+		zones = {
+			1,
+		},
+	},
 	[5402] = {
 		names = {
 			enUS = "Khan Hratha",
@@ -32750,6 +34456,22 @@ rm.npcDB = {
 			440,
 		},
 	},
+	[5482] = {
+		names = {
+			enUS = "Stephen Ryback",
+			esES = "Stephen Lomocenteno",
+			esMX = "Stephen Lomocenteno",
+			koKR = "스테판 라이백",
+			ruRU = "Стивен Райбек",
+			zhCN = "斯蒂芬 雷百克",
+			zhTW = "斯蒂芬 雷百剋",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1519,
+		},
+	},
 	[5483] = {
 		names = {
 			enUS = "Erika Tate",
@@ -32815,6 +34537,55 @@ rm.npcDB = {
 			1519,
 		},
 	},
+	[5499] = {
+		names = {
+			enUS = "Lilyssia Nightbreeze",
+			esES = "Lilyssia Brisa Nocturna",
+			esMX = "Lilyssia Brisa Nocturna",
+			koKR = "릴리시아 나이트브리즈",
+			ptBR = "Lilyssa Umbrísia",
+			ruRU = "Лилиссия Ночной Бриз",
+			zhCN = "莉琳希亚 夜风",
+			zhTW = "莉琳希亞 夜風",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1519,
+		},
+	},
+	[5500] = {
+		names = {
+			enUS = "Telathir",
+			koKR = "텔아실",
+			ptBR = "Tel'Athir",
+			ruRU = "Тельатир",
+			zhCN = "泰兰希尔",
+			zhTW = "泰蘭希爾",
+		},
+		faction = "Alliance",
+		level = "31",
+		zones = {
+			1519,
+		},
+	},
+	[5511] = {
+		names = {
+			enUS = "Therum Deepforge",
+			esES = "Therum Forjahonda",
+			esMX = "Therum Forjahonda",
+			koKR = "테룸 딥포지",
+			ptBR = "Therum Baixaforja",
+			ruRU = "Терум Подземная Кузня",
+			zhCN = "瑟鲁姆 深炉",
+			zhTW = "瑟魯姆 深爐",
+		},
+		faction = "Alliance",
+		level = "33",
+		zones = {
+			1519,
+		},
+	},
 	[5512] = {
 		names = {
 			enUS = "Kaita Deepforge",
@@ -32828,6 +34599,71 @@ rm.npcDB = {
 		},
 		faction = "Alliance",
 		level = "30",
+		zones = {
+			1519,
+		},
+	},
+	[5513] = {
+		names = {
+			enUS = "Gelman Stonehand",
+			esES = "Gelman Petramano",
+			esMX = "Gelman Petramano",
+			koKR = "겔만 스톤핸드",
+			ptBR = "Gelman Manopedra",
+			ruRU = "Гельман Камнерук",
+			zhCN = "吉尔曼 石手",
+			zhTW = "吉爾曼 石手",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1519,
+		},
+	},
+	[5518] = {
+		names = {
+			enUS = "Lilliam Sparkspindle",
+			esES = "Lilliam Chispeje",
+			esMX = "Lilliam Chispeje",
+			koKR = "릴리암 스파크스핀들",
+			ptBR = "Lilo Chispafuso",
+			ruRU = "Лилиам Шпиндель",
+			zhCN = "利廉姆 火轴",
+			zhTW = "利廉姆 火軸",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1519,
+		},
+	},
+	[5564] = {
+		names = {
+			enUS = "Simon Tanner",
+			esES = "Simon Peletero",
+			esMX = "Simon Peletero",
+			koKR = "시몬 터너",
+			ptBR = "Simão Correia",
+			ruRU = "Саймон Дубильщик",
+			zhCN = "西蒙 坦纳尔",
+			zhTW = "西濛 坦納爾",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			1519,
+		},
+	},
+	[5567] = {
+		names = {
+			enUS = "Sellandus",
+			koKR = "셀란두스",
+			ruRU = "Селландус",
+			zhCN = "塞拉多斯",
+			zhTW = "塞拉多斯",
+		},
+		faction = "Alliance",
+		level = "31",
 		zones = {
 			1519,
 		},
@@ -33095,6 +34931,23 @@ rm.npcDB = {
 			1176,
 		},
 	},
+	[5695] = {
+		names = {
+			enUS = "Vance Undergloom",
+			esES = "Vance Bajopenumbra",
+			esMX = "Vance Bajopenumbra",
+			koKR = "밴스 언더글룸",
+			ptBR = "Vance Merencório",
+			ruRU = "Ванс Мрачнейший",
+			zhCN = "范斯 安德格鲁姆",
+			zhTW = "範斯 安德格魯姆",
+		},
+		faction = "Horde",
+		level = "31",
+		zones = {
+			85,
+		},
+	},
 	[5708] = {
 		names = {
 			deDE = "Brut Von Hakkar",
@@ -33342,6 +35195,25 @@ rm.npcDB = {
 			130,
 		},
 	},
+	[5759] = {
+		names = {
+			deDE = "Schwester Neela",
+			enUS = "Nurse Neela",
+			esES = "Enfermera Neela",
+			esMX = "Enfermera Neela",
+			frFR = "Infirmière Neela",
+			koKR = "간호사 닐라",
+			ptBR = "Enfermeira Nila",
+			ruRU = "Сиделка Нила",
+			zhCN = "妮拉",
+			zhTW = "妮拉",
+		},
+		faction = "Horde",
+		level = "10",
+		zones = {
+			85,
+		},
+	},
 	[5761] = {
 		names = {
 			deDE = "Deviatschlurfer",
@@ -33444,6 +35316,16 @@ rm.npcDB = {
 		},
 		level = "27",
 	},
+	[5784] = {
+		names = {
+			enUS = "Waldor",
+			koKR = "왈도르",
+			ruRU = "Валдор",
+			zhCN = "瓦多尔",
+			zhTW = "瓦多爾",
+		},
+		level = "28",
+	},
 	[5787] = {
 		names = {
 			deDE = "Vollstrecker Emilgund",
@@ -33535,6 +35417,20 @@ rm.npcDB = {
 		level = "9",
 		zones = {
 			14,
+		},
+	},
+	[5811] = {
+		names = {
+			enUS = "Kamari",
+			koKR = "카마리",
+			ruRU = "Камари",
+			zhCN = "卡玛瑞",
+			zhTW = "卡瑪瑞",
+		},
+		faction = "Horde",
+		level = "26",
+		zones = {
+			1637,
 		},
 	},
 	[5822] = {
@@ -34031,6 +35927,23 @@ rm.npcDB = {
 			406,
 		},
 	},
+	[5939] = {
+		names = {
+			enUS = "Vira Younghoof",
+			esES = "Vira Jovenpezuña",
+			esMX = "Vira Jovenpezuña",
+			koKR = "비라 영후프",
+			ptBR = "Virra Casco Jovem",
+			ruRU = "Вира Нежное Копыто",
+			zhCN = "维尔拉 幼蹄",
+			zhTW = "維爾拉 幼蹄",
+		},
+		faction = "Horde",
+		level = "13",
+		zones = {
+			215,
+		},
+	},
 	[5940] = {
 		names = {
 			enUS = "Harn Longcast",
@@ -34058,6 +35971,20 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "14",
+		zones = {
+			14,
+		},
+	},
+	[5943] = {
+		names = {
+			enUS = "Rawrk",
+			koKR = "로울크",
+			ruRU = "Роурк",
+			zhCN = "拉乌克",
+			zhTW = "拉烏剋",
+		},
+		faction = "Horde",
+		level = "15",
 		zones = {
 			14,
 		},
@@ -34599,6 +36526,21 @@ rm.npcDB = {
 		level = "29 - 30",
 		zones = {
 			331,
+		},
+	},
+	[6094] = {
+		names = {
+			enUS = "Byancie",
+			koKR = "비얀시",
+			ptBR = "Byonsa",
+			ruRU = "Бьянси",
+			zhCN = "拜恩希",
+			zhTW = "拜恩希",
+		},
+		faction = "Alliance",
+		level = "22",
+		zones = {
+			141,
 		},
 	},
 	[6109] = {
@@ -35661,6 +37603,52 @@ rm.npcDB = {
 		level = "26",
 		zones = {
 			719,
+		},
+	},
+	[6286] = {
+		names = {
+			enUS = "Zarrin",
+			koKR = "자린",
+			ruRU = "Заррин",
+			zhCN = "扎瑞恩",
+			zhTW = "紮瑞恩",
+		},
+		faction = "Alliance",
+		level = "13",
+		zones = {
+			141,
+		},
+	},
+	[6297] = {
+		names = {
+			enUS = "Kurdram Stonehammer",
+			esES = "Kurdram Rocamartillo",
+			esMX = "Kurdram Rocamartillo",
+			koKR = "쿠르트람 스톤해머",
+			ptBR = "Kordram Rochamalho",
+			ruRU = "Курдрам Камнемолот",
+			zhCN = "库德拉姆 石锤",
+			zhTW = "庫德拉姆 石錘",
+		},
+		faction = "Alliance",
+		level = "35",
+		zones = {
+			148,
+		},
+	},
+	[6299] = {
+		names = {
+			enUS = "Delfrum Flintbeard",
+			koKR = "델프룸 플린트비어드",
+			ptBR = "Delfrum Barbagulha",
+			ruRU = "Дельфрум Кремнебород",
+			zhCN = "迪尔弗拉姆 火须",
+			zhTW = "迪爾弗拉姆 火須",
+		},
+		faction = "Alliance",
+		level = "25",
+		zones = {
+			148,
 		},
 	},
 	[6329] = {
@@ -38142,6 +40130,57 @@ rm.npcDB = {
 			1337,
 		},
 	},
+	[7230] = {
+		names = {
+			enUS = "Shayis Steelfury",
+			esES = "Shayis Furiacerada",
+			esMX = "Shayis Furiacerada",
+			koKR = "샤이스 스틸퓨리",
+			ptBR = "Shayis Furiácero",
+			ruRU = "Шайс Холодная Ярость",
+			zhCN = "莎伊斯 钢怒",
+			zhTW = "莎伊斯 鋼怒",
+		},
+		faction = "Horde",
+		level = "60",
+		zones = {
+			1637,
+		},
+	},
+	[7231] = {
+		names = {
+			enUS = "Kelgruk Bloodaxe",
+			esES = "Kelgruk Hacha De Sangre",
+			esMX = "Kelgruk Hacha De Sangre",
+			koKR = "켈그룩 블러드액스",
+			ptBR = "Kelgruk Machado Sangrento",
+			ruRU = "Келгрук Кровавый Топор",
+			zhCN = "克尔格鲁克 血斧",
+			zhTW = "剋爾格魯剋 血斧",
+		},
+		faction = "Horde",
+		level = "60",
+		zones = {
+			1637,
+		},
+	},
+	[7232] = {
+		names = {
+			enUS = "Borgus Steelhand",
+			esES = "Borgus Mano De Acero",
+			esMX = "Borgus Mano De Acero",
+			koKR = "보르구스 스틸핸드",
+			ptBR = "Borgus Manácero",
+			ruRU = "Боргус Сталерук",
+			zhCN = "博古斯 钢拳",
+			zhTW = "博古斯 鋼拳",
+		},
+		faction = "Alliance",
+		level = "60",
+		zones = {
+			1519,
+		},
+	},
 	[7234] = {
 		names = {
 			deDE = "Ferocitas Der Traumfresser",
@@ -40255,6 +42294,104 @@ rm.npcDB = {
 			16,
 		},
 	},
+	[7866] = {
+		names = {
+			enUS = "Peter Galen",
+			koKR = "피터 갈렌",
+			ptBR = "Pedro Galho",
+			ruRU = "Питер Гален",
+			zhCN = "彼得 加林",
+			zhTW = "彼得 加林",
+		},
+		faction = "Alliance",
+		level = "50",
+		zones = {
+			16,
+		},
+	},
+	[7867] = {
+		names = {
+			enUS = "Thorkaf Dragoneye",
+			esES = "Thorkaf Dragonojo",
+			esMX = "Thorkaf Dragonojo",
+			koKR = "토르카프 드래곤아이",
+			ptBR = "Thorkaf Olho-de-tigre",
+			ruRU = "Торкаф Око Дракона",
+			zhCN = "索卡夫 龙眼",
+			zhTW = "索卡夫 龍眼",
+		},
+		faction = "Horde",
+		level = "50",
+		zones = {
+			3,
+		},
+	},
+	[7868] = {
+		names = {
+			enUS = "Sarah Tanner",
+			esES = "Sarah Peletero",
+			esMX = "Sarah Peletero",
+			koKR = "사라 터너",
+			ptBR = "Sara Correia",
+			ruRU = "Сара Дубильщица",
+			zhCN = "萨拉 坦尼",
+			zhTW = "薩拉 坦尼",
+		},
+		faction = "Alliance",
+		level = "50",
+		zones = {
+			51,
+		},
+	},
+	[7869] = {
+		names = {
+			enUS = "Brumn Winterhoof",
+			esES = "Brumm Pezuña Invernal",
+			esMX = "Brumm Pezuña Invernal",
+			koKR = "부룸 윈터후프",
+			ptBR = "Brum Casco Invernal",
+			ruRU = "Брумн Заиндевевшее Копыто",
+			zhCN = "布鲁姆 白蹄",
+			zhTW = "布魯姆 白蹄",
+		},
+		faction = "Horde",
+		level = "50",
+		zones = {
+			45,
+		},
+	},
+	[7870] = {
+		names = {
+			enUS = "Caryssia Moonhunter",
+			esES = "Caryssia Cazaluna",
+			esMX = "Caryssia Cazaluna",
+			koKR = "카리시아 문헌터",
+			ptBR = "Caryssia Caçaluna",
+			ruRU = "Кариссия Лунная Охотница",
+			zhCN = "凯雷希亚 猎月",
+			zhTW = "凱雷希亞 獵月",
+		},
+		faction = "Alliance",
+		level = "50",
+		zones = {
+			357,
+		},
+	},
+	[7871] = {
+		names = {
+			enUS = "Sejib",
+			koKR = "세지브",
+			ptBR = "Se'Jib",
+			ruRU = "Сехджиб",
+			zhCN = "瑟伊布",
+			zhTW = "瑟伊布",
+		},
+		faction = "Horde",
+		level = "50",
+		zones = {
+			33,
+		},
+	},
 	[7872] = {
 		names = {
 			deDE = "Kultistin Der Totenköpfe",
@@ -40415,6 +42552,40 @@ rm.npcDB = {
 			357,
 		},
 	},
+	[7948] = {
+		names = {
+			enUS = "Kylanna Windwhisper",
+			esES = "Kylanna Vientosusurro",
+			esMX = "Kylanna Vientosusurro",
+			koKR = "킬란나 윈드위스퍼",
+			ptBR = "Kylanna Murmúria",
+			ruRU = "Кайланна Шепот Ветра",
+			zhCN = "凯兰娜 风语",
+			zhTW = "凱蘭娜 風語",
+		},
+		faction = "Alliance",
+		level = "52",
+		zones = {
+			357,
+		},
+	},
+	[7949] = {
+		names = {
+			enUS = "Xylinnia Starshine",
+			esES = "Xylinnia Brillestelar",
+			esMX = "Xylinnia Brillestelar",
+			koKR = "실린니아 스타샤인",
+			ptBR = "Xylinnia Reluztela",
+			ruRU = "Ксилинния Звездное Сияние",
+			zhCN = "辛琳妮亚 星光",
+			zhTW = "辛琳妮亞 星光",
+		},
+		faction = "Alliance",
+		level = "51",
+		zones = {
+			357,
+		},
+	},
 	[7977] = {
 		names = {
 			enUS = "Gammerita",
@@ -40537,6 +42708,20 @@ rm.npcDB = {
 			440,
 		},
 	},
+	[8128] = {
+		names = {
+			enUS = "Pikkle",
+			koKR = "피클",
+			ptBR = "Pikareta",
+			ruRU = "Киркор",
+			zhCN = "皮库尔",
+			zhTW = "皮庫爾",
+		},
+		level = "40",
+		zones = {
+			440,
+		},
+	},
 	[8131] = {
 		names = {
 			enUS = "Blizrik Buckshot",
@@ -40626,6 +42811,23 @@ rm.npcDB = {
 		},
 		faction = "Alliance",
 		level = "40",
+		zones = {
+			405,
+		},
+	},
+	[8153] = {
+		names = {
+			enUS = "Narv Hidecrafter",
+			esES = "Narv Pielartesani",
+			esMX = "Narv Pielartesani",
+			koKR = "나르브 하이드크래프터",
+			ptBR = "Narv Artesão do Couro",
+			ruRU = "Нарв Кожемяка",
+			zhCN = "纳夫",
+			zhTW = "納夫",
+		},
+		faction = "Horde",
+		level = "42",
 		zones = {
 			405,
 		},
@@ -40809,6 +43011,21 @@ rm.npcDB = {
 		level = "47",
 		zones = {
 			51,
+		},
+	},
+	[8306] = {
+		names = {
+			enUS = "Duhng",
+			koKR = "둔그",
+			ptBR = "Barrão",
+			ruRU = "Дунх",
+			zhCN = "杜恩格",
+			zhTW = "杜恩格",
+		},
+		faction = "Horde",
+		level = "18",
+		zones = {
+			17,
 		},
 	},
 	[8307] = {
@@ -42024,6 +44241,22 @@ rm.npcDB = {
 		zones = {
 			4,
 			15531,
+		},
+	},
+	[8736] = {
+		names = {
+			enUS = "Buzzek Bracketswing",
+			esES = "Buzzek Giracorchete",
+			esMX = "Buzzek Giracorchete",
+			koKR = "부젝 브라켓스윙",
+			ptBR = "Zumbo Dobradiço",
+			ruRU = "Жужжер Скрепокрыл",
+			zhCN = "巴兹克 布拉斯温",
+			zhTW = "巴茲剋 布拉斯溫",
+		},
+		level = "53",
+		zones = {
+			440,
 		},
 	},
 	[8738] = {
@@ -44559,6 +46792,21 @@ rm.npcDB = {
 			1583,
 		},
 	},
+	[9584] = {
+		names = {
+			enUS = "Jalane Ayrole",
+			koKR = "잘레인 에이롤",
+			ptBR = "Lena Franz",
+			ruRU = "Джелейна Айроль",
+			zhCN = "嘉莱恩 艾罗",
+			zhTW = "嘉萊恩 艾羅",
+		},
+		faction = "Alliance",
+		level = "45",
+		zones = {
+			1519,
+		},
+	},
 	[9596] = {
 		names = {
 			deDE = "Bannok Grimmaxt",
@@ -45415,6 +47663,72 @@ rm.npcDB = {
 		level = "60",
 		zones = {
 			1583,
+		},
+	},
+	[10266] = {
+		names = {
+			enUS = "Ugthok",
+			koKR = "오그톡",
+			ptBR = "Ug'thok",
+			ruRU = "Угток",
+			zhCN = "乌格索克",
+			zhTW = "烏格索剋",
+		},
+		faction = "Horde",
+		level = "25",
+		zones = {
+			1637,
+		},
+	},
+	[10276] = {
+		names = {
+			enUS = "Rotgath Stonebeard",
+			esES = "Rotgath Barbapétrea",
+			esMX = "Rotgath Barbapétrea",
+			koKR = "로트가스 스톤비어드",
+			ptBR = "Rotgath Barbarrocha",
+			ruRU = "Ротгат Камнебород",
+			zhCN = "洛特加斯 石须",
+			zhTW = "洛特加斯 石須",
+		},
+		faction = "Alliance",
+		level = "31",
+		zones = {
+			1537,
+		},
+	},
+	[10277] = {
+		names = {
+			enUS = "Groum Stonebeard",
+			esES = "Groum Barbapétrea",
+			esMX = "Groum Barbapétrea",
+			koKR = "그로움 스톤비어드",
+			ptBR = "Groum Barbarrocha",
+			ruRU = "Гроум Камнебород",
+			zhCN = "格鲁姆 石须",
+			zhTW = "格魯姆 石須",
+		},
+		faction = "Alliance",
+		level = "25",
+		zones = {
+			1537,
+		},
+	},
+	[10278] = {
+		names = {
+			enUS = "Thrag Stonehoof",
+			esES = "Thrag Pezuñapétrea",
+			esMX = "Thrag Pezuñapétrea",
+			koKR = "트라그 스톤후프",
+			ptBR = "Thrag Casco de Pedra",
+			ruRU = "Траг Каменное Копыто",
+			zhCN = "瑟拉格 石蹄",
+			zhTW = "瑟拉格 石蹄",
+		},
+		faction = "Horde",
+		level = "24",
+		zones = {
+			1638,
 		},
 	},
 	[10316] = {
@@ -47613,6 +49927,23 @@ rm.npcDB = {
 			400,
 		},
 	},
+	[10993] = {
+		names = {
+			enUS = "Twizwick Sprocketgrind",
+			esES = "Tuizgüik Muelodentado",
+			esMX = "Tuizgüik Muelodentado",
+			koKR = "트위직 스프로켓그라인드",
+			ptBR = "Chacota Trincatreco",
+			ruRU = "Твизвик Пружинаждак",
+			zhCN = "图兹维克 斯普格林",
+			zhTW = "圖茲維剋 斯普格林",
+		},
+		faction = "Horde",
+		level = "25",
+		zones = {
+			215,
+		},
+	},
 	[10996] = {
 		names = {
 			deDE = "Gefallener Held",
@@ -47653,6 +49984,100 @@ rm.npcDB = {
 			2017,
 		},
 	},
+	[11017] = {
+		names = {
+			enUS = "Roxxik",
+			koKR = "록시크",
+			ruRU = "Роксик",
+			zhCN = "罗克希克",
+			zhTW = "羅剋希剋",
+		},
+		faction = "Horde",
+		level = "46",
+		zones = {
+			1637,
+		},
+	},
+	[11025] = {
+		names = {
+			enUS = "Mukdrak",
+			koKR = "머크드락",
+			ruRU = "Мукдрак",
+			zhCN = "穆德拉克",
+			zhTW = "穆德拉剋",
+		},
+		faction = "Horde",
+		level = "26",
+		zones = {
+			14,
+		},
+	},
+	[11026] = {
+		names = {
+			enUS = "Sprite Jumpsprocket",
+			esES = "Duendy Ruedadentada",
+			esMX = "Duendy Ruedadentada",
+			koKR = "스프라이트 점프스프로켓",
+			ptBR = "Lorien Grenagem",
+			ruRU = "Спрайт Прыгозубчик",
+			zhCN = "斯普莱特",
+			zhTW = "斯普萊特",
+		},
+		faction = "Alliance",
+		level = "24",
+		zones = {
+			1519,
+		},
+	},
+	[11028] = {
+		names = {
+			enUS = "Jemma Quikswitch",
+			esES = "Jemma Cambioveloz",
+			esMX = "Jemma Cambioveloz",
+			koKR = "젬마 퀵스위치",
+			ptBR = "Jemma Trocarrápida",
+			ruRU = "Джема Быстросмен",
+			zhCN = "耶玛",
+			zhTW = "耶瑪",
+		},
+		faction = "Alliance",
+		level = "24",
+		zones = {
+			1537,
+		},
+	},
+	[11029] = {
+		names = {
+			enUS = "Trixie Quikswitch",
+			esES = "Trixie Cambioyá",
+			esMX = "Trixie Cambioyá",
+			koKR = "트리시 퀵스위치",
+			ptBR = "Trixie Trocarrápida",
+			ruRU = "Трикси Быстросмен",
+			zhCN = "特里克希",
+			zhTW = "特裏剋希",
+		},
+		faction = "Alliance",
+		level = "31",
+		zones = {
+			1537,
+		},
+	},
+	[11031] = {
+		names = {
+			enUS = "Franklin Lloyd",
+			koKR = "프랭클린 로이드",
+			ptBR = "Hiacinto Olio",
+			ruRU = "Франклин Ллойд",
+			zhCN = "弗兰克林 洛伊德",
+			zhTW = "弗蘭剋林 洛伊德",
+		},
+		faction = "Horde",
+		level = "33",
+		zones = {
+			1497,
+		},
+	},
 	[11032] = {
 		names = {
 			deDE = "Malor Der Eifrige",
@@ -47670,6 +50095,51 @@ rm.npcDB = {
 		level = "60",
 		zones = {
 			2017,
+		},
+	},
+	[11037] = {
+		names = {
+			enUS = "Jenna Lemkenilli",
+			koKR = "지나 렘케닐리",
+			ruRU = "Дженна Лемкенилли",
+			zhCN = "洁娜 雷姆尼利",
+			zhTW = "潔娜 雷姆尼利",
+		},
+		faction = "Alliance",
+		level = "26",
+		zones = {
+			148,
+		},
+	},
+	[11041] = {
+		names = {
+			enUS = "Milla Fairancora",
+			koKR = "밀라 페어랜코라",
+			ruRU = "Милла Фаранкора",
+			zhCN = "米拉 法拉科纳",
+			zhTW = "米拉 法拉科納",
+		},
+		faction = "Alliance",
+		level = "24",
+		zones = {
+			1657,
+		},
+	},
+	[11042] = {
+		names = {
+			enUS = "Sylvanna Forestmoon",
+			esES = "Sylvanna Bosqueluna",
+			esMX = "Sylvanna Bosqueluna",
+			koKR = "실반나 포레스트문",
+			ptBR = "Sylvanna Silvoluna",
+			ruRU = "Сильванна Лесная Луна",
+			zhCN = "希尔瓦娜 林月",
+			zhTW = "希爾瓦娜 林月",
+		},
+		faction = "Alliance",
+		level = "32",
+		zones = {
+			1657,
 		},
 	},
 	[11043] = {
@@ -47691,6 +50161,129 @@ rm.npcDB = {
 			2017,
 		},
 	},
+	[11044] = {
+		names = {
+			deDE = "Doktor Martin Felben",
+			enUS = "Doctor Martin Felben",
+			frFR = "Docteur Martin Felben",
+			koKR = "박사 마틴 펠벤",
+			ptBR = "Doutor Martinho Nunes",
+			ruRU = "Доктор Мартин Фелбен",
+			zhCN = "马丁 费尔本",
+			zhTW = "馬丁 費爾本",
+		},
+		faction = "Horde",
+		level = "25",
+		zones = {
+			1497,
+		},
+	},
+	[11046] = {
+		names = {
+			enUS = "Whuut",
+			koKR = "우트",
+			ptBR = "Uqueê",
+			ruRU = "Вуут",
+			zhCN = "伍特",
+			zhTW = "伍特",
+		},
+		faction = "Horde",
+		level = "23",
+		zones = {
+			1637,
+		},
+	},
+	[11047] = {
+		names = {
+			enUS = "Kray",
+			koKR = "크레이",
+			ruRU = "Крей",
+			zhCN = "克瑞",
+			zhTW = "剋瑞",
+		},
+		faction = "Horde",
+		level = "25",
+		zones = {
+			1638,
+		},
+	},
+	[11048] = {
+		names = {
+			enUS = "Victor Ward",
+			esES = "Víctor Tutor",
+			esMX = "Víctor Tutor",
+			koKR = "빅터 워드",
+			ptBR = "Victor Guardia",
+			ruRU = "Виктор Уорд",
+			zhCN = "维克多 瓦德",
+			zhTW = "維剋多 瓦德",
+		},
+		faction = "Horde",
+		level = "24",
+		zones = {
+			1497,
+		},
+	},
+	[11049] = {
+		names = {
+			enUS = "Rhiannon Davis",
+			koKR = "리안논 다비스",
+			ptBR = "Renata Davis",
+			ruRU = "Рианнон Дэвис",
+			zhCN = "雷安诺 戴维斯",
+			zhTW = "雷安諾 戴維斯",
+		},
+		faction = "Horde",
+		level = "32",
+		zones = {
+			1497,
+		},
+	},
+	[11050] = {
+		names = {
+			enUS = "Trianna",
+			koKR = "트리안나",
+			ruRU = "Трианна",
+			zhCN = "蒂安娜",
+			zhTW = "蒂安娜",
+		},
+		faction = "Alliance",
+		level = "25",
+		zones = {
+			1657,
+		},
+	},
+	[11051] = {
+		names = {
+			enUS = "Vhan",
+			koKR = "반",
+			ruRU = "Вхан",
+			zhCN = "范恩",
+			zhTW = "範恩",
+		},
+		faction = "Horde",
+		level = "26",
+		zones = {
+			1638,
+		},
+	},
+	[11052] = {
+		names = {
+			enUS = "Timothy Worthington",
+			esES = "Timoteo Valión",
+			esMX = "Timoteo Valión",
+			koKR = "티모시 워싱턴",
+			ptBR = "Vítor Valenton",
+			ruRU = "Тимоти Уортингтон",
+			zhCN = "提莫斯 沃森特",
+			zhTW = "提莫斯 沃森特",
+		},
+		faction = "Alliance",
+		level = "51",
+		zones = {
+			15,
+		},
+	},
 	[11058] = {
 		names = {
 			enUS = "Ezra Grimm",
@@ -47706,6 +50299,158 @@ rm.npcDB = {
 		level = "61",
 		zones = {
 			2017,
+		},
+	},
+	[11065] = {
+		names = {
+			enUS = "Thonys Pillarstone",
+			esES = "Thonys Piedrapilar",
+			esMX = "Thonys Piedrapilar",
+			koKR = "토니스 필라스톤",
+			ptBR = "Thonys Pedrapilar",
+			ruRU = "Тонис Пилон",
+			zhCN = "索恩斯 火石",
+			zhTW = "索恩斯 火石",
+		},
+		faction = "Alliance",
+		level = "25",
+		zones = {
+			1537,
+		},
+	},
+	[11066] = {
+		names = {
+			enUS = "Jhag",
+			koKR = "자그",
+			ruRU = "Джаг",
+			zhCN = "夏格",
+			zhTW = "夏格",
+		},
+		faction = "Horde",
+		level = "26",
+		zones = {
+			1637,
+		},
+	},
+	[11067] = {
+		names = {
+			enUS = "Malcomb Wynn",
+			koKR = "말콤 린",
+			ptBR = "Augusto Incantum",
+			ruRU = "Малькомб Уинн",
+			zhCN = "玛考布 维恩",
+			zhTW = "瑪考布 維恩",
+		},
+		faction = "Horde",
+		level = "23",
+		zones = {
+			1497,
+		},
+	},
+	[11068] = {
+		names = {
+			enUS = "Betty Quin",
+			koKR = "베티 퀸",
+			ruRU = "Бетти Квин",
+			zhCN = "贝蒂 奎恩",
+			zhTW = "貝蒂 奎恩",
+		},
+		faction = "Alliance",
+		level = "25",
+		zones = {
+			1519,
+		},
+	},
+	[11070] = {
+		names = {
+			enUS = "Lalina Summermoon",
+			esES = "Lalina Luna De Verano",
+			esMX = "Lalina Luna De Verano",
+			koKR = "랄리나 서머문",
+			ptBR = "Lalina Lunestio",
+			ruRU = "Лалина Летняя Луна",
+			zhCN = "拉琳娜 夏月",
+			zhTW = "拉琳娜 夏月",
+		},
+		faction = "Alliance",
+		level = "27",
+		zones = {
+			1657,
+		},
+	},
+	[11071] = {
+		names = {
+			enUS = "Mot Dawnstrider",
+			esES = "Mot Caminalba",
+			esMX = "Mot Caminalba",
+			koKR = "모트 던스트라이더",
+			ptBR = "Mot Andarilho da Aurora",
+			ruRU = "Мот Рассветный Странник",
+			zhCN = "莫特 晨行者",
+			zhTW = "莫特 晨行者",
+		},
+		faction = "Horde",
+		level = "21",
+		zones = {
+			1638,
+		},
+	},
+	[11072] = {
+		names = {
+			enUS = "Kitta Firewind",
+			esES = "Kitta Vientofuego",
+			esMX = "Kitta Vientofuego",
+			koKR = "키타 파이어윈드",
+			ptBR = "Kitta Ventígnea",
+			ruRU = "Китта Огневетер",
+			zhCN = "基塔 费温德",
+			zhTW = "基塔 費溫德",
+		},
+		faction = "Alliance",
+		level = "44",
+		zones = {
+			12,
+		},
+	},
+	[11073] = {
+		names = {
+			enUS = "Annora",
+			koKR = "안노라",
+			ruRU = "Аннора",
+			zhCN = "安诺拉",
+			zhTW = "安諾拉",
+		},
+		level = "54",
+		zones = {
+			1337,
+		},
+	},
+	[11074] = {
+		names = {
+			enUS = "Hgarth",
+			koKR = "하가스",
+			ruRU = "Хгарт",
+			zhCN = "赫加斯",
+			zhTW = "赫加斯",
+		},
+		faction = "Horde",
+		level = "46",
+		zones = {
+			406,
+		},
+	},
+	[11081] = {
+		names = {
+			enUS = "Faldron",
+			koKR = "팔드론",
+			ruRU = "Фальдрон",
+			zhCN = "法多恩",
+			zhTW = "法多恩",
+		},
+		faction = "Alliance",
+		level = "32",
+		zones = {
+			1657,
 		},
 	},
 	[11082] = {
@@ -47725,6 +50470,85 @@ rm.npcDB = {
 		level = "57",
 		zones = {
 			2017,
+		},
+	},
+	[11083] = {
+		names = {
+			enUS = "Darianna",
+			koKR = "다리안나",
+			ruRU = "Дарианна",
+			zhCN = "达丽亚娜",
+			zhTW = "達麗亞娜",
+		},
+		faction = "Alliance",
+		level = "24",
+		zones = {
+			1657,
+		},
+	},
+	[11084] = {
+		names = {
+			enUS = "Tarn",
+			koKR = "타른",
+			ruRU = "Тарн",
+			zhCN = "塔恩",
+			zhTW = "塔恩",
+		},
+		faction = "Horde",
+		level = "36",
+		zones = {
+			1638,
+		},
+	},
+	[11096] = {
+		names = {
+			enUS = "Randal Worth",
+			esES = "Randal Valor",
+			esMX = "Randal Valor",
+			koKR = "랜달 워스",
+			ptBR = "Hubert Acosta",
+			ruRU = "Рандал Ворт",
+			zhCN = "兰达尔 沃斯",
+			zhTW = "蘭達爾 沃斯",
+		},
+		faction = "Alliance",
+		level = "24",
+		zones = {
+			1519,
+		},
+	},
+	[11097] = {
+		names = {
+			enUS = "Drakk Stonehand",
+			esES = "Drakk Petramano",
+			esMX = "Drakk Petramano",
+			koKR = "드라크 스톤핸드",
+			ptBR = "Drakk Manopedra",
+			ruRU = "Дракк Крепкорук",
+			zhCN = "德拉克 石拳",
+			zhTW = "德拉剋 石拳",
+		},
+		faction = "Alliance",
+		level = "55",
+		zones = {
+			47,
+		},
+	},
+	[11098] = {
+		names = {
+			enUS = "Hahrana Ironhide",
+			esES = "Hahrana Pielférrea",
+			esMX = "Hahrana Pielférrea",
+			koKR = "하라나 아이언하이드",
+			ptBR = "Hahrana Couro de Ferro",
+			ruRU = "Нарана Железная Шкура",
+			zhCN = "哈拉纳 铁皮",
+			zhTW = "哈拉納 鐵皮",
+		},
+		faction = "Horde",
+		level = "55",
+		zones = {
+			357,
 		},
 	},
 	[11120] = {
@@ -47782,6 +50606,57 @@ rm.npcDB = {
 		level = "60",
 		zones = {
 			2017,
+		},
+	},
+	[11146] = {
+		names = {
+			enUS = "Ironus Coldsteel",
+			esES = "Ironus Acero Frío",
+			esMX = "Ironus Acero Frío",
+			koKR = "이로누스 콜드스틸",
+			ptBR = "Ironus Açofrio",
+			ruRU = "Железнус Хладосталь",
+			zhCN = "埃隆努斯 冷钢",
+			zhTW = "埃隆努斯 冷鋼",
+		},
+		faction = "Alliance",
+		level = "54",
+		zones = {
+			1537,
+		},
+	},
+	[11177] = {
+		names = {
+			enUS = "Okothos Ironrager",
+			esES = "Okothos Ferrofurecedor",
+			esMX = "Okothos Ferrofurecedor",
+			koKR = "오코토스 아이언레이저",
+			ptBR = "Okothos Furiferro",
+			ruRU = "Окофус Жарбулат",
+			zhCN = "奥克索斯 铁怒",
+			zhTW = "奧剋索斯 鐵怒",
+		},
+		faction = "Horde",
+		level = "52",
+		zones = {
+			1637,
+		},
+	},
+	[11178] = {
+		names = {
+			enUS = "Borgosh Corebender",
+			esES = "Borgosh Ramagma",
+			esMX = "Borgosh Ramagma",
+			koKR = "보르고쉬 코어벤더",
+			ptBR = "Borgosh Dobranúcleo",
+			ruRU = "Боргош Сгибатель",
+			zhCN = "伯古什",
+			zhTW = "伯古什",
+		},
+		faction = "Horde",
+		level = "51",
+		zones = {
+			1637,
 		},
 	},
 	[11185] = {
@@ -54162,6 +57037,37 @@ rm.npcDB = {
 		level = "48",
 		zones = {
 			47,
+		},
+	},
+	[14742] = {
+		names = {
+			enUS = "Zap Farflinger",
+			esES = "Zap Lanzalejos",
+			esMX = "Zap Lanzalejos",
+			koKR = "잽 파플링어",
+			ptBR = "Zap Jogalonge",
+			ruRU = "Цап Телепортыш",
+			zhCN = "扎普 法弗林",
+			zhTW = "紮普 法弗林",
+		},
+		level = "56",
+		zones = {
+			618,
+		},
+	},
+	[14743] = {
+		names = {
+			enUS = "Jhordy Lapforge",
+			esES = "Jhordy Mantoforja",
+			esMX = "Jhordy Mantoforja",
+			koKR = "조르디 랩포지",
+			ruRU = "Джорди Пепелатс",
+			zhCN = "霍尔迪 水炉",
+			zhTW = "霍爾迪 水爐",
+		},
+		level = "50",
+		zones = {
+			440,
 		},
 	},
 	[14750] = {

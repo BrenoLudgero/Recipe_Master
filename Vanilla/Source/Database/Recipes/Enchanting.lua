@@ -1,6 +1,16 @@
 local _, rm = ...
 
 rm.recipeDB[333] = {
+	[6218] = {
+		skill = 1,
+		teachesItem = 6218,
+		teachesSpell = 7421,
+	},
+	[6339] = {
+		skill = 100,
+		teachesItem = 6339,
+		teachesSpell = 7795,
+	},
 	[6342] = {
 		skill = 20,
 		teachesItem = 7443,
@@ -33,6 +43,76 @@ rm.recipeDB[333] = {
 		skill = 125,
 		teachesItem = 7867,
 	},
+	[7418] = {
+		isEnchantment = true,
+		skill = 70,
+		teachesItem = 7418,
+	},
+	[7420] = {
+		isEnchantment = true,
+		skill = 15,
+		teachesItem = 7420,
+	},
+	[7426] = {
+		isEnchantment = true,
+		skill = 40,
+		teachesItem = 7426,
+	},
+	[7428] = {
+		isEnchantment = true,
+		skill = 80,
+		teachesItem = 7428,
+	},
+	[7454] = {
+		isEnchantment = true,
+		skill = 45,
+		teachesItem = 7454,
+	},
+	[7457] = {
+		isEnchantment = true,
+		skill = 50,
+		teachesItem = 7457,
+	},
+	[7745] = {
+		isEnchantment = true,
+		skill = 100,
+		teachesItem = 7745,
+	},
+	[7748] = {
+		isEnchantment = true,
+		skill = 60,
+		teachesItem = 7748,
+	},
+	[7771] = {
+		isEnchantment = true,
+		skill = 70,
+		teachesItem = 7771,
+	},
+	[7779] = {
+		isEnchantment = true,
+		skill = 80,
+		teachesItem = 7779,
+	},
+	[7788] = {
+		isEnchantment = true,
+		skill = 90,
+		teachesItem = 7788,
+	},
+	[7857] = {
+		isEnchantment = true,
+		skill = 120,
+		teachesItem = 7857,
+	},
+	[7861] = {
+		isEnchantment = true,
+		skill = 125,
+		teachesItem = 7861,
+	},
+	[7863] = {
+		isEnchantment = true,
+		skill = 125,
+		teachesItem = 7863,
+	},
 	[11038] = {
 		skill = 110,
 		teachesItem = 13380,
@@ -52,6 +132,16 @@ rm.recipeDB[333] = {
 	[11101] = {
 		skill = 140,
 		teachesItem = 13536,
+	},
+	[11130] = {
+		skill = 150,
+		teachesItem = 11130,
+		teachesSpell = 13628,
+	},
+	[11145] = {
+		skill = 200,
+		teachesItem = 11145,
+		teachesSpell = 13702,
 	},
 	[11150] = {
 		skill = 145,
@@ -133,10 +223,240 @@ rm.recipeDB[333] = {
 		skill = 250,
 		teachesItem = 13947,
 	},
+	[11287] = {
+		skill = 10,
+		teachesItem = 11287,
+		teachesSpell = 14293,
+	},
+	[11288] = {
+		skill = 70,
+		teachesItem = 11288,
+		teachesSpell = 14807,
+	},
+	[11289] = {
+		skill = 155,
+		teachesItem = 11289,
+		teachesSpell = 14809,
+	},
+	[11290] = {
+		skill = 175,
+		teachesItem = 11290,
+		teachesSpell = 14810,
+	},
 	[11813] = {
 		skill = 265,
 		teachesItem = 11811,
 		teachesSpell = 15596,
+	},
+	[12655] = {
+		skill = 250,
+		teachesItem = 12655,
+		teachesSpell = 17180,
+	},
+	[12810] = {
+		skill = 250,
+		teachesItem = 12810,
+		teachesSpell = 17181,
+	},
+	[13378] = {
+		isEnchantment = true,
+		skill = 105,
+		teachesItem = 13378,
+	},
+	[13421] = {
+		isEnchantment = true,
+		skill = 115,
+		teachesItem = 13421,
+	},
+	[13485] = {
+		isEnchantment = true,
+		skill = 130,
+		teachesItem = 13485,
+	},
+	[13501] = {
+		isEnchantment = true,
+		skill = 130,
+		teachesItem = 13501,
+	},
+	[13503] = {
+		isEnchantment = true,
+		skill = 140,
+		teachesItem = 13503,
+	},
+	[13529] = {
+		isEnchantment = true,
+		skill = 145,
+		teachesItem = 13529,
+	},
+	[13538] = {
+		isEnchantment = true,
+		skill = 140,
+		teachesItem = 13538,
+	},
+	[13607] = {
+		isEnchantment = true,
+		skill = 145,
+		teachesItem = 13607,
+	},
+	[13622] = {
+		isEnchantment = true,
+		skill = 150,
+		teachesItem = 13622,
+	},
+	[13626] = {
+		isEnchantment = true,
+		skill = 150,
+		teachesItem = 13626,
+	},
+	[13631] = {
+		isEnchantment = true,
+		skill = 155,
+		teachesItem = 13631,
+	},
+	[13635] = {
+		isEnchantment = true,
+		skill = 155,
+		teachesItem = 13635,
+	},
+	[13637] = {
+		isEnchantment = true,
+		skill = 160,
+		teachesItem = 13637,
+	},
+	[13640] = {
+		isEnchantment = true,
+		skill = 160,
+		teachesItem = 13640,
+	},
+	[13642] = {
+		isEnchantment = true,
+		skill = 165,
+		teachesItem = 13642,
+	},
+	[13644] = {
+		isEnchantment = true,
+		skill = 170,
+		teachesItem = 13644,
+	},
+	[13648] = {
+		isEnchantment = true,
+		skill = 170,
+		teachesItem = 13648,
+	},
+	[13657] = {
+		isEnchantment = true,
+		skill = 175,
+		teachesItem = 13657,
+	},
+	[13659] = {
+		isEnchantment = true,
+		skill = 180,
+		teachesItem = 13659,
+	},
+	[13661] = {
+		isEnchantment = true,
+		skill = 180,
+		teachesItem = 13661,
+	},
+	[13663] = {
+		isEnchantment = true,
+		skill = 185,
+		teachesItem = 13663,
+	},
+	[13693] = {
+		isEnchantment = true,
+		skill = 195,
+		teachesItem = 13693,
+	},
+	[13695] = {
+		isEnchantment = true,
+		skill = 200,
+		teachesItem = 13695,
+	},
+	[13700] = {
+		isEnchantment = true,
+		skill = 200,
+		teachesItem = 13700,
+	},
+	[13746] = {
+		isEnchantment = true,
+		skill = 205,
+		teachesItem = 13746,
+	},
+	[13794] = {
+		isEnchantment = true,
+		skill = 205,
+		teachesItem = 13794,
+	},
+	[13815] = {
+		isEnchantment = true,
+		skill = 210,
+		teachesItem = 13815,
+	},
+	[13822] = {
+		isEnchantment = true,
+		skill = 210,
+		teachesItem = 13822,
+	},
+	[13836] = {
+		isEnchantment = true,
+		skill = 215,
+		teachesItem = 13836,
+	},
+	[13858] = {
+		isEnchantment = true,
+		skill = 220,
+		teachesItem = 13858,
+	},
+	[13887] = {
+		isEnchantment = true,
+		skill = 225,
+		teachesItem = 13887,
+	},
+	[13890] = {
+		isEnchantment = true,
+		skill = 225,
+		teachesItem = 13890,
+	},
+	[13905] = {
+		isEnchantment = true,
+		skill = 230,
+		teachesItem = 13905,
+	},
+	[13917] = {
+		isEnchantment = true,
+		skill = 230,
+		teachesItem = 13917,
+	},
+	[13935] = {
+		isEnchantment = true,
+		skill = 235,
+		teachesItem = 13935,
+	},
+	[13937] = {
+		isEnchantment = true,
+		skill = 240,
+		teachesItem = 13937,
+	},
+	[13939] = {
+		isEnchantment = true,
+		skill = 240,
+		teachesItem = 13939,
+	},
+	[13941] = {
+		isEnchantment = true,
+		skill = 245,
+		teachesItem = 13941,
+	},
+	[13943] = {
+		isEnchantment = true,
+		skill = 245,
+		teachesItem = 13943,
+	},
+	[13948] = {
+		isEnchantment = true,
+		skill = 250,
+		teachesItem = 13948,
 	},
 	[16214] = {
 		skill = 255,
@@ -395,6 +715,18 @@ rm.recipeDB[333] = {
 		skill = 225,
 		teachesItem = 217308,
 		teachesSpell = 439156,
+	},
+	[217287] = {
+		season = "SoD",
+		skill = 175,
+		teachesItem = 217287,
+		teachesSpell = 439134,
+	},
+	[221028] = {
+		season = "SoD",
+		skill = 250,
+		teachesItem = 221028,
+		teachesSpell = 446243,
 	},
 	[223163] = {
 		season = "SoD",
