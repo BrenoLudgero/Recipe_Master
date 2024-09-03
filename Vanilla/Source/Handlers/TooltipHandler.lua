@@ -29,8 +29,31 @@ local function handleMismatchedProfessionNames(recipeID, itemLink)
     return professionName
 end
 
-local function getRecipeTooltipMessage(recipe, profession)
-    local charactersMissingRecipe, charactersWhoCraftRecipe = rm.getAllCharactersRecipeStatus(recipe, profession)
+local function getColoredSkill(character, recipeSkill, professionID)
+    local skill = ""
+    local characterProfessionLevel = rm.getSavedProfessionLevelForCharacter(character, professionID)
+    if characterProfessionLevel < recipeSkill then
+        skill = WrapTextInColorCode(characterProfessionLevel, F.colors.lightPinkHex)
+    else
+        skill = WrapTextInColorCode(characterProfessionLevel, F.colors.lightGreenHex)
+    end
+    return skill
+end
+
+local function getColoredSpecialization(character, recipeSpecialization, professionID)
+    local specialization = ""
+    local specializationName = rm.getSpecializationName(recipeSpecialization)
+    local characterSpecialization = rm.getSavedProfessionSpecializationForCharacter(character, professionID)
+    if characterSpecialization ~= recipeSpecialization then
+        specialization = WrapTextInColorCode(specializationName, F.colors.lightPinkHex)
+    else
+        specialization = WrapTextInColorCode(specializationName, F.colors.lightGreenHex)
+    end
+    return specialization
+end
+
+local function getRecipeTooltipMessage(recipe, professionID)
+    local charactersMissingRecipe, charactersWhoCraftRecipe = rm.getAllCharactersRecipeStatus(recipe, professionID)
     local message = ""
     local newLine = "\n"
     local newLineInfo = "\n  "
@@ -49,8 +72,12 @@ local function getRecipeTooltipMessage(recipe, profession)
     if #charactersMissingRecipe > 0 then
         message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightPinkHex)
         for _, character in pairs(charactersMissingRecipe) do
-            local characterProfessionLevel = rm.getSavedProfessionLevelForCharacter(character, profession)
-            message = message..newLineInfo..character.." ("..characterProfessionLevel..")"
+            local characterLine = newLineInfo..character.." ("
+            characterLine = characterLine..L.skill.." "..getColoredSkill(character, recipe.skill, professionID)
+            if recipe.specialization then
+                characterLine = characterLine..", "..getColoredSpecialization(character, recipe.specialization, professionID)
+            end
+            message = message..characterLine..")"
         end
     end
     return rm.L.title..WrapTextInColorCode(message, F.colors.whiteHex)

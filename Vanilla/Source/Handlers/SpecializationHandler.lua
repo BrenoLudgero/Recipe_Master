@@ -10,6 +10,10 @@ function rm.getSavedSpecializationByName(profession)
     return rm.getCurrentCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"]
 end
 
+function rm.getSavedProfessionSpecializationForCharacter(character, professionID)
+    return rm.getServerSavedVariables()[character][professionID]["specialization"]
+end
+
 function rm.getSpecializationName(specializationID)
     local specializationName = GetSpellInfo(specializationID)
     return specializationName
