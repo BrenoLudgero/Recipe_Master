@@ -85,10 +85,6 @@ function rm.isMissingRecipeOfCurrentFaction(recipe)
     return not recipe.faction or (recipe.faction == characterFaction)
 end
 
-local function isMiningSkill(recipeID)
-    return recipeID == 14891 or recipeID == 22967
-end
-
 local function isCapitalized(string)
     return string:sub(1, 1):upper() == string:sub(1, 1)
 end
@@ -111,17 +107,32 @@ end
 
 local function getInitialRecipeData(ID)
     local name, link, quality, _, _, _, _, _, _, texture = C_Item.GetItemInfo(ID)
-    if isMiningSkill(ID) then
-        name = GetSpellInfo(ID)
-        link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
-        texture = rm.recipeDB[186][ID].icon
-    end
     name = removeRecipePrefix(name)
     return name, link, quality, texture
 end
 
-local function getRecipeData(recipeID, recipeData, professionID)
-    local rName, rLink, rQuality, rTexture = getInitialRecipeData(recipeID)
+local function isMiningSpell(ID)
+    return rm.recipeDB[186][ID] ~= nil
+end
+
+local function getInitialSpellData(ID)
+    local name = GetSpellInfo(ID)
+    local link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
+    local quality = select(3, C_Item.GetItemInfo(ID))
+    if not quality then
+        quality = 1
+    end
+    local texture
+    if isMiningSpell(ID) then
+        texture = rm.recipeDB[186][ID].icon
+    else
+        texture = GetSpellTexture(ID)
+    end
+    return name, link, quality, texture
+end
+
+local function getRecipeData(recipeID, recipeData, professionID, initialDataFunction)
+    local rName, rLink, rQuality, rTexture = initialDataFunction(recipeID)
     return {
         class = recipeData["class"], 
         faction = recipeData["faction"], 
@@ -142,8 +153,13 @@ end
 
 -- Called in Cacher.cacheAndStoreAllRecipes
 function rm.storeRecipeData(recipeID, recipeData, professionID)
-    local recipe = getRecipeData(recipeID, recipeData, professionID)
+    local recipe = getRecipeData(recipeID, recipeData, professionID, getInitialRecipeData)
     rm.cachedRecipes[professionID][recipeID] = recipe
+end
+
+function rm.storeSpellData(spellID, spellData, professionID)
+    local spell = getRecipeData(spellID, spellData, professionID, getInitialSpellData)
+    rm.cachedRecipes[professionID][spellID] = spell
 end
 
 -- Retrieves all cached recipe data for the currently displayed profession

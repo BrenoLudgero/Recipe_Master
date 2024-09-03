@@ -81,7 +81,7 @@ local function getAllSourcesInfo(sourceType, recipeSource)
         elseif sourceType == "quest" then
             source = rm.getQuestInfo(sourceID)
         elseif sourceType == "unique" then
-            source = rm.getUniqueNPCInfo(sourceData)
+            source = rm.getUniqueInfo(sourceData)
         elseif sourceType == "object" then
             source = rm.getObjectInfo(sourceID, sourceData)
         elseif sourceType == "trainer" then

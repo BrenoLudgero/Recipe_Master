@@ -7,6 +7,13 @@ local function isRecipeForCurrentSeason(recipeData)
     return not recipeData.season or recipeData.season == rm.currentSeason
 end
 
+local function isRecipeASpell(professionID, recipeData)
+    return (
+        professionID == 186 -- Mining
+        or (professionID == 333 and recipeData.isEnchantment) -- Enchanting
+    )
+end
+
 local function splitSeasonalRecipes(professionRecipes)
     local sodRecipes = {}
     local regularRecipes = {}
@@ -20,15 +27,16 @@ local function splitSeasonalRecipes(professionRecipes)
     return sodRecipes, regularRecipes
 end
 
+-- Recipes that teach the same skill but have a SoD counterpart
 local function storeNonDuplicateRecipe(regularRecipe, regularRecipeID, sodRecipes)
-    local sameName = false
+    local duplicateFound = false
     for _, sodRecipe in pairs(sodRecipes) do
-        if regularRecipe.name == sodRecipe.name then
-            sameName = true
+        if sodRecipe.teachesItem == regularRecipe.teachesItem then
+            duplicateFound = true
             break
         end
     end
-    if not sameName then
+    if not duplicateFound then
         sodRecipes[regularRecipeID] = regularRecipe
     end
 end
@@ -51,10 +59,17 @@ local function cacheAndStoreAllRecipes()
         rm.cachedRecipes[professionID] = {}
         for recipeID, recipeData in pairs(rm.recipeDB[professionID]) do
             if isRecipeForCurrentSeason(recipeData) then
-                local recipe = Item:CreateFromItemID(recipeID)
-                recipe:ContinueOnItemLoad(function()
-                    rm.storeRecipeData(recipeID, recipeData, professionID)
-                end)
+                if isRecipeASpell(professionID, recipeData) then
+                    local spell = Spell:CreateFromSpellID(recipeID)
+                    spell:ContinueOnSpellLoad(function()
+                        rm.storeSpellData(recipeID, recipeData, professionID)
+                    end)
+                else
+                    local recipe = Item:CreateFromItemID(recipeID)
+                    recipe:ContinueOnItemLoad(function()
+                        rm.storeRecipeData(recipeID, recipeData, professionID)
+                    end)
+                end
             end
         end
         rm.cachedRecipes[professionID] = filterSeasonalRecipes(rm.cachedRecipes[professionID])

@@ -51,7 +51,7 @@ function rm.getRequirementsText(recipe, recipeInfo)
         local skillInfo = L.skill..": "..recipe.skill.."  "
         missingRequirements = missingRequirements..skillInfo
     end
-    if recipe.specialization then 
+    if recipe.specialization and not recipe.specialization == rm.getSavedSpecializationByName(rm.displayedProfession) then 
         local specializationInfo = rm.getSpecializationName(recipe.specialization).."  "
         missingRequirements = missingRequirements..specializationInfo
     end

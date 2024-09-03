@@ -34,30 +34,50 @@ L.recipes = TRADESKILL_SERVICE_LEARN
 L.resetDefaults = RESET_TO_DEFAULT
 L.show = SHOW
 L.skill = SKILL
-L.sortBy = select(1, strsplit(" ", RAID_FRAME_SORT_LABEL))..":" -- The first word of "Sort By" + ":"
+L.sortBy = select(1, strsplit(" ", RAID_FRAME_SORT_LABEL))..HEADER_COLON -- The first word of "Sort By" + ":"
 L.sources = SOURCES
 L.subtitle = string.format(PETITION_CREATOR, rm.author).."\n"..GAME_VERSION_LABEL.." "..rm.version -- "Created by Breno Ludgero \n Version x.x.x"
 L.uiScale = UI_SCALE
 L.uncommon = ITEM_QUALITY2_DESC
 L.unique = ITEM_UNIQUE
-L.unlearned = TRADE_SKILLS_UNLEARNED_TAB..":"
+L.unlearned = TRADE_SKILLS_UNLEARNED_TAB..HEADER_COLON
 L.unlimited = UNLIMITED
 L.unknown = UNKNOWN
 L.vendor = TRANSMOG_SOURCE_3
 L.zone = ZONE
 
 L.uniqueSourceInstructions = {
-    [16365] = {
-        ["deDE"] = "Er ist in einem Käfig im Militärviertel eingesperrt",
-        ["enUS"] = "He is locked in a cage located inside The Millitary Quarter",
-        ["esES"] = "Está encerrado en una jaula ubicada en el Arrabal Militar",
-        ["esMX"] = "Está encerrado en una jaula ubicada en el Arrabal Militar",
-        ["frFR"] = "Il est enfermé dans une cage située dans le Quartier Militaire",
-        ["koKR"] = "그는 밀리터리 쿼터 안에 위치한 철창에 갇혀 있습니다",
-        ["ptBR"] = "Ele está preso em uma jaula localizada no Bairro Militar",
-        ["ruRU"] = "Он заперт в клетке, расположенной в Военный Квартал",
-        ["zhCN"] = "他被关在军事区的笼子里",
-        ["zhTW"] = "他被關在軍事區的籠子裡"
+    [0] = {
+        ["deDE"] = "Dieses Rezept ist eine Kreation von Ingenieuren",
+        ["enUS"] = "This recipe is crafted by Engineers",
+        ["esES"] = "Esta receta es creada por Ingenieros",
+        ["esMX"] = "Esta receta es creada por Ingenieros",
+        ["frFR"] = "Cette recette est élaborée par des Ingénieurs",
+        ["koKR"] = "이 레시피는 엔지니어가 만든 것입니다",
+        ["ptBR"] = "Esta receita é criada por Engenheiros",
+        ["ruRU"] = "Этот рецепт разработан инженерами",
+        ["zhCN"] = "这个配方是工程师的杰作",
+        ["znTW"] = "這個配方是工程師的傑作"
+    },
+    [1] = {
+        ["enUS"] = '"How to Craft Phase 3 Epic Items"\n'..
+                'www.wowhead.com/classic',
+    },
+    [2] = {
+        ["enUS"] = '"How to Get Void-Touched Armaments"\n'..
+                'www.wowhead.com/classic',
+    },
+    [8696] = {
+        ["deDE"] = "Er ist in einem Käfig im [Murder Pens] eingesperrt",
+        ["enUS"] = "He is locked in a cage located inside Murder Pens",
+        ["esES"] = "Está encerrado en una jaula situada dentro de [Murder Pens]",
+        ["esMX"] = "Está encerrado en una jaula situada dentro de [Murder Pens]",
+        ["frFR"] = "Il est enfermé dans une cage située à [Murder Pens]",
+        ["koKR"] = "그는 [Murder Pens] 안에 위치한 철창에 갇혀 있습니다",
+        ["ptBR"] = "Ele está preso numa jaula encontrada em [Murder Pens]",
+        ["ruRU"] = "Он заперт в клетке, расположенной внутри [Murder Pens]",
+        ["zhCN"] = "他被关在位于 [Muder Pens] 内的笼子里",
+        ["zhTW"] = "他被關在 [Muder Pens] 內的籠子裡"
         -- Tomon, Wowhead.com
     },
     [8983] = {
@@ -133,6 +153,55 @@ L.uniqueSourceInstructions = {
                 "把貢品放進聖杯，再和他談談"
         -- 4238, Wowhead.com
     },
+    [10503] = {
+        ["deDE"] = "Sie wird ein Buch mit dem Rezept fallen lassen,\n"..
+                "nachdem sie besiegt wurde",
+        ["enUS"] = "She'll drop a book containing the recipe\n"..
+                "after being defeated",
+        ["esES"] = "Dejará caer un libro que contiene la receta\n"..
+                "después de ser derrotada",
+        ["esMX"] = "Dejará caer un libro que contiene la receta\n"..
+                "después de ser derrotada",
+        ["frFR"] = "Elle laissera tomber un livre contenant la recette\n"..
+                "après avoir été vaincue",
+        ["koKR"] = "패배 후 레시피가 담긴 책을 떨어뜨린다",
+        ["ptBR"] = "Ela deixará cair um livro contendo a receita\n"..
+                "depois de ser derrotada",
+        ["ruRU"] = "После поражения она уронит книгу с рецептом",
+        ["zhCN"] = "她被打败后会掉落一本记载秘方的书",
+        ["zhTW"] = "她被打敗後會掉落一本記載秘方的書"
+        -- J0057Mith, Wowhead.com
+    },
+    [11340] = {
+        ["deDE"] = "Das Rezept wird von einer großen Steintafel gelehrt,\n"..
+                "die in der Wand hinter dem Kohlenbecken und in der\n"..
+                "Nähe dieses Gegners am [Edge of Madness] gefunden wurde",
+        ["enUS"] = "The recipe is taught from a large stone tablet\n"..
+                "found in the wall behind the brazier and\n"..
+                "near this enemy in the Edge of Madness",
+        ["esES"] = "La receta es enseñada por una gran tablilla de piedra\n"..
+                "que se encuentra en la pared detrás del brasero y\n"..
+                "cerca de este enemigo en el [Edge of Madness]",
+        ["esMX"] = "La receta es enseñada por una gran tablilla de piedra\n"..
+                "que se encuentra en la pared detrás del brasero y\n"..
+                "cerca de este enemigo en el [Edge of Madness]",
+        ["frFR"] = "La recette est enseignée sur une grande tablette\n"..
+                "de pierre trouvée dans le mur derrière le brasero\n"..
+                "et près de cet ennemi dans l'[Edge of Madness]",
+        ["koKR"] = "레시피는 [Edge of Madness]에서 화로 뒤쪽 벽과 이 적\n"..
+                "근처에서 발견되는 커다란 석판에서 배울 수 있습니다",
+        ["ptBR"] = "A receita é ensinada por uma grande tábua de pedra\n"..
+                "encontrada na parede atrás do braseiro e\n"..
+                "perto deste inimigo na [Edge of Madness]",
+        ["ruRU"] = "Рецепт можно узнать из большой каменной таблички,\n"..
+                "найденной в стене за мангалом и рядом с\n"..
+                "этим врагом в [Edge of Madness]",
+        ["zhCN"] = "配方是从一块大石碑上传授的，这块石碑位于\n"..
+                "[Edge of Madness] 中火炉后面的墙壁上和这个敌人附近",
+        ["zhTW"] = "配方是從一塊大石碑上傳授的，這塊石碑位於\n"..
+                "[Edge of Madness] 中火爐後面的牆壁上和這個敵人附近"
+        -- Ashiran, Wowhead.com
+    },
     [14401] = {
         ["deDE"] = "Er kann von einem priester kontrolliert werden, der\n"..
                 "dann das Rezept an Spieler in der Nähe weitergeben kann",
@@ -156,24 +225,18 @@ L.uniqueSourceInstructions = {
                 "然後牧師可以將配方傳授給附近的玩家"
         -- Eihrister, Wowhead.com
     },
-    [10503] = {
-        ["deDE"] = "Sie wird ein Buch mit dem Rezept fallen lassen,\n"..
-                "nachdem sie besiegt wurde",
-        ["enUS"] = "She'll drop a book containing the recipe\n"..
-                "after being defeated",
-        ["esES"] = "Dejará caer un libro que contiene la receta\n"..
-                "después de ser derrotada",
-        ["esMX"] = "Dejará caer un libro que contiene la receta\n"..
-                "después de ser derrotada",
-        ["frFR"] = "Elle laissera tomber un livre contenant la recette\n"..
-                "après avoir été vaincue",
-        ["koKR"] = "패배 후 레시피가 담긴 책을 떨어뜨린다",
-        ["ptBR"] = "Ela deixará cair um livro contendo a receita\n"..
-                "depois de ser derrotada",
-        ["ruRU"] = "После поражения она уронит книгу с рецептом",
-        ["zhCN"] = "她被打败后会掉落一本记载秘方的书",
-        ["zhTW"] = "她被打敗後會掉落一本記載秘方的書"
-        -- J0057Mith, Wowhead.com
+    [16365] = {
+        ["deDE"] = "Er ist in einem Käfig im Militärviertel eingesperrt",
+        ["enUS"] = "He is locked in a cage located inside The Millitary Quarter",
+        ["esES"] = "Está encerrado en una jaula ubicada en el Arrabal Militar",
+        ["esMX"] = "Está encerrado en una jaula ubicada en el Arrabal Militar",
+        ["frFR"] = "Il est enfermé dans une cage située dans le Quartier Militaire",
+        ["koKR"] = "그는 밀리터리 쿼터 안에 위치한 철창에 갇혀 있습니다",
+        ["ptBR"] = "Ele está preso em uma jaula localizada no Bairro Militar",
+        ["ruRU"] = "Он заперт в клетке, расположенной в Военный Квартал",
+        ["zhCN"] = "他被关在军事区的笼子里",
+        ["zhTW"] = "他被關在軍事區的籠子裡"
+        -- Tomon, Wowhead.com
     }
 }
 

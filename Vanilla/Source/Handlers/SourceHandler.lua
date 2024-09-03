@@ -247,14 +247,20 @@ function rm.getQuestInfo(sourceID)
     return questInfo
 end
 
-------------------------- Unique NPC -------------------------
-function rm.getUniqueNPCInfo(sourceID)
-    local uniqueNPCInfo = {}
+------------------------- Unique Sources -------------------------
+function rm.getUniqueInfo(sourceID)
+    local uniqueInfo = {}
     local uniqueNPC = rm.uniqueDB[sourceID]
-    storeCommonNPCInfo(uniqueNPCInfo, uniqueNPC)
-    uniqueNPCInfo[L.level] = getColoredLevelBasedOnClassification(uniqueNPC)
-    uniqueNPCInfo["instructions"] = L.uniqueSourceInstructions[sourceID][rm.locale]
-    return uniqueNPCInfo
+    if uniqueNPC then
+        storeCommonNPCInfo(uniqueInfo, uniqueNPC)
+        uniqueInfo[L.level] = getColoredLevelBasedOnClassification(uniqueNPC)
+    else
+        uniqueInfo[L.name] = ""
+        uniqueInfo[L.level] = ""
+        uniqueInfo[L.zone] = ""
+    end
+    uniqueInfo["instructions"] = L.uniqueSourceInstructions[sourceID][rm.locale] or L.uniqueSourceInstructions[sourceID]["enUS"]
+    return uniqueInfo
 end
 
 ------------------------- Object -------------------------
