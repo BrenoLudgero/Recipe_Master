@@ -2,21 +2,6 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-local function getLocalizedSourceType(sourceType)
-    local types = {
-        ["drop"] = L.drop,
-        ["pickpocket"] = L.pickpocket,
-        ["vendor"] = L.vendor,
-        ["quest"] = L.quest,
-        ["unique"] = L.unique,
-        ["object"] = L.object,
-        ["trainer"] = L.trainer,
-        ["fishing"] = L.fishing,
-        ["item"] = L.item
-    }
-    return types[sourceType]
-end
-
 -- The first character ("a", "b", etc..) is used to sort the columns alphabetically
 -- in SourcesFrameCreation.createSourcesListColumns, guaranteeing a fixed order
 local function getSourceColumns(sourceType)
@@ -141,7 +126,7 @@ function rm.showAllSources(recipe)
         for sourceType, source in pairs(recipe.sources) do
             local sourcesInfo = getAllSourcesInfo(sourceType, source)
             sources[sourceType] = sortListByChance(sourcesInfo)
-            local sourceName = getLocalizedSourceType(sourceType)
+            local sourceName = rm.getLocalizedSourceType(sourceType)
             local sourceTab = rm.createSourceTypeTab(sourceName, sourceType, tabXOffset, sources[sourceType])
             local sourceColumns = getSourceColumns(sourceType)
             rm.sourcesListColumns[sourceType] = rm.createSourcesListColumns(sourceColumns, sourceName)

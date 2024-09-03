@@ -48,7 +48,7 @@ function rm.getAllCharactersRecipeStatus(recipe, professionID)
     local charactersWithRecipeSkill = {}
     for character in pairs(characters) do
         local characterSkills = characters[character][professionID]
-        if character ~= rm.currentCharacter and not isRankupRecipe(recipe) and characterSkills then
+        if character ~= rm.currentCharacter and characterSkills then
             if not isSkillLearnedByCharacter(characterSkills, recipe) then
                 table.insert(charactersMissingRecipeSkill, character)
             else

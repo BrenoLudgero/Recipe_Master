@@ -2,6 +2,21 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
+function rm.getLocalizedSourceType(sourceType)
+    local types = {
+        ["drop"] = L.drop,
+        ["pickpocket"] = L.pickpocket,
+        ["vendor"] = L.vendor,
+        ["quest"] = L.quest,
+        ["unique"] = L.unique,
+        ["object"] = L.object,
+        ["trainer"] = L.trainer,
+        ["fishing"] = L.fishing,
+        ["item"] = L.item
+    }
+    return types[sourceType]
+end
+
 ------------------------- Shared -------------------------
 local function getFactionIcon(data)
     return "|T"..F.textures.factionIcons[data["faction"]]..":14.5:14.5:-1.5:-0.5:32:32:4:32:4:32|t"

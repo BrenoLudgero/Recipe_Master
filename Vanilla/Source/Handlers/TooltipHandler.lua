@@ -2,15 +2,6 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-local function isItemRecipe(itemName)
-    for _, prefix in pairs(L.recipePrefixes) do
-        if itemName:sub(1, #prefix) == prefix then
-            return true
-        end
-    end
-    return false
-end
-
 local function isSpecialLeatherworkingRecipe(recipeID)
     return (
         recipeID == 22694 
@@ -43,8 +34,11 @@ local function getRecipeTooltipMessage(recipe, profession)
     local message = ""
     local newLine = "\n"
     local newLineInfo = "\n  "
-    if recipe.purchasable then
-        message = message..newLine..WrapTextInColorCode(L.purchasableRecipe, F.colors.lightBlueHex)
+    if recipe and recipe.sources then
+        message = message..newLine..WrapTextInColorCode(L.sources, F.colors.lightBlueHex)
+        for sourceType in pairs(recipe.sources) do
+            message = message..newLineInfo..(rm.getLocalizedSourceType(sourceType))
+        end
     end
     if #charactersWhoCraftRecipe > 0 then
         message = message..newLine..WrapTextInColorCode(L.crafters, F.colors.lightGreenHex)
@@ -83,7 +77,6 @@ local function getRecipeInfo(itemName, itemLink)
     local professionName = handleMismatchedProfessionNames(recipeID, itemLink)
     local professionID = rm.getProfessionID(professionName)
     local recipe = rm.cachedRecipes[professionID][recipeID]
-    recipe.purchasable = rm.sourceDB[professionID][recipeID] and rm.sourceDB[professionID][recipeID]["vendor"] ~= nil
     return recipe, professionID
 end
 
@@ -96,10 +89,19 @@ local function showMessageInTooltip(tooltip, itemName, itemLink)
     end
 end
 
+local function isItemARecipe(itemName)
+    for _, prefix in pairs(L.recipePrefixes) do
+        if itemName:sub(1, #prefix) == prefix then
+            return true
+        end
+    end
+    return false
+end
+
 -- Appends the message to a recipe's tooltip
 GameTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
     local itemName, itemLink = tooltip:GetItem()
-    if itemName and isItemRecipe(itemName) then
+    if itemName and isItemARecipe(itemName) then
         showMessageInTooltip(tooltip, itemName, itemLink)
     end
 end)
@@ -107,7 +109,7 @@ end)
 -- Appends the message to a chat link tooltip
 ItemRefTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
     local itemName, itemLink = tooltip:GetItem()
-    if itemName and isItemRecipe(itemName) then
+    if itemName and isItemARecipe(itemName) then
         showMessageInTooltip(tooltip, itemName, itemLink)
     end
 end)
