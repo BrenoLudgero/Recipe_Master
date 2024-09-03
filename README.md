@@ -5,7 +5,7 @@
 
 ## Features
 * Complete Recipe Catalog:\
-  Explore the specifics of all recipes thanks to a built-in database extracted from Wowhead
+  Explore the specifics of every craftable item thanks to a built-in database extracted from Wowhead
 * Learned and Missing Recipes:\
   Track your crafting progress effortlessly – know what you've mastered and what's yet to be discovered
 * Cross-character Support: \
@@ -15,7 +15,7 @@
 * Localization:\
   Recipe Master is localized and compatible with all available languages
 
-![Sources Window](/Images/Sources_Window.png)
+![Sources Window](/Images/Sources_Window_1.png)
 
 ## Functionalities
 * Click a recipe icon to show its sources
