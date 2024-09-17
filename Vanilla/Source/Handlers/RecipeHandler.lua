@@ -31,7 +31,7 @@ function rm.isRecipeAvailableForCharacter(recipe)
     )
 end
 
-local function isRankupRecipe(recipe)
+function rm.isRankupRecipe(recipe)
     return type(recipe.teachesSpell) == "string"
 end
 
@@ -61,7 +61,7 @@ end
 
 -- Identifies all rankup recipes that teach a rank equal to or lower than the current profession rank
 local function isLearnedRankupRecipe(recipe, professionRank)
-    if isRankupRecipe(recipe) then
+    if rm.isRankupRecipe(recipe) then
         local rankOrder = {
             Apprentice = 1, 
             Journeyman = 2, 

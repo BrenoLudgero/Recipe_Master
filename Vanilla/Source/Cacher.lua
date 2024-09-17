@@ -31,7 +31,8 @@ end
 local function storeNonDuplicateRecipe(regularRecipe, regularRecipeID, sodRecipes)
     local duplicateFound = false
     for _, sodRecipe in pairs(sodRecipes) do
-        if sodRecipe.teachesItem == regularRecipe.teachesItem then
+        if not rm.isRankupRecipe(sodRecipe)
+        and sodRecipe.teachesItem == regularRecipe.teachesItem then
             duplicateFound = true
             break
         end
