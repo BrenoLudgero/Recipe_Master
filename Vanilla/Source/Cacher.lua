@@ -10,7 +10,7 @@ end
 local function isRecipeASpell(professionID, recipeData)
     return (
         professionID == 186 -- Mining
-        or (professionID == 333 and recipeData.isEnchantment) -- Enchanting
+        or recipeData.isSpell
     )
 end
 

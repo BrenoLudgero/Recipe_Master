@@ -36555,6 +36555,7 @@ rm.npcDB = {
 		level = "??",
 		zones = {
 			16,
+			15532,
 		},
 	},
 	[6115] = {
@@ -45366,6 +45367,26 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "52",
 	},
+	[9027] = {
+		names = {
+			deDE = "Gorosh Der Derwisch",
+			enUS = "Gorosh The Dervish",
+			esES = "Gorosh El Endemoniado",
+			esMX = "Gorosh El Endemoniado",
+			frFR = "Gorosh Le Derviche",
+			koKR = "광신자 고로쉬",
+			ptBR = "Gorosh, o Dervixe",
+			ruRU = "Горош Дервиш",
+			zhCN = "修行者高罗什",
+			zhTW = "修行者高羅什",
+		},
+		faction = "Alliance",
+		classification = "Elite",
+		level = "56",
+		zones = {
+			1584,
+		},
+	},
 	[9028] = {
 		names = {
 			enUS = "Grizzle",
@@ -48573,25 +48594,6 @@ rm.npcDB = {
 			ruRU = "Вождь Ренд Чернорук",
 			zhCN = "大酋长雷德 黑手",
 			zhTW = "大酋長雷德 黑手",
-		},
-		classification = "Boss",
-		level = "??",
-		zones = {
-			1583,
-		},
-	},
-	[10430] = {
-		names = {
-			deDE = "Die Bestie",
-			enUS = "The Beast",
-			esES = "La Bestia",
-			esMX = "La Bestia",
-			frFR = "La Bête",
-			koKR = "괴수",
-			ptBR = "A Fera",
-			ruRU = "Зверь",
-			zhCN = "比斯巨兽",
-			zhTW = "比斯巨獸",
 		},
 		classification = "Boss",
 		level = "??",

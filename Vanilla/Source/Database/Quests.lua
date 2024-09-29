@@ -534,4 +534,14 @@ rm.questDB = {
 		level = 60,
 		reqLevel = 50,
 	},
+	[85699] = {
+		classification = "Dungeon",
+		level = 60,
+		reqLevel = 50,
+	},
+	[85700] = {
+		classification = "Dungeon",
+		level = 60,
+		reqLevel = 50,
+	},
 }
