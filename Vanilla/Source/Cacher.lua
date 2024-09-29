@@ -35,25 +35,23 @@ local function hasTheSameNameOrTeachesSameItem(sodRecipe, regularRecipe)
 end
 
 -- Recipes that teach the same skill but have an SoD counterpart
-local function storeNonDuplicateRecipe(regularRecipe, regularRecipeID, sodRecipes)
-    local duplicateFound = false
+local function isDuplicateRecipe(sodRecipes, regularRecipe)
     for _, sodRecipe in pairs(sodRecipes) do
         if not rm.isRankupRecipe(sodRecipe)
         and hasTheSameNameOrTeachesSameItem(sodRecipe, regularRecipe) then
-            duplicateFound = true
-            break
+            return true
         end
     end
-    if not duplicateFound then
-        sodRecipes[regularRecipeID] = regularRecipe
-    end
+    return false
 end
 
 local function filterSeasonalRecipes(professionRecipes)
     local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
     if rm.currentSeason == "SoD" then
         for recipeID, recipe in pairs(regularRecipes) do
-            storeNonDuplicateRecipe(recipe, recipeID, sodRecipes)
+            if not isDuplicateRecipe(sodRecipes, recipe) then
+                sodRecipes[recipeID] = recipe
+            end
         end
         return sodRecipes
     end
