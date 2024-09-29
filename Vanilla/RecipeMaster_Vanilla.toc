@@ -1,5 +1,5 @@
-## Interface: 11503
-## Version: 2.2.1
+## Interface: 11504
+## Version: 2.2.2
 
 ## Title: Recipe Master
 ## Title-esMX: Maestro de Recetas
