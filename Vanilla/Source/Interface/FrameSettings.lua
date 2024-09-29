@@ -149,8 +149,8 @@ F.offsets.dropdownLabelY = 12
 F.offsets.progressBarTextY = -300
 F.offsets.recipesWindowTextY = -188
 F.offsets.sliderDescriptionY = 12
-F.offsets.sliderMinMaxTextY = -3
-F.offsets.sliderValueY = 0
+F.offsets.sliderMinMaxTextX = 18
+F.offsets.sliderValueY = -2
 F.offsets.subtitleY = -35
 F.offsets.titleY = -15
 F.offsets.titlesTextX = 13
@@ -389,7 +389,7 @@ F.templates.mainFrameBorder = "BaseBasicFrameTemplate"
 F.templates.search = "SearchBoxTemplate"
 F.templates.sourcesList = "BackdropTemplate"
 F.templates.scrollFrame = "UIPanelScrollFrameTemplate"
-F.templates.slider = "OptionsSliderTemplate"
+F.templates.slider = "UISliderTemplate"
 
 
 
