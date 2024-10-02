@@ -2,6 +2,8 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
+local columnsOrder = {"trainer", "vendor", "quest", "drop", "pickpocket", "object", "item", "fishing", "unique"}
+
 local function getSourceColumns(sourceType)
     local columns = {
         ["trainer"] = {
@@ -109,7 +111,7 @@ function rm.showTabRows(sources, sourceType, columnList)
 end
 
 local function openFirstTab(sources)
-    for _, sourceType in pairs(rm.sourcesListColumns) do
+    for _, sourceType in ipairs(columnsOrder) do
         local columnList = rm.sourcesListColumns[sourceType]
         if columnList then
             rm.showTabRows(sources, sourceType, columnList)
@@ -125,14 +127,16 @@ function rm.showAllSources(recipe)
         rm.sourcesScrollFame:Show()
         local tabXOffset = 0
         local sources = {}
-        for sourceType, source in pairs(recipe.sources) do
-            local sourcesInfo = getAllSourcesInfo(sourceType, source)
-            sources[sourceType] = sortListByChance(sourcesInfo)
-            local sourceName = rm.getLocalizedSourceType(sourceType)
-            local sourceTab = rm.createSourceTypeTab(sourceName, sourceType, tabXOffset, sources[sourceType])
-            local sourceColumns = getSourceColumns(sourceType)
-            rm.sourcesListColumns[sourceType] = rm.createSourcesListColumns(sourceColumns, sourceName)
-            tabXOffset = tabXOffset + sourceTab:GetWidth() + F.offsets.sourcesListTabX
+        for _, sourceType in ipairs(columnsOrder) do
+            if recipe.sources[sourceType] then
+                local sourcesInfo = getAllSourcesInfo(sourceType, recipe.sources[sourceType])
+                sources[sourceType] = sortListByChance(sourcesInfo)
+                local sourceName = rm.getLocalizedSourceType(sourceType)
+                local sourceTab = rm.createSourceTypeTab(sourceName, sourceType, tabXOffset, sources[sourceType])
+                local columnList = getSourceColumns(sourceType)
+                rm.sourcesListColumns[sourceType] = rm.createSourcesListColumns(columnList, sourceName)
+                tabXOffset = tabXOffset + sourceTab:GetWidth() + F.offsets.sourcesListTabX
+            end
         end
         openFirstTab(sources)
     end
