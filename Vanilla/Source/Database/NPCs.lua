@@ -35452,6 +35452,25 @@ rm.npcDB = {
 			14,
 		},
 	},
+	[5824] = {
+		names = {
+			deDE = "Captain Stumpfhauer",
+			enUS = "Captain Flat Tusk",
+			esES = "Capitán Colmillo Plano",
+			esMX = "Capitán Colmillo Plano",
+			frFR = "Capitaine Plate Défense",
+			koKR = "호위대장 납작어금니",
+			ptBR = "Capitão Presa Chata",
+			ruRU = "Капитан Тупой Клык",
+			zhCN = "獠牙队长",
+			zhTW = "獠牙隊長",
+		},
+		classification = "Rare Elite",
+		level = "11",
+		zones = {
+			14,
+		},
+	},
 	[5830] = {
 		names = {
 			deDE = "Schwester Wildkralle",
@@ -43843,6 +43862,25 @@ rm.npcDB = {
 			139,
 		},
 	},
+	[8564] = {
+		names = {
+			deDE = "Waldläufer",
+			enUS = "Ranger",
+			esES = "Especialista",
+			esMX = "Especialista",
+			frFR = "Forestier",
+			koKR = "순찰자",
+			ptBR = "Patrulheiro",
+			ruRU = "Cледопыт",
+			zhCN = "游侠",
+			zhTW = "遊俠",
+		},
+		faction = "Alliance",
+		level = "59 - 60",
+		zones = {
+			139,
+		},
+	},
 	[8565] = {
 		names = {
 			deDE = "Pfadschreiter",
@@ -45910,6 +45948,25 @@ rm.npcDB = {
 			1583,
 		},
 	},
+	[9237] = {
+		names = {
+			deDE = "Kriegsmeister Voone",
+			enUS = "War Master Voone",
+			esES = "Maestro De Guerra Voone",
+			esMX = "Maestro De Guerra Voone",
+			frFR = "Maître De Guerre Voone",
+			koKR = "대장군 부네",
+			ptBR = "Senhor da Guerra Voone",
+			ruRU = "Воевода Вун",
+			zhCN = "指挥官沃恩",
+			zhTW = "指揮官沃恩",
+		},
+		classification = "Elite",
+		level = "59",
+		zones = {
+			1583,
+		},
+	},
 	[9239] = {
 		names = {
 			deDE = "Mystiker Der Gluthauer",
@@ -47701,6 +47758,25 @@ rm.npcDB = {
 			1637,
 		},
 	},
+	[10268] = {
+		names = {
+			deDE = "Gizrul Der Geifernde",
+			enUS = "Gizrul The Slavener",
+			esES = "Gizrul El Esclavista",
+			esMX = "Gizrul El Esclavista",
+			frFR = "Gizrul Lesclavagiste",
+			koKR = "흉포한 기즈룰",
+			ptBR = "Gizrul, o Subjugador",
+			ruRU = "Гизрул Поработитель",
+			zhCN = "奴役者基兹鲁尔",
+			zhTW = "奴役者基茲魯爾",
+		},
+		classification = "Elite",
+		level = "60",
+		zones = {
+			1583,
+		},
+	},
 	[10276] = {
 		names = {
 			enUS = "Rotgath Stonebeard",
@@ -48652,6 +48728,24 @@ rm.npcDB = {
 			2017,
 		},
 	},
+	[10436] = {
+		names = {
+			enUS = "Baroness Anastari",
+			esES = "Baronesa Anastari",
+			esMX = "Baronesa Anastari",
+			frFR = "Baronne Anastari",
+			koKR = "남작부인 아나스타리",
+			ptBR = "Baronesa Anastari",
+			ruRU = "Баронесса Анастари",
+			zhCN = "安娜丝塔丽男爵夫人",
+			zhTW = "安娜絲塔麗男爵夫人",
+		},
+		classification = "Elite",
+		level = "59",
+		zones = {
+			2017,
+		},
+	},
 	[10438] = {
 		names = {
 			deDE = "Maleki Der Leichenblasse",
@@ -49260,6 +49354,25 @@ rm.npcDB = {
 			1583,
 		},
 	},
+	[10596] = {
+		names = {
+			deDE = "Mutter Glimmernetz",
+			enUS = "Mother Smolderweb",
+			esES = "Madre Telabrasada",
+			esMX = "Madre Telabrasada",
+			frFR = "Matriarche Couveuse",
+			koKR = "여왕 불그물거미",
+			ptBR = "Mãe Queimateia",
+			ruRU = "Мать Дымная Паутина",
+			zhCN = "烟网蛛后",
+			zhTW = "煙網蛛後",
+		},
+		classification = "Elite",
+		level = "59",
+		zones = {
+			1583,
+		},
+	},
 	[10605] = {
 		names = {
 			deDE = "Scharlachroter Sanitäter",
@@ -49722,6 +49835,25 @@ rm.npcDB = {
 		level = "56",
 		zones = {
 			618,
+		},
+	},
+	[10808] = {
+		names = {
+			deDE = "Timmy Der Grausame",
+			enUS = "Timmy The Cruel",
+			esES = "Timmy El Cruel",
+			esMX = "Timmy El Cruel",
+			frFR = "Timmy Le Cruel",
+			koKR = "잔혹한 티미",
+			ptBR = "Tico, o Cruel",
+			ruRU = "Тайлер",
+			zhCN = "悲惨的提米",
+			zhTW = "悲慘的提米",
+		},
+		classification = "Rare Elite",
+		level = "58",
+		zones = {
+			2017,
 		},
 	},
 	[10809] = {
@@ -51181,6 +51313,24 @@ rm.npcDB = {
 		},
 		classification = "Elite",
 		level = "61",
+		zones = {
+			1977,
+		},
+	},
+	[11360] = {
+		names = {
+			deDE = "Zulianisches Junges",
+			enUS = "Zulian Cub",
+			esES = "Cachorro Zulian",
+			esMX = "Cachorro Zulian",
+			frFR = "Jeune Zulien",
+			koKR = "새끼 줄리안 호랑이",
+			ptBR = "Cria Zulian",
+			ruRU = "Зулианский Тигренок",
+			zhCN = "祖利安幼虎",
+			zhTW = "祖利安幼虎",
+		},
+		level = "60",
 		zones = {
 			1977,
 		},
@@ -55592,6 +55742,26 @@ rm.npcDB = {
 			2597,
 		},
 	},
+	[13140] = {
+		names = {
+			deDE = "Kommandant Dardosh",
+			enUS = "Commander Dardosh",
+			esES = "Comandante Dardosh",
+			esMX = "Comandante Dardosh",
+			frFR = "Commandant Dardosh",
+			koKR = "지휘관 다르도쉬",
+			ptBR = "Comandante Dardosh",
+			ruRU = "Командир Дардош",
+			zhCN = "指挥官达多什",
+			zhTW = "指揮官達多什",
+		},
+		faction = "Horde",
+		classification = "Elite",
+		level = "61",
+		zones = {
+			2597,
+		},
+	},
 	[13141] = {
 		names = {
 			deDE = "Rottwurzelstampfer",
@@ -56169,6 +56339,25 @@ rm.npcDB = {
 		},
 		faction = "Horde",
 		level = "60",
+		zones = {
+			2597,
+		},
+	},
+	[13358] = {
+		names = {
+			deDE = "Stormpike Bogenschütze",
+			enUS = "Stormpike Bowman",
+			esES = "Arquero De Pico Tormenta",
+			esMX = "Arquero De Pico Tormenta",
+			frFR = "Archer Stormpike",
+			koKR = "스톰파이크 궁병",
+			ptBR = "Arqueiro Lançatroz",
+			ruRU = "Снайпер Из Клана Грозовой Вершины",
+			zhCN = "联盟弓箭手",
+			zhTW = "聯盟弓箭手",
+		},
+		faction = "Alliance",
+		level = "59 - 60",
 		zones = {
 			2597,
 		},
@@ -57292,6 +57481,25 @@ rm.npcDB = {
 		level = "56",
 		zones = {
 			33,
+		},
+	},
+	[15043] = {
+		names = {
+			deDE = "Zulianischer Krokilisk",
+			enUS = "Zulian Crocolisk",
+			esES = "Crocolisco Zulian",
+			esMX = "Crocolisco Zulian",
+			frFR = "Crocilisque Zulien",
+			koKR = "줄리안 악어",
+			ptBR = "Crocolisco Zulian",
+			ruRU = "Зулианский Кроколиск",
+			zhCN = "祖利安鳄鱼",
+			zhTW = "祖利安鰐魚",
+		},
+		classification = "Elite",
+		level = "60",
+		zones = {
+			1977,
 		},
 	},
 	[15111] = {
@@ -61980,6 +62188,24 @@ rm.npcDB = {
 			51,
 		},
 	},
+	[228724] = {
+		names = {
+			deDE = "Obsidianwoger",
+			enUS = "Obsidian Surger",
+			esES = "Marea De Obsidiana",
+			esMX = "Marea De Obsidiana",
+			frFR = "Surgisseur Dobsidienne",
+			koKR = "흑요석 쇄도 정령",
+			ptBR = "Irrompedor Obsidiano",
+			ruRU = "Обсидиановый Огневсплеск",
+			zhCN = "黑曜石奔涌者",
+			zhTW = "黑曜石奔湧者",
+		},
+		level = "55 - 58",
+		zones = {
+			51,
+		},
+	},
 	[228726] = {
 		names = {
 			deDE = "Flammenbringerelementarist",
@@ -62080,6 +62306,22 @@ rm.npcDB = {
 			koKR = "불꽃꼬리일족 정예병",
 			zhCN = "烈焰行者精英",
 			zhTW = "烈焰行者精英",
+		},
+		classification = "Elite",
+		level = "62",
+		zones = {
+			2717,
+		},
+	},
+	[228838] = {
+		names = {
+			deDE = "Feuerschuppenpriester",
+			enUS = "Flamewaker Priest",
+			frFR = "Prêtre Attise Flammes",
+			koKR = "불꽃꼬리일족 사제",
+			ptBR = "Sacerdote Ardilante",
+			zhCN = "烈焰行者祭司",
+			zhTW = "烈焰行者祭司",
 		},
 		classification = "Elite",
 		level = "62",
@@ -62340,6 +62582,18 @@ rm.npcDB = {
 			15475,
 		},
 	},
+	[230146] = {
+		names = {
+			deDE = "Teuflischer Eindringling",
+			enUS = "Fel Interloper",
+		},
+		level = "58",
+		zones = {
+			46,
+			139,
+			618,
+		},
+	},
 	[230302] = {
 		names = {
 			enUS = "Lord Kazzak",
@@ -62401,6 +62655,36 @@ rm.npcDB = {
 		level = "62",
 		zones = {
 			15531,
+		},
+	},
+	[231868] = {
+		names = {
+			deDE = "Wirbelsturmherrscher",
+			enUS = "Cyclone Imperator",
+			frFR = "Imperator Du Cyclone",
+			koKR = "회오리 군주",
+			zhCN = "飓风统帅",
+			zhTW = "颶風統帥",
+		},
+		classification = "Elite",
+		level = "62",
+		zones = {
+			15825,
+		},
+	},
+	[231887] = {
+		names = {
+			deDE = "Talorkan",
+			enUS = "Vale Tempest",
+			frFR = "Tempête Du Val",
+			koKR = "계곡 폭풍우",
+			zhCN = "谷地风暴",
+			zhTW = "榖地風暴",
+		},
+		classification = "Elite",
+		level = "61 - 62",
+		zones = {
+			15825,
 		},
 	},
 }

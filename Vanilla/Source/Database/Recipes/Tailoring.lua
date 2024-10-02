@@ -944,6 +944,11 @@ rm.recipeDB[197] = {
 		teachesItem = 17723,
 		teachesSpell = 21945,
 	},
+	[18258] = {
+		skill = 285,
+		teachesItem = 18258,
+		teachesSpell = 22813,
+	},
 	[18265] = {
 		skill = 300,
 		teachesItem = 18263,
@@ -1276,6 +1281,12 @@ rm.recipeDB[197] = {
 		skill = 250,
 		teachesItem = 220751,
 		teachesSpell = 446195,
+	},
+	[227855] = {
+		season = "SoD",
+		skill = 285,
+		teachesItem = 227855,
+		teachesSpell = 461692,
 	},
 	[227896] = {
 		repFaction = 529,
