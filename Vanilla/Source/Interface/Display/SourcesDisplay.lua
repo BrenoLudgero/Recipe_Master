@@ -2,54 +2,52 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
--- The first character ("a", "b", etc..) is used to sort the columns alphabetically
--- in SourcesFrameCreation.createSourcesListColumns, guaranteeing a fixed order
 local function getSourceColumns(sourceType)
     local columns = {
-        ["drop"] = {
-            "a"..L.name,
-            "b"..L.level,
-            "c"..L.chance,
-            "d"..L.zone
-        },
-        ["pickpocket"] = {
-            "a"..L.name,
-            "b"..L.level,
-            "c"..L.chance,
-            "d"..L.zone
+        ["trainer"] = {
+            L.name,
+            L.zone
         },
         ["vendor"] = {
-            "a"..L.name,
-            "b"..L.price,
-            "c"..L.stock,
-            "d"..L.zone
+            L.name,
+            L.price,
+            L.stock,
+            L.zone
         },
         ["quest"] = {
-            "a"..L.name,
-            "b"..L.level,
-            "c"..L.minimum
+            L.name,
+            L.level,
+            L.minimum
         },
-        ["unique"] = {
-            "a"..L.name,
-            "b"..L.level,
-            "c"..L.zone
+        ["drop"] = {
+            L.name,
+            L.level,
+            L.chance,
+            L.zone
         },
-        ["object"] = {
-            "a"..L.name,
-            "b"..L.chance,
-            "c"..L.zone
-        },
-        ["trainer"] = {
-            "a"..L.name,
-            "b"..L.zone
-        },
-        ["fishing"] = {
-            "a"..L.zone,
-            "b"..L.chance
+        ["pickpocket"] = {
+            L.name,
+            L.level,
+            L.chance,
+            L.zone
         },
         ["item"] = {
-            "a"..L.name,
-            "b"..L.chance
+            L.name,
+            L.chance
+        },
+        ["object"] = {
+            L.name,
+            L.chance,
+            L.zone
+        },
+        ["fishing"] = {
+            L.zone,
+            L.chance
+        },
+        ["unique"] = {
+            L.name,
+            L.level,
+            L.zone
         }
     }
     return columns[sourceType]
@@ -81,18 +79,6 @@ local function getAllSourcesInfo(sourceType, recipeSource)
     return info
 end
 
-function rm.showSourceColumns(columnList)
-    for _, column in pairs(columnList) do
-        column:Show()
-    end
-end
-
-function rm.createAllRowsForSourceType(sources, columns)
-    for _, source in pairs(sources) do
-        rm.createSourceRow(columns, source)
-    end
-end
-
 local function sortListByChance(sources)
     if sources[1][L.chance] then
         table.sort(sources, function(a, b)
@@ -102,20 +88,36 @@ local function sortListByChance(sources)
     return sources
 end
 
-local function showFirstTabRows(sources)
-    for sourceType, columnList in pairs(rm.sourcesListColumns) do
-        rm.showSourceColumns(columnList)
-        rm.createAllRowsForSourceType(sources[sourceType], columnList)
-        rm.updateListHeight()
-        if sourceType == "unique" then
-            rm.showUniqueSourceText(sources[sourceType][1]["instructions"])
-        end
-        rm.activateSourcesTabAndDeactivateOthers(sourceType)
-        break
+local function showSourceColumns(columnList)
+    for _, column in pairs(columnList) do
+        column:Show()
     end
 end
 
--- Called in RecipesFrameSetup.createChatLinkOrDisplaySourcesOnClick
+function rm.showTabRows(sources, sourceType, columnList)
+    showSourceColumns(columnList)
+    if sources[sourceType] then
+        rm.createAllRowsForSourceType(sources[sourceType], columnList)
+    else
+        rm.createAllRowsForSourceType(sources, columnList)
+    end
+    rm.updateListHeight()
+    if sourceType == "unique" then
+        rm.showUniqueSourceText(sources[sourceType][1]["instructions"])
+    end
+    rm.activateSourcesTabAndDeactivateOthers(sourceType)
+end
+
+local function openFirstTab(sources)
+    for _, sourceType in pairs(rm.sourcesListColumns) do
+        local columnList = rm.sourcesListColumns[sourceType]
+        if columnList then
+            rm.showTabRows(sources, sourceType, columnList)
+            break
+        end
+    end
+end
+
 function rm.showAllSources(recipe)
     rm.showUpdatedSourcesHeader(recipe)
     if recipe.sources then
@@ -132,6 +134,6 @@ function rm.showAllSources(recipe)
             rm.sourcesListColumns[sourceType] = rm.createSourcesListColumns(sourceColumns, sourceName)
             tabXOffset = tabXOffset + sourceTab:GetWidth() + F.offsets.sourcesListTabX
         end
-        showFirstTabRows(sources)
+        openFirstTab(sources)
     end
 end

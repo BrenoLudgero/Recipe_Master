@@ -111,28 +111,19 @@ local function getInitialRecipeData(ID)
     return name, link, quality, texture
 end
 
-local function isMiningSpell(ID)
-    return rm.recipeDB[186][ID] ~= nil
-end
-
-local function getInitialSpellData(ID)
+local function getInitialSpellData(ID, professionID)
     local name = GetSpellInfo(ID)
     local link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
     local quality = select(3, C_Item.GetItemInfo(ID))
     if not quality then
         quality = 1
     end
-    local texture
-    if isMiningSpell(ID) then
-        texture = rm.recipeDB[186][ID].icon
-    else
-        texture = GetSpellTexture(ID)
-    end
+    local texture = rm.recipeDB[professionID][ID].icon or GetSpellTexture(ID)
     return name, link, quality, texture
 end
 
 local function getRecipeData(recipeID, recipeData, professionID, initialDataFunction)
-    local rName, rLink, rQuality, rTexture = initialDataFunction(recipeID)
+    local rName, rLink, rQuality, rTexture = initialDataFunction(recipeID, professionID)
     return {
         class = recipeData["class"], 
         faction = recipeData["faction"], 

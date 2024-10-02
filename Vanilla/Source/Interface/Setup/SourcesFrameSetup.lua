@@ -83,13 +83,7 @@ function rm.showSourcesOnTabClick(tab, sources)
             rm.clearSourcesList()
             for sourceType, columnList in pairs(rm.sourcesListColumns) do
                 if sourceType == self.label then
-                    rm.showSourceColumns(columnList)
-                    rm.createAllRowsForSourceType(sources, columnList)
-                    rm.updateListHeight()
-                    if sourceType == "unique" then
-                        rm.showUniqueSourceText(sources[sourceType][1]["instructions"])
-                    end
-                    rm.activateSourcesTabAndDeactivateOthers(sourceType)
+                    rm.showTabRows(sources, sourceType, columnList)
                 else
                     hideSourceColumns(columnList)
                 end

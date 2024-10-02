@@ -82,11 +82,6 @@ function rm.createColumnsContainer(parent)
     return container
 end
 
-local function sortListColumns(sourceColumns)
-    table.sort(sourceColumns)
-    return sourceColumns
-end
-
 local function createListColumn(columnName, xOffset)
     local column = rm.sourcesColumnsContainer:CreateFontString(nil, "OVERLAY", F.fonts.sourcesColumns)
     column:SetPoint("LEFT", xOffset, 0)
@@ -94,12 +89,10 @@ local function createListColumn(columnName, xOffset)
     return column
 end
 
-function rm.createSourcesListColumns(sourceColumns, tabLabel)
-    local sortedColumns = sortListColumns(sourceColumns)
+function rm.createSourcesListColumns(columnList, tabLabel)
     local columns = {}
-    for i, column in ipairs(sortedColumns) do
-        local columnName = string.sub(column, 2) -- Removes the first letter
-        local column = createListColumn(columnName, F.offsets.sourcesListColumnsX[tabLabel][i])
+    for i, column in ipairs(columnList) do
+        local column = createListColumn(column, F.offsets.sourcesListColumnsX[tabLabel][i])
         column:Hide()
         table.insert(columns, column)
     end
@@ -154,7 +147,7 @@ local function setCellPosition(cell, column, columnName, columns, yOffset)
     end
 end
 
-function rm.createSourceRow(columns, data)
+local function createSourceRow(columns, data)
     local yOffset = (#rm.sourcesList.children * -F.sizes.sourcesListRowHeight) - 1
     local row = createListRow(columns, yOffset)
     local cells = {}
@@ -183,6 +176,12 @@ function rm.createSourceRow(columns, data)
                 setCellPosition(mapCell, column, columnName, columns, yOffset)
             end
         end
+    end
+end
+
+function rm.createAllRowsForSourceType(sources, columns)
+    for _, source in pairs(sources) do
+        createSourceRow(columns, source)
     end
 end
 
