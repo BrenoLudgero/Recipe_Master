@@ -72,32 +72,29 @@ local function setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     saveFramePositionOnDragStop(professionFrame)
 end
 
-local function keepMainFrameHeightSameAsProfessionFrame(professionFrame)
-    rm.mainFrame:SetScript("OnUpdate", function(self, elapsed)
-        self:ClearAllPoints()
-        rm.restoreButton:ClearAllPoints()
-        if professionFrame == SkilletFrame then
-            rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 0, -1)
-            self:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 0, -1)
-            self:SetPoint("BOTTOM", professionFrame)
-        elseif professionFrame == TradeSkillFrame then
-            rm.restoreButton:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", -2, -4)
-            self:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", -2, -4)
-            self:SetPoint("BOTTOMLEFT", TradeSkillCancelButton, "BOTTOMRIGHT", 0, -5)
-        elseif professionFrame == CraftFrame then
-            rm.restoreButton:SetPoint("TOPLEFT", CraftFrameCloseButton, "TOPRIGHT", -2, -4)
-            self:SetPoint("TOPLEFT", CraftFrameCloseButton, "TOPRIGHT", -2, -4)
-            self:SetPoint("BOTTOMLEFT", CraftCancelButton, "BOTTOMRIGHT", 0, -5)
-        end
-    end)
+local function setFramePointsRelativeToParent(professionFrame)
+    rm.restoreButton:ClearAllPoints()
+    if professionFrame == SkilletFrame then
+        rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 0, -1)
+        rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 0, -1)
+        rm.mainFrame:SetPoint("BOTTOM", professionFrame)
+    elseif professionFrame == TradeSkillFrame then
+        rm.restoreButton:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", -2, -4)
+        rm.mainFrame:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", -2, -4)
+        rm.mainFrame:SetPoint("BOTTOMLEFT", TradeSkillCancelButton, "BOTTOMRIGHT", 0, -6)
+    elseif professionFrame == CraftFrame then
+        rm.restoreButton:SetPoint("TOPLEFT", CraftFrameCloseButton, "TOPRIGHT", -2, -4)
+        rm.mainFrame:SetPoint("TOPLEFT", CraftFrameCloseButton, "TOPRIGHT", -2, -4)
+        rm.mainFrame:SetPoint("BOTTOMLEFT", CraftCancelButton, "BOTTOMRIGHT", 0, -6)
+    end
 end
 
-local function updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidth)
+local function updatePositionBasedOnParent(professionFrame, mainFrameWidth)
     if professionFrame == UIParent then -- TSM is enabled
         replaceMinimizeButtonWithScrollTexture()
         setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     else
-        keepMainFrameHeightSameAsProfessionFrame(professionFrame)
+        setFramePointsRelativeToParent(professionFrame)
     end
 end
 
@@ -105,7 +102,7 @@ function rm.setParentDependentFramesPosition()
     local professionFrame = rm.getProfessionFrame()
     if professionFrame then
         local mainFrameWidth = rm.mainFrame:GetWidth()
-        updateSizesAndOffsetsBasedOnParent(professionFrame, mainFrameWidth)
+        updatePositionBasedOnParent(professionFrame, mainFrameWidth)
         rm.mainFrame:SetFrameStrata(professionFrame:GetFrameStrata())
     end
 end

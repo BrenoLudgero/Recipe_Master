@@ -27,9 +27,3 @@ function rm.restoreMainFrameOnClick(restoreButton)
         rm.mainFrame:Show()
     end)
 end
-
-function rm.matchParentHeight(innerBorder)
-    innerBorder:SetScript("OnUpdate", function(self, elapsed)
-        self:SetHeight(innerBorder:GetParent():GetHeight())
-    end)
-end

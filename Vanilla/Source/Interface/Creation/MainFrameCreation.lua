@@ -50,7 +50,6 @@ function rm.createInnerBorder(parent)
     innerBorder:SetPoint("TOPLEFT", rm.header, "BOTTOMLEFT", 1, 0)
     innerBorder:SetPoint("BOTTOMRIGHT", rm.mainFrameBorder, "BOTTOMRIGHT", -3, 2)
     innerBorder:SetFrameLevel(8)
-    rm.matchParentHeight(innerBorder)
     return innerBorder
 end
 
