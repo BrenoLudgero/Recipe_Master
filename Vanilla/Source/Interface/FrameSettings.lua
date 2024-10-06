@@ -94,6 +94,7 @@ F.offsets.sortByTextX = 14
 F.offsets.sortByTextY = 3
 
 ------------------------- Sources frame -------------------------
+F.offsets.instructionsY = -10
 F.offsets.instructionsCursorX = -14
 F.offsets.instructionsCursorY = 14
 F.offsets.instructionsClickTextureX = 18
