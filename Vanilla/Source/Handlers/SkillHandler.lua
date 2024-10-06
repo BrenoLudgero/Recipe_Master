@@ -31,8 +31,12 @@ local function getSkillID(i, getItemLink)
 end
 
 local function skillNotSavedYet(skillLineID, skillID)
-    --      Profession exists in SavedVariables       the skill was not found in SavedVariables
-    return rm.getSavedProfessionByID(skillLineID) and not rm.tableContains(getSavedSkillsByProfessionID(skillLineID), skillID)
+    return (
+        -- Profession exists in SavedVariables
+        rm.getSavedProfessionByID(skillLineID)
+        --  the skill was not found in SavedVariables
+        and not rm.tableContains(getSavedSkillsByProfessionID(skillLineID), skillID)
+    )
 end
 
 local function saveNewSkill(skillLineID, skillID)

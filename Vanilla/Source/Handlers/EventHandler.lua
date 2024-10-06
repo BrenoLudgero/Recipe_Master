@@ -48,11 +48,9 @@ end
 
 local function showMainFrame(getSkillInfo)
     rm.showRecipesFrame(getSkillInfo) 
-    C_Timer.After(0.01, function() 
-        if rm.isRecipeListEmpty() then -- Might happen when opening Recipe Master after login
-            rm.updateRecipesList(getSkillInfo)
-        end
-    end)
+    if rm.isRecipeListEmpty() then -- Might happen when opening Recipe Master after login
+        rm.updateRecipesList(getSkillInfo)
+    end
 end
 
 local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
@@ -67,24 +65,28 @@ local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLi
 end
 
 local function handleProfessionFrameClosed(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
-    -- Delayed in case TradeSkillMaster or Skillet is enabled, their frames are not considered closed immediately
-    C_Timer.After(0.01, function()
-        if not rm.getProfessionFrame() then
-            rm.hideMainFrame()
-            return
-        end
-    end)
+    if not rm.getProfessionFrame() then
+        rm.hideMainFrame()
+        return
+    end
     -- A profession frame is still open after closing the Enchanting frame, show recipes for it
     -- Does not apply if Skillet or TradeSkillMaster is enabled
     handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
 end
 
 function rm.handleProfessionFrame(event)
+    -- Delayed for one frame to ensure that RM will be displayed / hidden reliably and ASAP
     if event == "TRADE_SKILL_SHOW" then
-        handleProfessionFrameOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+        RunNextFrame(function() 
+            handleProfessionFrameOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+        end)
     elseif event == "CRAFT_SHOW" then
-        handleProfessionFrameOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
+        RunNextFrame(function() 
+            handleProfessionFrameOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
+        end)
     elseif event == "TRADE_SKILL_CLOSE" or event == "CRAFT_CLOSE" then
-        handleProfessionFrameClosed(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+        RunNextFrame(function() 
+            handleProfessionFrameClosed(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+        end)
     end
 end
