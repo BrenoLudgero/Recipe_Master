@@ -15,7 +15,6 @@ function rm.createAllFrameElements()
     rm.createInnerBorder(rm.mainFrame)
     rm.restoreButton = rm.createRestoreButton() -- Displayed after clicking the "X" button to restore the mainFrame
     rm.centeredText = rm.createCenteredText(rm.mainFrame)
-    rm.sourcesInstructions = rm.createSourcesInstructions(rm.mainFrame)
 
     ------------------------- Bottom tabs -------------------------
     rm.bottomTabs = {}
@@ -37,6 +36,7 @@ function rm.createAllFrameElements()
     rm.progressBarText = rm.createProgressBarText(rm.progressBar)
 
     ------------------------- Sources frame -------------------------
+    rm.sourcesInstructions = rm.createSourcesInstructions(rm.mainFrame)
     rm.sourcesHeader = rm.createSourcesHeader(rm.mainFrame) -- Recipe icon and name
     rm.sourcesListTabs = {}
     rm.sourcesScrollFame = rm.createSourcesScrollFrame(rm.mainFrame)

@@ -84,15 +84,15 @@ local function getRecipeTooltipMessage(recipe, professionID)
 end
 
 -- Ensures that the message is not displayed twice
-local function isTooltipMessageDisplayed(i, tooltip, message)
-    local lineText = _G[tooltip:GetName().."TextLeft"..i]:GetText()
-    lineText = lineText:gsub("^%s*(.-)%s*$", "%1") -- Removes blank spaces and new lines
+local function isTooltipMessageDisplayed(currentLineText, message)
+    local lineText = currentLineText:gsub("^%s*(.-)%s*$", "%1") -- Removes blank spaces and new lines
     return lineText == message
 end
 
 local function appendMessage(tooltip, message)
     for i = 1, tooltip:NumLines() do
-        if isTooltipMessageDisplayed(i, tooltip, message) then
+        local currentLineText = _G[tooltip:GetName().."TextLeft"..i]:GetText()
+        if isTooltipMessageDisplayed(currentLineText, message) then
             return
         end
     end

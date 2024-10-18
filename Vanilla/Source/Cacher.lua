@@ -28,18 +28,17 @@ local function splitSeasonalRecipes(professionRecipes)
     return sodRecipes, regularRecipes
 end
 
-local function hasTheSameNameOrTeachesSameItem(sodRecipe, regularRecipe)
+local function hasSameNameOrTeachesSameItem(sodRecipe, regularRecipe)
     return (
         sodRecipe.name == regularRecipe.name
         or sodRecipe.teachesItem == regularRecipe.teachesItem
     )
 end
 
--- Recipes that teach the same skill but have an SoD counterpart
-local function isDuplicateRecipe(sodRecipes, regularRecipe)
+local function hasSoDCounterpart(sodRecipes, regularRecipe)
     for _, sodRecipe in pairs(sodRecipes) do
         if not rm.isRankupRecipe(sodRecipe)
-        and hasTheSameNameOrTeachesSameItem(sodRecipe, regularRecipe) then
+        and hasSameNameOrTeachesSameItem(sodRecipe, regularRecipe) then
             return true
         end
     end
@@ -50,7 +49,7 @@ local function filterSeasonalRecipes(professionRecipes)
     local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
     if rm.currentSeason == "SoD" then
         for recipeID, recipe in pairs(regularRecipes) do
-            if not isDuplicateRecipe(sodRecipes, recipe) then
+            if not hasSoDCounterpart(sodRecipes, recipe) then
                 sodRecipes[recipeID] = recipe
             end
         end
@@ -60,8 +59,8 @@ local function filterSeasonalRecipes(professionRecipes)
 end
 
 -- Stores all recipe data for each profession in rm.cachedRecipes
--- to be retrieved locally instead of constantly querying the server
-local function cacheAndStoreAllRecipes()
+-- to be retrieved locally without the risk of querying unavailable data
+local function cacheAllRecipes()
     for professionID in pairs(L.professions) do
         rm.cachedRecipes[professionID] = {}
         for recipeID, recipeData in pairs(rm.recipeDB[professionID]) do
@@ -124,7 +123,7 @@ local function cacheAllCrafts()
 end
 
 function rm.cacheAllAssets()
-    cacheAndStoreAllRecipes()
+    cacheAllRecipes()
     cacheAllItemNames()
     cacheAllQuests()
     cacheAllTradeSkills()

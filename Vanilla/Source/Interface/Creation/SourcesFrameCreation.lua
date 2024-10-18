@@ -2,6 +2,41 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
+----------------------------- Instructions -----------------------------
+function rm.createSourcesInstructions(parent)
+    local frame = CreateFrame("Frame", nil, parent)
+    frame:SetPoint("CENTER")
+    frame:SetSize(F.sizes.sourcesInstructions, F.sizes.sourcesInstructions)
+    frame.texture = frame:CreateTexture(nil, "ARTWORK")
+    frame.texture:SetAllPoints(frame)
+    frame.texture:AdjustPointsOffset(0, F.offsets.instructionsY)
+    frame.texture:SetTexture(F.textures.mainBackground)
+    frame.texture:SetColorTexture(0, 0, 0, 0.55)
+    frame.mask = frame:CreateMaskTexture()
+    frame.mask:SetAllPoints(frame.texture)
+    frame.mask:SetTexture(F.textures.sourcesInstructionsMask, "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
+    frame.texture:AddMaskTexture(frame.mask)
+    local recipe = CreateFrame("Frame", nil, frame)
+    recipe:SetPoint("CENTER", F.offsets.instructionsRecipeX, F.offsets.instructionsRecipeY)
+    recipe:SetSize(F.sizes.sourcesInstructionsRecipe, F.sizes.sourcesInstructionsRecipe)
+    recipe.texture = recipe:CreateTexture(nil, "ARTWORK")
+    recipe.texture:SetAllPoints(recipe)
+    recipe.texture:SetTexture(F.textures.commonRecipe)
+    local cursor = CreateFrame("Frame", nil, frame)
+    cursor:SetFrameLevel(recipe:GetFrameLevel() + 1)
+    cursor:SetPoint("TOPLEFT", recipe, "BOTTOMRIGHT", F.offsets.instructionsCursorX, F.offsets.instructionsCursorY)
+    cursor:SetSize(F.sizes.sourcesInstructionsCursor, F.sizes.sourcesInstructionsCursor)
+    cursor.texture = cursor:CreateTexture(nil, "ARTWORK")
+    cursor.texture:SetAllPoints(cursor)
+    cursor.texture:SetTexture(F.textures.cursor)
+    cursor.clickTexture = cursor:CreateTexture(nil, "ARTWORK")
+    cursor.clickTexture:SetSize(F.sizes.sourcesInstructionsClickTexture, F.sizes.sourcesInstructionsClickTexture)
+    cursor.clickTexture:SetPoint("BOTTOMRIGHT", cursor, "TOPLEFT", F.offsets.instructionsClickTextureX, F.offsets.instructionsClickTextureY)
+    cursor.clickTexture:SetTexture(F.textures.cursorClick)
+    frame:Hide()
+    return frame
+end
+
 ----------------------------- Header -----------------------------
 local function createSourcesRecipeIcon(parent)
     local recipeIcon = parent:CreateTexture(nil)

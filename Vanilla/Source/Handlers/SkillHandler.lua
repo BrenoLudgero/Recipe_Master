@@ -25,9 +25,9 @@ end
 local function getSkillID(i, getItemLink)
     local itemLink = getItemLink(i)
     if itemLink then
-        local skillID = rm.getIDFromLink(itemLink)
-        return skillID
+        return rm.getIDFromLink(itemLink)
     end
+    return false
 end
 
 local function skillNotSavedYet(skillLineID, skillID)
@@ -40,7 +40,7 @@ local function skillNotSavedYet(skillLineID, skillID)
 end
 
 local function saveNewSkill(skillLineID, skillID)
-    if skillNotSavedYet(skillLineID, skillID) then
+    if skillID and skillNotSavedYet(skillLineID, skillID) then
         table.insert(getSavedSkillsByProfessionID(skillLineID), skillID)
     end
 end
