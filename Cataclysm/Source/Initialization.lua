@@ -1,0 +1,95 @@
+local addonName, rm = ...
+-- rm: Globals within Recipe Master (variables, functions, frames)
+rm.frame = CreateFrame("Frame")
+rm.version = C_AddOns.GetAddOnMetadata(addonName, "Version")
+rm.author = C_AddOns.GetAddOnMetadata(addonName, "Author")
+rm.currentCharacter = UnitName("player")
+rm.currentFaction = UnitFactionGroup("player") -- Alliance/Horde, always in English
+rm.currentServer = GetRealmName()
+rm.locale = GetLocale()
+rm.recipeDB = {}
+rm.sourceDB = {}
+rm.L = {} -- Localized text
+rm.L.title = C_AddOns.GetAddOnMetadata(addonName, "Title")
+rm.F = { -- Frame settings
+    backdrops = {},
+    colors = {},
+    fonts = {},
+    fontSizes = {},
+    offsets = {},
+    sizes = {},
+    templates = {},
+    textures = {}
+}
+
+-- Creates the chat command "/rm" to open the add-on's options menu
+SLASH_RECIPEMASTER1 = "/rm"
+SlashCmdList["RECIPEMASTER"] = function()
+    Settings.OpenToCategory(rm.frame.name)
+end
+
+local defaultMainFramePreferences = {
+    mainFrameHeight = 413, -- Used when TradeSkillMaster is enabled
+    mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
+    sortAscending = true,
+    sortRecipesBy = "Name"
+}
+
+local defaultOptionsFramePreferences = {
+    backgroundOpacity = 1,
+    iconSpacing = 5,
+    interfaceScale = 0.1,
+    progressColor = {0.00, 0.44, 0.87},
+    progressTexture = "Interface/TARGETINGFRAME/BarFill2",
+    restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
+    showLearnedRecipes = true,
+    showRecipesInfo = true
+}
+
+local function oldPreferencesFound()
+    return RecipeMasterPreferences
+end
+
+function rm.resetOptionsFramePreferences()
+    RecipeMasterOptionsFramePreferences = defaultOptionsFramePreferences
+end
+
+-- Detects and deletes the old preferences table "RecipeMasterPreferences" (1.0.3 -> 1.1.0)
+-- and/or creates new tables to store the characters' learned skills and user preferences in SavedVariables
+function rm.createSavedVariables()
+    if oldPreferencesFound() then
+        RecipeMasterPreferences = nil
+    end
+    if not RecipeMasterProfessionsAndSkills then
+        RecipeMasterProfessionsAndSkills = {}
+    end
+    if not RecipeMasterMainFramePreferences then
+        RecipeMasterMainFramePreferences = defaultMainFramePreferences
+    end
+    if not RecipeMasterOptionsFramePreferences then
+        rm.resetOptionsFramePreferences()
+    end
+end
+
+-- Inserts new options created after an update in SavedVariables
+function rm.updateSavedVariables()
+    for key, value in pairs(defaultMainFramePreferences) do
+        if RecipeMasterMainFramePreferences[key] == nil then
+            RecipeMasterMainFramePreferences[key] = value
+        end
+    end
+    for key, value in pairs(defaultOptionsFramePreferences) do
+        if RecipeMasterOptionsFramePreferences[key] == nil then
+            RecipeMasterOptionsFramePreferences[key] = value
+        end
+    end
+end
+
+function rm.updateSavedCharacters()
+    if not RecipeMasterProfessionsAndSkills[rm.currentServer] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer] = {}
+    end
+    if not RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentCharacter] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentCharacter] = {}
+    end
+end

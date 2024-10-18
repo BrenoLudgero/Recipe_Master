@@ -1,0 +1,99 @@
+## Interface: 40400
+## Version: 2.3.0
+
+## Title: Recipe Master
+## Title-esMX: Maestro de Recetas
+## Title-esES: Maestro de Recetas
+## Title-ptBR: Mestre das Receitas
+## Title-deDE: Rezeptmeister
+## Title-frFR: Maître des Recettes
+## Title-ruRU: Мастер Рецептов
+## Title-koKR: 레시피 마스터
+## Title-zhTW: 食譜大師
+## Title-zhCN: 食谱大师
+
+## Notes: Track your learned and missing recipes to master your professions!
+## Notes-esMX: ¡Lleva un registro de tus recetas aprendidas y las que te faltan para dominar tus profesiones!
+## Notes-esES: ¡Lleva un registro de tus recetas aprendidas y las que te faltan para dominar tus profesiones!
+## Notes-ptBR: Acompanhe as receitas que você aprendeu e as que estão faltando para dominar suas profissões!
+## Notes-deDE: Verfolge deine erlernten und fehlenden rezepte um deine berufe zu meistern!
+## Notes-frFR: Suivez vos recettes apprises et manquantes pour maîtriser vos professions!
+## Notes-ruRU: Отслеживайте выученные и отсутствующие рецепты чтобы овладеть своими профессиями!
+## Notes-koKR: 당신의 전문 기술을 마스터하기 위해 학습한 레시피와 부족한 레시피를 추적하세요!
+## Notes-zhTW: 跟蹤你學到的食譜和你錯過的食譜，以掌握你的職業！
+## Notes-zhCN: 跟踪你学到的食谱和你错过的食谱，以掌握你的职业！
+
+## Author: Breno Ludgero
+
+## SavedVariables: RecipeMasterProfessionsAndSkills, RecipeMasterMainFramePreferences, RecipeMasterOptionsFramePreferences
+
+Source/Initialization.lua
+Source/Localization.lua
+Source/Globals.lua
+
+Source/Database/Recipes/Alchemy.lua
+Source/Database/Recipes/Blacksmithing.lua
+Source/Database/Recipes/Cooking.lua
+Source/Database/Recipes/Enchanting.lua
+Source/Database/Recipes/Engineering.lua
+Source/Database/Recipes/Firstaid.lua
+Source/Database/Recipes/Fishing.lua
+Source/Database/Recipes/Inscription.lua
+Source/Database/Recipes/Jewelcrafting.lua
+Source/Database/Recipes/Leatherworking.lua
+Source/Database/Recipes/Mining.lua
+Source/Database/Recipes/Tailoring.lua
+
+Source/Database/Sources/Alchemy.lua
+Source/Database/Sources/Blacksmithing.lua
+Source/Database/Sources/Cooking.lua
+Source/Database/Sources/Enchanting.lua
+Source/Database/Sources/Engineering.lua
+Source/Database/Sources/Firstaid.lua
+Source/Database/Sources/Fishing.lua
+Source/Database/Sources/Inscription.lua
+Source/Database/Sources/Jewelcrafting.lua
+Source/Database/Sources/Leatherworking.lua
+Source/Database/Sources/Mining.lua
+Source/Database/Sources/Tailoring.lua
+
+Source/Database/NPCs.lua
+Source/Database/Objects.lua
+Source/Database/Quests.lua
+Source/Database/Unique.lua
+
+Source/Handlers/SpecializationHandler.lua
+Source/Handlers/ProfessionHandler.lua
+Source/Handlers/SkillHandler.lua
+Source/Handlers/ReputationHandler.lua
+Source/Handlers/RecipeHandler.lua
+Source/Handlers/SourceHandler.lua
+Source/Handlers/TooltipHandler.lua
+
+Source/Interface/FrameSettings.lua
+
+Source/Interface/Setup/MainFrameSetup.lua
+Source/Interface/Setup/RecipesFrameSetup.lua
+Source/Interface/Setup/SourcesFrameSetup.lua
+Source/Interface/Setup/BottomTabSetup.lua
+Source/Interface/Setup/OptionsFrameSetup.lua
+
+Source/Interface/Creation/MainFrameCreation.lua
+Source/Interface/Creation/RecipesFrameCreation.lua
+Source/Interface/Creation/SourcesFrameCreation.lua
+Source/Interface/Creation/BottomTabCreation.lua
+Source/Interface/Creation/OptionsFrameCreation.lua
+
+Source/Interface/Management/MainFrameManager.lua
+Source/Interface/Management/RecipesFrameManager.lua
+Source/Interface/Management/SourcesFrameManager.lua
+Source/Interface/Management/BottomTabManager.lua
+
+Source/Interface/Display/RecipesDisplay.lua
+Source/Interface/Display/SourcesDisplay.lua
+
+Source/Interface/Frames.lua
+
+Source/Cacher.lua
+Source/Handlers/EventHandler.lua
+Source/Main.lua
