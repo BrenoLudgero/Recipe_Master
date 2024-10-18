@@ -7,7 +7,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "2s10c",
+				cost = "1svr88cpr",
 			},
 		},
 	},
@@ -89,16 +89,16 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "4s21c",
+				cost = "3svr76cpr",
 			},
 		},
 	},
 	[2698] = {
 		drop = {
-			[480] = 14.0,
+			[480] = 10.0,
 			[10157] = 7.0,
-			[2235] = 6.0,
 			[2176] = 3.0,
+			[2235] = 3.0,
 			[3662] = 1.6,
 			[11714] = 0.8,
 			[2232] = 0.8,
@@ -165,7 +165,6 @@ rm.sourceDB[185] = {
 			[2338] = 0.12,
 			[2163] = 0.12,
 			[2156] = 0.12,
-			[2191] = 0.12,
 			[10160] = 0.12,
 			[2234] = 0.12,
 			[2069] = 0.11,
@@ -173,6 +172,7 @@ rm.sourceDB[185] = {
 			[2171] = 0.11,
 			[12138] = 0.11,
 			[6789] = 0.11,
+			[2191] = 0.11,
 			[199] = 0.1,
 			[2070] = 0.1,
 			[2323] = 0.1,
@@ -185,7 +185,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "4s21c",
+				cost = "3svr76cpr",
 			},
 		},
 	},
@@ -195,7 +195,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "7s11c",
+				cost = "7svr52cpr",
 			},
 		},
 	},
@@ -203,8 +203,8 @@ rm.sourceDB[185] = {
 		drop = {
 			[1177] = 5.0,
 			[335] = 1.7,
-			[428] = 1.6,
 			[1178] = 1.5,
+			[428] = 1.0,
 			[1169] = 0.9,
 			[4462] = 0.8,
 			[1164] = 0.7,
@@ -276,7 +276,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "4s21c",
+				cost = "3svr76cpr",
 			},
 		},
 	},
@@ -286,7 +286,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "16s84c",
+				cost = "15svr5cpr",
 			},
 		},
 	},
@@ -296,7 +296,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "2s52c",
+				cost = "2svr25cpr",
 			},
 		},
 	},
@@ -306,7 +306,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "3s55c",
+				cost = "3svr76cpr",
 			},
 		},
 	},
@@ -316,7 +316,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "3s55c",
+				cost = "3svr76cpr",
 			},
 		},
 	},
@@ -326,7 +326,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "16s84c",
+				cost = "15svr5cpr",
 			},
 		},
 	},
@@ -336,7 +336,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "16s84c",
+				cost = "15svr5cpr",
 			},
 		},
 	},
@@ -346,13 +346,13 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "16s84c",
+				cost = "15svr5cpr",
 			},
 			[1148] = {
-				cost = "14s22c",
+				cost = "18svr",
 			},
 			[2821] = {
-				cost = "16s",
+				cost = "16svr",
 			},
 		},
 	},
@@ -362,7 +362,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[340] = {
-				cost = "14s22c",
+				cost = "15svr5cpr",
 			},
 		},
 	},
@@ -372,11 +372,11 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[3960] = {
-				cost = "16s",
+				cost = "16svr84cpr",
 			},
 			[12246] = {
 				stock = 1,
-				cost = "16s",
+				cost = "16svr",
 			},
 		},
 	},
@@ -386,11 +386,11 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[3489] = {
-				cost = "18s94c",
+				cost = "18svr",
 			},
 			[12245] = {
 				stock = 1,
-				cost = "18s",
+				cost = "18svr",
 			},
 		},
 	},
@@ -411,11 +411,11 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[2814] = {
-				cost = "10s52c",
+				cost = "10svr52cpr",
 			},
 			[12246] = {
 				stock = 1,
-				cost = "10s",
+				cost = "10svr",
 			},
 		},
 	},
@@ -427,21 +427,21 @@ rm.sourceDB[185] = {
 	[5483] = {
 		vendor = {
 			[3881] = {
-				cost = "1s47c",
+				cost = "1svr47cpr",
 			},
 		},
 	},
 	[5484] = {
 		vendor = {
 			[3081] = {
-				cost = "2s52c",
+				cost = "2svr52cpr",
 			},
 		},
 	},
 	[5485] = {
 		vendor = {
 			[4200] = {
-				cost = "4s21c",
+				cost = "4svr",
 			},
 		},
 	},
@@ -451,7 +451,7 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[3482] = {
-				cost = "3s91c",
+				cost = "4svr40cpr",
 			},
 		},
 	},
@@ -463,18 +463,18 @@ rm.sourceDB[185] = {
 	[5488] = {
 		vendor = {
 			[3482] = {
-				cost = "3s55c",
+				cost = "4svr",
 			},
 		},
 	},
 	[5489] = {
 		vendor = {
 			[3960] = {
-				cost = "12s",
+				cost = "12svr63cpr",
 			},
 			[12245] = {
 				stock = 1,
-				cost = "12s",
+				cost = "12svr",
 			},
 		},
 	},
@@ -517,199 +517,200 @@ rm.sourceDB[185] = {
 	[5528] = {
 		vendor = {
 			[4305] = {
-				cost = "7s11c",
+				cost = "8svr",
 			},
 			[4307] = {
-				cost = "8s",
+				cost = "8svr",
 			},
 		},
 	},
 	[6039] = {
 		vendor = {
 			[2664] = {
-				cost = "50s",
+				cost = "50svr",
 			},
 		},
 	},
 	[6325] = {
 		vendor = {
 			[66] = {
-				cost = "37c",
+				cost = "40cpr",
 			},
 			[1684] = {
-				cost = "42c",
+				cost = "42cpr",
 			},
 			[3029] = {
-				cost = "42c",
+				cost = "42cpr",
 			},
 			[3550] = {
-				cost = "40c",
+				cost = "40cpr",
 			},
 			[4265] = {
-				cost = "42c",
+				cost = "42cpr",
 			},
 			[4574] = {
-				cost = "40c",
+				cost = "40cpr",
 			},
 			[5494] = {
-				cost = "42c",
+				cost = "42cpr",
 			},
 			[5940] = {
-				cost = "42c",
+				cost = "40cpr",
 			},
 			[8508] = {
-				cost = "42c",
+				cost = "42cpr",
 			},
 		},
 	},
 	[6326] = {
 		vendor = {
 			[3550] = {
-				cost = "40c",
+				cost = "40cpr",
 			},
 			[4305] = {
-				cost = "35c",
+				cost = "40cpr",
 			},
 			[5162] = {
-				cost = "40c",
+				cost = "42cpr",
 			},
 			[5942] = {
-				cost = "40c",
+				cost = "42cpr",
 			},
 			[10118] = {
-				cost = "35c",
+				cost = "40cpr",
 			},
 		},
 	},
 	[6328] = {
 		vendor = {
 			[66] = {
-				cost = "3s76c",
+				cost = "4svr",
 			},
 			[1684] = {
-				cost = "4s21c",
+				cost = "4svr21cpr",
 			},
 			[3027] = {
-				cost = "3s78c",
+				cost = "4svr",
 			},
 			[4265] = {
-				cost = "4s21c",
+				cost = "4svr21cpr",
 			},
 			[4574] = {
-				cost = "4s",
+				cost = "4svr",
 			},
 			[5162] = {
-				cost = "4s",
+				cost = "4svr21cpr",
 			},
 			[5748] = {
-				cost = "4s21c",
+				cost = "4svr21cpr",
 			},
 			[5940] = {
-				cost = "4s21c",
+				cost = "4svr",
 			},
 		},
 	},
 	[6329] = {
 		vendor = {
 			[1684] = {
-				cost = "4s21c",
+				cost = "4svr21cpr",
 			},
 		},
 	},
 	[6330] = {
 		vendor = {
 			[2383] = {
-				cost = "11s29c",
+				cost = "12svr",
 			},
 			[2397] = {
-				cost = "12s63c",
+				cost = "12svr63cpr",
 			},
 			[3027] = {
-				cost = "11s36c",
+				cost = "12svr",
 			},
 			[3029] = {
-				cost = "12s63c",
+				cost = "12svr63cpr",
 			},
 			[3497] = {
-				cost = "12s",
+				cost = "12svr63cpr",
 			},
 			[4553] = {
-				cost = "10s66c",
+				cost = "12svr",
 			},
 			[5494] = {
-				cost = "10s66c",
+				cost = "12svr63cpr",
 			},
 		},
 	},
 	[6368] = {
 		vendor = {
 			[3178] = {
-				cost = "4s",
+				cost = "3svr55cpr",
 			},
 			[3333] = {
-				cost = "3s76c",
+				cost = "3svr55cpr",
 			},
 			[3497] = {
-				cost = "4s",
+				cost = "4svr21cpr",
 			},
 			[4305] = {
-				cost = "3s55c",
+				cost = "4svr",
 			},
 			[4307] = {
-				cost = "4s",
+				cost = "4svr21cpr",
 			},
 			[4553] = {
-				cost = "3s55c",
+				cost = "4svr",
 			},
 			[5494] = {
-				cost = "3s55c",
+				cost = "4svr21cpr",
 			},
 			[5748] = {
-				cost = "4s21c",
+				cost = "4svr21cpr",
 			},
 			[5942] = {
-				cost = "4s",
+				cost = "4svr21cpr",
 			},
 			[10118] = {
-				cost = "3s55c",
+				cost = "4svr",
 			},
 		},
 	},
 	[6369] = {
 		vendor = {
 			[2383] = {
-				cost = "20s70c",
+				cost = "22svr",
 			},
 			[2664] = {
-				cost = "22s",
+				cost = "22svr",
 			},
 			[3178] = {
-				cost = "22s",
+				cost = "19svr55cpr",
 			},
 			[3333] = {
-				cost = "23s15c",
+				cost = "19svr55cpr",
 			},
 			[4307] = {
-				cost = "22s",
+				cost = "23svr15cpr",
 			},
 			[4574] = {
-				cost = "22s",
+				cost = "22svr",
 			},
 			[5162] = {
-				cost = "22s",
+				cost = "23svr15cpr",
 			},
 			[12033] = {
-				cost = "22s",
+				cost = "19svr55cpr",
 			},
 			[12962] = {
-				cost = "23s15c",
+				cost = "23svr15cpr",
 			},
 		},
 	},
 	[6661] = {
 		drop = {
+			[3456] = 14.0,
 			[3416] = 3.0,
-			[3246] = 1.6,
+			[3246] = 1.3,
 			[3276] = 1.0,
 			[4316] = 0.8,
 			[3395] = 0.7,
@@ -769,7 +770,6 @@ rm.sourceDB[185] = {
 			[3260] = 0.06,
 			[3269] = 0.06,
 			[3425] = 0.05,
-			[3456] = 0.05,
 			[3272] = 0.05,
 			[3384] = 0.05,
 			[3238] = 0.05,
@@ -800,10 +800,10 @@ rm.sourceDB[185] = {
 	[6892] = {
 		vendor = {
 			[1465] = {
-				cost = "2s64c",
+				cost = "2svr63cpr",
 			},
 			[3556] = {
-				cost = "2s63c",
+				cost = "2svr50cpr",
 			},
 		},
 	},
@@ -815,7 +815,7 @@ rm.sourceDB[185] = {
 	[12226] = {
 		vendor = {
 			[2118] = {
-				cost = "25c",
+				cost = "25cpr",
 			},
 		},
 	},
@@ -823,209 +823,209 @@ rm.sourceDB[185] = {
 		vendor = {
 			[12246] = {
 				stock = 1,
-				cost = "16s",
+				cost = "16svr",
 			},
 		},
 	},
 	[12228] = {
 		vendor = {
 			[734] = {
-				cost = "52s63c",
+				cost = "50svr",
 			},
 			[1148] = {
-				cost = "44s44c",
+				cost = "56svr25cpr",
 			},
 			[2810] = {
-				cost = "47s5c",
+				cost = "44svr44cpr",
 			},
 			[2821] = {
-				cost = "50s",
+				cost = "50svr",
 			},
 			[4879] = {
-				cost = "52s63c",
+				cost = "50svr",
 			},
 			[4897] = {
-				cost = "50s",
+				cost = "45svr",
 			},
 			[12245] = {
 				stock = 1,
-				cost = "50s",
+				cost = "50svr",
 			},
 		},
 	},
 	[12229] = {
 		vendor = {
 			[7947] = {
-				cost = "50s",
+				cost = "50svr",
 			},
 			[8145] = {
-				cost = "44s44c",
+				cost = "50svr",
 			},
 			[12246] = {
 				stock = 1,
-				cost = "50s",
+				cost = "50svr",
 			},
 		},
 	},
 	[12231] = {
 		vendor = {
 			[734] = {
-				cost = "28s23c",
+				cost = "30svr",
 			},
 			[1148] = {
-				cost = "26s66c",
+				cost = "33svr75cpr",
 			},
 			[12245] = {
 				stock = 1,
-				cost = "30s",
+				cost = "30svr",
 			},
 		},
 	},
 	[12232] = {
 		vendor = {
 			[989] = {
-				cost = "40s",
+				cost = "50svr",
 			},
 			[4879] = {
-				cost = "52s63c",
+				cost = "50svr",
 			},
 			[9636] = {
-				cost = "50s",
+				cost = "44svr44cpr",
 			},
 			[12245] = {
 				stock = 1,
-				cost = "50s",
+				cost = "50svr",
 			},
 		},
 	},
 	[12233] = {
 		vendor = {
 			[4897] = {
-				cost = "30s",
+				cost = "27svr",
 			},
 			[8150] = {
-				cost = "30s",
+				cost = "30svr",
 			},
 			[12246] = {
 				stock = 1,
-				cost = "30s",
+				cost = "30svr",
 			},
 		},
 	},
 	[12239] = {
 		vendor = {
 			[4879] = {
-				cost = "73s68c",
+				cost = "70svr",
 			},
 			[4897] = {
-				cost = "70s",
+				cost = "63svr",
 			},
 			[12246] = {
 				stock = 1,
-				cost = "70s",
+				cost = "70svr",
 			},
 		},
 	},
 	[12240] = {
 		vendor = {
 			[8150] = {
-				cost = "70s",
+				cost = "70svr",
 			},
 			[9636] = {
-				cost = "70s",
+				cost = "62svr22cpr",
 			},
 			[12245] = {
 				stock = 1,
-				cost = "70s",
+				cost = "70svr",
 			},
 		},
 	},
 	[13939] = {
 		vendor = {
 			[8137] = {
-				cost = "1g60s",
+				cost = "1gld60svr",
 			},
 		},
 	},
 	[13940] = {
 		vendor = {
 			[2664] = {
-				cost = "1g60s",
+				cost = "1gld60svr",
 			},
 		},
 	},
 	[13941] = {
 		vendor = {
 			[2664] = {
-				cost = "1g60s",
+				cost = "1gld60svr",
 			},
 		},
 	},
 	[13942] = {
 		vendor = {
 			[8137] = {
-				cost = "1g60s",
+				cost = "1gld60svr",
 			},
 		},
 	},
 	[13943] = {
 		vendor = {
 			[2664] = {
-				cost = "1g60s",
+				cost = "1gld60svr",
 			},
 		},
 	},
 	[13945] = {
 		vendor = {
 			[8137] = {
-				cost = "2g",
+				cost = "2gld",
 			},
 		},
 	},
 	[13946] = {
 		vendor = {
 			[8137] = {
-				cost = "2g",
+				cost = "2gld",
 			},
 		},
 	},
 	[13947] = {
 		vendor = {
 			[7947] = {
-				cost = "2g",
+				cost = "2gld",
 			},
 			[8145] = {
-				cost = "1g77s77c",
+				cost = "2gld10svr52cpr",
 			},
 		},
 	},
 	[13948] = {
 		vendor = {
 			[7947] = {
-				cost = "2g",
+				cost = "2gld",
 			},
 			[8145] = {
-				cost = "1g77s77c",
+				cost = "2gld",
 			},
 		},
 	},
 	[13949] = {
 		vendor = {
 			[7947] = {
-				cost = "2g",
+				cost = "2gld",
 			},
 			[8145] = {
-				cost = "1g77s77c",
+				cost = "2gld",
 			},
 		},
 	},
 	[16072] = {
 		vendor = {
 			[3955] = {
-				cost = "1g",
+				cost = "1gld",
 			},
 			[12033] = {
-				cost = "1g",
+				cost = "88svr88cpr",
 			},
 		},
 	},
@@ -1037,26 +1037,26 @@ rm.sourceDB[185] = {
 	[16110] = {
 		vendor = {
 			[2803] = {
-				cost = "1g13s68c",
+				cost = "1gld26svr31cpr",
 			},
 			[2806] = {
-				cost = "1g6s66c",
+				cost = "1gld6svr66cpr",
 			},
 			[11187] = {
-				cost = "1g20s",
+				cost = "1gld20svr",
 			},
 		},
 	},
 	[16111] = {
 		vendor = {
 			[989] = {
-				cost = "96s",
+				cost = "1gld20svr",
 			},
 			[1149] = {
-				cost = "1g6s66c",
+				cost = "1gld13svr68cpr",
 			},
 			[4305] = {
-				cost = "1g6s66c",
+				cost = "1gld20svr",
 			},
 		},
 	},
@@ -1064,82 +1064,82 @@ rm.sourceDB[185] = {
 		vendor = {
 			[8139] = {
 				stock = 1,
-				cost = "30s",
+				cost = "30svr",
 			},
 		},
 	},
 	[17062] = {
 		vendor = {
 			[2383] = {
-				cost = "20s70c",
+				cost = "22svr",
 			},
 			[2664] = {
-				cost = "22s",
+				cost = "22svr",
 			},
 			[3178] = {
-				cost = "22s",
+				cost = "19svr55cpr",
 			},
 			[3333] = {
-				cost = "23s15c",
+				cost = "19svr55cpr",
 			},
 			[4307] = {
-				cost = "22s",
+				cost = "23svr15cpr",
 			},
 			[4574] = {
-				cost = "22s",
+				cost = "22svr",
 			},
 			[5162] = {
-				cost = "22s",
+				cost = "23svr15cpr",
 			},
 			[12033] = {
-				cost = "22s",
+				cost = "19svr55cpr",
 			},
 			[12962] = {
-				cost = "23s15c",
+				cost = "23svr15cpr",
 			},
 		},
 	},
 	[17200] = {
 		vendor = {
 			[13420] = {
-				cost = "25c",
+				cost = "25cpr",
 			},
 			[13429] = {
-				cost = "25c",
+				cost = "25cpr",
 			},
 			[13432] = {
-				cost = "25c",
+				cost = "25cpr",
 			},
 			[13433] = {
-				cost = "25c",
+				cost = "25cpr",
 			},
 			[13435] = {
-				cost = "25c",
+				cost = "25cpr",
 			},
 			[216902] = {
-				cost = "25c",
+				cost = "25cpr",
 			},
 		},
 	},
 	[17201] = {
 		vendor = {
 			[13420] = {
-				cost = "2s40c",
+				cost = "2svr40cpr",
 			},
 			[13429] = {
-				cost = "2s40c",
+				cost = "2svr40cpr",
 			},
 			[13432] = {
-				cost = "2s40c",
+				cost = "2svr40cpr",
 			},
 			[13433] = {
-				cost = "2s40c",
+				cost = "2svr40cpr",
 			},
 			[13435] = {
-				cost = "2s40c",
+				cost = "2svr40cpr",
 			},
 			[216902] = {
-				cost = "2s40c",
+				cost = "2svr40cpr",
 			},
 		},
 	},
@@ -1164,13 +1164,13 @@ rm.sourceDB[185] = {
 	[18046] = {
 		vendor = {
 			[4782] = {
-				cost = "1g20s",
+				cost = "1gld20svr",
 			},
 			[7733] = {
-				cost = "1g8s",
+				cost = "1gld8svr",
 			},
 			[8125] = {
-				cost = "1g20s",
+				cost = "1gld20svr",
 			},
 		},
 	},
@@ -1181,19 +1181,19 @@ rm.sourceDB[185] = {
 		},
 		vendor = {
 			[6779] = {
-				cost = "2s",
+				cost = "2svr",
 			},
 		},
 	},
 	[18267] = {
 		drop = {
-			[14354] = 96.0,
+			[14354] = 97.0,
 		},
 	},
 	[20075] = {
 		vendor = {
 			[4879] = {
-				cost = "21s5c",
+				cost = "20svr",
 			},
 		},
 	},
@@ -1210,92 +1210,92 @@ rm.sourceDB[185] = {
 	[21099] = {
 		vendor = {
 			[2381] = {
-				cost = "5s26c",
+				cost = "5svr",
 			},
 			[2397] = {
-				cost = "5s26c",
+				cost = "5svr26cpr",
 			},
 			[2664] = {
-				cost = "5s",
+				cost = "5svr",
 			},
 			[3027] = {
-				cost = "4s73c",
+				cost = "5svr26cpr",
 			},
 			[3085] = {
-				cost = "5s26c",
+				cost = "5svr26cpr",
 			},
 			[3400] = {
-				cost = "4s44c",
+				cost = "4svr73cpr",
 			},
 			[4223] = {
-				cost = "5s26c",
+				cost = "5svr",
 			},
 			[4265] = {
-				cost = "5s26c",
+				cost = "5svr",
 			},
 			[4553] = {
-				cost = "4s44c",
+				cost = "5svr",
 			},
 			[5160] = {
-				cost = "5s26c",
+				cost = "5svr",
 			},
 			[5483] = {
-				cost = "4s70c",
+				cost = "4svr73cpr",
 			},
 			[8307] = {
-				cost = "5s26c",
+				cost = "5svr26cpr",
 			},
 			[12033] = {
-				cost = "5s",
+				cost = "4svr44cpr",
 			},
 			[14738] = {
-				cost = "5s",
+				cost = "5svr",
 			},
 		},
 	},
 	[21219] = {
 		vendor = {
 			[2381] = {
-				cost = "52s63c",
+				cost = "50svr",
 			},
 			[2397] = {
-				cost = "52s63c",
+				cost = "52svr63cpr",
 			},
 			[2664] = {
-				cost = "50s",
+				cost = "50svr",
 			},
 			[3027] = {
-				cost = "47s36c",
+				cost = "50svr",
 			},
 			[3085] = {
-				cost = "52s63c",
+				cost = "52svr63cpr",
 			},
 			[3400] = {
-				cost = "44s44c",
+				cost = "47svr36cpr",
 			},
 			[4223] = {
-				cost = "52s63c",
+				cost = "50svr",
 			},
 			[4265] = {
-				cost = "52s63c",
+				cost = "52svr63cpr",
 			},
 			[4553] = {
-				cost = "44s44c",
+				cost = "50svr",
 			},
 			[5160] = {
-				cost = "52s63c",
+				cost = "50svr",
 			},
 			[5483] = {
-				cost = "47s5c",
+				cost = "47svr36cpr",
 			},
 			[8307] = {
-				cost = "52s63c",
+				cost = "52svr63cpr",
 			},
 			[12033] = {
-				cost = "50s",
+				cost = "44svr44cpr",
 			},
 			[14738] = {
-				cost = "50s",
+				cost = "50svr",
 			},
 		},
 	},

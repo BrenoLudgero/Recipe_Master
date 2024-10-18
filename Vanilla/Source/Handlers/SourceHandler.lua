@@ -110,31 +110,31 @@ function rm.getCreatureInfo(sourceID, sourceData)
 end
 
 ------------------------- Vendor -------------------------
-local function getCost(cost, currencyCharacter)
-    return tonumber(cost:match("(%d+)"..currencyCharacter)) or 0
+local function getCost(cost, currencySuffix)
+    return tonumber(cost:match("(%d+)"..currencySuffix)) or 0
 end
 
 local function getFormattedCost(cost)
-    local gold = getCost(cost, "g")
-    local silver = getCost(cost, "s")
-    local copper = getCost(cost, "c")
-    local exchangeTicket = getCost(cost, "t")
-    local tarnishedUndermineReal = getCost(cost, "ur")
+    local goldAmount = getCost(cost, "gld")
+    local silverAmount = getCost(cost, "svr")
+    local copperAmount = getCost(cost, "cpr")
+    local engineeringExchangeTicket = getCost(cost, "eet")
+    local tarnishedUndermineReal = getCost(cost, "tur")
     local formattedCost = ""
-    if gold > 0 then
-        formattedCost = formattedCost.." "..gold..F.textures.goldIcon
+    if goldAmount > 0 then
+        formattedCost = formattedCost.." "..goldAmount..F.textures.goldCoin
     end
-    if silver > 0 then
-        formattedCost = formattedCost.." "..silver..F.textures.silverIcon
+    if silverAmount > 0 then
+        formattedCost = formattedCost.." "..silverAmount..F.textures.silverCoin
     end
-    if copper > 0 then
-        formattedCost = formattedCost.." "..copper..F.textures.copperIcon
+    if copperAmount > 0 then
+        formattedCost = formattedCost.." "..copperAmount..F.textures.copperCoin
     end
-    if exchangeTicket > 0 then
-        formattedCost = formattedCost.." "..exchangeTicket..F.textures.exchangeTicket
+    if engineeringExchangeTicket > 0 then
+        formattedCost = engineeringExchangeTicket..F.textures.exchangeTicket
     end
     if tarnishedUndermineReal > 0 then
-        formattedCost = formattedCost.." "..tarnishedUndermineReal..F.textures.tarnishedUndermineReal
+        formattedCost = tarnishedUndermineReal..F.textures.tarnishedUndermineReal
     end
     return formattedCost
 end

@@ -12037,6 +12037,24 @@ rm.npcDB = {
 			141,
 		},
 	},
+	[2042] = {
+		level = "5 - 6",
+		names = {
+			deDE = "Nachtsäbler",
+			enUS = "Nightsaber",
+			esES = "Sable De La Noche",
+			esMX = "Sable De La Noche",
+			frFR = "Sabre De Nuit Sauvage",
+			koKR = "흑호",
+			ptBR = "Sabre-da-noite",
+			ruRU = "Ночной Саблезуб",
+			zhCN = "夜刃豹",
+			zhTW = "夜刃豹",
+		},
+		zones = {
+			141,
+		},
+	},
 	[2043] = {
 		names = {
 			deDE = "Pirschender Nachtsäbler",
@@ -62184,6 +62202,24 @@ rm.npcDB = {
 		},
 		classification = "Rare",
 		level = "58 - 60",
+		zones = {
+			51,
+		},
+	},
+	[228723] = {
+		level = "56 - 60",
+		names = {
+			deDE = "Obsidianhäscher",
+			enUS = "Obsidian Reaver",
+			esES = "Atracador De Obsidiana",
+			esMX = "Atracador De Obsidiana",
+			frFR = "Saccageur En Obsidienne",
+			koKR = "흑요석 약탈자",
+			ptBR = "Aniquilador Obsidiano",
+			ruRU = "Обсидиановый Разоритель",
+			zhCN = "黑曜石掠夺者",
+			zhTW = "黑曜石掠奪者",
+		},
 		zones = {
 			51,
 		},
