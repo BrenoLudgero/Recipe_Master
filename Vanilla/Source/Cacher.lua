@@ -2,6 +2,7 @@ local _, rm = ...
 local L = rm.L
 
 rm.cachedRecipes = {}
+rm.cachedItemNames = {}
 
 local function isRecipeForCurrentSeason(recipeData)
     return not recipeData.season or recipeData.season == rm.currentSeason
@@ -85,13 +86,17 @@ end
 local function cacheAllItemNames()
     for professionID in pairs(L.professions) do
         for _, sources in pairs(rm.sourceDB[professionID]) do
-            if type(sources) == "table" then
-                for sourceType, values in pairs(sources) do
-                    if sourceType == "item" and type(values) == "table" then
-                        for itemID in pairs(values) do
-                            local item = C_Item.GetItemInfo(itemID)
+            for sourceType, values in pairs(sources) do
+                if sourceType == "item" then
+                    for itemID in pairs(values) do
+                        if not rm.cachedItemNames[itemID] then
+                            local item = Item:CreateFromItemID(itemID)
+                            item:ContinueOnItemLoad(function()
+                                rm.cachedItemNames[itemID] = item:GetItemName()
+                            end)
                         end
                     end
+                    break
                 end
             end
         end

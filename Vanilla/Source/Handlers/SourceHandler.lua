@@ -302,20 +302,26 @@ function rm.getTrainerInfo(sourceID)
     return trainerInfo
 end
 
-------------------------- Fishing, Item -------------------------
-local function getNameAndChance(getNameFunction, firstColumn, sourceID, sourceData)
+------------------------- Fishing -------------------------
+function rm.getFishingInfo(sourceID, sourceData)
     local info = {}
-    local name = getNameFunction(sourceID)
+    local name = C_Map.GetAreaInfo(sourceID)
     info["fullName"] = name
-    info[firstColumn] = shortenLongName(name, F.sizes.sourcesCellTextLength["firstOfTwoColumns"])
+    info[L.name] = shortenLongName(name, F.sizes.sourcesCellTextLength["firstOfTwoColumns"])
     info[L.chance] = sourceData
     return info
 end
 
-function rm.getFishingInfo(sourceID, sourceData)
-    return getNameAndChance(C_Map.GetAreaInfo, L.zone, sourceID, sourceData)
-end
-
+------------------------- Item -------------------------
 function rm.getItemInfo(sourceID, sourceData)
-    return getNameAndChance(C_Item.GetItemInfo, L.name, sourceID, sourceData)
+    local info = {}
+    local name = rm.cachedItemNames[sourceID]
+    info["fullName"] = name
+    info[L.name] = shortenLongName(name, F.sizes.sourcesCellTextLength["firstOfTwoColumns"])
+    if sourceData ~= "" then
+        info[L.chance] = sourceData
+    else
+        info[L.chance] = L.unknown
+    end
+    return info
 end

@@ -10,10 +10,12 @@ local function setLocaleSpecificOffsets()
     if rm.locale == "esES" or rm.locale == "esMX" then
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 10
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
+        F.offsets.sourcesListColumnsX[L.item] = {3, 326}
     elseif rm.locale == "ptBR" then
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 10
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
         F.offsets.sourcesListTabX = 2
+        F.offsets.sourcesListColumnsX[L.item] = {3, 320}
     elseif rm.locale == "deDE" then
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 22
         F.offsets.sourcesListTabX = 0
@@ -46,6 +48,7 @@ local function setLocaleSpecificOffsets()
         F.offsets.sourcesListColumnsX[L.quest] = {3, 252, 330}
         F.offsets.sourcesListColumnsX[L.unique] = {3, 252, 330}
         F.offsets.sourcesListColumnsX[L.object] = {3, 252, 330}
+        F.offsets.sourcesListColumnsX[L.trainer] = {3, 330}
     elseif rm.locale == "zhTW" then
         F.offsets.recipeInfoY = 2
         F.offsets.sourcesListCellY = 2
