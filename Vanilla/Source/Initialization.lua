@@ -54,7 +54,9 @@ local defaultOptionsFramePreferences = {
     progressTexture = "Interface/TARGETINGFRAME/BarFill2",
     restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
     showLearnedRecipes = true,
-    showRecipesInfo = true
+    showRecipesInfo = true,
+    showAltsTooltipInfo = true,
+    showSourcesTooltipInfo = true
 }
 
 local function oldPreferencesFound()

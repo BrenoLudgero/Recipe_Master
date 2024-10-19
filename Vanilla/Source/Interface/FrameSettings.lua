@@ -27,7 +27,7 @@ local function setLocaleSpecificOffsets()
         F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 177, 230, 314}
     elseif rm.locale == "ruRU" then
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 5
-        F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 45
+        F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 35
         F.offsets.bottomTabTextY = 6.2
         F.offsets.sourcesListTabX = 0
         F.offsets.sourcesListTabTextX = 2
@@ -142,8 +142,9 @@ F.offsets.firstColumnX = 28
 F.offsets.secondColumnX = F.offsets.firstColumnX + 210
 F.offsets.thirdColumnX = F.offsets.secondColumnX + 190
 F.offsets.firstRowY = -128
-F.offsets.secondRowY = F.offsets.firstRowY - 103
+F.offsets.secondRowY = F.offsets.firstRowY - 105
 F.offsets.thirdRowY = F.offsets.firstRowY - 217
+F.offsets.fourthRowY = F.offsets.firstRowY - 317
 F.offsets.resetDefaultsX = 500
 F.offsets.resetDefaultsY = -25
 --------------- Texts ---------------
@@ -151,7 +152,8 @@ F.offsets.checkButtonTextX = 5
 F.offsets.generalTextY = -85
 F.offsets.dropdownLabelY = 12
 F.offsets.progressBarTextY = -300
-F.offsets.recipesWindowTextY = -188
+F.offsets.recipeTooltipTextY = -410
+F.offsets.recipesWindowTextY = -190
 F.offsets.sliderDescriptionY = 12
 F.offsets.sliderMinMaxTextX = 18
 F.offsets.sliderValueY = -2
@@ -174,6 +176,10 @@ F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 15
 F.offsets.showDetailsCheckY = F.offsets.secondRowY
 F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 6
 F.offsets.showLearnedCheckY = F.offsets.secondRowY
+F.offsets.showSourceTooltipCheckX = F.offsets.firstColumnX - 4
+F.offsets.showSourceTooltipCheckY = F.offsets.fourthRowY
+F.offsets.showAltTooltipCheckX = F.offsets.secondColumnX - 4
+F.offsets.showAltTooltipCheckY = F.offsets.fourthRowY
 
 setLocaleSpecificOffsets()
 

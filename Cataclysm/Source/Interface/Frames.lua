@@ -54,6 +54,7 @@ function rm.createAllFrameElements()
     rm.createOptionsText(F.fonts.optionSection, L.general, F.offsets.titlesTextX, F.offsets.generalTextY)
     rm.createOptionsText(F.fonts.optionSection, L.recipesWindow, F.offsets.titlesTextX, F.offsets.recipesWindowTextY)
     rm.createOptionsText(F.fonts.optionSection, L.progressBar, F.offsets.titlesTextX, F.offsets.progressBarTextY)
+    rm.createOptionsText(F.fonts.optionSection, L.recipeTooltip, F.offsets.titlesTextX, F.offsets.recipeTooltipTextY)
     rm.optionsFrameElements = {
         ---------- Sliders ----------
         opacitySlider = rm.createOpacitySlider(),
@@ -65,7 +66,9 @@ function rm.createAllFrameElements()
         restoreButton = rm.createRestoreIconDropdown(),
         ---------- Checkboxes ----------
         showRecipesInfo = rm.createShowRecipesInfoCheckButton(),
-        showLearnedButton = rm.createShowLearnedCheckButton()
+        showLearnedButton = rm.createShowLearnedCheckButton(),
+        showSourcesTooltipInfo = rm.createSourcesTooltipInfoCheckButton(),
+        showAltsTooltipInfo = rm.createAltsTooltipInfoCheckButton()
     }
     rm.createResetDefaultsButton(rm.optionsFrameElements)
 end

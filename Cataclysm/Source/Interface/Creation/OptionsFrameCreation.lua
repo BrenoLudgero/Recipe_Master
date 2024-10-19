@@ -107,8 +107,8 @@ function rm.createSpacingSlider()
     return slider
 end
 
-local function createCheckButton(parentFrame, xOffset, yOffset, savedVariable, labelText)
-    local button = CreateFrame("CheckButton", nil, parentFrame, F.templates.checkButton)
+local function createCheckButton(xOffset, yOffset, savedVariable, labelText)
+    local button = CreateFrame("CheckButton", nil, rm.optionsFrame, F.templates.checkButton)
     button:SetPoint("TOPLEFT", xOffset, yOffset)
     button:SetChecked(rm.getPreference(savedVariable))
     local label = rm.createOptionsText(F.fonts.optionDescription, labelText)
@@ -120,7 +120,6 @@ end
 
 function rm.createShowRecipesInfoCheckButton()
     return createCheckButton(
-        rm.optionsFrame, 
         F.offsets.showDetailsCheckX, 
         F.offsets.showDetailsCheckY, 
         "showRecipesInfo", 
@@ -130,11 +129,28 @@ end
 
 function rm.createShowLearnedCheckButton()
     return createCheckButton(
-        rm.optionsFrame, 
         F.offsets.showLearnedCheckX, 
         F.offsets.showDetailsCheckY, 
         "showLearnedRecipes", 
-        L.showLearned
+        L.showLearnedRecipes
+    )
+end
+
+function rm.createSourcesTooltipInfoCheckButton()
+    return createCheckButton(
+        F.offsets.showSourceTooltipCheckX,
+        F.offsets.showSourceTooltipCheckY,
+        "showSourcesTooltipInfo",
+        L.showSourcesTooltipInfo
+    )
+end
+
+function rm.createAltsTooltipInfoCheckButton()
+    return createCheckButton(
+        F.offsets.showAltTooltipCheckX,
+        F.offsets.showAltTooltipCheckY,
+        "showAltsTooltipInfo",
+        L.showAltsTooltipInfo
     )
 end
 

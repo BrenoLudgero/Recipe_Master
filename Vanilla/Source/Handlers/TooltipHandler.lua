@@ -57,27 +57,29 @@ local function getRecipeTooltipMessage(recipe, professionID)
     local message = ""
     local newLine = "\n"
     local newLineInfo = "\n  "
-    if recipe and recipe.sources then
+    if rm.getPreference("showSourcesTooltipInfo") and recipe and recipe.sources then
         message = message..newLine..WrapTextInColorCode(L.sources, F.colors.lightBlueHex)
         for sourceType in pairs(recipe.sources) do
             message = message..newLineInfo..(rm.getLocalizedSourceType(sourceType))
         end
     end
-    if #charactersWhoCraftRecipe > 0 then
-        message = message..newLine..WrapTextInColorCode(L.crafters, F.colors.lightGreenHex)
-        for _, character in pairs(charactersWhoCraftRecipe) do
-            message = message..newLineInfo..character
-        end
-    end
-    if #charactersMissingRecipe > 0 then
-        message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightPinkHex)
-        for _, character in pairs(charactersMissingRecipe) do
-            local characterLine = newLineInfo..character.." ("
-            characterLine = characterLine..L.skill.." "..getColoredSkill(character, recipe.skill, professionID)
-            if recipe.specialization then
-                characterLine = characterLine..", "..getColoredSpecialization(character, recipe.specialization, professionID)
+    if rm.getPreference("showAltsTooltipInfo") then
+        if #charactersWhoCraftRecipe > 0 then
+            message = message..newLine..WrapTextInColorCode(L.crafters, F.colors.lightGreenHex)
+            for _, character in pairs(charactersWhoCraftRecipe) do
+                message = message..newLineInfo..character
             end
-            message = message..characterLine..")"
+        end
+        if #charactersMissingRecipe > 0 then
+            message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightPinkHex)
+            for _, character in pairs(charactersMissingRecipe) do
+                local characterLine = newLineInfo..character.." ("
+                characterLine = characterLine..L.skill.." "..getColoredSkill(character, recipe.skill, professionID)
+                if recipe.specialization then
+                    characterLine = characterLine..", "..getColoredSpecialization(character, recipe.specialization, professionID)
+                end
+                message = message..characterLine..")"
+            end
         end
     end
     return rm.L.title..WrapTextInColorCode(message, F.colors.whiteHex)
@@ -127,16 +129,20 @@ end
 
 -- Appends the message to a recipe's tooltip
 GameTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
-    local itemName, itemLink = tooltip:GetItem()
-    if itemName and isItemARecipe(itemName) then
-        showMessageInTooltip(tooltip, itemName, itemLink)
+    if rm.getPreference("showAltsTooltipInfo") or rm.getPreference("showSourcesTooltipInfo") then
+        local itemName, itemLink = tooltip:GetItem()
+        if itemName and isItemARecipe(itemName) then
+            showMessageInTooltip(tooltip, itemName, itemLink)
+        end
     end
 end)
 
 -- Appends the message to a chat link tooltip
 ItemRefTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
-    local itemName, itemLink = tooltip:GetItem()
-    if itemName and isItemARecipe(itemName) then
-        showMessageInTooltip(tooltip, itemName, itemLink)
+    if rm.getPreference("showAltsTooltipInfo") or rm.getPreference("showSourcesTooltipInfo") then
+        local itemName, itemLink = tooltip:GetItem()
+        if itemName and isItemARecipe(itemName) then
+            showMessageInTooltip(tooltip, itemName, itemLink)
+        end
     end
 end)
