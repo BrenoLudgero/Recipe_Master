@@ -70,5 +70,5 @@ function rm.createAllFrameElements()
         showSourcesTooltipInfo = rm.createSourcesTooltipInfoCheckButton(),
         showAltsTooltipInfo = rm.createAltsTooltipInfoCheckButton()
     }
-    rm.createResetDefaultsButton(rm.optionsFrameElements)
+    rm.createResetDefaultsButton()
 end

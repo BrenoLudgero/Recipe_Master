@@ -70,9 +70,23 @@ function rm.toggleCheckButtonPreferenceOnClick(button, preference)
     end)
 end
 
-function rm.resetSavedOptionsOnClick(resetDefaultsButton, options)
+local function updateSlider(slider, value, displayValue)
+    slider:SetValue(value)
+    slider.valueDisplay:SetText(displayValue)
+end
+
+local function updateDropdown(dropdown, label)
+    UIDropDownMenu_SetText(dropdown, label)
+end
+
+local function updateCheckbox(checkbox, isChecked)
+    checkbox:SetChecked(isChecked)
+end
+
+function rm.resetSavedOptionsOnClick(resetDefaultsButton)
     resetDefaultsButton:SetScript("OnClick", function(self)
         rm.resetOptionsFramePreferences()
+        local options = rm.optionsFrameElements
         local opacity = rm.getPreference("backgroundOpacity")
         local scale = rm.getPreference("interfaceScale")
         local spacing = rm.getPreference("iconSpacing")
@@ -82,23 +96,26 @@ function rm.resetSavedOptionsOnClick(resetDefaultsButton, options)
         local showLearnedRecipes = rm.getPreference("showLearnedRecipes")
         local showAltsTooltipInfo = rm.getPreference("showAltsTooltipInfo")
         local showSourcesTooltipInfo = rm.getPreference("showSourcesTooltipInfo")
-        options.opacitySlider:SetValue(opacity * 100)
-        options.opacitySlider.valueDisplay:SetText((opacity * 100).."%")
-        options.scaleSlider:SetValue(scale)
-        options.scaleSlider.valueDisplay:SetText(((scale + 1) * 100).."%")
-        rm.mainFrame:SetScale(UIParent:GetEffectiveScale() + scale)
-        rm.restoreButton:SetScale(UIParent:GetEffectiveScale() + scale)
-        options.spacingSlider:SetValue(spacing)
-        options.spacingSlider.valueDisplay:SetText(spacing)
-        UIDropDownMenu_SetText(options.progressBrightness, L.bright)
+        -- Sliders --
+        updateSlider(options.opacitySlider, opacity * 100, (opacity * 100) .. "%")
+        updateSlider(options.scaleSlider, scale, ((scale + 1) * 100) .. "%")
+        updateSlider(options.spacingSlider, spacing, spacing)
+        -- Dropdowns --
+        updateDropdown(options.progressBrightness, L.bright)
+        updateDropdown(options.progressColor, L.blue)
+        updateDropdown(options.restoreButton, L.epic)
+        -- Textures and colors --
         updateFrameTexture(rm.progressBar, "progressTexture")
-        UIDropDownMenu_SetText(options.progressColor, L.blue)
         rm.progressBar:SetStatusBarColor(unpack(progressColorPref))
-        UIDropDownMenu_SetText(options.restoreButton, L.epic)
         rm.restoreButton.texture:SetTexture(restoreButtonIconTexture)
-        options.showRecipesInfo:SetChecked(showRecipesInfoPref)
-        options.showLearnedButton:SetChecked(showLearnedRecipes)
-        options.showAltsTooltipInfo:SetChecked(showAltsTooltipInfo)
-        options.showSourcesTooltipInfo:SetChecked(showSourcesTooltipInfo)
+        -- Checkboxes --
+        updateCheckbox(options.showRecipesInfo, showRecipesInfoPref)
+        updateCheckbox(options.showLearnedButton, showLearnedRecipes)
+        updateCheckbox(options.showAltsTooltipInfo, showAltsTooltipInfo)
+        updateCheckbox(options.showSourcesTooltipInfo, showSourcesTooltipInfo)
+        -- Frame scaling --
+        local effectiveScale = UIParent:GetEffectiveScale()
+        rm.mainFrame:SetScale(effectiveScale + scale)
+        rm.restoreButton:SetScale(effectiveScale + scale)
     end)
 end
