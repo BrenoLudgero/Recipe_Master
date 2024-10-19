@@ -161,14 +161,6 @@ function rm.setInitialDropdownValue(dropdown, savedVariable)
     end
 end
 
-local function toggleSortOrder()
-    if rm.getPreference("sortAscending") then
-        rm.setPreference("sortAscending", false)
-    else
-        rm.setPreference("sortAscending", true)
-    end
-end
-
 function rm.updateArrowOrientation(texture)
     if rm.getPreference("sortAscending") then
         texture:SetRotation(0)
@@ -180,7 +172,7 @@ function rm.updateArrowOrientation(texture)
 end
 
 local function updateSortOrder(texture)
-    toggleSortOrder()
+    rm.toggleBooleanPreference("sortAscending")
     rm.updateArrowOrientation(texture)
     rm.showSortedRecipes()
 end

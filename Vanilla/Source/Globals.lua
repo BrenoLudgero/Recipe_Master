@@ -56,3 +56,8 @@ function rm.setPreference(preference, newValue)
         RecipeMasterOptionsFramePreferences[preference] = newValue
     end
 end
+
+function rm.toggleBooleanPreference(preference)
+    local currentPreference = rm.getPreference(preference)
+    rm.setPreference(preference, not currentPreference)
+end

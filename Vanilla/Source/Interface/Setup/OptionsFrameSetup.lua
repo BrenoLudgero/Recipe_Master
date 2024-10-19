@@ -66,12 +66,7 @@ end
 
 function rm.toggleCheckButtonPreferenceOnClick(button, preference)
     button:SetScript("OnClick", function(self)
-        local isPreferenceTrue = rm.getPreference(preference)
-        if isPreferenceTrue then
-            rm.setPreference(preference, false)
-            return
-        end
-        rm.setPreference(preference, true)
+        rm.toggleBooleanPreference(preference)
     end)
 end
 
