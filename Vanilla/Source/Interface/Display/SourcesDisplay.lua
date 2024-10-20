@@ -2,56 +2,67 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-local columnsOrder = {"trainer", "vendor", "quest", "drop", "pickpocket", "object", "item", "fishing", "unique"}
+local columns = {
+    ["trainer"] = {
+        L.name,
+        L.zone
+    },
+    ["vendor"] = {
+        L.name,
+        L.price,
+        L.stock,
+        L.zone
+    },
+    ["quest"] = {
+        L.name,
+        L.level,
+        L.minimum
+    },
+    ["drop"] = {
+        L.name,
+        L.level,
+        L.chance,
+        L.zone
+    },
+    ["pickpocket"] = {
+        L.name,
+        L.level,
+        L.chance,
+        L.zone
+    },
+    ["item"] = {
+        L.name,
+        L.chance
+    },
+    ["object"] = {
+        L.name,
+        L.chance,
+        L.zone
+    },
+    ["fishing"] = {
+        L.zone,
+        L.chance
+    },
+    ["unique"] = {
+        L.name,
+        L.level,
+        L.zone
+    }
+}
+
+local columnsOrder = {
+    "trainer", 
+    "vendor", 
+    "quest", 
+    "drop", 
+    "pickpocket", 
+    "object", 
+    "item", 
+    "fishing", 
+    "unique"
+}
 
 local function getSourceColumns(sourceType)
-    local columns = {
-        ["trainer"] = {
-            L.name,
-            L.zone
-        },
-        ["vendor"] = {
-            L.name,
-            L.price,
-            L.stock,
-            L.zone
-        },
-        ["quest"] = {
-            L.name,
-            L.level,
-            L.minimum
-        },
-        ["drop"] = {
-            L.name,
-            L.level,
-            L.chance,
-            L.zone
-        },
-        ["pickpocket"] = {
-            L.name,
-            L.level,
-            L.chance,
-            L.zone
-        },
-        ["item"] = {
-            L.name,
-            L.chance
-        },
-        ["object"] = {
-            L.name,
-            L.chance,
-            L.zone
-        },
-        ["fishing"] = {
-            L.zone,
-            L.chance
-        },
-        ["unique"] = {
-            L.name,
-            L.level,
-            L.zone
-        }
-    }
     return columns[sourceType]
 end
 

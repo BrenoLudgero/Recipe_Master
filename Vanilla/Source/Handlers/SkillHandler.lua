@@ -8,15 +8,17 @@ function rm.getSavedSkillsByProfessionName(profession)
     return rm.getSavedProfessionByName(profession)["skills"]
 end
 
-function rm.getProfessionSkillsForAllCharacters(professionID)
+function rm.getProfessionSkillsForOtherCharacters(professionID)
     local characters = {}
     for character in pairs(rm.getServerSavedVariables()) do
-        characters[character] = {}
-        characters[character][professionID] = {}
-        if rm.getServerSavedVariables()[character][professionID] then
-            characters[character][professionID] = rm.getServerSavedVariables()[character][professionID]["skills"]
-        else
-            characters[character][professionID] = false
+        if character ~= rm.currentCharacter then
+            characters[character] = {}
+            characters[character][professionID] = {}
+            if rm.getServerSavedVariables()[character][professionID] then
+                characters[character][professionID] = rm.getServerSavedVariables()[character][professionID]["skills"]
+            else
+                characters[character][professionID] = false
+            end
         end
     end
     return characters

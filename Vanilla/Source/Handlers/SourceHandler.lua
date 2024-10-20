@@ -2,20 +2,13 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-function rm.getLocalizedSourceType(sourceType)
-    local types = {
-        ["drop"] = L.drop,
-        ["pickpocket"] = L.pickpocket,
-        ["vendor"] = L.vendor,
-        ["quest"] = L.quest,
-        ["unique"] = L.unique,
-        ["object"] = L.object,
-        ["trainer"] = L.trainer,
-        ["fishing"] = L.fishing,
-        ["item"] = L.item
-    }
-    return types[sourceType]
-end
+local localizedClassifications = {
+    ["Boss"] = L.boss,
+    ["Rare"] = L.rare,
+    ["Elite"] = L.elite,
+    ["Rare Elite"] = L.rareElite,
+    ["Dungeon"] = L.dungeon
+}
 
 ------------------------- Shared -------------------------
 local function getFactionIcon(data)
@@ -41,18 +34,7 @@ end
 
 local function getLocalizedClassification(data)
     local class = data["classification"]
-    if class == "Boss" then
-        return L.boss
-    elseif class == "Rare" then
-        return L.rare
-    elseif class == "Elite" then
-        return L.elite
-    elseif class == "Rare Elite" then
-        return L.rareElite
-    elseif class == "Dungeon" then
-        return L.dungeon
-    end
-    return false
+    return localizedClassifications[class] or false
 end
 
 local function getZoneName(infoTable, subject)
@@ -82,14 +64,14 @@ local function storeCommonNPCInfo(infoTable, npc)
 end
 
 local function getClassificationColor(classification)
-    local colors = {
+    local classificationColors = {
         ["Boss"] = F.colors.redHex,
         ["Rare"] = F.colors.cadetBlueHex,
         ["Elite"] = F.colors.orangeHex,
         ["Rare Elite"] = F.colors.lightPurpleHex,
         ["Dungeon"] =  F.colors.tanHex
     }
-    return colors[classification] or F.colors.whiteHex
+    return classificationColors[classification] or F.colors.whiteHex
 end
 
 local function getColoredLevelBasedOnClassification(data)

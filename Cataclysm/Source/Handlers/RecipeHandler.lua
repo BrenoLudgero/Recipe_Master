@@ -1,15 +1,25 @@
 local _, rm = ...
 local L = rm.L
 
+local _, currentCharacterClass = UnitClass("player") -- Always in English and upper case
+local rankOrder = {
+    Apprentice = 1, 
+    Journeyman = 2, 
+    Expert = 3, 
+    Artisan = 4,
+    Master = 5,
+    GrandMaster = 6,
+    IllustriousGrandMaster = 7
+}
+
 local function isRecipeForCurrentClass(recipe)
     if not recipe.class then
         return true
     else
-        local _, characterClass = UnitClass("player") -- Always in English and upper case
         if type(recipe.class) == "string" then
-            return string.upper(recipe.class) == characterClass
+            return string.upper(recipe.class) == currentCharacterClass
         else
-            return rm.tableContains(recipe.class, characterClass)
+            return rm.tableContains(recipe.class, currentCharacterClass)
         end
     end
 end
@@ -43,12 +53,12 @@ local function isSkillLearnedByCharacter(characterSkills, recipe)
 end
 
 function rm.getAllCharactersRecipeStatus(recipe, professionID)
-    local characters = rm.getProfessionSkillsForAllCharacters(professionID)
+    local otherCharactersInfo = rm.getProfessionSkillsForOtherCharacters(professionID)
     local charactersMissingRecipeSkill = {}
     local charactersWithRecipeSkill = {}
-    for character in pairs(characters) do
-        local characterSkills = characters[character][professionID]
-        if character ~= rm.currentCharacter and characterSkills then
+    for character in pairs(otherCharactersInfo) do
+        local characterSkills = otherCharactersInfo[character][professionID]
+        if characterSkills then
             if not isSkillLearnedByCharacter(characterSkills, recipe) then
                 table.insert(charactersMissingRecipeSkill, character)
             else
@@ -62,15 +72,6 @@ end
 -- Identifies all rankup recipes that teach a rank equal to or lower than the current profession rank
 local function isLearnedRankupRecipe(recipe, professionRank)
     if rm.isRankupRecipe(recipe) then
-        local rankOrder = {
-            Apprentice = 1, 
-            Journeyman = 2, 
-            Expert = 3, 
-            Artisan = 4,
-            Master = 5,
-            GrandMaster = 6,
-            IllustriousGrandMaster = 7
-        }
         return rankOrder[recipe.teachesSpell] <= rankOrder[professionRank]
     end
     return false
@@ -84,8 +85,7 @@ function rm.isLearnedRecipe(recipe)
 end
 
 function rm.isMissingRecipeOfCurrentFaction(recipe)
-    local characterFaction = rm.currentFaction
-    return not recipe.faction or (recipe.faction == characterFaction)
+    return not recipe.faction or (recipe.faction == rm.currentFaction)
 end
 
 local function isCapitalized(string)

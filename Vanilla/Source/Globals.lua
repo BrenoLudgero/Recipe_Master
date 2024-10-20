@@ -10,6 +10,22 @@ rm.totalRecipesCount = 0
 rm.learnedPercentage = 0
 rm.widestRecipeTextWidth = 0
 
+local sourceTypes = {
+    ["drop"] = L.drop,
+    ["pickpocket"] = L.pickpocket,
+    ["vendor"] = L.vendor,
+    ["quest"] = L.quest,
+    ["unique"] = L.unique,
+    ["object"] = L.object,
+    ["trainer"] = L.trainer,
+    ["fishing"] = L.fishing,
+    ["item"] = L.item
+}
+
+function rm.getLocalizedSourceType(sourceType)
+    return sourceTypes[sourceType]
+end
+
 function rm.isRecipeListEmpty()
     return rm.mainFrame:IsShown() and #rm.recipesList.children == 0
 end
