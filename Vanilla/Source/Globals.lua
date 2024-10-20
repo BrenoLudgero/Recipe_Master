@@ -22,6 +22,18 @@ local sourceTypes = {
     ["item"] = L.item
 }
 
+rm.sourcesOrder = {
+    "trainer", 
+    "vendor", 
+    "quest", 
+    "drop", 
+    "pickpocket", 
+    "object", 
+    "item", 
+    "fishing", 
+    "unique"
+}
+
 function rm.getLocalizedSourceType(sourceType)
     return sourceTypes[sourceType]
 end

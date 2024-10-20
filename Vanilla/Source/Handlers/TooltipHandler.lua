@@ -59,8 +59,10 @@ local function getRecipeTooltipMessage(recipe, professionID)
     local newLineInfo = "\n  "
     if rm.getPreference("showSourcesTooltipInfo") and recipe and recipe.sources then
         message = message..newLine..WrapTextInColorCode(L.sources, F.colors.lightBlueHex)
-        for sourceType in pairs(recipe.sources) do
-            message = message..newLineInfo..(rm.getLocalizedSourceType(sourceType))
+        for _, sourceType in ipairs(rm.sourcesOrder) do
+            if recipe.sources[sourceType] then
+                message = message..newLineInfo..(rm.getLocalizedSourceType(sourceType))
+            end
         end
     end
     if rm.getPreference("showAltsTooltipInfo") then

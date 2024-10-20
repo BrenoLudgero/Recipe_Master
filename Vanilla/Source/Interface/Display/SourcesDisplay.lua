@@ -50,18 +50,6 @@ local columns = {
     }
 }
 
-local columnsOrder = {
-    "trainer", 
-    "vendor", 
-    "quest", 
-    "drop", 
-    "pickpocket", 
-    "object", 
-    "item", 
-    "fishing", 
-    "unique"
-}
-
 local function getSourceColumns(sourceType)
     return columns[sourceType]
 end
@@ -122,7 +110,7 @@ function rm.showTabRows(sources, sourceType, columnList)
 end
 
 local function openFirstTab(sources)
-    for _, sourceType in ipairs(columnsOrder) do
+    for _, sourceType in ipairs(rm.sourcesOrder) do
         local columnList = rm.sourcesListColumns[sourceType]
         if columnList then
             rm.showTabRows(sources, sourceType, columnList)
@@ -138,7 +126,7 @@ function rm.showAllSources(recipe)
         rm.sourcesScrollFame:Show()
         local tabXOffset = 0
         local sources = {}
-        for _, sourceType in ipairs(columnsOrder) do
+        for _, sourceType in ipairs(rm.sourcesOrder) do
             if recipe.sources[sourceType] then
                 local sourcesInfo = getAllSourcesInfo(sourceType, recipe.sources[sourceType])
                 sources[sourceType] = sortListByChance(sourcesInfo)
