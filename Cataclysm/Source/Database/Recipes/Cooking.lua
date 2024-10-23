@@ -1054,6 +1054,6 @@ rm.recipeDB[185] = {
 	[78342] = {
 		skill = 1,
 		teachesItem = 5478,
-		teachesSpell = 109659,
+		teachesSpell = 6417,
 	},
 }
