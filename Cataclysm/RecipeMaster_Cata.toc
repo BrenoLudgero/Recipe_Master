@@ -1,5 +1,5 @@
 ## Interface: 40400
-## Version: 2.3.0
+## Version: 2.4.0
 
 ## Title: Recipe Master
 ## Title-esMX: Maestro de Recetas
