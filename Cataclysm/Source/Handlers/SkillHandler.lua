@@ -1,4 +1,5 @@
 local _, rm = ...
+local L = rm.L
 
 local function getSavedSkillsByProfessionID(professionID)
     return rm.getSavedProfessionByID(professionID)["skills"]
@@ -24,8 +25,12 @@ function rm.getProfessionSkillsForOtherCharacters(professionID)
     return characters
 end
 
-local function getSkillID(i, isEnchantment)
-    if isEnchantment then
+local function isSkillAnEnchantment(altVerb)
+    return altVerb == L.enchant
+end
+
+local function getSkillID(i, altVerb)
+    if isSkillAnEnchantment(altVerb) then
         local enchantmentLink = GetTradeSkillRecipeLink(i)
         if enchantmentLink then
             return rm.getIDFromLink(enchantmentLink)
@@ -61,8 +66,7 @@ function rm.saveNewTradeSkills()
     for i = 1, numSkills do
         local _, skillType, _, _, altVerb = GetTradeSkillInfo(i)
         if skillType ~= "header" then
-            local isEnchantment = altVerb == "Enchant"
-            local skillID = getSkillID(i, isEnchantment)
+            local skillID = getSkillID(i, altVerb)
             saveNewSkill(skillLineID, skillID)
         end
     end
