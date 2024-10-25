@@ -67,12 +67,16 @@ local function getRecipeTooltipMessage(recipe, professionID)
     end
     if rm.getPreference("showAltsTooltipInfo") then
         if #charactersWhoCraftRecipe > 0 then
+            -- Sort the charactersWhoCraftRecipe table alphabetically
+            table.sort(charactersWhoCraftRecipe)
             message = message..newLine..WrapTextInColorCode(L.crafters, F.colors.lightGreenHex)
             for _, character in pairs(charactersWhoCraftRecipe) do
                 message = message..newLineInfo..character
             end
         end
         if #charactersMissingRecipe > 0 then
+            -- Sort the charactersMissingRecipe table alphabetically
+            table.sort(charactersMissingRecipe)
             message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightPinkHex)
             for _, character in pairs(charactersMissingRecipe) do
                 local characterLine = newLineInfo..character.." ("

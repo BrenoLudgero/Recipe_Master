@@ -87,7 +87,6 @@ local function getRecipeTooltipMessage(recipe, professionID)
                 message = message..characterLine..")"
             end
         end
-
     end
     return rm.L.title..WrapTextInColorCode(message, F.colors.whiteHex)
 end
