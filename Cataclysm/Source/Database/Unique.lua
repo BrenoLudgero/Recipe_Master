@@ -89,17 +89,27 @@ rm.uniqueDB = {
 	},
 	[53214] = {
 		classification = "Elite",
+		level = "85",
 		names = {
 			deDE = "Damek Blühbart",
 			enUS = "Damek Bloombeard",
+			ptBR = "Damek Barbabroto",
 			ruRU = "Дамек Цветобород",
+		},
+		zones = {
+			5733,
 		},
 	},
 	[53881] = {
+		level = "85",
 		names = {
 			enUS = "Ayla Shadowstorm",
 			frFR = "Ayla Ombretempête",
+			ptBR = "Ayla Tempessombra",
 			ruRU = "Айла Темная Буря",
+		},
+		zones = {
+			5733,
 		},
 	},
 }

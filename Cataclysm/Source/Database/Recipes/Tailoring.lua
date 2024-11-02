@@ -2259,84 +2259,34 @@ rm.recipeDB[197] = {
 		teachesItem = 54486,
 		teachesSpell = 75267,
 	},
-	[54487] = {
-		skill = 510,
-		teachesItem = 54487,
-		teachesSpell = 75292,
-	},
-	[54488] = {
-		skill = 500,
-		teachesItem = 54488,
-		teachesSpell = 75290,
-	},
-	[54489] = {
-		skill = 510,
-		teachesItem = 54489,
-		teachesSpell = 75269,
-	},
-	[54490] = {
-		skill = 515,
-		teachesItem = 54490,
-		teachesSpell = 75294,
-	},
-	[54492] = {
-		skill = 520,
-		teachesItem = 54492,
-		teachesSpell = 75296,
-	},
-	[54497] = {
-		skill = 515,
-		teachesItem = 54497,
-		teachesSpell = 75295,
-	},
-	[54499] = {
-		skill = 520,
-		teachesItem = 54499,
-		teachesSpell = 75297,
-	},
-	[54500] = {
-		skill = 510,
-		teachesItem = 54500,
-		teachesSpell = 75293,
-	},
-	[54501] = {
-		skill = 500,
-		teachesItem = 54501,
-		teachesSpell = 75270,
-	},
-	[54502] = {
-		skill = 505,
-		teachesItem = 54502,
-		teachesSpell = 75291,
-	},
 	[54593] = {
 		skill = 525,
-		teachesItem = 54496,
+		teachesItem = 70067,
 		teachesSpell = 75306,
 	},
 	[54594] = {
 		skill = 525,
-		teachesItem = 54498,
+		teachesItem = 70066,
 		teachesSpell = 75307,
 	},
 	[54595] = {
 		skill = 525,
-		teachesItem = 54495,
+		teachesItem = 70060,
 		teachesSpell = 75305,
 	},
 	[54596] = {
 		skill = 525,
-		teachesItem = 54493,
+		teachesItem = 70055,
 		teachesSpell = 75304,
 	},
 	[54597] = {
 		skill = 525,
-		teachesItem = 54491,
+		teachesItem = 70057,
 		teachesSpell = 75302,
 	},
 	[54598] = {
 		skill = 525,
-		teachesItem = 54494,
+		teachesItem = 70058,
 		teachesSpell = 75303,
 	},
 	[54599] = {
@@ -2438,6 +2388,56 @@ rm.recipeDB[197] = {
 		skill = 525,
 		teachesItem = 69954,
 		teachesSpell = 99460,
+	},
+	[70052] = {
+		skill = 510,
+		teachesItem = 70052,
+		teachesSpell = 75269,
+	},
+	[70053] = {
+		skill = 515,
+		teachesItem = 70053,
+		teachesSpell = 75294,
+	},
+	[70054] = {
+		skill = 500,
+		teachesItem = 70054,
+		teachesSpell = 75290,
+	},
+	[70056] = {
+		skill = 520,
+		teachesItem = 70056,
+		teachesSpell = 75296,
+	},
+	[70059] = {
+		skill = 510,
+		teachesItem = 70059,
+		teachesSpell = 75292,
+	},
+	[70061] = {
+		skill = 520,
+		teachesItem = 70061,
+		teachesSpell = 75297,
+	},
+	[70062] = {
+		skill = 510,
+		teachesItem = 70062,
+		teachesSpell = 75293,
+	},
+	[70063] = {
+		skill = 500,
+		teachesItem = 70063,
+		teachesSpell = 75270,
+	},
+	[70064] = {
+		skill = 505,
+		teachesItem = 70064,
+		teachesSpell = 75291,
+	},
+	[70065] = {
+		skill = 515,
+		teachesItem = 70065,
+		teachesSpell = 75295,
 	},
 	[70176] = {
 		skill = 515,
