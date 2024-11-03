@@ -71,8 +71,7 @@ function rm.createSavedVariables()
     end
 end
 
--- Inserts new options created after an update in SavedVariables
-function rm.updateSavedVariables()
+local function insertNewOptionsInSavedVariables()
     for key, value in pairs(defaultMainFramePreferences) do
         if RecipeMasterMainFramePreferences[key] == nil then
             RecipeMasterMainFramePreferences[key] = value
@@ -83,6 +82,24 @@ function rm.updateSavedVariables()
             RecipeMasterOptionsFramePreferences[key] = value
         end
     end
+end
+
+local function removeUnusedOptionsFromSavedVariables()
+    for key in pairs(RecipeMasterMainFramePreferences) do
+        if not defaultMainFramePreferences[key] then
+            RecipeMasterMainFramePreferences[key] = nil
+        end
+    end
+    for key in pairs(RecipeMasterOptionsFramePreferences) do
+        if not defaultOptionsFramePreferences[key] then
+            RecipeMasterOptionsFramePreferences[key] = nil
+        end
+    end
+end
+
+function rm.updateSavedVariables()
+    insertNewOptionsInSavedVariables()
+    removeUnusedOptionsFromSavedVariables()
 end
 
 function rm.updateSavedCharacters()
