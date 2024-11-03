@@ -23,8 +23,6 @@
 * Sort the recipes list by name, quality or required skill (ascending or descending)
 * Look for a specific recipe by typing in the search bar
 * Type /RM to quickly open the add-on's options interface
-* (TSM only) Move the window with Left-Click
-* (TSM only) Resize the window vertically with Right-Click
 
 ![Options Window](/Images/Options_Window.png)
 

@@ -25,7 +25,9 @@ function rm.handleAddonLoaded(event, addon)
         rm.updateSavedCharacters()
         rm.createAllFrameElements()
     elseif event == "ADDON_LOADED" and addon == "TradeSkillMaster" then
-        rm.optionsFrameElements["restoreButton"]:Hide()
+        TSM_API.RegisterUICallback("CRAFTING", "nil", function(_, tsmFrame)
+            rm.registerTradeSkillMasterFrame(tsmFrame)
+        end)
     end
 end
 
@@ -62,18 +64,11 @@ local function handleProfessionFrameOpened()
     end
 end
 
-local function handleProfessionFrameClosed()
-    if not rm.getProfessionFrame() then
-        rm.hideMainFrame()
-        return
-    end
-end
-
 function rm.handleProfessionFrame(event)
-    -- Delayed for one frame to ensure that RM will be displayed / hidden reliably and ASAP
+    -- Delayed for 0.01 seconds to ensure that RM will be displayed / hidden reliably and ASAP
     if event == "TRADE_SKILL_SHOW" then
-        RunNextFrame(handleProfessionFrameOpened)
+        C_Timer.After(0.01, handleProfessionFrameOpened)
     elseif event == "TRADE_SKILL_CLOSE" then
-        RunNextFrame(handleProfessionFrameClosed)
+        rm.hideMainFrame()
     end
 end

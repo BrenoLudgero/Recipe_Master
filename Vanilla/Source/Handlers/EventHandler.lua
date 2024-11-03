@@ -27,7 +27,9 @@ function rm.handleAddonLoaded(event, addon)
         rm.updateSavedCharacters()
         rm.createAllFrameElements()
     elseif event == "ADDON_LOADED" and addon == "TradeSkillMaster" then
-        rm.optionsFrameElements["restoreButton"]:Hide()
+        TSM_API.RegisterUICallback("CRAFTING", "nil", function(_, tsmFrame)
+            rm.registerTradeSkillMasterFrame(tsmFrame)
+        end)
     end
 end
 
@@ -57,10 +59,8 @@ local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLi
     rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
-        RunNextFrame(function() 
-            showMainFrame(getSkillInfo) 
-            rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
-        end)
+        showMainFrame(getSkillInfo) 
+        rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
     end
 end
 
@@ -75,17 +75,17 @@ local function handleProfessionFrameClosed(getNumSkills, getSkillInfo, getItemLi
 end
 
 function rm.handleProfessionFrame(event)
-    -- Delayed for one frame to ensure that RM will be displayed / hidden reliably and ASAP
+    -- Delayed for 0.01 seconds to ensure that RM will be displayed / hidden reliably and ASAP
     if event == "TRADE_SKILL_SHOW" then
-        RunNextFrame(function() 
+        C_Timer.After(0.01, function() 
             handleProfessionFrameOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
         end)
     elseif event == "CRAFT_SHOW" then
-        RunNextFrame(function() 
+        C_Timer.After(0.01, function() 
             handleProfessionFrameOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
         end)
     elseif event == "TRADE_SKILL_CLOSE" or event == "CRAFT_CLOSE" then
-        RunNextFrame(function() 
+        C_Timer.After(0.01, function() 
             handleProfessionFrameClosed(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
         end)
     end

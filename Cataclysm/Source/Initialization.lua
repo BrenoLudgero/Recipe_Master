@@ -29,8 +29,6 @@ SlashCmdList["RECIPEMASTER"] = function()
 end
 
 local defaultMainFramePreferences = {
-    mainFrameHeight = 413, -- Used when TradeSkillMaster is enabled
-    mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
     sortAscending = true,
     sortRecipesBy = "Name"
 }
