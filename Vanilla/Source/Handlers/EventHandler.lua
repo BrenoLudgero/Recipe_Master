@@ -4,6 +4,7 @@ rm.frame:RegisterEvent("ADDON_LOADED")
 rm.frame:RegisterEvent("PLAYER_LOGIN")
 rm.frame:RegisterEvent("UI_SCALE_CHANGED")
 rm.frame:RegisterEvent("SKILL_LINES_CHANGED")
+rm.frame:RegisterEvent("NEW_RECIPE_LEARNED")
 rm.frame:RegisterEvent("TRADE_SKILL_SHOW")
 rm.frame:RegisterEvent("TRADE_SKILL_CLOSE")
 rm.frame:RegisterEvent("CRAFT_SHOW")
@@ -45,6 +46,12 @@ end
 function rm.handleSkillChange(event)
     if event == "SKILL_LINES_CHANGED" then
         rm.updateCharacterProfessions()
+    end
+end
+
+function rm.handleRecipeLearned(event, spellID)
+    if event == "NEW_RECIPE_LEARNED" then
+        rm.saveNewlyLearnedSkill(spellID)
     end
 end
 
