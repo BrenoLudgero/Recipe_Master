@@ -96,6 +96,10 @@ local function getCost(cost, currencySuffix)
     return tonumber(cost:match("(%d+)"..currencySuffix)) or 0
 end
 
+local function getCurrencyIcon(texture)
+    return "|T"..texture..":11:10:2:0.5:64:64:4:60:4:60|t"
+end
+
 local function getFormattedCost(cost)
     local goldAmount = getCost(cost, "gld")
     local silverAmount = getCost(cost, "svr")
@@ -104,19 +108,19 @@ local function getFormattedCost(cost)
     local tarnishedUndermineReal = getCost(cost, "tur")
     local formattedCost = ""
     if goldAmount > 0 then
-        formattedCost = formattedCost.." "..goldAmount..F.textures.goldCoin
+        formattedCost = formattedCost.." "..goldAmount..getCurrencyIcon(F.textures.goldCoin)
     end
     if silverAmount > 0 then
-        formattedCost = formattedCost.." "..silverAmount..F.textures.silverCoin
+        formattedCost = formattedCost.." "..silverAmount..getCurrencyIcon(F.textures.silverCoin)
     end
     if copperAmount > 0 then
-        formattedCost = formattedCost.." "..copperAmount..F.textures.copperCoin
+        formattedCost = formattedCost.." "..copperAmount..getCurrencyIcon(F.textures.copperCoin)
     end
     if engineeringExchangeTicket > 0 then
-        formattedCost = engineeringExchangeTicket..F.textures.exchangeTicket
+        formattedCost = engineeringExchangeTicket..getCurrencyIcon(F.textures.exchangeTicket)
     end
     if tarnishedUndermineReal > 0 then
-        formattedCost = tarnishedUndermineReal..F.textures.tarnishedUndermineReal
+        formattedCost = tarnishedUndermineReal..getCurrencyIcon(F.textures.tarnishedUndermineReal)
     end
     return formattedCost
 end

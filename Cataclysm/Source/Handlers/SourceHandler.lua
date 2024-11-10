@@ -96,6 +96,10 @@ local function getCost(cost, currencySuffix)
     return tonumber(cost:match("(%d+)"..currencySuffix)) or 0
 end
 
+local function getCurrencyIcon(texture)
+    return "|T"..texture..":11:10:2:0.5:64:64:4:60:4:60|t"
+end
+
 local function getSpecialCurrencyCost(cost)
     local currencyList = {
         {suffix = "glc", texture = F.textures.glowcap},
@@ -125,7 +129,7 @@ local function getSpecialCurrencyCost(cost)
     for _, currency in ipairs(currencyList) do
         local amount = getCost(cost, currency.suffix)
         if amount > 0 then
-            return amount..currency.texture
+            return amount..getCurrencyIcon(currency.texture)
         end
     end
     return L.unknown
@@ -137,13 +141,13 @@ local function getCostInCoins(cost)
     local silverAmount = getCost(cost, "svr")
     local copperAmount = getCost(cost, "cpr")
     if goldAmount > 0 then
-        costInCoins = costInCoins.." "..goldAmount..F.textures.goldIcon
+        costInCoins = costInCoins.." "..goldAmount..getCurrencyIcon(F.textures.goldIcon)
     end
     if silverAmount > 0 then
-        costInCoins = costInCoins.." "..silverAmount..F.textures.silverIcon
+        costInCoins = costInCoins.." "..silverAmount..getCurrencyIcon(F.textures.silverIcon)
     end
     if copperAmount > 0 then
-        costInCoins = costInCoins.." "..copperAmount..F.textures.copperIcon
+        costInCoins = costInCoins.." "..copperAmount..getCurrencyIcon(F.textures.copperIcon)
     end
     if costInCoins ~= "" then
         return costInCoins
