@@ -281,7 +281,7 @@ function rm.getFishingInfo(sourceID, sourceData)
     local info = {}
     local name = C_Map.GetAreaInfo(sourceID)
     info["fullName"] = name
-    info[L.name] = shortenLongName(name, F.sizes.sourcesCellTextLength["firstOfTwoColumns"])
+    info[L.zone] = shortenLongName(name, F.sizes.sourcesCellTextLength["firstOfTwoColumns"])
     info[L.chance] = sourceData
     return info
 end

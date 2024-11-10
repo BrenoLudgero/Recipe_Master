@@ -52,6 +52,33 @@ local function cacheAllItemNames()
     end
 end
 
+local function cacheAllZoneNames()
+    for professionID in pairs(L.professions) do
+        for _, sources in pairs(rm.sourceDB[professionID]) do
+            for sourceType, values in pairs(sources) do
+                if sourceType == "fishing" then
+                    for zoneID in pairs(values) do
+                        local zone = C_Map.GetAreaInfo(zoneID)
+                    end
+                    break
+                end
+            end
+        end
+    end
+    for _, npc in pairs(rm.npcDB) do
+        if npc.zones then
+            for zoneID in pairs(npc.zones) do
+                local zone = C_Map.GetAreaInfo(zoneID)
+            end
+        end
+    end
+    for _, npc in pairs(rm.uniqueDB) do
+        for zoneID in pairs(npc.zones) do
+            local zone = C_Map.GetAreaInfo(zoneID)
+        end
+    end
+end
+
 local function cacheAllQuests()
     for questID in pairs(rm.questDB) do
         local quest = C_QuestLog.GetQuestInfo(questID)
@@ -68,6 +95,7 @@ end
 function rm.cacheAllAssets()
     cacheAllRecipes()
     cacheAllItemNames()
+    cacheAllZoneNames()
     cacheAllQuests()
     cacheAllTradeSkills()
 end
