@@ -109,7 +109,7 @@ rm.questDB = {
 		reqLevel = 30,
 	},
 	[1578] = {
-		class = {
+		classes = {
 			1,
 			2,
 			4,
@@ -124,7 +124,7 @@ rm.questDB = {
 		reqLevel = 8,
 	},
 	[1618] = {
-		class = {
+		classes = {
 			1,
 			2,
 			4,
@@ -154,7 +154,7 @@ rm.questDB = {
 		classification = "Elite",
 		faction = "Horde",
 		level = 24,
-		race = {
+		races = {
 			2,
 			5,
 			8,
@@ -173,7 +173,7 @@ rm.questDB = {
 		reqLevel = 32,
 	},
 	[2752] = {
-		class = {
+		classes = {
 			1,
 			3,
 		},
@@ -182,7 +182,7 @@ rm.questDB = {
 		reqLevel = 32,
 	},
 	[2753] = {
-		class = {
+		classes = {
 			1,
 			3,
 			7,
@@ -192,7 +192,7 @@ rm.questDB = {
 		reqLevel = 32,
 	},
 	[2754] = {
-		class = {
+		classes = {
 			1,
 			3,
 		},
@@ -206,7 +206,7 @@ rm.questDB = {
 		reqLevel = 32,
 	},
 	[2756] = {
-		class = {
+		classes = {
 			1,
 			7,
 		},
@@ -215,13 +215,13 @@ rm.questDB = {
 		reqLevel = 40,
 	},
 	[2758] = {
-		class = {
+		classes = {
 			1,
 			2,
 		},
 		faction = "Alliance",
 		level = 40,
-		race = {
+		races = {
 			1,
 			3,
 			4,
@@ -229,7 +229,7 @@ rm.questDB = {
 		reqLevel = 40,
 	},
 	[2761] = {
-		class = {
+		classes = {
 			1,
 			2,
 			3,
@@ -238,7 +238,7 @@ rm.questDB = {
 		reqLevel = 40,
 	},
 	[2762] = {
-		class = {
+		classes = {
 			1,
 			2,
 		},
@@ -246,7 +246,7 @@ rm.questDB = {
 		reqLevel = 40,
 	},
 	[2763] = {
-		class = {
+		classes = {
 			1,
 			2,
 			7,
@@ -255,7 +255,7 @@ rm.questDB = {
 		reqLevel = 40,
 	},
 	[2771] = {
-		class = {
+		classes = {
 			1,
 			2,
 		},
@@ -263,7 +263,7 @@ rm.questDB = {
 		reqLevel = 40,
 	},
 	[2772] = {
-		class = {
+		classes = {
 			1,
 			2,
 			3,
@@ -515,7 +515,7 @@ rm.questDB = {
 		reqLevel = 30,
 	},
 	[82657] = {
-		class = {
+		classes = {
 			3,
 			4,
 			11,

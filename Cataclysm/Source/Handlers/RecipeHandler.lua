@@ -13,14 +13,10 @@ local rankOrder = {
 }
 
 local function isRecipeForCurrentClass(recipe)
-    if not recipe.class then
+    if not recipe.classes then
         return true
     else
-        if type(recipe.class) == "string" then
-            return string.upper(recipe.class) == currentCharacterClass
-        else
-            return rm.tableContains(recipe.class, currentCharacterClass)
-        end
+        return rm.tableContains(recipe.classes, currentCharacterClass)
     end
 end
 
@@ -128,7 +124,7 @@ end
 local function getRecipeData(recipeID, recipeData, professionID, initialDataFunction)
     local rName, rLink, rQuality, rTexture = initialDataFunction(recipeID, professionID)
     return {
-        class = recipeData["class"], 
+        classes = recipeData["classes"], 
         faction = recipeData["faction"], 
         link = rLink,
         name = rName, 

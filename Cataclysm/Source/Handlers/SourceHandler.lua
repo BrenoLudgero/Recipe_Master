@@ -33,8 +33,8 @@ local function getNPCName(npc)
 end
 
 local function getLocalizedClassification(data)
-    local class = data["classification"]
-    return localizedClassifications[class] or false
+    local classification = data["classification"]
+    return localizedClassifications[classification] or false
 end
 
 local function getZoneName(infoTable, subject)
@@ -198,23 +198,23 @@ local function getQuestName(sourceID, quest)
     return displayName, fullName
 end
 
-local function getClassAndRaceColor(class, race)
-    if not class and not race then
+local function getClassAndRaceColor(classes, races)
+    if not classes and not races then
         return F.colors.whiteHex
-    elseif class and race then
+    elseif classes and races then
         return F.colors.yellowHex
-    elseif class then
+    elseif classes then
         return F.colors.skyBlueHex
-    elseif race then
+    elseif races then
         return F.colors.emeraldHex
     end
 end
 
-local function colorQuestNameIfClassRaceOrCompleted(quest, class, race)
+local function colorQuestNameIfClassRaceOrCompleted(quest, classes, races)
     if quest["completed"] then
         quest[L.name] = WrapTextInColorCode(quest[L.name], F.colors.grayHex)
     else
-        local classAndRaceColor = getClassAndRaceColor(class, race)
+        local classAndRaceColor = getClassAndRaceColor(classes, races)
         quest[L.name] = WrapTextInColorCode(quest[L.name], classAndRaceColor)
     end
 end
@@ -223,16 +223,12 @@ local function getClassName(classNumber)
     return C_CreatureInfo.GetClassInfo(classNumber).className
 end
 
-local function getFormattedClassNames(class)
+local function getFormattedClassNames(classes)
     local formattedClasses = ""
-    if class then
+    if classes then
         formattedClasses = L.classes
-        if type(class) == "table" then
-            for _, classNumber in pairs(class) do
-                formattedClasses = formattedClasses..", "..getClassName(classNumber)
-            end
-        else
-            formattedClasses = formattedClasses..", "..getClassName(class)
+        for _, classNumber in pairs(classes) do
+            formattedClasses = formattedClasses..", "..getClassName(classNumber)
         end
     end
     return formattedClasses
@@ -242,28 +238,24 @@ local function getRaceName(raceNumber)
     return C_CreatureInfo.GetRaceInfo(raceNumber).raceName
 end
 
-local function getFormattedRaceNames(race)
+local function getFormattedRaceNames(races)
     local formattedRaces = ""
-    if race then
+    if races then
         formattedRaces = L.races
-        if type(race) == "table" then
-            for _, raceNumber in pairs(race) do
-                formattedRaces = formattedRaces..", "..getRaceName(raceNumber)
-            end
-        else
-            formattedRaces = formattedRaces..", "..getRaceName(race)
+        for _, raceNumber in pairs(races) do
+            formattedRaces = formattedRaces..", "..getRaceName(raceNumber)
         end
     end
     return formattedRaces
 end
 
-local function getFormattedClassAndRaceInfo(class, race)
+local function getFormattedClassAndRaceInfo(classes, races)
     local formattedInfo = ""
-    formattedInfo = formattedInfo..getFormattedClassNames(class)
+    formattedInfo = formattedInfo..getFormattedClassNames(classes)
     if formattedInfo == "" then
-        formattedInfo = formattedInfo..getFormattedRaceNames(race)
+        formattedInfo = formattedInfo..getFormattedRaceNames(races)
     else
-        formattedInfo = formattedInfo.."\n"..getFormattedRaceNames(race)
+        formattedInfo = formattedInfo.."\n"..getFormattedRaceNames(races)
     end
     return formattedInfo:gsub("%%s, ", "") -- Removes every "%s, " found in formattedInfo
 end
@@ -271,14 +263,14 @@ end
 function rm.getQuestInfo(sourceID)
     local questInfo = {}
     local quest = rm.questDB[sourceID]
-    local class = quest["class"]
-    local race = quest["race"]
+    local classes = quest["classes"]
+    local races = quest["races"]
     questInfo[L.name], questInfo["fullName"] = getQuestName(sourceID, quest)
     questInfo["completed"] = C_QuestLog.IsQuestFlaggedCompleted(sourceID)
-    colorQuestNameIfClassRaceOrCompleted(questInfo, class, race)
+    colorQuestNameIfClassRaceOrCompleted(questInfo, classes, races)
     questInfo[L.level] = getColoredLevelBasedOnClassification(quest)
     questInfo[L.minimum] = quest["reqLevel"]
-    questInfo["classAndRace"] = getFormattedClassAndRaceInfo(class, race)
+    questInfo["classesAndRaces"] = getFormattedClassAndRaceInfo(classes, races)
     questInfo["classification"] = getLocalizedClassification(quest)
     return questInfo
 end

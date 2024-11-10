@@ -911,6 +911,7 @@ rm.recipeDB[755] = {
 		isSpell = true,
 		skill = 20,
 		teachesItem = 31252,
+		teachesSpell = 31252,
 	},
 	[31358] = {
 		faction = "Horde",

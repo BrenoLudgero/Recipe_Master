@@ -2733,11 +2733,13 @@ rm.recipeDB[164] = {
 		isSpell = true,
 		skill = 400,
 		teachesItem = 55628,
+		teachesSpell = 55628,
 	},
 	[55641] = {
 		isSpell = true,
 		skill = 400,
 		teachesItem = 55641,
+		teachesSpell = 55641,
 	},
 	[65358] = {
 		skill = 475,

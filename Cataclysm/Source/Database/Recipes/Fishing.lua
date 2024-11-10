@@ -17,6 +17,7 @@ rm.recipeDB[356] = {
 		isSpell = true,
 		skill = 100,
 		teachesItem = 43308,
+		teachesSpell = 43308,
 	},
 	[46054] = {
 		skill = 200,

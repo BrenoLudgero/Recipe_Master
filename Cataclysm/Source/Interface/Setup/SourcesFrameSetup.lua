@@ -37,7 +37,7 @@ end
 local function getColoredCellInfo(cell, cellColor, data)
     local cellParentColumnText = select(2, cell:GetPoint()):GetText()
     if cellParentColumnText == L.name and cellColor ~= F.colors.grayHex then
-        return data["classAndRace"]
+        return data["classesAndRaces"]
     elseif cellColor == F.colors.grayHex then
         return L.questCompleted
     else
@@ -45,7 +45,7 @@ local function getColoredCellInfo(cell, cellColor, data)
     end
 end
 
--- Only cells under the Level or Quest Name column have a defined color
+-- Only cells under the Level or Quest Name column have a specific color
 local function showColoredCellInfo(tooltip, cell, data)
     local cellColor = string.match(cell:GetText(), "|c(%x%x%x%x%x%x%x%x)")
     if cellColor and cellColor ~= F.colors.whiteHex then

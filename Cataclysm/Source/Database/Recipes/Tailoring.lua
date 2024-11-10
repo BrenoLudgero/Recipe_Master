@@ -887,7 +887,9 @@ rm.recipeDB[197] = {
 		teachesSpell = 18454,
 	},
 	[14512] = {
-		class = "Priest",
+		classes = {
+			"Priest",
+		},
 		skill = 300,
 		teachesItem = 14154,
 		teachesSpell = 18456,
@@ -2333,31 +2335,37 @@ rm.recipeDB[197] = {
 		isSpell = true,
 		skill = 420,
 		teachesItem = 55642,
+		teachesSpell = 55642,
 	},
 	[55769] = {
 		isSpell = true,
 		skill = 420,
 		teachesItem = 55769,
+		teachesSpell = 55769,
 	},
 	[55777] = {
 		isSpell = true,
 		skill = 420,
 		teachesItem = 55777,
+		teachesSpell = 55777,
 	},
 	[56034] = {
 		isSpell = true,
 		skill = 405,
 		teachesItem = 56034,
+		teachesSpell = 56034,
 	},
 	[56039] = {
 		isSpell = true,
 		skill = 405,
 		teachesItem = 56039,
+		teachesSpell = 56039,
 	},
 	[59390] = {
 		isSpell = true,
 		skill = 325,
 		teachesItem = 59390,
+		teachesSpell = 59390,
 	},
 	[67541] = {
 		skill = 500,
@@ -2473,25 +2481,30 @@ rm.recipeDB[197] = {
 		isSpell = true,
 		skill = 475,
 		teachesItem = 75154,
+		teachesSpell = 75154,
 	},
 	[75155] = {
 		isSpell = true,
 		skill = 475,
 		teachesItem = 75155,
+		teachesSpell = 75155,
 	},
 	[75172] = {
 		isSpell = true,
 		skill = 500,
 		teachesItem = 75172,
+		teachesSpell = 75172,
 	},
 	[75175] = {
 		isSpell = true,
 		skill = 500,
 		teachesItem = 75175,
+		teachesSpell = 75175,
 	},
 	[75178] = {
 		isSpell = true,
 		skill = 500,
 		teachesItem = 75178,
+		teachesSpell = 75178,
 	},
 }

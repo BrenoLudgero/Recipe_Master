@@ -193,7 +193,7 @@ local function createSourceRow(columns, data)
             local cell = createListCell(row, data, dataValue)
             setCellPosition(cell, column, columnName, columns, yOffset)
             table.insert(cells, cell)
-        else
+        else -- Source present in multiple zones
             row:Hide()
             table.remove(rm.sourcesList.children, nil)
             yOffset = yOffset + F.sizes.sourcesListRowHeight

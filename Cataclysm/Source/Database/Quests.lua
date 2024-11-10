@@ -46,7 +46,7 @@ rm.questDB = {
 		reqLevel = 32,
 	},
 	[2754] = {
-		class = {
+		classes = {
 			1,
 			2,
 			3,
