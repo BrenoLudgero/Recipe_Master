@@ -9,6 +9,17 @@ rm.missingRecipesCount = 0
 rm.totalRecipesCount = 0
 rm.learnedPercentage = 0
 rm.widestRecipeTextWidth = 0
+rm.sourcesOrder = {
+    "trainer", 
+    "vendor", 
+    "quest", 
+    "drop", 
+    "pickpocket", 
+    "object", 
+    "item", 
+    "fishing", 
+    "unique"
+}
 
 local sourceTypes = {
     ["drop"] = L.drop,
@@ -20,18 +31,6 @@ local sourceTypes = {
     ["trainer"] = L.trainer,
     ["fishing"] = L.fishing,
     ["item"] = L.item
-}
-
-rm.sourcesOrder = {
-    "trainer", 
-    "vendor", 
-    "quest", 
-    "drop", 
-    "pickpocket", 
-    "object", 
-    "item", 
-    "fishing", 
-    "unique"
 }
 
 function rm.getLocalizedSourceType(sourceType)
