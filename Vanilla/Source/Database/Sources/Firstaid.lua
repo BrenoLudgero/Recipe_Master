@@ -240,7 +240,7 @@ rm.sourceDB[129] = {
 				cost = "1gld",
 			},
 			[13476] = {
-				cost = "1gld",
+				cost = "94svr73cpr",
 			},
 		},
 	},
@@ -256,7 +256,7 @@ rm.sourceDB[129] = {
 				cost = "22svr",
 			},
 			[13476] = {
-				cost = "22svr",
+				cost = "20svr84cpr",
 			},
 		},
 	},
@@ -266,20 +266,30 @@ rm.sourceDB[129] = {
 				cost = "50svr",
 			},
 			[13476] = {
-				cost = "50svr",
+				cost = "47svr36cpr",
 			},
 		},
 	},
 	[19442] = {
 		vendor = {
 			[10856] = {
-				cost = "11gld25svr",
+				cost = "10gld58svr82cpr",
 			},
 			[10857] = {
 				cost = "10gld52svr63cpr",
 			},
 			[11536] = {
 				cost = "11gld25svr",
+			},
+		},
+	},
+	[232434] = {
+		vendor = {
+			[17068] = {
+				cost = "11gld",
+			},
+			[17070] = {
+				cost = "11gld",
 			},
 		},
 	},

@@ -145,6 +145,24 @@ rm.npcDB = {
 			10,
 		},
 	},
+	[61] = {
+		classification = "Rare",
+		level = "11",
+		names = {
+			enUS = "Thuros Lightfingers",
+			esES = "Thuros Dedoluz",
+			esMX = "Thuros Dedoluz",
+			frFR = "Thuros Doigts Agiles",
+			koKR = "투로스 라이트핑거",
+			ptBR = "Turos Mão-leve",
+			ruRU = "Турос Ловкорук",
+			zhCN = "索罗斯 莱特芬格",
+			zhTW = "索羅斯 萊特芬格",
+		},
+		zones = {
+			12,
+		},
+	},
 	[66] = {
 		names = {
 			enUS = "Tharynn Bouden",
@@ -46709,6 +46727,42 @@ rm.npcDB = {
 			1584,
 		},
 	},
+	[9502] = {
+		classification = "Elite",
+		level = "55",
+		names = {
+			enUS = "Phalanx",
+			esES = "Falange",
+			esMX = "Falange",
+			frFR = "Phalange",
+			koKR = "팔란스",
+			ptBR = "Falange",
+			ruRU = "Фаланкс",
+			zhCN = "法拉克斯",
+			zhTW = "法拉剋斯",
+		},
+		zones = {
+			1584,
+		},
+	},
+	[9517] = {
+		level = "57",
+		names = {
+			deDE = "Schattenlord Feldan",
+			enUS = "Shadow Lord Feldan",
+			esES = "Señor De Las Sombras Feldan",
+			esMX = "Señor De Las Sombras Feldan",
+			frFR = "Seigneur Des Ténèbres Feldan",
+			koKR = "어둠의 군주 펠단",
+			ptBR = "Senhor das Sombras Fel'dan",
+			ruRU = "Владыка Теней Скверндан",
+			zhCN = "暗影领主费尔丹",
+			zhTW = "暗影領主費爾丹",
+		},
+		zones = {
+			361,
+		},
+	},
 	[9522] = {
 		names = {
 			deDE = "Wegelagerer Der Blackrock",
@@ -46867,6 +46921,25 @@ rm.npcDB = {
 		level = "48 - 52",
 		zones = {
 			1584,
+		},
+	},
+	[9568] = {
+		classification = "Elite",
+		level = "60",
+		names = {
+			deDE = "Oberanführer Wyrmthalak",
+			enUS = "Overlord Wyrmthalak",
+			esES = "Señor Supremo Vermiothalak",
+			esMX = "Señor Supremo Vermiothalak",
+			frFR = "Seigneur Wyrmthalak",
+			koKR = "대군주 웜타라크",
+			ptBR = "Lorde Supremo Wyrmthalak",
+			ruRU = "Властитель Змейталак",
+			zhCN = "维姆萨拉克",
+			zhTW = "維姆薩拉剋",
+		},
+		zones = {
+			1583,
 		},
 	},
 	[9583] = {
@@ -48760,6 +48833,21 @@ rm.npcDB = {
 		},
 		classification = "Elite",
 		level = "59",
+		zones = {
+			2017,
+		},
+	},
+	[10437] = {
+		classification = "Elite",
+		level = "60",
+		names = {
+			enUS = "Nerubenkan",
+			koKR = "네룹엔칸",
+			ptBR = "Nerub'enkan",
+			ruRU = "Нерубэнкан",
+			zhCN = "奈鲁布恩坎",
+			zhTW = "奈魯布恩坎",
+		},
 		zones = {
 			2017,
 		},
@@ -52994,6 +53082,25 @@ rm.npcDB = {
 		},
 		classification = "Elite",
 		level = "59 - 60",
+		zones = {
+			1377,
+		},
+	},
+	[11729] = {
+		classification = "Elite",
+		level = "59 - 60",
+		names = {
+			deDE = "Schwester Des Zoraschwarms",
+			enUS = "Hivezora Hive Sister",
+			esES = "Hermana De Colmena Colmenzora",
+			esMX = "Hermana De Colmena Colmenzora",
+			frFR = "Sœur De La Ruchezora",
+			koKR = "어미 하이브조라",
+			ptBR = "Irmã da Colme'Zora",
+			ruRU = "Сестра Убийца Из Улья Зора",
+			zhCN = "佐拉雌蝎",
+			zhTW = "佐拉雌蠍",
+		},
 		zones = {
 			1377,
 		},
@@ -57539,6 +57646,22 @@ rm.npcDB = {
 			1977,
 		},
 	},
+	[15175] = {
+		level = "57",
+		names = {
+			enUS = "Khur Hornstriker",
+			esES = "Khur Golpicórneo",
+			esMX = "Khur Golpicórneo",
+			koKR = "쿠르 혼스트라이커",
+			ptBR = "Khiran Chifre Curto",
+			ruRU = "Кхур Острый Рог",
+			zhCN = "库尔 锐角",
+			zhTW = "庫爾 銳角",
+		},
+		zones = {
+			1377,
+		},
+	},
 	[15176] = {
 		names = {
 			enUS = "Vargus",
@@ -58787,6 +58910,45 @@ rm.npcDB = {
 			51,
 		},
 	},
+	[15756] = {
+		classification = "Elite",
+		names = {
+			deDE = "Starker Silithidschinder",
+			enUS = "Greater Silithid Flayer",
+			esES = "Despellejador Silítido Superior",
+			esMX = "Despellejador Silítido Superior",
+			frFR = "Ecorcheuse Silithide Supérieure",
+			koKR = "최상급 실리시드 약탈자",
+			ptBR = "Grande Esfolador Silitídeo",
+			ruRU = "Большой Силитид Живодер",
+			zhCN = "大型异种剥夺者",
+			zhTW = "大型異種剝奪者",
+		},
+		zones = {
+			1377,
+			440,
+			357,
+		},
+	},
+	[15811] = {
+		classification = "Elite",
+		level = "11 - 14",
+		names = {
+			deDE = "Unbedeutender Silithidschinder",
+			enUS = "Faltering Silithid Flayer",
+			esES = "Despellejador Silítido Vacilante",
+			esMX = "Despellejador Silítido Vacilante",
+			frFR = "Ecorcheuse Silithide Chancelante",
+			koKR = "최하급 실리시드 약탈자",
+			ptBR = "Esfolador Silitídeo Vacilante",
+			ruRU = "Неуклюжий Силитид Живодер",
+			zhCN = "衰老的异种剥夺者",
+			zhTW = "衰老的異種剝奪者",
+		},
+		zones = {
+			17,
+		},
+	},
 	[15974] = {
 		names = {
 			deDE = "Schreckenskrabbler",
@@ -59423,6 +59585,44 @@ rm.npcDB = {
 		level = "61",
 		zones = {
 			3456,
+		},
+	},
+	[17068] = {
+		faction = "Alliance",
+		level = "55",
+		names = {
+			deDE = "Chefexpeditionslieferant Enkles",
+			enUS = "Chief Expeditionary Requisitioner Enkles",
+			esES = "Jefe De Requisas De Expedición Enkles",
+			esMX = "Jefe De Requisas De Expedición Enkles",
+			frFR = "Responsable Chef Des Réquisitions Enkles",
+			koKR = "원정대 보급 최고책임자 엔클스",
+			ptBR = "Requerente-chefe Expedicionário Enkles",
+			ruRU = "Старший Снабженец Экспедиции Анклс",
+			zhCN = "远征军首席调度官恩克斯",
+			zhTW = "遠徵軍首席調度官恩剋斯",
+		},
+		zones = {
+			1377,
+		},
+	},
+	[17070] = {
+		faction = "Horde",
+		level = "55",
+		names = {
+			deDE = "Apotheker Quinard",
+			enUS = "Apothecary Quinard",
+			esES = "Boticario Quinard",
+			esMX = "Boticario Quinard",
+			frFR = "Apothicaire Quinard",
+			koKR = "연금술사 퀴나드",
+			ptBR = "Boticário Quintino",
+			ruRU = "Аптекарь Квинард",
+			zhCN = "药剂师奎因纳德",
+			zhTW = "藥劑師奎因納德",
+		},
+		zones = {
+			1377,
 		},
 	},
 	[166359] = {
@@ -62149,6 +62349,24 @@ rm.npcDB = {
 		level = "54 - 55",
 		zones = {
 			28,
+		},
+	},
+	[228718] = {
+		level = "54 - 55",
+		names = {
+			deDE = "Feuerlandeindringling",
+			enUS = "Firelands Invader",
+			esES = "Invasor De Las Tierras De Fuego",
+			esMX = "Invasor De Las Tierras De Fuego",
+			frFR = "Envahisseur Des Terres De Feu",
+			koKR = "불의 땅 침략자",
+			ptBR = "Invasor das Terras do Fogo",
+			ruRU = "Захватчик Из Огненных Просторов",
+			zhCN = "火焰之地入侵者",
+			zhTW = "火焰之地入侵者",
+		},
+		zones = {
+			51,
 		},
 	},
 	[228719] = {
