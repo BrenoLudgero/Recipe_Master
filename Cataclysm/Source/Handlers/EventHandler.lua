@@ -72,9 +72,9 @@ local function handleProfessionFrameOpened()
 end
 
 function rm.handleProfessionFrame(event)
-    -- Delayed for 0.01 seconds to ensure that RM will be displayed / hidden reliably and ASAP
+    -- Delayed for 0.03 seconds to ensure that RM will be displayed reliably and ASAP
     if event == "TRADE_SKILL_SHOW" then
-        C_Timer.After(0.01, handleProfessionFrameOpened)
+        C_Timer.After(0.03, handleProfessionFrameOpened)
     elseif event == "TRADE_SKILL_CLOSE" then
         rm.hideMainFrame()
     end

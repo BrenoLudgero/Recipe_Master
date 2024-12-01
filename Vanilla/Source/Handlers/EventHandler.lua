@@ -82,17 +82,18 @@ local function handleProfessionFrameClosed(getNumSkills, getSkillInfo, getItemLi
 end
 
 function rm.handleProfessionFrame(event)
-    -- Delayed for 0.01 seconds to ensure that RM will be displayed / hidden reliably and ASAP
+    local delayInSeconds = 0.05
+    -- Delayed for a bit to ensure that RM will be displayed / hidden reliably and ASAP
     if event == "TRADE_SKILL_SHOW" then
-        C_Timer.After(0.01, function() 
+        C_Timer.After(delayInSeconds, function() 
             handleProfessionFrameOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
         end)
     elseif event == "CRAFT_SHOW" then
-        C_Timer.After(0.01, function() 
+        C_Timer.After(delayInSeconds, function() 
             handleProfessionFrameOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
         end)
     elseif event == "TRADE_SKILL_CLOSE" or event == "CRAFT_CLOSE" then
-        C_Timer.After(0.01, function() 
+        RunNextFrame( function() 
             handleProfessionFrameClosed(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
         end)
     end
