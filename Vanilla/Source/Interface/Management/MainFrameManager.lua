@@ -23,6 +23,11 @@ local function isTradeSkillMasterFrameVisible()
     return tradeSkillMasterFrame ~= nil
 end
 
+local function isCloudyTradeSkillEnabled()
+    local isLoadedOrLoading = C_AddOns.IsAddOnLoaded("CloudyTradeSkill")
+    return isLoadedOrLoading
+end
+
 function rm.getProfessionFrame()
     if isSkilletEnabledAndVisible() then
         return SkilletFrame
@@ -67,14 +72,18 @@ local function setFramePointsRelativeToParent(professionFrame)
         rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 3, -1)
         rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 3, -1)
         rm.mainFrame:SetPoint("BOTTOM", professionFrame.resizeBtn, 0, -1)
-    elseif professionFrame == TradeSkillFrame then
-        rm.restoreButton:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", -2, -4)
-        rm.mainFrame:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", -2, -4)
-        rm.mainFrame:SetPoint("BOTTOMLEFT", TradeSkillCancelButton, "BOTTOMRIGHT", 0, -6)
-    elseif professionFrame == CraftFrame then
-        rm.restoreButton:SetPoint("TOPLEFT", CraftFrameCloseButton, "TOPRIGHT", -2, -4)
-        rm.mainFrame:SetPoint("TOPLEFT", CraftFrameCloseButton, "TOPRIGHT", -2, -4)
-        rm.mainFrame:SetPoint("BOTTOMLEFT", CraftCancelButton, "BOTTOMRIGHT", 0, -6)
+    elseif professionFrame == TradeSkillFrame or professionFrame == CraftFrame then
+        local closeButton = (professionFrame == TradeSkillFrame) and TradeSkillFrameCloseButton or CraftFrameCloseButton
+        local cancelButton = (professionFrame == TradeSkillFrame) and TradeSkillCancelButton or CraftCancelButton
+        local restoreButtonOffsets = isCloudyTradeSkillEnabled() and {8, -2} or {-2, -4}
+        local mainFrameTopOffsets = isCloudyTradeSkillEnabled() and {30, -4} or {-2, -4}
+        if isCloudyTradeSkillEnabled() then
+            rm.restoreButton:SetPoint("BOTTOMLEFT", cancelButton, "BOTTOMRIGHT", unpack(restoreButtonOffsets))
+        else
+            rm.restoreButton:SetPoint("TOPLEFT", closeButton, "TOPRIGHT", unpack(restoreButtonOffsets))
+        end
+        rm.mainFrame:SetPoint("TOPLEFT", closeButton, "TOPRIGHT", unpack(mainFrameTopOffsets))
+        rm.mainFrame:SetPoint("BOTTOMLEFT", cancelButton, "BOTTOMRIGHT", 0, -6)
     end
 end
 
