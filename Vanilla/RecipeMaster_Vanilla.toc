@@ -1,5 +1,8 @@
 ## Interface: 11505
-## Version: 2.4.4
+## Version: @project-version@
+
+## X-WoWI-ID: 26701
+## X-Curse-Project-ID: 983613
 
 ## Title: Recipe Master
 ## Title-esMX: Maestro de Recetas
