@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+#############################################################
+### THIS IS A MODIFIED VERSION OF BIG WIGS MODS' PACKAGER ###
+### 	  https://github.com/BigWigsMods/packager         ###
+###         MODIFICATIONS ARE LABELED AS "MOD:"           ###
+#############################################################
+
 # release.sh generates an addon zip file from a Git, SVN, or Mercurial checkout.
 #
 # This is free and unencumbered software released into the public domain.
@@ -1080,6 +1086,14 @@ vcs_addignore() {
 	fi
 }
 
+
+#####################################################################
+### MOD: Copies the .toc of the target version to the root folder ###
+#####################################################################
+cp "$topdir/$package"/*.toc "$topdir"
+mv "$topdir"/*.toc "$topdir/$package.toc"
+
+
 OLDIFS=$IFS
 IFS=$'\n'
 if [ "$repository_type" = "git" ]; then
@@ -1409,7 +1423,7 @@ fi
 	echo
 )
 if [[ "$slug" =~ ^[0-9]+$ ]]; then
-	project_site="https://cloudflare.curseforge.com"
+	project_site="https://www.curseforge.com"
 	echo "CurseForge ID: $slug${cf_token:+ [token set]}"
 fi
 if [ -n "$addonid" ]; then
@@ -2075,7 +2089,7 @@ checkout_external() {
 		project_site=
 		package=
 		if [[ "$_external_uri" == *"wowace.com"* || "$_external_uri" == *"curseforge.com"* ]]; then
-			project_site="https://cloudflare.curseforge.com"
+			project_site="https://www.curseforge.com"
 		fi
 
 		# If a .pkgmeta file is present, process it for "ignore" and "plain-copy" lists.
@@ -2576,6 +2590,29 @@ if [[ -n "$license" && ! -f "$topdir/$license" && -n "$slug" ]]; then
 	end_group "license"
 fi
 
+
+####################################################################################
+### MOD: Moves the contents of .release/VERSION/VERSION/ to its parent directory ###
+####################################################################################
+version_dir=$(find "$_cdt_destdir" -mindepth 1 -maxdepth 1 -type d)
+if [ -d "$version_dir" ]; then
+	parent_dir=$(dirname "$version_dir")
+	# Moves the Source folder and .toc file to their parent folder
+    mv "$version_dir/Source" "$parent_dir/"
+    mv "$version_dir"/*.toc "$parent_dir/"
+    # Removes the now empty .release/VERSION/VERSION/ folder
+    rmdir "$version_dir"
+	# Renames the .release/VERSION/ folder to "RecipeMaster"
+	mv "$releasedir/$package" "$releasedir/RecipeMaster"
+
+	echo "Folder structure successfully altered."
+	echo
+else
+    echo "No version folder found to reorganize."
+	exit
+fi
+
+
 ###
 ### Process .pkgmeta to perform move-folders actions.
 ###
@@ -2684,7 +2721,13 @@ if [ -z "$skip_zipfile" ]; then
 	if [ -f "$archive" ]; then
 		rm -f "$archive"
 	fi
-	( cd "$releasedir" && zip -X -r "$archive" "${zip_root_dirs[@]}" )
+
+
+	##############################################################
+	### MOD: Zips the folder RecipeMaster/ instead of VERSION/ ###
+	##############################################################
+	( cd "$releasedir" && zip -X -r "$archive" "RecipeMaster" ) #"${zip_root_dirs[@]}" )
+
 
 	if [ ! -f "$archive" ]; then
 		exit 1
@@ -2774,7 +2817,7 @@ upload_curseforge() {
 		_cf_game_version=${_cf_game_version%,}
 	fi
 	if [ -z "$_cf_game_version" ]; then
-		echo "Error fetching game version info from $project_site/api/game/versions"
+		echo "Error fetching game version info from $project_site/api/game/wow/versions"
 		echo
 		echo "Skipping upload to CurseForge."
 		echo
@@ -3258,6 +3301,20 @@ if [[ -z $skip_upload && -n $archive && -s $archive ]]; then
 		upload_github || exit_code=1
 	fi
 fi
+
+
+##################################################
+### MOD: Removes the .toc from the root folder ###
+##################################################
+rm "$topdir/$package.toc"
+
+##################################################
+### MOD: Removes the built files from .release ###
+##################################################
+rm "$releasedir/$archive_name"
+rm -rf "$releasedir/RecipeMaster"
+rm "$releasedir"/*.txt
+
 
 # All done.
 
