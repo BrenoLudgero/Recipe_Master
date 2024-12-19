@@ -28,9 +28,7 @@ function rm.handleAddonLoaded(event, addon)
         rm.updateSavedCharacters()
         rm.createAllFrameElements()
     elseif event == "ADDON_LOADED" and addon == "TradeSkillMaster" then
-        TSM_API.RegisterUICallback("CRAFTING", "nil", function(_, tsmFrame)
-            rm.registerTradeSkillMasterFrame(tsmFrame)
-        end)
+        rm.optionsFrameElements["restoreButton"]:Hide()
     end
 end
 
@@ -93,7 +91,7 @@ function rm.handleProfessionFrame(event)
             handleProfessionFrameOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
         end)
     elseif event == "TRADE_SKILL_CLOSE" or event == "CRAFT_CLOSE" then
-        RunNextFrame( function() 
+        RunNextFrame(function() 
             handleProfessionFrameClosed(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
         end)
     end

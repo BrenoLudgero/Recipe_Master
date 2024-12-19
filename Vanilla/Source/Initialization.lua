@@ -41,7 +41,9 @@ end
 
 local defaultMainFramePreferences = {
     sortAscending = true,
-    sortRecipesBy = "Name"
+    sortRecipesBy = "Name",
+    mainFrameHeight = 413, -- Used when TradeSkillMaster is enabled
+    mainFrameOffsets = {0, 0}, -- Used when TradeSkillMaster is enabled
 }
 
 local defaultOptionsFramePreferences = {
