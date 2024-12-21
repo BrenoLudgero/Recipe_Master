@@ -31,10 +31,8 @@ local function updateFrameTexture(frame, savedVariable)
     end
 end
 
-local function updatePreferenceAndTexture(dropdown, selectedID, savedVariable, frame)
-    UIDropDownMenu_SetSelectedID(dropdown, selectedID)
-    local selectedValue = dropdown.values[selectedID].value
-    rm.setPreference(savedVariable, selectedValue)
+local function updatePreferenceAndTexture(dropdown, value, savedVariable, frame)
+    rm.setPreference(savedVariable, value)
     if savedVariable == "progressColor" then
         frame:SetStatusBarColor(unpack(rm.getPreference(savedVariable)))
     else
@@ -42,17 +40,15 @@ local function updatePreferenceAndTexture(dropdown, selectedID, savedVariable, f
     end
 end
 
-function rm.handleTextureOptions(dropdown, savedVariable, frame)
-    UIDropDownMenu_Initialize(dropdown, function(self)
-        for _, option in ipairs(dropdown.values) do
-            local info = UIDropDownMenu_CreateInfo()
-            info.minWidth = F.sizes.optionsDropdownWidth + 10
-            info.text = option.text
-            info.value = option.value
-            info.func = function(self)
-                updatePreferenceAndTexture(dropdown, self:GetID(), savedVariable, frame)
-            end
-            UIDropDownMenu_AddButton(info)
+function rm.handleTextureOptions(dropdown, options, savedVariable, frame)
+    dropdown:SetupMenu(function(self, rootDescription)
+        for _, item in ipairs(options) do
+            local name = item[1]
+            local value = item[2]
+            rootDescription:CreateButton(name, function()
+                updatePreferenceAndTexture(self, value, savedVariable, frame)
+                self:SetDefaultText(name)
+            end)
         end
     end)
 end

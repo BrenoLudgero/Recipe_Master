@@ -56,24 +56,23 @@ function rm.createSearchBar(parent)
     return searchBar
 end
 
-function rm.createSortBar(parent)
-    local sortBar = CreateFrame("Button", nil, parent, F.templates.dropdown)
+function rm.createSortDropdown(parent)
     local font = rm.searchBar:GetFont()
     local frameLevel = parent:GetFrameLevel() + 1
-    sortBar:SetScale(0.73)
-    sortBar:SetFrameLevel(frameLevel)
-    sortBar:SetPoint("RIGHT", F.offsets.sortBarX, F.offsets.sortBarY)
-    sortBar.Text:SetFont(font, F.fontSizes.sortBar, "")
-    sortBar.Text:SetPoint("CENTER", 0, 2.5)
-    sortBar.values = {
-        {text = L.name, value = "Name"},
-        {text = L.quality, value = "Quality"},
-        {text = L.skill, value = "Skill"}
+    local sortDropdown = CreateFrame("DropdownButton", nil, parent, F.templates.dropdown)
+    sortDropdown:SetWidth(F.sizes.sortDropdownWidth)
+    sortDropdown:SetScale(0.73)
+    sortDropdown:SetFrameLevel(frameLevel)
+    sortDropdown:SetPoint("RIGHT", F.offsets.sortDropdownX, F.offsets.sortDropdownY)
+    sortDropdown.Text:SetFont(font, F.fontSizes.sortDropdown, "")
+    local options = {
+        {L.name, "Name"},
+        {L.quality, "Quality"},
+        {L.skill, "Skill"}
     }
-    UIDropDownMenu_SetWidth(sortBar, F.sizes.sortBarWidth)
-    rm.handleSortingOptions(sortBar)
-    rm.setInitialDropdownValue(sortBar, "sortRecipesBy")
-    return sortBar
+    rm.handleSortingOptions(sortDropdown, options)
+    rm.setInitialDropdownValue(sortDropdown, options, "sortRecipesBy")
+    return sortDropdown
 end
 
 function rm.createSortByText(parent)

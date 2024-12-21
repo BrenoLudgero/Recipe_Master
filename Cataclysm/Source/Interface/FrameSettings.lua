@@ -8,26 +8,30 @@ local F = rm.F
 
 local function setLocaleSpecificOffsets()
     if rm.locale == "esES" or rm.locale == "esMX" then
-        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 10
+        F.offsets.iconDropdownX = F.offsets.thirdColumnX + 19
+        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 10
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
         F.offsets.sourcesListColumnsX[L.item] = {3, 326}
     elseif rm.locale == "ptBR" then
-        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 10
+        F.offsets.iconDropdownX = F.offsets.thirdColumnX + 14
+        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 10
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
         F.offsets.sourcesListTabX = 2
         F.offsets.sourcesListColumnsX[L.item] = {3, 320}
     elseif rm.locale == "deDE" then
+        F.offsets.iconDropdownX = F.offsets.thirdColumnX + 13
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 22
         F.offsets.sourcesListTabX = 0
         F.offsets.sourcesListColumnsX[L.vendor] = {3, 162, 234, 314}
     elseif rm.locale == "frFR" then
-        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 4
+        F.offsets.iconDropdownX = F.offsets.thirdColumnX + 13
+        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 24
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 45
         F.offsets.sourcesListColumnsX[L.drop] = {3, 177, 230, 314}
         F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 177, 230, 314}
     elseif rm.locale == "ruRU" then
-        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 5
-        F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 35
+        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 10
+        F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 40
         F.offsets.bottomTabTextY = 6.2
         F.offsets.sourcesListTabX = 0
         F.offsets.sourcesListTabTextX = 2
@@ -91,10 +95,10 @@ F.offsets.recipesListScrollX = -31.3
 F.offsets.recipesListScrollTopY = -6
 F.offsets.recipesListScrollBottomY = 4.5
 F.offsets.searchBarX = 8
-F.offsets.sortBarX = -18
-F.offsets.sortBarY = -3
-F.offsets.sortByTextX = 14
-F.offsets.sortByTextY = 3
+F.offsets.sortByTextX = -4
+F.offsets.sortByTextY = 0
+F.offsets.sortDropdownX = -35
+F.offsets.sortDropdownY = 0
 
 ------------------------- Sources frame -------------------------
 F.offsets.instructionsY = -10
@@ -142,7 +146,7 @@ F.offsets.sourcesListTabTextX = 1
 ------------------------- Options frame -------------------------
 F.offsets.firstColumnX = 28
 F.offsets.secondColumnX = F.offsets.firstColumnX + 210
-F.offsets.thirdColumnX = F.offsets.secondColumnX + 190
+F.offsets.thirdColumnX = F.offsets.secondColumnX + 205
 F.offsets.firstRowY = -128
 F.offsets.secondRowY = F.offsets.firstRowY - 105
 F.offsets.thirdRowY = F.offsets.firstRowY - 217
@@ -168,13 +172,13 @@ F.offsets.scaleSliderX = F.offsets.secondColumnX
 F.offsets.scaleSliderY = F.offsets.firstRowY
 F.offsets.spacingSliderY = F.offsets.secondRowY
 --------------- Dropdowns ---------------
-F.offsets.brightnessDropdownX = F.offsets.firstColumnX - 19
+F.offsets.brightnessDropdownX = F.offsets.firstColumnX
 F.offsets.brightnessDropdownY = F.offsets.thirdRowY
 F.offsets.iconDropdownX = F.offsets.thirdColumnX
 F.offsets.iconDropdownY = F.offsets.firstRowY
-F.offsets.progressColorDropdownX = F.offsets.secondColumnX - 19
+F.offsets.progressColorDropdownX = F.offsets.secondColumnX
 --------------- Checkboxes ---------------
-F.offsets.showDetailsCheckX = F.offsets.thirdColumnX + 15
+F.offsets.showDetailsCheckX = F.offsets.thirdColumnX
 F.offsets.showDetailsCheckY = F.offsets.secondRowY
 F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 6
 F.offsets.showLearnedCheckY = F.offsets.secondRowY
@@ -196,6 +200,8 @@ local function setLocaleSpecificSizes()
         F.sizes.sourcesListExtraTabWidth = 19
     elseif rm.locale == "deDE" then
         F.sizes.sourcesListExtraTabWidth = 18
+    elseif rm.locale == "frFR" then
+        F.sizes.sortDropdownWidth = 120
     elseif rm.locale == "ruRU" then
         F.sizes.sourcesListExtraTabWidth = 16
         F.sizes.sourcesCellTextLength["firstOfTwoColumns"] = 94
@@ -235,7 +241,7 @@ F.sizes.recipeIcon = 26 -- Width and height
 F.sizes.recipesFrameWidth = 314 -- Minimum width!
 F.sizes.searchBarWidth = 128
 F.sizes.searchBarHeight = 18 -- Clickable area height
-F.sizes.sortBarWidth = 100
+F.sizes.sortDropdownWidth = 110
 F.sizes.sortOrderButton = 32 -- Width and height
 
 ------------------------- Sources frame -------------------------
@@ -261,7 +267,7 @@ F.sizes.sourcesListTabHeight = 25
 F.sizes.sourcesListWidth = 381
 
 ------------------------- Options frame -------------------------
-F.sizes.optionsDropdownWidth = 132
+F.sizes.optionsDropdownWidth = 145
 F.sizes.resetDefaultsButtonWidth = 140
 F.sizes.resetDefaultsButtonHeight = 35
 F.sizes.sliderWidth = 150
@@ -351,7 +357,7 @@ F.fontSizes.uniqueInstructions = 13
 
 ------------------------- Recipes / Fishing frame -------------------------
 F.fontSizes.searchBar = 10
-F.fontSizes.sortBar = 11
+F.fontSizes.sortDropdown = 12
 
 setLocaleSpecificFontSizes()
 
@@ -394,7 +400,7 @@ F.colors.yellowHex = "ffFFD100" -- GameFontNormal color
 F.templates.button = "UIPanelButtonTemplate"
 F.templates.checkButton = "InterfaceOptionsCheckButtonTemplate"
 F.templates.divider = "HorizontalBarTemplate"
-F.templates.dropdown = "UIDropDownMenuTemplate"
+F.templates.dropdown = "WowStyle1DropdownTemplate"
 F.templates.innerBorder = "InsetFrameTemplate4"
 F.templates.mainFrame = "BackdropTemplate"
 F.templates.mainFrameBorder = "BaseBasicFrameTemplate"
@@ -448,7 +454,7 @@ F.textures.silverIcon = "Interface/MoneyFrame/UI-SilverIcon"
 F.textures.sourcesBackground = "Interface/AdventureMap/AdventureMapParchmentTile"
 F.textures.sourcesListBackground = "Interface/TutorialFrame/TutorialFrameBackground"
 F.textures.sourcesListEdge = "Interface/Tooltips/UI-Tooltip-Border"
-F.textures.sortBar = "Interface/COMMON/Common-Input-Border"
+F.textures.sortDropdown = "Interface/COMMON/Common-Input-Border"
 F.textures.sortOrderArrow = "Interface/TradeSkillFrame/UI-TradeSkill-Multiskill"
 F.textures.sortOrderButton = "Interface/Buttons/LockButton-Border"
 F.textures.sortOrderButtonHighlight = "Interface/Buttons/UI-CheckBox-Highlight"

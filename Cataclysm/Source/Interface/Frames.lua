@@ -24,14 +24,14 @@ function rm.createAllFrameElements()
 
     ------------------------- Recipes / Fishing frame -------------------------
     rm.progressContainer = rm.createProgressContainer(rm.mainFrame)
-    rm.divider = rm.createDivider(rm.progressContainer) -- The background frame containing searchBar and sortBar
+    rm.divider = rm.createDivider(rm.progressContainer) -- The background frame containing searchBar and sortDropdown
     rm.recipesScrollFrame = rm.createRecipesScrollFrame(rm.mainFrame)
     rm.recipesList = rm.createRecipesList(rm.recipesScrollFrame)
     rm.recipesScrollFrame:SetScrollChild(rm.recipesList)
     rm.searchBar = rm.createSearchBar(rm.divider)
-    rm.sortBar = rm.createSortBar(rm.divider)
-    rm.createSortByText(rm.sortBar)
-    rm.createSortOrderButton(rm.sortBar)
+    rm.sortDropdown = rm.createSortDropdown(rm.divider)
+    rm.createSortByText(rm.sortDropdown)
+    rm.createSortOrderButton(rm.sortDropdown)
     rm.progressBar = rm.createProgressBar(rm.progressContainer)
     rm.progressBarText = rm.createProgressBarText(rm.progressBar)
 

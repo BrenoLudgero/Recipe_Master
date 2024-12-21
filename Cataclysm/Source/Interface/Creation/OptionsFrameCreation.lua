@@ -71,26 +71,25 @@ function rm.createScaleSlider()
 end
 
 local function createOptionsDropdown(xOffset, yOffset, label)
-    local dropdown = CreateFrame("Button", nil, rm.optionsFrame, F.templates.dropdown)
+    local dropdown = CreateFrame("DropdownButton", nil, rm.optionsFrame, F.templates.dropdown)
     dropdown:SetPoint("TOPLEFT", xOffset, yOffset)
-    dropdown.Text:SetPoint("CENTER", 0, 2.5)
+    dropdown:SetWidth(F.sizes.optionsDropdownWidth)
     local label = rm.createOptionsText(F.fonts.optionDescription, label)
     label:SetParent(dropdown)
     label:SetPoint("CENTER", dropdown, "TOP", 0, F.offsets.dropdownLabelY)
-    UIDropDownMenu_SetWidth(dropdown, F.sizes.optionsDropdownWidth)
     return dropdown
 end
 
 function rm.createRestoreIconDropdown()
     local dropdown = createOptionsDropdown(F.offsets.iconDropdownX, F.offsets.iconDropdownY, L.updateIconDropdown)
-    dropdown.values = {
-        {text = L.common, value = "Interface/Icons/INV_Scroll_03"},
-        {text = L.uncommon, value = "Interface/Icons/INV_Scroll_06"},
-        {text = L.rare, value = "Interface/Icons/INV_Scroll_05"},
-        {text = L.epic, value = "Interface/Icons/INV_Scroll_04"}
+    local options = {
+        {L.common, "Interface/Icons/INV_Scroll_03"},
+        {L.uncommon, "Interface/Icons/INV_Scroll_06"},
+        {L.rare, "Interface/Icons/INV_Scroll_05"},
+        {L.epic, "Interface/Icons/INV_Scroll_04"}
     }
-    rm.handleTextureOptions(dropdown, "restoreButtonIconTexture", rm.restoreButton.texture)
-    rm.setInitialDropdownValue(dropdown, "restoreButtonIconTexture")
+    rm.handleTextureOptions(dropdown, options, "restoreButtonIconTexture", rm.restoreButton.texture)
+    rm.setInitialDropdownValue(dropdown, options, "restoreButtonIconTexture")
     return dropdown
 end
 
@@ -156,26 +155,26 @@ end
 
 function rm.createProgressBrightnessDropdown()
     local dropdown = createOptionsDropdown(F.offsets.brightnessDropdownX, F.offsets.brightnessDropdownY, L.brightness)
-    dropdown.values = {
-        {text = L.bright, value = "Interface/TARGETINGFRAME/BarFill2"},
-        {text = L.dark, value = "Interface/CHARACTERFRAME/BarFill"}
+    local options = {
+        {L.bright, "Interface/TARGETINGFRAME/BarFill2"},
+        {L.dark, "Interface/CHARACTERFRAME/BarFill"}
     }
-    rm.handleTextureOptions(dropdown, "progressTexture", rm.progressBar)
-    rm.setInitialDropdownValue(dropdown, "progressTexture")
+    rm.handleTextureOptions(dropdown, options, "progressTexture", rm.progressBar)
+    rm.setInitialDropdownValue(dropdown, options, "progressTexture")
     return dropdown
 end
 
 function rm.createProgressColorDropdown()
     local dropdown = createOptionsDropdown(F.offsets.progressColorDropdownX, F.offsets.brightnessDropdownY, L.color)
-    dropdown.values = {
-        {text = L.blue, value = F.colors.blue},
-        {text = L.gray, value = F.colors.gray},
-        {text = L.green, value = F.colors.green},
-        {text = L.orange, value = F.colors.orange},
-        {text = L.purple, value = F.colors.purple}
+    local options = {
+        {L.blue, F.colors.blue},
+        {L.gray, F.colors.gray},
+        {L.green, F.colors.green},
+        {L.orange, F.colors.orange},
+        {L.purple, F.colors.purple}
     }
-    rm.handleTextureOptions(dropdown, "progressColor", rm.progressBar)
-    rm.setInitialDropdownValue(dropdown, "progressColor")
+    rm.handleTextureOptions(dropdown, options, "progressColor", rm.progressBar)
+    rm.setInitialDropdownValue(dropdown, options, "progressColor")
     return dropdown
 end
 

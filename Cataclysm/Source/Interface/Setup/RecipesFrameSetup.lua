@@ -117,33 +117,30 @@ function rm.showMatchingRecipesOnTop(searchBar)
     end)
 end
 
-local function isSortedBySelectedValue(dropdown, sortBar)
-    return sortBar.values[dropdown:GetID()].value == rm.getPreference("sortRecipesBy")
+local function isSortedBySelectedValue(dropdown, value)
+    return value == rm.getPreference("sortRecipesBy")
 end
 
-local function updateSortByPreference(dropdown, sortBar)
-    if not isSortedBySelectedValue(dropdown, sortBar) then
-        local selectedValue = sortBar.values[dropdown:GetID()].value
-        rm.setPreference("sortRecipesBy", selectedValue)
+local function updateSortByPreference(dropdown, value)
+    if not isSortedBySelectedValue(dropdown, value) then
+        rm.setPreference("sortRecipesBy", value)
     end
 end
 
-local function sortRecipesByValue(dropdown, sortBar)
-    UIDropDownMenu_SetSelectedID(sortBar, dropdown:GetID())
-    updateSortByPreference(dropdown, sortBar)
+local function sortRecipesByValue(dropdown, value)
+    updateSortByPreference(dropdown, value)
     rm.showSortedRecipes()
 end
 
-function rm.handleSortingOptions(sortBar)
-    UIDropDownMenu_Initialize(sortBar, function(self)
-        for _, option in ipairs(sortBar.values) do
-            local info = UIDropDownMenu_CreateInfo()
-            info.text = option.text
-            info.value = option.value
-            info.func = function(self)
-                sortRecipesByValue(self, sortBar)
-            end
-            UIDropDownMenu_AddButton(info)
+function rm.handleSortingOptions(dropdown, options)
+    dropdown:SetupMenu(function(self, rootDescription)
+        for _, item in ipairs(options) do
+            local name = item[1]
+            local value = item[2]
+            rootDescription:CreateButton(name, function()
+                sortRecipesByValue(self, value)
+                self:SetDefaultText(name)
+            end)
         end
     end)
 end
@@ -152,11 +149,13 @@ local function isValueAColor(value, savedValue)
     return type(value) == "table" and (unpack(value) == unpack(savedValue))
 end
 
-function rm.setInitialDropdownValue(dropdown, savedVariable)
+function rm.setInitialDropdownValue(dropdown, options, savedVariable)
     local savedValue = rm.getPreference(savedVariable)
-    for _, option in pairs(dropdown.values) do
-        if option.value == savedValue or isValueAColor(option.value, savedValue) then
-            UIDropDownMenu_SetSelectedValue(dropdown, option.value)
+    for _, item in ipairs(options) do
+        local name = item[1]
+        local value = item[2]
+        if value == savedValue or isValueAColor(value, savedValue) then
+            dropdown:SetDefaultText(name)
         end
     end
 end
