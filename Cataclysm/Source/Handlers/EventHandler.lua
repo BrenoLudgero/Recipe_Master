@@ -1,7 +1,6 @@
 local addonName, rm = ...
 
 rm.frame:RegisterEvent("ADDON_LOADED")
-rm.frame:RegisterEvent("PLAYER_LOGIN")
 rm.frame:RegisterEvent("UI_SCALE_CHANGED")
 rm.frame:RegisterEvent("SKILL_LINES_CHANGED")
 rm.frame:RegisterEvent("NEW_RECIPE_LEARNED")
@@ -25,15 +24,7 @@ function rm.handleAddonLoaded(event, addon)
         rm.updateSavedVariables()
         rm.updateSavedCharacters()
         rm.createAllFrameElements()
-    elseif event == "ADDON_LOADED" and addon == "TradeSkillMaster" then
-        rm.optionsFrameElements["restoreButton"]:Hide()
-    end
-end
-
-function rm.handlePlayerLogin(event)
-    if event == "PLAYER_LOGIN" then
         rm.frame:UnregisterEvent("ADDON_LOADED")
-        rm.frame:UnregisterEvent("PLAYER_LOGIN")
     end
 end
 
