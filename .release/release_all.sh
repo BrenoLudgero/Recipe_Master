@@ -1,6 +1,2 @@
-source ../.env
-
-sudo su - $ROOT_USER <<EOF
-    sh "$PWD"/release.sh -m "vanilla.yaml" -n "{package-name} {project-version}{nolib}{classic}"
-    sh "$PWD"/release.sh -m "cataclysm.yaml" -n "{package-name} {project-version}{nolib}{classic}"
-EOF
+sudo sh release.sh -m vanilla.yaml
+sudo sh release.sh -m cataclysm.yaml

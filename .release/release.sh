@@ -68,9 +68,8 @@ pkgmeta_file=
 game_version=
 game_type=
 file_type=
-file_template="{package-name}-{project-version}{nolib}{classic}"
-label_template="{project-version}{classic}{nolib}"
-
+file_template="RecipeMaster-{package-name}-{project-version}"
+label_template="{package-name} {project-version}"
 wowi_markup="bbcode"
 
 ## END USER OPTIONS
@@ -1423,7 +1422,7 @@ fi
 	echo
 )
 if [[ "$slug" =~ ^[0-9]+$ ]]; then
-	project_site="https://www.curseforge.com"
+	project_site="https://cloudflare.curseforge.com"
 	echo "CurseForge ID: $slug${cf_token:+ [token set]}"
 fi
 if [ -n "$addonid" ]; then
@@ -1443,7 +1442,13 @@ echo "Release directory: $releasedir"
 echo
 
 # Set $pkgdir to the path of the package directory inside $releasedir.
-pkgdir="$releasedir/$package"
+
+#################################################################################
+### MOD: Creates a .release/RecipeMaster/ folder instead of .release/VERSION/ ###
+#################################################################################
+pkgdir="$releasedir/RecipeMaster" #$package"
+
+
 if [ -d "$pkgdir" ] && [ -z "$overwrite" ]; then
 	#echo "Removing previous package directory: $pkgdir"
 	rm -fr "$pkgdir"
@@ -2089,7 +2094,7 @@ checkout_external() {
 		project_site=
 		package=
 		if [[ "$_external_uri" == *"wowace.com"* || "$_external_uri" == *"curseforge.com"* ]]; then
-			project_site="https://www.curseforge.com"
+			project_site="https://cloudflare.curseforge.com"
 		fi
 
 		# If a .pkgmeta file is present, process it for "ignore" and "plain-copy" lists.
@@ -2602,11 +2607,6 @@ if [ -d "$version_dir" ]; then
     mv "$version_dir"/*.toc "$parent_dir/"
     # Removes the now empty .release/VERSION/VERSION/ folder
     rmdir "$version_dir"
-	# Renames the .release/VERSION/ folder to "RecipeMaster"
-	mv "$releasedir/$package" "$releasedir/RecipeMaster"
-
-	echo "Folder structure successfully altered."
-	echo
 else
     echo "No version folder found to reorganize."
 	exit
@@ -3311,9 +3311,8 @@ rm "$topdir/$package.toc"
 ##################################################
 ### MOD: Removes the built files from .release ###
 ##################################################
-rm "$releasedir/$archive_name"
-rm -rf "$releasedir/RecipeMaster"
-rm "$releasedir"/*.txt
+rm "$releasedir/$archive_name" # .zip file
+rm -rf "$releasedir/RecipeMaster" # RecipeMaster folder
 
 
 # All done.
