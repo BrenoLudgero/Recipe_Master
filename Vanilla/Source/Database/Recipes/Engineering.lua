@@ -843,11 +843,6 @@ rm.recipeDB[202] = {
 		teachesItem = 21569,
 		teachesSpell = 26442,
 	},
-	[22729] = {
-		skill = 275,
-		teachesItem = 22728,
-		teachesSpell = 28327,
-	},
 	[210178] = {
 		season = "SoD",
 		skill = 135,
