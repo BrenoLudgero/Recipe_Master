@@ -14,6 +14,11 @@ local function isCloudyTradeSkillEnabled()
     return isLoadedOrLoading
 end
 
+local function isAlaTradeSkillEnabled()
+    local isLoadedOrLoading = C_AddOns.IsAddOnLoaded("alaTradeSkill")
+    return isLoadedOrLoading
+end
+
 local function isTradeSkillMasterFrameEnabled()
     return (
         TSM_API and (
@@ -75,6 +80,35 @@ local function setFrameMovableAndResizable(professionFrame, mainFrameWidth)
     saveFramePositionOnDragStop(professionFrame)
 end
 
+local function getFramesOffsets()
+    local mainFrameTopOffsets = {-2, -4}
+    local mainFrameBottomOffsets = {0, -6}
+    local restoreButtonOffsets = {-2, -4}
+    if isAlaTradeSkillEnabled() then
+        mainFrameBottomOffsets = {0, -9}
+        -- "Blizzard style" option is enabled
+        if alaTradeSkillSV.set.blz_style then
+            mainFrameTopOffsets = {7, -2}
+            restoreButtonOffsets = {8, -2}
+        else
+            mainFrameTopOffsets = {12, 4}
+            restoreButtonOffsets = {14, 4}
+        end
+    elseif isCloudyTradeSkillEnabled() then
+        mainFrameTopOffsets = {30, -4}
+        restoreButtonOffsets = {8, -2}
+    end
+    return mainFrameTopOffsets, mainFrameBottomOffsets, restoreButtonOffsets
+end
+
+local function setRestoreButtonAnchor(closeButton, exitButton, restoreButtonOffsets)
+    if isCloudyTradeSkillEnabled() then
+        rm.restoreButton:SetPoint("BOTTOMLEFT", exitButton, "BOTTOMRIGHT", unpack(restoreButtonOffsets))
+    else
+        rm.restoreButton:SetPoint("TOPLEFT", closeButton, "TOPRIGHT", unpack(restoreButtonOffsets))
+    end
+end
+
 local function setFramePointsRelativeToParent(professionFrame)
     rm.restoreButton:ClearAllPoints()
     if professionFrame == SkilletFrame then
@@ -82,15 +116,10 @@ local function setFramePointsRelativeToParent(professionFrame)
         rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 0, -1)
         rm.mainFrame:SetPoint("BOTTOM", professionFrame)
     elseif professionFrame == TradeSkillFrame then
-        local restoreButtonOffsets = isCloudyTradeSkillEnabled() and {8, -2} or {-2, -4}
-        local mainFrameTopOffsets = isCloudyTradeSkillEnabled() and {30, -4} or {-2, -4}
-        if isCloudyTradeSkillEnabled() then
-            rm.restoreButton:SetPoint("BOTTOMLEFT", TradeSkillCancelButton, "BOTTOMRIGHT", unpack(restoreButtonOffsets))
-        else
-            rm.restoreButton:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", unpack(restoreButtonOffsets))
-        end
+        local mainFrameTopOffsets, mainFrameBottomOffsets, restoreButtonOffsets = getFramesOffsets()
+        setRestoreButtonAnchor(closeButton, exitButton, restoreButtonOffsets)
         rm.mainFrame:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", unpack(mainFrameTopOffsets))
-        rm.mainFrame:SetPoint("BOTTOMLEFT", TradeSkillCancelButton, "BOTTOMRIGHT", 0, -6)
+        rm.mainFrame:SetPoint("BOTTOMLEFT", TradeSkillCancelButton, "BOTTOMRIGHT", unpack(mainFrameBottomOffsets))
     end
 end
 
