@@ -100,7 +100,7 @@ end
 local function appendMessage(tooltip, message)
     for i = 1, tooltip:NumLines() do
         local currentLineText = _G[tooltip:GetName().."TextLeft"..i]:GetText()
-        if isTooltipMessageDisplayed(currentLineText, message) then
+        if not currentLineText or isTooltipMessageDisplayed(currentLineText, message) then
             return
         end
     end
