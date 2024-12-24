@@ -1,7 +1,7 @@
 ## Interface: 11505
 ## Version: @project-version@
 
-## X-WoWI-ID: 26701
+## X-WoWI-ID: 26887
 ## X-Curse-Project-ID: 983613
 
 ## Title: Recipe Master
