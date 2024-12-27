@@ -1,5 +1,5 @@
 # Recipe Master
-[![CF](https://img.shields.io/badge/Download-CurseForge-orange)](https://www.curseforge.com/wow/addons/recipe-master) [![WowInterface](https://img.shields.io/badge/Download-WoWInterface%20(Vanilla)-blue)](https://www.wowinterface.com/downloads/info26701-RecipeMasterVanilla.html)
+[![CF](https://img.shields.io/badge/Download-CurseForge-orange)](https://www.curseforge.com/wow/addons/recipe-master) [![WowInterface](https://img.shields.io/badge/Download-WoWInterface%20-blue)](https://www.wowinterface.com/downloads/info26887-RecipeMaster.html)
 
 ![Recipes Window](/Images/Recipes_Window.png)
 
