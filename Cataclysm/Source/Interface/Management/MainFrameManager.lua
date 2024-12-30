@@ -1,4 +1,5 @@
 local _, rm = ...
+local L = rm.L
 local F = rm.F
 
 local function isSkilletEnabledAndVisible()
@@ -51,11 +52,15 @@ end
 
 local function updateFramePositionOrHeightOnDrag(professionFrame, mainFrameWidth)
     rm.mainFrame:RegisterForDrag("LeftButton", "RightButton")
-    rm.mainFrame:SetResizeBounds(mainFrameWidth, 296, mainFrameWidth, 700)
     rm.mainFrame:SetScript("OnDragStart", function(self, button)
         if button == "LeftButton" then
             self:StartMoving()
         elseif button == "RightButton" then
+            if rm.activeTab == L.sources and #rm.sourcesList.children > 0 then
+                rm.mainFrame:SetResizeBounds(F.sizes.sourcesFrameWidth, 296, F.sizes.sourcesFrameWidth, 700)
+            else
+                rm.mainFrame:SetResizeBounds(mainFrameWidth, 296, mainFrameWidth, 700)
+            end
             self:StartSizing()
         end
     end)

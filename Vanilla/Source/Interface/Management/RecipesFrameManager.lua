@@ -55,7 +55,7 @@ end
 local function updateProgressBar()
     -- If Skillet is enabled, avoids an error when switching from a 
     -- trade skill window to a craft window (enchanting) and vice versa
-    -- or when using the default UI and the mentioned windows are closed in quick succession
+    -- or when using the default UI and the aforementioned windows are closed in quick succession
     if rm.learnedPercentage > 100 then
         return
     end
@@ -67,7 +67,7 @@ local function updateProgressBar()
 end
 
 function rm.updateRecipesList(getSkillInfo)
-    if rm.getProfessionFrame() then -- Avoids the same Skillet error described in the previous function
+    if rm.getProfessionFrame() then -- Avoids the same error described in updateProgressBar()
         rm.clearFrameContent()
         rm.listProfessionRecipes(getSkillInfo)
         updateMainWidthBasedOnWidestRecipeName()

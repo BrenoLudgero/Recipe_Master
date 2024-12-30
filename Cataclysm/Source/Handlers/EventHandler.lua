@@ -50,7 +50,7 @@ local function showMainFrame()
 end
 
 local function handleProfessionFrameOpened()
-    rm.displayedProfession = GetTradeSkillLine() -- e.g. Engineering
+    rm.displayedProfession = GetTradeSkillLine() -- e.g. Engineering (Localized)
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills()
         RunNextFrame(function() 

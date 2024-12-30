@@ -52,7 +52,7 @@ local function showMainFrame(getSkillInfo)
 end
 
 local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
-    rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering
+    rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering (Localized)
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
         showMainFrame(getSkillInfo) 

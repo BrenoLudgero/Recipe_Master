@@ -7,6 +7,7 @@ function rm.activateBottomTabAndDesaturateOthers(tab)
         if bottomTab == tab then
             bottomTab.active = true
             bottomTab.texture:SetDesaturated(false)
+            rm.activeTab = tab.label
         else
             bottomTab.active = false
             bottomTab.texture:SetDesaturated(true)
