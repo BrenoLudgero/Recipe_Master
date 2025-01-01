@@ -35,14 +35,21 @@ function rm.isRecipeAvailableForCharacter(recipe)
 end
 
 function rm.isRankupRecipe(recipe)
-    return type(recipe.teachesSpell) == "string"
+    return type(recipe.teaches) == "string"
 end
 
 local function isSkillLearnedByCharacter(characterSkills, recipe)
-    return (
-        rm.tableContains(characterSkills, recipe.teachesItem)
-        or rm.tableContains(characterSkills, recipe.teachesSpell)
-    )
+    if type(recipe.teaches) ~= "table" then
+        return rm.tableContains(characterSkills, recipe.teaches)
+    else
+        -- Enchanting recipes may contain an item and a spell under "teaches"
+        for _, teachedSkill in pairs(recipe.teaches) do
+            if rm.tableContains(characterSkills, teachedSkill) then
+                return true
+            end
+        end
+        return false
+    end
 end
 
 function rm.getAllCharactersRecipeStatus(recipe, professionID)
@@ -65,7 +72,7 @@ end
 -- Identifies all rankup recipes that teach a rank equal to or lower than the current profession rank
 local function isLearnedRankupRecipe(recipe, professionRank)
     if rm.isRankupRecipe(recipe) then
-        return rankOrder[recipe.teachesSpell] <= rankOrder[professionRank]
+        return rankOrder[recipe.teaches] <= rankOrder[professionRank]
     end
     return false
 end
@@ -132,8 +139,7 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         sources = rm.sourceDB[professionID][recipeID],
         skill = recipeData["skill"], 
         specialization = recipeData["specialization"], 
-        teachesItem = recipeData["teachesItem"], 
-        teachesSpell = recipeData["teachesSpell"], 
+        teaches = recipeData["teaches"], 
         texture = rTexture
     }
 end

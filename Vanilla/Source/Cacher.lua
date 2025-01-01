@@ -28,17 +28,17 @@ local function splitSeasonalRecipes(professionRecipes)
     return sodRecipes, regularRecipes
 end
 
-local function hasSameNameOrTeachesSameItem(sodRecipe, regularRecipe)
+local function hasSameNameOrTeachesSameSkill(sodRecipe, regularRecipe)
     return (
         sodRecipe.name == regularRecipe.name
-        or sodRecipe.teachesItem == regularRecipe.teachesItem
+        or sodRecipe.teaches == regularRecipe.teaches
     )
 end
 
 local function hasSoDCounterpart(sodRecipes, regularRecipe)
     for _, sodRecipe in pairs(sodRecipes) do
         if not rm.isRankupRecipe(sodRecipe)
-        and hasSameNameOrTeachesSameItem(sodRecipe, regularRecipe) then
+        and hasSameNameOrTeachesSameSkill(sodRecipe, regularRecipe) then
             return true
         end
     end

@@ -67,32 +67,14 @@ rm.uniqueDB = {
 			2057,
 		},
 	},
-	[16365] = {
-		classification = "Elite",
-		level = "80",
-		names = {
-			deDE = "Meisterhandwerker Omarion",
-			enUS = "Master Craftsman Omarion",
-			esES = "Maestro Artesano Omarion",
-			esMX = "Maestro Artesano Omarion",
-			frFR = "Maître Artisan Omarion",
-			koKR = "거장 오마리온",
-			ptBR = "Mestre Artesão Omarion",
-			ruRU = "Мастер Ремесленник Омарион",
-			zhCN = "大工匠奥玛里恩",
-			zhTW = "大工匠奧瑪裏恩",
-		},
-		zones = {
-			3456,
-			139,
-		},
-	},
 	[53214] = {
 		classification = "Elite",
 		level = "85",
 		names = {
 			deDE = "Damek Blühbart",
 			enUS = "Damek Bloombeard",
+			frFR = "Damek Barbe En Fleur",
+			koKR = "다멕 블룸비어드",
 			ptBR = "Damek Barbabroto",
 			ruRU = "Дамек Цветобород",
 		},
@@ -103,8 +85,10 @@ rm.uniqueDB = {
 	[53881] = {
 		level = "85",
 		names = {
+			deDE = "Ayla Schattensturm",
 			enUS = "Ayla Shadowstorm",
 			frFR = "Ayla Ombretempête",
+			koKR = "아일라 섀도스톰",
 			ptBR = "Ayla Tempessombra",
 			ruRU = "Айла Темная Буря",
 		},

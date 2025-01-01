@@ -137,6 +137,10 @@ rm.questDB = {
 		level = 15,
 		reqLevel = 12,
 	},
+	[9249] = {
+		level = 0,
+		reqLevel = 45,
+	},
 	[9356] = {
 		level = 61,
 		reqLevel = 58,

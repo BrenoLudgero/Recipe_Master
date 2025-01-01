@@ -1,20 +1,6 @@
 local _, rm = ...
 
 rm.objectDB = {
-	[1721] = {
-		names = {
-			deDE = "Verschlossene Kugel Und Kette",
-			enUS = "Locked Ball And Chain",
-			esES = "Cadena Con Bola De Preso",
-			esMX = "Cadena Con Bola De Preso",
-			frFR = "Boulet Et Chaîne Verrouillés",
-			koKR = "단단히 잠긴 족쇄",
-			ptBR = "Bola e corrente presas",
-			ruRU = "Запертые Кандалы С Ядром",
-			zhCN = "坚固链球",
-			zhTW = "堅固鏈球",
-		},
-	},
 	[2844] = {
 		names = {
 			deDE = "Ramponierte Truhe",
@@ -49,64 +35,6 @@ rm.objectDB = {
 			3430,
 		},
 	},
-	[2846] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Tattered Chest",
-			esES = "Cofre Ajado",
-			esMX = "Cofre Ajado",
-			frFR = "Coffre En Morceaux",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Gasto",
-			ruRU = "Побитый Сундук",
-			zhCN = "破碎的箱子",
-			zhTW = "破碎的箱子",
-		},
-		zones = {
-			3525,
-		},
-	},
-	[2847] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Tattered Chest",
-		},
-		zones = {
-			3433,
-		},
-	},
-	[2849] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Battered Chest",
-			esES = "Cofre Maltrecho",
-			esMX = "Cofre Maltrecho",
-			frFR = "Coffre Endommagé",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Desgastado",
-			ruRU = "Побитый Сундук",
-			zhCN = "破损的箱子",
-			zhTW = "破損的箱子",
-		},
-		zones = {
-			3433,
-			3525,
-		},
-	},
-	[2850] = {
-		names = {
-			deDE = "Robuste Truhe",
-			enUS = "Solid Chest",
-			esES = "Cofre Macizo",
-			esMX = "Cofre Macizo",
-			frFR = "Coffre Solide",
-			koKR = "단단한 궤짝",
-			ptBR = "Baú Sólido",
-			ruRU = "Добротный Сундук",
-			zhCN = "坚固的箱子",
-			zhTW = "堅固的箱子",
-		},
-	},
 	[3642] = {
 		names = {
 			deDE = "Beute Der Kolkar",
@@ -122,65 +50,6 @@ rm.objectDB = {
 		},
 		zones = {
 			17,
-		},
-	},
-	[3714] = {
-		names = {
-			deDE = "Geldkassette Der Allianz",
-			enUS = "Alliance Strongbox",
-			esES = "Caja Fuerte De La Alianza",
-			esMX = "Caja Fuerte De La Alianza",
-			frFR = "Coffre De Lalliance",
-			koKR = "얼라이언스 금고",
-			ptBR = "Caixa-forte da Aliança",
-			ruRU = "Сейф Альянса",
-			zhCN = "联盟保险箱",
-			zhTW = "聯盟保險箱",
-		},
-	},
-	[3715] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Tattered Chest",
-			esES = "Cofre Ajado",
-			esMX = "Cofre Ajado",
-			frFR = "Coffre En Morceaux",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Gasto",
-			ruRU = "Побитый Сундук",
-			zhCN = "破碎的箱子",
-			zhTW = "破碎的箱子",
-		},
-	},
-	[4096] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Tattered Chest",
-			esES = "Cofre Ajado",
-			esMX = "Cofre Ajado",
-			frFR = "Coffre En Morceaux",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Gasto",
-			ruRU = "Побитый Сундук",
-			zhCN = "破碎的箱子",
-			zhTW = "破碎的箱子",
-		},
-	},
-	[74447] = {
-		names = {
-			deDE = "Große Eisenbeschlagene Truhe",
-			enUS = "Large Iron Bound Chest",
-			esES = "Cofre Reforzado Con Hierro Grande",
-			esMX = "Cofre Reforzado Con Hierro Grande",
-			frFR = "Grand Coffre Cerclé De Fer",
-			koKR = "큰 철제 궤짝",
-			ptBR = "Baú Grande Reforçado com Ferro",
-			ruRU = "Окованный Железом Большой Сундук",
-			zhCN = "大型铁箍储物箱",
-			zhTW = "大型鐵箍儲物箱",
-		},
-		zones = {
-			796,
 		},
 	},
 	[74448] = {
@@ -240,40 +109,6 @@ rm.objectDB = {
 			209,
 		},
 	},
-	[75296] = {
-		names = {
-			deDE = "Große Eisenbeschlagene Truhe",
-			enUS = "Large Iron Bound Chest",
-			esES = "Cofre Reforzado Con Hierro Grande",
-			esMX = "Cofre Reforzado Con Hierro Grande",
-			frFR = "Grand Coffre Cerclé De Fer",
-			koKR = "큰 철제 궤짝",
-			ptBR = "Baú Grande Reforçado com Ferro",
-			ruRU = "Окованный Железом Большой Сундук",
-			zhCN = "大型铁箍储物箱",
-			zhTW = "大型鐵箍儲物箱",
-		},
-		zones = {
-			796,
-		},
-	},
-	[75297] = {
-		names = {
-			deDE = "Große Eisenbeschlagene Truhe",
-			enUS = "Large Iron Bound Chest",
-			esES = "Cofre Reforzado Con Hierro Grande",
-			esMX = "Cofre Reforzado Con Hierro Grande",
-			frFR = "Grand Coffre Cerclé De Fer",
-			koKR = "큰 철제 궤짝",
-			ptBR = "Baú Grande Reforçado com Ferro",
-			ruRU = "Окованный Железом Большой Сундук",
-			zhCN = "大型铁箍储物箱",
-			zhTW = "大型鐵箍儲物箱",
-		},
-		zones = {
-			722,
-		},
-	},
 	[75298] = {
 		names = {
 			deDE = "Große Robuste Truhe",
@@ -328,114 +163,6 @@ rm.objectDB = {
 			722,
 		},
 	},
-	[105578] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Tattered Chest",
-			esES = "Cofre Ajado",
-			esMX = "Cofre Ajado",
-			frFR = "Coffre En Morceaux",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Gasto",
-			ruRU = "Побитый Сундук",
-			zhCN = "破碎的箱子",
-			zhTW = "破碎的箱子",
-		},
-	},
-	[105579] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Tattered Chest",
-			esES = "Cofre Ajado",
-			esMX = "Cofre Ajado",
-			frFR = "Coffre En Morceaux",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Gasto",
-			ruRU = "Побитый Сундук",
-			zhCN = "破碎的箱子",
-			zhTW = "破碎的箱子",
-		},
-	},
-	[105581] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Tattered Chest",
-			esES = "Cofre Ajado",
-			esMX = "Cofre Ajado",
-			frFR = "Coffre En Morceaux",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Gasto",
-			ruRU = "Побитый Сундук",
-			zhCN = "破碎的箱子",
-			zhTW = "破碎的箱子",
-		},
-	},
-	[106318] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Battered Chest",
-			esES = "Cofre Maltrecho",
-			esMX = "Cofre Maltrecho",
-			frFR = "Coffre Endommagé",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Desgastado",
-			ruRU = "Побитый Сундук",
-			zhCN = "破损的箱子",
-			zhTW = "破損的箱子",
-		},
-		zones = {
-			14,
-			12,
-		},
-	},
-	[106319] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Battered Chest",
-			esES = "Cofre Maltrecho",
-			esMX = "Cofre Maltrecho",
-			frFR = "Coffre Endommagé",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Desgastado",
-			ruRU = "Побитый Сундук",
-			zhCN = "破损的箱子",
-			zhTW = "破損的箱子",
-		},
-		zones = {
-			3433,
-		},
-	},
-	[111095] = {
-		names = {
-			deDE = "Ramponierte Truhe",
-			enUS = "Tattered Chest",
-			esES = "Cofre Ajado",
-			esMX = "Cofre Ajado",
-			frFR = "Coffre En Morceaux",
-			koKR = "낡은 궤짝",
-			ptBR = "Baú Gasto",
-			ruRU = "Побитый Сундук",
-			zhCN = "联盟宝箱",
-			zhTW = "聯盟寶箱",
-		},
-		zones = {
-			3433,
-		},
-	},
-	[131978] = {
-		names = {
-			deDE = "Große Mithrilbeschlagene Truhe",
-			enUS = "Large Mithril Bound Chest",
-			esES = "Cofre Reforzado Con Mitril Grande",
-			esMX = "Cofre Reforzado Con Mitril Grande",
-			frFR = "Grand Coffre Cerclé De Mithril",
-			koKR = "큰 미스릴 궤짝",
-			ptBR = "Baú Grande Reforçado com Mithril",
-			ruRU = "Окованный Мифрилом Большой Сундук",
-			zhCN = "大型秘银储物箱",
-			zhTW = "大型秘銀儲物箱",
-		},
-	},
 	[131979] = {
 		names = {
 			deDE = "Große Dunkelholztruhe",
@@ -487,20 +214,6 @@ rm.objectDB = {
 			440,
 		},
 	},
-	[152608] = {
-		names = {
-			deDE = "Beute Der Kolkar",
-			enUS = "Kolkars Booty",
-			esES = "Botín De Kolkar",
-			esMX = "Botín De Kolkar",
-			frFR = "Butin Des Kolkar",
-			koKR = "콜카르 노획물 궤짝",
-			ptBR = "Butim do Kolkar",
-			ruRU = "Добыча Колкара",
-			zhCN = "科卡尔的战利品",
-			zhTW = "科卡爾的戰利品",
-		},
-	},
 	[152618] = {
 		names = {
 			deDE = "Beute Der Kolkar",
@@ -518,38 +231,6 @@ rm.objectDB = {
 			17,
 		},
 	},
-	[153451] = {
-		names = {
-			deDE = "Robuste Truhe",
-			enUS = "Solid Chest",
-			esES = "Cofre Macizo",
-			esMX = "Cofre Macizo",
-			frFR = "Coffre Solide",
-			koKR = "단단한 궤짝",
-			ptBR = "Baú Sólido",
-			ruRU = "Добротный Сундук",
-			zhCN = "坚固的箱子",
-			zhTW = "堅固的箱子",
-		},
-		zones = {
-			440,
-			47,
-		},
-	},
-	[153463] = {
-		names = {
-			deDE = "Große Robuste Truhe",
-			enUS = "Large Solid Chest",
-			esES = "Cofre Macizo Grande",
-			esMX = "Cofre Macizo Grande",
-			frFR = "Grand Coffre Solide",
-			koKR = "크고 단단한 궤짝",
-			ptBR = "Baú Grande Sólido",
-			ruRU = "Большой Добротный Сундук",
-			zhCN = "坚固的大箱子",
-			zhTW = "堅固的大箱子",
-		},
-	},
 	[153464] = {
 		names = {
 			deDE = "Große Robuste Truhe",
@@ -565,38 +246,6 @@ rm.objectDB = {
 		},
 		zones = {
 			2557,
-			1583,
-			2017,
-		},
-	},
-	[153468] = {
-		names = {
-			deDE = "Große Mithrilbeschlagene Truhe",
-			enUS = "Large Mithril Bound Chest",
-			esES = "Cofre Reforzado Con Mitril Grande",
-			esMX = "Cofre Reforzado Con Mitril Grande",
-			frFR = "Grand Coffre Cerclé De Mithril",
-			koKR = "큰 미스릴 궤짝",
-			ptBR = "Baú Grande Reforçado com Mithril",
-			ruRU = "Окованный Мифрилом Большой Сундук",
-			zhCN = "大型秘银储物箱",
-			zhTW = "大型秘銀儲物箱",
-		},
-	},
-	[153469] = {
-		names = {
-			deDE = "Große Mithrilbeschlagene Truhe",
-			enUS = "Large Mithril Bound Chest",
-			esES = "Cofre Reforzado Con Mitril Grande",
-			esMX = "Cofre Reforzado Con Mitril Grande",
-			frFR = "Grand Coffre Cerclé De Mithril",
-			koKR = "큰 미스릴 궤짝",
-			ptBR = "Baú Grande Reforçado com Mithril",
-			ruRU = "Окованный Мифрилом Большой Сундук",
-			zhCN = "大型秘银储物箱",
-			zhTW = "大型秘銀儲物箱",
-		},
-		zones = {
 			1583,
 			2017,
 		},
@@ -687,20 +336,6 @@ rm.objectDB = {
 			2017,
 		},
 	},
-	[179501] = {
-		names = {
-			deDE = "Knot Zwingschraubs Behälter",
-			enUS = "Knot Thimblejacks Cache",
-			esES = "Alijo De Knot Llavededo",
-			esMX = "Alijo De Knot Llavededo",
-			frFR = "Réserve De Noué Dédodevie",
-			koKR = "노트 팀블잭의 은닉품",
-			ptBR = "Tesouro do Fiapo Agulhacerta",
-			ruRU = "Тайник Уззла Наперстяка",
-			zhCN = "诺特 希姆加克的储物箱",
-			zhTW = "諾特 希姆加剋的儲物箱",
-		},
-	},
 	[179564] = {
 		names = {
 			deDE = "Tribut Der Gordok",
@@ -732,34 +367,6 @@ rm.objectDB = {
 			5287,
 		},
 	},
-	[181798] = {
-		names = {
-			deDE = "Teufelseisentruhe",
-			enUS = "Fel Iron Chest",
-			esES = "Cofre De Hierro Vil",
-			esMX = "Cofre De Hierro Vil",
-			frFR = "Coffre En Gangrefer",
-			koKR = "지옥무쇠 궤짝",
-			ptBR = "Baú de Ferrovil",
-			ruRU = "Сундук Из Оскверненного Железа",
-			zhCN = "魔铁宝箱",
-			zhTW = "魔鐵寶箱",
-		},
-	},
-	[181804] = {
-		names = {
-			deDE = "Teufelsstahltruhe",
-			enUS = "Felsteel Chest",
-			esES = "Cofre De Acero Vil",
-			esMX = "Cofre De Acero Vil",
-			frFR = "Coffre En Gangracier",
-			koKR = "지옥강철 궤짝",
-			ptBR = "Baú de Açovil",
-			ruRU = "Сундук Из Оскверненной Стали",
-			zhCN = "魔钢宝箱",
-			zhTW = "魔鋼寶箱",
-		},
-	},
 	[185584] = {
 		names = {
 			deDE = "Najentus Stachel",
@@ -777,35 +384,6 @@ rm.objectDB = {
 			3959,
 		},
 	},
-	[186565] = {
-		names = {
-			deDE = "Zeremonielle Harpune Der Drachenschinder",
-			enUS = "Ceremonial Dragonflayer Harpoon",
-			esES = "Arpón Ceremonial De Los Desuelladragones",
-			esMX = "Arpón Ceremonial De Los Desuelladragones",
-			frFR = "Harpon Écorche Dragon De Cérémonie",
-			koKR = "용약탈 의식용 작살",
-			ptBR = "Arpão Esfola-dragão Cerimonial",
-			ruRU = "Церемониальный Гарпун Клана Укротителей Драконов",
-			zhCN = "掠龙仪祭鱼叉",
-			zhTW = "掠龍儀祭魚叉",
-		},
-		zones = {
-			495,
-		},
-	},
-	[187655] = {
-		names = {
-			deDE = "Eiersack Der Nerubar",
-			enUS = "Nerubar Egg Sac",
-			esES = "Saco De Huevos Nerubar",
-			esMX = "Saco De Huevos Nerubar",
-			frFR = "Cocon Dœufs Nérubar",
-			koKR = "네룹아르 알 주머니",
-			ptBR = "Bolsa de Ovos de Nerub'ar",
-			ruRU = "Нерубарские Яйца",
-		},
-	},
 	[187892] = {
 		names = {
 			deDE = "Eiskiste",
@@ -819,28 +397,6 @@ rm.objectDB = {
 		},
 		zones = {
 			3717,
-		},
-	},
-	[188124] = {
-		names = {
-			deDE = "Eiskiste",
-			enUS = "Ice Chest",
-			esES = "Arcón De Hielo",
-			esMX = "Arcón De Hielo",
-			frFR = "Coffre De Glace",
-			koKR = "얼음 궤짝",
-			ruRU = "Ледник",
-		},
-	},
-	[188191] = {
-		names = {
-			deDE = "Eiskiste",
-			enUS = "Ice Chest",
-			esES = "Arcón De Hielo",
-			esMX = "Arcón De Hielo",
-			frFR = "Coffre De Glace",
-			koKR = "얼음 궤짝",
-			ruRU = "Ледник",
 		},
 	},
 	[188192] = {
@@ -884,20 +440,6 @@ rm.objectDB = {
 			4228,
 		},
 	},
-	[194201] = {
-		names = {
-			deDE = "Einzigartiger Schrein Des Winters",
-			enUS = "Rare Cache Of Winter",
-			esES = "Alijo De Invierno Poco Común",
-			esMX = "Alijo De Invierno Poco Común",
-			frFR = "Cache Rare De Lhiver",
-			ptBR = "Rare Cache of Winter",
-			ruRU = "Зимние Сокровища",
-		},
-		zones = {
-			4273,
-		},
-	},
 	[194308] = {
 		names = {
 			deDE = "Schrein Des Winters",
@@ -907,20 +449,6 @@ rm.objectDB = {
 			frFR = "Cache De Lhiver",
 			ptBR = "Cache of Winter",
 			ruRU = "Тайник Ходира",
-		},
-		zones = {
-			4273,
-		},
-	},
-	[194314] = {
-		names = {
-			deDE = "Schrein Der Stürme",
-			enUS = "Cache Of Storms",
-			esES = "Alijo De Tormentas",
-			esMX = "Alijo De Tormentas",
-			frFR = "Cache Des Tempêtes",
-			ptBR = "Cache of Storms",
-			ruRU = "Тайник Торима",
 		},
 		zones = {
 			4273,
@@ -952,41 +480,14 @@ rm.objectDB = {
 			4273,
 		},
 	},
-	[194328] = {
-		names = {
-			deDE = "Freyas Geschenk",
-			enUS = "Freyas Gift",
-			frFR = "Cadeau De Freya",
-			ptBR = "Freya's Gift",
-		},
-	},
-	[194329] = {
-		names = {
-			enUS = "Freyas Gift",
-			ptBR = "Freya's Gift",
-			ruRU = "Дар Фрейи",
-		},
-	},
-	[194331] = {
-		names = {
-			deDE = "Freyas Geschenk",
-			enUS = "Freyas Gift",
-			esES = "Don De Freya",
-			esMX = "Don De Freya",
-			frFR = "Cadeau De Freya",
-			ptBR = "Freya's Gift",
-			ruRU = "Дар Фрейи",
-		},
-		zones = {
-			4273,
-		},
-	},
 	[194464] = {
 		names = {
 			deDE = "Ritualedelstein",
 			enUS = "Ritual Gem",
 			frFR = "Gemme De Rituel",
 			ruRU = "Ритуальный Самоцвет",
+			zhCN = "仪式宝石",
+			zhTW = "儀式寶石",
 		},
 		zones = {
 			331,
@@ -1001,18 +502,6 @@ rm.objectDB = {
 			frFR = "Don De Lobservateur",
 			ptBR = "Gift of the Observer",
 			ruRU = "Дар Наблюдателя",
-		},
-		zones = {
-			4273,
-		},
-	},
-	[194956] = {
-		names = {
-			deDE = "Schrein Der Innovation",
-			enUS = "Cache Of Innovation",
-			frFR = "Cache De Linnovation",
-			ptBR = "Cache of Innovation",
-			ruRU = "Склад Изобретателя",
 		},
 		zones = {
 			4273,
@@ -1108,21 +597,6 @@ rm.objectDB = {
 			66,
 			210,
 			2817,
-		},
-	},
-	[207517] = {
-		names = {
-			deDE = "Seidene Schatzkiste",
-			enUS = "Silken Treasure Chest",
-			esES = "Arqueta De Seda",
-			esMX = "Arqueta De Seda",
-			frFR = "Coffre De Soie",
-			koKR = "비단결 보물 상자",
-			ptBR = "Baú do Tesouro de Seda",
-			ruRU = "Шелковый Сундук С Сокровищами",
-		},
-		zones = {
-			66,
 		},
 	},
 	[207528] = {

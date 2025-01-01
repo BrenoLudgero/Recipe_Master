@@ -3,24 +3,23 @@ local _, rm = ...
 rm.recipeDB[356] = {
 	[16082] = {
 		skill = 200,
-		teachesSpell = "Artisan",
+		teaches = "Artisan",
 	},
 	[16083] = {
 		skill = 125,
-		teachesSpell = "Expert",
+		teaches = "Expert",
 	},
 	[27532] = {
 		skill = 275,
-		teachesSpell = "Master",
+		teaches = "Master",
 	},
 	[43308] = {
 		isSpell = true,
 		skill = 100,
-		teachesItem = 43308,
-		teachesSpell = 43308,
+		teaches = 43308,
 	},
 	[46054] = {
-		skill = 200,
-		teachesSpell = "Journeyman",
+		skill = 50,
+		teaches = "Journeyman",
 	},
 }

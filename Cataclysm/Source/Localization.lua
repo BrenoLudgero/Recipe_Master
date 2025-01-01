@@ -214,19 +214,6 @@ L.uniqueSourceInstructions = {
                 "然後牧師可以將配方傳授給附近的玩家"
         -- Eihrister, Wowhead.com
     },
-    [16365] = {
-        ["deDE"] = "Er ist in einem Käfig im Militärviertel eingesperrt",
-        ["enUS"] = "He is locked in a cage located inside The Millitary Quarter",
-        ["esES"] = "Está encerrado en una jaula ubicada en el Arrabal Militar",
-        ["esMX"] = "Está encerrado en una jaula ubicada en el Arrabal Militar",
-        ["frFR"] = "Il est enfermé dans une cage située dans le Quartier Militaire",
-        ["koKR"] = "그는 밀리터리 쿼터 안에 위치한 철창에 갇혀 있습니다",
-        ["ptBR"] = "Ele está preso em uma jaula localizada no Bairro Militar",
-        ["ruRU"] = "Он заперт в клетке, расположенной в Военный Квартал",
-        ["zhCN"] = "他被关在军事区的笼子里",
-        ["zhTW"] = "他被關在軍事區的籠子裡"
-        -- Tomon, Wowhead.com
-    },
     [32516] = {
         ["deDE"] = "Nachdem du die Quest 'Der Geschmackstest'\n"..
                 "abgeschlossen hast, sprich mit diesem NPC in\n"..

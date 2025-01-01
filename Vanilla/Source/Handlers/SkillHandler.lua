@@ -64,7 +64,7 @@ function rm.saveNewlyLearnedSkill(spellID)
     for professionID, recipes in pairs(rm.cachedRecipes) do
         if rm.getSavedProfessionByID(professionID) then -- Profession is learned by the character
             for _, recipeData in pairs(recipes) do
-                if spellID == recipeData.teachesSpell then
+                if spellID == recipeData.teaches then
                     table.insert(getSavedSkillsByProfessionID(professionID), spellID)
                     return
                 end
