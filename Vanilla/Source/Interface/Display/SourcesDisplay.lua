@@ -57,7 +57,7 @@ end
 local function getAllSourcesInfo(sourceType, recipeSource)
     local info = {}
     for sourceID, sourceData in pairs(recipeSource) do
-        local source = nil
+        local source
         if sourceType == "drop" or sourceType == "pickpocket" then
             source = rm.getCreatureInfo(sourceID, sourceData)
         elseif sourceType == "vendor" then

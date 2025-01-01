@@ -62,7 +62,7 @@ function rm.getAllCharactersRecipeStatus(recipe, professionID)
     return charactersMissingRecipeSkill, charactersWithRecipeSkill
 end
 
--- Identifies all rankup recipes that teach a rank equal to or lower than the current profession rank
+-- Identifies a rankup recipe that teaches a rank equal to or lower than the current profession rank
 local function isLearnedRankupRecipe(recipe, professionRank)
     if rm.isRankupRecipe(recipe) then
         return rankOrder[recipe.teaches] <= rankOrder[professionRank]
@@ -73,8 +73,7 @@ end
 function rm.isLearnedRecipe(recipe)
     local learnedSkills = rm.getSavedSkillsByProfessionName(rm.displayedProfession)
     local professionRank = rm.getSavedProfessionRank(rm.displayedProfession)
-    local isLearnedRecipe = isSkillLearnedByCharacter(learnedSkills, recipe)
-    return isLearnedRecipe or isLearnedRankupRecipe(recipe, professionRank)
+    return isSkillLearnedByCharacter(learnedSkills, recipe) or isLearnedRankupRecipe(recipe, professionRank)
 end
 
 function rm.isMissingRecipeOfCurrentFaction(recipe)
