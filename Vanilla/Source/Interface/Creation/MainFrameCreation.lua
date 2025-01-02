@@ -39,7 +39,7 @@ end
 
 function rm.createMainHeaderText(parent)
     local text = parent:CreateFontString(nil, "OVERLAY", F.fonts.header)
-    text:SetText(L.title)
+    text:SetText("Recipe Master")
     text:SetTextColor(unpack(F.colors.yellow))
     text:SetAllPoints(parent)
     return text
@@ -64,7 +64,7 @@ end
 function rm.createRestoreButton()
     local button = CreateFrame("Button", nil)
     button:SetSize(F.sizes.restoreButton, F.sizes.restoreButton)
-    rm.showTooltipTextOnMouseover(button, L.title, "ANCHOR_RIGHT")
+    rm.showTooltipTextOnMouseover(button, "Recipe Master", "ANCHOR_RIGHT")
     rm.restoreMainFrameOnClick(button)
     button.texture = button:CreateTexture()
     button.texture:SetTexture(rm.getPreference("restoreButtonIconTexture"))

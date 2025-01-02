@@ -55,6 +55,7 @@ local defaultOptionsFramePreferences = {
     restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
     showLearnedRecipes = true,
     showRecipesInfo = true,
+    showDifficultyTooltipInfo = true,
     showAltsTooltipInfo = true,
     showSourcesTooltipInfo = true
 }

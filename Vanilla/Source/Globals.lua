@@ -10,6 +10,12 @@ rm.missingRecipesCount = 0
 rm.totalRecipesCount = 0
 rm.learnedPercentage = 0
 rm.widestRecipeTextWidth = 0
+rm.difficultyLevels = {
+    {name = L.difficult, color = "ffFF8040"},
+    {name = L.fair, color = "ffFFFF00"},
+    {name = L.easy, color = "ff40C040"},
+    {name = L.trivial, color = "ff808080"}
+}
 rm.sourcesOrder = {
     "trainer", 
     "vendor", 

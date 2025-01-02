@@ -135,6 +135,15 @@ function rm.createShowLearnedCheckButton()
     )
 end
 
+function rm.createDifficultyTooltipInfoCheckButton()
+    return createCheckButton(
+        F.offsets.showDifficultyTooltipCheckX,
+        F.offsets.showDifficultyTooltipCheckY,
+        "showDifficultyTooltipInfo",
+        L.showDifficultyTooltipInfo
+    )
+end
+
 function rm.createSourcesTooltipInfoCheckButton()
     return createCheckButton(
         F.offsets.showSourceTooltipCheckX,

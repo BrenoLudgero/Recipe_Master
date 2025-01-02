@@ -57,6 +57,14 @@ local function getRecipeTooltipMessage(recipe, professionID)
     local message = ""
     local newLine = "\n"
     local newLineInfo = "\n  "
+    if rm.getPreference("showDifficultyTooltipInfo") and recipe and recipe.difficulty then
+        message = message..newLine..WrapTextInColorCode(L.difficulty, F.colors.lightGrayHex)..newLineInfo
+        for index, diffLevel in ipairs(recipe.difficulty) do
+            if diffLevel ~= 0 then
+                message = message..WrapTextInColorCode(diffLevel, rm.difficultyLevels[index].color).." "
+            end
+        end
+    end
     if rm.getPreference("showSourcesTooltipInfo") and recipe and recipe.sources then
         message = message..newLine..WrapTextInColorCode(L.sources, F.colors.lightBlueHex)
         for _, sourceType in ipairs(rm.sourcesOrder) do

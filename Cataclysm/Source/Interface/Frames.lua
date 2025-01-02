@@ -67,6 +67,7 @@ function rm.createAllFrameElements()
         ---------- Checkboxes ----------
         showRecipesInfo = rm.createShowRecipesInfoCheckButton(),
         showLearnedButton = rm.createShowLearnedCheckButton(),
+        showDifficultyTooltipInfo = rm.createDifficultyTooltipInfoCheckButton(),
         showSourcesTooltipInfo = rm.createSourcesTooltipInfoCheckButton(),
         showAltsTooltipInfo = rm.createAltsTooltipInfoCheckButton()
     }

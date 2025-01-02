@@ -54,7 +54,7 @@ function rm.createChatLinkOrDisplaySourcesOnClick(icon, recipe)
     end)
 end
 
-function rm.getRequirementsText(recipe, recipeInfo)
+local function getMissingRequirementsText(recipe)
     local missingRequirements = ""
     if recipe.skill > rm.getSavedProfessionLevelByName(rm.displayedProfession) then
         local skillInfo = L.skill..": "..recipe.skill.."  "
@@ -68,9 +68,32 @@ function rm.getRequirementsText(recipe, recipeInfo)
         local reputationInfo = rm.getFactionName(recipe.repFaction).."  "
         missingRequirements = missingRequirements..reputationInfo
     end
+    return missingRequirements
+end
+
+local function getDifficultyTextAndColor(recipe)
+    local professionSkill = rm.getSavedProfessionLevelByName(rm.displayedProfession)
+    for index, diffLevel in ipairs(recipe.difficulty) do
+        if diffLevel ~= 0 and diffLevel >= professionSkill then
+            return rm.difficultyLevels[index].name, rm.difficultyLevels[index].color
+        end
+    end
+    return rm.difficultyLevels[4].name, rm.difficultyLevels[4].color -- Trivial
+end
+
+function rm.getRequirementsText(recipe, recipeInfo)
+    local missingRequirements = getMissingRequirementsText(recipe)
     if missingRequirements == "" then
-        recipeInfo:SetText(L.canLearn)
-        recipeInfo:SetTextColor(unpack(F.colors.yellow))
+        if recipe.difficulty then
+            local difficultyLevel, difficultyColor = getDifficultyTextAndColor(recipe)
+            recipeInfo:SetText(
+                WrapTextInColorCode(L.canLearn, F.colors.yellowHex)..
+                WrapTextInColorCode(" | ", F.colors.whiteHex)..
+                WrapTextInColorCode(difficultyLevel, difficultyColor)
+            )
+        else
+            recipeInfo:SetText(WrapTextInColorCode(L.canLearn, F.colors.yellowHex))
+        end
     else
         recipeInfo:SetText(missingRequirements:gsub("(%s%s)(%C)", ", %2")) -- Replaces all "  " with ", " when followed by a character
         recipeInfo:SetTextColor(unpack(F.colors.red))

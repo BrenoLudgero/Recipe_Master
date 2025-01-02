@@ -66,7 +66,8 @@ function rm.createAllFrameElements()
         restoreButton = rm.createRestoreIconDropdown(),
         ---------- Checkboxes ----------
         showRecipesInfo = rm.createShowRecipesInfoCheckButton(),
-        showLearnedButton = rm.createShowLearnedCheckButton(),        
+        showLearnedButton = rm.createShowLearnedCheckButton(),
+        showDifficultyTooltipInfo = rm.createDifficultyTooltipInfoCheckButton(),
         showSourcesTooltipInfo = rm.createSourcesTooltipInfoCheckButton(),
         showAltsTooltipInfo = rm.createAltsTooltipInfoCheckButton()
     }
