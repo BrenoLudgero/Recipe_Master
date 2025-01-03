@@ -2301,7 +2301,7 @@ rm.recipeDB[202] = {
 	},
 	[35187] = {
 		classes = {
-			"Paladin",
+			"PALADIN",
 		},
 		difficulty = {
 			375,
@@ -2314,7 +2314,7 @@ rm.recipeDB[202] = {
 	},
 	[35191] = {
 		classes = {
-			"Druid",
+			"DRUID",
 		},
 		difficulty = {
 			375,
@@ -2327,9 +2327,9 @@ rm.recipeDB[202] = {
 	},
 	[35196] = {
 		classes = {
-			"Warrior",
-			"Paladin",
-			"Death Knight",
+			"WARRIOR",
+			"PALADIN",
+			"DEATHKNIGHT",
 		},
 		difficulty = {
 			375,
@@ -3230,7 +3230,7 @@ rm.recipeDB[202] = {
 	},
 	[70177] = {
 		classes = {
-			"Hunter",
+			"HUNTER",
 		},
 		difficulty = {
 			515,

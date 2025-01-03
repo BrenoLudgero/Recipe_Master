@@ -753,7 +753,7 @@ rm.recipeDB[185] = {
 	},
 	[18160] = {
 		classes = {
-			"Rogue",
+			"ROGUE",
 		},
 		difficulty = {
 			60,

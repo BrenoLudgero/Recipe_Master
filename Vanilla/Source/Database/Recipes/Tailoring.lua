@@ -1783,7 +1783,7 @@ rm.recipeDB[197] = {
 	},
 	[14512] = {
 		classes = {
-			"Priest",
+			"PRIEST",
 		},
 		difficulty = {
 			300,
@@ -1796,7 +1796,7 @@ rm.recipeDB[197] = {
 	},
 	[14513] = {
 		classes = {
-			"Mage",
+			"MAGE",
 		},
 		difficulty = {
 			300,
@@ -1809,7 +1809,7 @@ rm.recipeDB[197] = {
 	},
 	[14514] = {
 		classes = {
-			"Warlock",
+			"WARLOCK",
 		},
 		difficulty = {
 			300,

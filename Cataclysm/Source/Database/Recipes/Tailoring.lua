@@ -1773,7 +1773,7 @@ rm.recipeDB[197] = {
 	},
 	[14512] = {
 		classes = {
-			"Priest",
+			"PRIEST",
 		},
 		difficulty = {
 			300,

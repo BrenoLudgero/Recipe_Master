@@ -15,9 +15,8 @@ local rankOrder = {
 local function isRecipeForCurrentClass(recipe)
     if not recipe.classes then
         return true
-    else
-        return rm.tableContains(recipe.classes, currentCharacterClass)
     end
+    return rm.tableContains(recipe.classes, currentCharacterClass)
 end
 
 local function isRecipeForCurrentSpecialization(recipe)
