@@ -78,6 +78,12 @@ local function removeAbandonedProfession(currentProfessions, professionID)
     end
 end
 
+local function isSodSavedSpecializationFormatOutdated(professionID, savedSpecialization)
+    if rm.isSodProfessionWithSpecializations(professionID) then
+        return savedSpecialization == false or type(savedSpecialization) == "number"
+    end
+end
+
 local function updateSavedProfessions(currentProfessions)
     for professionID, professionData in pairs(currentProfessions) do
         local professionLevel = professionData["level"]
@@ -86,6 +92,10 @@ local function updateSavedProfessions(currentProfessions)
         local savedProfessionRank = rm.getSavedProfessionByID(professionID)["rank"]
         local professionSpecialization = professionData["specialization"]
         local savedProfessionSpecialization = rm.getSavedSpecializationByID(professionID)
+        -- Transforms a previously unique saved specialization into a table of specializations (2.6.0 -> 2.6.1)
+        if isSodSavedSpecializationFormatOutdated(professionID, savedProfessionSpecialization) then
+            savedProfessionSpecialization = {}
+        end
         if professionLevel ~= savedProfessionLevel then
             rm.getSavedProfessionByID(professionID)["level"] = professionLevel
         elseif professionRank ~= savedProfessionRank then
