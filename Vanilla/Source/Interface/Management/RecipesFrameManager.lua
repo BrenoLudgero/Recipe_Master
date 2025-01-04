@@ -60,9 +60,13 @@ local function updateProgressBar()
         return
     end
     local progress = rm.learnedRecipesCount.."/"..rm.totalRecipesCount
-    local specialization = getSpecializationDisplayName()
     rm.progressBar:SetValue(rm.learnedPercentage)
-    rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%) "..specialization)
+    if rm.currentSeason ~= "SoD" then
+        local specialization = getSpecializationDisplayName()
+        rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%) "..specialization)
+    else
+        rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%)")
+    end
     updateProgressBarColor()
 end
 

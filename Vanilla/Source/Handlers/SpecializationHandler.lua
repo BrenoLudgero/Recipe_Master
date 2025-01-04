@@ -25,10 +25,21 @@ local specializationIDs = {
     [165] = {10657, 10658, 10660}
 }
 
+function rm.isSodProfessionWithSpecializations(professionID)
+    return rm.currentSeason == "SoD" and specializationIDs[professionID] ~= nil
+end
+
 local function storeCurrentSpecializations(currentSpecializations, spellID)
     for professionID, specs in pairs(specializationIDs) do
         if rm.tableContains(specs, spellID) then
-            currentSpecializations[professionID] = spellID
+            if rm.isSodProfessionWithSpecializations(professionID) then
+                currentSpecializations[professionID] = currentSpecializations[professionID] or {}
+                if not rm.tableContains(currentSpecializations[professionID], spellID) then
+                    table.insert(currentSpecializations[professionID], spellID)
+                end
+            else
+                currentSpecializations[professionID] = spellID
+            end
         end
     end
 end
@@ -48,18 +59,52 @@ end
 
 function rm.saveNewSpecializations(currentSpecializations)
     for professionID, specializationID in pairs(currentSpecializations) do
-        if not rm.getSavedSpecializationByID(professionID) then
-            rm.getSavedProfessionByID(professionID)["specialization"] = specializationID
+        local savedSpecialization = rm.getSavedSpecializationByID(professionID)
+        if rm.isSodProfessionWithSpecializations(professionID) then
+            local savedSpecs = rm.getSavedProfessionByID(professionID)["specialization"]
+            if type(savedSpecs) ~= "table" then
+                savedSpecs = {}
+                rm.getSavedProfessionByID(professionID)["specialization"] = savedSpecs
+            end
+            if not rm.tableContains(savedSpecs, specializationID) then
+                table.insert(savedSpecs, specializationID)
+            end
+        else
+            if not savedSpecialization then
+                rm.getSavedProfessionByID(professionID)["specialization"] = specializationID
+            end
         end
     end
 end
 
 local function isSpecializationAbandoned(currentSpecializations, professionID)
-    return not currentSpecializations[professionID] and rm.getSavedSpecializationByID(professionID)
+    if rm.isSodProfessionWithSpecializations(professionID) then
+        local savedSpecs = rm.getSavedSpecializationByID(professionID)
+        if type(savedSpecs) == "table" then
+            for _, savedSpec in ipairs(savedSpecs) do
+                if not rm.tableContains(currentSpecializations[professionID] or {}, savedSpec) then
+                    return true
+                end
+            end
+            return false
+        end
+    end
+    return rm.getSavedSpecializationByID(professionID) and not currentSpecializations[professionID]
 end
 
 function rm.removeAbandonedSpecialization(currentSpecializations, professionID)
-    if isSpecializationAbandoned(currentSpecializations, professionID) then
-        rm.getSavedProfessionByID(professionID)["specialization"] = nil
+    if rm.isSodProfessionWithSpecializations(professionID) then
+        local savedSpecs = rm.getSavedProfessionByID(professionID)["specialization"]
+        if type(savedSpecs) == "table" then
+            for i = #savedSpecs, 1, -1 do
+                if not rm.tableContains(currentSpecializations[professionID] or {}, savedSpecs[i]) then
+                    table.remove(savedSpecs, i)
+                end
+            end
+        end
+    else
+        if isSpecializationAbandoned(currentSpecializations, professionID) then
+            rm.getSavedProfessionByID(professionID)["specialization"] = nil
+        end
     end
 end

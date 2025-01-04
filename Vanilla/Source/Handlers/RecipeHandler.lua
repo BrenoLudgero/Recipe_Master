@@ -17,6 +17,9 @@ local function isRecipeForCurrentClass(recipe)
 end
 
 local function isRecipeForCurrentSpecialization(recipe)
+    if rm.currentSeason == "SoD" then
+        return true
+    end
     local professionID = rm.getProfessionID(rm.displayedProfession)
     local currentSpecialization = rm.getSavedSpecializationByID(professionID)
     return (

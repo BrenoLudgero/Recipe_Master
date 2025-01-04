@@ -96,7 +96,7 @@ local function getRecipeTooltipMessage(recipe, professionID)
             end
         end
     end
-    return rm.L.title..WrapTextInColorCode(message, F.colors.whiteHex)
+    return "Recipe Master"..WrapTextInColorCode(message, F.colors.whiteHex)
 end
 
 -- Ensures that the message is not displayed twice

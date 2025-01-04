@@ -51,9 +51,19 @@ local function getMissingRequirementsText(recipe)
         local skillInfo = L.skill..": "..recipe.skill.."  "
         missingRequirements = missingRequirements..skillInfo
     end
-    if recipe.specialization and not recipe.specialization == rm.getSavedSpecializationByName(rm.displayedProfession) then 
-        local specializationInfo = rm.getSpecializationName(recipe.specialization).."  "
-        missingRequirements = missingRequirements..specializationInfo
+    if recipe.specialization then
+        local savedSpecialization = rm.getSavedSpecializationByName(rm.displayedProfession) or {}
+        if rm.currentSeason == "SoD" and type(savedSpecialization) == "table" then
+            if not rm.tableContains(savedSpecialization, recipe.specialization) then
+                local specializationInfo = rm.getSpecializationName(recipe.specialization).."  "
+                missingRequirements = missingRequirements..specializationInfo
+            end
+        else
+            if recipe.specialization ~= savedSpecialization then 
+                local specializationInfo = rm.getSpecializationName(recipe.specialization).."  "
+                missingRequirements = missingRequirements..specializationInfo
+            end
+        end
     end
     if recipe.repLevel and not rm.isReputationRequirementMet(recipe) then
         local reputationInfo = rm.getFactionName(recipe.repFaction).."  "

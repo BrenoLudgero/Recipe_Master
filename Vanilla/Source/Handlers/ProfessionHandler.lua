@@ -39,8 +39,11 @@ local function storeLearnedProfession(currentProfessions, skillName, skillRank, 
             ["level"] = skillRank,
             ["rank"] = getRankName(maxSkillRank),
             ["skills"] = {},
-            ["specialization"] = false
+            ["specialization"] = false,
         }
+        if rm.isSodProfessionWithSpecializations(professionID) then
+            currentProfessions[professionID].specialization = {}
+        end
     end
 end
 
