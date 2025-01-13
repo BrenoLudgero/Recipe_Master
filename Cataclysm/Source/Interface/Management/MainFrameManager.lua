@@ -106,11 +106,11 @@ local function getFramesOffsets()
     return mainFrameTopOffsets, mainFrameBottomOffsets, restoreButtonOffsets
 end
 
-local function setRestoreButtonAnchor(closeButton, exitButton, restoreButtonOffsets)
+local function setRestoreButtonAnchor(restoreButtonOffsets)
     if isCloudyTradeSkillEnabled() then
-        rm.restoreButton:SetPoint("BOTTOMLEFT", exitButton, "BOTTOMRIGHT", unpack(restoreButtonOffsets))
+        rm.restoreButton:SetPoint("BOTTOMLEFT", TradeSkillCancelButton, "BOTTOMRIGHT", unpack(restoreButtonOffsets))
     else
-        rm.restoreButton:SetPoint("TOPLEFT", closeButton, "TOPRIGHT", unpack(restoreButtonOffsets))
+        rm.restoreButton:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", unpack(restoreButtonOffsets))
     end
 end
 
@@ -122,7 +122,7 @@ local function setFramePointsRelativeToParent(professionFrame)
         rm.mainFrame:SetPoint("BOTTOM", professionFrame)
     elseif professionFrame == TradeSkillFrame then
         local mainFrameTopOffsets, mainFrameBottomOffsets, restoreButtonOffsets = getFramesOffsets()
-        setRestoreButtonAnchor(closeButton, exitButton, restoreButtonOffsets)
+        setRestoreButtonAnchor(restoreButtonOffsets)
         rm.mainFrame:SetPoint("TOPLEFT", TradeSkillFrameCloseButton, "TOPRIGHT", unpack(mainFrameTopOffsets))
         rm.mainFrame:SetPoint("BOTTOMLEFT", TradeSkillCancelButton, "BOTTOMRIGHT", unpack(mainFrameBottomOffsets))
     end
@@ -172,12 +172,9 @@ function rm.hideSourcesFrameElements()
 end
 
 function rm.hideMainFrame()
-    if not rm.mainFrame:IsShown() and not rm.getProfessionFrame() then
-        rm.restoreButton:Hide()
-        return
-    end
     rm.clearFrameContent()
     rm.mainFrame:Hide()
+    rm.restoreButton:Hide()
 end
 
 function rm.showCenteredText(string, color)
