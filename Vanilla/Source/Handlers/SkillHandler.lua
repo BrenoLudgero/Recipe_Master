@@ -61,12 +61,18 @@ function rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
 end
 
 function rm.saveNewlyLearnedSkill(spellID)
+    local spellName = GetSpellInfo(spellID)
     for professionID, recipes in pairs(rm.cachedRecipes) do
         if rm.getSavedProfessionByID(professionID) then -- Profession is learned by the character
             for _, recipeData in pairs(recipes) do
-                if spellID == recipeData.teaches then
-                    table.insert(getSavedSkillsByProfessionID(professionID), spellID)
-                    return
+                if spellID == recipeData.spell or spellID == recipeData.teaches 
+                or (type(recipeData.teaches) == "table" and rm.tableContains(recipeData.teaches, spellID)) then
+                    local recipeName = recipeData.name
+                    -- Comparing names because items and spells might have the same ID
+                    if recipeName == spellName or string.find(recipeName, spellName) then
+                        table.insert(getSavedSkillsByProfessionID(professionID), recipeData.teaches)
+                        return
+                    end
                 end
             end
         end

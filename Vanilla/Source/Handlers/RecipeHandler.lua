@@ -141,6 +141,7 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         sources = rm.sourceDB[professionID][recipeID],
         skill = recipeData["skill"], 
         specialization = recipeData["specialization"], 
+        spell = recipeData["spell"],
         teaches = recipeData["teaches"], 
         texture = rTexture
     }
