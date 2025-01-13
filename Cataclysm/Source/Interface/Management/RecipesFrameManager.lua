@@ -1,5 +1,6 @@
 local _, rm = ...
 local F = rm.F
+local L = rm.L
 
 function rm.updateRecipesFrameElementsPosition()
     local yOffset = 0
@@ -65,6 +66,12 @@ function rm.updateRecipesList()
     rm.listProfessionRecipes()
     updateMainWidthBasedOnWidestRecipeName()
     updateProgressBar()
+end
+
+function rm.refreshRecipesListIfOpen()
+    if rm.getProfessionFrame() and rm.activeTab == L.recipes then
+        rm.updateRecipesList()
+    end
 end
 
 function rm.showRecipesFrame()

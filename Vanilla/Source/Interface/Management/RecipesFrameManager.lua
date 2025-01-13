@@ -1,5 +1,6 @@
 local _, rm = ...
 local F = rm.F
+local L = rm.L
 
 function rm.updateRecipesFrameElementsPosition()
     local yOffset = 0
@@ -76,6 +77,18 @@ function rm.updateRecipesList(getSkillInfo)
         rm.listProfessionRecipes(getSkillInfo)
         updateMainWidthBasedOnWidestRecipeName()
         updateProgressBar()
+    end
+end
+
+function rm.refreshRecipesListIfOpen()
+    if rm.getProfessionFrame() and rm.activeTab == L.recipes then
+        local getSkillInfo
+        if rm.isEnchanting(rm.displayedProfession) then
+            getSkillInfo = GetCraftInfo
+        else
+            getSkillInfo = GetTradeSkillInfo
+        end
+        rm.updateRecipesList(getSkillInfo)
     end
 end
 

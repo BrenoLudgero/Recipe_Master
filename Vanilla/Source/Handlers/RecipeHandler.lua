@@ -9,6 +9,10 @@ local rankOrder = {
     Artisan = 4
 }
 
+function rm.isEnchanting(professionName)
+    return professionName == L.professions[333]
+end
+
 local function isRecipeForCurrentClass(recipe)
     if not recipe.classes then
         return true

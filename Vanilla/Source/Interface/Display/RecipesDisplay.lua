@@ -72,13 +72,9 @@ function rm.listProfessionRecipes(getSkillInfo)
     populateAllRecipeRows(professionRecipes)
 end
 
-local function isCraft(profession)
-    return profession == L.professions[333] -- Enchanting
-end
-
 function rm.showRecipesForSpecificProfession(profession)
     rm.displayedProfession = profession
-    if isCraft(rm.displayedProfession) then
+    if rm.isEnchanting(rm.displayedProfession) then
         rm.updateRecipesList(GetCraftInfo)
     else
         rm.updateRecipesList(GetTradeSkillInfo)

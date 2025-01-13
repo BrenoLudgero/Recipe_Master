@@ -35,12 +35,14 @@ end
 function rm.handleSkillChange(event)
     if event == "SKILL_LINES_CHANGED" then
         rm.updateCharacterProfessions()
+        rm.refreshRecipesListIfOpen()
     end
 end
 
 function rm.handleRecipeLearned(event, spellID)
     if event == "NEW_RECIPE_LEARNED" then
         rm.saveNewlyLearnedSkill(spellID)
+        rm.refreshRecipesListIfOpen()
     end
 end
 
