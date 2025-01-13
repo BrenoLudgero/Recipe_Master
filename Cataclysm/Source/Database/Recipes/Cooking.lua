@@ -1756,31 +1756,43 @@ rm.recipeDB[185] = {
 		spell = 58525,
 		teaches = 43492,
 	},
-	[44836] = {
+	[44858] = {
 		difficulty = {
-			100,
-			150,
-			162,
-			175,
+			160,
+			210,
+			222,
+			235,
 		},
 		faction = "Alliance",
-		skill = 100,
-		spell = 62044,
-		teaches = 44836,
+		skill = 160,
+		spell = 62049,
+		teaches = 44840,
 	},
-	[44837] = {
+	[44859] = {
+		difficulty = {
+			220,
+			270,
+			282,
+			295,
+		},
+		faction = "Alliance",
+		skill = 220,
+		spell = 62051,
+		teaches = 44839,
+	},
+	[44860] = {
 		difficulty = {
 			1,
 			90,
 			102,
 			115,
 		},
-		faction = "Horde",
+		faction = "Alliance",
 		skill = 1,
-		spell = 66038,
+		spell = 62050,
 		teaches = 44837,
 	},
-	[44838] = {
+	[44861] = {
 		difficulty = {
 			280,
 			405,
@@ -1792,29 +1804,17 @@ rm.recipeDB[185] = {
 		spell = 62045,
 		teaches = 44838,
 	},
-	[44839] = {
+	[44862] = {
 		difficulty = {
-			220,
-			270,
-			282,
-			295,
+			100,
+			150,
+			162,
+			175,
 		},
 		faction = "Alliance",
-		skill = 220,
-		spell = 66034,
-		teaches = 44839,
-	},
-	[44840] = {
-		difficulty = {
-			160,
-			210,
-			222,
-			235,
-		},
-		faction = "Horde",
-		skill = 160,
-		spell = 66035,
-		teaches = 44840,
+		skill = 100,
+		spell = 62044,
+		teaches = 44836,
 	},
 	[44954] = {
 		difficulty = {
@@ -1848,6 +1848,66 @@ rm.recipeDB[185] = {
 		skill = 1,
 		spell = 65454,
 		teaches = 46691,
+	},
+	[46803] = {
+		difficulty = {
+			1,
+			90,
+			102,
+			115,
+		},
+		faction = "Horde",
+		skill = 1,
+		spell = 66038,
+		teaches = 44837,
+	},
+	[46804] = {
+		difficulty = {
+			100,
+			150,
+			162,
+			175,
+		},
+		faction = "Horde",
+		skill = 100,
+		spell = 66036,
+		teaches = 44836,
+	},
+	[46805] = {
+		difficulty = {
+			160,
+			210,
+			222,
+			235,
+		},
+		faction = "Horde",
+		skill = 160,
+		spell = 66035,
+		teaches = 44840,
+	},
+	[46806] = {
+		difficulty = {
+			220,
+			270,
+			282,
+			295,
+		},
+		faction = "Horde",
+		skill = 220,
+		spell = 66034,
+		teaches = 44839,
+	},
+	[46807] = {
+		difficulty = {
+			280,
+			405,
+			417,
+			430,
+		},
+		faction = "Horde",
+		skill = 280,
+		spell = 66037,
+		teaches = 44838,
 	},
 	[62676] = {
 		difficulty = {
