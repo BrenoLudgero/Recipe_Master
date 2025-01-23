@@ -53,6 +53,10 @@ local function getColoredSpecialization(character, recipeSpecialization, profess
 end
 
 local function getRecipeTooltipMessage(recipe, professionID)
+    if not recipe then
+        return "" -- Return an empty string if recipe is nil
+    end
+
     local charactersMissingRecipe, charactersWhoCraftRecipe = rm.getAllCharactersRecipeStatus(recipe, professionID)
     local message = ""
     local newLine = "\n"
@@ -117,14 +121,34 @@ end
 
 local function getRecipeInfo(itemName, itemLink)
     local recipeID = rm.getIDFromLink(itemLink)
+    if not recipeID then
+        return nil, nil -- Recipe ID not found
+    end
+
     local professionName = handleMismatchedProfessionNames(recipeID, itemLink)
+    if not professionName then
+        return nil, nil -- Profession name not found
+    end
+
     local professionID = rm.getProfessionID(professionName)
-    local recipe = rm.cachedRecipes[professionID][recipeID]
+    if not professionID then
+        return nil, nil -- Profession ID not found
+    end
+
+    local recipe = rm.cachedRecipes[professionID] and rm.cachedRecipes[professionID][recipeID]
+    if not recipe then
+        return nil, professionID -- Recipe not found, but we return professionID for debugging
+    end
+
     return recipe, professionID
 end
 
 local function showMessageInTooltip(tooltip, itemName, itemLink)
     local recipe, professionID = getRecipeInfo(itemName, itemLink)
+    if not recipe then
+        return -- Do nothing if recipe is nil
+    end
+
     local message = getRecipeTooltipMessage(recipe, professionID)
     local messageLineCount = select(2, message:gsub("\n", "\n"))
     if messageLineCount > 0 then -- Not counting the "Recipe Master" header

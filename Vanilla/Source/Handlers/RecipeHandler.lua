@@ -45,6 +45,9 @@ function rm.isRankupRecipe(recipe)
 end
 
 local function isSkillLearnedByCharacter(characterSkills, recipe)
+    if not recipe then
+        return false -- If recipe is nil, return false
+    end
     if type(recipe.teaches) ~= "table" then
         return rm.tableContains(characterSkills, recipe.teaches)
     else
@@ -59,6 +62,10 @@ local function isSkillLearnedByCharacter(characterSkills, recipe)
 end
 
 function rm.getAllCharactersRecipeStatus(recipe, professionID)
+    if not recipe then
+        return {}, {} -- Return empty tables if recipe is nil
+    end
+
     local otherCharactersInfo = rm.getProfessionSkillsForOtherCharacters(professionID)
     local charactersMissingRecipeSkill = {}
     local charactersWithRecipeSkill = {}
