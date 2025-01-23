@@ -24,6 +24,10 @@ local function compareRecipes(a, b)
 end
 
 local function sortRecipes(professionRecipes)
+    if type(professionRecipes) ~= "table" then
+        print("Error: professionRecipes is not a table in sortRecipes.")
+        return {}
+    end
     local sortedRecipes = {}
     for _, recipe in pairs(professionRecipes) do
         table.insert(sortedRecipes, recipe)
@@ -69,6 +73,13 @@ end
 
 function rm.listProfessionRecipes(getSkillInfo)
     local professionRecipes = rm.getProfessionRecipes(getSkillInfo)
+
+    -- Validate that professionRecipes is a table
+    if type(professionRecipes) ~= "table" then
+        print("Error: professionRecipes is not a table. Received:", type(professionRecipes))
+        return
+    end
+
     populateAllRecipeRows(professionRecipes)
 end
 
