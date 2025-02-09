@@ -158,9 +158,9 @@ L.uniqueSourceInstructions = {
                 "nachdem sie besiegt wurde",
         ["enUS"] = "She'll drop a book containing the recipe\n"..
                 "after being defeated",
-        ["esES"] = "Dejará caer un libro que contiene la receta\n"..
+        ["esES"] = "Dejará soltar un libro que contiene la receta\n"..
                 "después de ser derrotada",
-        ["esMX"] = "Dejará caer un libro que contiene la receta\n"..
+        ["esMX"] = "Dejará soltar un libro que contiene la receta\n"..
                 "después de ser derrotada",
         ["frFR"] = "Elle laissera tomber un livre contenant la recette\n"..
                 "après avoir été vaincue",
@@ -326,7 +326,7 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.showSourcesTooltipInfo = "Mostrar fuentes"
     L.stock = "Reserva"
     L.trivial = "Trivial"
-    L.updateIconDropdown = "Ícono de restauración de la ventana"
+    L.updateIconDropdown = "Icono de restauración de la ventana"
     L.pickpocket = "Robar"
     L.trainer = "Instructor"
     return
