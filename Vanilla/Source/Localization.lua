@@ -322,7 +322,7 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.showAltsTooltipInfo = "Mostrar el estado de personajes"
     L.showDifficultyTooltipInfo = "Mostrar niveles de dificultad"
     L.showLearnedRecipes = "Mostrar Recetas Aprendidas"
-    L.showRecipesInfo = "Mostrar detalles de la receta"
+    L.showRecipesInfo = "Mostrar Detalles de la Receta"
     L.showSourcesTooltipInfo = "Mostrar fuentes"
     L.stock = "Reserva"
     L.trivial = "Trivial"
