@@ -3,6 +3,10 @@ local F = rm.F
 local L = rm.L
 
 function rm.updateRecipesFrameElementsPosition()
+    if type(rm.recipesList.children) ~= "table" then
+        print("Error: rm.recipesList.children is not a valid table in updateRecipesFrameElementsPosition.")
+        return
+    end
     local yOffset = 0
     for _, rowIcon in ipairs(rm.recipesList.children) do
         if rowIcon:IsShown() then
@@ -13,6 +17,10 @@ function rm.updateRecipesFrameElementsPosition()
 end
 
 function rm.clearRecipesFrameContent()
+    if type(rm.recipesList.children) ~= "table" then
+        print("Error: rm.recipesList.children is not a valid table in clearRecipesFrameContent.")
+        return
+    end
     for _, row in pairs(rm.recipesList.children) do
         row:Hide()
     end
@@ -72,22 +80,23 @@ local function updateProgressBar()
 end
 
 function rm.updateRecipesList(getSkillInfo)
-    if rm.getProfessionFrame() then -- Avoids the same error described in updateProgressBar()
-        rm.clearFrameContent()
-        rm.listProfessionRecipes(getSkillInfo)
-        updateMainWidthBasedOnWidestRecipeName()
-        updateProgressBar()
+    if not rm.getProfessionFrame() then
+        print("Error: Profession frame not available in updateRecipesList.")
+        return
     end
+    rm.clearFrameContent()
+    rm.listProfessionRecipes(getSkillInfo)
+    updateMainWidthBasedOnWidestRecipeName()
+    updateProgressBar()
 end
 
 function rm.refreshRecipesListIfOpen()
-    if rm.getProfessionFrame() and rm.activeTab == L.recipes then
-        local getSkillInfo
-        if rm.isEnchanting(rm.displayedProfession) then
-            getSkillInfo = GetCraftInfo
-        else
-            getSkillInfo = GetTradeSkillInfo
-        end
+    if not rm.getProfessionFrame() then
+        print("Error: Profession frame not available in refreshRecipesListIfOpen.")
+        return
+    end
+    if rm.activeTab == L.recipes then
+        local getSkillInfo = rm.isEnchanting(rm.displayedProfession) and GetCraftInfo or GetTradeSkillInfo
         rm.updateRecipesList(getSkillInfo)
     end
 end

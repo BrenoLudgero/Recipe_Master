@@ -93,18 +93,28 @@ local function isSpecializationAbandoned(currentSpecializations, professionID)
 end
 
 function rm.removeAbandonedSpecialization(currentSpecializations, professionID)
+    -- Check if the profession is valid and has specializations
     if rm.isSodProfessionWithSpecializations(professionID) then
-        local savedSpecs = rm.getSavedProfessionByID(professionID)["specialization"]
+        local savedProfession = rm.getSavedProfessionByID(professionID)
+        if not savedProfession or not savedProfession["specialization"] then
+            return -- Exit early if no saved data exists
+        end
+        
+        local savedSpecs = savedProfession["specialization"]
         if type(savedSpecs) == "table" then
             for i = #savedSpecs, 1, -1 do
                 if not rm.tableContains(currentSpecializations[professionID] or {}, savedSpecs[i]) then
-                    table.remove(savedSpecs, i)
+                    table.remove(savedSpecs, i) -- Remove abandoned specialization
                 end
             end
         end
     else
+        -- Check if the specialization is abandoned
         if isSpecializationAbandoned(currentSpecializations, professionID) then
-            rm.getSavedProfessionByID(professionID)["specialization"] = nil
+            local savedProfession = rm.getSavedProfessionByID(professionID)
+            if savedProfession then
+                savedProfession["specialization"] = nil -- Clear abandoned specialization
+            end
         end
     end
 end
