@@ -304,7 +304,7 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.blue = "Azul"
     L.bright = "Brillante"
     L.canLearn = "Puede Aprender"
-    L.chance = "Chance"
+    L.chance = "Prob."
     L.dark = "Oscura"
     L.difficult = "Difícil"
     L.difficulty = "Dificultad"
@@ -326,7 +326,7 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.showSourcesTooltipInfo = "Mostrar fuentes"
     L.stock = "Reserva"
     L.trivial = "Trivial"
-    L.updateIconDropdown = "Ícono de Restauración de la Ventana"
+    L.updateIconDropdown = "Icono de Restauración de la Ventana"
     L.pickpocket = "Robo"
     L.trainer = "Instructor"
     return
