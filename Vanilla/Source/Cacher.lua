@@ -8,13 +8,6 @@ local function isRecipeForCurrentSeason(recipeData)
     return not recipeData.season or recipeData.season == rm.currentSeason
 end
 
-local function isRecipeASpell(professionID, recipeData)
-    return (
-        professionID == 186 -- Mining
-        or recipeData.isSpell
-    )
-end
-
 local function splitSeasonalRecipes(professionRecipes)
     local sodRecipes = {}
     local regularRecipes = {}
@@ -31,7 +24,7 @@ end
 local function hasSameNameOrTeachesSameSkill(sodRecipe, regularRecipe)
     return (
         sodRecipe.name == regularRecipe.name
-        or sodRecipe.teaches == regularRecipe.teaches
+        or sodRecipe.item == regularRecipe.item
     )
 end
 
@@ -65,7 +58,7 @@ local function cacheAllRecipes()
         rm.cachedRecipes[professionID] = {}
         for recipeID, recipeData in pairs(rm.recipeDB[professionID]) do
             if isRecipeForCurrentSeason(recipeData) then
-                if isRecipeASpell(professionID, recipeData) then
+                if recipeData.isSpell then
                     local spell = Spell:CreateFromSpellID(recipeID)
                     spell:ContinueOnSpellLoad(function()
                         rm.storeSpellData(recipeID, recipeData, professionID)

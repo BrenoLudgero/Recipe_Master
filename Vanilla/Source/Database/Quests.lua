@@ -176,6 +176,7 @@ rm.questDB = {
 		classes = {
 			1,
 			3,
+			11,
 		},
 		faction = "Horde",
 		level = 32,
@@ -190,6 +191,7 @@ rm.questDB = {
 		classes = {
 			1,
 			3,
+			11,
 		},
 		faction = "Horde",
 		level = 36,
@@ -204,7 +206,6 @@ rm.questDB = {
 		classes = {
 			1,
 			7,
-			11,
 		},
 		faction = "Horde",
 		level = 40,
@@ -242,6 +243,10 @@ rm.questDB = {
 		reqLevel = 40,
 	},
 	[2763] = {
+		classes = {
+			1,
+			2,
+		},
 		level = 45,
 		reqLevel = 40,
 	},
@@ -263,6 +268,11 @@ rm.questDB = {
 		reqLevel = 40,
 	},
 	[2773] = {
+		classes = {
+			1,
+			2,
+			3,
+		},
 		level = 45,
 		reqLevel = 40,
 	},

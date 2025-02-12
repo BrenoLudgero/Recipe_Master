@@ -8,9 +8,9 @@ rm.recipeDB[197] = {
 			57,
 			70,
 		},
+		item = 2568,
 		skill = 10,
 		spell = 2385,
-		teaches = 2568,
 	},
 	[2569] = {
 		difficulty = {
@@ -19,9 +19,9 @@ rm.recipeDB[197] = {
 			107,
 			125,
 		},
+		item = 2569,
 		skill = 65,
 		spell = 2386,
-		teaches = 2569,
 	},
 	[2570] = {
 		difficulty = {
@@ -30,9 +30,9 @@ rm.recipeDB[197] = {
 			47,
 			60,
 		},
+		item = 2570,
 		skill = 1,
 		spell = 2387,
-		teaches = 2570,
 	},
 	[2575] = {
 		difficulty = {
@@ -41,9 +41,9 @@ rm.recipeDB[197] = {
 			82,
 			100,
 		},
+		item = 2575,
 		skill = 40,
 		spell = 2392,
-		teaches = 2575,
 	},
 	[2576] = {
 		difficulty = {
@@ -52,9 +52,9 @@ rm.recipeDB[197] = {
 			47,
 			60,
 		},
+		item = 2576,
 		skill = 1,
 		spell = 2393,
-		teaches = 2576,
 	},
 	[2577] = {
 		difficulty = {
@@ -63,9 +63,9 @@ rm.recipeDB[197] = {
 			82,
 			100,
 		},
+		item = 2577,
 		skill = 40,
 		spell = 2394,
-		teaches = 2577,
 	},
 	[2578] = {
 		difficulty = {
@@ -74,9 +74,9 @@ rm.recipeDB[197] = {
 			112,
 			130,
 		},
+		item = 2578,
 		skill = 70,
 		spell = 2395,
-		teaches = 2578,
 	},
 	[2579] = {
 		difficulty = {
@@ -85,9 +85,9 @@ rm.recipeDB[197] = {
 			112,
 			130,
 		},
+		item = 2579,
 		skill = 70,
 		spell = 2396,
-		teaches = 2579,
 	},
 	[2580] = {
 		difficulty = {
@@ -96,9 +96,9 @@ rm.recipeDB[197] = {
 			102,
 			120,
 		},
+		item = 2580,
 		skill = 60,
 		spell = 2397,
-		teaches = 2580,
 	},
 	[2582] = {
 		difficulty = {
@@ -107,9 +107,9 @@ rm.recipeDB[197] = {
 			127,
 			145,
 		},
+		item = 2582,
 		skill = 85,
 		spell = 2399,
-		teaches = 2582,
 	},
 	[2583] = {
 		difficulty = {
@@ -118,9 +118,9 @@ rm.recipeDB[197] = {
 			137,
 			155,
 		},
+		item = 2583,
 		skill = 95,
 		spell = 2401,
-		teaches = 2583,
 	},
 	[2584] = {
 		difficulty = {
@@ -129,9 +129,9 @@ rm.recipeDB[197] = {
 			117,
 			135,
 		},
+		item = 2584,
 		skill = 75,
 		spell = 2402,
-		teaches = 2584,
 	},
 	[2587] = {
 		difficulty = {
@@ -140,9 +140,9 @@ rm.recipeDB[197] = {
 			120,
 			130,
 		},
+		item = 2587,
 		skill = 100,
 		spell = 2406,
-		teaches = 2587,
 	},
 	[2598] = {
 		difficulty = {
@@ -151,9 +151,9 @@ rm.recipeDB[197] = {
 			82,
 			100,
 		},
+		item = 2572,
 		skill = 40,
 		spell = 2389,
-		teaches = 2572,
 	},
 	[2601] = {
 		difficulty = {
@@ -162,9 +162,9 @@ rm.recipeDB[197] = {
 			147,
 			165,
 		},
+		item = 2585,
 		skill = 105,
 		spell = 2403,
-		teaches = 2585,
 	},
 	[2996] = {
 		difficulty = {
@@ -173,9 +173,9 @@ rm.recipeDB[197] = {
 			37,
 			50,
 		},
+		item = 2996,
 		skill = 1,
 		spell = 2963,
-		teaches = 2996,
 	},
 	[2997] = {
 		difficulty = {
@@ -184,9 +184,9 @@ rm.recipeDB[197] = {
 			97,
 			105,
 		},
+		item = 2997,
 		skill = 75,
 		spell = 2964,
-		teaches = 2997,
 	},
 	[4238] = {
 		difficulty = {
@@ -195,9 +195,9 @@ rm.recipeDB[197] = {
 			87,
 			105,
 		},
+		item = 4238,
 		skill = 45,
 		spell = 3755,
-		teaches = 4238,
 	},
 	[4240] = {
 		difficulty = {
@@ -206,9 +206,9 @@ rm.recipeDB[197] = {
 			122,
 			140,
 		},
+		item = 4240,
 		skill = 80,
 		spell = 3757,
-		teaches = 4240,
 	},
 	[4245] = {
 		difficulty = {
@@ -217,9 +217,9 @@ rm.recipeDB[197] = {
 			185,
 			200,
 		},
+		item = 4245,
 		skill = 150,
 		spell = 3813,
-		teaches = 4245,
 	},
 	[4292] = {
 		difficulty = {
@@ -228,9 +228,9 @@ rm.recipeDB[197] = {
 			137,
 			155,
 		},
+		item = 4241,
 		skill = 95,
 		spell = 3758,
-		teaches = 4241,
 	},
 	[4305] = {
 		difficulty = {
@@ -239,9 +239,9 @@ rm.recipeDB[197] = {
 			140,
 			145,
 		},
+		item = 4305,
 		skill = 125,
 		spell = 3839,
-		teaches = 4305,
 	},
 	[4307] = {
 		difficulty = {
@@ -250,9 +250,9 @@ rm.recipeDB[197] = {
 			77,
 			95,
 		},
+		item = 4307,
 		skill = 35,
 		spell = 3840,
-		teaches = 4307,
 	},
 	[4308] = {
 		difficulty = {
@@ -261,9 +261,9 @@ rm.recipeDB[197] = {
 			102,
 			120,
 		},
+		item = 4308,
 		skill = 60,
 		spell = 3841,
-		teaches = 4308,
 	},
 	[4309] = {
 		difficulty = {
@@ -272,9 +272,9 @@ rm.recipeDB[197] = {
 			112,
 			130,
 		},
+		item = 4309,
 		skill = 70,
 		spell = 3842,
-		teaches = 4309,
 	},
 	[4310] = {
 		difficulty = {
@@ -283,9 +283,9 @@ rm.recipeDB[197] = {
 			127,
 			145,
 		},
+		item = 4310,
 		skill = 85,
 		spell = 3843,
-		teaches = 4310,
 	},
 	[4312] = {
 		difficulty = {
@@ -294,9 +294,9 @@ rm.recipeDB[197] = {
 			122,
 			140,
 		},
+		item = 4312,
 		skill = 80,
 		spell = 3845,
-		teaches = 4312,
 	},
 	[4314] = {
 		difficulty = {
@@ -305,9 +305,9 @@ rm.recipeDB[197] = {
 			152,
 			170,
 		},
+		item = 4314,
 		skill = 110,
 		spell = 3848,
-		teaches = 4314,
 	},
 	[4316] = {
 		difficulty = {
@@ -316,9 +316,9 @@ rm.recipeDB[197] = {
 			152,
 			170,
 		},
+		item = 4316,
 		skill = 110,
 		spell = 3850,
-		teaches = 4316,
 	},
 	[4318] = {
 		difficulty = {
@@ -327,9 +327,9 @@ rm.recipeDB[197] = {
 			165,
 			180,
 		},
+		item = 4318,
 		skill = 130,
 		spell = 3852,
-		teaches = 4318,
 	},
 	[4320] = {
 		difficulty = {
@@ -338,9 +338,9 @@ rm.recipeDB[197] = {
 			167,
 			185,
 		},
+		item = 4320,
 		skill = 125,
 		spell = 3855,
-		teaches = 4320,
 	},
 	[4324] = {
 		difficulty = {
@@ -349,9 +349,9 @@ rm.recipeDB[197] = {
 			185,
 			200,
 		},
+		item = 4324,
 		skill = 150,
 		spell = 3859,
-		teaches = 4324,
 	},
 	[4326] = {
 		difficulty = {
@@ -360,9 +360,9 @@ rm.recipeDB[197] = {
 			220,
 			235,
 		},
+		item = 4326,
 		skill = 185,
 		spell = 3861,
-		teaches = 4326,
 	},
 	[4330] = {
 		difficulty = {
@@ -371,9 +371,9 @@ rm.recipeDB[197] = {
 			152,
 			170,
 		},
+		item = 4330,
 		skill = 110,
 		spell = 3866,
-		teaches = 4330,
 	},
 	[4334] = {
 		difficulty = {
@@ -382,9 +382,9 @@ rm.recipeDB[197] = {
 			185,
 			190,
 		},
+		item = 4334,
 		skill = 170,
 		spell = 3871,
-		teaches = 4334,
 	},
 	[4339] = {
 		difficulty = {
@@ -393,9 +393,9 @@ rm.recipeDB[197] = {
 			182,
 			185,
 		},
+		item = 4339,
 		skill = 175,
 		spell = 3865,
-		teaches = 4339,
 	},
 	[4343] = {
 		difficulty = {
@@ -404,9 +404,9 @@ rm.recipeDB[197] = {
 			72,
 			90,
 		},
+		item = 4343,
 		skill = 30,
 		spell = 3914,
-		teaches = 4343,
 	},
 	[4344] = {
 		difficulty = {
@@ -415,9 +415,9 @@ rm.recipeDB[197] = {
 			47,
 			60,
 		},
+		item = 4344,
 		skill = 1,
 		spell = 3915,
-		teaches = 4344,
 	},
 	[4345] = {
 		difficulty = {
@@ -426,9 +426,9 @@ rm.recipeDB[197] = {
 			137,
 			155,
 		},
+		item = 4313,
 		skill = 95,
 		spell = 3847,
-		teaches = 4313,
 	},
 	[4346] = {
 		difficulty = {
@@ -437,9 +437,9 @@ rm.recipeDB[197] = {
 			142,
 			160,
 		},
+		item = 4311,
 		skill = 100,
 		spell = 3844,
-		teaches = 4311,
 	},
 	[4347] = {
 		difficulty = {
@@ -448,9 +448,9 @@ rm.recipeDB[197] = {
 			162,
 			180,
 		},
+		item = 4315,
 		skill = 120,
 		spell = 3849,
-		teaches = 4315,
 	},
 	[4348] = {
 		difficulty = {
@@ -459,9 +459,9 @@ rm.recipeDB[197] = {
 			167,
 			185,
 		},
+		item = 4331,
 		skill = 125,
 		spell = 3868,
-		teaches = 4331,
 	},
 	[4349] = {
 		difficulty = {
@@ -470,9 +470,9 @@ rm.recipeDB[197] = {
 			167,
 			185,
 		},
+		item = 4317,
 		skill = 125,
 		spell = 3851,
-		teaches = 4317,
 	},
 	[4350] = {
 		difficulty = {
@@ -481,9 +481,9 @@ rm.recipeDB[197] = {
 			175,
 			190,
 		},
+		item = 4321,
 		skill = 140,
 		spell = 3856,
-		teaches = 4321,
 	},
 	[4351] = {
 		difficulty = {
@@ -492,9 +492,9 @@ rm.recipeDB[197] = {
 			205,
 			220,
 		},
+		item = 4323,
 		skill = 170,
 		spell = 3858,
-		teaches = 4323,
 	},
 	[4352] = {
 		difficulty = {
@@ -503,9 +503,9 @@ rm.recipeDB[197] = {
 			210,
 			225,
 		},
+		item = 4325,
 		skill = 175,
 		spell = 3860,
-		teaches = 4325,
 	},
 	[4353] = {
 		difficulty = {
@@ -514,9 +514,9 @@ rm.recipeDB[197] = {
 			215,
 			230,
 		},
+		item = 4328,
 		skill = 180,
 		spell = 3863,
-		teaches = 4328,
 	},
 	[4354] = {
 		difficulty = {
@@ -525,9 +525,9 @@ rm.recipeDB[197] = {
 			200,
 			205,
 		},
+		item = 4335,
 		skill = 185,
 		spell = 3872,
-		teaches = 4335,
 	},
 	[4355] = {
 		difficulty = {
@@ -536,9 +536,9 @@ rm.recipeDB[197] = {
 			235,
 			250,
 		},
+		item = 4327,
 		skill = 200,
 		spell = 3862,
-		teaches = 4327,
 	},
 	[4356] = {
 		difficulty = {
@@ -547,9 +547,9 @@ rm.recipeDB[197] = {
 			235,
 			250,
 		},
+		item = 4329,
 		skill = 200,
 		spell = 3864,
-		teaches = 4329,
 	},
 	[5542] = {
 		difficulty = {
@@ -558,9 +558,9 @@ rm.recipeDB[197] = {
 			132,
 			150,
 		},
+		item = 5542,
 		skill = 90,
 		spell = 6521,
-		teaches = 5542,
 	},
 	[5766] = {
 		difficulty = {
@@ -569,9 +569,9 @@ rm.recipeDB[197] = {
 			170,
 			185,
 		},
+		item = 5766,
 		skill = 135,
 		spell = 6690,
-		teaches = 5766,
 	},
 	[5771] = {
 		difficulty = {
@@ -580,9 +580,9 @@ rm.recipeDB[197] = {
 			112,
 			130,
 		},
+		item = 5762,
 		skill = 70,
 		spell = 6686,
-		teaches = 5762,
 	},
 	[5772] = {
 		difficulty = {
@@ -591,9 +591,9 @@ rm.recipeDB[197] = {
 			157,
 			175,
 		},
+		item = 5763,
 		skill = 115,
 		spell = 6688,
-		teaches = 5763,
 	},
 	[5773] = {
 		difficulty = {
@@ -602,9 +602,9 @@ rm.recipeDB[197] = {
 			185,
 			200,
 		},
+		item = 5770,
 		skill = 150,
 		spell = 6692,
-		teaches = 5770,
 	},
 	[5774] = {
 		difficulty = {
@@ -613,9 +613,9 @@ rm.recipeDB[197] = {
 			210,
 			225,
 		},
+		item = 5764,
 		skill = 175,
 		spell = 6693,
-		teaches = 5764,
 	},
 	[5775] = {
 		difficulty = {
@@ -624,9 +624,9 @@ rm.recipeDB[197] = {
 			220,
 			235,
 		},
+		item = 5765,
 		skill = 185,
 		spell = 6695,
-		teaches = 5765,
 	},
 	[6238] = {
 		difficulty = {
@@ -635,9 +635,9 @@ rm.recipeDB[197] = {
 			72,
 			90,
 		},
+		item = 6238,
 		skill = 30,
 		spell = 7623,
-		teaches = 6238,
 	},
 	[6241] = {
 		difficulty = {
@@ -646,9 +646,9 @@ rm.recipeDB[197] = {
 			72,
 			90,
 		},
+		item = 6241,
 		skill = 30,
 		spell = 7624,
-		teaches = 6241,
 	},
 	[6270] = {
 		difficulty = {
@@ -657,9 +657,9 @@ rm.recipeDB[197] = {
 			97,
 			115,
 		},
+		item = 6240,
 		skill = 55,
 		spell = 7630,
-		teaches = 6240,
 	},
 	[6271] = {
 		difficulty = {
@@ -668,9 +668,9 @@ rm.recipeDB[197] = {
 			97,
 			115,
 		},
+		item = 6239,
 		skill = 55,
 		spell = 7629,
-		teaches = 6239,
 	},
 	[6272] = {
 		difficulty = {
@@ -679,9 +679,9 @@ rm.recipeDB[197] = {
 			112,
 			130,
 		},
+		item = 6242,
 		skill = 70,
 		spell = 7633,
-		teaches = 6242,
 	},
 	[6274] = {
 		difficulty = {
@@ -690,9 +690,9 @@ rm.recipeDB[197] = {
 			142,
 			160,
 		},
+		item = 6263,
 		skill = 100,
 		spell = 7639,
-		teaches = 6263,
 	},
 	[6275] = {
 		difficulty = {
@@ -701,9 +701,9 @@ rm.recipeDB[197] = {
 			157,
 			175,
 		},
+		item = 6264,
 		skill = 115,
 		spell = 7643,
-		teaches = 6264,
 	},
 	[6390] = {
 		difficulty = {
@@ -712,9 +712,9 @@ rm.recipeDB[197] = {
 			162,
 			180,
 		},
+		item = 6384,
 		skill = 120,
 		spell = 7892,
-		teaches = 6384,
 	},
 	[6391] = {
 		difficulty = {
@@ -723,9 +723,9 @@ rm.recipeDB[197] = {
 			162,
 			180,
 		},
+		item = 6385,
 		skill = 120,
 		spell = 7893,
-		teaches = 6385,
 	},
 	[6401] = {
 		difficulty = {
@@ -734,9 +734,9 @@ rm.recipeDB[197] = {
 			170,
 			175,
 		},
+		item = 4333,
 		skill = 155,
 		spell = 3870,
-		teaches = 4333,
 	},
 	[6786] = {
 		difficulty = {
@@ -745,9 +745,9 @@ rm.recipeDB[197] = {
 			82,
 			100,
 		},
+		item = 6786,
 		skill = 40,
 		spell = 8465,
-		teaches = 6786,
 	},
 	[6787] = {
 		difficulty = {
@@ -756,9 +756,9 @@ rm.recipeDB[197] = {
 			152,
 			170,
 		},
+		item = 6787,
 		skill = 110,
 		spell = 8467,
-		teaches = 6787,
 	},
 	[6795] = {
 		difficulty = {
@@ -767,9 +767,9 @@ rm.recipeDB[197] = {
 			175,
 			180,
 		},
+		item = 6795,
 		skill = 160,
 		spell = 8483,
-		teaches = 6795,
 	},
 	[6796] = {
 		difficulty = {
@@ -778,9 +778,9 @@ rm.recipeDB[197] = {
 			190,
 			195,
 		},
+		item = 6796,
 		skill = 175,
 		spell = 8489,
-		teaches = 6796,
 	},
 	[7026] = {
 		difficulty = {
@@ -789,9 +789,9 @@ rm.recipeDB[197] = {
 			67,
 			85,
 		},
+		item = 7026,
 		skill = 15,
 		spell = 8776,
-		teaches = 7026,
 	},
 	[7046] = {
 		difficulty = {
@@ -800,9 +800,9 @@ rm.recipeDB[197] = {
 			175,
 			190,
 		},
+		item = 7046,
 		skill = 140,
 		spell = 8758,
-		teaches = 7046,
 	},
 	[7048] = {
 		difficulty = {
@@ -811,9 +811,9 @@ rm.recipeDB[197] = {
 			160,
 			165,
 		},
+		item = 7048,
 		skill = 145,
 		spell = 8760,
-		teaches = 7048,
 	},
 	[7050] = {
 		difficulty = {
@@ -822,9 +822,9 @@ rm.recipeDB[197] = {
 			175,
 			180,
 		},
+		item = 7050,
 		skill = 160,
 		spell = 8762,
-		teaches = 7050,
 	},
 	[7051] = {
 		difficulty = {
@@ -833,9 +833,9 @@ rm.recipeDB[197] = {
 			205,
 			220,
 		},
+		item = 7051,
 		skill = 170,
 		spell = 8764,
-		teaches = 7051,
 	},
 	[7052] = {
 		difficulty = {
@@ -844,9 +844,9 @@ rm.recipeDB[197] = {
 			210,
 			225,
 		},
+		item = 7052,
 		skill = 175,
 		spell = 8766,
-		teaches = 7052,
 	},
 	[7054] = {
 		difficulty = {
@@ -855,9 +855,9 @@ rm.recipeDB[197] = {
 			225,
 			240,
 		},
+		item = 7054,
 		skill = 190,
 		spell = 8770,
-		teaches = 7054,
 	},
 	[7055] = {
 		difficulty = {
@@ -866,9 +866,9 @@ rm.recipeDB[197] = {
 			210,
 			225,
 		},
+		item = 7055,
 		skill = 175,
 		spell = 8772,
-		teaches = 7055,
 	},
 	[7057] = {
 		difficulty = {
@@ -877,9 +877,9 @@ rm.recipeDB[197] = {
 			215,
 			230,
 		},
+		item = 7057,
 		skill = 180,
 		spell = 8774,
-		teaches = 7057,
 	},
 	[7058] = {
 		difficulty = {
@@ -888,9 +888,9 @@ rm.recipeDB[197] = {
 			215,
 			225,
 		},
+		item = 7058,
 		skill = 185,
 		spell = 8791,
-		teaches = 7058,
 	},
 	[7062] = {
 		difficulty = {
@@ -899,9 +899,9 @@ rm.recipeDB[197] = {
 			225,
 			235,
 		},
+		item = 7062,
 		skill = 195,
 		spell = 8799,
-		teaches = 7062,
 	},
 	[7064] = {
 		difficulty = {
@@ -910,9 +910,9 @@ rm.recipeDB[197] = {
 			240,
 			255,
 		},
+		item = 7064,
 		skill = 210,
 		spell = 8804,
-		teaches = 7064,
 	},
 	[7084] = {
 		difficulty = {
@@ -921,9 +921,9 @@ rm.recipeDB[197] = {
 			225,
 			240,
 		},
+		item = 7059,
 		skill = 190,
 		spell = 8793,
-		teaches = 7059,
 	},
 	[7085] = {
 		difficulty = {
@@ -932,9 +932,9 @@ rm.recipeDB[197] = {
 			225,
 			240,
 		},
+		item = 7060,
 		skill = 190,
 		spell = 8795,
-		teaches = 7060,
 	},
 	[7086] = {
 		difficulty = {
@@ -943,9 +943,9 @@ rm.recipeDB[197] = {
 			230,
 			245,
 		},
+		item = 7061,
 		skill = 195,
 		spell = 8797,
-		teaches = 7061,
 	},
 	[7087] = {
 		difficulty = {
@@ -954,9 +954,9 @@ rm.recipeDB[197] = {
 			215,
 			230,
 		},
+		item = 7056,
 		skill = 180,
 		spell = 8789,
-		teaches = 7056,
 	},
 	[7088] = {
 		difficulty = {
@@ -965,9 +965,9 @@ rm.recipeDB[197] = {
 			235,
 			250,
 		},
+		item = 7063,
 		skill = 205,
 		spell = 8802,
-		teaches = 7063,
 	},
 	[7089] = {
 		difficulty = {
@@ -976,9 +976,9 @@ rm.recipeDB[197] = {
 			210,
 			225,
 		},
+		item = 7053,
 		skill = 175,
 		spell = 8786,
-		teaches = 7053,
 	},
 	[7090] = {
 		difficulty = {
@@ -987,9 +987,9 @@ rm.recipeDB[197] = {
 			200,
 			215,
 		},
+		item = 7065,
 		skill = 165,
 		spell = 8784,
-		teaches = 7065,
 	},
 	[7091] = {
 		difficulty = {
@@ -998,9 +998,9 @@ rm.recipeDB[197] = {
 			185,
 			200,
 		},
+		item = 7049,
 		skill = 150,
 		spell = 8782,
-		teaches = 7049,
 	},
 	[7092] = {
 		difficulty = {
@@ -1009,9 +1009,9 @@ rm.recipeDB[197] = {
 			180,
 			195,
 		},
+		item = 7047,
 		skill = 145,
 		spell = 8780,
-		teaches = 7047,
 	},
 	[7114] = {
 		difficulty = {
@@ -1020,9 +1020,9 @@ rm.recipeDB[197] = {
 			180,
 			195,
 		},
+		item = 4319,
 		skill = 145,
 		spell = 3854,
-		teaches = 4319,
 	},
 	[9998] = {
 		difficulty = {
@@ -1031,9 +1031,9 @@ rm.recipeDB[197] = {
 			235,
 			250,
 		},
+		item = 9998,
 		skill = 205,
 		spell = 12048,
-		teaches = 9998,
 	},
 	[9999] = {
 		difficulty = {
@@ -1042,9 +1042,9 @@ rm.recipeDB[197] = {
 			235,
 			250,
 		},
+		item = 9999,
 		skill = 205,
 		spell = 12049,
-		teaches = 9999,
 	},
 	[10001] = {
 		difficulty = {
@@ -1053,9 +1053,9 @@ rm.recipeDB[197] = {
 			240,
 			255,
 		},
+		item = 10001,
 		skill = 210,
 		spell = 12050,
-		teaches = 10001,
 	},
 	[10002] = {
 		difficulty = {
@@ -1064,9 +1064,9 @@ rm.recipeDB[197] = {
 			240,
 			255,
 		},
+		item = 10002,
 		skill = 210,
 		spell = 12052,
-		teaches = 10002,
 	},
 	[10003] = {
 		difficulty = {
@@ -1075,9 +1075,9 @@ rm.recipeDB[197] = {
 			245,
 			260,
 		},
+		item = 10003,
 		skill = 215,
 		spell = 12053,
-		teaches = 10003,
 	},
 	[10004] = {
 		difficulty = {
@@ -1086,9 +1086,9 @@ rm.recipeDB[197] = {
 			245,
 			260,
 		},
+		item = 10004,
 		skill = 215,
 		spell = 12055,
-		teaches = 10004,
 	},
 	[10019] = {
 		difficulty = {
@@ -1097,9 +1097,9 @@ rm.recipeDB[197] = {
 			255,
 			270,
 		},
+		item = 10019,
 		skill = 225,
 		spell = 12067,
-		teaches = 10019,
 	},
 	[10021] = {
 		difficulty = {
@@ -1108,9 +1108,9 @@ rm.recipeDB[197] = {
 			255,
 			270,
 		},
+		item = 10021,
 		skill = 225,
 		spell = 12070,
-		teaches = 10021,
 	},
 	[10023] = {
 		difficulty = {
@@ -1119,9 +1119,9 @@ rm.recipeDB[197] = {
 			255,
 			270,
 		},
+		item = 10023,
 		skill = 225,
 		spell = 12071,
-		teaches = 10023,
 	},
 	[10024] = {
 		difficulty = {
@@ -1130,9 +1130,9 @@ rm.recipeDB[197] = {
 			260,
 			275,
 		},
+		item = 10024,
 		skill = 230,
 		spell = 12072,
-		teaches = 10024,
 	},
 	[10026] = {
 		difficulty = {
@@ -1141,9 +1141,9 @@ rm.recipeDB[197] = {
 			260,
 			275,
 		},
+		item = 10026,
 		skill = 230,
 		spell = 12073,
-		teaches = 10026,
 	},
 	[10027] = {
 		difficulty = {
@@ -1152,9 +1152,9 @@ rm.recipeDB[197] = {
 			260,
 			275,
 		},
+		item = 10027,
 		skill = 230,
 		spell = 12074,
-		teaches = 10027,
 	},
 	[10028] = {
 		difficulty = {
@@ -1163,9 +1163,9 @@ rm.recipeDB[197] = {
 			265,
 			280,
 		},
+		item = 10028,
 		skill = 235,
 		spell = 12076,
-		teaches = 10028,
 	},
 	[10031] = {
 		difficulty = {
@@ -1174,9 +1174,9 @@ rm.recipeDB[197] = {
 			270,
 			285,
 		},
+		item = 10031,
 		skill = 240,
 		spell = 12082,
-		teaches = 10031,
 	},
 	[10041] = {
 		difficulty = {
@@ -1185,9 +1185,9 @@ rm.recipeDB[197] = {
 			280,
 			295,
 		},
+		item = 10041,
 		skill = 250,
 		spell = 12092,
-		teaches = 10041,
 	},
 	[10042] = {
 		difficulty = {
@@ -1196,9 +1196,9 @@ rm.recipeDB[197] = {
 			255,
 			270,
 		},
+		item = 10042,
 		skill = 225,
 		spell = 12069,
-		teaches = 10042,
 	},
 	[10044] = {
 		difficulty = {
@@ -1207,9 +1207,9 @@ rm.recipeDB[197] = {
 			275,
 			290,
 		},
+		item = 10044,
 		skill = 245,
 		spell = 12088,
-		teaches = 10044,
 	},
 	[10045] = {
 		difficulty = {
@@ -1218,9 +1218,9 @@ rm.recipeDB[197] = {
 			47,
 			60,
 		},
+		item = 10045,
 		skill = 1,
 		spell = 12044,
-		teaches = 10045,
 	},
 	[10046] = {
 		difficulty = {
@@ -1229,9 +1229,9 @@ rm.recipeDB[197] = {
 			67,
 			85,
 		},
+		item = 10046,
 		skill = 20,
 		spell = 12045,
-		teaches = 10046,
 	},
 	[10047] = {
 		difficulty = {
@@ -1240,9 +1240,9 @@ rm.recipeDB[197] = {
 			117,
 			135,
 		},
+		item = 10047,
 		skill = 75,
 		spell = 12046,
-		teaches = 10047,
 	},
 	[10050] = {
 		difficulty = {
@@ -1251,9 +1251,9 @@ rm.recipeDB[197] = {
 			255,
 			270,
 		},
+		item = 10050,
 		skill = 225,
 		spell = 12065,
-		teaches = 10050,
 	},
 	[10051] = {
 		difficulty = {
@@ -1262,9 +1262,9 @@ rm.recipeDB[197] = {
 			265,
 			280,
 		},
+		item = 10051,
 		skill = 235,
 		spell = 12079,
-		teaches = 10051,
 	},
 	[10053] = {
 		difficulty = {
@@ -1273,9 +1273,9 @@ rm.recipeDB[197] = {
 			245,
 			250,
 		},
+		item = 10053,
 		skill = 235,
 		spell = 12077,
-		teaches = 10053,
 	},
 	[10056] = {
 		difficulty = {
@@ -1284,9 +1284,9 @@ rm.recipeDB[197] = {
 			225,
 			230,
 		},
+		item = 10056,
 		skill = 215,
 		spell = 12061,
-		teaches = 10056,
 	},
 	[10300] = {
 		difficulty = {
@@ -1295,9 +1295,9 @@ rm.recipeDB[197] = {
 			245,
 			260,
 		},
+		item = 10007,
 		skill = 215,
 		spell = 12056,
-		teaches = 10007,
 	},
 	[10301] = {
 		difficulty = {
@@ -1306,9 +1306,9 @@ rm.recipeDB[197] = {
 			225,
 			230,
 		},
+		item = 10008,
 		skill = 215,
 		spell = 12059,
-		teaches = 10008,
 	},
 	[10302] = {
 		difficulty = {
@@ -1317,9 +1317,9 @@ rm.recipeDB[197] = {
 			245,
 			260,
 		},
+		item = 10009,
 		skill = 215,
 		spell = 12060,
-		teaches = 10009,
 	},
 	[10311] = {
 		difficulty = {
@@ -1328,9 +1328,9 @@ rm.recipeDB[197] = {
 			230,
 			235,
 		},
+		item = 10052,
 		skill = 220,
 		spell = 12064,
-		teaches = 10052,
 	},
 	[10312] = {
 		difficulty = {
@@ -1339,9 +1339,9 @@ rm.recipeDB[197] = {
 			255,
 			270,
 		},
+		item = 10018,
 		skill = 225,
 		spell = 12066,
-		teaches = 10018,
 	},
 	[10314] = {
 		difficulty = {
@@ -1350,9 +1350,9 @@ rm.recipeDB[197] = {
 			240,
 			245,
 		},
+		item = 10054,
 		skill = 230,
 		spell = 12075,
-		teaches = 10054,
 	},
 	[10315] = {
 		difficulty = {
@@ -1361,9 +1361,9 @@ rm.recipeDB[197] = {
 			265,
 			280,
 		},
+		item = 10029,
 		skill = 235,
 		spell = 12078,
-		teaches = 10029,
 	},
 	[10316] = {
 		difficulty = {
@@ -1372,9 +1372,9 @@ rm.recipeDB[197] = {
 			162,
 			180,
 		},
+		item = 10048,
 		skill = 120,
 		spell = 12047,
-		teaches = 10048,
 	},
 	[10317] = {
 		difficulty = {
@@ -1383,9 +1383,9 @@ rm.recipeDB[197] = {
 			245,
 			250,
 		},
+		item = 10055,
 		skill = 235,
 		spell = 12080,
-		teaches = 10055,
 	},
 	[10318] = {
 		difficulty = {
@@ -1394,9 +1394,9 @@ rm.recipeDB[197] = {
 			270,
 			285,
 		},
+		item = 10030,
 		skill = 240,
 		spell = 12081,
-		teaches = 10030,
 	},
 	[10320] = {
 		difficulty = {
@@ -1405,9 +1405,9 @@ rm.recipeDB[197] = {
 			270,
 			285,
 		},
+		item = 10033,
 		skill = 240,
 		spell = 12084,
-		teaches = 10033,
 	},
 	[10321] = {
 		difficulty = {
@@ -1416,9 +1416,9 @@ rm.recipeDB[197] = {
 			250,
 			255,
 		},
+		item = 10034,
 		skill = 240,
 		spell = 12085,
-		teaches = 10034,
 	},
 	[10323] = {
 		difficulty = {
@@ -1427,9 +1427,9 @@ rm.recipeDB[197] = {
 			255,
 			260,
 		},
+		item = 10035,
 		skill = 245,
 		spell = 12089,
-		teaches = 10035,
 	},
 	[10325] = {
 		difficulty = {
@@ -1438,9 +1438,9 @@ rm.recipeDB[197] = {
 			260,
 			265,
 		},
+		item = 10040,
 		skill = 250,
 		spell = 12091,
-		teaches = 10040,
 	},
 	[10326] = {
 		difficulty = {
@@ -1449,9 +1449,9 @@ rm.recipeDB[197] = {
 			280,
 			295,
 		},
+		item = 10036,
 		skill = 250,
 		spell = 12093,
-		teaches = 10036,
 	},
 	[10463] = {
 		difficulty = {
@@ -1460,9 +1460,9 @@ rm.recipeDB[197] = {
 			275,
 			290,
 		},
+		item = 10025,
 		skill = 245,
 		spell = 12086,
-		teaches = 10025,
 	},
 	[10728] = {
 		difficulty = {
@@ -1471,9 +1471,9 @@ rm.recipeDB[197] = {
 			215,
 			220,
 		},
+		item = 4336,
 		skill = 200,
 		spell = 3873,
-		teaches = 4336,
 	},
 	[13856] = {
 		difficulty = {
@@ -1482,9 +1482,9 @@ rm.recipeDB[197] = {
 			285,
 			300,
 		},
+		item = 13856,
 		skill = 255,
 		spell = 18402,
-		teaches = 13856,
 	},
 	[14048] = {
 		difficulty = {
@@ -1493,9 +1493,9 @@ rm.recipeDB[197] = {
 			257,
 			260,
 		},
+		item = 14048,
 		skill = 250,
 		spell = 18401,
-		teaches = 14048,
 	},
 	[14466] = {
 		difficulty = {
@@ -1504,9 +1504,9 @@ rm.recipeDB[197] = {
 			285,
 			300,
 		},
+		item = 13869,
 		skill = 255,
 		spell = 18403,
-		teaches = 13869,
 	},
 	[14467] = {
 		difficulty = {
@@ -1515,9 +1515,9 @@ rm.recipeDB[197] = {
 			285,
 			300,
 		},
+		item = 13868,
 		skill = 255,
 		spell = 18404,
-		teaches = 13868,
 	},
 	[14468] = {
 		difficulty = {
@@ -1526,9 +1526,9 @@ rm.recipeDB[197] = {
 			290,
 			305,
 		},
+		item = 14046,
 		skill = 260,
 		spell = 18405,
-		teaches = 14046,
 	},
 	[14469] = {
 		difficulty = {
@@ -1537,9 +1537,9 @@ rm.recipeDB[197] = {
 			290,
 			305,
 		},
+		item = 13858,
 		skill = 260,
 		spell = 18406,
-		teaches = 13858,
 	},
 	[14470] = {
 		difficulty = {
@@ -1548,9 +1548,9 @@ rm.recipeDB[197] = {
 			290,
 			305,
 		},
+		item = 13857,
 		skill = 260,
 		spell = 18407,
-		teaches = 13857,
 	},
 	[14471] = {
 		difficulty = {
@@ -1559,9 +1559,9 @@ rm.recipeDB[197] = {
 			290,
 			305,
 		},
+		item = 14042,
 		skill = 260,
 		spell = 18408,
-		teaches = 14042,
 	},
 	[14472] = {
 		difficulty = {
@@ -1570,9 +1570,9 @@ rm.recipeDB[197] = {
 			295,
 			310,
 		},
+		item = 13860,
 		skill = 265,
 		spell = 18409,
-		teaches = 13860,
 	},
 	[14473] = {
 		difficulty = {
@@ -1581,9 +1581,9 @@ rm.recipeDB[197] = {
 			295,
 			310,
 		},
+		item = 14143,
 		skill = 265,
 		spell = 18410,
-		teaches = 14143,
 	},
 	[14474] = {
 		difficulty = {
@@ -1592,9 +1592,9 @@ rm.recipeDB[197] = {
 			295,
 			310,
 		},
+		item = 13870,
 		skill = 265,
 		spell = 18411,
-		teaches = 13870,
 	},
 	[14476] = {
 		difficulty = {
@@ -1603,9 +1603,9 @@ rm.recipeDB[197] = {
 			300,
 			315,
 		},
+		item = 14043,
 		skill = 270,
 		spell = 18412,
-		teaches = 14043,
 	},
 	[14477] = {
 		difficulty = {
@@ -1614,9 +1614,9 @@ rm.recipeDB[197] = {
 			300,
 			315,
 		},
+		item = 14142,
 		skill = 270,
 		spell = 18413,
-		teaches = 14142,
 	},
 	[14478] = {
 		difficulty = {
@@ -1625,9 +1625,9 @@ rm.recipeDB[197] = {
 			300,
 			315,
 		},
+		item = 14100,
 		skill = 270,
 		spell = 18414,
-		teaches = 14100,
 	},
 	[14479] = {
 		difficulty = {
@@ -1636,9 +1636,9 @@ rm.recipeDB[197] = {
 			300,
 			315,
 		},
+		item = 14101,
 		skill = 270,
 		spell = 18415,
-		teaches = 14101,
 	},
 	[14480] = {
 		difficulty = {
@@ -1647,9 +1647,9 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 14141,
 		skill = 275,
 		spell = 18416,
-		teaches = 14141,
 	},
 	[14481] = {
 		difficulty = {
@@ -1658,9 +1658,9 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 13863,
 		skill = 275,
 		spell = 18417,
-		teaches = 13863,
 	},
 	[14482] = {
 		difficulty = {
@@ -1669,9 +1669,9 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 14044,
 		skill = 275,
 		spell = 18418,
-		teaches = 14044,
 	},
 	[14483] = {
 		difficulty = {
@@ -1680,9 +1680,9 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 14107,
 		skill = 275,
 		spell = 18419,
-		teaches = 14107,
 	},
 	[14484] = {
 		difficulty = {
@@ -1691,9 +1691,9 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 14103,
 		skill = 275,
 		spell = 18420,
-		teaches = 14103,
 	},
 	[14485] = {
 		difficulty = {
@@ -1702,9 +1702,9 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 14132,
 		skill = 275,
 		spell = 18421,
-		teaches = 14132,
 	},
 	[14486] = {
 		difficulty = {
@@ -1713,9 +1713,9 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 14134,
 		skill = 275,
 		spell = 18422,
-		teaches = 14134,
 	},
 	[14488] = {
 		difficulty = {
@@ -1724,9 +1724,9 @@ rm.recipeDB[197] = {
 			310,
 			325,
 		},
+		item = 13864,
 		skill = 280,
 		spell = 18423,
-		teaches = 13864,
 	},
 	[14489] = {
 		difficulty = {
@@ -1735,9 +1735,9 @@ rm.recipeDB[197] = {
 			310,
 			325,
 		},
+		item = 13871,
 		skill = 280,
 		spell = 18424,
-		teaches = 13871,
 	},
 	[14490] = {
 		difficulty = {
@@ -1746,9 +1746,9 @@ rm.recipeDB[197] = {
 			310,
 			325,
 		},
+		item = 14045,
 		skill = 280,
 		spell = 18434,
-		teaches = 14045,
 	},
 	[14491] = {
 		difficulty = {
@@ -1757,9 +1757,9 @@ rm.recipeDB[197] = {
 			315,
 			330,
 		},
+		item = 13865,
 		skill = 285,
 		spell = 18438,
-		teaches = 13865,
 	},
 	[14492] = {
 		difficulty = {
@@ -1768,9 +1768,9 @@ rm.recipeDB[197] = {
 			315,
 			330,
 		},
+		item = 14108,
 		skill = 285,
 		spell = 18437,
-		teaches = 14108,
 	},
 	[14493] = {
 		difficulty = {
@@ -1779,9 +1779,9 @@ rm.recipeDB[197] = {
 			315,
 			330,
 		},
+		item = 14136,
 		skill = 285,
 		spell = 18436,
-		teaches = 14136,
 	},
 	[14494] = {
 		difficulty = {
@@ -1790,9 +1790,9 @@ rm.recipeDB[197] = {
 			320,
 			335,
 		},
+		item = 14104,
 		skill = 290,
 		spell = 18439,
-		teaches = 14104,
 	},
 	[14495] = {
 		difficulty = {
@@ -1801,9 +1801,9 @@ rm.recipeDB[197] = {
 			320,
 			335,
 		},
+		item = 14144,
 		skill = 290,
 		spell = 18441,
-		teaches = 14144,
 	},
 	[14496] = {
 		difficulty = {
@@ -1812,9 +1812,9 @@ rm.recipeDB[197] = {
 			320,
 			335,
 		},
+		item = 14111,
 		skill = 290,
 		spell = 18442,
-		teaches = 14111,
 	},
 	[14497] = {
 		difficulty = {
@@ -1823,9 +1823,9 @@ rm.recipeDB[197] = {
 			320,
 			335,
 		},
+		item = 14137,
 		skill = 290,
 		spell = 18440,
-		teaches = 14137,
 	},
 	[14498] = {
 		difficulty = {
@@ -1834,9 +1834,9 @@ rm.recipeDB[197] = {
 			325,
 			340,
 		},
+		item = 13866,
 		skill = 295,
 		spell = 18444,
-		teaches = 13866,
 	},
 	[14499] = {
 		difficulty = {
@@ -1845,9 +1845,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14155,
 		skill = 300,
 		spell = 18445,
-		teaches = 14155,
 	},
 	[14500] = {
 		difficulty = {
@@ -1856,9 +1856,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14128,
 		skill = 300,
 		spell = 18446,
-		teaches = 14128,
 	},
 	[14501] = {
 		difficulty = {
@@ -1867,9 +1867,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14138,
 		skill = 300,
 		spell = 18447,
-		teaches = 14138,
 	},
 	[14504] = {
 		difficulty = {
@@ -1878,9 +1878,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 13867,
 		skill = 300,
 		spell = 18449,
-		teaches = 13867,
 	},
 	[14505] = {
 		difficulty = {
@@ -1889,9 +1889,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14130,
 		skill = 300,
 		spell = 18450,
-		teaches = 14130,
 	},
 	[14506] = {
 		difficulty = {
@@ -1900,9 +1900,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14106,
 		skill = 300,
 		spell = 18451,
-		teaches = 14106,
 	},
 	[14507] = {
 		difficulty = {
@@ -1911,9 +1911,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14139,
 		skill = 300,
 		spell = 18448,
-		teaches = 14139,
 	},
 	[14508] = {
 		difficulty = {
@@ -1922,9 +1922,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14112,
 		skill = 300,
 		spell = 18453,
-		teaches = 14112,
 	},
 	[14509] = {
 		difficulty = {
@@ -1933,9 +1933,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14140,
 		skill = 300,
 		spell = 18452,
-		teaches = 14140,
 	},
 	[14510] = {
 		difficulty = {
@@ -1944,9 +1944,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14156,
 		skill = 300,
 		spell = 18455,
-		teaches = 14156,
 	},
 	[14511] = {
 		difficulty = {
@@ -1955,9 +1955,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14146,
 		skill = 300,
 		spell = 18454,
-		teaches = 14146,
 	},
 	[14512] = {
 		classes = {
@@ -1969,9 +1969,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14154,
 		skill = 300,
 		spell = 18456,
-		teaches = 14154,
 	},
 	[14513] = {
 		classes = {
@@ -1983,9 +1983,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14152,
 		skill = 300,
 		spell = 18457,
-		teaches = 14152,
 	},
 	[14514] = {
 		classes = {
@@ -1997,9 +1997,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 14153,
 		skill = 300,
 		spell = 18458,
-		teaches = 14153,
 	},
 	[14526] = {
 		difficulty = {
@@ -2008,9 +2008,9 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 14342,
 		skill = 250,
 		spell = 18560,
-		teaches = 14342,
 	},
 	[14627] = {
 		difficulty = {
@@ -2019,9 +2019,9 @@ rm.recipeDB[197] = {
 			150,
 			155,
 		},
+		item = 4332,
 		skill = 135,
 		spell = 3869,
-		teaches = 4332,
 	},
 	[14630] = {
 		difficulty = {
@@ -2030,9 +2030,9 @@ rm.recipeDB[197] = {
 			200,
 			215,
 		},
+		item = 4322,
 		skill = 165,
 		spell = 3857,
-		teaches = 4322,
 	},
 	[15802] = {
 		difficulty = {
@@ -2041,9 +2041,9 @@ rm.recipeDB[197] = {
 			310,
 			325,
 		},
+		item = 15802,
 		skill = 290,
 		spell = 19435,
-		teaches = 15802,
 	},
 	[17017] = {
 		difficulty = {
@@ -2052,9 +2052,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 16980,
 		skill = 300,
 		spell = 20848,
-		teaches = 16980,
 	},
 	[17018] = {
 		difficulty = {
@@ -2063,9 +2063,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 16979,
 		skill = 300,
 		spell = 20849,
-		teaches = 16979,
 	},
 	[17724] = {
 		difficulty = {
@@ -2074,9 +2074,9 @@ rm.recipeDB[197] = {
 			205,
 			210,
 		},
+		item = 17723,
 		skill = 190,
 		spell = 21945,
-		teaches = 17723,
 	},
 	[18258] = {
 		difficulty = {
@@ -2085,9 +2085,9 @@ rm.recipeDB[197] = {
 			290,
 			295,
 		},
+		item = 18258,
 		skill = 285,
 		spell = 22813,
-		teaches = 18258,
 	},
 	[18265] = {
 		difficulty = {
@@ -2096,9 +2096,9 @@ rm.recipeDB[197] = {
 			335,
 			350,
 		},
+		item = 18263,
 		skill = 300,
 		spell = 22759,
-		teaches = 18263,
 	},
 	[18414] = {
 		difficulty = {
@@ -2107,9 +2107,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 18405,
 		skill = 300,
 		spell = 22866,
-		teaches = 18405,
 	},
 	[18415] = {
 		difficulty = {
@@ -2118,9 +2118,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 18407,
 		skill = 300,
 		spell = 22867,
-		teaches = 18407,
 	},
 	[18416] = {
 		difficulty = {
@@ -2129,9 +2129,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 18408,
 		skill = 300,
 		spell = 22868,
-		teaches = 18408,
 	},
 	[18417] = {
 		difficulty = {
@@ -2140,9 +2140,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 18409,
 		skill = 300,
 		spell = 22869,
-		teaches = 18409,
 	},
 	[18418] = {
 		difficulty = {
@@ -2151,9 +2151,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 18413,
 		skill = 300,
 		spell = 22870,
-		teaches = 18413,
 	},
 	[18487] = {
 		difficulty = {
@@ -2162,9 +2162,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 18486,
 		skill = 300,
 		spell = 22902,
-		teaches = 18486,
 	},
 	[19215] = {
 		difficulty = {
@@ -2173,11 +2173,11 @@ rm.recipeDB[197] = {
 			320,
 			335,
 		},
+		item = 19047,
 		repFaction = 576,
 		repLevel = 6,
 		skill = 290,
 		spell = 23662,
-		teaches = 19047,
 	},
 	[19216] = {
 		difficulty = {
@@ -2186,11 +2186,11 @@ rm.recipeDB[197] = {
 			320,
 			335,
 		},
+		item = 19056,
 		repFaction = 529,
 		repLevel = 6,
 		skill = 290,
 		spell = 23664,
-		teaches = 19056,
 	},
 	[19217] = {
 		difficulty = {
@@ -2199,11 +2199,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 19059,
 		repFaction = 529,
 		repLevel = 7,
 		skill = 300,
 		spell = 23665,
-		teaches = 19059,
 	},
 	[19218] = {
 		difficulty = {
@@ -2212,11 +2212,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 19050,
 		repFaction = 576,
 		repLevel = 7,
 		skill = 300,
 		spell = 23663,
-		teaches = 19050,
 	},
 	[19219] = {
 		difficulty = {
@@ -2225,9 +2225,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 19156,
 		skill = 300,
 		spell = 23666,
-		teaches = 19156,
 	},
 	[19220] = {
 		difficulty = {
@@ -2236,9 +2236,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 19165,
 		skill = 300,
 		spell = 23667,
-		teaches = 19165,
 	},
 	[19764] = {
 		difficulty = {
@@ -2247,11 +2247,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 19682,
 		repFaction = 270,
 		repLevel = 7,
 		skill = 300,
 		spell = 24091,
-		teaches = 19682,
 	},
 	[19765] = {
 		difficulty = {
@@ -2260,11 +2260,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 19683,
 		repFaction = 270,
 		repLevel = 6,
 		skill = 300,
 		spell = 24092,
-		teaches = 19683,
 	},
 	[19766] = {
 		difficulty = {
@@ -2273,11 +2273,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 19684,
 		repFaction = 270,
 		repLevel = 5,
 		skill = 300,
 		spell = 24093,
-		teaches = 19684,
 	},
 	[20546] = {
 		difficulty = {
@@ -2286,9 +2286,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 20538,
 		skill = 300,
 		spell = 24901,
-		teaches = 20538,
 	},
 	[20547] = {
 		difficulty = {
@@ -2297,9 +2297,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 20537,
 		skill = 300,
 		spell = 24903,
-		teaches = 20537,
 	},
 	[20548] = {
 		difficulty = {
@@ -2308,9 +2308,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 20539,
 		skill = 300,
 		spell = 24902,
-		teaches = 20539,
 	},
 	[21358] = {
 		difficulty = {
@@ -2319,9 +2319,9 @@ rm.recipeDB[197] = {
 			290,
 			305,
 		},
+		item = 21340,
 		skill = 260,
 		spell = 26085,
-		teaches = 21340,
 	},
 	[21369] = {
 		difficulty = {
@@ -2330,9 +2330,9 @@ rm.recipeDB[197] = {
 			315,
 			330,
 		},
+		item = 21341,
 		skill = 285,
 		spell = 26086,
-		teaches = 21341,
 	},
 	[21371] = {
 		difficulty = {
@@ -2341,9 +2341,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 21342,
 		skill = 300,
 		spell = 26087,
-		teaches = 21342,
 	},
 	[21722] = {
 		difficulty = {
@@ -2352,9 +2352,9 @@ rm.recipeDB[197] = {
 			280,
 			295,
 		},
+		item = 21154,
 		skill = 250,
 		spell = 26403,
-		teaches = 21154,
 	},
 	[21723] = {
 		difficulty = {
@@ -2363,9 +2363,9 @@ rm.recipeDB[197] = {
 			280,
 			295,
 		},
+		item = 21542,
 		skill = 250,
 		spell = 26407,
-		teaches = 21542,
 	},
 	[22307] = {
 		difficulty = {
@@ -2374,9 +2374,9 @@ rm.recipeDB[197] = {
 			255,
 			270,
 		},
+		item = 22246,
 		skill = 225,
 		spell = 27658,
-		teaches = 22246,
 	},
 	[22308] = {
 		difficulty = {
@@ -2385,9 +2385,9 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 22248,
 		skill = 275,
 		spell = 27659,
-		teaches = 22248,
 	},
 	[22309] = {
 		difficulty = {
@@ -2396,9 +2396,9 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22249,
 		skill = 300,
 		spell = 27660,
-		teaches = 22249,
 	},
 	[22310] = {
 		difficulty = {
@@ -2407,11 +2407,11 @@ rm.recipeDB[197] = {
 			305,
 			320,
 		},
+		item = 22251,
 		repFaction = 609,
 		repLevel = 5,
 		skill = 275,
 		spell = 27724,
-		teaches = 22251,
 	},
 	[22312] = {
 		difficulty = {
@@ -2420,11 +2420,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22252,
 		repFaction = 609,
 		repLevel = 7,
 		skill = 300,
 		spell = 27725,
-		teaches = 22252,
 	},
 	[22683] = {
 		difficulty = {
@@ -2433,11 +2433,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22660,
 		repFaction = 609,
 		repLevel = 7,
 		skill = 300,
 		spell = 28210,
-		teaches = 22660,
 	},
 	[22684] = {
 		difficulty = {
@@ -2446,11 +2446,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22654,
 		repFaction = 529,
 		repLevel = 7,
 		skill = 300,
 		spell = 28205,
-		teaches = 22654,
 	},
 	[22685] = {
 		difficulty = {
@@ -2459,11 +2459,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22658,
 		repFaction = 529,
 		repLevel = 8,
 		skill = 300,
 		spell = 28208,
-		teaches = 22658,
 	},
 	[22686] = {
 		difficulty = {
@@ -2472,11 +2472,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22652,
 		repFaction = 529,
 		repLevel = 8,
 		skill = 300,
 		spell = 28207,
-		teaches = 22652,
 	},
 	[22687] = {
 		difficulty = {
@@ -2485,11 +2485,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22655,
 		repFaction = 749,
 		repLevel = 7,
 		skill = 300,
 		spell = 28209,
-		teaches = 22655,
 	},
 	[22772] = {
 		difficulty = {
@@ -2498,11 +2498,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22758,
 		repFaction = 609,
 		repLevel = 5,
 		skill = 300,
 		spell = 28482,
-		teaches = 22758,
 	},
 	[22773] = {
 		difficulty = {
@@ -2511,11 +2511,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22757,
 		repFaction = 609,
 		repLevel = 6,
 		skill = 300,
 		spell = 28481,
-		teaches = 22757,
 	},
 	[22774] = {
 		difficulty = {
@@ -2524,11 +2524,11 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 22756,
 		repFaction = 609,
 		repLevel = 7,
 		skill = 300,
 		spell = 28480,
-		teaches = 22756,
 	},
 	[210795] = {
 		difficulty = {
@@ -2537,10 +2537,10 @@ rm.recipeDB[197] = {
 			167,
 			185,
 		},
+		item = 210795,
 		season = "SoD",
 		skill = 150,
 		spell = 429351,
-		teaches = 210795,
 	},
 	[211247] = {
 		difficulty = {
@@ -2549,10 +2549,10 @@ rm.recipeDB[197] = {
 			137,
 			150,
 		},
+		item = 210781,
 		season = "SoD",
 		skill = 125,
 		spell = 428424,
-		teaches = 210781,
 	},
 	[215149] = {
 		difficulty = {
@@ -2561,10 +2561,10 @@ rm.recipeDB[197] = {
 			230,
 			235,
 		},
+		item = 215111,
 		season = "SoD",
 		skill = 225,
 		spell = 435610,
-		teaches = 215111,
 	},
 	[215368] = {
 		difficulty = {
@@ -2573,10 +2573,10 @@ rm.recipeDB[197] = {
 			210,
 			220,
 		},
+		item = 213379,
 		season = "SoD",
 		skill = 200,
 		spell = 435827,
-		teaches = 213379,
 	},
 	[215369] = {
 		difficulty = {
@@ -2585,10 +2585,10 @@ rm.recipeDB[197] = {
 			185,
 			200,
 		},
+		item = 215366,
 		season = "SoD",
 		skill = 150,
 		spell = 435841,
-		teaches = 215366,
 	},
 	[215370] = {
 		difficulty = {
@@ -2597,10 +2597,10 @@ rm.recipeDB[197] = {
 			185,
 			200,
 		},
+		item = 215365,
 		season = "SoD",
 		skill = 150,
 		spell = 435848,
-		teaches = 215365,
 	},
 	[217244] = {
 		difficulty = {
@@ -2609,10 +2609,10 @@ rm.recipeDB[197] = {
 			235,
 			250,
 		},
+		item = 217245,
 		season = "SoD",
 		skill = 205,
 		spell = 439085,
-		teaches = 217245,
 	},
 	[217246] = {
 		difficulty = {
@@ -2621,10 +2621,10 @@ rm.recipeDB[197] = {
 			235,
 			250,
 		},
+		item = 217246,
 		season = "SoD",
 		skill = 205,
 		spell = 439086,
-		teaches = 217246,
 	},
 	[217247] = {
 		difficulty = {
@@ -2633,10 +2633,10 @@ rm.recipeDB[197] = {
 			235,
 			250,
 		},
+		item = 217247,
 		season = "SoD",
 		skill = 205,
 		spell = 439088,
-		teaches = 217247,
 	},
 	[217249] = {
 		difficulty = {
@@ -2645,10 +2645,10 @@ rm.recipeDB[197] = {
 			230,
 			245,
 		},
+		item = 217248,
 		season = "SoD",
 		skill = 195,
 		spell = 439091,
-		teaches = 217248,
 	},
 	[217251] = {
 		difficulty = {
@@ -2657,10 +2657,10 @@ rm.recipeDB[197] = {
 			225,
 			240,
 		},
+		item = 217250,
 		season = "SoD",
 		skill = 190,
 		spell = 439093,
-		teaches = 217250,
 	},
 	[217252] = {
 		difficulty = {
@@ -2669,10 +2669,10 @@ rm.recipeDB[197] = {
 			220,
 			235,
 		},
+		item = 217252,
 		season = "SoD",
 		skill = 185,
 		spell = 439094,
-		teaches = 217252,
 	},
 	[217254] = {
 		difficulty = {
@@ -2681,10 +2681,10 @@ rm.recipeDB[197] = {
 			210,
 			225,
 		},
+		item = 217253,
 		season = "SoD",
 		skill = 175,
 		spell = 439097,
-		teaches = 217253,
 	},
 	[217255] = {
 		difficulty = {
@@ -2693,10 +2693,10 @@ rm.recipeDB[197] = {
 			210,
 			225,
 		},
+		item = 217255,
 		season = "SoD",
 		skill = 175,
 		spell = 439098,
-		teaches = 217255,
 	},
 	[217256] = {
 		difficulty = {
@@ -2705,10 +2705,10 @@ rm.recipeDB[197] = {
 			205,
 			220,
 		},
+		item = 217256,
 		season = "SoD",
 		skill = 170,
 		spell = 439100,
-		teaches = 217256,
 	},
 	[217258] = {
 		difficulty = {
@@ -2717,10 +2717,10 @@ rm.recipeDB[197] = {
 			200,
 			215,
 		},
+		item = 217257,
 		season = "SoD",
 		skill = 165,
 		spell = 439102,
-		teaches = 217257,
 	},
 	[220749] = {
 		difficulty = {
@@ -2729,10 +2729,10 @@ rm.recipeDB[197] = {
 			255,
 			260,
 		},
+		item = 220749,
 		season = "SoD",
 		skill = 250,
 		spell = 446194,
-		teaches = 220749,
 	},
 	[220750] = {
 		difficulty = {
@@ -2741,10 +2741,10 @@ rm.recipeDB[197] = {
 			255,
 			260,
 		},
+		item = 220750,
 		season = "SoD",
 		skill = 250,
 		spell = 446193,
-		teaches = 220750,
 	},
 	[220751] = {
 		difficulty = {
@@ -2753,10 +2753,10 @@ rm.recipeDB[197] = {
 			255,
 			260,
 		},
+		item = 220751,
 		season = "SoD",
 		skill = 250,
 		spell = 446195,
-		teaches = 220751,
 	},
 	[227855] = {
 		difficulty = {
@@ -2765,10 +2765,10 @@ rm.recipeDB[197] = {
 			290,
 			295,
 		},
+		item = 227855,
 		season = "SoD",
 		skill = 285,
 		spell = 461692,
-		teaches = 227855,
 	},
 	[227896] = {
 		difficulty = {
@@ -2777,12 +2777,12 @@ rm.recipeDB[197] = {
 			320,
 			335,
 		},
+		item = 19056,
 		repFaction = 529,
 		repLevel = 6,
 		season = "SoD",
 		skill = 290,
 		spell = 23664,
-		teaches = 19056,
 	},
 	[227897] = {
 		difficulty = {
@@ -2791,12 +2791,12 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 19059,
 		repFaction = 529,
 		repLevel = 7,
 		season = "SoD",
 		skill = 300,
 		spell = 23665,
-		teaches = 19059,
 	},
 	[228121] = {
 		difficulty = {
@@ -2805,10 +2805,10 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 227844,
 		season = "SoD",
 		skill = 300,
 		spell = 461727,
-		teaches = 227844,
 	},
 	[228303] = {
 		difficulty = {
@@ -2817,10 +2817,10 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 227861,
 		season = "SoD",
 		skill = 300,
 		spell = 461708,
-		teaches = 227861,
 	},
 	[228316] = {
 		difficulty = {
@@ -2829,10 +2829,10 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 227860,
 		season = "SoD",
 		skill = 300,
 		spell = 461747,
-		teaches = 227860,
 	},
 	[228317] = {
 		difficulty = {
@@ -2841,10 +2841,10 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 227863,
 		season = "SoD",
 		skill = 300,
 		spell = 461750,
-		teaches = 227863,
 	},
 	[228318] = {
 		difficulty = {
@@ -2853,10 +2853,10 @@ rm.recipeDB[197] = {
 			320,
 			335,
 		},
+		item = 227864,
 		season = "SoD",
 		skill = 290,
 		spell = 461752,
-		teaches = 227864,
 	},
 	[228477] = {
 		difficulty = {
@@ -2865,10 +2865,10 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 228476,
 		season = "SoD",
 		skill = 300,
 		spell = 462282,
-		teaches = 228476,
 	},
 	[228993] = {
 		difficulty = {
@@ -2877,10 +2877,10 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 228994,
 		season = "SoD",
 		skill = 300,
 		spell = 463972,
-		teaches = 228994,
 	},
 	[234240] = {
 		difficulty = {
@@ -2889,10 +2889,10 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 233826,
 		season = "SoD",
 		skill = 300,
 		spell = 1213527,
-		teaches = 233826,
 	},
 	[234241] = {
 		difficulty = {
@@ -2901,10 +2901,10 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 233833,
 		season = "SoD",
 		skill = 300,
 		spell = 1213530,
-		teaches = 233833,
 	},
 	[234242] = {
 		difficulty = {
@@ -2913,10 +2913,10 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 233837,
 		season = "SoD",
 		skill = 300,
 		spell = 1213532,
-		teaches = 233837,
 	},
 	[234244] = {
 		difficulty = {
@@ -2925,10 +2925,10 @@ rm.recipeDB[197] = {
 			330,
 			340,
 		},
+		item = 233956,
 		season = "SoD",
 		skill = 300,
 		spell = 1213534,
-		teaches = 233956,
 	},
 	[234249] = {
 		difficulty = {
@@ -2937,10 +2937,10 @@ rm.recipeDB[197] = {
 			330,
 			340,
 		},
+		item = 233958,
 		season = "SoD",
 		skill = 300,
 		spell = 1213536,
-		teaches = 233958,
 	},
 	[234250] = {
 		difficulty = {
@@ -2949,10 +2949,10 @@ rm.recipeDB[197] = {
 			330,
 			340,
 		},
+		item = 233959,
 		season = "SoD",
 		skill = 300,
 		spell = 1213538,
-		teaches = 233959,
 	},
 	[234251] = {
 		difficulty = {
@@ -2961,10 +2961,10 @@ rm.recipeDB[197] = {
 			330,
 			340,
 		},
+		item = 233960,
 		season = "SoD",
 		skill = 300,
 		spell = 1213540,
-		teaches = 233960,
 	},
 	[234314] = {
 		difficulty = {
@@ -2973,12 +2973,12 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 234312,
 		repFaction = 609,
 		repLevel = 5,
 		season = "SoD",
 		skill = 300,
 		spell = 1213740,
-		teaches = 234312,
 	},
 	[234316] = {
 		difficulty = {
@@ -2987,12 +2987,12 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 234315,
 		repFaction = 609,
 		repLevel = 6,
 		season = "SoD",
 		skill = 300,
 		spell = 1213742,
-		teaches = 234315,
 	},
 	[234318] = {
 		difficulty = {
@@ -3001,12 +3001,12 @@ rm.recipeDB[197] = {
 			330,
 			345,
 		},
+		item = 234317,
 		repFaction = 609,
 		repLevel = 7,
 		season = "SoD",
 		skill = 300,
 		spell = 1213744,
-		teaches = 234317,
 	},
 	[234445] = {
 		difficulty = {
@@ -3015,12 +3015,12 @@ rm.recipeDB[197] = {
 			322,
 			330,
 		},
+		item = 234009,
 		repFaction = 609,
 		repLevel = 5,
 		season = "SoD",
 		skill = 300,
 		spell = 1214173,
-		teaches = 234009,
 	},
 	[234483] = {
 		difficulty = {
@@ -3029,10 +3029,10 @@ rm.recipeDB[197] = {
 			330,
 			340,
 		},
+		item = 234484,
 		season = "SoD",
 		skill = 300,
 		spell = 1214306,
-		teaches = 234484,
 	},
 	[234486] = {
 		difficulty = {
@@ -3041,9 +3041,93 @@ rm.recipeDB[197] = {
 			330,
 			340,
 		},
+		item = 234485,
 		season = "SoD",
 		skill = 300,
 		spell = 1214307,
-		teaches = 234485,
+	},
+	[236690] = {
+		difficulty = {
+			0,
+			315,
+			330,
+			345,
+		},
+		item = 236690,
+		season = "SoD",
+		skill = 315,
+		spell = 1223762,
+	},
+	[236692] = {
+		difficulty = {
+			0,
+			315,
+			330,
+			345,
+		},
+		item = 236692,
+		season = "SoD",
+		skill = 315,
+		spell = 1223764,
+	},
+	[236693] = {
+		difficulty = {
+			0,
+			315,
+			330,
+			345,
+		},
+		item = 236693,
+		season = "SoD",
+		skill = 315,
+		spell = 1223766,
+	},
+	[236694] = {
+		difficulty = {
+			0,
+			315,
+			330,
+			345,
+		},
+		item = 236694,
+		season = "SoD",
+		skill = 315,
+		spell = 1223760,
+	},
+	[236704] = {
+		difficulty = {
+			0,
+			315,
+			330,
+			345,
+		},
+		item = 236704,
+		season = "SoD",
+		skill = 315,
+		spell = 1223772,
+	},
+	[236705] = {
+		difficulty = {
+			0,
+			315,
+			330,
+			345,
+		},
+		item = 236705,
+		season = "SoD",
+		skill = 315,
+		spell = 1223770,
+	},
+	[236706] = {
+		difficulty = {
+			0,
+			315,
+			330,
+			345,
+		},
+		item = 236706,
+		season = "SoD",
+		skill = 315,
+		spell = 1223768,
 	},
 }

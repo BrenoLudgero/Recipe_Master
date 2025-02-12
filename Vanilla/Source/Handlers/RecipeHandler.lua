@@ -41,15 +41,15 @@ function rm.isRecipeAvailableForCharacter(recipe)
 end
 
 function rm.isRankupRecipe(recipe)
-    return type(recipe.teaches) == "string"
+    return type(recipe.item) == "string"
 end
 
 local function isSkillLearnedByCharacter(characterSkills, recipe)
-    if type(recipe.teaches) ~= "table" then
-        return rm.tableContains(characterSkills, recipe.teaches)
+    if type(recipe.item) ~= "table" then
+        return rm.tableContains(characterSkills, recipe.item)
     else
-        -- Enchanting recipes may contain an item and a spell under "teaches"
-        for _, teachedSkill in pairs(recipe.teaches) do
+        -- Enchanting recipes may contain an item and a spell under "item"
+        for _, teachedSkill in pairs(recipe.item) do
             if rm.tableContains(characterSkills, teachedSkill) then
                 return true
             end
@@ -78,7 +78,7 @@ end
 -- Identifies a rankup recipe that teaches a rank equal to or lower than the current profession rank
 local function isLearnedRankupRecipe(recipe, professionRank)
     if rm.isRankupRecipe(recipe) then
-        return rankOrder[recipe.teaches] <= rankOrder[professionRank]
+        return rankOrder[recipe.item] <= rankOrder[professionRank]
     end
     return false
 end
@@ -136,6 +136,7 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         classes = recipeData["classes"], 
         difficulty = recipeData["difficulty"],
         faction = recipeData["faction"], 
+        item = recipeData["item"], 
         link = rLink,
         name = rName, 
         quality = rQuality, 
@@ -146,7 +147,6 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         skill = recipeData["skill"], 
         specialization = recipeData["specialization"], 
         spell = recipeData["spell"],
-        teaches = recipeData["teaches"], 
         texture = rTexture
     }
 end

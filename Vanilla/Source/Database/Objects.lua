@@ -56,8 +56,8 @@ rm.objectDB = {
 			zhTW = "堅固的箱子",
 		},
 		zones = {
-			11,
 			44,
+			11,
 			10,
 			331,
 			406,
@@ -238,6 +238,7 @@ rm.objectDB = {
 			zhTW = "大型鐵箍儲物箱",
 		},
 		zones = {
+			721,
 			491,
 		},
 	},
@@ -501,6 +502,26 @@ rm.objectDB = {
 		zones = {
 			130,
 			17,
+		},
+	},
+	[128403] = {
+		names = {
+			deDE = "Flaches Grab",
+			enUS = "Shallow Grave",
+			esES = "Tumba Poco Profunda",
+			esMX = "Tumba Poco Profunda",
+			frFR = "Tombe Peu Profonde",
+			koKR = "얕은 무덤",
+			ptBR = "Cova Rasa",
+			ruRU = "Неглубокая Могила",
+			zhCN = "浅墓穴",
+			zhTW = "淺墓穴",
+		},
+		zones = {
+			3358,
+			3277,
+			2597,
+			1176,
 		},
 	},
 	[131979] = {

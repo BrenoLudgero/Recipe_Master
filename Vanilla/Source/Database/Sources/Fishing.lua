@@ -9,7 +9,7 @@ rm.sourceDB[356] = {
 	[16083] = {
 		vendor = {
 			[2626] = {
-				cost = "1gld5svr26cpr",
+				cost = "1gld",
 			},
 		},
 	},

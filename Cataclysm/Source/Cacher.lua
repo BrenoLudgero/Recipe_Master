@@ -4,20 +4,13 @@ local L = rm.L
 rm.cachedRecipes = {}
 rm.cachedItemNames = {}
 
-local function isRecipeASpell(professionID, recipeData)
-    return (
-        professionID == 186 -- Mining
-        or recipeData.isSpell
-    )
-end
-
 -- Stores all recipe data for each profession in rm.cachedRecipes
 -- to be retrieved locally without the risk of querying unavailable data
 local function cacheAllRecipes()
     for professionID in pairs(L.professions) do
         rm.cachedRecipes[professionID] = {}
         for recipeID, recipeData in pairs(rm.recipeDB[professionID]) do
-            if isRecipeASpell(professionID, recipeData) then
+            if recipeData.isSpell then
                 local spell = Spell:CreateFromSpellID(recipeID)
                 spell:ContinueOnSpellLoad(function()
                 	rm.storeSpellData(recipeID, recipeData, professionID)
