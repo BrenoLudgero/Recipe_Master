@@ -1422,7 +1422,7 @@ fi
 	echo
 )
 if [[ "$slug" =~ ^[0-9]+$ ]]; then
-	project_site="https://cloudflare.curseforge.com"
+	project_site="https://wow.curseforge.com"
 	echo "CurseForge ID: $slug${cf_token:+ [token set]}"
 fi
 if [ -n "$addonid" ]; then
@@ -2094,7 +2094,7 @@ checkout_external() {
 		project_site=
 		package=
 		if [[ "$_external_uri" == *"wowace.com"* || "$_external_uri" == *"curseforge.com"* ]]; then
-			project_site="https://cloudflare.curseforge.com"
+			project_site="https://wow.curseforge.com"
 		fi
 
 		# If a .pkgmeta file is present, process it for "ignore" and "plain-copy" lists.
@@ -2583,7 +2583,7 @@ fi
 
 if [[ -n "$license" && ! -f "$topdir/$license" && -n "$slug" ]]; then
 	start_group "Saving license as $license" "license"
-	# curseforge.com is protected by cloudflare, but wowace.com isn't? >.>
+	# this only exists on wowace.com now
 	if license_text=$( curl -sf --retry 3 --retry-delay 10 "https://www.wowace.com/project/$slug/license" 2>/dev/null ); then
 		# text is wrapped with \n\n<div class="module">\n\t<p>\n\t\t ... \n\t</p>\n</div>\n
 		echo "$license_text" | sed -e '1,4d' -e '5s/^\s*//' -e '$d' | sed '$d' > "$pkgdir/$license"
@@ -3088,6 +3088,10 @@ upload_wago() {
 			302)
 				echo "Error! ($result)"
 				# don't need to ouput the redirect page
+				return_code=1
+				;;
+			403)
+				echo "Error! ($result)"
 				return_code=1
 				;;
 			404)
