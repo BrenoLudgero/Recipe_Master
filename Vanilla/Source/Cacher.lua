@@ -8,47 +8,11 @@ local function isRecipeForCurrentSeason(recipeData)
     return not recipeData.season or recipeData.season == rm.currentSeason
 end
 
-local function splitSeasonalRecipes(professionRecipes)
-    local sodRecipes = {}
-    local regularRecipes = {}
-    for recipeID, recipe in pairs(professionRecipes) do
-        if recipe.season then
-           sodRecipes[recipeID] = recipe
-        else
-            regularRecipes[recipeID] = recipe
-        end
+local function isNotDuplicateRecipe(recipeData)
+    if rm.currentSeason ~= "SoD" then
+        return true
     end
-    return sodRecipes, regularRecipes
-end
-
-local function hasSameNameOrTeachesSameSkill(sodRecipe, regularRecipe)
-    return (
-        sodRecipe.name == regularRecipe.name
-        or sodRecipe.item == regularRecipe.item
-    )
-end
-
-local function hasSoDCounterpart(sodRecipes, regularRecipe)
-    for _, sodRecipe in pairs(sodRecipes) do
-        if not rm.isRankupRecipe(sodRecipe)
-        and hasSameNameOrTeachesSameSkill(sodRecipe, regularRecipe) then
-            return true
-        end
-    end
-    return false
-end
-
-local function filterSeasonalRecipes(professionRecipes)
-    local sodRecipes, regularRecipes = splitSeasonalRecipes(professionRecipes)
-    if rm.currentSeason == "SoD" then
-        for recipeID, recipe in pairs(regularRecipes) do
-            if not hasSoDCounterpart(sodRecipes, recipe) then
-                sodRecipes[recipeID] = recipe
-            end
-        end
-        return sodRecipes
-    end
-    return regularRecipes
+    return not recipeData.hasSodCounterpart
 end
 
 -- Stores all recipe data for each profession in rm.cachedRecipes
@@ -57,7 +21,7 @@ local function cacheAllRecipes()
     for professionID in pairs(L.professions) do
         rm.cachedRecipes[professionID] = {}
         for recipeID, recipeData in pairs(rm.recipeDB[professionID]) do
-            if isRecipeForCurrentSeason(recipeData) then
+            if isRecipeForCurrentSeason(recipeData) and isNotDuplicateRecipe(recipeData) then
                 if recipeData.isSpell then
                     local spell = Spell:CreateFromSpellID(recipeID)
                     spell:ContinueOnSpellLoad(function()
@@ -71,7 +35,6 @@ local function cacheAllRecipes()
                 end
             end
         end
-        rm.cachedRecipes[professionID] = filterSeasonalRecipes(rm.cachedRecipes[professionID])
     end
 end
 
