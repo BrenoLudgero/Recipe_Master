@@ -40,49 +40,79 @@ function rm.getProfessionFrame()
     return false
 end
 
-local function replaceMinimizeButtonWithScrollTexture()
-    local minimizeButton = rm.mainFrameBorder.CloseButton
-    minimizeButton:Disable(true)
-    minimizeButton:Hide()
-    local newTexture = rm.mainFrame:CreateTexture()
-    newTexture:SetPoint("CENTER", minimizeButton, -0.6, 0)
-    newTexture:SetSize(18, 18)
-    newTexture:SetTexture("Interface/Icons/INV_Scroll_11")
+local function onMainFrameDragStart(frame, button, mainFrameWidth)
+    if button == "LeftButton" then
+        frame:StartMoving()
+    elseif button == "RightButton" then
+        local isSourcesTabActive = (rm.activeTab == L.sources and #rm.sourcesList.children > 0)
+        local minHeight, maxHeight = 296, 700
+        local width = isSourcesTabActive and F.sizes.sourcesFrameWidth or mainFrameWidth
+        rm.mainFrame:SetResizeBounds(width, minHeight, width, maxHeight)
+        frame:StartSizing()
+    end
 end
 
-local function updateFramePositionOrHeightOnDrag(professionFrame, mainFrameWidth)
+local function onMainFrameDragStop(frame, preferenceKey)
+    local _, _, _, xOffset, yOffset = frame:GetPoint()
+    frame:StopMovingOrSizing()
+    rm.setPreference(preferenceKey, {xOffset, yOffset})
+    rm.setPreference("mainFrameHeight", rm.mainFrame:GetHeight())
+end
+
+local function onRestoreButtonDragStart(frame, button)
+    if button == "LeftButton" then
+        frame:StartMoving()
+    end
+end
+
+local function onRestoreButtonDragStop(frame, preferenceKey)
+    local _, _, _, xOffset, yOffset = frame:GetPoint()
+    frame:StopMovingOrSizing()
+    rm.setPreference(preferenceKey, {xOffset, yOffset})
+end
+
+local function registerMainFrameDragEvents(mainFrameWidth)
     rm.mainFrame:RegisterForDrag("LeftButton", "RightButton")
     rm.mainFrame:SetScript("OnDragStart", function(self, button)
-        if button == "LeftButton" then
-            self:StartMoving()
-        elseif button == "RightButton" then
-            if rm.activeTab == L.sources and #rm.sourcesList.children > 0 then
-                rm.mainFrame:SetResizeBounds(F.sizes.sourcesFrameWidth, 296, F.sizes.sourcesFrameWidth, 700)
-            else
-                rm.mainFrame:SetResizeBounds(mainFrameWidth, 296, mainFrameWidth, 700)
-            end
-            self:StartSizing()
-        end
+        onMainFrameDragStart(self, button, mainFrameWidth)
     end)
-end
-
-local function saveFramePositionOnDragStop(professionFrame)
     rm.mainFrame:SetScript("OnDragStop", function(self)
-        local _, _, _, xOffset, yOffset = self:GetPoint()
-        self:StopMovingOrSizing()
-        rm.setPreference("mainFrameOffsets", {xOffset, yOffset})
-        rm.setPreference("mainFrameHeight", rm.mainFrame:GetHeight())
+        onMainFrameDragStop(self, "mainFrameOffsets")
     end)
 end
 
-local function setFrameMovableAndResizable(professionFrame, mainFrameWidth)
+local function registerRestoreButtonDragEvents()
+    rm.restoreButton:RegisterForDrag("LeftButton", "RightButton")
+    rm.restoreButton:SetScript("OnDragStart", onRestoreButtonDragStart)
+    rm.restoreButton:SetScript("OnDragStop", function(self)
+        onRestoreButtonDragStop(self, "restoreButtonOffsets")
+    end)
+end
+
+local function initializeMainFrame(professionFrame, mainFrameWidth)
     rm.mainFrame:SetSize(1, rm.getPreference("mainFrameHeight"))
     rm.mainFrame:ClearAllPoints()
     rm.mainFrame:SetPoint("TOPLEFT", professionFrame, unpack(rm.getPreference("mainFrameOffsets")))
     rm.mainFrame:SetMovable(true)
     rm.mainFrame:SetResizable(true)
-    updateFramePositionOrHeightOnDrag(professionFrame, mainFrameWidth)
-    saveFramePositionOnDragStop(professionFrame)
+end
+
+local function initializeRestoreButton(professionFrame)
+    rm.restoreButton:SetFrameStrata("DIALOG")
+    rm.restoreButton:ClearAllPoints()
+    rm.restoreButton:SetPoint("TOPLEFT", professionFrame, unpack(rm.getPreference("restoreButtonOffsets")))
+    rm.restoreButton:SetMovable(true)
+    rm.restoreButton:SetResizable(false)
+end
+
+local function setMainFrameMovableAndResizable(professionFrame, mainFrameWidth)
+    initializeMainFrame(professionFrame, mainFrameWidth)
+    registerMainFrameDragEvents(mainFrameWidth)
+end
+
+local function setRestoreButtonMovable(professionFrame)
+    initializeRestoreButton(professionFrame)
+    registerRestoreButtonDragEvents()
 end
 
 local function getFramesOffsets()
@@ -130,8 +160,8 @@ end
 
 local function updatePositionBasedOnParent(professionFrame, mainFrameWidth)
     if professionFrame == UIParent then -- TSM is enabled
-        replaceMinimizeButtonWithScrollTexture()
-        setFrameMovableAndResizable(professionFrame, mainFrameWidth)
+        setMainFrameMovableAndResizable(professionFrame, mainFrameWidth)
+        setRestoreButtonMovable(professionFrame)
     else
         setFramePointsRelativeToParent(professionFrame)
     end
