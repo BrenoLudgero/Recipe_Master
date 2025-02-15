@@ -185,11 +185,11 @@ end
 
 function rm.updateArrowOrientation(texture)
     if rm.getPreference("sortAscending") then
-        texture:SetRotation(0)
-        texture:SetPoint("CENTER", texture:GetParent(), 1.5, -1.5)
+        texture:SetTexture(F.textures.sortOrderArrowUp)
+        texture:SetPoint("CENTER", texture:GetParent(), 1.4, 2)
     else
-        texture:SetRotation(math.pi)
-        texture:SetPoint("CENTER", texture:GetParent(), -2, 2)
+        texture:SetTexture(F.textures.sortOrderArrowDown)
+        texture:SetPoint("CENTER", texture:GetParent(), 1.4, -4.8)
     end
 end
 
