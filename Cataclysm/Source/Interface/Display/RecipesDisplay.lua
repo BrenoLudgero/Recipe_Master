@@ -69,7 +69,9 @@ end
 
 function rm.listProfessionRecipes()
     local professionRecipes = rm.getProfessionRecipes()
-    populateAllRecipeRows(professionRecipes)
+    if professionRecipes then -- Might be nil when opening Recipe Master after login
+        populateAllRecipeRows(professionRecipes)
+    end
 end
 
 function rm.showRecipesForSpecificProfession(profession)

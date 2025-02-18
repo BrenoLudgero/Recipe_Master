@@ -44,19 +44,12 @@ function rm.handleRecipeLearned(event, spellID)
     end
 end
 
-local function showMainFrame()
-    rm.showRecipesFrame()
-    if rm.isRecipeListEmpty() then -- Might happen when opening Recipe Master after login
-        rm.updateRecipesList()
-    end
-end
-
 local function handleProfessionFrameOpened()
     rm.displayedProfession = GetTradeSkillLine() -- e.g. Engineering (Localized)
     if rm.getProfessionID(rm.displayedProfession) then
         rm.saveNewTradeSkills()
         RunNextFrame(function() 
-            showMainFrame() 
+            rm.showRecipesFrame()
             rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
         end)
     end

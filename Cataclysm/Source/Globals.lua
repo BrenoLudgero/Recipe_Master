@@ -48,10 +48,6 @@ function rm.getLocalizedSourceType(sourceType)
     return sourceTypes[sourceType]
 end
 
-function rm.isRecipeListEmpty()
-    return rm.mainFrame:IsShown() and #rm.recipesList.children == 0
-end
-
 function rm.tableContains(table, item)
     for _, value in ipairs(table) do
         if value == item then

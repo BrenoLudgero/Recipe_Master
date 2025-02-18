@@ -15,8 +15,12 @@ function rm.activateBottomTabAndDesaturateOthers(tab)
     end
 end
 
+local function isRecipeListEmpty()
+    return rm.mainFrame:IsShown() and #rm.recipesList.children == 0
+end
+
 local function congratulateIfEmptyList()
-    if rm.isRecipeListEmpty() then
+    if isRecipeListEmpty() then
         rm.showCenteredText(L.congratulations, F.colors.gold)
     end
 end
