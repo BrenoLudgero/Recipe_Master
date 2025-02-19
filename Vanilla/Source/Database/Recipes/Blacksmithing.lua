@@ -1885,6 +1885,7 @@ rm.recipeDB[164] = {
 			330,
 			340,
 		},
+		hasSodCounterpart = true,
 		item = 12639,
 		skill = 300,
 		spell = 16741,
