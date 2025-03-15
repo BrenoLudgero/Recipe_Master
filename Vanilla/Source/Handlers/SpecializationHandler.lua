@@ -7,7 +7,7 @@ function rm.getSavedSpecializationByID(professionID)
 end
 
 function rm.getSavedSpecializationByName(profession)
-    return rm.getCurrentCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"]
+    return rm.getCurrentCharacterSavedVariables()[rm.getProfessionID(profession)]["specialization"] or false
 end
 
 function rm.getSavedProfessionSpecializationForCharacter(character, professionID)
