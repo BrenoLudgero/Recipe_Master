@@ -23,6 +23,8 @@ local function handleMismatchedProfessionNames(recipeID, itemLink)
         return "기계공학"
     elseif professionName == "Зачаровывание" then
         return "Наложение чар"
+    elseif professionName == "Peletería" and rm.locale == "esES" then
+        return "Marroquinería"
     elseif professionName == "Sastrería" and rm.locale == "esES" then
         return "Costura"
     end

@@ -298,6 +298,7 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
     }
     if rm.locale == "esES" then
         L.professions[197] = "Costura"
+        L.professions[165] = "Marroquinería"
     end
     L.recipePrefixes = {"Receta: ", "Diseño: ", "Fórmula: ", "Esquema: ", "Patrón: ", "Manual: "}
     L.backgroundOpacity = "Opacidad del Fondo"
