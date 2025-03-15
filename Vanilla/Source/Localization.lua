@@ -13,6 +13,7 @@ L.drop = LOOT
 L.dungeon = LFG_TYPE_DUNGEON
 L.elite = ELITE
 L.epic = ITEM_QUALITY4_DESC
+L.faction = FACTION
 L.fishing = PROFESSIONS_FISHING
 L.fishingNotLearned = SPELL_FAILED_NOT_KNOWN -- "Spell not learned"
 L.general = GENERAL
