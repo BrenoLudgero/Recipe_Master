@@ -444,7 +444,7 @@ elseif rm.locale == "ptBR" then
 
 elseif rm.locale == "deDE" then
     L.professions = {
-        [171] = "Alchimie",
+        [171] = "Alchemie",
         [164] = "Schmiedekunst",
         [185] = "Kochkunst",
         [333] = "Verzauberkunst",
@@ -452,7 +452,7 @@ elseif rm.locale == "deDE" then
         [129] = "Erste Hilfe",
         [356] = "Angeln",
         [773] = "Inschriftenkunde",
-        [755] = "Juwelierskunst",
+        [755] = "Juwelenschleifen",
         [165] = "Lederverarbeitung",
         [186] = "Bergbau",
         [197] = "Schneiderei"
