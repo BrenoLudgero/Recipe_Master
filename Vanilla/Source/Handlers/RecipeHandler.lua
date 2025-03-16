@@ -9,10 +9,6 @@ local rankOrder = {
     Artisan = 4
 }
 
-function rm.isEnchanting(professionName)
-    return professionName == L.professions[333]
-end
-
 local function isRecipeForCurrentClass(recipe)
     if not recipe.classes then
         return true
@@ -163,7 +159,7 @@ function rm.storeSpellData(spellID, spellData, professionID)
 end
 
 -- Retrieves all cached recipe data for the currently displayed profession
-function rm.getProfessionRecipes(getSkillInfoFunction)
+function rm.getProfessionRecipes()
     local displayedProfessionID = rm.getProfessionID(rm.displayedProfession)
     return rm.cachedRecipes[displayedProfessionID]
 end

@@ -55,7 +55,7 @@ end
 
 local function updateProgressBar()
     -- If Skillet is enabled, avoids an error when switching from a 
-    -- trade skill window to a craft window (enchanting) and vice versa
+    -- trade skill window to a craft window (Enchanting) and vice versa
     -- or when using the default UI and the aforementioned windows are closed in quick succession
     if rm.learnedPercentage > 100 then
         return
@@ -71,10 +71,10 @@ local function updateProgressBar()
     updateProgressBarColor()
 end
 
-function rm.updateRecipesList(getSkillInfo)
+function rm.updateRecipesList()
     if rm.getProfessionFrame() then -- Avoids the same error described in updateProgressBar()
         rm.clearFrameContent()
-        rm.listProfessionRecipes(getSkillInfo)
+        rm.listProfessionRecipes()
         updateMainWidthBasedOnWidestRecipeName()
         updateProgressBar()
     end
@@ -82,22 +82,16 @@ end
 
 function rm.refreshRecipesListIfOpen()
     if rm.getProfessionFrame() and rm.activeTab == L.recipes then
-        local getSkillInfo
-        if rm.isEnchanting(rm.displayedProfession) then
-            getSkillInfo = GetCraftInfo
-        else
-            getSkillInfo = GetTradeSkillInfo
-        end
-        rm.updateRecipesList(getSkillInfo)
+        rm.updateRecipesList()
     end
 end
 
-function rm.showRecipesFrame(getSkillInfo)
+function rm.showRecipesFrame()
     rm.centeredText:Hide()
     rm.showRecipesFrameElements()
     rm.setParentDependentFramesPosition()
     rm.activateBottomTabAndDesaturateOthers(rm.recipesTab)
-    rm.updateRecipesList(getSkillInfo)
+    rm.updateRecipesList()
     if not rm.isMainFrameMaximized then
         rm.restoreButton:Show()
         return

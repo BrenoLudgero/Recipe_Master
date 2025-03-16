@@ -67,20 +67,16 @@ local function populateAllRecipeRows(professionRecipes)
     rm.learnedPercentage = math.floor((rm.learnedRecipesCount / rm.totalRecipesCount) * 100)
 end
 
-function rm.listProfessionRecipes(getSkillInfo)
-    local professionRecipes = rm.getProfessionRecipes(getSkillInfo)
+function rm.listProfessionRecipes()
+    local professionRecipes = rm.getProfessionRecipes()
     if professionRecipes then -- Might be nil when opening Recipe Master after login
         populateAllRecipeRows(professionRecipes)
     end
 end
 
-function rm.showRecipesForSpecificProfession(profession)
-    rm.displayedProfession = profession
-    if rm.isEnchanting(rm.displayedProfession) then
-        rm.updateRecipesList(GetCraftInfo)
-    else
-        rm.updateRecipesList(GetTradeSkillInfo)
-    end
+function rm.showRecipesForSpecificProfession(professionName)
+    rm.displayedProfession = professionName
+    rm.updateRecipesList()
 end
 
 local function isFishingDisplayed()

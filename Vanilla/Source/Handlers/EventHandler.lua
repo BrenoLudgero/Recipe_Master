@@ -46,39 +46,39 @@ function rm.handleRecipeLearned(event, spellID)
     end
 end
 
-local function handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
-    rm.displayedProfession = getDisplayedSkill() -- e.g. Engineering (Localized)
+local function handleProfessionFrameOpened(getDisplayedProfessionFunction)
+    rm.displayedProfession = getDisplayedProfessionFunction() -- e.g. Engineering (Localized)
     if rm.getProfessionID(rm.displayedProfession) then
-        rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
-        rm.showRecipesFrame(getSkillInfo)  
+        rm.saveNewTradeSkills(getItemLink)
+        rm.showRecipesFrame()  
         rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
     end
 end
 
-local function handleProfessionFrameClosed(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
+local function handleProfessionFrameClosed(getDisplayedProfessionFunction)
     if not rm.getProfessionFrame() then
         rm.hideMainFrame()
         return
     end
     -- A profession frame is still open after closing the Enchanting frame, show recipes for it
-    -- Does not apply if Skillet or TradeSkillMaster is enabled
-    handleProfessionFrameOpened(getNumSkills, getSkillInfo, getItemLink, getDisplayedSkill)
+    -- Only applies for the default crafting UI
+    handleProfessionFrameOpened(getDisplayedProfessionFunction)
 end
 
 function rm.handleProfessionFrame(event)
     local delayInSeconds = 0.05
-    -- Delayed for a bit to ensure that RM will be displayed / hidden reliably and ASAP
+    -- Delayed for a bit to ensure that RM will be displayed / closed reliably and ASAP
     if event == "TRADE_SKILL_SHOW" then
         C_Timer.After(delayInSeconds, function() 
-            handleProfessionFrameOpened(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+            handleProfessionFrameOpened(GetTradeSkillLine)
         end)
     elseif event == "CRAFT_SHOW" then
         C_Timer.After(delayInSeconds, function() 
-            handleProfessionFrameOpened(GetNumCrafts, GetCraftInfo, GetCraftItemLink, GetCraftDisplaySkillLine)
+            handleProfessionFrameOpened(GetCraftDisplaySkillLine)
         end)
     elseif event == "TRADE_SKILL_CLOSE" or event == "CRAFT_CLOSE" then
         RunNextFrame(function() 
-            handleProfessionFrameClosed(GetNumTradeSkills, GetTradeSkillInfo, GetTradeSkillItemLink, GetTradeSkillLine)
+            handleProfessionFrameClosed(GetTradeSkillLine)
         end)
     end
 end

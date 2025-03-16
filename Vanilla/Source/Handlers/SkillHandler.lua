@@ -1,4 +1,21 @@
 local _, rm = ...
+local L = rm.L
+
+-- true and false represents whether the displayed profession is a craft (Enchanting) or not
+local skillFunctions = {
+    ["getInfo"] = {
+        [true] = GetCraftInfo,
+        [false] = GetTradeSkillInfo
+    },
+    ["getNum"] = {
+        [true] = GetNumCrafts,
+        [false] = GetNumTradeSkills
+    },
+    ["getLink"] = {
+        [true] = GetCraftItemLink,
+        [false] = GetTradeSkillItemLink
+    }
+}
 
 local function getSavedSkillsByProfessionID(professionID)
     return rm.getSavedProfessionByID(professionID)["skills"]
@@ -24,8 +41,16 @@ function rm.getProfessionSkillsForOtherCharacters(professionID)
     return characters
 end
 
-local function getSkillID(i, getItemLink)
-    local itemLink = getItemLink(i)
+local function isEnchantingDisplayed()
+    return rm.displayedProfession == L.professions[333]
+end
+
+local function getSkillFunction(functionsTableIndex)
+    return skillFunctions[functionsTableIndex][isEnchantingDisplayed()]
+end
+
+local function getSkillID(i)
+    local itemLink = getSkillFunction("getLink")(i)
     if itemLink then
         return rm.getIDFromLink(itemLink)
     end
@@ -48,13 +73,14 @@ local function saveNewSkill(skillLineID, skillID)
 end
 
 -- Saves the ID of all the skills / crafts available for the profession
-function rm.saveNewTradeSkills(getNumSkills, getSkillInfo, getItemLink)
-    local numSkills = getNumSkills()
+function rm.saveNewTradeSkills()
     local skillLineID = rm.getProfessionID(rm.displayedProfession) -- e.g. 202 (Engineering)
+    local numSkills = getSkillFunction("getNum")()
+    local skillInfoFunction = getSkillFunction("getInfo")
     for i = 1, numSkills do
-        local _, skillType, craftType = getSkillInfo(i)
+        local _, skillType, craftType = skillInfoFunction(i)
         if skillType ~= "header" and craftType ~= "header" then
-            local skillID = getSkillID(i, getItemLink)
+            local skillID = getSkillID(i)
             saveNewSkill(skillLineID, skillID)
         end
     end
