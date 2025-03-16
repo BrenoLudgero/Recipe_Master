@@ -25,7 +25,7 @@ local specializationIDs = {
     [165] = {10657, 10658, 10660}
 }
 
-local function storeCurrentSpecializations(currentSpecializations, spellID)
+local function storeLearnedSpecializations(currentSpecializations, spellID)
     for professionID, specs in pairs(specializationIDs) do
         if rm.tableContains(specs, spellID) then
             currentSpecializations[professionID] = spellID
@@ -40,7 +40,7 @@ function rm.getLearnedSpecializations()
         local offset, numSlots = select(3, GetSpellTabInfo(i))
         for j = offset + 1, offset + numSlots do
             local _, _, spellID = GetSpellBookItemName(j, BOOKTYPE_SPELL)
-            storeCurrentSpecializations(currentSpecializations, spellID)
+            storeLearnedSpecializations(currentSpecializations, spellID)
         end
     end
     return currentSpecializations

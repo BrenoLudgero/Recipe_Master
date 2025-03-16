@@ -1,5 +1,4 @@
 local _, rm = ...
-local L = rm.L
 
 function rm.getSavedProfessionByID(professionID)
     return rm.getCurrentCharacterSavedVariables()[professionID]
