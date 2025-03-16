@@ -44,7 +44,7 @@ local defaultOptionsFramePreferences = {
     progressColor = {0.00, 0.44, 0.87},
     progressTexture = "Interface/TARGETINGFRAME/BarFill2",
     restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
-    showLearnedRecipes = true,
+    showLearnedRecipes = false,
     showRecipesInfo = true,
     showDifficultyTooltipInfo = true,
     showAltsTooltipInfo = true,
@@ -91,12 +91,12 @@ end
 
 local function removeUnusedOptionsFromSavedVariables()
     for key in pairs(RecipeMasterMainFramePreferences) do
-        if not defaultMainFramePreferences[key] then
+        if defaultMainFramePreferences[key] == nil then
             RecipeMasterMainFramePreferences[key] = nil
         end
     end
     for key in pairs(RecipeMasterOptionsFramePreferences) do
-        if not defaultOptionsFramePreferences[key] then
+        if defaultOptionsFramePreferences[key] == nil then
             RecipeMasterOptionsFramePreferences[key] = nil
         end
     end
