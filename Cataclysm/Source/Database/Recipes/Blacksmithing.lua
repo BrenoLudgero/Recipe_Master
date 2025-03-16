@@ -636,7 +636,7 @@ rm.recipeDB[164] = {
 			170,
 		},
 		item = 5540,
-		skill = 110,
+		skill = 115,
 		spell = 6517,
 	},
 	[5543] = {
