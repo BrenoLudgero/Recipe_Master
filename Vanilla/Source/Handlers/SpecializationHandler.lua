@@ -25,8 +25,12 @@ local specializationIDs = {
     [165] = {10657, 10658, 10660}
 }
 
+local function professionHasSpecializations(professionID)
+    return specializationIDs[professionID] ~= nil
+end
+
 function rm.isSodProfessionWithSpecializations(professionID)
-    return rm.currentSeason == "SoD" and specializationIDs[professionID] ~= nil
+    return rm.currentSeason == "SoD" and professionHasSpecializations(professionID)
 end
 
 local function storeCurrentSpecializations(currentSpecializations, spellID)
@@ -77,23 +81,16 @@ function rm.saveNewSpecializations(currentSpecializations)
     end
 end
 
+local function isLearnedProfessionWithSpecializations(professionID)
+    return rm.getSavedProfessionByID(professionID) and professionHasSpecializations(professionID)
+end
+
 local function isSpecializationAbandoned(currentSpecializations, professionID)
-    if rm.isSodProfessionWithSpecializations(professionID) then
-        local savedSpecs = rm.getSavedSpecializationByID(professionID)
-        if type(savedSpecs) == "table" then
-            for _, savedSpec in ipairs(savedSpecs) do
-                if not rm.tableContains(currentSpecializations[professionID] or {}, savedSpec) then
-                    return true
-                end
-            end
-            return false
-        end
-    end
-    return rm.getSavedSpecializationByID(professionID) and not currentSpecializations[professionID]
+    return not currentSpecializations[professionID]
 end
 
 function rm.removeAbandonedSpecialization(currentSpecializations, professionID)
-    if rm.isSodProfessionWithSpecializations(professionID) then
+    if isLearnedProfessionWithSpecializations(professionID) then
         local savedSpecs = rm.getSavedProfessionByID(professionID)["specialization"]
         if type(savedSpecs) == "table" then
             for i = #savedSpecs, 1, -1 do
@@ -101,10 +98,10 @@ function rm.removeAbandonedSpecialization(currentSpecializations, professionID)
                     table.remove(savedSpecs, i)
                 end
             end
-        end
-    else
-        if isSpecializationAbandoned(currentSpecializations, professionID) then
-            rm.getSavedProfessionByID(professionID)["specialization"] = nil
+        else
+            if isSpecializationAbandoned(currentSpecializations, professionID) then
+                rm.getSavedProfessionByID(professionID)["specialization"] = nil
+            end
         end
     end
 end
