@@ -121,8 +121,11 @@ local function getRecipeInfo(itemName, itemLink)
     local recipeID = rm.getIDFromLink(itemLink)
     local professionName = handleMismatchedProfessionNames(recipeID, itemLink)
     local professionID = rm.getProfessionID(professionName)
-    local recipe = rm.cachedRecipes[professionID][recipeID]
-    return recipe, professionID
+    if professionID then
+        local recipe = rm.cachedRecipes[professionID][recipeID]
+        return recipe, professionID
+    end
+    return false, false
 end
 
 local function showMessageInTooltip(tooltip, itemName, itemLink)
