@@ -3005,19 +3005,6 @@ rm.recipeDB[164] = {
 		spell = 461669,
 		specialization = 17039,
 	},
-	[228118] = {
-		difficulty = {
-			300,
-			320,
-			330,
-			340,
-		},
-		item = 12639,
-		season = "SoD",
-		skill = 300,
-		spell = 16741,
-		specialization = 9788,
-	},
 	[228250] = {
 		difficulty = {
 			0,
