@@ -53,18 +53,15 @@ end
 
 local function cacheAllItemNames()
     for professionID in pairs(L.professions) do
-        for _, sources in pairs(rm.sourceDB[professionID]) do
-            for sourceType, values in pairs(sources) do
-                if sourceType == "item" then
-                    for itemID in pairs(values) do
-                        if not rm.cachedItemNames[itemID] then
-                            local item = Item:CreateFromItemID(itemID)
-                            item:ContinueOnItemLoad(function()
-                                rm.cachedItemNames[itemID] = item:GetItemName()
-                            end)
-                        end
+        for _, recipeSources in pairs(rm.sourceDB[professionID]) do
+            if recipeSources["item"] then
+                for itemID in pairs(recipeSources["item"]) do
+                    if not rm.cachedItemNames[itemID] then
+                        local item = Item:CreateFromItemID(itemID)
+                        item:ContinueOnItemLoad(function()
+                            rm.cachedItemNames[itemID] = item:GetItemName()
+                        end)
                     end
-                    break
                 end
             end
         end
@@ -73,13 +70,10 @@ end
 
 local function cacheAllZoneNames()
     for professionID in pairs(L.professions) do
-        for _, sources in pairs(rm.sourceDB[professionID]) do
-            for sourceType, values in pairs(sources) do
-                if sourceType == "fishing" then
-                    for zoneID in pairs(values) do
-                        local zone = C_Map.GetAreaInfo(zoneID)
-                    end
-                    break
+        for _, recipeSources in pairs(rm.sourceDB[professionID]) do
+            if recipeSources["fishing"] then
+                for zoneID in pairs(recipeSources["fishing"]) do
+                    local zone = C_Map.GetAreaInfo(zoneID)
                 end
             end
         end
