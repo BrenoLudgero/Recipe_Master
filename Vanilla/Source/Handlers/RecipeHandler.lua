@@ -133,6 +133,7 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         difficulty = recipeData["difficulty"],
         faction = recipeData["faction"], 
         item = recipeData["item"], 
+        level = recipeData["level"], 
         link = rLink,
         name = rName, 
         quality = rQuality, 

@@ -15,6 +15,7 @@ rm.version = C_AddOns.GetAddOnMetadata(addonName, "Version")
 rm.author = C_AddOns.GetAddOnMetadata(addonName, "Author")
 rm.currentCharacter = UnitName("player")
 rm.currentFaction = UnitFactionGroup("player") -- Alliance/Horde, always in English
+rm.currentLevel = UnitLevel("player")
 rm.currentSeason = getCurrentSeason()
 rm.currentServer = GetRealmName()
 rm.locale = GetLocale()

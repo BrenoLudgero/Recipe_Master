@@ -24,6 +24,7 @@ L.minimizeWindow = MINIMIZE
 L.minimum = MINIMUM
 L.name = NAME
 L.object = SPELL_TARGET_TYPE7_DESC:gsub("^%l", string.upper) -- Capitalized "object"
+L.poisons = MINIMAP_TRACKING_VENDOR_POISON
 L.price = AUCTION_PRICE
 L.quality = QUALITY
 L.quest = TRANSMOG_SOURCE_2
@@ -252,7 +253,8 @@ if rm.locale == "enUS" then
         [356] = "Fishing",
         [165] = "Leatherworking",
         [186] = "Mining",
-        [197] = "Tailoring"
+        [197] = "Tailoring",
+        [2842] = L.poisons
     }
     L.recipePrefixes = {"Recipe: ", "Plans: ", "Formula: ", "Schematic: ", "Pattern: ", "Manual: "}
     L.backgroundOpacity = "Background Opacity"
@@ -295,7 +297,8 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
         [356] = "Pesca",
         [165] = "Peletería",
         [186] = "Minería",
-        [197] = "Sastrería"
+        [197] = "Sastrería",
+        [2842] = L.poisons
     }
     if rm.locale == "esES" then
         L.professions[197] = "Costura"
@@ -344,7 +347,8 @@ elseif rm.locale == "ptBR" then
         [356] = "Pesca",
         [165] = "Couraria",
         [186] = "Mineração",
-        [197] = "Alfaiataria"
+        [197] = "Alfaiataria",
+        [2842] = L.poisons
     }
     L.recipePrefixes = {"Receita: ", "Instruções: ", "Fórmula: ", "Diagrama: ", "Molde: ", "Manual: "}
     L.backgroundOpacity = "Opacidade do Fundo"
@@ -388,7 +392,8 @@ elseif rm.locale == "deDE" then
         [356] = "Angeln",
         [165] = "Lederverarbeitung",
         [186] = "Bergbau",
-        [197] = "Schneiderei"
+        [197] = "Schneiderei",
+        [2842] = L.poisons
     }
     L.recipePrefixes = {"Rezept: ", "Pläne: ", "Formel: ", "Bauplan: ", "Muster: ", "Handbuch: "}
     L.backgroundOpacity = "Hintergrundopazität"
@@ -432,7 +437,8 @@ elseif rm.locale == "frFR" then
         [356] = "Pêche",
         [165] = "Travail du cuir",
         [186] = "Minage",
-        [197] = "Couture"
+        [197] = "Couture",
+        [2842] = L.poisons
     }
     L.recipePrefixes = {"Recette : ", "Plan : ", "Plans : ", "Formule : ", "Schéma : ", "Patron : ", "Manuel : "}
     L.backgroundOpacity = "Opacité de l'Arrière-plan"
@@ -477,7 +483,8 @@ elseif rm.locale == "ruRU" then
         [356] = "Рыбная ловля",
         [165] = "Кожевничество",
         [186] = "Горное дело",
-        [197] = "Портняжное дело"
+        [197] = "Портняжное дело",
+        [2842] = L.poisons
     }
     L.recipePrefixes = {"Рецепт: ", "Чертеж: ", "Формула ", "Формула: ", "Схема: ", "Выкройка: ", "Учебник: "}
     L.backgroundOpacity = "Прозрачность фона"
@@ -523,7 +530,8 @@ elseif rm.locale == "koKR" then
         [356] = "낚시",
         [165] = "가죽 세공",
         [186] = "채광",
-        [197] = "재봉술"
+        [197] = "재봉술",
+        [2842] = L.poisons
     }
     L.recipePrefixes = {"조리법: ", "도면: ", "주문식: ", "설계도: ", "도안: ", "처방전: "}
     L.backgroundOpacity = "배경 불투명도"
@@ -566,7 +574,8 @@ elseif rm.locale == "zhTW" then
         [356] = "釣魚",
         [165] = "製皮",
         [186] = "採礦",
-        [197] = "裁縫"
+        [197] = "裁縫",
+        [2842] = L.poisons
     }
     L.recipePrefixes = {"食譜：", "設計圖：", "公式：", "結構圖：", "結構圖 : ", "圖樣：", "圖樣 : ", "說明書：", "手冊：", "配方："}
     L.backgroundOpacity = "背景不透明度"
@@ -610,7 +619,8 @@ elseif rm.locale == "zhCN" then
         [356] = "钓鱼",
         [165] = "制皮",
         [186] = "采矿",
-        [197] = "裁缝"
+        [197] = "裁缝",
+        [2842] = L.poisons
     }
     L.recipePrefixes = {"食谱：", "配方：", "设计图：", "公式：", "结构图：", "图样：", "手册："}
     L.backgroundOpacity = "背景不透明度"
