@@ -108,10 +108,7 @@ end
 local function getInitialSpellData(ID, professionID)
     local name = GetSpellInfo(ID)
     local link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
-    local quality = select(3, C_Item.GetItemInfo(ID))
-    if not quality then
-        quality = 1
-    end
+    local quality = 1
     local texture = rm.recipeDB[professionID][ID].icon or GetSpellTexture(ID)
     return name, link, quality, texture
 end
