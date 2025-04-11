@@ -507,17 +507,6 @@ rm.recipeDB[164] = {
 		skill = 180,
 		spell = 3508,
 	},
-	[3847] = {
-		difficulty = {
-			200,
-			225,
-			237,
-			250,
-		},
-		item = 3847,
-		skill = 200,
-		spell = 3515,
-	},
 	[3848] = {
 		difficulty = {
 			105,
@@ -627,6 +616,17 @@ rm.recipeDB[164] = {
 		item = 3846,
 		skill = 185,
 		spell = 3513,
+	},
+	[3875] = {
+		difficulty = {
+			200,
+			225,
+			237,
+			250,
+		},
+		item = 3847,
+		skill = 200,
+		spell = 3515,
 	},
 	[5540] = {
 		difficulty = {
@@ -1365,7 +1365,7 @@ rm.recipeDB[164] = {
 		skill = 180,
 		spell = 15972,
 	},
-	[12260] = {
+	[12261] = {
 		difficulty = {
 			190,
 			215,
@@ -2036,7 +2036,7 @@ rm.recipeDB[164] = {
 		skill = 300,
 		spell = 20897,
 	},
-	[17704] = {
+	[17706] = {
 		difficulty = {
 			190,
 			215,
@@ -2609,17 +2609,6 @@ rm.recipeDB[164] = {
 		skill = 365,
 		spell = 29643,
 	},
-	[23522] = {
-		difficulty = {
-			370,
-			380,
-			390,
-			400,
-		},
-		item = 23522,
-		skill = 370,
-		spell = 29645,
-	},
 	[23528] = {
 		difficulty = {
 			300,
@@ -2642,28 +2631,6 @@ rm.recipeDB[164] = {
 		skill = 365,
 		spell = 29622,
 	},
-	[23533] = {
-		difficulty = {
-			365,
-			375,
-			385,
-			395,
-		},
-		item = 23533,
-		skill = 365,
-		spell = 29662,
-	},
-	[23535] = {
-		difficulty = {
-			365,
-			375,
-			385,
-			395,
-		},
-		item = 23535,
-		skill = 365,
-		spell = 29664,
-	},
 	[23537] = {
 		difficulty = {
 			365,
@@ -2685,17 +2652,6 @@ rm.recipeDB[164] = {
 		item = 23540,
 		skill = 365,
 		spell = 29692,
-	},
-	[23541] = {
-		difficulty = {
-			365,
-			375,
-			385,
-			395,
-		},
-		item = 23541,
-		skill = 365,
-		spell = 29693,
 	},
 	[23555] = {
 		difficulty = {
@@ -2762,17 +2718,6 @@ rm.recipeDB[164] = {
 		item = 23565,
 		skill = 375,
 		spell = 36256,
-	},
-	[23576] = {
-		difficulty = {
-			375,
-			375,
-			375,
-			375,
-		},
-		item = 23576,
-		skill = 375,
-		spell = 29729,
 	},
 	[23590] = {
 		difficulty = {
@@ -3032,6 +2977,17 @@ rm.recipeDB[164] = {
 		skill = 365,
 		spell = 29642,
 	},
+	[23613] = {
+		difficulty = {
+			370,
+			380,
+			390,
+			400,
+		},
+		item = 23522,
+		skill = 370,
+		spell = 29645,
+	},
 	[23615] = {
 		difficulty = {
 			370,
@@ -3092,6 +3048,17 @@ rm.recipeDB[164] = {
 		skill = 365,
 		spell = 29658,
 	},
+	[23622] = {
+		difficulty = {
+			365,
+			375,
+			385,
+			395,
+		},
+		item = 23533,
+		skill = 365,
+		spell = 29662,
+	},
 	[23623] = {
 		difficulty = {
 			365,
@@ -3102,6 +3069,17 @@ rm.recipeDB[164] = {
 		item = 23534,
 		skill = 365,
 		spell = 29663,
+	},
+	[23624] = {
+		difficulty = {
+			365,
+			375,
+			385,
+			395,
+		},
+		item = 23535,
+		skill = 365,
+		spell = 29664,
 	},
 	[23625] = {
 		difficulty = {
@@ -3135,6 +3113,17 @@ rm.recipeDB[164] = {
 		item = 23539,
 		skill = 365,
 		spell = 29672,
+	},
+	[23630] = {
+		difficulty = {
+			365,
+			375,
+			385,
+			395,
+		},
+		item = 23541,
+		skill = 365,
+		spell = 29693,
 	},
 	[23631] = {
 		difficulty = {
@@ -3201,6 +3190,17 @@ rm.recipeDB[164] = {
 		item = 23575,
 		skill = 340,
 		spell = 29728,
+	},
+	[23639] = {
+		difficulty = {
+			375,
+			375,
+			375,
+			375,
+		},
+		item = 23576,
+		skill = 375,
+		spell = 29729,
 	},
 	[24002] = {
 		difficulty = {
@@ -3922,17 +3922,6 @@ rm.recipeDB[164] = {
 		skill = 375,
 		spell = 41135,
 	},
-	[32854] = {
-		difficulty = {
-			365,
-			375,
-			385,
-			395,
-		},
-		item = 32854,
-		skill = 365,
-		spell = 43846,
-	},
 	[33174] = {
 		difficulty = {
 			365,
@@ -3954,6 +3943,17 @@ rm.recipeDB[164] = {
 		item = 33791,
 		skill = 35,
 		spell = 43549,
+	},
+	[33954] = {
+		difficulty = {
+			365,
+			375,
+			385,
+			395,
+		},
+		item = 32854,
+		skill = 365,
+		spell = 43846,
 	},
 	[35208] = {
 		difficulty = {
@@ -6437,5 +6437,181 @@ rm.recipeDB[164] = {
 		item = 7961,
 		skill = 270,
 		spell = 10007,
+	},
+	[238074] = {
+		difficulty = {
+			500,
+			505,
+			510,
+			515,
+		},
+		item = 75124,
+		skill = 500,
+		spell = 1224188,
+	},
+	[238075] = {
+		difficulty = {
+			505,
+			525,
+			530,
+			535,
+		},
+		item = 75122,
+		skill = 505,
+		spell = 1224190,
+	},
+	[238076] = {
+		difficulty = {
+			510,
+			515,
+			520,
+			525,
+		},
+		item = 75123,
+		skill = 510,
+		spell = 1224186,
+	},
+	[238077] = {
+		difficulty = {
+			515,
+			520,
+			525,
+			530,
+		},
+		item = 75120,
+		skill = 515,
+		spell = 1224187,
+	},
+	[238078] = {
+		difficulty = {
+			0,
+			520,
+			520,
+			525,
+		},
+		item = 75119,
+		skill = 520,
+		spell = 1224193,
+	},
+	[238079] = {
+		difficulty = {
+			525,
+			525,
+			530,
+			535,
+		},
+		item = 75136,
+		skill = 525,
+		spell = 1224192,
+	},
+	[238080] = {
+		difficulty = {
+			525,
+			525,
+			530,
+			535,
+		},
+		item = 75126,
+		skill = 525,
+		spell = 1224191,
+	},
+	[238081] = {
+		difficulty = {
+			525,
+			525,
+			530,
+			535,
+		},
+		item = 75135,
+		skill = 525,
+		spell = 1224189,
+	},
+	[238082] = {
+		difficulty = {
+			500,
+			505,
+			510,
+			515,
+		},
+		item = 75125,
+		skill = 500,
+		spell = 1224180,
+	},
+	[238083] = {
+		difficulty = {
+			505,
+			525,
+			530,
+			535,
+		},
+		item = 75121,
+		skill = 505,
+		spell = 1224182,
+	},
+	[238084] = {
+		difficulty = {
+			510,
+			515,
+			520,
+			525,
+		},
+		item = 75118,
+		skill = 510,
+		spell = 1224178,
+	},
+	[238085] = {
+		difficulty = {
+			515,
+			520,
+			525,
+			530,
+		},
+		item = 75132,
+		skill = 515,
+		spell = 1224179,
+	},
+	[238086] = {
+		difficulty = {
+			0,
+			520,
+			520,
+			525,
+		},
+		item = 75134,
+		skill = 520,
+		spell = 1224185,
+	},
+	[238087] = {
+		difficulty = {
+			525,
+			525,
+			530,
+			535,
+		},
+		item = 75133,
+		skill = 525,
+		spell = 1224184,
+	},
+	[238088] = {
+		difficulty = {
+			525,
+			525,
+			530,
+			535,
+		},
+		item = 75129,
+		skill = 525,
+		spell = 1224183,
+	},
+	[238089] = {
+		difficulty = {
+			525,
+			525,
+			530,
+			535,
+		},
+		item = 75128,
+		skill = 525,
+		spell = 1224181,
 	},
 }

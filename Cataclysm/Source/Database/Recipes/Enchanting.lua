@@ -1199,6 +1199,16 @@ rm.recipeDB[333] = {
 		item = 20035,
 		skill = 300,
 	},
+	[17725] = {
+		difficulty = {
+			190,
+			210,
+			230,
+			250,
+		},
+		item = 21931,
+		skill = 190,
+	},
 	[18259] = {
 		difficulty = {
 			300,
@@ -1567,17 +1577,6 @@ rm.recipeDB[333] = {
 		item = 20744,
 		skill = 45,
 		spell = 25124,
-	},
-	[21931] = {
-		difficulty = {
-			190,
-			210,
-			230,
-			250,
-		},
-		item = 21931,
-		isSpell = true,
-		skill = 190,
 	},
 	[22392] = {
 		difficulty = {

@@ -1424,4 +1424,16 @@ rm.recipeDB[171] = {
 		skill = 300,
 		spell = 1213571,
 	},
+	[241650] = {
+		difficulty = {
+			0,
+			250,
+			262,
+			275,
+		},
+		item = 241650,
+		season = "SoD",
+		skill = 250,
+		spell = 1231583,
+	},
 }

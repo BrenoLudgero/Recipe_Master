@@ -2252,4 +2252,52 @@ rm.recipeDB[333] = {
 		season = "SoD",
 		skill = 320,
 	},
+	[1231128] = {
+		difficulty = {
+			0,
+			320,
+			340,
+			360,
+		},
+		item = 1231128,
+		isSpell = true,
+		season = "SoD",
+		skill = 320,
+	},
+	[1231139] = {
+		difficulty = {
+			0,
+			320,
+			340,
+			360,
+		},
+		item = 1231139,
+		isSpell = true,
+		season = "SoD",
+		skill = 320,
+	},
+	[1231164] = {
+		difficulty = {
+			0,
+			320,
+			340,
+			360,
+		},
+		item = 1231164,
+		isSpell = true,
+		season = "SoD",
+		skill = 320,
+	},
+	[1232172] = {
+		difficulty = {
+			0,
+			320,
+			340,
+			360,
+		},
+		item = 1232172,
+		isSpell = true,
+		season = "SoD",
+		skill = 320,
+	},
 }

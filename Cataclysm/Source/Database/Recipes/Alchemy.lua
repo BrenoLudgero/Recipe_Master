@@ -1291,17 +1291,6 @@ rm.recipeDB[171] = {
 		skill = 325,
 		spell = 28551,
 	},
-	[22845] = {
-		difficulty = {
-			360,
-			375,
-			377,
-			380,
-		},
-		item = 22845,
-		skill = 360,
-		spell = 28575,
-	},
 	[22846] = {
 		difficulty = {
 			360,
@@ -1312,17 +1301,6 @@ rm.recipeDB[171] = {
 		item = 22846,
 		skill = 360,
 		spell = 28576,
-	},
-	[22847] = {
-		difficulty = {
-			360,
-			375,
-			377,
-			380,
-		},
-		item = 22847,
-		skill = 360,
-		spell = 28577,
 	},
 	[22850] = {
 		difficulty = {
@@ -1662,6 +1640,28 @@ rm.recipeDB[171] = {
 		repLevel = 8,
 		skill = 360,
 		spell = 28573,
+	},
+	[22923] = {
+		difficulty = {
+			360,
+			375,
+			377,
+			380,
+		},
+		item = 22845,
+		skill = 360,
+		spell = 28575,
+	},
+	[22925] = {
+		difficulty = {
+			360,
+			375,
+			377,
+			380,
+		},
+		item = 22847,
+		skill = 360,
+		spell = 28577,
 	},
 	[22926] = {
 		difficulty = {
