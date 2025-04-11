@@ -583,6 +583,7 @@ rm.recipeDB[333] = {
 			215,
 			235,
 		},
+		hasSodCounterpart = true,
 		item = {
 			11290,
 			14810,
