@@ -92,7 +92,7 @@ function rm.showRecipesFrame()
     rm.setParentDependentFramesPosition()
     rm.activateBottomTabAndDesaturateOthers(rm.recipesTab)
     rm.updateRecipesList()
-    if not rm.isMainFrameMaximized then
+    if not rm.getPreference("maximizeMainFrame") then
         rm.restoreButton:Show()
         return
     elseif rm.mainFrame:IsShown() then

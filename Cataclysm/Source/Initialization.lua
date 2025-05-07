@@ -31,6 +31,7 @@ end
 local defaultMainFramePreferences = {
     sortAscending = true,
     sortRecipesBy = "Name",
+    maximizeMainFrame = true,
     -- Used when TradeSkillMaster is enabled
     mainFrameHeight = 413,
     mainFrameOffsets = {0, 0},

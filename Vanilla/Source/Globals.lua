@@ -2,7 +2,6 @@ local _, rm = ...
 local L = rm.L
 
 rm.activeTab = L.recipes
-rm.isMainFrameMaximized = true
 rm.displayedProfession = ""
 rm.lastDisplayedProfession = ""
 rm.learnedRecipesCount = 0

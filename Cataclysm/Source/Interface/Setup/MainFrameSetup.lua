@@ -14,7 +14,7 @@ end
 
 function rm.minimizeMainFrameOnClick(button)
     button:SetScript("OnClick", function(self)
-        rm.isMainFrameMaximized = false
+        rm.setPreference("maximizeMainFrame", false)
         rm.restoreButton:Show()
         rm.mainFrame:Hide()
     end)
@@ -22,7 +22,7 @@ end
 
 function rm.restoreMainFrameOnClick(restoreButton)
     restoreButton:SetScript("OnClick", function(self)
-        rm.isMainFrameMaximized = true
+        rm.setPreference("maximizeMainFrame", true)
         self:Hide()
         rm.mainFrame:Show()
     end)
