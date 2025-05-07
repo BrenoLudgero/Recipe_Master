@@ -2,7 +2,11 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-local function isSkilletEnabledAndVisible()
+local function isDragonflightUiVisible()
+    return DragonflightUIProfessionFrame and DragonflightUIProfessionFrame:IsVisible()
+end
+
+local function isSkilletVisible()
     return SkilletFrame and SkilletFrame:IsVisible()
 end
 
@@ -35,7 +39,9 @@ local function isTradeSkillMasterEnabled()
 end
 
 function rm.getProfessionFrame()
-    if isSkilletEnabledAndVisible() then
+    if isDragonflightUiVisible() then
+        return DragonflightUIProfessionFrame
+    elseif isSkilletVisible() then
         return SkilletFrame
     elseif isTradeSkillMasterEnabled() then
         return UIParent
@@ -122,7 +128,7 @@ local function setRestoreButtonMovable(professionFrame)
     registerRestoreButtonDragEvents()
 end
 
-local function getFramesOffsets()
+local function getDefaultFramesOffsets()
     local mainFrameTopOffsets = {-2, -4}
     local mainFrameBottomOffsets = {0, -6}
     local restoreButtonOffsets = {-2, -4}
@@ -142,7 +148,7 @@ local function getFramesOffsets()
     return mainFrameTopOffsets, mainFrameBottomOffsets, restoreButtonOffsets
 end
 
-local function setRestoreButtonAnchor(closeButton, exitButton, restoreButtonOffsets)
+local function setDefaultFramesRestoreButtonAnchor(closeButton, exitButton, restoreButtonOffsets)
     if isCloudyTradeSkillEnabled() then
         rm.restoreButton:SetPoint("BOTTOMLEFT", exitButton, "BOTTOMRIGHT", unpack(restoreButtonOffsets))
     else
@@ -152,15 +158,19 @@ end
 
 local function setFramePointsRelativeToParent(professionFrame)
     rm.restoreButton:ClearAllPoints()
-    if professionFrame == SkilletFrame then
+    if professionFrame == DragonflightUIProfessionFrame then
+        rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 2, -1)
+        rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 2, -1)
+        rm.mainFrame:SetPoint("BOTTOM", professionFrame)
+    elseif professionFrame == SkilletFrame then
         rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 0, -1)
         rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 0, -1)
         rm.mainFrame:SetPoint("BOTTOM", professionFrame)
     elseif professionFrame == TradeSkillFrame or professionFrame == CraftFrame then
         local closeButton = (professionFrame == TradeSkillFrame) and TradeSkillFrameCloseButton or CraftFrameCloseButton
         local exitButton = (professionFrame == TradeSkillFrame) and TradeSkillCancelButton or CraftCancelButton
-        local mainFrameTopOffsets, mainFrameBottomOffsets, restoreButtonOffsets = getFramesOffsets()
-        setRestoreButtonAnchor(closeButton, exitButton, restoreButtonOffsets)
+        local mainFrameTopOffsets, mainFrameBottomOffsets, restoreButtonOffsets = getDefaultFramesOffsets()
+        setDefaultFramesRestoreButtonAnchor(closeButton, exitButton, restoreButtonOffsets)
         rm.mainFrame:SetPoint("TOPLEFT", closeButton, "TOPRIGHT", unpack(mainFrameTopOffsets))
         rm.mainFrame:SetPoint("BOTTOMLEFT", exitButton, "BOTTOMRIGHT", unpack(mainFrameBottomOffsets))
     end
