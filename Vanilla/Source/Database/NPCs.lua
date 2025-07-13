@@ -18319,6 +18319,7 @@ rm.npcDB = {
 		level = "55",
 		names = {
 			enUS = "Bale",
+			esMX = "Fardo",
 			koKR = "베일",
 			ptBR = "Fardo",
 			ruRU = "Тюкн",
