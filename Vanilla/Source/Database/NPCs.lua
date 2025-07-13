@@ -5099,7 +5099,6 @@ rm.npcDB = {
 		names = {
 			enUS = "Banalash",
 			esES = "Banatralla",
-			esMX = "Banatralla",
 			koKR = "바나래쉬",
 			ruRU = "Баналаш",
 			zhCN = "巴纳拉什",
