@@ -33155,10 +33155,10 @@ rm.npcDB = {
 		faction = "Horde",
 		level = "40",
 		names = {
-			enUS = "Oggmarr",
+			enUS = "Ogg'marr",
 			koKR = "오그마르",
 			ptBR = "Ogg'marr",
-			ruRU = "Оггмарр",
+			ruRU = "Огг'марр",
 			zhCN = "奥克玛尔",
 			zhTW = "奧剋瑪爾",
 		},
