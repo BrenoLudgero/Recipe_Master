@@ -88,16 +88,16 @@ L.uniqueSourceInstructions = {
         ["zhTW"] = "此配方由巨龍之魂的精英掉落"
     },
     [8696] = {
-        ["deDE"] = "Er ist in einem Käfig im [Murder Pens] eingesperrt",
+        ["deDE"] = "Er ist in einem Käfig in den Mörderpferchen eingesperrt",
         ["enUS"] = "He is locked in a cage located inside Murder Pens",
-        ["esES"] = "Está encerrado en una jaula situada dentro de [Murder Pens]",
-        ["esMX"] = "Está encerrado en una jaula situada dentro de [Murder Pens]",
-        ["frFR"] = "Il est enfermé dans une cage située à [Murder Pens]",
-        ["koKR"] = "그는 [Murder Pens] 안에 위치한 철창에 갇혀 있습니다",
-        ["ptBR"] = "Ele está preso numa jaula encontrada em [Murder Pens]",
-        ["ruRU"] = "Он заперт в клетке, расположенной внутри [Murder Pens]",
-        ["zhCN"] = "他被关在位于 [Muder Pens] 内的笼子里",
-        ["zhTW"] = "他被關在 [Muder Pens] 內的籠子裡"
+        ["esES"] = "Está encerrado en una jaula situada dentro de El Matadero",
+        ["esMX"] = "Está encerrado en una jaula situada dentro de El Matadero",
+        ["frFR"] = "Il est enfermé dans une cage située dans les enclos meurtriers",
+        ["koKR"] = "그는 학살자의 우리 안에 위치한 철창에 갇혀 있습니다",
+        ["ptBR"] = "Ele está preso numa jaula encontrada em Os Redis da Morte",
+        ["ruRU"] = "Он заперт в клетке, расположенной внутри Камер обречённых",
+        ["zhCN"] = "他被关在位于谋杀者围栏内的笼子里",
+        ["zhTW"] = "他被關在謀殺者圍欄內的籠子裡"
         -- Tomon, Wowhead.com
     },
     [8983] = {
