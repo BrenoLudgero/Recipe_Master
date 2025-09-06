@@ -177,31 +177,31 @@ L.uniqueSourceInstructions = {
     [11340] = {
         ["deDE"] = "Das Rezept wird von einer großen Steintafel gelehrt,\n"..
                 "die in der Wand hinter dem Kohlenbecken und in der\n"..
-                "Nähe dieses Gegners am [Edge of Madness] gefunden wurde",
+                "Nähe dieses Gegners am Rand des Wahnsinns zu finden ist",
         ["enUS"] = "The recipe is taught from a large stone tablet\n"..
                 "found in the wall behind the brazier and\n"..
                 "near this enemy in the Edge of Madness",
         ["esES"] = "La receta es enseñada por una gran tablilla de piedra\n"..
                 "que se encuentra en la pared detrás del brasero y\n"..
-                "cerca de este enemigo en el [Edge of Madness]",
+                "cerca de este enemigo en el Extremo de la Locura",
         ["esMX"] = "La receta es enseñada por una gran tablilla de piedra\n"..
                 "que se encuentra en la pared detrás del brasero y\n"..
-                "cerca de este enemigo en el [Edge of Madness]",
+                "cerca de este enemigo en el Cabo de la Locura",
         ["frFR"] = "La recette est enseignée sur une grande tablette\n"..
                 "de pierre trouvée dans le mur derrière le brasero\n"..
-                "et près de cet ennemi dans l'[Edge of Madness]",
-        ["koKR"] = "레시피는 [Edge of Madness]에서 화로 뒤쪽 벽과 이 적\n"..
+                "et près de cet ennemi dans la Frontière de la folie",
+        ["koKR"] = "레시피는 광란의 경계에서 화로 뒤쪽 벽과 이 적\n"..
                 "근처에서 발견되는 커다란 석판에서 배울 수 있습니다",
         ["ptBR"] = "A receita é ensinada por uma grande tábua de pedra\n"..
                 "encontrada na parede atrás do braseiro e\n"..
-                "perto deste inimigo na [Edge of Madness]",
+                "perto deste inimigo na Beira da Loucura",
         ["ruRU"] = "Рецепт можно узнать из большой каменной таблички,\n"..
                 "найденной в стене за мангалом и рядом с\n"..
-                "этим врагом в [Edge of Madness]",
-        ["zhCN"] = "配方是从一块大石碑上传授的，这块石碑位于\n"..
-                "[Edge of Madness] 中火炉后面的墙壁上和这个敌人附近",
-        ["zhTW"] = "配方是從一塊大石碑上傳授的，這塊石碑位於\n"..
-                "[Edge of Madness] 中火爐後面的牆壁上和這個敵人附近"
+                "этим врагом в Грани Безумия"
+        ["zhCN"] = "配方可以从一块大石碑上学到，这块石碑位于\n"..
+                "疯狂之缘火炉后方的墙壁上，靠近该敌人",
+        ["zhTW"] = "配方可以從一塊大石碑上學到，這塊石碑位於\n"..
+                "瘋狂之緣火爐後方的牆壁上，靠近該敵人"
         -- Ashiran, Wowhead.com
     },
     [14401] = {
@@ -651,3 +651,4 @@ elseif rm.locale == "zhCN" then
     L.pickpocket = "搜索"
     L.trainer = "训练师"
 end
+
