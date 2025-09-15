@@ -190,18 +190,18 @@ L.uniqueSourceInstructions = {
         ["frFR"] = "La recette est enseignée par la Tablette de la folie\n"..
                 "de pierre trouvée dans le mur derrière le brasero\n"..
                 "et près de cet ennemi dans la Frontière de la folie",
-        ["koKR"] = "레시피는 광란의 경계에서 화로 뒤쪽 벽과 이 적\n"..
-                "근처에서 발견되는 커다란 석판에서 배울 수 있습니다",
+        ["koKR"] = "레시피는 광기의 서판에서 배울 수 있습니다\n"..
+                "광란의 경계, 화로 뒤쪽 벽 근처에서 발견됩니다",
         ["ptBR"] = "A receita é ensinada pela Tabuleta da Loucura\n"..
                 "encontrada na parede atrás do braseiro e\n"..
                 "perto deste inimigo na Beira da Loucura",
-        ["ruRU"] = "Рецепт можно узнать из большой каменной таблички,\n"..
-                "найденной в стене за мангалом и рядом с\n"..
-                "этим врагом в Грани Безумия"
-        ["zhCN"] = "配方可以从一块大石碑上学到，这块石碑位于\n"..
-                "在疯狂之缘火炉后面的墙壁上,这个敌人附近",
-        ["zhTW"] = "配方可以從一塊大石碑上學到，這塊石碑位於\n"..
-                "在瘋狂之緣火爐後面的牆壁上，這個敵人附近"
+        ["ruRU"] = "Рецепт можно узнать из Таблички Безумия,\n"..
+                "найденной в стене за мангалом, рядом с этим врагом\n"..
+                "в Грани Безумия"
+        ["zhCN"] = "配方可以从疯狂石板上学到\n"..
+                "它位于疯狂之缘火炉后面的墙壁附近",
+        ["zhTW"] = "配方可以從瘋狂石碑上學到\n"..
+                "它位於瘋狂之緣火爐後面的牆壁附近"
         -- Ashiran, Wowhead.com
     },
     [14401] = {
@@ -651,6 +651,7 @@ elseif rm.locale == "zhCN" then
     L.pickpocket = "搜索"
     L.trainer = "训练师"
 end
+
 
 
 
