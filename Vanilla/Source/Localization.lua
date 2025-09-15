@@ -175,24 +175,24 @@ L.uniqueSourceInstructions = {
         -- J0057Mith, Wowhead.com
     },
     [11340] = {
-        ["deDE"] = "Das Rezept wird von einer großen Steintafel gelehrt,\n"..
+        ["deDE"] = "Das Rezept wird von der Schrifttafel des Wahnsinns gelehrt,\n"..
                 "die in der Wand hinter dem Kohlenbecken und in der\n"..
                 "Nähe dieses Gegners am Rand des Wahnsinns zu finden ist",
         ["enUS"] = "The recipe is taught from a large stone tablet\n"..
                 "found in the wall behind the brazier and\n"..
                 "near this enemy in the Edge of Madness",
-        ["esES"] = "La receta es enseñada por una gran tablilla de piedra\n"..
+        ["esES"] = "La receta es enseñada por la Tablilla de Locura\n"..
                 "que se encuentra en la pared detrás del brasero y\n"..
                 "cerca de este enemigo en el Extremo de la Locura",
-        ["esMX"] = "La receta es enseñada por una gran tablilla de piedra\n"..
+        ["esMX"] = "La receta es enseñada por la Tablilla de Locura\n"..
                 "que se encuentra en la pared detrás del brasero y\n"..
                 "cerca de este enemigo en el Cabo de la Locura",
-        ["frFR"] = "La recette est enseignée sur une grande tablette\n"..
+        ["frFR"] = "La recette est enseignée par le Tablette de la folie\n"..
                 "de pierre trouvée dans le mur derrière le brasero\n"..
                 "et près de cet ennemi dans la Frontière de la folie",
         ["koKR"] = "레시피는 광란의 경계에서 화로 뒤쪽 벽과 이 적\n"..
                 "근처에서 발견되는 커다란 석판에서 배울 수 있습니다",
-        ["ptBR"] = "A receita é ensinada por uma grande tábua de pedra\n"..
+        ["ptBR"] = "A receita é ensinada por Tabuleta da Loucura\n"..
                 "encontrada na parede atrás do braseiro e\n"..
                 "perto deste inimigo na Beira da Loucura",
         ["ruRU"] = "Рецепт можно узнать из большой каменной таблички,\n"..
@@ -651,5 +651,6 @@ elseif rm.locale == "zhCN" then
     L.pickpocket = "搜索"
     L.trainer = "训练师"
 end
+
 
 
