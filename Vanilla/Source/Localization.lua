@@ -182,19 +182,19 @@ L.uniqueSourceInstructions = {
                 "found in the wall behind the brazier and\n"..
                 "near this enemy in the Edge of Madness",
         ["esES"] = "La receta se enseña por la Tablilla de Locura\n"..
-                "que se encuentra en la pared detrás del brasero y\n"..
-                "cerca de este enemigo en el Extremo de la Locura",
+                "que se encuentra en la pared detrás del brasero\n"..
+                "en el Extremo de la Locura",
         ["esMX"] = "La receta se enseña por la Tablilla de Locura\n"..
                 "que se encuentra en la pared detrás del brasero y\n"..
-                "cerca de este enemigo en el Cabo de la Locura",
+                "en el Cabo de la Locura",
         ["frFR"] = "La recette est enseignée par la Tablette de la folie\n"..
                 "de pierre trouvée dans le mur derrière le brasero\n"..
-                "et près de cet ennemi dans la Frontière de la folie",
+                "dans la Frontière de la folie",
         ["koKR"] = "레시피는 광기의 서판에서 배울 수 있습니다\n"..
                 "광란의 경계, 화로 뒤쪽 벽 근처에서 발견됩니다",
         ["ptBR"] = "A receita é ensinada pela Tabuleta da Loucura\n"..
-                "encontrada na parede atrás do braseiro e\n"..
-                "perto deste inimigo na Beira da Loucura",
+                "encontrada na parede atrás do braseiro\n"..
+                "na Beira da Loucura",
         ["ruRU"] = "Рецепт можно узнать из Таблички Безумия,\n"..
                 "найденной в стене за мангалом, рядом с этим врагом\n"..
                 "в Грани Безумия"
@@ -651,6 +651,7 @@ elseif rm.locale == "zhCN" then
     L.pickpocket = "搜索"
     L.trainer = "训练师"
 end
+
 
 
 
