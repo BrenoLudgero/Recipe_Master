@@ -1,4 +1,4 @@
-## Interface: 11507
+## Interface: 11508
 ## Version: @project-version@
 
 ## X-WoWI-ID: 26887
