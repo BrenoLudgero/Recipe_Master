@@ -17,6 +17,6 @@ git push origin "$NEW_TAG"
 git checkout "$NEW_TAG"
 
 sudo sh release.sh -m vanilla.yaml
-sudo sh release.sh -m cataclysm.yaml
+# sudo sh release.sh -m cataclysm.yaml
 
 git checkout "main"
