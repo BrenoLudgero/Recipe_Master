@@ -175,33 +175,33 @@ L.uniqueSourceInstructions = {
         -- J0057Mith, Wowhead.com
     },
     [11340] = {
-        ["deDE"] = "Das Rezept wird von einer großen Steintafel gelehrt,\n"..
+        ["deDE"] = "Das Rezept wird von der Schrifttafel des Wahnsinns gelehrt,\n"..
                 "die in der Wand hinter dem Kohlenbecken und in der\n"..
-                "Nähe dieses Gegners am [Edge of Madness] gefunden wurde",
+                "Nähe dieses Gegners am Rand des Wahnsinns zu finden ist",
         ["enUS"] = "The recipe is taught from a large stone tablet\n"..
                 "found in the wall behind the brazier and\n"..
                 "near this enemy in the Edge of Madness",
-        ["esES"] = "La receta es enseñada por una gran tablilla de piedra\n"..
-                "que se encuentra en la pared detrás del brasero y\n"..
-                "cerca de este enemigo en el [Edge of Madness]",
-        ["esMX"] = "La receta es enseñada por una gran tablilla de piedra\n"..
-                "que se encuentra en la pared detrás del brasero y\n"..
-                "cerca de este enemigo en el [Edge of Madness]",
-        ["frFR"] = "La recette est enseignée sur une grande tablette\n"..
+        ["esES"] = "La receta se enseña por la Tablilla de Locura\n"..
+                "que se encuentra en la pared detrás del blandón\n"..
+                "en el Extremo de la Locura",
+        ["esMX"] = "La receta se enseña por la Tablilla de Locura\n"..
+                "que se encuentra en la pared detrás del blandón\n"..
+                "en el Cabo de la Locura",
+        ["frFR"] = "La recette est enseignée par la Tablette de la folie\n"..
                 "de pierre trouvée dans le mur derrière le brasero\n"..
-                "et près de cet ennemi dans l'[Edge of Madness]",
-        ["koKR"] = "레시피는 [Edge of Madness]에서 화로 뒤쪽 벽과 이 적\n"..
-                "근처에서 발견되는 커다란 석판에서 배울 수 있습니다",
-        ["ptBR"] = "A receita é ensinada por uma grande tábua de pedra\n"..
-                "encontrada na parede atrás do braseiro e\n"..
-                "perto deste inimigo na [Edge of Madness]",
-        ["ruRU"] = "Рецепт можно узнать из большой каменной таблички,\n"..
-                "найденной в стене за мангалом и рядом с\n"..
-                "этим врагом в [Edge of Madness]",
-        ["zhCN"] = "配方是从一块大石碑上传授的，这块石碑位于\n"..
-                "[Edge of Madness] 中火炉后面的墙壁上和这个敌人附近",
-        ["zhTW"] = "配方是從一塊大石碑上傳授的，這塊石碑位於\n"..
-                "[Edge of Madness] 中火爐後面的牆壁上和這個敵人附近"
+                "dans la Frontière de la folie",
+        ["koKR"] = "레시피는 광기의 서판에서 배울 수 있습니다\n"..
+                "광란의 경계, 화로 뒤쪽 벽 근처에서 발견됩니다",
+        ["ptBR"] = "A receita é ensinada pela Tabuleta da Loucura\n"..
+                "encontrada na parede atrás do braseiro\n"..
+                "na Beira da Loucura",
+        ["ruRU"] = "Рецепт можно узнать из Таблички Безумия,\n"..
+                "найденной в стене за мангалом, рядом с этим врагом\n"..
+                "в Грани Безумия"
+        ["zhCN"] = "配方可以从疯狂石板上学到\n"..
+                "它位于疯狂之缘火炉后面的墙壁附近",
+        ["zhTW"] = "配方可以從瘋狂石碑上學到\n"..
+                "它位於瘋狂之緣火爐後面的牆壁附近"
         -- Ashiran, Wowhead.com
     },
     [14401] = {
