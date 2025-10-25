@@ -651,10 +651,3 @@ elseif rm.locale == "zhCN" then
     L.pickpocket = "搜索"
     L.trainer = "训练师"
 end
-
-
-
-
-
-
-
