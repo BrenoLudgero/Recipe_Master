@@ -6,8 +6,8 @@ function rm.getSavedSpecializationByID(professionID)
     end
 end
 
-function rm.getSavedSpecializationByName(profession)
-    local savedProfession = rm.getCurrentCharacterSavedVariables()[rm.getProfessionID(profession)]
+function rm.getSavedSpecializationByName(professionName)
+    local savedProfession = rm.getCurrentCharacterSavedVariables()[rm.getProfessionID(professionName)]
     if savedProfession then
         return savedProfession["specialization"]
     end

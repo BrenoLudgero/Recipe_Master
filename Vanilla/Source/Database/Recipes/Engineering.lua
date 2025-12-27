@@ -540,7 +540,6 @@ rm.recipeDB[202] = {
 		item = 7189,
 		skill = 225,
 		spell = 8895,
-		specialization = 20222,
 	},
 	[7560] = {
 		difficulty = {
