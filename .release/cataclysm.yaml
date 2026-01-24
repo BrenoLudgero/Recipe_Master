@@ -1,8 +1,0 @@
-wowi-archive-previous: yes
-
-package-as: Cataclysm
-
-ignore:
-  - Vanilla
-  - README.md
-  - Images
