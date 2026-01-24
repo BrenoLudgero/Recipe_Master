@@ -2,20 +2,16 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
-local function isDragonflightUiVisible()
+local function isDragonflightUiEnabledAndVisible()
     return DragonflightUIProfessionFrame and DragonflightUIProfessionFrame:IsVisible()
 end
 
-local function isSkilletVisible()
+local function isSkilletEnabledAndVisible()
     return SkilletFrame and SkilletFrame:IsVisible()
 end
 
-local function isTradeSkillFrameVisible()
-    return TradeSkillFrame and TradeSkillFrame:IsVisible()
-end
-
-local function isCraftFrameVisible()
-    return CraftFrame and CraftFrame:IsVisible()
+local function isWiderProfessionsEnabledAndVisible()
+    return CraftTradeSkillFrame and CraftTradeSkillFrame:IsVisible()
 end
 
 local function isCloudyTradeSkillEnabled()
@@ -28,7 +24,7 @@ local function isAlaTradeSkillEnabled()
     return isLoadedOrLoading
 end
 
-local function isTradeSkillMasterEnabled()
+local function isTradeSkillMasterEnabledAndVisible()
     return (
         TSM_API and (
             TSM_API.IsUIVisible("CRAFTING") 
@@ -38,13 +34,23 @@ local function isTradeSkillMasterEnabled()
     )
 end
 
+local function isTradeSkillFrameVisible()
+    return TradeSkillFrame and TradeSkillFrame:IsVisible()
+end
+
+local function isCraftFrameVisible()
+    return CraftFrame and CraftFrame:IsVisible()
+end
+
 function rm.getProfessionFrame()
-    if isDragonflightUiVisible() then
+    if isDragonflightUiEnabledAndVisible() then
         return DragonflightUIProfessionFrame
-    elseif isSkilletVisible() then
+    elseif isSkilletEnabledAndVisible() then
         return SkilletFrame
-    elseif isTradeSkillMasterEnabled() then
+    elseif isTradeSkillMasterEnabledAndVisible() then
         return UIParent
+    elseif isWiderProfessionsEnabledAndVisible() then
+        return CraftTradeSkillFrame
     elseif isTradeSkillFrameVisible() and not isCraftFrameVisible() then
         return TradeSkillFrame
     elseif isCraftFrameVisible() then
@@ -173,6 +179,10 @@ local function setFramePointsRelativeToParent(professionFrame)
         setDefaultFramesRestoreButtonAnchor(closeButton, exitButton, restoreButtonOffsets)
         rm.mainFrame:SetPoint("TOPLEFT", closeButton, "TOPRIGHT", unpack(mainFrameTopOffsets))
         rm.mainFrame:SetPoint("BOTTOMLEFT", exitButton, "BOTTOMRIGHT", unpack(mainFrameBottomOffsets))
+    else
+        rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 2, -1)
+        rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 2, -1)
+        rm.mainFrame:SetPoint("BOTTOM", professionFrame, 0, -1)
     end
 end
 
