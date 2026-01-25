@@ -52,12 +52,12 @@ function rm.tableContains(table, item)
     return false
 end
 
-function rm.getServerSavedVariables()
-    return RecipeMasterProfessionsAndSkills[rm.currentServer]
+function rm.getSavedVariablesForCurrentServerAndFaction()
+    return RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction]
 end
 
 function rm.getCurrentCharacterSavedVariables()
-    return rm.getServerSavedVariables()[rm.currentCharacter]
+    return rm.getSavedVariablesForCurrentServerAndFaction()[rm.currentCharacter]
 end
 
 function rm.getProfessionID(professionName)

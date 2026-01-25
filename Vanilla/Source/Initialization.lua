@@ -120,11 +120,23 @@ function rm.updateSavedVariables()
     removeUnusedOptionsFromSavedVariables()
 end
 
+-- SavedVariables structure was updated at version 2.11.0
+-- Old: RecipeMasterProfessionsAndSkills[server][character]
+-- New: RecipeMasterProfessionsAndSkills[server][faction][character]
 function rm.updateSavedCharacters()
     if not RecipeMasterProfessionsAndSkills[rm.currentServer] then
         RecipeMasterProfessionsAndSkills[rm.currentServer] = {}
     end
-    if not RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentCharacter] then
-        RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentCharacter] = {}
+    if not RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction] = {}
+    end
+    -- Move character data to the new structure
+    if not RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction][rm.currentCharacter] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction][rm.currentCharacter] = 
+            RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentCharacter] or {}
+    end
+    -- Remove character data from the old structure
+    if RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentCharacter] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentCharacter] = nil
     end
 end

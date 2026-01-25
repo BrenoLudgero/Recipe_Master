@@ -27,12 +27,12 @@ end
 
 function rm.getProfessionSkillsForOtherCharacters(professionID)
     local characters = {}
-    for character in pairs(rm.getServerSavedVariables()) do
+    for character in pairs(rm.getSavedVariablesForCurrentServerAndFaction()) do
         if character ~= rm.currentCharacter then
             characters[character] = {}
             characters[character][professionID] = {}
-            if rm.getServerSavedVariables()[character][professionID] then
-                characters[character][professionID] = rm.getServerSavedVariables()[character][professionID]["skills"]
+            if rm.getSavedVariablesForCurrentServerAndFaction()[character][professionID] then
+                characters[character][professionID] = rm.getSavedVariablesForCurrentServerAndFaction()[character][professionID]["skills"]
             else
                 characters[character][professionID] = false
             end
