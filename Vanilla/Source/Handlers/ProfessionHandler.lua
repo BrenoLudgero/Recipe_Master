@@ -16,8 +16,8 @@ function rm.getSavedProfessionLevelByName(profession)
     return rm.getSavedProfessionByName(profession)["level"]
 end
 
-function rm.getSavedProfessionLevelForCharacter(character, profession)
-    return rm.getSavedVariablesForCurrentServerAndFaction()[character][profession]["level"]
+function rm.getSavedCharacterProfessionData(character, profession)
+    return rm.getSavedVariablesForCurrentServerAndFaction()[character][profession]
 end
 
 local function getRankName(maxSkillRank)

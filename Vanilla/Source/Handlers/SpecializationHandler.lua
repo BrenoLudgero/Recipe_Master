@@ -14,8 +14,8 @@ function rm.getSavedSpecializationByName(professionName)
     return false
 end
 
-function rm.getSavedProfessionSpecializationForCharacter(character, professionID)
-    return rm.getSavedVariablesForCurrentServerAndFaction()[character][professionID]["specialization"]
+function rm.getSavedProfessionSpecializationForCurrentCharacter(character, professionID)
+    return rm.getCurrentCharacterSavedVariables()[professionID]["specialization"]
 end
 
 function rm.getSpecializationName(specializationID)

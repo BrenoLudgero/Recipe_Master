@@ -33,7 +33,7 @@ end
 
 local function getColoredSkill(character, recipeSkill, professionID)
     local skill = ""
-    local characterProfessionLevel = rm.getSavedProfessionLevelForCharacter(character, professionID)
+    local characterProfessionLevel = rm.getSavedCharacterProfessionData(character, professionID)["level"]
     if characterProfessionLevel < recipeSkill then
         skill = WrapTextInColorCode(characterProfessionLevel, F.colors.lightPinkHex)
     else
@@ -45,7 +45,7 @@ end
 local function getColoredSpecialization(character, recipeSpecialization, professionID)
     local specialization = ""
     local specializationName = rm.getSpecializationName(recipeSpecialization)
-    local characterSpecialization = rm.getSavedProfessionSpecializationForCharacter(character, professionID)
+    local characterSpecialization = rm.getSavedProfessionSpecializationForCurrentCharacter(character, professionID)
     if characterSpecialization ~= recipeSpecialization then
         specialization = WrapTextInColorCode(specializationName, F.colors.lightPinkHex)
     else

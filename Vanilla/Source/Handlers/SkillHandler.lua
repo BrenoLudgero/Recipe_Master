@@ -31,8 +31,9 @@ function rm.getProfessionSkillsForOtherCharacters(professionID)
         if character ~= rm.currentCharacter then
             characters[character] = {}
             characters[character][professionID] = {}
-            if rm.getSavedVariablesForCurrentServerAndFaction()[character][professionID] then
-                characters[character][professionID] = rm.getSavedVariablesForCurrentServerAndFaction()[character][professionID]["skills"]
+            local characterProfessionData = rm.getSavedVariablesForCurrentServerAndFaction()[character][professionID]
+            if characterProfessionData then
+                characters[character][professionID] = characterProfessionData["skills"]
             else
                 characters[character][professionID] = false
             end
