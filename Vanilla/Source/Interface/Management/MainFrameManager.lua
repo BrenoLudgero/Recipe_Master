@@ -24,6 +24,14 @@ local function isAlaTradeSkillEnabled()
     return isLoadedOrLoading
 end
 
+local function isTradeSkillFrameVisible()
+    return TradeSkillFrame and TradeSkillFrame:IsVisible()
+end
+
+local function isCraftFrameVisible()
+    return CraftFrame and CraftFrame:IsVisible()
+end
+
 local function isTradeSkillMasterEnabledAndVisible()
     return (
         TSM_API and (
@@ -34,23 +42,15 @@ local function isTradeSkillMasterEnabledAndVisible()
     )
 end
 
-local function isTradeSkillFrameVisible()
-    return TradeSkillFrame and TradeSkillFrame:IsVisible()
-end
-
-local function isCraftFrameVisible()
-    return CraftFrame and CraftFrame:IsVisible()
-end
-
 function rm.getProfessionFrame()
     if isDragonflightUiEnabledAndVisible() then
         return DragonflightUIProfessionFrame
     elseif isSkilletEnabledAndVisible() then
         return SkilletFrame
-    elseif isTradeSkillMasterEnabledAndVisible() then
-        return UIParent
     elseif isWiderProfessionsEnabledAndVisible() then
         return CraftTradeSkillFrame
+    elseif isTradeSkillMasterEnabledAndVisible() then
+        return UIParent
     elseif isTradeSkillFrameVisible() and not isCraftFrameVisible() then
         return TradeSkillFrame
     elseif isCraftFrameVisible() then
