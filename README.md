@@ -34,6 +34,7 @@ The following add-ons have been thoroughly tested with Recipe Master:
 * TradeSkillMaster (TSM)
 * CloudyTradeSkill - Hotfix
 * alaTradeSkill
+* Wider Professions
 * Leatrix Plus
 * MoveAny
 
