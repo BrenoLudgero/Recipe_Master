@@ -69,7 +69,8 @@ function rm.createAllFrameElements()
         showLearnedButton = rm.createShowLearnedCheckButton(),
         showDifficultyTooltipInfo = rm.createDifficultyTooltipInfoCheckButton(),
         showSourcesTooltipInfo = rm.createSourcesTooltipInfoCheckButton(),
-        showAltsTooltipInfo = rm.createAltsTooltipInfoCheckButton()
+        showAltsTooltipInfo = rm.createAltsTooltipInfoCheckButton(),
+        showOppositeFactionAltsTooltipInfo = rm.createOppositeFactionAltsTooltipInfoCheckButton()
     }
     rm.createResetDefaultsButton()
 end

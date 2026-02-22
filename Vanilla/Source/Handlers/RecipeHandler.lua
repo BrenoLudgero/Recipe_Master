@@ -58,13 +58,12 @@ function rm.getAllCharactersRecipeStatus(recipe, professionID)
     local otherCharactersInfo = rm.getProfessionSkillsForOtherCharacters(professionID)
     local charactersMissingRecipeSkill = {}
     local charactersWithRecipeSkill = {}
-    for character in pairs(otherCharactersInfo) do
-        local characterSkills = otherCharactersInfo[character][professionID]
-        if characterSkills then
-            if not isSkillLearnedByCharacter(characterSkills, recipe) then
-                table.insert(charactersMissingRecipeSkill, character)
+    for characterName, professionSkills in pairs(otherCharactersInfo) do
+        if professionSkills then
+            if isSkillLearnedByCharacter(professionSkills, recipe) then
+                table.insert(charactersWithRecipeSkill, characterName)
             else
-                table.insert(charactersWithRecipeSkill, character)
+                charactersMissingRecipeSkill[characterName] = professionSkills
             end
         end
     end

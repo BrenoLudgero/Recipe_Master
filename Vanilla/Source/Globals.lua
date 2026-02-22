@@ -56,7 +56,21 @@ function rm.getSavedVariablesForCurrentServerAndFaction()
     return RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction]
 end
 
-function rm.getCurrentCharacterSavedVariables()
+function rm.getSavedVariablesForCurrentServerAndAllFactions()
+    local allFactionsSavedVariables = {}
+    local currentServerSavedVariables = RecipeMasterProfessionsAndSkills[rm.currentServer]
+    local allianceCharactersData = currentServerSavedVariables["Alliance"]
+    local hordeCharactersData = currentServerSavedVariables["Horde"]
+    for key, value in pairs(allianceCharactersData or {}) do
+        allFactionsSavedVariables[key] = value
+    end
+    for key, value in pairs(hordeCharactersData or {}) do
+        allFactionsSavedVariables[key] = value
+    end
+    return allFactionsSavedVariables
+end
+
+function rm.getSavedVariablesForCurrentCharacter()
     return rm.getSavedVariablesForCurrentServerAndFaction()[rm.currentCharacter]
 end
 

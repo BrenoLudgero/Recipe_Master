@@ -1,11 +1,11 @@
 local _, rm = ...
 
 function rm.getSavedProfessionByID(professionID)
-    return rm.getCurrentCharacterSavedVariables()[professionID]
+    return rm.getSavedVariablesForCurrentCharacter()[professionID]
 end
 
 function rm.getSavedProfessionByName(profession)
-    return rm.getCurrentCharacterSavedVariables()[rm.getProfessionID(profession)]
+    return rm.getSavedVariablesForCurrentCharacter()[rm.getProfessionID(profession)]
 end
 
 function rm.getSavedProfessionRank(profession)
@@ -14,10 +14,6 @@ end
 
 function rm.getSavedProfessionLevelByName(profession)
     return rm.getSavedProfessionByName(profession)["level"]
-end
-
-function rm.getSavedCharacterProfessionData(character, profession)
-    return rm.getSavedVariablesForCurrentServerAndFaction()[character][profession]
 end
 
 local function getRankName(maxSkillRank)
@@ -61,7 +57,7 @@ end
 local function saveNewProfessions(currentProfessions)
     for professionID in pairs(currentProfessions) do
         if not rm.getSavedProfessionByID(professionID) then
-            rm.getCurrentCharacterSavedVariables()[professionID] = currentProfessions[professionID]
+            rm.getSavedVariablesForCurrentCharacter()[professionID] = currentProfessions[professionID]
         end
     end
 end
@@ -73,7 +69,7 @@ end
 -- Removes abandoned professions from SavedVariables
 local function removeAbandonedProfession(currentProfessions, professionID)
     if isProfessionAbandoned(currentProfessions, professionID) then
-        rm.getCurrentCharacterSavedVariables()[professionID] = nil
+        rm.getSavedVariablesForCurrentCharacter()[professionID] = nil
     end
 end
 
@@ -102,7 +98,7 @@ local function updateSavedProfessions(currentProfessions)
         elseif professionSpecialization and professionSpecialization ~= savedProfessionSpecialization then
             rm.getSavedProfessionByID(professionID)["specialization"] = savedProfessionSpecialization
         elseif isProfessionAbandoned(currentProfessions, professionID) then
-            rm.getCurrentCharacterSavedVariables()[professionID] = nil
+            rm.getSavedVariablesForCurrentCharacter()[professionID] = nil
         end
     end
 end
@@ -113,7 +109,7 @@ function rm.updateCharacterProfessions()
     saveNewProfessions(currentProfessions)
     rm.saveNewSpecializations(currentSpecializations)
     updateSavedProfessions(currentProfessions)
-    for professionID in pairs(rm.getCurrentCharacterSavedVariables()) do
+    for professionID in pairs(rm.getSavedVariablesForCurrentCharacter()) do
         removeAbandonedProfession(currentProfessions, professionID)
         rm.removeAbandonedSpecialization(currentSpecializations, professionID)
     end

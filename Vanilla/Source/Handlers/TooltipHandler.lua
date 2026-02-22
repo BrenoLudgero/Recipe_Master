@@ -31,9 +31,9 @@ local function handleMismatchedProfessionNames(recipeID, itemLink)
     return professionName
 end
 
-local function getColoredSkill(character, recipeSkill, professionID)
+local function getColoredSkill(characterProfessionSkills, recipeSkill)
     local skill = ""
-    local characterProfessionLevel = rm.getSavedCharacterProfessionData(character, professionID)["level"]
+    local characterProfessionLevel = characterProfessionSkills["level"]
     if characterProfessionLevel < recipeSkill then
         skill = WrapTextInColorCode(characterProfessionLevel, F.colors.lightPinkHex)
     else
@@ -42,10 +42,10 @@ local function getColoredSkill(character, recipeSkill, professionID)
     return skill
 end
 
-local function getColoredSpecialization(character, recipeSpecialization, professionID)
+local function getColoredSpecialization(characterProfessionSkills, recipeSpecialization)
     local specialization = ""
     local specializationName = rm.getSpecializationName(recipeSpecialization)
-    local characterSpecialization = rm.getSavedProfessionSpecializationForCurrentCharacter(character, professionID)
+    local characterSpecialization = characterProfessionSkills["specialization"]
     if characterSpecialization ~= recipeSpecialization then
         specialization = WrapTextInColorCode(specializationName, F.colors.lightPinkHex)
     else
@@ -55,7 +55,6 @@ local function getColoredSpecialization(character, recipeSpecialization, profess
 end
 
 local function getRecipeTooltipMessage(recipe, professionID)
-    local charactersMissingRecipe, charactersWhoCraftRecipe = rm.getAllCharactersRecipeStatus(recipe, professionID)
     local message = ""
     local newLine = "\n"
     local newLineInfo = "\n  "
@@ -76,23 +75,24 @@ local function getRecipeTooltipMessage(recipe, professionID)
         end
     end
     if rm.getPreference("showAltsTooltipInfo") then
+        local charactersMissingRecipe, charactersWhoCraftRecipe = rm.getAllCharactersRecipeStatus(recipe, professionID)
         if #charactersWhoCraftRecipe > 0 then
             -- Sort the charactersWhoCraftRecipe table alphabetically
             table.sort(charactersWhoCraftRecipe)
             message = message..newLine..WrapTextInColorCode(L.crafters, F.colors.lightGreenHex)
-            for _, character in pairs(charactersWhoCraftRecipe) do
-                message = message..newLineInfo..character
+            for _, characterName in pairs(charactersWhoCraftRecipe) do
+                message = message..newLineInfo..characterName
             end
         end
-        if #charactersMissingRecipe > 0 then
+        if next(charactersMissingRecipe) ~= nil then
             -- Sort the charactersMissingRecipe table alphabetically
             table.sort(charactersMissingRecipe)
             message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightPinkHex)
-            for _, character in pairs(charactersMissingRecipe) do
-                local characterLine = newLineInfo..character.." ("
-                characterLine = characterLine..L.skill.." "..getColoredSkill(character, recipe.skill, professionID)
+            for characterName, professionSkills in pairs(charactersMissingRecipe) do
+                local characterLine = newLineInfo..characterName.." ("
+                characterLine = characterLine..L.skill.." "..getColoredSkill(professionSkills, recipe.skill)
                 if recipe.specialization then
-                    characterLine = characterLine..", "..getColoredSpecialization(character, recipe.specialization, professionID)
+                    characterLine = characterLine..", "..getColoredSpecialization(professionSkills, recipe.specialization)
                 end
                 message = message..characterLine..")"
             end

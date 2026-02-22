@@ -12,36 +12,36 @@ local function setLocaleSpecificOffsets()
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 10
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 20
-        F.offsets.showAltTooltipCheckX = F.offsets.thirdColumnX - 30
+       F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 20
         F.offsets.sourcesListColumnsX[L.item] = {3, 326}
     elseif rm.locale == "ptBR" then
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 14
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 10
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
-        F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 18
-        F.offsets.showAltTooltipCheckX = F.offsets.thirdColumnX - 44
+        F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 35
+        F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 35
         F.offsets.sourcesListTabX = 2
         F.offsets.sourcesListColumnsX[L.item] = {3, 320}
     elseif rm.locale == "deDE" then
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 13
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 22
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 18
-        F.offsets.showAltTooltipCheckX = F.offsets.thirdColumnX - 30
+        F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 18
         F.offsets.sourcesListTabX = 0
         F.offsets.sourcesListColumnsX[L.vendor] = {3, 162, 234, 314}
     elseif rm.locale == "frFR" then
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 13
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 24
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 45
-        F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 24
-        F.offsets.showAltTooltipCheckX = F.offsets.thirdColumnX - 20
+        F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 25
+        F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 25
         F.offsets.sourcesListColumnsX[L.drop] = {3, 177, 230, 314}
         F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 177, 230, 314}
     elseif rm.locale == "ruRU" then
         F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 10
         F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 40
-        F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 11
-        F.offsets.showAltTooltipCheckX = F.offsets.thirdColumnX - 20
+        F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 25
+        F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 25
         F.offsets.bottomTabTextY = 6.2
         F.offsets.sourcesListTabX = 0
         F.offsets.sourcesListTabTextX = 2
@@ -159,6 +159,7 @@ F.offsets.firstRowY = -128
 F.offsets.secondRowY = F.offsets.firstRowY - 105
 F.offsets.thirdRowY = F.offsets.firstRowY - 217
 F.offsets.fourthRowY = F.offsets.firstRowY - 317
+F.offsets.fifthRowY = F.offsets.firstRowY - 360
 F.offsets.resetDefaultsX = 500
 F.offsets.resetDefaultsY = -25
 --------------- Texts ---------------
@@ -194,8 +195,10 @@ F.offsets.showDifficultyTooltipCheckX = F.offsets.firstColumnX - 4
 F.offsets.showDifficultyTooltipCheckY = F.offsets.fourthRowY
 F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX - 4
 F.offsets.showSourceTooltipCheckY = F.offsets.fourthRowY
-F.offsets.showAltTooltipCheckX = F.offsets.thirdColumnX - 4
-F.offsets.showAltTooltipCheckY = F.offsets.fourthRowY
+F.offsets.showAltsTooltipCheckX = F.offsets.firstColumnX - 4
+F.offsets.showAltsTooltipCheckY = F.offsets.fifthRowY
+F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX - 4
+F.offsets.showOppositeFactionAltsTooltipCheckY = F.offsets.fifthRowY
 
 setLocaleSpecificOffsets()
 

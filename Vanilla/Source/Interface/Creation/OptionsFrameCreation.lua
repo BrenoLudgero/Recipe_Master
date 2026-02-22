@@ -155,10 +155,19 @@ end
 
 function rm.createAltsTooltipInfoCheckButton()
     return createCheckButton(
-        F.offsets.showAltTooltipCheckX,
-        F.offsets.showAltTooltipCheckY,
+        F.offsets.showAltsTooltipCheckX,
+        F.offsets.showAltsTooltipCheckY,
         "showAltsTooltipInfo",
         L.showAltsTooltipInfo
+    )
+end
+
+function rm.createOppositeFactionAltsTooltipInfoCheckButton()
+    return createCheckButton(
+        F.offsets.showOppositeFactionAltsTooltipCheckX,
+        F.offsets.showOppositeFactionAltsTooltipCheckY,
+        "showOppositeFactionAltsTooltipInfo",
+        L.showOppositeFactionAltsTooltipInfo
     )
 end
 

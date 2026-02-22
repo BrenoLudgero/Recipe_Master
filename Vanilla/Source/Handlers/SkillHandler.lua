@@ -27,16 +27,16 @@ end
 
 function rm.getProfessionSkillsForOtherCharacters(professionID)
     local characters = {}
-    for character in pairs(rm.getSavedVariablesForCurrentServerAndFaction()) do
-        if character ~= rm.currentCharacter then
-            characters[character] = {}
-            characters[character][professionID] = {}
-            local characterProfessionData = rm.getSavedVariablesForCurrentServerAndFaction()[character][professionID]
-            if characterProfessionData then
-                characters[character][professionID] = characterProfessionData["skills"]
-            else
-                characters[character][professionID] = false
-            end
+    local savedCharactersData
+    if rm.getPreference("showOppositeFactionAltsTooltipInfo") == true then
+        savedCharactersData = rm.getSavedVariablesForCurrentServerAndAllFactions()
+    else
+        savedCharactersData = rm.getSavedVariablesForCurrentServerAndFaction()
+    end
+    for characterName, characterData in pairs(savedCharactersData) do
+        if characterName ~= rm.currentCharacter then
+            local characterProfessionData = characterData[professionID]
+            characters[characterName] = characterProfessionData
         end
     end
     return characters

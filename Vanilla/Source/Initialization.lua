@@ -61,6 +61,7 @@ local defaultOptionsFramePreferences = {
     showRecipesInfo = true,
     showDifficultyTooltipInfo = true,
     showAltsTooltipInfo = true,
+    showOppositeFactionAltsTooltipInfo = true,
     showSourcesTooltipInfo = true
 }
 
