@@ -73,9 +73,6 @@ file_template="RecipeMaster-{package-name}-{project-version}"
 label_template="{package-name} {project-version}"
 wowi_markup="bbcode"
 
-file_template="{package-name}-{project-version}{nolib}{classic}"
-label_template="{project-version}{classic}{nolib}"
-
 ## END USER OPTIONS
 
 if [[ ${BASH_VERSINFO[0]} -lt 4 ]] || [[ ${BASH_VERSINFO[0]} -eq 4 && ${BASH_VERSINFO[1]} -lt 3 ]]; then
