@@ -11,7 +11,7 @@ rm.recipeDB[186] = {
 		},
 		item = 2840,
 		isSpell = true,
-		skill = 25,
+		requiredSkill = 25,
 	},
 	[2658] = {
 		icon = 133215,
@@ -23,7 +23,7 @@ rm.recipeDB[186] = {
 		},
 		item = 2842,
 		isSpell = true,
-		skill = 75,
+		requiredSkill = 75,
 	},
 	[2659] = {
 		icon = 133227,
@@ -35,7 +35,7 @@ rm.recipeDB[186] = {
 		},
 		item = 2841,
 		isSpell = true,
-		skill = 65,
+		requiredSkill = 65,
 	},
 	[3304] = {
 		icon = 133219,
@@ -47,7 +47,7 @@ rm.recipeDB[186] = {
 		},
 		item = 3576,
 		isSpell = true,
-		skill = 65,
+		requiredSkill = 65,
 	},
 	[3307] = {
 		icon = 133232,
@@ -59,7 +59,7 @@ rm.recipeDB[186] = {
 		},
 		item = 3575,
 		isSpell = true,
-		skill = 125,
+		requiredSkill = 125,
 	},
 	[3308] = {
 		icon = 133217,
@@ -71,7 +71,7 @@ rm.recipeDB[186] = {
 		},
 		item = 3577,
 		isSpell = true,
-		skill = 155,
+		requiredSkill = 155,
 	},
 	[3569] = {
 		icon = 133234,
@@ -83,7 +83,7 @@ rm.recipeDB[186] = {
 		},
 		item = 3859,
 		isSpell = true,
-		skill = 165,
+		requiredSkill = 165,
 	},
 	[10097] = {
 		icon = 133220,
@@ -95,7 +95,7 @@ rm.recipeDB[186] = {
 		},
 		item = 3860,
 		isSpell = true,
-		skill = 175,
+		requiredSkill = 175,
 	},
 	[10098] = {
 		icon = 133222,
@@ -107,7 +107,7 @@ rm.recipeDB[186] = {
 		},
 		item = 6037,
 		isSpell = true,
-		skill = 230,
+		requiredSkill = 230,
 	},
 	[14891] = {
 		icon = 133233,
@@ -119,7 +119,7 @@ rm.recipeDB[186] = {
 		},
 		item = 11371,
 		isSpell = true,
-		skill = 230,
+		requiredSkill = 230,
 	},
 	[16153] = {
 		icon = 133221,
@@ -131,7 +131,7 @@ rm.recipeDB[186] = {
 		},
 		item = 12359,
 		isSpell = true,
-		skill = 250,
+		requiredSkill = 250,
 	},
 	[22967] = {
 		icon = 133235,
@@ -143,7 +143,7 @@ rm.recipeDB[186] = {
 		},
 		item = 17771,
 		isSpell = true,
-		skill = 300,
+		requiredSkill = 300,
 	},
 	[1213638] = {
 		icon = 237047,
@@ -156,6 +156,6 @@ rm.recipeDB[186] = {
 		item = 234003,
 		isSpell = true,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 	},
 }

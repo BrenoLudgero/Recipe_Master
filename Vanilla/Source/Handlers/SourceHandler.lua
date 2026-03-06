@@ -234,7 +234,7 @@ function rm.getQuestInfo(sourceID)
     questInfo["completed"] = C_QuestLog.IsQuestFlaggedCompleted(sourceID)
     colorQuestNameIfClassRaceOrCompleted(questInfo, classes, races)
     questInfo[L.level] = getColoredLevelBasedOnClassification(quest)
-    questInfo[L.minimum] = quest["reqLevel"]
+    questInfo[L.minimum] = quest["requiredLevel"]
     questInfo["classesAndRaces"] = getFormattedClassAndRaceInfo(classes, races)
     questInfo["classification"] = getLocalizedClassification(quest)
     return questInfo

@@ -47,8 +47,8 @@ end
 
 local function getMissingRequirementsText(recipe)
     local missingRequirements = ""
-    if recipe.skill > rm.getSavedProfessionLevelByName(rm.displayedProfession) then
-        local skillInfo = L.skill..": "..recipe.skill.."  "
+    if recipe.requiredSkill > rm.getSavedProfessionLevelByName(rm.displayedProfession) then
+        local skillInfo = L.skill..": "..recipe.requiredSkill.."  "
         missingRequirements = missingRequirements..skillInfo
     end
     if recipe.specialization then
@@ -65,12 +65,12 @@ local function getMissingRequirementsText(recipe)
             end
         end
     end
-    if recipe.repLevel and not rm.isReputationRequirementMet(recipe) then
-        local reputationInfo = rm.getFactionName(recipe.repFaction).."  "
+    if recipe.reputationLevel and not rm.isReputationRequirementMet(recipe) then
+        local reputationInfo = rm.getFactionName(recipe.reputationFaction).."  "
         missingRequirements = missingRequirements..reputationInfo
     end
-    if recipe.level and recipe.level > rm.currentLevel then
-        local levelInfo = L.level..": "..recipe.level.."  "
+    if recipe.requiredLevel and recipe.requiredLevel > rm.currentLevel then
+        local levelInfo = L.level..": "..recipe.requiredLevel.."  "
         missingRequirements = missingRequirements..levelInfo
     end
     return missingRequirements

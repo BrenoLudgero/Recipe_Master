@@ -9,7 +9,7 @@ rm.recipeDB[202] = {
 			40,
 		},
 		item = 4357,
-		skill = 1,
+		requiredSkill = 1,
 		spell = 3918,
 	},
 	[4358] = {
@@ -20,7 +20,7 @@ rm.recipeDB[202] = {
 			60,
 		},
 		item = 4358,
-		skill = 1,
+		requiredSkill = 1,
 		spell = 3919,
 	},
 	[4359] = {
@@ -31,7 +31,7 @@ rm.recipeDB[202] = {
 			60,
 		},
 		item = 4359,
-		skill = 30,
+		requiredSkill = 30,
 		spell = 3922,
 	},
 	[4360] = {
@@ -42,7 +42,7 @@ rm.recipeDB[202] = {
 			90,
 		},
 		item = 4360,
-		skill = 30,
+		requiredSkill = 30,
 		spell = 3923,
 	},
 	[4361] = {
@@ -53,7 +53,7 @@ rm.recipeDB[202] = {
 			110,
 		},
 		item = 4361,
-		skill = 50,
+		requiredSkill = 50,
 		spell = 3924,
 	},
 	[4362] = {
@@ -64,7 +64,7 @@ rm.recipeDB[202] = {
 			110,
 		},
 		item = 4362,
-		skill = 50,
+		requiredSkill = 50,
 		spell = 3925,
 	},
 	[4363] = {
@@ -75,7 +75,7 @@ rm.recipeDB[202] = {
 			125,
 		},
 		item = 4363,
-		skill = 65,
+		requiredSkill = 65,
 		spell = 3926,
 	},
 	[4364] = {
@@ -86,7 +86,7 @@ rm.recipeDB[202] = {
 			95,
 		},
 		item = 4364,
-		skill = 75,
+		requiredSkill = 75,
 		spell = 3929,
 	},
 	[4365] = {
@@ -97,7 +97,7 @@ rm.recipeDB[202] = {
 			105,
 		},
 		item = 4365,
-		skill = 75,
+		requiredSkill = 75,
 		spell = 3931,
 	},
 	[4366] = {
@@ -108,7 +108,7 @@ rm.recipeDB[202] = {
 			145,
 		},
 		item = 4366,
-		skill = 85,
+		requiredSkill = 85,
 		spell = 3932,
 	},
 	[4368] = {
@@ -119,7 +119,7 @@ rm.recipeDB[202] = {
 			160,
 		},
 		item = 4368,
-		skill = 100,
+		requiredSkill = 100,
 		spell = 3934,
 	},
 	[4369] = {
@@ -130,7 +130,7 @@ rm.recipeDB[202] = {
 			155,
 		},
 		item = 4369,
-		skill = 105,
+		requiredSkill = 105,
 		spell = 3936,
 	},
 	[4370] = {
@@ -141,7 +141,7 @@ rm.recipeDB[202] = {
 			155,
 		},
 		item = 4370,
-		skill = 105,
+		requiredSkill = 105,
 		spell = 3937,
 	},
 	[4371] = {
@@ -152,7 +152,7 @@ rm.recipeDB[202] = {
 			155,
 		},
 		item = 4371,
-		skill = 105,
+		requiredSkill = 105,
 		spell = 3938,
 	},
 	[4374] = {
@@ -163,7 +163,7 @@ rm.recipeDB[202] = {
 			170,
 		},
 		item = 4374,
-		skill = 120,
+		requiredSkill = 120,
 		spell = 3941,
 	},
 	[4375] = {
@@ -174,7 +174,7 @@ rm.recipeDB[202] = {
 			175,
 		},
 		item = 4375,
-		skill = 125,
+		requiredSkill = 125,
 		spell = 3942,
 	},
 	[4377] = {
@@ -185,7 +185,7 @@ rm.recipeDB[202] = {
 			145,
 		},
 		item = 4377,
-		skill = 125,
+		requiredSkill = 125,
 		spell = 3945,
 	},
 	[4378] = {
@@ -196,7 +196,7 @@ rm.recipeDB[202] = {
 			145,
 		},
 		item = 4378,
-		skill = 125,
+		requiredSkill = 125,
 		spell = 3946,
 	},
 	[4379] = {
@@ -207,7 +207,7 @@ rm.recipeDB[202] = {
 			180,
 		},
 		item = 4379,
-		skill = 130,
+		requiredSkill = 130,
 		spell = 3949,
 	},
 	[4380] = {
@@ -218,7 +218,7 @@ rm.recipeDB[202] = {
 			190,
 		},
 		item = 4380,
-		skill = 140,
+		requiredSkill = 140,
 		spell = 3950,
 	},
 	[4382] = {
@@ -229,7 +229,7 @@ rm.recipeDB[202] = {
 			195,
 		},
 		item = 4382,
-		skill = 145,
+		requiredSkill = 145,
 		spell = 3953,
 	},
 	[4384] = {
@@ -240,7 +240,7 @@ rm.recipeDB[202] = {
 			200,
 		},
 		item = 4384,
-		skill = 150,
+		requiredSkill = 150,
 		spell = 3955,
 	},
 	[4385] = {
@@ -251,7 +251,7 @@ rm.recipeDB[202] = {
 			200,
 		},
 		item = 4385,
-		skill = 150,
+		requiredSkill = 150,
 		spell = 3956,
 	},
 	[4387] = {
@@ -262,7 +262,7 @@ rm.recipeDB[202] = {
 			180,
 		},
 		item = 4387,
-		skill = 160,
+		requiredSkill = 160,
 		spell = 3958,
 	},
 	[4389] = {
@@ -273,7 +273,7 @@ rm.recipeDB[202] = {
 			210,
 		},
 		item = 4389,
-		skill = 170,
+		requiredSkill = 170,
 		spell = 3961,
 	},
 	[4390] = {
@@ -284,7 +284,7 @@ rm.recipeDB[202] = {
 			215,
 		},
 		item = 4390,
-		skill = 175,
+		requiredSkill = 175,
 		spell = 3962,
 	},
 	[4391] = {
@@ -295,7 +295,7 @@ rm.recipeDB[202] = {
 			215,
 		},
 		item = 4391,
-		skill = 175,
+		requiredSkill = 175,
 		spell = 3963,
 	},
 	[4392] = {
@@ -306,7 +306,7 @@ rm.recipeDB[202] = {
 			225,
 		},
 		item = 4392,
-		skill = 185,
+		requiredSkill = 185,
 		spell = 3965,
 	},
 	[4394] = {
@@ -317,7 +317,7 @@ rm.recipeDB[202] = {
 			230,
 		},
 		item = 4394,
-		skill = 190,
+		requiredSkill = 190,
 		spell = 3967,
 	},
 	[4404] = {
@@ -328,7 +328,7 @@ rm.recipeDB[202] = {
 			140,
 		},
 		item = 4404,
-		skill = 90,
+		requiredSkill = 90,
 		spell = 3973,
 	},
 	[4405] = {
@@ -339,7 +339,7 @@ rm.recipeDB[202] = {
 			120,
 		},
 		item = 4405,
-		skill = 60,
+		requiredSkill = 60,
 		spell = 3977,
 	},
 	[4406] = {
@@ -350,7 +350,7 @@ rm.recipeDB[202] = {
 			160,
 		},
 		item = 4406,
-		skill = 110,
+		requiredSkill = 110,
 		spell = 3978,
 	},
 	[4408] = {
@@ -361,7 +361,7 @@ rm.recipeDB[202] = {
 			135,
 		},
 		item = 4401,
-		skill = 75,
+		requiredSkill = 75,
 		spell = 3928,
 	},
 	[4409] = {
@@ -372,7 +372,7 @@ rm.recipeDB[202] = {
 			160,
 		},
 		item = 4367,
-		skill = 100,
+		requiredSkill = 100,
 		spell = 3933,
 	},
 	[4410] = {
@@ -383,7 +383,7 @@ rm.recipeDB[202] = {
 			170,
 		},
 		item = 4373,
-		skill = 120,
+		requiredSkill = 120,
 		spell = 3940,
 	},
 	[4411] = {
@@ -394,7 +394,7 @@ rm.recipeDB[202] = {
 			175,
 		},
 		item = 4376,
-		skill = 125,
+		requiredSkill = 125,
 		spell = 3944,
 	},
 	[4412] = {
@@ -405,7 +405,7 @@ rm.recipeDB[202] = {
 			195,
 		},
 		item = 4383,
-		skill = 145,
+		requiredSkill = 145,
 		spell = 3954,
 	},
 	[4413] = {
@@ -416,7 +416,7 @@ rm.recipeDB[202] = {
 			200,
 		},
 		item = 4388,
-		skill = 160,
+		requiredSkill = 160,
 		spell = 3959,
 	},
 	[4414] = {
@@ -427,7 +427,7 @@ rm.recipeDB[202] = {
 			205,
 		},
 		item = 4403,
-		skill = 165,
+		requiredSkill = 165,
 		spell = 3960,
 	},
 	[4415] = {
@@ -438,7 +438,7 @@ rm.recipeDB[202] = {
 			225,
 		},
 		item = 4393,
-		skill = 185,
+		requiredSkill = 185,
 		spell = 3966,
 	},
 	[4416] = {
@@ -449,7 +449,7 @@ rm.recipeDB[202] = {
 			235,
 		},
 		item = 4395,
-		skill = 195,
+		requiredSkill = 195,
 		spell = 3968,
 	},
 	[4417] = {
@@ -460,7 +460,7 @@ rm.recipeDB[202] = {
 			240,
 		},
 		item = 4398,
-		skill = 200,
+		requiredSkill = 200,
 		spell = 3972,
 	},
 	[5507] = {
@@ -471,7 +471,7 @@ rm.recipeDB[202] = {
 			185,
 		},
 		item = 5507,
-		skill = 135,
+		requiredSkill = 135,
 		spell = 6458,
 	},
 	[6219] = {
@@ -482,7 +482,7 @@ rm.recipeDB[202] = {
 			90,
 		},
 		item = 6219,
-		skill = 50,
+		requiredSkill = 50,
 		spell = 7430,
 	},
 	[6533] = {
@@ -493,7 +493,7 @@ rm.recipeDB[202] = {
 			170,
 		},
 		item = 6533,
-		skill = 150,
+		requiredSkill = 150,
 		spell = 9271,
 	},
 	[6672] = {
@@ -504,7 +504,7 @@ rm.recipeDB[202] = {
 			225,
 		},
 		item = 4852,
-		skill = 185,
+		requiredSkill = 185,
 		spell = 8243,
 	},
 	[6712] = {
@@ -515,7 +515,7 @@ rm.recipeDB[202] = {
 			130,
 		},
 		item = 6712,
-		skill = 100,
+		requiredSkill = 100,
 		spell = 8334,
 	},
 	[6716] = {
@@ -526,7 +526,7 @@ rm.recipeDB[202] = {
 			130,
 		},
 		item = 6714,
-		skill = 100,
+		requiredSkill = 100,
 		spell = 8339,
 	},
 	[7192] = {
@@ -538,7 +538,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 7189,
-		skill = 225,
+		requiredSkill = 225,
 		spell = 8895,
 	},
 	[7560] = {
@@ -549,7 +549,7 @@ rm.recipeDB[202] = {
 			175,
 		},
 		item = 7506,
-		skill = 125,
+		requiredSkill = 125,
 		spell = 9269,
 	},
 	[7561] = {
@@ -560,7 +560,7 @@ rm.recipeDB[202] = {
 			200,
 		},
 		item = 7148,
-		skill = 165,
+		requiredSkill = 165,
 		spell = 9273,
 	},
 	[7742] = {
@@ -571,7 +571,7 @@ rm.recipeDB[202] = {
 			240,
 		},
 		item = 4397,
-		skill = 200,
+		requiredSkill = 200,
 		spell = 3971,
 	},
 	[8067] = {
@@ -582,7 +582,7 @@ rm.recipeDB[202] = {
 			60,
 		},
 		item = 8067,
-		skill = 30,
+		requiredSkill = 30,
 		spell = 3920,
 	},
 	[8068] = {
@@ -593,7 +593,7 @@ rm.recipeDB[202] = {
 			95,
 		},
 		item = 8068,
-		skill = 75,
+		requiredSkill = 75,
 		spell = 3930,
 	},
 	[8069] = {
@@ -604,7 +604,7 @@ rm.recipeDB[202] = {
 			145,
 		},
 		item = 8069,
-		skill = 125,
+		requiredSkill = 125,
 		spell = 3947,
 	},
 	[10498] = {
@@ -615,7 +615,7 @@ rm.recipeDB[202] = {
 			215,
 		},
 		item = 10498,
-		skill = 175,
+		requiredSkill = 175,
 		spell = 12590,
 	},
 	[10500] = {
@@ -626,7 +626,7 @@ rm.recipeDB[202] = {
 			245,
 		},
 		item = 10500,
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12594,
 	},
 	[10503] = {
@@ -637,7 +637,7 @@ rm.recipeDB[202] = {
 			270,
 		},
 		item = 10503,
-		skill = 230,
+		requiredSkill = 230,
 		spell = 12618,
 	},
 	[10504] = {
@@ -648,7 +648,7 @@ rm.recipeDB[202] = {
 			285,
 		},
 		item = 10504,
-		skill = 245,
+		requiredSkill = 245,
 		spell = 12622,
 	},
 	[10505] = {
@@ -659,7 +659,7 @@ rm.recipeDB[202] = {
 			195,
 		},
 		item = 10505,
-		skill = 175,
+		requiredSkill = 175,
 		spell = 12585,
 	},
 	[10507] = {
@@ -670,7 +670,7 @@ rm.recipeDB[202] = {
 			195,
 		},
 		item = 10507,
-		skill = 175,
+		requiredSkill = 175,
 		spell = 12586,
 	},
 	[10508] = {
@@ -681,7 +681,7 @@ rm.recipeDB[202] = {
 			245,
 		},
 		item = 10508,
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12595,
 	},
 	[10512] = {
@@ -692,7 +692,7 @@ rm.recipeDB[202] = {
 			250,
 		},
 		item = 10512,
-		skill = 210,
+		requiredSkill = 210,
 		spell = 12596,
 	},
 	[10513] = {
@@ -703,7 +703,7 @@ rm.recipeDB[202] = {
 			285,
 		},
 		item = 10513,
-		skill = 245,
+		requiredSkill = 245,
 		spell = 12621,
 	},
 	[10514] = {
@@ -714,7 +714,7 @@ rm.recipeDB[202] = {
 			255,
 		},
 		item = 10514,
-		skill = 215,
+		requiredSkill = 215,
 		spell = 12603,
 	},
 	[10542] = {
@@ -726,7 +726,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10542,
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12717,
 		specialization = 20222,
 	},
@@ -739,7 +739,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10543,
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12718,
 		specialization = 20222,
 	},
@@ -752,7 +752,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10545,
-		skill = 210,
+		requiredSkill = 210,
 		spell = 12897,
 		specialization = 20219,
 	},
@@ -764,7 +764,7 @@ rm.recipeDB[202] = {
 			190,
 		},
 		item = 10558,
-		skill = 150,
+		requiredSkill = 150,
 		spell = 12584,
 	},
 	[10559] = {
@@ -775,7 +775,7 @@ rm.recipeDB[202] = {
 			235,
 		},
 		item = 10559,
-		skill = 195,
+		requiredSkill = 195,
 		spell = 12589,
 	},
 	[10560] = {
@@ -786,7 +786,7 @@ rm.recipeDB[202] = {
 			240,
 		},
 		item = 10560,
-		skill = 200,
+		requiredSkill = 200,
 		spell = 12591,
 	},
 	[10561] = {
@@ -797,7 +797,7 @@ rm.recipeDB[202] = {
 			255,
 		},
 		item = 10561,
-		skill = 215,
+		requiredSkill = 215,
 		spell = 12599,
 	},
 	[10562] = {
@@ -808,7 +808,7 @@ rm.recipeDB[202] = {
 			275,
 		},
 		item = 10562,
-		skill = 235,
+		requiredSkill = 235,
 		spell = 12619,
 	},
 	[10577] = {
@@ -820,7 +820,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10577,
-		skill = 225,
+		requiredSkill = 225,
 		spell = 12716,
 		specialization = 20222,
 	},
@@ -833,7 +833,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10586,
-		skill = 235,
+		requiredSkill = 235,
 		spell = 12754,
 		specialization = 20222,
 	},
@@ -846,7 +846,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10587,
-		skill = 230,
+		requiredSkill = 230,
 		spell = 12755,
 		specialization = 20222,
 	},
@@ -859,7 +859,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10588,
-		skill = 245,
+		requiredSkill = 245,
 		spell = 12758,
 		specialization = 20222,
 	},
@@ -871,7 +871,7 @@ rm.recipeDB[202] = {
 			215,
 		},
 		item = 10499,
-		skill = 175,
+		requiredSkill = 175,
 		spell = 12587,
 	},
 	[10602] = {
@@ -882,7 +882,7 @@ rm.recipeDB[202] = {
 			250,
 		},
 		item = 10546,
-		skill = 210,
+		requiredSkill = 210,
 		spell = 12597,
 	},
 	[10603] = {
@@ -893,7 +893,7 @@ rm.recipeDB[202] = {
 			260,
 		},
 		item = 10501,
-		skill = 220,
+		requiredSkill = 220,
 		spell = 12607,
 	},
 	[10604] = {
@@ -904,7 +904,7 @@ rm.recipeDB[202] = {
 			260,
 		},
 		item = 10510,
-		skill = 220,
+		requiredSkill = 220,
 		spell = 12614,
 	},
 	[10605] = {
@@ -915,7 +915,7 @@ rm.recipeDB[202] = {
 			265,
 		},
 		item = 10502,
-		skill = 225,
+		requiredSkill = 225,
 		spell = 12615,
 	},
 	[10606] = {
@@ -926,7 +926,7 @@ rm.recipeDB[202] = {
 			265,
 		},
 		item = 10518,
-		skill = 225,
+		requiredSkill = 225,
 		spell = 12616,
 	},
 	[10607] = {
@@ -937,7 +937,7 @@ rm.recipeDB[202] = {
 			270,
 		},
 		item = 10506,
-		skill = 230,
+		requiredSkill = 230,
 		spell = 12617,
 	},
 	[10608] = {
@@ -948,7 +948,7 @@ rm.recipeDB[202] = {
 			280,
 		},
 		item = 10548,
-		skill = 240,
+		requiredSkill = 240,
 		spell = 12620,
 	},
 	[10609] = {
@@ -959,7 +959,7 @@ rm.recipeDB[202] = {
 			290,
 		},
 		item = 10576,
-		skill = 250,
+		requiredSkill = 250,
 		spell = 12624,
 	},
 	[10645] = {
@@ -971,7 +971,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10645,
-		skill = 240,
+		requiredSkill = 240,
 		spell = 12759,
 		specialization = 20219,
 	},
@@ -984,7 +984,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10646,
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12760,
 		specialization = 20222,
 	},
@@ -997,7 +997,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10716,
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12899,
 		specialization = 20219,
 	},
@@ -1009,7 +1009,7 @@ rm.recipeDB[202] = {
 			250,
 		},
 		item = 10720,
-		skill = 210,
+		requiredSkill = 210,
 		spell = 12902,
 		specialization = 20219,
 	},
@@ -1022,7 +1022,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10721,
-		skill = 215,
+		requiredSkill = 215,
 		spell = 12903,
 		specialization = 20219,
 	},
@@ -1035,7 +1035,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10724,
-		skill = 225,
+		requiredSkill = 225,
 		spell = 12905,
 		specialization = 20219,
 	},
@@ -1048,7 +1048,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10725,
-		skill = 230,
+		requiredSkill = 230,
 		spell = 12906,
 		specialization = 20219,
 	},
@@ -1061,7 +1061,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10726,
-		skill = 235,
+		requiredSkill = 235,
 		spell = 12907,
 		specialization = 20219,
 	},
@@ -1074,7 +1074,7 @@ rm.recipeDB[202] = {
 		},
 		hasSodCounterpart = true,
 		item = 10727,
-		skill = 240,
+		requiredSkill = 240,
 		spell = 12908,
 		specialization = 20222,
 	},
@@ -1086,7 +1086,7 @@ rm.recipeDB[202] = {
 			240,
 		},
 		item = 11590,
-		skill = 200,
+		requiredSkill = 200,
 		spell = 15255,
 	},
 	[11827] = {
@@ -1097,7 +1097,7 @@ rm.recipeDB[202] = {
 			205,
 		},
 		item = 11826,
-		skill = 205,
+		requiredSkill = 205,
 		spell = 15633,
 	},
 	[11828] = {
@@ -1108,7 +1108,7 @@ rm.recipeDB[202] = {
 			205,
 		},
 		item = 11825,
-		skill = 205,
+		requiredSkill = 205,
 		spell = 15628,
 	},
 	[12715] = {
@@ -1121,7 +1121,7 @@ rm.recipeDB[202] = {
 		icon = 134939,
 		item = 10644,
 		isSpell = true,
-		skill = 205,
+		requiredSkill = 205,
 		specialization = 20222,
 	},
 	[12895] = {
@@ -1134,7 +1134,7 @@ rm.recipeDB[202] = {
 		icon = 134941,
 		item = 10713,
 		isSpell = true,
-		skill = 205,
+		requiredSkill = 205,
 		specialization = 20219,
 	},
 	[13308] = {
@@ -1145,7 +1145,7 @@ rm.recipeDB[202] = {
 			195,
 		},
 		item = 4386,
-		skill = 155,
+		requiredSkill = 155,
 		spell = 3957,
 	},
 	[13309] = {
@@ -1156,7 +1156,7 @@ rm.recipeDB[202] = {
 			170,
 		},
 		item = 4372,
-		skill = 120,
+		requiredSkill = 120,
 		spell = 3939,
 	},
 	[13310] = {
@@ -1167,7 +1167,7 @@ rm.recipeDB[202] = {
 			220,
 		},
 		item = 4407,
-		skill = 180,
+		requiredSkill = 180,
 		spell = 3979,
 	},
 	[13311] = {
@@ -1178,7 +1178,7 @@ rm.recipeDB[202] = {
 			240,
 		},
 		item = 4396,
-		skill = 200,
+		requiredSkill = 200,
 		spell = 3969,
 	},
 	[14639] = {
@@ -1189,7 +1189,7 @@ rm.recipeDB[202] = {
 			190,
 		},
 		item = 4381,
-		skill = 140,
+		requiredSkill = 140,
 		spell = 3952,
 	},
 	[15846] = {
@@ -1200,7 +1200,7 @@ rm.recipeDB[202] = {
 			290,
 		},
 		item = 15846,
-		skill = 250,
+		requiredSkill = 250,
 		spell = 19567,
 	},
 	[15992] = {
@@ -1211,7 +1211,7 @@ rm.recipeDB[202] = {
 			260,
 		},
 		item = 15992,
-		skill = 250,
+		requiredSkill = 250,
 		spell = 19788,
 	},
 	[16041] = {
@@ -1222,7 +1222,7 @@ rm.recipeDB[202] = {
 			300,
 		},
 		item = 15993,
-		skill = 260,
+		requiredSkill = 260,
 		spell = 19790,
 	},
 	[16042] = {
@@ -1233,7 +1233,7 @@ rm.recipeDB[202] = {
 			300,
 		},
 		item = 15994,
-		skill = 260,
+		requiredSkill = 260,
 		spell = 19791,
 	},
 	[16043] = {
@@ -1244,7 +1244,7 @@ rm.recipeDB[202] = {
 			300,
 		},
 		item = 15995,
-		skill = 260,
+		requiredSkill = 260,
 		spell = 19792,
 	},
 	[16044] = {
@@ -1255,7 +1255,7 @@ rm.recipeDB[202] = {
 			305,
 		},
 		item = 15996,
-		skill = 265,
+		requiredSkill = 265,
 		spell = 19793,
 	},
 	[16045] = {
@@ -1266,7 +1266,7 @@ rm.recipeDB[202] = {
 			310,
 		},
 		item = 15999,
-		skill = 270,
+		requiredSkill = 270,
 		spell = 19794,
 	},
 	[16046] = {
@@ -1277,7 +1277,7 @@ rm.recipeDB[202] = {
 			315,
 		},
 		item = 16023,
-		skill = 275,
+		requiredSkill = 275,
 		spell = 19814,
 	},
 	[16047] = {
@@ -1288,7 +1288,7 @@ rm.recipeDB[202] = {
 			315,
 		},
 		item = 16000,
-		skill = 275,
+		requiredSkill = 275,
 		spell = 19795,
 	},
 	[16048] = {
@@ -1299,7 +1299,7 @@ rm.recipeDB[202] = {
 			315,
 		},
 		item = 16004,
-		skill = 275,
+		requiredSkill = 275,
 		spell = 19796,
 	},
 	[16049] = {
@@ -1310,7 +1310,7 @@ rm.recipeDB[202] = {
 			325,
 		},
 		item = 16005,
-		skill = 285,
+		requiredSkill = 285,
 		spell = 19799,
 	},
 	[16050] = {
@@ -1321,7 +1321,7 @@ rm.recipeDB[202] = {
 			325,
 		},
 		item = 16006,
-		skill = 285,
+		requiredSkill = 285,
 		spell = 19815,
 	},
 	[16051] = {
@@ -1332,7 +1332,7 @@ rm.recipeDB[202] = {
 			325,
 		},
 		item = 15997,
-		skill = 285,
+		requiredSkill = 285,
 		spell = 19800,
 	},
 	[16052] = {
@@ -1343,7 +1343,7 @@ rm.recipeDB[202] = {
 			330,
 		},
 		item = 16009,
-		skill = 290,
+		requiredSkill = 290,
 		spell = 19819,
 	},
 	[16053] = {
@@ -1354,7 +1354,7 @@ rm.recipeDB[202] = {
 			330,
 		},
 		item = 16008,
-		skill = 290,
+		requiredSkill = 290,
 		spell = 19825,
 	},
 	[16054] = {
@@ -1365,7 +1365,7 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 16022,
-		skill = 300,
+		requiredSkill = 300,
 		spell = 19830,
 	},
 	[16055] = {
@@ -1376,7 +1376,7 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 16040,
-		skill = 300,
+		requiredSkill = 300,
 		spell = 19831,
 	},
 	[16056] = {
@@ -1387,7 +1387,7 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 16007,
-		skill = 300,
+		requiredSkill = 300,
 		spell = 19833,
 	},
 	[17720] = {
@@ -1398,7 +1398,7 @@ rm.recipeDB[202] = {
 			230,
 		},
 		item = 17716,
-		skill = 190,
+		requiredSkill = 190,
 		spell = 21940,
 	},
 	[18235] = {
@@ -1409,7 +1409,7 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 18232,
-		skill = 300,
+		requiredSkill = 300,
 		spell = 22704,
 	},
 	[18290] = {
@@ -1420,7 +1420,7 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 18283,
-		skill = 300,
+		requiredSkill = 300,
 		spell = 22793,
 	},
 	[18291] = {
@@ -1431,7 +1431,7 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 18168,
-		skill = 300,
+		requiredSkill = 300,
 		spell = 22797,
 	},
 	[18292] = {
@@ -1442,7 +1442,7 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 18282,
-		skill = 300,
+		requiredSkill = 300,
 		spell = 22795,
 	},
 	[18641] = {
@@ -1453,7 +1453,7 @@ rm.recipeDB[202] = {
 			270,
 		},
 		item = 18641,
-		skill = 250,
+		requiredSkill = 250,
 		spell = 23070,
 	},
 	[18647] = {
@@ -1465,7 +1465,7 @@ rm.recipeDB[202] = {
 		},
 		faction = "Horde",
 		item = 9318,
-		skill = 150,
+		requiredSkill = 150,
 		spell = 23066,
 	},
 	[18648] = {
@@ -1476,7 +1476,7 @@ rm.recipeDB[202] = {
 			175,
 		},
 		item = 9313,
-		skill = 150,
+		requiredSkill = 150,
 		spell = 23068,
 	},
 	[18649] = {
@@ -1488,7 +1488,7 @@ rm.recipeDB[202] = {
 		},
 		faction = "Alliance",
 		item = 9312,
-		skill = 150,
+		requiredSkill = 150,
 		spell = 23067,
 	},
 	[18650] = {
@@ -1499,7 +1499,7 @@ rm.recipeDB[202] = {
 			220,
 		},
 		item = 18588,
-		skill = 200,
+		requiredSkill = 200,
 		spell = 23069,
 	},
 	[18651] = {
@@ -1510,7 +1510,7 @@ rm.recipeDB[202] = {
 			280,
 		},
 		item = 18631,
-		skill = 260,
+		requiredSkill = 260,
 		spell = 23071,
 	},
 	[18652] = {
@@ -1521,7 +1521,7 @@ rm.recipeDB[202] = {
 			300,
 		},
 		item = 18634,
-		skill = 260,
+		requiredSkill = 260,
 		spell = 23077,
 	},
 	[18653] = {
@@ -1532,7 +1532,7 @@ rm.recipeDB[202] = {
 			305,
 		},
 		item = 18587,
-		skill = 265,
+		requiredSkill = 265,
 		spell = 23078,
 		specialization = 20222,
 	},
@@ -1544,7 +1544,7 @@ rm.recipeDB[202] = {
 			285,
 		},
 		item = 18645,
-		skill = 265,
+		requiredSkill = 265,
 		spell = 23096,
 		specialization = 20219,
 	},
@@ -1556,7 +1556,7 @@ rm.recipeDB[202] = {
 			295,
 		},
 		item = 18637,
-		skill = 275,
+		requiredSkill = 275,
 		spell = 23079,
 	},
 	[18656] = {
@@ -1567,7 +1567,7 @@ rm.recipeDB[202] = {
 			295,
 		},
 		item = 18594,
-		skill = 275,
+		requiredSkill = 275,
 		spell = 23080,
 	},
 	[18657] = {
@@ -1578,7 +1578,7 @@ rm.recipeDB[202] = {
 			330,
 		},
 		item = 18638,
-		skill = 290,
+		requiredSkill = 290,
 		spell = 23081,
 	},
 	[18658] = {
@@ -1589,7 +1589,7 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 18639,
-		skill = 300,
+		requiredSkill = 300,
 		spell = 23082,
 	},
 	[18661] = {
@@ -1600,7 +1600,7 @@ rm.recipeDB[202] = {
 			270,
 		},
 		item = 18660,
-		skill = 260,
+		requiredSkill = 260,
 		spell = 23129,
 		specialization = 20219,
 	},
@@ -1612,7 +1612,7 @@ rm.recipeDB[202] = {
 			305,
 		},
 		item = 18984,
-		skill = 285,
+		requiredSkill = 285,
 		spell = 23486,
 		specialization = 20222,
 	},
@@ -1624,7 +1624,7 @@ rm.recipeDB[202] = {
 			305,
 		},
 		item = 18986,
-		skill = 285,
+		requiredSkill = 285,
 		spell = 23489,
 		specialization = 20219,
 	},
@@ -1636,7 +1636,7 @@ rm.recipeDB[202] = {
 			270,
 		},
 		item = 19026,
-		skill = 250,
+		requiredSkill = 250,
 		spell = 23507,
 	},
 	[20000] = {
@@ -1647,9 +1647,9 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 19999,
-		repFaction = 270,
-		repLevel = 6,
-		skill = 300,
+		reputationFaction = 270,
+		reputationLevel = 6,
+		requiredSkill = 300,
 		spell = 24356,
 	},
 	[20001] = {
@@ -1660,9 +1660,9 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 19998,
-		repFaction = 270,
-		repLevel = 5,
-		skill = 300,
+		reputationFaction = 270,
+		reputationLevel = 5,
+		requiredSkill = 300,
 		spell = 24357,
 	},
 	[21277] = {
@@ -1673,7 +1673,7 @@ rm.recipeDB[202] = {
 			340,
 		},
 		item = 21277,
-		skill = 250,
+		requiredSkill = 250,
 		spell = 26011,
 	},
 	[21724] = {
@@ -1684,7 +1684,7 @@ rm.recipeDB[202] = {
 			150,
 		},
 		item = 21558,
-		skill = 125,
+		requiredSkill = 125,
 		spell = 26416,
 	},
 	[21725] = {
@@ -1695,7 +1695,7 @@ rm.recipeDB[202] = {
 			150,
 		},
 		item = 21559,
-		skill = 125,
+		requiredSkill = 125,
 		spell = 26417,
 	},
 	[21726] = {
@@ -1706,7 +1706,7 @@ rm.recipeDB[202] = {
 			150,
 		},
 		item = 21557,
-		skill = 125,
+		requiredSkill = 125,
 		spell = 26418,
 	},
 	[21727] = {
@@ -1717,7 +1717,7 @@ rm.recipeDB[202] = {
 			200,
 		},
 		item = 21589,
-		skill = 175,
+		requiredSkill = 175,
 		spell = 26420,
 	},
 	[21728] = {
@@ -1728,7 +1728,7 @@ rm.recipeDB[202] = {
 			200,
 		},
 		item = 21590,
-		skill = 175,
+		requiredSkill = 175,
 		spell = 26421,
 	},
 	[21729] = {
@@ -1739,7 +1739,7 @@ rm.recipeDB[202] = {
 			200,
 		},
 		item = 21592,
-		skill = 175,
+		requiredSkill = 175,
 		spell = 26422,
 	},
 	[21730] = {
@@ -1750,7 +1750,7 @@ rm.recipeDB[202] = {
 			250,
 		},
 		item = 21571,
-		skill = 225,
+		requiredSkill = 225,
 		spell = 26423,
 	},
 	[21731] = {
@@ -1761,7 +1761,7 @@ rm.recipeDB[202] = {
 			250,
 		},
 		item = 21574,
-		skill = 225,
+		requiredSkill = 225,
 		spell = 26424,
 	},
 	[21732] = {
@@ -1772,7 +1772,7 @@ rm.recipeDB[202] = {
 			250,
 		},
 		item = 21576,
-		skill = 225,
+		requiredSkill = 225,
 		spell = 26425,
 	},
 	[21733] = {
@@ -1783,7 +1783,7 @@ rm.recipeDB[202] = {
 			285,
 		},
 		item = 21714,
-		skill = 275,
+		requiredSkill = 275,
 		spell = 26426,
 	},
 	[21734] = {
@@ -1794,7 +1794,7 @@ rm.recipeDB[202] = {
 			285,
 		},
 		item = 21716,
-		skill = 275,
+		requiredSkill = 275,
 		spell = 26427,
 	},
 	[21735] = {
@@ -1805,7 +1805,7 @@ rm.recipeDB[202] = {
 			285,
 		},
 		item = 21718,
-		skill = 275,
+		requiredSkill = 275,
 		spell = 26428,
 	},
 	[21737] = {
@@ -1816,7 +1816,7 @@ rm.recipeDB[202] = {
 			315,
 		},
 		item = 21570,
-		skill = 275,
+		requiredSkill = 275,
 		spell = 26443,
 	},
 	[21738] = {
@@ -1827,7 +1827,7 @@ rm.recipeDB[202] = {
 			265,
 		},
 		item = 21569,
-		skill = 225,
+		requiredSkill = 225,
 		spell = 26442,
 	},
 	[210178] = {
@@ -1839,7 +1839,7 @@ rm.recipeDB[202] = {
 		},
 		item = 210147,
 		season = "SoD",
-		skill = 135,
+		requiredSkill = 135,
 		spell = 424641,
 	},
 	[212230] = {
@@ -1851,7 +1851,7 @@ rm.recipeDB[202] = {
 		},
 		item = 211427,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 431362,
 	},
 	[215153] = {
@@ -1863,7 +1863,7 @@ rm.recipeDB[202] = {
 		},
 		item = 213390,
 		season = "SoD",
-		skill = 225,
+		requiredSkill = 225,
 		spell = 435958,
 	},
 	[215156] = {
@@ -1875,7 +1875,7 @@ rm.recipeDB[202] = {
 		},
 		item = 215115,
 		season = "SoD",
-		skill = 225,
+		requiredSkill = 225,
 		spell = 435960,
 	},
 	[215429] = {
@@ -1887,7 +1887,7 @@ rm.recipeDB[202] = {
 		},
 		item = 213383,
 		season = "SoD",
-		skill = 200,
+		requiredSkill = 200,
 		spell = 435956,
 	},
 	[215431] = {
@@ -1899,7 +1899,7 @@ rm.recipeDB[202] = {
 		},
 		item = 215127,
 		season = "SoD",
-		skill = 225,
+		requiredSkill = 225,
 		spell = 435964,
 	},
 	[215432] = {
@@ -1911,7 +1911,7 @@ rm.recipeDB[202] = {
 		},
 		item = 215168,
 		season = "SoD",
-		skill = 225,
+		requiredSkill = 225,
 		spell = 435966,
 	},
 	[221025] = {
@@ -1923,7 +1923,7 @@ rm.recipeDB[202] = {
 		},
 		item = 221025,
 		season = "SoD",
-		skill = 250,
+		requiredSkill = 250,
 		spell = 446236,
 	},
 	[221026] = {
@@ -1935,7 +1935,7 @@ rm.recipeDB[202] = {
 		},
 		item = 221026,
 		season = "SoD",
-		skill = 250,
+		requiredSkill = 250,
 		spell = 446237,
 	},
 	[221027] = {
@@ -1947,7 +1947,7 @@ rm.recipeDB[202] = {
 		},
 		item = 221027,
 		season = "SoD",
-		skill = 250,
+		requiredSkill = 250,
 		spell = 446238,
 	},
 	[221327] = {
@@ -1959,7 +1959,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10716,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12899,
 	},
 	[221328] = {
@@ -1971,7 +1971,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10545,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12897,
 	},
 	[221329] = {
@@ -1983,7 +1983,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10720,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12902,
 	},
 	[221330] = {
@@ -1995,7 +1995,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10721,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12903,
 	},
 	[221331] = {
@@ -2007,7 +2007,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10724,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12905,
 	},
 	[221332] = {
@@ -2019,7 +2019,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10725,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12906,
 	},
 	[221333] = {
@@ -2031,7 +2031,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10726,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12907,
 	},
 	[221334] = {
@@ -2043,7 +2043,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10645,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12759,
 	},
 	[221335] = {
@@ -2055,7 +2055,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10543,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12718,
 	},
 	[221336] = {
@@ -2067,7 +2067,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10542,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12717,
 	},
 	[221337] = {
@@ -2079,7 +2079,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10577,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12716,
 	},
 	[221338] = {
@@ -2091,7 +2091,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10646,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12760,
 	},
 	[221339] = {
@@ -2103,7 +2103,7 @@ rm.recipeDB[202] = {
 		},
 		item = 7189,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 8895,
 	},
 	[221340] = {
@@ -2115,7 +2115,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10587,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12755,
 	},
 	[221341] = {
@@ -2127,7 +2127,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10586,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12754,
 	},
 	[221342] = {
@@ -2139,7 +2139,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10727,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12908,
 	},
 	[221343] = {
@@ -2151,7 +2151,7 @@ rm.recipeDB[202] = {
 		},
 		item = 10588,
 		season = "SoD",
-		skill = 205,
+		requiredSkill = 205,
 		spell = 12758,
 	},
 	[228304] = {
@@ -2163,7 +2163,7 @@ rm.recipeDB[202] = {
 		},
 		item = 227849,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 461710,
 	},
 	[234261] = {
@@ -2174,10 +2174,10 @@ rm.recipeDB[202] = {
 			330,
 		},
 		item = 233984,
-		repFaction = 609,
-		repLevel = 7,
+		reputationFaction = 609,
+		reputationLevel = 7,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 1213573,
 	},
 	[234262] = {
@@ -2188,10 +2188,10 @@ rm.recipeDB[202] = {
 			330,
 		},
 		item = 233985,
-		repFaction = 609,
-		repLevel = 6,
+		reputationFaction = 609,
+		reputationLevel = 6,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 1213576,
 	},
 	[234263] = {
@@ -2202,10 +2202,10 @@ rm.recipeDB[202] = {
 			330,
 		},
 		item = 233986,
-		repFaction = 609,
-		repLevel = 5,
+		reputationFaction = 609,
+		reputationLevel = 5,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 1213578,
 	},
 	[234264] = {
@@ -2217,7 +2217,7 @@ rm.recipeDB[202] = {
 		},
 		item = 233987,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 1213586,
 	},
 	[234265] = {
@@ -2229,7 +2229,7 @@ rm.recipeDB[202] = {
 		},
 		item = 233988,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 1213588,
 	},
 	[234280] = {
@@ -2240,10 +2240,10 @@ rm.recipeDB[202] = {
 			330,
 		},
 		item = 234005,
-		repFaction = 609,
-		repLevel = 5,
+		reputationFaction = 609,
+		reputationLevel = 5,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 1213646,
 	},
 	[234435] = {
@@ -2255,7 +2255,7 @@ rm.recipeDB[202] = {
 		},
 		item = 234434,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 1214145,
 	},
 	[235530] = {
@@ -2267,7 +2267,7 @@ rm.recipeDB[202] = {
 		},
 		item = 235529,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 1217207,
 	},
 	[236871] = {
@@ -2279,7 +2279,7 @@ rm.recipeDB[202] = {
 		},
 		item = 236871,
 		season = "SoD",
-		skill = 275,
+		requiredSkill = 275,
 		spell = 1221012,
 	},
 	[238781] = {
@@ -2291,7 +2291,7 @@ rm.recipeDB[202] = {
 		},
 		item = 238781,
 		season = "SoD",
-		skill = 295,
+		requiredSkill = 295,
 		spell = 1226213,
 	},
 	[238782] = {
@@ -2303,7 +2303,7 @@ rm.recipeDB[202] = {
 		},
 		item = 238737,
 		season = "SoD",
-		skill = 250,
+		requiredSkill = 250,
 		spell = 1226206,
 	},
 	[238783] = {
@@ -2315,7 +2315,7 @@ rm.recipeDB[202] = {
 		},
 		item = 238734,
 		season = "SoD",
-		skill = 275,
+		requiredSkill = 275,
 		spell = 1226207,
 	},
 	[238784] = {
@@ -2327,7 +2327,7 @@ rm.recipeDB[202] = {
 		},
 		item = 238735,
 		season = "SoD",
-		skill = 275,
+		requiredSkill = 275,
 		spell = 1226208,
 	},
 	[238785] = {
@@ -2339,7 +2339,7 @@ rm.recipeDB[202] = {
 		},
 		item = 238736,
 		season = "SoD",
-		skill = 275,
+		requiredSkill = 275,
 		spell = 1226209,
 	},
 	[239222] = {
@@ -2351,7 +2351,7 @@ rm.recipeDB[202] = {
 		},
 		item = 237023,
 		season = "SoD",
-		skill = 250,
+		requiredSkill = 250,
 		spell = 1228088,
 	},
 	[1226210] = {
@@ -2364,7 +2364,7 @@ rm.recipeDB[202] = {
 		item = 1226210,
 		isSpell = true,
 		season = "SoD",
-		skill = 255,
+		requiredSkill = 255,
 	},
 	[1226211] = {
 		difficulty = {
@@ -2376,7 +2376,7 @@ rm.recipeDB[202] = {
 		item = 1226211,
 		isSpell = true,
 		season = "SoD",
-		skill = 255,
+		requiredSkill = 255,
 	},
 	[1226212] = {
 		difficulty = {
@@ -2388,6 +2388,6 @@ rm.recipeDB[202] = {
 		item = 1226212,
 		isSpell = true,
 		season = "SoD",
-		skill = 255,
+		requiredSkill = 255,
 	},
 }

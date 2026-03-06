@@ -90,7 +90,7 @@ local function getRecipeTooltipMessage(recipe, professionID)
             message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightPinkHex)
             for characterName, professionSkills in pairs(charactersMissingRecipe) do
                 local characterLine = newLineInfo..characterName.." ("
-                characterLine = characterLine..L.skill.." "..getColoredSkill(professionSkills, recipe.skill)
+                characterLine = characterLine..L.skill.." "..getColoredSkill(professionSkills, recipe.requiredSkill)
                 if recipe.specialization then
                     characterLine = characterLine..", "..getColoredSpecialization(professionSkills, recipe.specialization)
                 end

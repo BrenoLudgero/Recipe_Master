@@ -2,8 +2,8 @@ local _, rm = ...
 local L = rm.L
 
 function rm.isReputationRequirementMet(recipe)
-    local currentRepLevel = select(3, GetFactionInfoByID(recipe.repFaction)) or 0
-    return recipe.repLevel <= currentRepLevel
+    local currentReputationLevel = select(3, GetFactionInfoByID(recipe.reputationFaction)) or 0
+    return recipe.reputationLevel <= currentReputationLevel
 end
 
 function rm.getFactionName(factionID)

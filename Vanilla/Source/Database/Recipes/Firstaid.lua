@@ -9,7 +9,7 @@ rm.recipeDB[129] = {
 			60,
 		},
 		item = 1251,
-		skill = 1,
+		requiredSkill = 1,
 		spell = 3275,
 	},
 	[2581] = {
@@ -20,7 +20,7 @@ rm.recipeDB[129] = {
 			100,
 		},
 		item = 2581,
-		skill = 40,
+		requiredSkill = 40,
 		spell = 3276,
 	},
 	[3530] = {
@@ -31,7 +31,7 @@ rm.recipeDB[129] = {
 			150,
 		},
 		item = 3530,
-		skill = 80,
+		requiredSkill = 80,
 		spell = 3277,
 	},
 	[3531] = {
@@ -42,7 +42,7 @@ rm.recipeDB[129] = {
 			185,
 		},
 		item = 3531,
-		skill = 115,
+		requiredSkill = 115,
 		spell = 3278,
 	},
 	[6450] = {
@@ -53,7 +53,7 @@ rm.recipeDB[129] = {
 			210,
 		},
 		item = 6450,
-		skill = 150,
+		requiredSkill = 150,
 		spell = 7928,
 	},
 	[6452] = {
@@ -64,7 +64,7 @@ rm.recipeDB[129] = {
 			150,
 		},
 		item = 6452,
-		skill = 80,
+		requiredSkill = 80,
 		spell = 7934,
 	},
 	[6454] = {
@@ -75,7 +75,7 @@ rm.recipeDB[129] = {
 			200,
 		},
 		item = 6453,
-		skill = 130,
+		requiredSkill = 130,
 		spell = 7935,
 	},
 	[8545] = {
@@ -86,7 +86,7 @@ rm.recipeDB[129] = {
 			300,
 		},
 		item = 8545,
-		skill = 240,
+		requiredSkill = 240,
 		spell = 10841,
 	},
 	[14529] = {
@@ -97,7 +97,7 @@ rm.recipeDB[129] = {
 			320,
 		},
 		item = 14529,
-		skill = 260,
+		requiredSkill = 260,
 		spell = 18629,
 	},
 	[14530] = {
@@ -108,16 +108,16 @@ rm.recipeDB[129] = {
 			350,
 		},
 		item = 14530,
-		skill = 290,
+		requiredSkill = 290,
 		spell = 18630,
 	},
 	[16084] = {
 		item = "Expert",
-		skill = 125,
+		requiredSkill = 125,
 	},
 	[16085] = {
 		item = "Artisan",
-		skill = 200,
+		requiredSkill = 200,
 	},
 	[16112] = {
 		difficulty = {
@@ -127,7 +127,7 @@ rm.recipeDB[129] = {
 			240,
 		},
 		item = 6451,
-		skill = 180,
+		requiredSkill = 180,
 		spell = 7929,
 	},
 	[16113] = {
@@ -138,7 +138,7 @@ rm.recipeDB[129] = {
 			270,
 		},
 		item = 8544,
-		skill = 210,
+		requiredSkill = 210,
 		spell = 10840,
 	},
 	[19442] = {
@@ -149,9 +149,9 @@ rm.recipeDB[129] = {
 			360,
 		},
 		item = 19440,
-		repFaction = 529,
-		repLevel = 6,
-		skill = 300,
+		reputationFaction = 529,
+		reputationLevel = 6,
+		requiredSkill = 300,
 		spell = 23787,
 	},
 	[232434] = {
@@ -163,7 +163,7 @@ rm.recipeDB[129] = {
 		},
 		item = 232433,
 		season = "SoD",
-		skill = 300,
+		requiredSkill = 300,
 		spell = 470349,
 	},
 }

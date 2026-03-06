@@ -9,7 +9,7 @@ local function getComparisonValues(a, b)
     elseif sortBy == "Quality" then
         return a.quality, b.quality
     elseif sortBy == "Skill" then
-        return a.skill, b.skill
+        return a.requiredSkill, b.requiredSkill
     end
 end
 
