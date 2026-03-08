@@ -31,9 +31,9 @@ local function handleMismatchedProfessionNames(recipeID, itemLink)
     return professionName
 end
 
-local function getColoredSkill(characterProfessionSkills, recipeSkill)
+local function getColoredSkill(characterProfessionData, recipeSkill)
     local skill = ""
-    local characterProfessionLevel = characterProfessionSkills["level"]
+    local characterProfessionLevel = characterProfessionData["level"]
     if characterProfessionLevel < recipeSkill then
         skill = WrapTextInColorCode(characterProfessionLevel, F.colors.lightPinkHex)
     else
@@ -42,10 +42,10 @@ local function getColoredSkill(characterProfessionSkills, recipeSkill)
     return skill
 end
 
-local function getColoredSpecialization(characterProfessionSkills, recipeSpecialization)
+local function getColoredSpecialization(characterProfessionData, recipeSpecialization)
     local specialization = ""
     local specializationName = rm.getSpecializationName(recipeSpecialization)
-    local characterSpecialization = characterProfessionSkills["specialization"]
+    local characterSpecialization = characterProfessionData["specialization"]
     if characterSpecialization ~= recipeSpecialization then
         specialization = WrapTextInColorCode(specializationName, F.colors.lightPinkHex)
     else
@@ -88,11 +88,11 @@ local function getRecipeTooltipMessage(recipe, professionID)
             -- Sort the charactersMissingRecipe table alphabetically
             table.sort(charactersMissingRecipe)
             message = message..newLine..WrapTextInColorCode(L.unlearned, F.colors.lightPinkHex)
-            for characterName, professionSkills in pairs(charactersMissingRecipe) do
+            for characterName, professionData in pairs(charactersMissingRecipe) do
                 local characterLine = newLineInfo..characterName.." ("
-                characterLine = characterLine..L.skill.." "..getColoredSkill(professionSkills, recipe.requiredSkill)
+                characterLine = characterLine..L.skill.." "..getColoredSkill(professionData, recipe.requiredSkill)
                 if recipe.specialization then
-                    characterLine = characterLine..", "..getColoredSpecialization(professionSkills, recipe.specialization)
+                    characterLine = characterLine..", "..getColoredSpecialization(professionData, recipe.specialization)
                 end
                 message = message..characterLine..")"
             end

@@ -25,7 +25,7 @@ function rm.getSavedSkillsByProfessionName(profession)
     return rm.getSavedProfessionByName(profession)["skills"]
 end
 
-function rm.getProfessionSkillsForOtherCharacters(professionID)
+function rm.getProfessionDataForOtherCharacters(professionID)
     local characters = {}
     local savedCharactersData
     if rm.getPreference("showOppositeFactionAltsTooltipInfo") == true then
@@ -36,7 +36,9 @@ function rm.getProfessionSkillsForOtherCharacters(professionID)
     for characterName, characterData in pairs(savedCharactersData) do
         if characterName ~= rm.currentCharacter then
             local characterProfessionData = characterData[professionID]
-            characters[characterName] = characterProfessionData
+            if characterProfessionData then
+                characters[characterName] = characterProfessionData
+            end
         end
     end
     return characters
