@@ -117,7 +117,7 @@ local function appendMessage(tooltip, message)
     tooltip:AddLine("\n"..message.."\n")
 end
 
-local function getRecipeInfo(itemName, itemLink)
+local function getRecipeInfo(itemLink)
     local recipeID = rm.getIDFromLink(itemLink)
     local professionName = handleMismatchedProfessionNames(recipeID, itemLink)
     local professionID = rm.getProfessionID(professionName)
@@ -128,9 +128,24 @@ local function getRecipeInfo(itemName, itemLink)
     return false, false
 end
 
-local function showMessageInTooltip(tooltip, itemName, itemLink)
-    local recipe, professionID = getRecipeInfo(itemName, itemLink)
-    local message = getRecipeTooltipMessage(recipe, professionID)
+local function getSpellInfo(spellID)
+    local possibleProfessionIDs = {
+        186,  -- Mining
+        2842, -- Poisons
+        202,  -- Engineering
+        333   -- Enchanting
+    }
+    for _, professionID in ipairs(possibleProfessionIDs) do
+        local spell = rm.cachedRecipes[professionID][spellID]
+        if spell then
+            return spell, professionID
+        end
+    end
+    return false, false
+end
+
+local function showMessageInTooltip(tooltip, item, professionID)
+    local message = getRecipeTooltipMessage(item, professionID)
     local messageLineCount = select(2, message:gsub("\n", "\n"))
     if messageLineCount > 0 then -- Not counting the "Recipe Master" header
         appendMessage(tooltip, message)
@@ -151,7 +166,19 @@ GameTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
     if rm.getPreference("showAltsTooltipInfo") or rm.getPreference("showSourcesTooltipInfo") then
         local itemName, itemLink = tooltip:GetItem()
         if itemName and isItemARecipe(itemName) then
-            showMessageInTooltip(tooltip, itemName, itemLink)
+            local recipe, professionID = getRecipeInfo(itemLink)
+            showMessageInTooltip(tooltip, recipe, professionID)
+        end
+    end
+end)
+
+-- Appends the message to a spell's tooltip
+GameTooltip:HookScript("OnTooltipSetSpell", function(tooltip)
+    if rm.getPreference("showAltsTooltipInfo") or rm.getPreference("showSourcesTooltipInfo") then
+        local _, spellID = tooltip:GetSpell()
+        if spellID then
+            local spell, professionID = getSpellInfo(spellID)
+            showMessageInTooltip(tooltip, spell, professionID)
         end
     end
 end)
@@ -161,7 +188,8 @@ ItemRefTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
     if rm.getPreference("showAltsTooltipInfo") or rm.getPreference("showSourcesTooltipInfo") then
         local itemName, itemLink = tooltip:GetItem()
         if itemName and isItemARecipe(itemName) then
-            showMessageInTooltip(tooltip, itemName, itemLink)
+            local recipe, professionID = getRecipeInfo(itemLink)
+            showMessageInTooltip(tooltip, recipe, professionID)
         end
     end
 end)
