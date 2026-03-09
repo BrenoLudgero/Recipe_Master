@@ -795,6 +795,7 @@ rm.recipeDB[164] = {
 		},
 		teaches = 7938,
 		requiredSkill = 225,
+		specialization = 9788,
 	},
 	[7939] = {
 		difficulty = {
@@ -805,6 +806,7 @@ rm.recipeDB[164] = {
 		},
 		teaches = 7939,
 		requiredSkill = 245,
+		specialization = 9788,
 	},
 	[7941] = {
 		difficulty = {
@@ -835,6 +837,7 @@ rm.recipeDB[164] = {
 		},
 		teaches = 7954,
 		requiredSkill = 235,
+		specialization = 9787,
 	},
 	[7955] = {
 		difficulty = {
@@ -885,6 +888,7 @@ rm.recipeDB[164] = {
 		},
 		teaches = 7959,
 		requiredSkill = 250,
+		specialization = 9787,
 	},
 	[7960] = {
 		difficulty = {
@@ -895,6 +899,7 @@ rm.recipeDB[164] = {
 		},
 		teaches = 7960,
 		requiredSkill = 260,
+		specialization = 9787,
 	},
 	[7961] = {
 		difficulty = {
@@ -905,6 +910,7 @@ rm.recipeDB[164] = {
 		},
 		teaches = 7961,
 		requiredSkill = 245,
+		specialization = 9787,
 	},
 	[7963] = {
 		difficulty = {
