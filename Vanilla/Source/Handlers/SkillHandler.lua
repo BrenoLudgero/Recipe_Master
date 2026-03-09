@@ -52,8 +52,8 @@ local function getSkillFunction(functionsTableIndex)
     return skillFunctions[functionsTableIndex][isEnchantingDisplayed()]
 end
 
-local function getSkillID(i)
-    local itemLink = getSkillFunction("getLink")(i)
+local function getSkillID(index)
+    local itemLink = getSkillFunction("getLink")(index)
     if itemLink then
         return rm.getIDFromLink(itemLink)
     end
@@ -89,19 +89,16 @@ function rm.saveNewTradeSkills()
     end
 end
 
-function rm.saveNewlyLearnedSkill(spellID)
-    local spellName = GetSpellInfo(spellID)
+function rm.saveNewlyLearnedSkill(newSkillID)
+    local newSkillName = GetSpellInfo(newSkillID)
     for professionID, recipes in pairs(rm.cachedRecipes) do
         if rm.getSavedProfessionByID(professionID) then -- Profession is learned by the character
             for _, recipeData in pairs(recipes) do
-                if spellID == recipeData.spell or spellID == recipeData.item 
-                or (type(recipeData.item) == "table" and rm.tableContains(recipeData.item, spellID)) then
-                    local recipeName = recipeData.name
-                    -- Comparing names because items and spells might have the same ID
-                    if recipeName == spellName or string.find(recipeName, spellName) then
-                        table.insert(getSavedSkillsByProfessionID(professionID), recipeData.item)
-                        return
-                    end
+                local recipeName = recipeData.name
+                if recipeName == newSkillName 
+                or string.find(recipeName, newSkillName) then
+                    table.insert(getSavedSkillsByProfessionID(professionID), recipeData.teaches)
+                    return
                 end
             end
         end

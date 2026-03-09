@@ -47,9 +47,9 @@ function rm.handlePlayerLevelUp(event, _, newLevel)
     end
 end
 
-function rm.handleRecipeLearned(event, spellID)
+function rm.handleRecipeLearned(event, recipeID)
     if event == "NEW_RECIPE_LEARNED" then
-        rm.saveNewlyLearnedSkill(spellID)
+        rm.saveNewlyLearnedSkill(recipeID)
         rm.refreshRecipesListIfOpen()
     end
 end
