@@ -4,48 +4,22 @@ local L = rm.L
 rm.cachedRecipes = {}
 rm.cachedItemNames = {}
 
-local recipesToIgnoreInSod = {
-    19212, -- Plans: Nightfall
-}
-
-local function isRecipeForCurrentSeason(recipeData)
-    return not recipeData.season or recipeData.season == rm.currentSeason
-end
-
-local function isNotDuplicateRecipe(recipeData)
-    if rm.currentSeason ~= "SoD" then
-        return true
-    end
-    return not recipeData.hasSodCounterpart
-end
-
-local function shouldIgnoreRecipeInSod(recipeID)
-    if rm.currentSeason ~= "SoD" then
-        return false
-    end
-    return rm.tableContains(recipesToIgnoreInSod, recipeID)
-end
-
 -- Stores all recipe data for each profession in rm.cachedRecipes
 -- to be retrieved locally without the risk of querying unavailable data
 local function cacheAllRecipes()
     for professionID in pairs(L.professions) do
         rm.cachedRecipes[professionID] = {}
-        for recipeID, recipeData in pairs(rm.recipeDB[professionID]) do
-            if isRecipeForCurrentSeason(recipeData) 
-            and isNotDuplicateRecipe(recipeData)
-            and not shouldIgnoreRecipeInSod(recipeID) then
-                if recipeData.isSpell then
-                    local spell = Spell:CreateFromSpellID(recipeID)
-                    spell:ContinueOnSpellLoad(function()
-                        rm.storeSpellData(recipeID, recipeData, professionID)
-                    end)
-                else
-                    local recipe = Item:CreateFromItemID(recipeID)
-                    recipe:ContinueOnItemLoad(function()
-                        rm.storeRecipeData(recipeID, recipeData, professionID)
-                    end)
-                end
+        for recipeID, rawRecipeData in pairs(rm.recipeDB[professionID]) do
+            if rawRecipeData.isSpell then
+                local spell = Spell:CreateFromSpellID(recipeID)
+                spell:ContinueOnSpellLoad(function()
+                    rm.storeRelevantSpellData(recipeID, rawRecipeData, professionID)
+                end)
+            else
+                local recipe = Item:CreateFromItemID(recipeID)
+                recipe:ContinueOnItemLoad(function()
+                    rm.storeRelevantRecipeData(recipeID, rawRecipeData, professionID)
+                end)
             end
         end
     end

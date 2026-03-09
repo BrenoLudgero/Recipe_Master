@@ -8,6 +8,9 @@ local rankOrder = {
     Expert = 3, 
     Artisan = 4
 }
+local recipesToIgnoreInSod = {
+    19212, -- Plans: Nightfall
+}
 
 local function isRecipeForCurrentClass(recipe)
     if not recipe.classes then
@@ -134,15 +137,48 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
     }
 end
 
--- Called in Cacher.cacheAndStoreAllRecipes
-function rm.storeRecipeData(recipeID, recipeData, professionID)
-    local recipe = getRecipeData(recipeID, recipeData, professionID, getInitialRecipeData)
-    rm.cachedRecipes[professionID][recipeID] = recipe
+local function isRecipeForCurrentSeason(rawRecipeData)
+    return (
+        not rawRecipeData.season 
+        or rawRecipeData.season == rm.currentSeason
+    )
 end
 
-function rm.storeSpellData(spellID, spellData, professionID)
-    local spell = getRecipeData(spellID, spellData, professionID, getInitialSpellData)
-    rm.cachedRecipes[professionID][spellID] = spell
+local function isRecipeWithSodCounterpart(rawRecipeData)
+    if rm.currentSeason ~= "SoD" then
+        return false
+    end
+    return rawRecipeData.hasSodCounterpart
+end
+
+local function shouldIgnoreRecipeInSod(recipeID)
+    if rm.currentSeason ~= "SoD" then
+        return false
+    end
+    return rm.tableContains(recipesToIgnoreInSod, recipeID)
+end
+
+local function isRecipeRelevantForCurrentSeason(recipeID, rawRecipeData)
+    return (
+        isRecipeForCurrentSeason(rawRecipeData) 
+        and not isRecipeWithSodCounterpart(rawRecipeData)
+        and not shouldIgnoreRecipeInSod(recipeID)
+    )
+end
+
+-- Called in Cacher.cacheAllRecipes
+function rm.storeRelevantRecipeData(recipeID, rawRecipeData, professionID)
+    if isRecipeRelevantForCurrentSeason(recipeID, rawRecipeData) then
+        local recipe = getRecipeData(recipeID, rawRecipeData, professionID, getInitialRecipeData)
+        rm.cachedRecipes[professionID][recipeID] = recipe
+    end
+end
+
+function rm.storeRelevantSpellData(spellID, rawSpellData, professionID)
+    if isRecipeRelevantForCurrentSeason(spellID, rawSpellData) then
+        local spell = getRecipeData(spellID, rawSpellData, professionID, getInitialSpellData)
+        rm.cachedRecipes[professionID][spellID] = spell
+    end
 end
 
 -- Retrieves all cached recipe data for the currently displayed profession
