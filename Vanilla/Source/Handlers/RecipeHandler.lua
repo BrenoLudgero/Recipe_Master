@@ -117,7 +117,7 @@ end
 
 local function getRecipeData(recipeID, recipeData, professionID, initialDataFunction)
     local rName, rLink, rQuality, rTexture = initialDataFunction(recipeID, professionID)
-    return {
+    local recipe = {
         classes = recipeData["classes"], 
         difficulty = recipeData["difficulty"],
         faction = recipeData["faction"], 
@@ -135,6 +135,12 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         teaches = recipeData["teaches"], 
         texture = rTexture
     }
+    -- Appends rank level to rankup spells' name
+    if isRankupRecipe(recipe) and rQuality == nil then
+        local recipeTeachedRank = recipe.teaches
+        recipe.name = recipe.name.." - "..L[recipeTeachedRank:lower()]
+    end
+    return recipe
 end
 
 local function isRecipeForCurrentSeason(rawRecipeData)

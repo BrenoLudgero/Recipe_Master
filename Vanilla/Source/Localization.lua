@@ -1,6 +1,8 @@
 local _, rm = ...
 local L = rm.L
 
+L.apprentice = APPRENTICE
+L.artisan = ARTISAN
 L.boss = BOSS
 L.brightness = OPTIONS_BRIGHTNESS
 L.chance = GARRISON_MISSION_CHANCE
@@ -13,10 +15,12 @@ L.drop = LOOT
 L.dungeon = LFG_TYPE_DUNGEON
 L.elite = ELITE
 L.epic = ITEM_QUALITY4_DESC
+L.expert = EXPERT
 L.faction = FACTION
 L.fishing = PROFESSIONS_FISHING
 L.fishingNotLearned = SPELL_FAILED_NOT_KNOWN -- "Spell not learned"
 L.general = GENERAL
+L.journeyman = JOURNEYMAN
 L.item = HELPFRAME_ITEM_TITLE
 L.learned = TRADE_SKILLS_LEARNED_TAB
 L.level = GUILD_RECRUITMENT_LEVEL
