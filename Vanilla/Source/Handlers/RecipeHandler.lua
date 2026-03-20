@@ -111,9 +111,8 @@ end
 local function getInitialSpellData(ID, professionID)
     local name = GetSpellInfo(ID)
     local link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
-    local quality = 1
     local texture = rm.recipeDB[professionID][ID].icon or GetSpellTexture(ID)
-    return name, link, quality, texture
+    return name, link, nil, texture
 end
 
 local function getRecipeData(recipeID, recipeData, professionID, initialDataFunction)
@@ -122,9 +121,10 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         classes = recipeData["classes"], 
         difficulty = recipeData["difficulty"],
         faction = recipeData["faction"], 
+        isFactionExclusive = recipeData["isFactionExclusive"], 
         link = rLink,
         name = rName, 
-        quality = rQuality, 
+        quality = rQuality or recipeData["quality"] or 1, 
         reputationFaction = recipeData["reputationFaction"], 
         reputationLevel = recipeData["reputationLevel"], 
         requiredLevel = recipeData["requiredLevel"], 
