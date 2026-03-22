@@ -48,7 +48,7 @@ function rm.getAllCharactersRecipeStatus(recipe, professionID)
     local charactersMissingRecipeSkill = {}
     local charactersWithRecipeSkill = {}
     for characterName, professionData in pairs(otherCharactersInfo) do
-        local professionSkills = professionData['skills']
+        local professionSkills = professionData["skills"]
         if professionSkills then
             if isSkillLearnedByCharacter(professionSkills, recipe) then
                 table.insert(charactersWithRecipeSkill, characterName)
@@ -108,16 +108,24 @@ local function getInitialRecipeData(ID)
     return name, link, quality, texture
 end
 
-local function getInitialSpellData(ID, professionID)
+local function getInitialSpellData(ID, spellData, professionID)
     local name = GetSpellInfo(ID)
+    -- Appends rank level to a rankup spell's name
+    if isRankupRecipe(spellData) then
+        name = name.." - "..L[spellData.teaches:lower()]
+    end
     local link = "|cff71d5ff|Hspell:"..ID.."|h["..name.."]|h|r"
-    local texture = rm.recipeDB[professionID][ID].icon or GetSpellTexture(ID)
+    local texture = GetSpellTexture(ID)
+    -- Fallback for undesired placeholder icon
+    if texture == 136235 and type(spellData.teaches) == "number" then
+        texture = C_Item.GetItemIconByID(spellData.teaches)
+    end
     return name, link, nil, texture
 end
 
 local function getRecipeData(recipeID, recipeData, professionID, initialDataFunction)
-    local rName, rLink, rQuality, rTexture = initialDataFunction(recipeID, professionID)
-    local recipe = {
+    local rName, rLink, rQuality, rTexture = initialDataFunction(recipeID, recipeData, professionID)
+    return {
         classes = recipeData["classes"], 
         difficulty = recipeData["difficulty"],
         faction = recipeData["faction"], 
@@ -128,19 +136,13 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         reputationFaction = recipeData["reputationFaction"], 
         reputationLevel = recipeData["reputationLevel"], 
         requiredLevel = recipeData["requiredLevel"], 
-        requiredSkill = recipeData["requiredSkill"], 
+        requiredSkill = recipeData["requiredSkill"] or 1, 
         season = recipeData["season"], 
         sources = rm.sourceDB[professionID][recipeID],
         specialization = recipeData["specialization"], 
-        teaches = recipeData["teaches"], 
+        teaches = recipeData["teaches"] or recipeID, 
         texture = rTexture
     }
-    -- Appends rank level to rankup spells' name
-    if isRankupRecipe(recipe) and rQuality == nil then
-        local recipeTeachedRank = recipe.teaches
-        recipe.name = recipe.name.." - "..L[recipeTeachedRank:lower()]
-    end
-    return recipe
 end
 
 local function isRecipeForCurrentSeason(rawRecipeData)
