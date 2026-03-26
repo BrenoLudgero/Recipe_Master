@@ -19,6 +19,15 @@ local function isRecipeForCurrentClass(recipe)
     return rm.tableContains(recipe.classes, currentCharacterClass)
 end
 
+-- Detects if recipe teaches a specialization that's not the character's current specialization
+local function recipeTeachesDifferentSpecialization(currentSpecialization, recipe)
+    return (
+        currentSpecialization
+        and recipe.isSpecialization
+        and recipe.teaches ~= currentSpecialization
+    )
+end
+
 local function isRecipeForCurrentSpecialization(recipe)
     if rm.currentSeason == "SoD" then
         return true
@@ -29,7 +38,7 @@ local function isRecipeForCurrentSpecialization(recipe)
         not recipe.specialization 
         or not currentSpecialization 
         or currentSpecialization == recipe.specialization
-    )
+    ) and not recipeTeachesDifferentSpecialization(currentSpecialization, recipe)
 end
 
 function rm.isRecipeAvailableForCharacter(recipe)
@@ -65,17 +74,34 @@ local function isRankupRecipe(recipe)
 end
 
 -- Identifies a rankup recipe that teaches a rank equal to or lower than the current profession rank
-local function isLearnedRankupRecipe(recipe, professionRank)
-    if isRankupRecipe(recipe) then
-        return rankOrder[recipe.teaches] <= rankOrder[professionRank]
+local function isLearnedRankupRecipe(recipe)
+    if not isRankupRecipe(recipe) then
+        return false
     end
-    return false
+    local professionRank = rm.getSavedProfessionRank(rm.displayedProfession)
+    return rankOrder[recipe.teaches] <= rankOrder[professionRank]
+end
+
+-- Identifies a specialization recipe that matches the character's current specialization
+local function isLearnedSpecializationRecipe(recipe)
+    if not recipe.isSpecialization then
+        return false
+    end
+    local currentSpecialization = rm.getSavedSpecializationByID(professionID)
+    if not currentSpecialization then
+        return false
+    end
+    local professionID = rm.getProfessionID(rm.displayedProfession)
+    return recipe.teaches == currentSpecialization
 end
 
 function rm.isLearnedRecipe(recipe)
     local learnedSkills = rm.getSavedSkillsByProfessionName(rm.displayedProfession)
-    local professionRank = rm.getSavedProfessionRank(rm.displayedProfession)
-    return isSkillLearnedByCharacter(learnedSkills, recipe) or isLearnedRankupRecipe(recipe, professionRank)
+    return (
+        isSkillLearnedByCharacter(learnedSkills, recipe) 
+        or isLearnedRankupRecipe(recipe)
+        or isLearnedSpecializationRecipe(recipe)
+    )
 end
 
 function rm.isMissingRecipeOfCurrentFaction(recipe)
@@ -130,6 +156,7 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         difficulty = recipeData["difficulty"],
         faction = recipeData["faction"], 
         isFactionExclusive = recipeData["isFactionExclusive"], 
+        isSpecialization = recipeData["isSpecialization"],
         link = rLink,
         name = rName, 
         quality = rQuality or recipeData["quality"] or 1, 
