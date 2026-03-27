@@ -75,8 +75,8 @@ local function saveNewSkill(skillLineID, skillID)
     end
 end
 
--- Saves the ID of all the skills / crafts available for the profession
-function rm.saveNewTradeSkills()
+-- Saves the ID of all the skills / crafts learned for the profession
+function rm.saveLearnedTradeSkills()
     local skillLineID = rm.getProfessionID(rm.displayedProfession) -- e.g. 202 (Engineering)
     local numSkills = getSkillFunction("getNum")()
     local skillInfoFunction = getSkillFunction("getInfo")
@@ -89,6 +89,13 @@ function rm.saveNewTradeSkills()
     end
 end
 
+local function isNewSkillNameContainedInRecipeName(professionID, recipeName, newSkillName)
+    return (
+        professionID ~= 2842 -- Poisons. Prevents detection of higher poison ranks
+        and string.find(recipeName, newSkillName)
+    )
+end
+
 function rm.saveNewlyLearnedSkill(newSkillID)
     local newSkillName = GetSpellInfo(newSkillID)
     for professionID, recipes in pairs(rm.cachedRecipes) do
@@ -96,7 +103,7 @@ function rm.saveNewlyLearnedSkill(newSkillID)
             for _, recipeData in pairs(recipes) do
                 local recipeName = recipeData.name
                 if recipeName == newSkillName 
-                or string.find(recipeName, newSkillName) then
+                or isNewSkillNameContainedInRecipeName(professionID, recipeName, newSkillName) then
                     table.insert(getSavedSkillsByProfessionID(professionID), recipeData.teaches)
                     return
                 end
