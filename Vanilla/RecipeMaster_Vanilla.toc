@@ -1,5 +1,6 @@
 ## Interface: 11508
 ## Version: @project-version@
+## IconTexture: Interface/Icons/INV_Scroll_03
 
 ## X-WoWI-ID: 26887
 ## X-Curse-Project-ID: 983613
@@ -14,6 +15,17 @@
 ## Title-koKR: 레시피 마스터
 ## Title-zhTW: 食譜大師
 ## Title-zhCN: 食谱大师
+
+## Category: Professions
+## Category-deDE: Berufe
+## Category-esES: Profesiones
+## Category-esMX: Profesiones
+## Category-frFR: Métiers
+## Category-koKR: 전문 기술
+## Category-ptBR: Profissões
+## Category-ruRU: Профессии
+## Category-zhCN: 专业
+## Category-zhTW: 專業技能
 
 ## Notes: Track your learned and missing recipes to master your professions!
 ## Notes-esMX: ¡Lleva un registro de tus recetas aprendidas y las que te faltan para dominar tus profesiones!
