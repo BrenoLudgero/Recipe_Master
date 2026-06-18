@@ -3,7 +3,7 @@
 #############################################################
 ### THIS IS A MODIFIED VERSION OF BIG WIGS MODS' PACKAGER ###
 ### 	  https://github.com/BigWigsMods/packager         ###
-###         MODIFICATIONS ARE LABELED AS "MOD:"           ###
+###        MODIFICATIONS ARE LABELED WITH "MOD:"          ###
 #############################################################
 
 # release.sh generates an addon zip file from a Git, SVN, or Mercurial checkout.
@@ -71,6 +71,7 @@ game_type=
 file_type=
 file_template="RecipeMaster-{package-name}-{project-version}"
 label_template="{package-name} {project-version}"
+
 wowi_markup="bbcode"
 
 ## END USER OPTIONS
@@ -173,7 +174,7 @@ filename_filter() {
 		-e "s/{beta}/${beta}/g" \
 		-e "s/{nolib}/${nolib:+-nolib}/g" \
 		-e "s/{classic}/${classic}/g" \
-		-e "s/\([^A-Za-z0-9._-]\)/${invalid}/g" \
+		-e "s/\([^A-Za-z0-9._!-]\)/${invalid}/g" \
 		<<< "$1"
 }
 
@@ -489,7 +490,9 @@ elif [ -f ".env" ]; then
 	. ".env"
 fi
 [ -z "$cf_token" ] && cf_token=$CF_API_KEY
+[ -z "$cf_token" ] && cf_token=$CF_API_TOKEN
 [ -z "$github_token" ] && github_token=$GITHUB_OAUTH
+[ -z "$github_token" ] && github_token=$GITHUB_API_TOKEN
 [ -z "$wowi_token" ] && wowi_token=$WOWI_API_TOKEN
 [ -z "$wago_token" ] && wago_token=$WAGO_API_TOKEN
 
@@ -1554,7 +1557,7 @@ set_localization_url() {
 }
 
 # Filter to handle @localization@ repository keyword replacement.
-# https://authors.curseforge.com/knowledge-base/projects/531-localization-substitutions/
+# https://support.curseforge.com/support/solutions/articles/9000197354-localization-substitutions
 declare -A unlocalized_values=( ["english"]="ShowPrimary" ["comment"]="ShowPrimaryAsComment" ["blank"]="ShowBlankAsComment" ["ignore"]="Ignore" )
 localization_filter() {
 	_ul_eof=
@@ -1587,7 +1590,7 @@ localization_filter() {
 					echo "    Warning! No locale set, using enUS." >&3
 				fi
 				# Generate a URL parameter string from the localization parameters.
-				# https://authors.curseforge.com/knowledge-base/projects/529-api
+				# https://support.curseforge.com/support/solutions/articles/9000197321-curseforge-upload-api#Localization
 				_ul_url_params=""
 				# shellcheck disable=SC2086
 				set -- ${_ul_params}
@@ -1680,7 +1683,7 @@ localization_filter() {
 						echo -n "$_ul_prefix"
 
 						# Fetch the localization data, but don't output anything if there is an error.
-						curl -s -H "x-api-token: $cf_token" "${_ul_url}" | awk -v url="$_ul_url" '/^{"error/ { o="    \033[01;31mError! "$0"\033[0m\n           "url; print o >"/dev/fd/3"; exit 1 } /<!DOCTYPE/ { print "    \033[01;31mError! Invalid output\033[0m\n           "url >"/dev/fd/3"; exit 1 } /^<html>/ { print "    \033[01;31mError! Invalid output\033[0m\n           "url >"/dev/fd/3"; exit 1 } /^'"$_ul_tablename"' = '"$_ul_tablename"' or \{\}/ { next } { print }' || exit 1
+						curl -sL -H "x-api-token: $cf_token" "${_ul_url}" | awk -v url="$_ul_url" '/^{"error/ { o="    \033[01;31mError! "$0"\033[0m\n           "url; print o >"/dev/fd/3"; exit 1 } /<!(DOCTYPE|doctype)/ { print "    \033[01;31mError! Invalid output\033[0m\n           "url >"/dev/fd/3"; exit 1 } /^<(HTML|html)>/ { print "    \033[01;31mError! Invalid output\033[0m\n           "url >"/dev/fd/3"; exit 1 } /^'"$_ul_tablename"' = '"$_ul_tablename"' or \{\}/ { next } { print }' || exit 1
 
 						# Insert a trailing blank line to match CF packager.
 						if [ -z "$_ul_eof" ]; then
@@ -1688,7 +1691,7 @@ localization_filter() {
 						fi
 					else
 						# Parse out a single phrase. This is kind of expensive, but caching would be way too much effort to optimize for what is basically an edge case.
-						_ul_value=$( curl -s -H "x-api-token: $cf_token" "${_ul_url}" | awk -v url="$_ul_url" '/^{"error/ { o="    \033[01;31mError! "$0"\033[0m\n           "url; print o >"/dev/fd/3"; exit 1 } /<!DOCTYPE/ { print "    \033[01;31mError! Invalid output\033[0m\n           "url >"/dev/fd/3"; exit 1 } /^<html>/ { print "    \033[01;31mError! Invalid output\033[0m\n           "url >"/dev/fd/3"; exit 1 } { print }' | sed -n '/L\["'"$_ul_singlekey"'"\]/p' | sed 's/^.* = "\(.*\)"/\1/' )
+						_ul_value=$( curl -sL -H "x-api-token: $cf_token" "${_ul_url}" | awk -v url="$_ul_url" '/^{"error/ { o="    \033[01;31mError! "$0"\033[0m\n           "url; print o >"/dev/fd/3"; exit 1 } /<!(DOCTYPE|doctype)/ { print "    \033[01;31mError! Invalid output\033[0m\n           "url >"/dev/fd/3"; exit 1 } /^<(HTML|html)>/ { print "    \033[01;31mError! Invalid output\033[0m\n           "url >"/dev/fd/3"; exit 1 } { print }' | sed -n '/L\["'"$_ul_singlekey"'"\]/p' | sed 's/^.* = "\(.*\)"/\1/' )
 						if [ -n "$_ul_value" ] && [ "$_ul_value" != "$_ul_singlekey" ]; then
 							# The result is different from the base value so print out the line.
 							echo "${_ul_prefix}${_ul_value}${_ul_line##*)@}"
