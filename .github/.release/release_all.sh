@@ -25,7 +25,7 @@ git tag "$NEW_TAG"
 git push origin "$NEW_TAG"
 git checkout "$NEW_TAG"
 
-sudo sh release.sh -m vanilla.yaml
-sudo sh release.sh -m tbc.yaml
+sudo bash release.sh -m vanilla.yaml
+sudo bash release.sh -m tbc.yaml
 
 git checkout "main"
