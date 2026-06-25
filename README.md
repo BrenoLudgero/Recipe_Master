@@ -1,7 +1,7 @@
 # Recipe Master
 [![CF](https://img.shields.io/badge/Download-CurseForge-orange)](https://www.curseforge.com/wow/addons/recipe-master) [![WowInterface](https://img.shields.io/badge/Download-WoWInterface%20-blue)](https://www.wowinterface.com/downloads/info26887-RecipeMaster.html)
 
-![Recipes Window](/Images/Recipes_Window.png)
+![Recipes Window](.github/images/Recipes_Window.png)
 
 ## Features
 * Complete Recipe Catalog:\
@@ -15,7 +15,7 @@
 * Localization:\
   Recipe Master is localized and compatible with all available languages
 
-![Sources Window](/Images/Sources_Window_1.png)
+![Sources Window](.github/images/Sources_Window_1.png)
 
 ## Functionalities
 * Click a recipe icon to show its sources
@@ -26,7 +26,7 @@
 * (TSM only) Move the main window and restore button with Left-Click
 * (TSM only) Resize the window vertically with Right-Click
 
-![Options Window](/Images/Options_Window.png)
+![Options Window](.github/images/Options_Window.png)
 
 ## Add-on compatibility
 The following add-ons have been thoroughly tested with Recipe Master:
