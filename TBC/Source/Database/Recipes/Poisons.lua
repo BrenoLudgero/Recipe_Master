@@ -1,0 +1,152 @@
+local _, rm = ...
+
+rm.recipeDB[2842] = {
+	[2835] = {
+		isSpell = true,
+		requiredLevel = 30,
+		requiredSkill = 130,
+		teaches = 2892,
+	},
+	[2837] = {
+		isSpell = true,
+		requiredLevel = 38,
+		requiredSkill = 170,
+		teaches = 2893,
+	},
+	[3420] = {
+		isSpell = true,
+		requiredLevel = 20,
+		teaches = 3775,
+	},
+	[3421] = {
+		isSpell = true,
+		requiredLevel = 50,
+		requiredSkill = 230,
+		teaches = 3776,
+	},
+	[5763] = {
+		isSpell = true,
+		requiredLevel = 24,
+		requiredSkill = 100,
+		teaches = 5237,
+	},
+	[8681] = {
+		isSpell = true,
+		requiredLevel = 20,
+		teaches = 6947,
+	},
+	[8687] = {
+		isSpell = true,
+		requiredLevel = 28,
+		requiredSkill = 120,
+		teaches = 6949,
+	},
+	[8691] = {
+		isSpell = true,
+		requiredLevel = 36,
+		requiredSkill = 160,
+		teaches = 6950,
+	},
+	[8694] = {
+		isSpell = true,
+		requiredLevel = 38,
+		requiredSkill = 170,
+		teaches = 6951,
+	},
+	[11341] = {
+		isSpell = true,
+		requiredLevel = 44,
+		requiredSkill = 200,
+		teaches = 8926,
+	},
+	[11342] = {
+		isSpell = true,
+		requiredLevel = 52,
+		requiredSkill = 240,
+		teaches = 8927,
+	},
+	[11343] = {
+		isSpell = true,
+		requiredLevel = 60,
+		requiredSkill = 280,
+		teaches = 8928,
+	},
+	[11357] = {
+		isSpell = true,
+		requiredLevel = 46,
+		requiredSkill = 210,
+		teaches = 8984,
+	},
+	[11358] = {
+		isSpell = true,
+		requiredLevel = 54,
+		requiredSkill = 250,
+		teaches = 8985,
+	},
+	[11400] = {
+		isSpell = true,
+		requiredLevel = 52,
+		requiredSkill = 240,
+		teaches = 9186,
+	},
+	[13220] = {
+		isSpell = true,
+		requiredLevel = 32,
+		requiredSkill = 140,
+		teaches = 10918,
+	},
+	[13228] = {
+		isSpell = true,
+		requiredLevel = 40,
+		requiredSkill = 180,
+		teaches = 10920,
+	},
+	[13229] = {
+		isSpell = true,
+		requiredLevel = 48,
+		requiredSkill = 220,
+		teaches = 10921,
+	},
+	[13230] = {
+		isSpell = true,
+		requiredLevel = 56,
+		requiredSkill = 260,
+		teaches = 10922,
+	},
+	[25347] = {
+		isSpell = true,
+		requiredLevel = 60,
+		requiredSkill = 280,
+		teaches = 20844,
+	},
+	[26786] = {
+		isSpell = true,
+		requiredLevel = 68,
+		requiredSkill = 340,
+		teaches = 21835,
+	},
+	[26892] = {
+		isSpell = true,
+		requiredLevel = 68,
+		requiredSkill = 340,
+		teaches = 21927,
+	},
+	[26969] = {
+		isSpell = true,
+		requiredLevel = 62,
+		requiredSkill = 350,
+		teaches = 22053,
+	},
+	[27282] = {
+		isSpell = true,
+		requiredLevel = 70,
+		requiredSkill = 280,
+		teaches = 22054,
+	},
+	[27283] = {
+		isSpell = true,
+		requiredLevel = 64,
+		requiredSkill = 320,
+		teaches = 22055,
+	},
+}

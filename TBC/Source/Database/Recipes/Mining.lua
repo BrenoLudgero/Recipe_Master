@@ -1,0 +1,225 @@
+local _, rm = ...
+
+rm.recipeDB[186] = {
+	[2576] = {
+		isSpell = true,
+		requiredSkill = 50,
+		teaches = "Journeyman",
+	},
+	[2657] = {
+		difficulty = {
+			0,
+			25,
+			47,
+			70,
+		},
+		isSpell = true,
+		requiredSkill = 25,
+		teaches = 2840,
+	},
+	[2658] = {
+		difficulty = {
+			75,
+			115,
+			122,
+			130,
+		},
+		isSpell = true,
+		quality = 2,
+		requiredSkill = 75,
+		teaches = 2842,
+	},
+	[2659] = {
+		difficulty = {
+			65,
+			65,
+			90,
+			115,
+		},
+		isSpell = true,
+		requiredSkill = 65,
+		teaches = 2841,
+	},
+	[3304] = {
+		difficulty = {
+			65,
+			65,
+			70,
+			75,
+		},
+		isSpell = true,
+		requiredSkill = 65,
+		teaches = 3576,
+	},
+	[3307] = {
+		difficulty = {
+			125,
+			130,
+			145,
+			160,
+		},
+		isSpell = true,
+		requiredSkill = 125,
+		teaches = 3575,
+	},
+	[3308] = {
+		difficulty = {
+			155,
+			170,
+			177,
+			185,
+		},
+		isSpell = true,
+		quality = 2,
+		requiredSkill = 155,
+		teaches = 3577,
+	},
+	[3564] = {
+		isSpell = true,
+		requiredSkill = 125,
+		teaches = "Expert",
+	},
+	[3569] = {
+		isSpell = true,
+		requiredSkill = 165,
+		teaches = 3859,
+	},
+	[10097] = {
+		difficulty = {
+			175,
+			175,
+			202,
+			230,
+		},
+		isSpell = true,
+		requiredSkill = 175,
+		teaches = 3860,
+	},
+	[10098] = {
+		difficulty = {
+			230,
+			235,
+			242,
+			250,
+		},
+		isSpell = true,
+		quality = 2,
+		requiredSkill = 230,
+		teaches = 6037,
+	},
+	[10248] = {
+		isSpell = true,
+		requiredSkill = 200,
+		teaches = "Artisan",
+	},
+	[14891] = {
+		difficulty = {
+			0,
+			300,
+			305,
+			310,
+		},
+		isSpell = true,
+		requiredSkill = 300,
+		teaches = 11371,
+	},
+	[16153] = {
+		difficulty = {
+			250,
+			250,
+			270,
+			290,
+		},
+		isSpell = true,
+		requiredSkill = 250,
+		teaches = 12359,
+	},
+	[22967] = {
+		difficulty = {
+			0,
+			350,
+			362,
+			375,
+		},
+		isSpell = true,
+		quality = 5,
+		requiredSkill = 350,
+		teaches = 17771,
+	},
+	[29354] = {
+		isSpell = true,
+		requiredSkill = 275,
+		teaches = "Master",
+	},
+	[29356] = {
+		difficulty = {
+			300,
+			300,
+			307,
+			315,
+		},
+		isSpell = true,
+		requiredSkill = 300,
+		teaches = 23445,
+	},
+	[29358] = {
+		difficulty = {
+			325,
+			325,
+			332,
+			340,
+		},
+		isSpell = true,
+		requiredSkill = 325,
+		teaches = 23446,
+	},
+	[29359] = {
+		difficulty = {
+			350,
+			350,
+			357,
+			365,
+		},
+		isSpell = true,
+		quality = 2,
+		requiredSkill = 350,
+		teaches = 23447,
+	},
+	[29360] = {
+		difficulty = {
+			350,
+			355,
+			367,
+			380,
+		},
+		isSpell = true,
+		quality = 2,
+		requiredSkill = 350,
+		teaches = 23448,
+	},
+	[29361] = {
+		isSpell = true,
+		quality = 2,
+		requiredSkill = 375,
+		teaches = 23449,
+	},
+	[29686] = {
+		isSpell = true,
+		requiredSkill = 375,
+		teaches = 23573,
+	},
+	[35273] = {
+		requiredSkill = 375,
+		teaches = 35128,
+	},
+	[35750] = {
+		isSpell = true,
+		requiredSkill = 300,
+		teaches = 22573,
+	},
+	[35751] = {
+		isSpell = true,
+		requiredSkill = 300,
+		teaches = 22574,
+	},
+}

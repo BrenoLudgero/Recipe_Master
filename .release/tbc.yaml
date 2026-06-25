@@ -1,8 +1,8 @@
 wowi-archive-previous: yes
 
-package-as: Vanilla
+package-as: TBC
 
 ignore:
-  - TBC
+  - Vanilla
   - README.md
   - Images
