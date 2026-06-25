@@ -557,12 +557,6 @@ rm.questDB = {
 		level = 60,
 		requiredLevel = 55,
 	},
-	[8869] = {
-		classification = "Dungeon",
-		faction = "None",
-		level = 60,
-		requiredLevel = 50,
-	},
 	[8876] = {
 		level = 60,
 		requiredLevel = 25,
@@ -590,11 +584,6 @@ rm.questDB = {
 	[8882] = {
 		level = 60,
 		requiredLevel = 55,
-	},
-	[9249] = {
-		faction = "None",
-		level = 60,
-		requiredLevel = 45,
 	},
 	[79486] = {
 		faction = "Alliance",

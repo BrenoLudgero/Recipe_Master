@@ -1592,15 +1592,6 @@ rm.recipeDB[202] = {
 		requiredSkill = 225,
 		teaches = 21569,
 	},
-	[22728] = {
-		difficulty = {
-			275,
-			295,
-			305,
-			315,
-		},
-		requiredSkill = 275,
-	},
 	[210178] = {
 		difficulty = {
 			0,
