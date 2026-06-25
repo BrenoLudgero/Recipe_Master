@@ -87,12 +87,16 @@ local function isLearnedSpecializationRecipe(recipe)
     if not recipe.isSpecialization then
         return false
     end
+    local professionID = rm.getProfessionID(rm.displayedProfession)
     local currentSpecialization = rm.getSavedSpecializationByID(professionID)
     if not currentSpecialization then
         return false
     end
-    local professionID = rm.getProfessionID(rm.displayedProfession)
-    return recipe.teaches == currentSpecialization
+    if type(currentSpecialization) == "table" then
+        return rm.tableContains(currentSpecialization, recipe.teaches)
+    else
+        return recipe.teaches == currentSpecialization
+    end
 end
 
 function rm.isLearnedRecipe(recipe)
