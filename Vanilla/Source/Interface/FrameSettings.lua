@@ -421,7 +421,7 @@ F.templates.mainFrameBorder = "BaseBasicFrameTemplate"
 F.templates.search = "SearchBoxTemplate"
 F.templates.sourcesList = "BackdropTemplate"
 F.templates.scrollFrame = "UIPanelScrollFrameTemplate"
-F.templates.slider = "UISliderTemplate"
+F.templates.slider = "HorizontalSliderTemplate"
 
 
 
