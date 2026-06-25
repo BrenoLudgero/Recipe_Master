@@ -69,7 +69,7 @@ local function getMissingRequirementsText(recipe)
         local reputationInfo = rm.getFactionName(recipe.reputationFaction).."  "
         missingRequirements = missingRequirements..reputationInfo
     end
-    if recipe.requiredLevel and recipe.requiredLevel > rm.currentLevel then
+    if recipe.requiredLevel > rm.currentLevel then
         local levelInfo = L.level..": "..recipe.requiredLevel.."  "
         missingRequirements = missingRequirements..levelInfo
     end

@@ -1,6 +1,12 @@
 local _, rm = ...
 
 rm.questDB = {
+	[17] = {
+		classification = "Dungeon",
+		faction = "Alliance",
+		level = 42,
+		requiredLevel = 38,
+	},
 	[22] = {
 		faction = "Alliance",
 		level = 12,
@@ -99,6 +105,11 @@ rm.questDB = {
 		level = 23,
 		requiredLevel = 15,
 	},
+	[1423] = {
+		faction = "Alliance",
+		level = 40,
+		requiredLevel = 30,
+	},
 	[1487] = {
 		classification = "Dungeon",
 		level = 21,
@@ -116,7 +127,6 @@ rm.questDB = {
 		},
 		faction = "Alliance",
 		level = 12,
-		requiredLevel = 1,
 	},
 	[1582] = {
 		faction = "Alliance",
@@ -124,19 +134,19 @@ rm.questDB = {
 		requiredLevel = 8,
 	},
 	[1618] = {
-		classes = {
-			1,
-			2,
-			4,
-		},
 		faction = "Alliance",
 		level = 16,
-		requiredLevel = 1,
 	},
 	[2178] = {
 		faction = "Alliance",
 		level = 12,
 		requiredLevel = 9,
+	},
+	[2202] = {
+		classification = "Dungeon",
+		faction = "Horde",
+		level = 42,
+		requiredLevel = 36,
 	},
 	[2203] = {
 		classification = "Elite",
@@ -144,13 +154,24 @@ rm.questDB = {
 		level = 44,
 		requiredLevel = 40,
 	},
+	[2258] = {
+		faction = "Horde",
+		level = 39,
+		requiredLevel = 36,
+	},
 	[2359] = {
+		classes = {
+			4,
+		},
 		classification = "Elite",
 		faction = "Alliance",
 		level = 24,
 		requiredLevel = 20,
 	},
 	[2478] = {
+		classes = {
+			4,
+		},
 		classification = "Elite",
 		faction = "Horde",
 		level = 24,
@@ -161,11 +182,38 @@ rm.questDB = {
 		},
 		requiredLevel = 20,
 	},
+	[2500] = {
+		faction = "Alliance",
+		level = 39,
+		requiredLevel = 36,
+	},
 	[2501] = {
 		classification = "Elite",
 		faction = "Alliance",
 		level = 44,
 		requiredLevel = 40,
+	},
+	[2521] = {
+		level = 55,
+		requiredLevel = 45,
+	},
+	[2522] = {
+		level = 55,
+		requiredLevel = 45,
+	},
+	[2756] = {
+		classes = {
+			1,
+			7,
+			11,
+		},
+		faction = "Horde",
+		level = 40,
+		requiredLevel = 40,
+	},
+	[2747] = {
+		level = 60,
+		requiredLevel = 42,
 	},
 	[2751] = {
 		faction = "Horde",
@@ -173,11 +221,6 @@ rm.questDB = {
 		requiredLevel = 32,
 	},
 	[2752] = {
-		classes = {
-			1,
-			3,
-			11,
-		},
 		faction = "Horde",
 		level = 32,
 		requiredLevel = 32,
@@ -202,15 +245,6 @@ rm.questDB = {
 		level = 36,
 		requiredLevel = 32,
 	},
-	[2756] = {
-		classes = {
-			1,
-			7,
-		},
-		faction = "Horde",
-		level = 40,
-		requiredLevel = 40,
-	},
 	[2758] = {
 		classes = {
 			1,
@@ -226,11 +260,6 @@ rm.questDB = {
 		requiredLevel = 40,
 	},
 	[2761] = {
-		classes = {
-			1,
-			2,
-			3,
-		},
 		level = 45,
 		requiredLevel = 40,
 	},
@@ -259,20 +288,10 @@ rm.questDB = {
 		requiredLevel = 40,
 	},
 	[2772] = {
-		classes = {
-			1,
-			2,
-			3,
-		},
 		level = 45,
 		requiredLevel = 40,
 	},
 	[2773] = {
-		classes = {
-			1,
-			2,
-			3,
-		},
 		level = 45,
 		requiredLevel = 40,
 	},
@@ -336,14 +355,26 @@ rm.questDB = {
 		level = 45,
 		requiredLevel = 30,
 	},
+	[2882] = {
+		level = 45,
+		requiredLevel = 40,
+	},
+	[3385] = {
+		classification = "Elite",
+		level = 50,
+		requiredLevel = 40,
+	},
 	[3402] = {
+		level = 50,
+		requiredLevel = 40,
+	},
+	[3481] = {
 		level = 50,
 		requiredLevel = 40,
 	},
 	[4161] = {
 		faction = "Alliance",
 		level = 7,
-		requiredLevel = 1,
 	},
 	[5124] = {
 		classification = "Elite",
@@ -351,9 +382,17 @@ rm.questDB = {
 		requiredLevel = 55,
 	},
 	[5127] = {
+		classes = {
+			1,
+			2,
+		},
 		classification = "Dungeon",
 		level = 60,
 		requiredLevel = 55,
+	},
+	[5150] = {
+		level = 55,
+		requiredLevel = 47,
 	},
 	[5163] = {
 		level = 58,
@@ -373,11 +412,6 @@ rm.questDB = {
 		classification = "Dungeon",
 		level = 60,
 		requiredLevel = 50,
-	},
-	[5518] = {
-		classification = "Dungeon",
-		level = 60,
-		requiredLevel = 56,
 	},
 	[6032] = {
 		level = 55,
@@ -400,6 +434,16 @@ rm.questDB = {
 		faction = "Alliance",
 		level = 45,
 		requiredLevel = 35,
+	},
+	[6984] = {
+		faction = "Horde",
+		level = 60,
+		requiredLevel = 30,
+	},
+	[7045] = {
+		faction = "Alliance",
+		level = 60,
+		requiredLevel = 30,
 	},
 	[7321] = {
 		faction = "Horde",
@@ -464,6 +508,39 @@ rm.questDB = {
 		level = 60,
 		requiredLevel = 50,
 	},
+	[7840] = {
+		faction = "Horde",
+		level = 49,
+		requiredLevel = 44,
+	},
+	[7931] = {
+		level = 60,
+		requiredLevel = 15,
+	},
+	[7932] = {
+		level = 60,
+		requiredLevel = 30,
+	},
+	[7933] = {
+		level = 60,
+		requiredLevel = 45,
+	},
+	[7937] = {
+		level = 60,
+		requiredLevel = 10,
+	},
+	[7938] = {
+		level = 60,
+		requiredLevel = 10,
+	},
+	[7944] = {
+		level = 60,
+		requiredLevel = 10,
+	},
+	[7945] = {
+		level = 60,
+		requiredLevel = 10,
+	},
 	[8307] = {
 		level = 57,
 		requiredLevel = 54,
@@ -472,10 +549,23 @@ rm.questDB = {
 		level = 60,
 		requiredLevel = 60,
 	},
+	[8769] = {
+		level = 40,
+		requiredLevel = 40,
+	},
+	[8798] = {
+		level = 60,
+		requiredLevel = 55,
+	},
 	[8869] = {
 		classification = "Dungeon",
+		faction = "None",
 		level = 60,
 		requiredLevel = 50,
+	},
+	[8876] = {
+		level = 60,
+		requiredLevel = 25,
 	},
 	[8877] = {
 		level = 60,
@@ -485,26 +575,93 @@ rm.questDB = {
 		level = 60,
 		requiredLevel = 50,
 	},
+	[8879] = {
+		level = 60,
+		requiredLevel = 35,
+	},
+	[8880] = {
+		level = 60,
+		requiredLevel = 45,
+	},
+	[8881] = {
+		level = 60,
+		requiredLevel = 55,
+	},
 	[8882] = {
 		level = 60,
 		requiredLevel = 55,
 	},
+	[9249] = {
+		faction = "None",
+		level = 60,
+		requiredLevel = 45,
+	},
+	[79486] = {
+		faction = "Alliance",
+		level = 60,
+		requiredLevel = 25,
+	},
+	[79487] = {
+		faction = "Horde",
+		level = 60,
+		requiredLevel = 25,
+	},
+	[79637] = {
+		level = 40,
+		requiredLevel = 20,
+	},
+	[80164] = {
+		faction = "Alliance",
+		level = 60,
+	},
+	[80165] = {
+		faction = "Alliance",
+		level = 60,
+	},
+	[80166] = {
+		faction = "Alliance",
+		level = 60,
+	},
+	[80167] = {
+		level = 60,
+	},
 	[80168] = {
 		level = 60,
-		requiredLevel = 1,
 	},
 	[80169] = {
 		level = 60,
-		requiredLevel = 1,
 	},
 	[80170] = {
 		level = 60,
-		requiredLevel = 1,
 	},
 	[80241] = {
 		faction = "Alliance",
 		level = 40,
 		requiredLevel = 40,
+	},
+	[81967] = {
+		classes = {
+			9,
+		},
+		level = 10,
+	},
+	[82301] = {
+		classes = {
+			9,
+		},
+		level = 25,
+	},
+	[82302] = {
+		classes = {
+			9,
+		},
+		level = 35,
+	},
+	[82303] = {
+		classes = {
+			9,
+		},
+		level = 10,
 	},
 	[82656] = {
 		faction = "Horde",
@@ -536,6 +693,12 @@ rm.questDB = {
 		level = 60,
 		requiredLevel = 50,
 	},
+	[84525] = {
+		classes = {
+			9,
+		},
+		level = 10,
+	},
 	[85699] = {
 		classification = "Dungeon",
 		level = 60,
@@ -545,5 +708,122 @@ rm.questDB = {
 		classification = "Dungeon",
 		level = 60,
 		requiredLevel = 50,
+	},
+	[89236] = {
+		classification = "Elite",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89245] = {
+		classification = "Elite",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89253] = {
+		classification = "Elite",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89255] = {
+		classification = "Weekly",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89256] = {
+		classification = "Weekly",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89257] = {
+		classification = "Weekly",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89258] = {
+		classification = "Weekly",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89259] = {
+		classification = "Weekly",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89260] = {
+		classification = "Weekly",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89261] = {
+		classification = "Weekly",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89262] = {
+		classification = "Weekly",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89341] = {
+		classification = "Elite",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89381] = {
+		classification = "Elite",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89421] = {
+		classification = "Elite",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89463] = {
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89471] = {
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89485] = {
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89486] = {
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89487] = {
+		classification = "Elite",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89489] = {
+		level = 60,
+		requiredLevel = 60,
+	},
+	[89491] = {
+		level = 60,
+		requiredLevel = 60,
+	},
+	[90116] = {
+		level = 60,
+		requiredLevel = 60,
+	},
+	[90120] = {
+		level = 60,
+		requiredLevel = 60,
+	},
+	[90566] = {
+		faction = "Horde",
+		level = 60,
+		requiredLevel = 60,
+	},
+	[90567] = {
+		faction = "Alliance",
+		level = 60,
+		requiredLevel = 60,
 	},
 }

@@ -57,7 +57,7 @@ end
 local function handleProfessionFrameOpened(getDisplayedProfessionFunction)
     rm.displayedProfession = getDisplayedProfessionFunction() -- e.g. Engineering (Localized)
     if rm.getProfessionID(rm.displayedProfession) then
-        rm.saveLearnedTradeSkills(getItemLink)
+        rm.saveLearnedTradeSkills()
         rm.showRecipesFrame()  
         rm.lastDisplayedProfession = rm.displayedProfession -- Used for switching to the recipes tab from another tab
     end

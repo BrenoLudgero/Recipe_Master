@@ -162,10 +162,10 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         quality = rQuality or recipeData["quality"] or 1, 
         reputationFaction = recipeData["reputationFaction"], 
         reputationLevel = recipeData["reputationLevel"], 
-        requiredLevel = recipeData["requiredLevel"], 
+        requiredLevel = recipeData["requiredLevel"] or 1, 
         requiredSkill = recipeData["requiredSkill"] or 1, 
         season = recipeData["season"], 
-        sources = rm.sourceDB[professionID][recipeID],
+        sources = rm.recipeSourceDB[professionID][recipeID],
         specialization = recipeData["specialization"], 
         teaches = recipeData["teaches"] or recipeID, 
         texture = rTexture

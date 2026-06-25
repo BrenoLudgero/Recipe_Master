@@ -27,7 +27,7 @@ end
 
 local function cacheAllItemNames()
     for professionID in pairs(L.professions) do
-        for _, recipeSources in pairs(rm.sourceDB[professionID]) do
+        for _, recipeSources in pairs(rm.recipeSourceDB[professionID]) do
             if recipeSources["item"] then
                 for itemID in pairs(recipeSources["item"]) do
                     if not rm.cachedItemNames[itemID] then
@@ -44,7 +44,7 @@ end
 
 local function cacheAllZoneNames()
     for professionID in pairs(L.professions) do
-        for _, recipeSources in pairs(rm.sourceDB[professionID]) do
+        for _, recipeSources in pairs(rm.recipeSourceDB[professionID]) do
             if recipeSources["fishing"] then
                 for zoneID in pairs(recipeSources["fishing"]) do
                     local zone = C_Map.GetAreaInfo(zoneID)
