@@ -498,7 +498,7 @@ fi
 
 # Set $releasedir to the directory which will contain the generated addon zipfile.
 if [ -z "$releasedir" ]; then
-	releasedir="$topdir/.release"
+	releasedir="$topdir/.github/.release"
 fi
 
 # Set $basedir to the basename of the checkout directory.
