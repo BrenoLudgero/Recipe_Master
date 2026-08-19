@@ -105,3 +105,13 @@ function rm.removeAbandonedSpecialization(currentSpecializations, professionID)
         end
     end
 end
+
+-- Returns the ID of the profession a specialization spell belongs to (e.g. 202 for Goblin Engineering)
+function rm.getProfessionIDBySpecializationSpell(spellID)
+    for professionID, specializations in pairs(specializationIDs) do
+        if rm.tableContains(specializations, spellID) then
+            return professionID
+        end
+    end
+    return false
+end

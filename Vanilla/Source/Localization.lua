@@ -289,6 +289,7 @@ if rm.locale == "enUS" then
     L.updateIconDropdown = "Restore Window Icon"
     L.pickpocket = "Pickpocket"
     L.trainer = "Trainer"
+    L.yourSkill = "Your Skill"
     return
 
 elseif rm.locale == "esMX" or rm.locale == "esES" then
@@ -340,6 +341,7 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.updateIconDropdown = "Icono de Restauración de la Ventana"
     L.pickpocket = "Robo"
     L.trainer = "Instructor"
+    L.yourSkill = "Tu Habilidad"
     return
 
 elseif rm.locale == "ptBR" then
@@ -386,6 +388,7 @@ elseif rm.locale == "ptBR" then
     L.updateIconDropdown = "Ícone do Botão de Restaurar Janela"
     L.pickpocket = "Bater carteira"
     L.trainer = "Instrutor"
+    L.yourSkill = "Sua Habilidade"
     return
 
 elseif rm.locale == "deDE" then
@@ -432,6 +435,7 @@ elseif rm.locale == "deDE" then
     L.updateIconDropdown = "Symbol für Fenster Wiederherstellen"
     L.pickpocket = "Taschendieb"
     L.trainer = "Lehrer"
+    L.yourSkill = "Eure Fertigkeit"
     return
 
 elseif rm.locale == "frFR" then
@@ -479,6 +483,7 @@ elseif rm.locale == "frFR" then
     L.updateIconDropdown = "Icône de Restauration de la Fenêtre"
     L.pickpocket = "Vol à la tire"
     L.trainer = "Maître"
+    L.yourSkill = "Votre compétence"
     return
 
 elseif rm.locale == "ruRU" then
@@ -527,6 +532,7 @@ elseif rm.locale == "ruRU" then
     L.updateIconDropdown = "Значок окна Восстановления"
     L.pickpocket = "Карманник"
     L.trainer = "Учитель"
+    L.yourSkill = "Ваш навык"
     return
 
 elseif rm.locale == "koKR" then
@@ -572,6 +578,7 @@ elseif rm.locale == "koKR" then
     L.updateIconDropdown = "복원 창 아이콘"
     L.pickpocket = "훔치기"
     L.trainer = "트레이너"
+    L.yourSkill = "내 숙련도"
     return
 
 elseif rm.locale == "zhTW" then
@@ -618,6 +625,7 @@ elseif rm.locale == "zhTW" then
     L.updateIconDropdown = "恢復視窗圖示"
     L.pickpocket = "搜索"
     L.trainer = "訓練師"
+    L.yourSkill = "你的技能"
     return
 
 elseif rm.locale == "zhCN" then
@@ -663,4 +671,5 @@ elseif rm.locale == "zhCN" then
     L.updateIconDropdown = "恢复窗口图标"
     L.pickpocket = "搜索"
     L.trainer = "训练师"
+    L.yourSkill = "你的技能"
 end

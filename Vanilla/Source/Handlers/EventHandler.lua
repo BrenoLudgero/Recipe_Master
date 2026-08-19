@@ -9,6 +9,7 @@ rm.frame:RegisterEvent("TRADE_SKILL_SHOW")
 rm.frame:RegisterEvent("TRADE_SKILL_CLOSE")
 rm.frame:RegisterEvent("CRAFT_SHOW")
 rm.frame:RegisterEvent("CRAFT_CLOSE")
+rm.frame:RegisterEvent("GUILD_ROSTER_UPDATE")
 
 -- Scales the interface elements based on the UI Scale setting + scale preference
 -- This fires when the setting is updated and after every login / reload
@@ -38,6 +39,13 @@ function rm.handleSkillChange(event)
     if event == "SKILL_LINES_CHANGED" then
         rm.updateCharacterProfessions()
         rm.refreshRecipesListIfOpen()
+    end
+end
+
+-- Stores the class of the character's guilded alts, used to color their names in tooltips
+function rm.handleGuildRosterUpdate(event)
+    if event == "GUILD_ROSTER_UPDATE" then
+        rm.saveGuildMembersClasses()
     end
 end
 

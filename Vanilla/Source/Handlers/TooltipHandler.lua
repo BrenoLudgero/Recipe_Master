@@ -144,6 +144,170 @@ local function getSpellInfo(spellID)
     return false, false
 end
 
+local indentation = "  " -- Groups the skill levels under the "Recipe Master" header
+local _, currentCharacterClass = UnitClass("player") -- Always in English and upper case
+
+-- Fallback for characters saved before the maximum skill level started being stored
+local maxSkillByRank = {
+    ["Apprentice"] = 75,
+    ["Journeyman"] = 150,
+    ["Expert"] = 225,
+    ["Artisan"] = 300
+}
+
+-- Profession spells whose name does not match the profession's name
+local otherProfessionSpells = {
+    [2575] = 186,  -- Mining
+    [2576] = 186,  -- Smelting (Journeyman)
+    [2656] = 186,  -- Smelting
+    [3564] = 186,  -- Smelting (Expert)
+    [10248] = 186  -- Smelting (Artisan)
+}
+
+-- Identifies a profession, profession rank or specialization spell (e.g. Cooking, Goblin Engineer)
+local function getProfessionIDFromSpell(spellID)
+    local specializationProfessionID = rm.getProfessionIDBySpecializationSpell(spellID)
+    if specializationProfessionID then
+        return specializationProfessionID
+    end
+    if otherProfessionSpells[spellID] then
+        return otherProfessionSpells[spellID]
+    end
+    local spellName = GetSpellInfo(spellID)
+    if spellName then
+        return rm.getProfessionID(spellName)
+    end
+    return false
+end
+
+local function getMaxSkill(characterProfessionData)
+    return (
+        characterProfessionData["maxLevel"]
+        or maxSkillByRank[characterProfessionData["rank"]]
+        or 300
+    )
+end
+
+-- Supports class color addons. Falls back to white for characters saved before 2.14.2
+local function getClassColorHex(class)
+    local classColors
+    if class then
+        classColors = (CUSTOM_CLASS_COLORS and CUSTOM_CLASS_COLORS[class]) or RAID_CLASS_COLORS[class]
+    end
+    if not classColors then
+        return F.colors.whiteHex
+    end
+    return string.format(
+        "ff%02X%02X%02X",
+        math.floor(classColors.r * 255),
+        math.floor(classColors.g * 255),
+        math.floor(classColors.b * 255)
+    )
+end
+
+local function getColoredSkillLevel(skillLevel, maxSkillLevel)
+    local levelColor = F.colors.lightGreenHex
+    if skillLevel < maxSkillLevel then
+        levelColor = F.colors.lightPinkHex
+    end
+    return WrapTextInColorCode(skillLevel, levelColor)
+            ..WrapTextInColorCode(" / "..maxSkillLevel, F.colors.whiteHex)
+end
+
+-- Read from the skill lines to stay accurate even before the profession is saved again
+local function getCurrentCharacterSkill(professionID)
+    local professionName = L.professions[professionID]
+    for i = 1, GetNumSkillLines() do
+        local skillName, _, _, skillRank, _, _, maxSkillRank = GetSkillLineInfo(i)
+        if skillName == professionName then
+            return skillRank, maxSkillRank
+        end
+    end
+    local savedProfession = rm.getSavedProfessionByID(professionID)
+    if savedProfession then
+        return savedProfession["level"], getMaxSkill(savedProfession)
+    end
+    return false, false
+end
+
+local function getSortedCharacterNames(charactersProfessionData)
+    local characterNames = {}
+    for characterName in pairs(charactersProfessionData) do
+        table.insert(characterNames, characterName)
+    end
+    table.sort(characterNames)
+    return characterNames
+end
+
+local function getOtherCharactersProfessionData(professionID)
+    if not rm.getPreference("showAltsTooltipInfo") then
+        return {}
+    end
+    return rm.getProfessionDataForOtherCharacters(professionID)
+end
+
+-- Ensures that the information is not displayed twice
+local function isProfessionInfoDisplayed(tooltip)
+    for i = 1, tooltip:NumLines() do
+        local currentLineText = _G[tooltip:GetName().."TextLeft"..i]:GetText()
+        if currentLineText and currentLineText:find("Recipe Master", 1, true) then
+            return true
+        end
+    end
+    return false
+end
+
+-- Recipe Master's tooltips are already detailed inside the recipes list
+local function isTooltipOwnedByRecipeMaster(tooltip)
+    local owner = tooltip:GetOwner()
+    while owner do
+        if owner == rm.mainFrame then
+            return true
+        end
+        owner = owner:GetParent()
+    end
+    return false
+end
+
+-- Appends the character's and its alts' skill levels to a profession's tooltip
+local function showProfessionInfoInTooltip(tooltip, professionID)
+    if isProfessionInfoDisplayed(tooltip) then
+        return
+    end
+    local skillLevel, maxSkillLevel = getCurrentCharacterSkill(professionID)
+    local otherCharacters = getOtherCharactersProfessionData(professionID)
+    local characterNames = getSortedCharacterNames(otherCharacters)
+    if not skillLevel and #characterNames == 0 then
+        return
+    end
+    tooltip:AddLine(" ")
+    tooltip:AddLine("Recipe Master", unpack(F.colors.yellow))
+    if skillLevel then
+        tooltip:AddDoubleLine(
+            indentation..WrapTextInColorCode(L.yourSkill, getClassColorHex(currentCharacterClass)),
+            getColoredSkillLevel(skillLevel, maxSkillLevel)
+        )
+    end
+    if #characterNames > 0 then
+        tooltip:AddLine(" ")
+        for _, characterName in ipairs(characterNames) do
+            local characterProfessionData = otherCharacters[characterName]
+            tooltip:AddDoubleLine(
+                indentation..WrapTextInColorCode(
+                    characterName.."-"..rm.currentServer,
+                    getClassColorHex(characterProfessionData["class"])
+                ),
+                getColoredSkillLevel(
+                    characterProfessionData["level"],
+                    getMaxSkill(characterProfessionData)
+                )
+            )
+        end
+    end
+    tooltip:AddLine(" ") -- Keeps the last line from touching whatever is appended below
+    tooltip:Show()
+end
+
 local function showMessageInTooltip(tooltip, item, professionID)
     local message = getRecipeTooltipMessage(item, professionID)
     local messageLineCount = select(2, message:gsub("\n", "\n"))
@@ -177,8 +341,15 @@ GameTooltip:HookScript("OnTooltipSetSpell", function(tooltip)
     if rm.getPreference("showAltsTooltipInfo") or rm.getPreference("showSourcesTooltipInfo") then
         local _, spellID = tooltip:GetSpell()
         if spellID then
-            local spell, professionID = getSpellInfo(spellID)
-            showMessageInTooltip(tooltip, spell, professionID)
+            -- Professions display the characters' skill levels instead of recipe information
+            -- The recipes list keeps displaying the details of a profession rank / specialization
+            local professionID = getProfessionIDFromSpell(spellID)
+            if professionID and not isTooltipOwnedByRecipeMaster(tooltip) then
+                showProfessionInfoInTooltip(tooltip, professionID)
+                return
+            end
+            local spell, recipeProfessionID = getSpellInfo(spellID)
+            showMessageInTooltip(tooltip, spell, recipeProfessionID)
         end
     end
 end)

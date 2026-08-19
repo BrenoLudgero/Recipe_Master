@@ -1,5 +1,7 @@
 local _, rm = ...
 
+local _, currentCharacterClass = UnitClass("player") -- Always in English and upper case
+
 function rm.getSavedProfessionByID(professionID)
     return rm.getSavedVariablesForCurrentCharacter()[professionID]
 end
@@ -31,7 +33,9 @@ local function storeLearnedProfession(currentProfessions, skillName, skillRank, 
     local professionID = rm.getProfessionID(skillName)
     if professionID then
         currentProfessions[professionID] = {
+            ["class"] = currentCharacterClass,
             ["level"] = skillRank,
+            ["maxLevel"] = maxSkillRank,
             ["rank"] = getRankName(maxSkillRank),
             ["skills"] = {},
             ["specialization"] = false,
@@ -83,6 +87,7 @@ local function updateSavedProfessions(currentProfessions)
     for professionID, professionData in pairs(currentProfessions) do
         local professionLevel = professionData["level"]
         local savedProfessionLevel = rm.getSavedProfessionByID(professionID)["level"]
+        local professionMaxLevel = professionData["maxLevel"]
         local professionRank = professionData["rank"]
         local savedProfessionRank = rm.getSavedProfessionByID(professionID)["rank"]
         local professionSpecialization = professionData["specialization"]
@@ -90,6 +95,13 @@ local function updateSavedProfessions(currentProfessions)
         -- Transforms a previously unique saved specialization into a table of specializations (2.6.0 -> 2.6.1)
         if isSodSavedSpecializationFormatOutdated(professionID, savedProfessionSpecialization) then
             savedProfessionSpecialization = {}
+        end
+        -- Stored separately as they are only needed to display the character's progress
+        if professionMaxLevel ~= rm.getSavedProfessionByID(professionID)["maxLevel"] then
+            rm.getSavedProfessionByID(professionID)["maxLevel"] = professionMaxLevel
+        end
+        if currentCharacterClass ~= rm.getSavedProfessionByID(professionID)["class"] then
+            rm.getSavedProfessionByID(professionID)["class"] = currentCharacterClass
         end
         if professionLevel ~= savedProfessionLevel then
             rm.getSavedProfessionByID(professionID)["level"] = professionLevel
@@ -103,6 +115,50 @@ local function updateSavedProfessions(currentProfessions)
     end
 end
 
+-- A character's class is only stored when it logs in
+-- Guild members are filled in beforehand so that their names can be class colored right away
+local function isClassMissingForAnySavedCharacter()
+    for _, characterData in pairs(rm.getSavedVariablesForCurrentServerAndFaction()) do
+        for _, professionData in pairs(characterData) do
+            if type(professionData) == "table" and not professionData["class"] then
+                return true
+            end
+        end
+    end
+    return false
+end
+
+local function saveClassForSavedCharacter(characterName, class)
+    local characterData = rm.getSavedVariablesForCurrentServerAndFaction()[characterName]
+    if not characterData then
+        return
+    end
+    for _, professionData in pairs(characterData) do
+        if type(professionData) == "table" and not professionData["class"] then
+            professionData["class"] = class
+        end
+    end
+end
+
+-- Called when the guild roster is received
+function rm.saveGuildMembersClasses()
+    if not IsInGuild() or not isClassMissingForAnySavedCharacter() then
+        return
+    end
+    for i = 1, GetNumGuildMembers() do
+        local memberName, _, _, _, _, _, _, _, _, _, classFilename = GetGuildRosterInfo(i)
+        if memberName and classFilename then
+            saveClassForSavedCharacter(Ambiguate(memberName, "short"), classFilename)
+        end
+    end
+end
+
+local function requestGuildRosterIfClassesAreMissing()
+    if IsInGuild() and C_GuildInfo and isClassMissingForAnySavedCharacter() then
+        C_GuildInfo.GuildRoster()
+    end
+end
+
 function rm.updateCharacterProfessions()
     local currentProfessions = getCurrentCharacterLearnedProfessions()
     local currentSpecializations = rm.getLearnedSpecializations()
@@ -113,4 +169,5 @@ function rm.updateCharacterProfessions()
         removeAbandonedProfession(currentProfessions, professionID)
         rm.removeAbandonedSpecialization(currentSpecializations, professionID)
     end
+    requestGuildRosterIfClassesAreMissing()
 end
