@@ -128,6 +128,10 @@ local function getRecipeInfo(itemLink)
     return false, false
 end
 
+local function isSpellData(data)
+    return data.link and string.find(data.link, "|Hspell:", 1, true)
+end
+
 local function getSpellInfo(spellID)
     local possibleProfessionIDs = {
         186,  -- Mining
@@ -137,7 +141,9 @@ local function getSpellInfo(spellID)
     }
     for _, professionID in ipairs(possibleProfessionIDs) do
         local spell = rm.cachedRecipes[professionID][spellID]
-        if spell then
+        -- Ignores recipe items that share the spell's ID
+        -- e.g. "Formula: Brilliant Mana Oil" and spell "Create Soulstone (Major)"
+        if spell and isSpellData(spell) then
             return spell, professionID
         end
     end
