@@ -133,17 +133,11 @@ local function isSpellData(data)
 end
 
 local function getSpellInfo(spellID)
-    local possibleProfessionIDs = {
-        186,  -- Mining
-        2842, -- Poisons
-        202,  -- Engineering
-        333   -- Enchanting
-    }
-    for _, professionID in ipairs(possibleProfessionIDs) do
+    for professionID in pairs(L.professions) do
         local spell = rm.cachedRecipes[professionID][spellID]
         -- Ignores recipe items that share the spell's ID
         -- e.g. "Formula: Brilliant Mana Oil" and spell "Create Soulstone (Major)"
-        if spell and isSpellData(spell) then
+        if spell and isSpellData(spell) and type(spell.teaches) ~= "string" then
             return spell, professionID
         end
     end
