@@ -89,11 +89,18 @@ function rm.saveLearnedTradeSkills()
     end
 end
 
-local function isNewSkillNameContainedInRecipeName(professionID, recipeName, newSkillName)
-    return (
-        professionID ~= 2842 -- Poisons. Prevents detection of higher poison ranks
-        and string.find(recipeName, newSkillName)
-    )
+-- Checks if the recipe name is the skill name preceded by a prefix ending in a colon
+-- e.g. "Manual: Silk Bandage" matches "Silk Bandage", but "Manual: Heavy Silk Bandage" does not
+local function isRecipeNamePrefixedSkillName(professionID, recipeName, newSkillName)
+    if professionID == 2842 then -- Poisons. Prevents detection of higher poison ranks
+        return false
+    end
+    local prefixLength = #recipeName - #newSkillName
+    if prefixLength <= 0 or string.sub(recipeName, prefixLength + 1) ~= newSkillName then
+        return false
+    end
+    local prefix = strtrim(string.sub(recipeName, 1, prefixLength))
+    return string.sub(prefix, -1) == ":" or string.sub(prefix, -3) == "：" -- Full-width colon (zhCN, zhTW)
 end
 
 function rm.saveNewlyLearnedSkill(newSkillID)
@@ -103,7 +110,7 @@ function rm.saveNewlyLearnedSkill(newSkillID)
             for _, recipeData in pairs(recipes) do
                 local recipeName = recipeData.name
                 if recipeName == newSkillName 
-                or isNewSkillNameContainedInRecipeName(professionID, recipeName, newSkillName) then
+                or isRecipeNamePrefixedSkillName(professionID, recipeName, newSkillName) then
                     table.insert(getSavedSkillsByProfessionID(professionID), recipeData.teaches)
                     return
                 end
