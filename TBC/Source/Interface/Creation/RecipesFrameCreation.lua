@@ -17,13 +17,40 @@ end
 
 function rm.createDivider(parent)
     local divider = CreateFrame("Frame", nil, parent, F.templates.divider)
-    local frameLevel = parent:GetFrameLevel() + 2
-    divider:SetSize(parent:GetWidth(), F.sizes.dividerHeight)
+    local frameLevel = rm.mainFrameBorder:GetFrameLevel() + 1
+    divider:SetHeight(F.sizes.dividerHeight)
     divider:SetFrameLevel(frameLevel)
     divider:SetPoint("BOTTOM", parent, "TOP")
     divider:SetPoint("LEFT")
     divider:SetPoint("RIGHT")
     return divider
+end
+
+local function createDividerCheckButton(parent, preference, labelText)
+    local button = CreateFrame("CheckButton", nil, parent, F.templates.checkButton)
+    local frameLevel = parent:GetFrameLevel() + 1
+    button:SetSize(F.sizes.dividerCheckButton, F.sizes.dividerCheckButton)
+    button:SetFrameLevel(frameLevel)
+    button:SetChecked(rm.getPreference(preference))
+    button.label = button:CreateFontString(nil, "OVERLAY", F.fonts.dividerCheckButtonText)
+    button.label:SetText(labelText)
+    button.label:SetFontHeight(F.fontSizes.dividerCheckButton)
+    button.label:SetPoint("LEFT", button, "RIGHT", 0, F.offsets.dividerCheckButtonLabelY)
+    rm.toggleRecipesListPreferenceOnClick(button, preference)
+    return button
+end
+
+function rm.createShowLearnedCheckButton(parent)
+    local button = createDividerCheckButton(parent, "showLearnedRecipes", L.showLearned)
+    button:SetPoint("BOTTOMLEFT", parent, "BOTTOMLEFT")
+    return button
+end
+
+function rm.createShowDetailsCheckButton(parent)
+    local button = createDividerCheckButton(parent, "showRecipesInfo", L.showDetails)
+    local showLearnedWidth = rm.showLearnedCheckButton:GetWidth() + rm.showLearnedCheckButton.label:GetStringWidth()
+    button:SetPoint("LEFT", rm.showLearnedCheckButton, "LEFT", showLearnedWidth + 1, 0)
+    return button
 end
 
 function rm.createRecipesScrollFrame(parent)
@@ -45,25 +72,25 @@ function rm.createSearchBar(parent)
     local searchBar = CreateFrame("EditBox", nil, parent, F.templates.search)
     local font = searchBar:GetFont()
     local frameLevel = parent:GetFrameLevel() + 1
-    searchBar:SetSize(F.sizes.searchBarWidth, F.sizes.searchBarHeight)
+    searchBar:SetHeight(F.sizes.searchBarHeight)
     searchBar:SetFrameLevel(frameLevel)
-    searchBar:SetPoint("TOPLEFT", F.offsets.searchBarX, 0)
-    searchBar:SetPoint("BOTTOMLEFT")
+    searchBar:SetPoint("TOPLEFT", F.offsets.searchBarX, F.offsets.searchBarY)
     searchBar:SetFont(font, F.fontSizes.searchBar, "")
     rm.displayPlaceholderTextBasedOnFocus(searchBar)
     rm.showMatchingRecipesOnTop(searchBar)
     return searchBar
 end
 
-function rm.createSortDropdown(parent)
+function rm.createSortByDropdown(parent)
     local font = rm.searchBar:GetFont()
     local frameLevel = parent:GetFrameLevel() + 1
     local sortDropdown = CreateFrame("DropdownButton", nil, parent, F.templates.dropdown)
     sortDropdown:SetWidth(F.sizes.sortDropdownWidth)
     sortDropdown:SetScale(0.73)
     sortDropdown:SetFrameLevel(frameLevel)
-    sortDropdown:SetPoint("RIGHT", F.offsets.sortDropdownX, F.offsets.sortDropdownY)
+    sortDropdown:SetPoint("TOPRIGHT", parent, F.offsets.sortByDropdownX, F.offsets.sortByDropdownY)
     sortDropdown.Text:SetFont(font, F.fontSizes.sortDropdown, "")
+    rm.showTooltipTextOnMouseover(sortDropdown, L.sortBy, "ANCHOR_TOP")
     local options = {
         {L.name, "Name"},
         {L.quality, "Quality"},
@@ -74,21 +101,13 @@ function rm.createSortDropdown(parent)
     return sortDropdown
 end
 
-function rm.createSortByText(parent)
-    local text = parent:CreateFontString(nil, "OVERLAY", F.fonts.sortByText)
-    text:SetText(L.sortBy)
-    text:SetTextColor(unpack(F.colors.yellow))
-    text:SetPoint("RIGHT", parent, "LEFT", F.offsets.sortByTextX, F.offsets.sortByTextY)
-    return text
-end
-
 function rm.createSortOrderButton(parent)
     local button = CreateFrame("Button", nil, parent)
     local frameLevel = parent:GetFrameLevel() + 1
     button:SetFrameLevel(frameLevel)
     button:SetSize(F.sizes.sortOrderButton, F.sizes.sortOrderButton)
-    button:SetPoint("TOPRIGHT", rm.divider, 0, 0)
-    button:SetPoint("BOTTOMRIGHT", rm.divider, 0, 0)
+    -- Aligned to the right side of the sortBy dropdown's background texture
+    button:SetPoint("TOPLEFT", parent.Background, "TOPRIGHT", F.offsets.sortOrderDropdownX, F.offsets.sortOrderDropdownY)
     button:SetNormalTexture(F.textures.sortOrderButton)
     button:SetHighlightTexture(F.textures.sortOrderButtonHighlight)
     local texture = button:CreateTexture()

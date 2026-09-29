@@ -138,6 +138,13 @@ function rm.showMatchingRecipesOnTop(searchBar)
     end)
 end
 
+function rm.toggleRecipesListPreferenceOnClick(button, preference)
+    button:SetScript("OnClick", function(self)
+        rm.toggleBooleanPreference(preference)
+        rm.showSortedRecipes()
+    end)
+end
+
 local function isSortedBySelectedValue(dropdown, value)
     return value == rm.getPreference("sortRecipesBy")
 end

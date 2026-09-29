@@ -24,14 +24,16 @@ function rm.createAllFrameElements()
 
     ------------------------- Recipes / Fishing frame -------------------------
     rm.progressContainer = rm.createProgressContainer(rm.mainFrame)
-    rm.divider = rm.createDivider(rm.progressContainer) -- The background frame containing searchBar and sortDropdown
+    rm.divider = rm.createDivider(rm.progressContainer) -- The frame containing searchBar and the check buttons
     rm.recipesScrollFrame = rm.createRecipesScrollFrame(rm.mainFrame)
     rm.recipesList = rm.createRecipesList(rm.recipesScrollFrame)
     rm.recipesScrollFrame:SetScrollChild(rm.recipesList)
     rm.searchBar = rm.createSearchBar(rm.divider)
-    rm.sortDropdown = rm.createSortDropdown(rm.divider)
-    rm.createSortByText(rm.sortDropdown)
-    rm.createSortOrderButton(rm.sortDropdown)
+    rm.sortByDropdown = rm.createSortByDropdown(rm.divider)
+    rm.searchBar:SetPoint("RIGHT", rm.sortByDropdown, "LEFT", -4, 0) -- Fills the space up to the dropdown
+    rm.showLearnedCheckButton = rm.createShowLearnedCheckButton(rm.divider)
+    rm.createShowDetailsCheckButton(rm.divider)
+    rm.createSortOrderButton(rm.sortByDropdown)
     rm.progressBar = rm.createProgressBar(rm.progressContainer)
     rm.progressBarText = rm.createProgressBarText(rm.progressBar)
 
@@ -65,8 +67,6 @@ function rm.createAllFrameElements()
         progressColor = rm.createProgressColorDropdown(),
         restoreButton = rm.createRestoreIconDropdown(),
         ---------- Checkboxes ----------
-        showRecipesInfo = rm.createShowRecipesInfoCheckButton(),
-        showLearnedButton = rm.createShowLearnedCheckButton(),
         showDifficultyTooltipInfo = rm.createDifficultyTooltipInfoCheckButton(),
         showSourcesTooltipInfo = rm.createSourcesTooltipInfoCheckButton(),
         showAltsTooltipInfo = rm.createAltsTooltipInfoCheckButton(),

@@ -8,38 +8,32 @@ local F = rm.F
 
 local function setLocaleSpecificOffsets()
     if rm.locale == "esES" or rm.locale == "esMX" then
+        F.offsets.dividerCheckButtonLabelY = 1
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 19
-        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 10
-        F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 20
-       F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 20
+        F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 20
         F.offsets.sourcesListColumnsX[L.item] = {3, 326}
     elseif rm.locale == "ptBR" then
+        F.offsets.dividerCheckButtonLabelY = 1
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 14
-        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 10
-        F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 30
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 35
         F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 35
         F.offsets.sourcesListTabX = 2
         F.offsets.sourcesListColumnsX[L.item] = {3, 320}
     elseif rm.locale == "deDE" then
+        F.offsets.dividerCheckButtonLabelY = 1
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 13
-        F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 22
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 18
         F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 18
         F.offsets.sourcesListTabX = 0
         F.offsets.sourcesListColumnsX[L.vendor] = {3, 162, 234, 314}
     elseif rm.locale == "frFR" then
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 13
-        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 24
-        F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 45
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 25
         F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 25
         F.offsets.sourcesListColumnsX[L.drop] = {3, 177, 230, 314}
         F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 177, 230, 314}
     elseif rm.locale == "ruRU" then
-        F.offsets.showDetailsCheckX = F.offsets.thirdColumnX - 10
-        F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 40
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 25
         F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 25
         F.offsets.bottomTabTextY = 6.2
@@ -98,17 +92,19 @@ F.offsets.fishingTabX = -55.1
 F.offsets.recipesTabX = 55
 
 ------------------------- Recipes / Fishing frame -------------------------
+F.offsets.dividerCheckButtonLabelY = 0
 F.offsets.recipeIconX = 20
 F.offsets.recipeInfoY = -3
 F.offsets.recipeTextX = 6
-F.offsets.recipesListScrollX = -31.3
+F.offsets.recipesListScrollX = -31
 F.offsets.recipesListScrollTopY = -6
 F.offsets.recipesListScrollBottomY = 4.5
 F.offsets.searchBarX = 8
-F.offsets.sortByTextX = -4
-F.offsets.sortByTextY = 0
-F.offsets.sortDropdownX = -35
-F.offsets.sortDropdownY = 0
+F.offsets.searchBarY = -4
+F.offsets.sortByDropdownX = -32
+F.offsets.sortByDropdownY = -7
+F.offsets.sortOrderDropdownX = -8
+F.offsets.sortOrderDropdownY = -4
 
 ------------------------- Sources frame -------------------------
 F.offsets.instructionsY = -10
@@ -187,10 +183,6 @@ F.offsets.iconDropdownX = F.offsets.thirdColumnX
 F.offsets.iconDropdownY = F.offsets.firstRowY
 F.offsets.progressColorDropdownX = F.offsets.secondColumnX
 --------------- Checkboxes ---------------
-F.offsets.showDetailsCheckX = F.offsets.thirdColumnX
-F.offsets.showDetailsCheckY = F.offsets.secondRowY
-F.offsets.showLearnedCheckX = F.offsets.secondColumnX - 6
-F.offsets.showLearnedCheckY = F.offsets.secondRowY
 F.offsets.showDifficultyTooltipCheckX = F.offsets.firstColumnX - 4
 F.offsets.showDifficultyTooltipCheckY = F.offsets.fourthRowY
 F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX - 4
@@ -213,8 +205,6 @@ local function setLocaleSpecificSizes()
         F.sizes.sourcesListExtraTabWidth = 19
     elseif rm.locale == "deDE" then
         F.sizes.sourcesListExtraTabWidth = 18
-    elseif rm.locale == "frFR" then
-        F.sizes.sortDropdownWidth = 120
     elseif rm.locale == "ruRU" then
         F.sizes.sourcesListExtraTabWidth = 16
         F.sizes.sourcesCellTextLength["firstOfTwoColumns"] = 94
@@ -238,7 +228,7 @@ local function setLocaleSpecificSizes()
 end
 
 ------------------------- Main frame -------------------------
-F.sizes.dividerHeight = 25
+F.sizes.dividerHeight = 45
 F.sizes.mainBackgroundTile = 300
 F.sizes.restoreButton = 30 -- Width and height
 
@@ -252,10 +242,10 @@ F.sizes.bottomTabTextureHeight = 75
 F.sizes.progressContainerHeight = 22
 F.sizes.recipeIcon = 26 -- Width and height
 F.sizes.recipesFrameWidth = 314 -- Minimum width!
-F.sizes.searchBarWidth = 128
 F.sizes.searchBarHeight = 18 -- Clickable area height
+F.sizes.dividerCheckButton = 22 -- Width and height
 F.sizes.sortDropdownWidth = 110
-F.sizes.sortOrderButton = 32 -- Width and height
+F.sizes.sortOrderButton = 34 -- Width and height
 
 ------------------------- Sources frame -------------------------
 F.sizes.sourcesBackgroundTile = 220
@@ -319,7 +309,7 @@ F.fonts.bottomTab = specificFont
 ------------------------- Recipes / Fishing frame -------------------------
 F.fonts.progressBar = "SystemFont_Outline_Small"
 F.fonts.recipeText = "GameFontHighlightSmallOutline"
-F.fonts.sortByText = "SystemFont_Outline"
+F.fonts.dividerCheckButtonText = "SystemFont_Outline_Small"
 
 ------------------------- Sources frame -------------------------
 F.fonts.sourcesColumns = "GameFontHighlight"
@@ -341,7 +331,14 @@ F.fonts.title = "GameFontNormalLarge"
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 local function setLocaleSpecificFontSizes()
-    if rm.locale == "ruRU" then
+    if rm.locale == "esES" 
+    or rm.locale == "esMX"
+    or rm.locale == "ptBR"
+    or rm.locale == "deDE" then
+        F.fontSizes.dividerCheckButton = 8
+    elseif rm.locale == "frFR" then
+        F.fontSizes.dividerCheckButton = 7
+    elseif rm.locale == "ruRU" then
         F.fontSizes.bottomTab = 10
     elseif rm.locale == "koKR" then
         F.fontSizes.bottomTab = 11
@@ -361,6 +358,9 @@ F.fontSizes.centeredText = 18
 
 ------------------------- Bottom tabs -------------------------
 F.fontSizes.bottomTab = 9
+
+------------------------- Recipes / Fishing frame -------------------------
+F.fontSizes.dividerCheckButton = 10
 
 ------------------------- Sources frame -------------------------
 F.fontSizes.sourcesFrameHeader = 15
@@ -446,13 +446,11 @@ F.textures.silverCoin = "Interface/MoneyFrame/UI-SilverIcon"
 F.textures.sourcesBackground = "Interface/AdventureMap/AdventureMapParchmentTile"
 F.textures.sourcesListBackground = "Interface/TutorialFrame/TutorialFrameBackground"
 F.textures.sourcesListEdge = "Interface/Tooltips/UI-Tooltip-Border"
-F.textures.sortDropdown = "Interface/COMMON/Common-Input-Border"
 F.textures.sortOrderArrowUp = "Interface/Buttons/Arrow-Up-Up"
 F.textures.sortOrderArrowDown = "Interface/Buttons/Arrow-Down-Up"
 F.textures.sortOrderButton = "Interface/Buttons/LockButton-Border"
 F.textures.sortOrderButtonHighlight = "Interface/Buttons/UI-CheckBox-Highlight"
 F.textures.sourcesInstructionsMask = "Interface/Masks/CircleMaskScalable"
-F.textures.sourcesListColumn = "Interface/Glues/CharacterSelect/Glues-CharacterSelect-Tab"
 F.textures.sourcesListRow = "Interface/Tooltips/UI-Tooltip-Background"
 F.textures.sourcesListActiveTab = "Interface/HELPFRAME/HelpFrameTab-Active"
 F.textures.sourcesListInactiveTab = "Interface/HELPFRAME/HelpFrameTab-Inactive"

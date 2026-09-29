@@ -115,24 +115,6 @@ local function createCheckButton(xOffset, yOffset, savedVariable, labelText)
     return button
 end
 
-function rm.createShowRecipesInfoCheckButton()
-    return createCheckButton(
-        F.offsets.showDetailsCheckX, 
-        F.offsets.showDetailsCheckY, 
-        "showRecipesInfo", 
-        L.showRecipesInfo
-    )
-end
-
-function rm.createShowLearnedCheckButton()
-    return createCheckButton(
-        F.offsets.showLearnedCheckX, 
-        F.offsets.showDetailsCheckY, 
-        "showLearnedRecipes", 
-        L.showLearnedRecipes
-    )
-end
-
 function rm.createDifficultyTooltipInfoCheckButton()
     return createCheckButton(
         F.offsets.showDifficultyTooltipCheckX,
