@@ -1,13 +1,14 @@
 local _, rm = ...
 local F = rm.F
 
+-- Hooked to preserve the element's template scripts (e.g., the dropdown's highlight)
 function rm.showTooltipTextOnMouseover(element, tooltipText, anchorPoint)
-    element:SetScript("OnEnter", function(self)
+    element:HookScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, anchorPoint)
         GameTooltip:SetText(tooltipText)
         GameTooltip:Show()
     end)
-    element:SetScript("OnLeave", function()
+    element:HookScript("OnLeave", function()
         GameTooltip:Hide()
     end)
 end
