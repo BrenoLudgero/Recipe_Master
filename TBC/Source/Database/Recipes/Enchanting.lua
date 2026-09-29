@@ -119,7 +119,6 @@ rm.recipeDB[333] = {
 			10,
 		},
 		isSpell = true,
-		teaches = 6218,
 	},
 	[7426] = {
 		difficulty = {
@@ -221,7 +220,6 @@ rm.recipeDB[333] = {
 		},
 		isSpell = true,
 		requiredSkill = 100,
-		teaches = 6339,
 	},
 	[7857] = {
 		difficulty = {
@@ -622,7 +620,6 @@ rm.recipeDB[333] = {
 		},
 		isSpell = true,
 		requiredSkill = 150,
-		teaches = 11130,
 	},
 	[13631] = {
 		difficulty = {
@@ -773,7 +770,6 @@ rm.recipeDB[333] = {
 		},
 		isSpell = true,
 		requiredSkill = 200,
-		teaches = 11145,
 	},
 	[13746] = {
 		difficulty = {
@@ -950,7 +946,6 @@ rm.recipeDB[333] = {
 		isSpell = true,
 		quality = 2,
 		requiredSkill = 10,
-		teaches = 11287,
 	},
 	[14807] = {
 		difficulty = {
@@ -962,7 +957,6 @@ rm.recipeDB[333] = {
 		isSpell = true,
 		quality = 2,
 		requiredSkill = 70,
-		teaches = 11288,
 	},
 	[14809] = {
 		difficulty = {
@@ -974,7 +968,6 @@ rm.recipeDB[333] = {
 		isSpell = true,
 		quality = 2,
 		requiredSkill = 155,
-		teaches = 11289,
 	},
 	[14810] = {
 		difficulty = {
@@ -986,7 +979,6 @@ rm.recipeDB[333] = {
 		isSpell = true,
 		quality = 2,
 		requiredSkill = 175,
-		teaches = 11290,
 	},
 	[16214] = {
 		difficulty = {
@@ -1247,7 +1239,6 @@ rm.recipeDB[333] = {
 		},
 		isSpell = true,
 		requiredSkill = 250,
-		teaches = 12655,
 	},
 	[17181] = {
 		difficulty = {
@@ -1258,7 +1249,6 @@ rm.recipeDB[333] = {
 		},
 		isSpell = true,
 		requiredSkill = 250,
-		teaches = 12810,
 	},
 	[17725] = {
 		difficulty = {
@@ -2003,7 +1993,6 @@ rm.recipeDB[333] = {
 		isSpell = true,
 		quality = 3,
 		requiredSkill = 325,
-		teaches = 22460,
 	},
 	[28028] = {
 		difficulty = {
@@ -2015,7 +2004,6 @@ rm.recipeDB[333] = {
 		isSpell = true,
 		quality = 4,
 		requiredSkill = 350,
-		teaches = 22459,
 	},
 	[28029] = {
 		isSpell = true,
@@ -2151,7 +2139,6 @@ rm.recipeDB[333] = {
 		},
 		isSpell = true,
 		requiredSkill = 300,
-		teaches = 22461,
 	},
 	[33148] = {
 		difficulty = {
@@ -2413,13 +2400,11 @@ rm.recipeDB[333] = {
 		isSpell = true,
 		quality = 3,
 		requiredSkill = 300,
-		teaches = 22448,
 	},
 	[42615] = {
 		isSpell = true,
 		quality = 3,
 		requiredSkill = 335,
-		teaches = 22448,
 	},
 	[44383] = {
 		difficulty = {
