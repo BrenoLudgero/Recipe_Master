@@ -2,7 +2,30 @@ local _, rm = ...
 local L = rm.L
 
 rm.cachedRecipes = {}
+rm.craftedItems = {} -- [itemID] = {recipe, professionID}
+rm.craftedEnchantingItems = {} -- [itemName] = {recipe, professionID}
 rm.cachedItemNames = {}
+
+-- Stores the recipe under what it crafts, preferring the recipe of the current faction
+local function storeCraftedItem(craftedItems, key, recipe, professionID)
+    local storedItem = craftedItems[key]
+    if not storedItem or not rm.isMissingRecipeOfCurrentFaction(storedItem.recipe) then
+        craftedItems[key] = {recipe = recipe, professionID = professionID}
+    end
+end
+
+local function storeCachedCraftedItem(recipeID, professionID)
+    local recipe = rm.cachedRecipes[professionID][recipeID]
+    if rm.isRankupRecipe(recipe) then
+        return
+    end
+    -- Enchanting recipes teach spells, whose crafted items share their names (e.g. Greater Magic Wand)
+    if professionID == 333 then
+        storeCraftedItem(rm.craftedEnchantingItems, recipe.name, recipe, professionID)
+    else
+        storeCraftedItem(rm.craftedItems, recipe.teaches, recipe, professionID)
+    end
+end
 
 -- Stores all recipe data for each profession in rm.cachedRecipes
 -- to be retrieved locally without the risk of querying unavailable data
@@ -14,11 +37,13 @@ local function cacheAllRecipes()
                 local spell = Spell:CreateFromSpellID(recipeID)
                 spell:ContinueOnSpellLoad(function()
                     rm.storeSpellData(recipeID, rawRecipeData, professionID)
+                    storeCachedCraftedItem(recipeID, professionID)
                 end)
             else
                 local recipe = Item:CreateFromItemID(recipeID)
                 recipe:ContinueOnItemLoad(function()
                     rm.storeRecipeData(recipeID, rawRecipeData, professionID)
+                    storeCachedCraftedItem(recipeID, professionID)
                 end)
             end
         end

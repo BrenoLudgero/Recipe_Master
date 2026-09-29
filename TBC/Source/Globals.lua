@@ -39,6 +39,10 @@ local sourceTypes = {
     ["item"] = L.item
 }
 
+function rm.isRankupRecipe(recipe)
+    return type(recipe.teaches) == "string"
+end
+
 function rm.getLocalizedSourceType(sourceType)
     return sourceTypes[sourceType]
 end
