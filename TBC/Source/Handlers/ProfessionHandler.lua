@@ -79,7 +79,7 @@ local function updateSavedProfessions(currentProfessions)
         local professionRank = professionData["rank"]
         local savedProfessionRank = rm.getSavedProfessionByID(professionID)["rank"]
         local professionSpecialization = professionData["specialization"]
-        local savedProfessionSpecialization = rm.getSavedSpecializationByID(professionID)
+        local savedProfessionSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
         if professionLevel ~= savedProfessionLevel then
             rm.getSavedProfessionByID(professionID)["level"] = professionLevel
         elseif professionRank ~= savedProfessionRank then

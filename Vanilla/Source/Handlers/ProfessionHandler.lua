@@ -86,7 +86,7 @@ local function updateSavedProfessions(currentProfessions)
         local professionRank = professionData["rank"]
         local savedProfessionRank = rm.getSavedProfessionByID(professionID)["rank"]
         local professionSpecialization = professionData["specialization"]
-        local savedProfessionSpecialization = rm.getSavedSpecializationByID(professionID)
+        local savedProfessionSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
         -- Transforms a previously unique saved specialization into a table of specializations (2.6.0 -> 2.6.1)
         if isSodSavedSpecializationFormatOutdated(professionID, savedProfessionSpecialization) then
             savedProfessionSpecialization = {}

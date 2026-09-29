@@ -284,7 +284,6 @@ if rm.locale == "enUS" then
     L.updateIconDropdown = "Restore Window Icon"
     L.pickpocket = "Pickpocket"
     L.trainer = "Trainer"
-    return
 
 elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.professions = {
@@ -336,7 +335,6 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.updateIconDropdown = "Icono de Restauración de la Ventana"
     L.pickpocket = "Robo"
     L.trainer = "Instructor"
-    return
 
 elseif rm.locale == "ptBR" then
     L.professions = {
@@ -383,7 +381,6 @@ elseif rm.locale == "ptBR" then
     L.updateIconDropdown = "Ícone do Botão de Restaurar Janela"
     L.pickpocket = "Bater carteira"
     L.trainer = "Instrutor"
-    return
 
 elseif rm.locale == "deDE" then
     L.professions = {
@@ -430,7 +427,6 @@ elseif rm.locale == "deDE" then
     L.updateIconDropdown = "Symbol für Fenster Wiederherstellen"
     L.pickpocket = "Taschendieb"
     L.trainer = "Lehrer"
-    return
 
 elseif rm.locale == "frFR" then
     L.professions = {
@@ -478,7 +474,6 @@ elseif rm.locale == "frFR" then
     L.updateIconDropdown = "Icône de Restauration de la Fenêtre"
     L.pickpocket = "Vol à la tire"
     L.trainer = "Maître"
-    return
 
 elseif rm.locale == "ruRU" then
     L.professions = {
@@ -527,7 +522,6 @@ elseif rm.locale == "ruRU" then
     L.updateIconDropdown = "Значок окна Восстановления"
     L.pickpocket = "Карманник"
     L.trainer = "Учитель"
-    return
 
 elseif rm.locale == "koKR" then
     L.professions = {
@@ -573,7 +567,6 @@ elseif rm.locale == "koKR" then
     L.updateIconDropdown = "복원 창 아이콘"
     L.pickpocket = "훔치기"
     L.trainer = "트레이너"
-    return
 
 elseif rm.locale == "zhTW" then
     L.professions = {
@@ -620,7 +613,6 @@ elseif rm.locale == "zhTW" then
     L.updateIconDropdown = "恢復視窗圖示"
     L.pickpocket = "搜索"
     L.trainer = "訓練師"
-    return
 
 elseif rm.locale == "zhCN" then
     L.professions = {

@@ -33,7 +33,7 @@ local function isRecipeForCurrentSpecialization(recipe)
         return true
     end
     local professionID = rm.getProfessionID(rm.displayedProfession)
-    local currentSpecialization = rm.getSavedSpecializationByID(professionID)
+    local currentSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
     return (
         not recipe.specialization 
         or not currentSpecialization 
@@ -84,7 +84,7 @@ local function isLearnedSpecializationRecipe(recipe)
         return false
     end
     local professionID = rm.getProfessionID(rm.displayedProfession)
-    local currentSpecialization = rm.getSavedSpecializationByID(professionID)
+    local currentSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
     if not currentSpecialization then
         return false
     end

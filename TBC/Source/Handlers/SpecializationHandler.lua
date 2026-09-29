@@ -1,12 +1,12 @@
 local _, rm = ...
 
-function rm.getSavedSpecializationByID(professionID)
+function rm.getSavedSpecializationByProfessionID(professionID)
     if rm.getSavedVariablesForCurrentCharacter()[professionID] then -- Avoids an error when unlearning a profession
         return rm.getSavedVariablesForCurrentCharacter()[professionID]["specialization"]
     end
 end
 
-function rm.getSavedSpecializationByName(professionName)
+function rm.getSavedSpecializationByProfessionName(professionName)
     local savedProfession = rm.getSavedVariablesForCurrentCharacter()[rm.getProfessionID(professionName)]
     if savedProfession then
         return savedProfession["specialization"]
@@ -52,7 +52,7 @@ end
 
 function rm.saveNewSpecializations(currentSpecializations)
     for professionID, specializationID in pairs(currentSpecializations) do
-        local savedSpecialization = rm.getSavedSpecializationByID(professionID)
+        local savedSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
         if not savedSpecialization then
             rm.getSavedProfessionByID(professionID)["specialization"] = specializationID
         end

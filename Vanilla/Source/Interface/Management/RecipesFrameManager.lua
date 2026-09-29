@@ -37,10 +37,10 @@ local function updateMainWidthBasedOnWidestRecipeName()
     end
 end
 
-local function getSpecializationDisplayName()
-    local specialization = rm.getSavedSpecializationByName(rm.displayedProfession)
-    if specialization then
-        return GetSpellInfo(specialization)
+local function getSavedSpecializationName()
+    local specializationID = rm.getSavedSpecializationByProfessionName(rm.displayedProfession)
+    if specializationID then
+        return GetSpellInfo(specializationID)
     end
     return ""
 end
@@ -62,11 +62,11 @@ local function updateProgressBar()
     end
     local progress = rm.learnedRecipesCount.."/"..rm.totalRecipesCount
     rm.progressBar:SetValue(rm.learnedPercentage)
-    if rm.currentSeason ~= "SoD" then
-        local specialization = getSpecializationDisplayName()
-        rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%) "..specialization)
-    else
+    if rm.currentSeason == "SoD" then
         rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%)")
+    else
+        local specialization = getSavedSpecializationName()
+        rm.progressBarText:SetText(progress.." ("..rm.learnedPercentage.."%) "..specialization)
     end
     updateProgressBarColor()
 end

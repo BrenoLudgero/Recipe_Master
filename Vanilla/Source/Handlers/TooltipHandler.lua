@@ -4,10 +4,10 @@ local F = rm.F
 
 local function isSpecificLeatherworkingRecipe(recipeID)
     return (
-        recipeID == 22694 
-        or recipeID == 22695 
-        or recipeID == 22697 
-        or recipeID == 22698
+        recipeID == 22694    -- Pattern: Polar Gloves
+        or recipeID == 22695 -- Pattern: Polar Bracers
+        or recipeID == 22697 -- Pattern: Icy Scale Gauntlets
+        or recipeID == 22698 -- Pattern: Icy Scale Bracers
     )
 end
 
