@@ -55,6 +55,15 @@ function rm.handleRecipeLearned(event, skillID)
     end
 end
 
+-- Removes focus from the search bar when clicking anywhere else (except its clear button).
+-- The event is only registered while the search bar has focus (RecipesFrameSetup.lua)
+function rm.handleMouseDown(event)
+    if event == "GLOBAL_MOUSE_DOWN" 
+    and not (rm.searchBar:IsMouseOver() or rm.searchBar.clearButton:IsMouseOver()) then
+        rm.searchBar:ClearFocus()
+    end
+end
+
 local function handleProfessionFrameOpened(getDisplayedProfessionFunction)
     rm.displayedProfession = getDisplayedProfessionFunction() -- e.g. Engineering (Localized)
     if rm.getProfessionID(rm.displayedProfession) then

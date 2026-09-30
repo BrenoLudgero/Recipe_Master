@@ -111,8 +111,10 @@ function rm.displayPlaceholderTextBasedOnFocus(searchBar)
     searchBar:SetScript("OnEditFocusGained", function(self)
         self.Instructions:Hide()
         self.clearButton:Show()
+        rm.frame:RegisterEvent("GLOBAL_MOUSE_DOWN") -- Handled by handleMouseDown while focused (EventHandler.lua)
     end)
     searchBar:SetScript("OnEditFocusLost", function(self)
+        rm.frame:UnregisterEvent("GLOBAL_MOUSE_DOWN")
         -- Keeps existing search text when pressing Escape
         if self:GetText() == "" then
             self.Instructions:Show()
