@@ -143,6 +143,7 @@ end
 local function getRecipeData(recipeID, recipeData, professionID, initialDataFunction)
     local rName, rLink, rQuality, rTexture = initialDataFunction(recipeID, recipeData, professionID)
     return {
+        ID = recipeID,
         classes = recipeData["classes"], 
         difficulty = recipeData["difficulty"],
         faction = recipeData["faction"], 

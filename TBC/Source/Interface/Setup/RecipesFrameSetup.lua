@@ -173,6 +173,57 @@ function rm.handleSortingOptions(dropdown, options)
     end)
 end
 
+local function getDisplayedProfessionSources()
+    local professionID = rm.getProfessionID(rm.displayedProfession)
+    return rm.recipesBySource[professionID] or {}
+end
+
+local function getSourceFilterName(sourceType)
+    if sourceType == "All" then
+        return L.all
+    end
+    return rm.getLocalizedSourceType(sourceType)
+end
+
+local function filterRecipesBySource(dropdown, sourceType)
+    rm.selectedRecipeSource = sourceType
+    dropdown:SetDefaultText(getSourceFilterName(sourceType))
+    rm.showSortedRecipes()
+end
+
+function rm.handleSourceFilterOptions(dropdown)
+    dropdown:SetupMenu(function(self, rootDescription)
+        rootDescription:CreateButton(L.all, function()
+            filterRecipesBySource(self, "All")
+        end)
+        local professionSources = getDisplayedProfessionSources()
+        for _, sourceType in ipairs(rm.sourcesOrder) do
+            if professionSources[sourceType] then
+                rootDescription:CreateButton(getSourceFilterName(sourceType), function()
+                    filterRecipesBySource(self, sourceType)
+                end)
+            end
+        end
+    end)
+end
+
+-- Resets the filter if the displayed profession has no recipes from the selected source
+function rm.updateSourceFilterDropdown()
+    if not getDisplayedProfessionSources()[rm.selectedRecipeSource] then
+        rm.selectedRecipeSource = "All"
+    end
+    rm.sourceFilterDropdown:GenerateMenu()
+    rm.sourceFilterDropdown:SetDefaultText(getSourceFilterName(rm.selectedRecipeSource))
+end
+
+function rm.isRecipeFromSelectedSource(recipe)
+    if rm.selectedRecipeSource == "All" then
+        return true
+    end
+    local professionSources = getDisplayedProfessionSources()
+    return professionSources[rm.selectedRecipeSource][recipe.ID]
+end
+
 local function isValueAColor(value, savedValue)
     return type(value) == "table" and (unpack(value) == unpack(savedValue))
 end

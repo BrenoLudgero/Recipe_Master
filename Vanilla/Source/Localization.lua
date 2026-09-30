@@ -1,6 +1,7 @@
 local _, rm = ...
 local L = rm.L
 
+L.all = ALL
 L.apprentice = APPRENTICE
 L.artisan = ARTISAN
 L.boss = BOSS

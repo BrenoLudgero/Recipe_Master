@@ -34,6 +34,7 @@ function rm.createAllFrameElements()
     rm.showLearnedCheckButton = rm.createShowLearnedCheckButton(rm.divider)
     rm.createShowDetailsCheckButton(rm.divider)
     rm.createSortOrderButton(rm.sortByDropdown)
+    rm.sourceFilterDropdown = rm.createSourceFilterDropdown(rm.divider)
     rm.progressBar = rm.createProgressBar(rm.progressContainer)
     rm.progressBarText = rm.createProgressBarText(rm.progressBar)
 

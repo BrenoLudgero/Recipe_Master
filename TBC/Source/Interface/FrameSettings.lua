@@ -105,6 +105,8 @@ F.offsets.sortByDropdownX = -32
 F.offsets.sortByDropdownY = -7
 F.offsets.sortOrderDropdownX = -8
 F.offsets.sortOrderDropdownY = -4
+F.offsets.sourceFilterDropdownX = F.offsets.sortOrderDropdownX - 1
+F.offsets.sourceFilterDropdownY = -2.5
 
 ------------------------- Sources frame -------------------------
 F.offsets.instructionsY = -10

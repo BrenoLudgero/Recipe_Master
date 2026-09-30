@@ -117,6 +117,21 @@ function rm.createSortOrderButton(parent)
     return button
 end
 
+function rm.createSourceFilterDropdown(parent)
+    local font = rm.searchBar:GetFont()
+    local frameLevel = parent:GetFrameLevel() + 1
+    local sourceDropdown = CreateFrame("DropdownButton", nil, parent, F.templates.dropdown)
+    sourceDropdown:SetWidth(F.sizes.sortDropdownWidth)
+    sourceDropdown:SetScale(0.73)
+    sourceDropdown:SetFrameLevel(frameLevel)
+    sourceDropdown:SetPoint("TOPLEFT", rm.sortByDropdown, "BOTTOMLEFT", 0, F.offsets.sourceFilterDropdownY)
+    sourceDropdown:SetPoint("RIGHT", rm.mainFrameBorder, "RIGHT", F.offsets.sourceFilterDropdownX, 0)
+    sourceDropdown.Text:SetFont(font, F.fontSizes.sortDropdown, "")
+    rm.showTooltipTextOnMouseover(sourceDropdown, L.sources, "ANCHOR_TOP")
+    rm.handleSourceFilterOptions(sourceDropdown)
+    return sourceDropdown
+end
+
 function rm.createProgressBar(parent)
     local progressBar = CreateFrame("StatusBar", nil, parent)
     local frameLevel = parent:GetFrameLevel()

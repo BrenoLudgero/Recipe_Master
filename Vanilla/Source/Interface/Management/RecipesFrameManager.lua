@@ -74,6 +74,7 @@ end
 function rm.updateRecipesList()
     if rm.getProfessionFrame() then -- Avoids the same error described in updateProgressBar()
         rm.clearFrameContent()
+        rm.updateSourceFilterDropdown()
         rm.listProfessionRecipes()
         updateMainWidthBasedOnWidestRecipeName()
         updateProgressBar()
