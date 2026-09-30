@@ -72,6 +72,8 @@ function rm.updateRecipesList()
         rm.clearFrameContent()
         rm.updateSourceFilterDropdown()
         rm.listProfessionRecipes()
+        rm.filterRecipesBySearchText()
+        rm.updateRecipesFrameElementsPosition()
         updateMainWidthBasedOnWidestRecipeName()
         updateProgressBar()
     end

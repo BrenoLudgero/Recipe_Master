@@ -120,9 +120,11 @@ function rm.displayPlaceholderTextBasedOnFocus(searchBar)
         self.clearButton:Show()
     end)
     searchBar:SetScript("OnEditFocusLost", function(self)
-        self.Instructions:Show()
-        self.clearButton:Hide()
-        searchBar:SetText("")
+        -- Keeps existing search text when pressing Escape
+        if self:GetText() == "" then
+            self.Instructions:Show()
+            self.clearButton:Hide()
+        end
     end)
 end
 
@@ -131,16 +133,28 @@ local function isSearchInRecipeName(row, searchText)
     return string.find(recipeName, searchText, 1, true)
 end
 
+function rm.filterRecipesBySearchText()
+    local searchText = rm.searchBar:GetText():lower()
+    for _, row in ipairs(rm.recipesList.children) do
+        if isSearchInRecipeName(row, searchText) then
+            row:Show()
+        else
+            row:Hide()
+        end
+    end
+end
+
+-- Called when switching professions or tabs
+function rm.clearSearchBar()
+    rm.searchBar:SetText("")
+    rm.searchBar:ClearFocus()
+    rm.searchBar.Instructions:Show()
+    rm.searchBar.clearButton:Hide()
+end
+
 function rm.showMatchingRecipesOnTop(searchBar)
     searchBar:SetScript("OnTextChanged", function(self)
-        local searchText = self:GetText():lower()
-        for _, row in ipairs(rm.recipesList.children) do
-            if isSearchInRecipeName(row, searchText) then
-                row:Show()
-            else
-                row:Hide()
-            end
-        end
+        rm.filterRecipesBySearchText()
         rm.updateRecipesFrameElementsPosition()
     end)
 end

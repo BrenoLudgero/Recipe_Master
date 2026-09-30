@@ -3,6 +3,9 @@ local L = rm.L
 local F = rm.F
 
 function rm.activateBottomTabAndDesaturateOthers(tab)
+    if rm.activeTab ~= tab.label then
+        rm.clearSearchBar()
+    end
     for _, bottomTab in pairs(rm.bottomTabs) do
         if bottomTab == tab then
             bottomTab.active = true
