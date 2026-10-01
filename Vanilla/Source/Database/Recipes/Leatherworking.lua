@@ -492,6 +492,7 @@ rm.recipeDB[165] = {
 			190,
 			200,
 		},
+		hasSodCounterpart = true,
 		requiredSkill = 160,
 	},
 	[5964] = {
@@ -895,6 +896,7 @@ rm.recipeDB[165] = {
 			240,
 			250,
 		},
+		hasSodCounterpart = true,
 		requiredSkill = 210,
 	},
 	[8191] = {
@@ -959,7 +961,7 @@ rm.recipeDB[165] = {
 			265,
 		},
 		requiredSkill = 225,
-specialization = 10660,
+		specialization = 10660,
 	},
 	[8346] = {
 		difficulty = {
@@ -969,7 +971,7 @@ specialization = 10660,
 			270,
 		},
 		requiredSkill = 230,
-specialization = 10658,
+		specialization = 10658,
 	},
 	[8347] = {
 		difficulty = {
@@ -979,7 +981,7 @@ specialization = 10658,
 			265,
 		},
 		requiredSkill = 225,
-specialization = 10657,
+		specialization = 10657,
 	},
 	[8348] = {
 		difficulty = {

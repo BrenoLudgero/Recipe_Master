@@ -201,16 +201,6 @@ rm.questDB = {
 		level = 55,
 		requiredLevel = 45,
 	},
-	[2756] = {
-		classes = {
-			1,
-			7,
-			11,
-		},
-		faction = "Horde",
-		level = 40,
-		requiredLevel = 40,
-	},
 	[2747] = {
 		level = 60,
 		requiredLevel = 42,
@@ -244,6 +234,16 @@ rm.questDB = {
 		faction = "Horde",
 		level = 36,
 		requiredLevel = 32,
+	},
+	[2756] = {
+		classes = {
+			1,
+			7,
+			11,
+		},
+		faction = "Horde",
+		level = 40,
+		requiredLevel = 40,
 	},
 	[2758] = {
 		classes = {
@@ -612,12 +612,6 @@ rm.questDB = {
 		level = 60,
 	},
 	[80167] = {
-		level = 60,
-	},
-	[80168] = {
-		level = 60,
-	},
-	[80169] = {
 		level = 60,
 	},
 	[80170] = {

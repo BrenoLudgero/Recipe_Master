@@ -90,6 +90,12 @@ rm.recipeDB[186] = {
 		teaches = 3860,
 	},
 	[10098] = {
+		difficulty = {
+			0,
+			230,
+			230,
+			230,
+		},
 		isSpell = true,
 		quality = 2,
 		requiredSkill = 230,
@@ -101,6 +107,12 @@ rm.recipeDB[186] = {
 		teaches = "Artisan",
 	},
 	[14891] = {
+		difficulty = {
+			0,
+			230,
+			230,
+			230,
+		},
 		isSpell = true,
 		requiredSkill = 230,
 		teaches = 11371,

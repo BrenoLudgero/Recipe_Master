@@ -2,15 +2,8 @@ local _, rm = ...
 
 rm.uniqueDB = {
 	[8696] = {
-		faction = "Alliance",
 		level = "36",
-		names = {
-			enUS = "Henry Stern",
-			ruRU = "Генри Штерн",
-			zhCN = "亨利 斯特恩",
-			koKR = "헨리 스턴",
-			zhTW = "亨利 斯特恩",
-		},
+		names = {enUS = "Henry Stern", ruRU = "Генри Штерн", koKR = "헨리 스턴", zhCN = "亨利·斯特恩", zhTW = "亨利·斯特恩"},
 		zones = {
 			722,
 		},
@@ -18,17 +11,7 @@ rm.uniqueDB = {
 	[8983] = {
 		classification = "Elite",
 		level = "55",
-		names = {
-			enUS = "Golem Lord Argelmach",
-			frFR = "Seigneur Golem Argelmach",
-			deDE = "Golemlord Argelmach",
-			esES = "Señor Gólem Argelmach",
-			ruRU = "Повелитель Големов Аргелмах",
-			ptBR = "Lorde Golem Argelmach",
-			zhCN = "傀儡统帅阿格曼奇",
-			koKR = "골렘 군주 아젤마크",
-			zhTW = "魔像領主阿格曼奇",
-		},
+		names = {enUS = "Golem Lord Argelmach", deDE = "Golemlord Argelmach", esES = "Señor Gólem Argelmach", frFR = "Seigneur golem Argelmach", ptBR = "Lorde Golem Argelmach", ruRU = "Повелитель големов Аргелмах", koKR = "골렘 군주 아젤마크", zhCN = "傀儡统帅阿格曼奇", zhTW = "魔像領主阿格曼奇"},
 		zones = {
 			1584,
 		},
@@ -36,17 +19,7 @@ rm.uniqueDB = {
 	[9037] = {
 		classification = "Elite",
 		level = "56",
-		names = {
-			enUS = "Gloomrel",
-			frFR = "Funébrel",
-			deDE = "Dunkrel",
-			esES = "Penumbrarel",
-			ruRU = "Мракнел",
-			ptBR = "Umbrarel",
-			zhCN = "格鲁雷尔",
-			koKR = "그늘의 문지기",
-			zhTW = "格魯雷爾",
-		},
+		names = {enUS = "Gloom'rel", deDE = "Dunk'rel", esES = "Penumbra'rel", frFR = "Funéb'rel", ptBR = "Umbra'rel", ruRU = "Мрак'нел", koKR = "그늘의 문지기", zhCN = "格鲁雷尔", zhTW = "格魯雷爾"},
 		zones = {
 			1584,
 		},
@@ -54,14 +27,7 @@ rm.uniqueDB = {
 	[10503] = {
 		classification = "Elite",
 		level = "61",
-		names = {
-			enUS = "Jandice Barov",
-			ruRU = "Джандис Барова",
-			ptBR = "Janice Barov",
-			zhCN = "詹迪斯 巴罗夫",
-			koKR = "잔다이스 바로브",
-			zhTW = "詹迪斯 巴羅夫",
-		},
+		names = {enUS = "Jandice Barov", ptBR = "Janice Barov", ruRU = "Джандис Барова", koKR = "잔다이스 바로브", zhCN = "詹迪斯·巴罗夫", zhTW = "詹迪斯·巴羅夫"},
 		zones = {
 			2057,
 		},
@@ -69,17 +35,7 @@ rm.uniqueDB = {
 	[11340] = {
 		classification = "Elite",
 		level = "61",
-		names = {
-			enUS = "Hakkari Blood Priest",
-			frFR = "Grand Prêtre Hakkari",
-			deDE = "Blutpriester Der Hakkari",
-			esES = "Sacerdote De Sangre Hakkari",
-			ruRU = "Жрец Крови Из Племени Хаккари",
-			ptBR = "Sacerdote Sangrento Hakkari",
-			zhCN = "哈卡高阶祭司",
-			koKR = "학카르부족 혈사제",
-			zhTW = "哈卡萊高階祭司",
-		},
+		names = {enUS = "Hakkari Blood Priest", deDE = "Blutpriester der Hakkari", esES = "Sacerdote de sangre Hakkari", frFR = "Grand prêtre Hakkari", ptBR = "Sacerdote Sangrento Hakkari", ruRU = "Жрец крови из племени Хаккари", koKR = "학카르부족 혈사제", zhCN = "哈卡高阶祭司", zhTW = "哈卡萊高階祭司"},
 		zones = {
 			1977,
 		},
@@ -87,35 +43,14 @@ rm.uniqueDB = {
 	[14401] = {
 		classification = "Elite",
 		level = "60",
-		names = {
-			enUS = "Master Elemental Shaper Krixix",
-			frFR = "Maître Élémentaire Krixix Le Sculpteur",
-			deDE = "Meisterelementarformer Krixix",
-			esES = "Maestro De Los Elementos Formacio Krixix",
-			ruRU = "Ваятель Стихий Криксикс",
-			ptBR = "Mestre Moldador Elemental Krixix",
-			zhCN = "大元素师克里希克",
-			koKR = "수석 원소구현술사 크릭시스",
-			zhTW = "大元素師克里希克",
-		},
+		names = {enUS = "Master Elemental Shaper Krixix", deDE = "Meisterelementarformer Krixix", esES = "Maestro de los elementos Formacio Krixix", esMX = "Maestro de los elementos Formacio Krixix", frFR = "Maître élémentaire Krixix le Sculpteur", ptBR = "Mestre Moldador Elemental Krixix", ruRU = "Ваятель стихий Криксикс", koKR = "수석 원소구현술사 크릭시스", zhCN = "大元素师克里希克", zhTW = "大元素師克里希克"},
 		zones = {
 			2677,
 		},
 	},
 	[16365] = {
 		classification = "Elite",
-		faction = "Alliance",
-		names = {
-			enUS = "Master Craftsman Omarion",
-			frFR = "Maître Artisan Omarion",
-			deDE = "Meisterhandwerker Omarion",
-			esES = "Maestro Artesano Omarion",
-			ruRU = "Мастер Ремесленник Омарион",
-			ptBR = "Mestre Artesão Omarion",
-			zhCN = "大工匠奥玛里恩",
-			koKR = "거장 오마리온",
-			zhTW = "工匠大師歐瑪利安",
-		},
+		names = {enUS = "Master Craftsman Omarion", deDE = "Meisterhandwerker Omarion", esES = "Maestro artesano Omarion", frFR = "Maître-artisan Omarion", ptBR = "Mestre Artesão Omarion", ruRU = "Мастер-ремесленник Омарион", koKR = "거장 오마리온", zhCN = "大工匠奥玛里恩", zhTW = "工匠大師歐瑪利安"},
 		zones = {
 			3456,
 		},

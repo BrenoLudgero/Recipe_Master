@@ -87,12 +87,10 @@ rm.questDB = {
 		requiredLevel = 30,
 	},
 	[703] = {
-		faction = "Both",
 		level = 40,
 		requiredLevel = 33,
 	},
 	[715] = {
-		faction = "Both",
 		level = 37,
 		requiredLevel = 35,
 	},
@@ -108,12 +106,10 @@ rm.questDB = {
 	},
 	[1487] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 21,
 		requiredLevel = 15,
 	},
 	[1559] = {
-		faction = "Both",
 		level = 37,
 		requiredLevel = 30,
 	},
@@ -170,22 +166,18 @@ rm.questDB = {
 		requiredLevel = 36,
 	},
 	[2501] = {
-		faction = "Both",
 		level = 44,
 		requiredLevel = 40,
 	},
 	[2521] = {
-		faction = "Both",
 		level = 55,
 		requiredLevel = 45,
 	},
 	[2522] = {
-		faction = "Both",
 		level = 55,
 		requiredLevel = 45,
 	},
 	[2747] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 42,
 	},
@@ -229,7 +221,6 @@ rm.questDB = {
 		requiredLevel = 40,
 	},
 	[2761] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 40,
 	},
@@ -239,7 +230,6 @@ rm.questDB = {
 			2,
 			3,
 		},
-		faction = "Both",
 		level = 45,
 		requiredLevel = 40,
 	},
@@ -249,22 +239,18 @@ rm.questDB = {
 			2,
 			11,
 		},
-		faction = "Both",
 		level = 45,
 		requiredLevel = 40,
 	},
 	[2771] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 40,
 	},
 	[2772] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 40,
 	},
 	[2773] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 40,
 	},
@@ -294,7 +280,6 @@ rm.questDB = {
 		requiredLevel = 30,
 	},
 	[2853] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 30,
 	},
@@ -309,7 +294,6 @@ rm.questDB = {
 		requiredLevel = 30,
 	},
 	[2857] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 30,
 	},
@@ -324,27 +308,22 @@ rm.questDB = {
 		requiredLevel = 30,
 	},
 	[2860] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 30,
 	},
 	[2882] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 40,
 	},
 	[3385] = {
-		faction = "Both",
 		level = 50,
 		requiredLevel = 40,
 	},
 	[3402] = {
-		faction = "Both",
 		level = 50,
 		requiredLevel = 40,
 	},
 	[3481] = {
-		faction = "Both",
 		level = 50,
 		requiredLevel = 40,
 	},
@@ -358,23 +337,19 @@ rm.questDB = {
 			2,
 		},
 		classification = "Group",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 55,
 	},
 	[5127] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 55,
 	},
 	[5150] = {
-		faction = "Both",
 		level = 55,
 		requiredLevel = 47,
 	},
 	[5163] = {
-		faction = "Both",
 		level = 58,
 		requiredLevel = 52,
 	},
@@ -385,13 +360,11 @@ rm.questDB = {
 			7,
 		},
 		classification = "Dungeon",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[5306] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
@@ -402,22 +375,18 @@ rm.questDB = {
 			7,
 		},
 		classification = "Dungeon",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[6032] = {
-		faction = "Both",
 		level = 55,
 		requiredLevel = 50,
 	},
 	[6607] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 35,
 	},
 	[6610] = {
-		faction = "Both",
 		level = 45,
 		requiredLevel = 35,
 	},
@@ -456,60 +425,49 @@ rm.questDB = {
 	},
 	[7604] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 60,
 	},
 	[7649] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[7650] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[7651] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[7653] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[7654] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[7655] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[7656] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[7657] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[7658] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[7659] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
@@ -519,99 +477,72 @@ rm.questDB = {
 		requiredLevel = 44,
 	},
 	[7931] = {
-		faction = "Both",
 		requiredLevel = 15,
 	},
 	[7932] = {
-		faction = "Both",
 		requiredLevel = 30,
 	},
 	[7933] = {
-		faction = "Both",
 		requiredLevel = 45,
 	},
 	[7937] = {
-		faction = "Both",
 		requiredLevel = 10,
 	},
 	[7938] = {
-		faction = "Both",
 		requiredLevel = 10,
 	},
 	[7944] = {
-		faction = "Both",
 		requiredLevel = 10,
 	},
 	[7945] = {
-		faction = "Both",
 		requiredLevel = 10,
 	},
 	[8307] = {
-		faction = "Both",
 		level = 57,
 		requiredLevel = 54,
 	},
 	[8586] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 60,
 	},
 	[8769] = {
-		faction = "Both",
 		requiredLevel = 40,
 	},
 	[8798] = {
-		faction = "Both",
 		level = 60,
 		requiredLevel = 55,
 	},
 	[8862] = {
-		faction = "Both",
 		requiredLevel = 10,
-	},
-	[8864] = {
-		faction = "Both",
-	},
-	[8865] = {
-		faction = "Both",
 	},
 	[8868] = {
 		classification = "Raid",
-		faction = "Both",
 		requiredLevel = 40,
 	},
 	[8869] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 60,
 		requiredLevel = 50,
 	},
 	[8876] = {
-		faction = "Both",
 		requiredLevel = 25,
 	},
 	[8877] = {
-		faction = "Both",
 		requiredLevel = 45,
 	},
 	[8878] = {
-		faction = "Both",
 		requiredLevel = 50,
 	},
 	[8879] = {
-		faction = "Both",
 		requiredLevel = 35,
 	},
 	[8880] = {
-		faction = "Both",
 		requiredLevel = 45,
 	},
 	[8881] = {
-		faction = "Both",
 		requiredLevel = 55,
 	},
 	[8882] = {
-		faction = "Both",
 		requiredLevel = 55,
 	},
 	[9171] = {
@@ -620,11 +551,9 @@ rm.questDB = {
 		requiredLevel = 12,
 	},
 	[9249] = {
-		faction = "Both",
 		requiredLevel = 45,
 	},
 	[9356] = {
-		faction = "Both",
 		level = 61,
 		requiredLevel = 58,
 	},
@@ -644,17 +573,14 @@ rm.questDB = {
 		requiredLevel = 58,
 	},
 	[10831] = {
-		faction = "Both",
 		level = 70,
 		requiredLevel = 60,
 	},
 	[10832] = {
-		faction = "Both",
 		level = 70,
 		requiredLevel = 60,
 	},
 	[10833] = {
-		faction = "Both",
 		level = 70,
 		requiredLevel = 60,
 	},
@@ -665,72 +591,60 @@ rm.questDB = {
 	},
 	[10897] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 68,
 	},
 	[10899] = {
-		faction = "Both",
 		level = 70,
 		requiredLevel = 68,
 	},
 	[10902] = {
 		classification = "Dungeon",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 68,
 	},
 	[11377] = {
 		classification = "Daily",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 70,
 	},
 	[11379] = {
 		classification = "Daily",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 70,
 	},
 	[11380] = {
 		classification = "Daily",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 70,
 	},
 	[11381] = {
 		classification = "Daily",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 70,
 	},
 	[11665] = {
 		classification = "Daily",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 70,
 	},
 	[11666] = {
 		classification = "Daily",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 70,
 	},
 	[11667] = {
 		classification = "Daily",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 70,
 	},
 	[11668] = {
 		classification = "Daily",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 70,
 	},
 	[11669] = {
 		classification = "Daily",
-		faction = "Both",
 		level = 70,
 		requiredLevel = 70,
 	},

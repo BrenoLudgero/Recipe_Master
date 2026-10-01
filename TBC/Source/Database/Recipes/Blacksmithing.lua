@@ -1898,15 +1898,21 @@ rm.recipeDB[164] = {
 		requiredSkill = 275,
 	},
 	[17039] = {
+		isSpecialization = true,
 		isSpell = true,
+		requiredSkill = 200,
 		specialization = 9787,
 	},
 	[17040] = {
+		isSpecialization = true,
 		isSpell = true,
+		requiredSkill = 200,
 		specialization = 9787,
 	},
 	[17041] = {
+		isSpecialization = true,
 		isSpell = true,
+		requiredSkill = 200,
 		specialization = 9787,
 	},
 	[17049] = {

@@ -204,26 +204,36 @@ L.uniqueSourceInstructions = {
         -- Ashiran, Wowhead.com
     },
     [14401] = {
-        ["deDE"] = "Er kann von einem priester kontrolliert werden, der\n"..
-                "dann das Rezept an Spieler in der Nähe weitergeben kann",
+        ["deDE"] = "Ein Priester kann ihn gedankenkontrollieren und\n"..
+                "Spielern in der Nähe das Rezept beibringen,\n"..
+                "unabhängig von ihrer Berufsstufe",
         ["enUS"] = "He can be mindcontrolled by a priest,\n"..
-                "who can then teach the recipe to nearby players",
+                "who can then teach the recipe to nearby players,\n"..
+                "regardless of their profession level",
         ["esES"] = "Puede ser controlado mentalmente por un sacerdote,\n"..
-                "que luego puede enseñar la receta a los jugadores cercanos",
+                "que luego puede enseñar la receta a los jugadores\n"..
+                "cercanos, sin importar su nivel de profesión",
         ["esMX"] = "Puede ser controlado mentalmente por un sacerdote,\n"..
-                "que luego puede enseñar la receta a los jugadores cercanos",
+                "que luego puede enseñar la receta a los jugadores\n"..
+                "cercanos, sin importar su nivel de profesión",
         ["frFR"] = "Il peut être contrôlé par un prêtre,\n"..
-                "qui peut alors enseigner la recette aux joueurs voisins",
-        ["koKR"] = "사제가 마인드컨트롤할 수 있으며,\n"..
-                "사제는 주변 플레이어에게 레시피를 가르칠 수 있습니다",
+                "qui peut alors enseigner la recette aux joueurs voisins,\n"..
+                "quel que soit leur niveau de métier",
+        ["koKR"] = "사제가 마인드컨트롤하면\n"..
+                "주변 플레이어에게 레시피를 가르칠 수 있습니다\n"..
+                "(플레이어의 전문 기술 레벨과 무관)",
         ["ptBR"] = "Ele pode ter a mente controlada por um sacerdote,\n"..
-                "que pode então ensinar a receita aos jogadores próximos",
+                "que pode então ensinar a receita aos jogadores próximos,\n"..
+                "independentemente do nível de profissão deles",
         ["ruRU"] = "Его сознанием может управлять жрец,\n"..
-                "который затем может научить рецепту ближайших игроков",
-        ["zhCN"] = "他可以被牧师控制心智，\n"..
-                "然后牧师可以将配方传授给附近的玩家",
-        ["zhTW"] = "他可以被牧師控制心智，\n"..
-                "然後牧師可以將配方傳授給附近的玩家"
+                "который затем может научить рецепту ближайших игроков,\n"..
+                "независимо от уровня их профессии",
+        ["zhCN"] = "一名牧师可以控制他的心智，\n"..
+                "然后将配方传授给附近的玩家，\n"..
+                "无论其专业技能等级如何",
+        ["zhTW"] = "一名牧師可以控制他的心智，\n"..
+                "然後將配方傳授給附近的玩家，\n"..
+                "無論其專業技能等級如何"
         -- Eihrister, Wowhead.com
     },
     [16365] = {

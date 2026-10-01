@@ -1679,6 +1679,7 @@ rm.recipeDB[164] = {
 			330,
 			340,
 		},
+		hasSodCounterpart = true,
 		requiredSkill = 300,
 		specialization = 9788,
 		teaches = 12639,
