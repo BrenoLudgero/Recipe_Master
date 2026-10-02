@@ -40,6 +40,7 @@
 
 ## Author: Breno Ludgero
 
+## OptionalDeps: TradeSkillMaster
 ## SavedVariables: RecipeMasterProfessionsAndSkills, RecipeMasterMainFramePreferences, RecipeMasterOptionsFramePreferences
 
 Source/Initialization.lua

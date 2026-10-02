@@ -31,10 +31,6 @@ local defaultMainFramePreferences = {
     showLearnedRecipes = false,
     showRecipesInfo = true,
     maximizeMainFrame = true,
-    -- ▼ Used when TradeSkillMaster is enabled
-    mainFrameHeight = 413,
-    mainFrameOffsets = {0, 0},
-    restoreButtonOffsets = {0, 0},
 }
 
 local defaultOptionsFramePreferences = {
