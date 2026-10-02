@@ -1,4 +1,5 @@
 local _, rm = ...
+local F = rm.F
 
 local function isDragonflightUiEnabledAndVisible()
     return DragonflightUIProfessionFrame and DragonflightUIProfessionFrame:IsVisible()
@@ -164,7 +165,19 @@ function rm.hideMainFrame()
     rm.mainFrame:Hide()
 end
 
+local function anchorCenteredText()
+    rm.centeredText:ClearAllPoints()
+    if rm.recipesScrollFrame:IsShown() then
+        rm.centeredText:SetPoint("TOPLEFT", rm.recipesScrollFrame)
+        -- Extended over the scroll bar so that it's also centered horizontally
+        rm.centeredText:SetPoint("BOTTOMRIGHT", rm.recipesScrollFrame, -F.offsets.recipesListScrollX, 0)
+    else
+        rm.centeredText:SetPoint("CENTER")
+    end
+end
+
 function rm.showCenteredText(string, color)
+    anchorCenteredText()
     rm.centeredText:SetText(string)
     rm.centeredText:SetTextColor(unpack(color))
     rm.centeredText:Show()

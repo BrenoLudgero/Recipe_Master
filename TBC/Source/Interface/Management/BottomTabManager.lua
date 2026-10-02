@@ -18,20 +18,9 @@ function rm.activateBottomTabAndDesaturateOthers(tab)
     end
 end
 
-local function isRecipeListEmpty()
-    return rm.mainFrame:IsShown() and #rm.recipesList.children == 0
-end
-
-local function congratulateIfEmptyList()
-    if isRecipeListEmpty() then
-        rm.showCenteredText(L.congratulations, F.colors.gold)
-    end
-end
-
 function rm.handleRecipesTabClick()
     rm.showRecipesFrameElements()
     rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
-    congratulateIfEmptyList()
 end
 
 function rm.handleSourcesTabClick()
@@ -51,5 +40,4 @@ function rm.handleFishingTabClick()
         return
     end
     rm.showRecipesForSpecificProfession(L.professions[356])
-    congratulateIfEmptyList()
 end

@@ -71,6 +71,15 @@ local function updateProgressBar()
     updateProgressBarColor()
 end
 
+-- Checked on every update so that changing the filters shows or hides the message right away
+local function congratulateIfEmptyList()
+    if #rm.recipesList.children == 0 then
+        rm.showCenteredText(L.congratulations, F.colors.gold)
+    else
+        rm.centeredText:Hide()
+    end
+end
+
 function rm.updateRecipesList()
     if rm.getProfessionFrame() then -- Avoids the same error described in updateProgressBar()
         rm.clearFrameContent()
@@ -80,6 +89,7 @@ function rm.updateRecipesList()
         rm.updateRecipesFrameElementsPosition()
         updateMainWidthBasedOnWidestRecipeName()
         updateProgressBar()
+        congratulateIfEmptyList()
     end
 end
 
