@@ -20,9 +20,11 @@ function rm.getSpecializationName(specializationID)
 end
 
 local specializationIDs = {
-    [164] = {9788, 17041, 17040, 17039, 9787},
-    [202] = {20219, 20222},
-    [165] = {10657, 10658, 10660}
+    [164] = {9787, 9788, 17039, 17040, 17041}, -- Blacksmithing
+    [165] = {10657, 10658, 10660}, -- Leatherworking
+    [171] = {28672, 28675, 28677}, -- Alchemy
+    [197] = {26797, 26798, 26801}, -- Tailoring
+    [202] = {20219, 20222}, -- Engineering
 }
 
 local function professionHasSpecializations(professionID)
