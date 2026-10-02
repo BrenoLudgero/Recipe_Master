@@ -7,6 +7,8 @@ function rm.createMainFrame()
     mainFrame:SetBackdrop(F.backdrops.recipesFrame)
     mainFrame:SetBackdropColor(unpack(F.colors.mainBackground))
     mainFrame:SetFrameLevel(7)
+    mainFrame:SetToplevel(true) -- Raised above other frames in its strata when clicked
+    mainFrame:SetScript("OnShow", mainFrame.Raise) -- Keeps action bars' text from showing in front of it
     mainFrame:SetClampedToScreen(true)
     mainFrame:EnableMouse(true)
     mainFrame:SetWidth(F.sizes.recipesFrameWidth)
