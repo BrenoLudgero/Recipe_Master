@@ -1,58 +1,70 @@
 local _, rm = ...
 local L = rm.L
-local F = rm.F
 
+local function formatChance(chance)
+    if type(chance) == "number" then
+        return chance.." %"
+    end
+    return chance
+end
+
+-- Columns of each source type's table, from left to right
+--   field:    Key of the cell's value in the source info (see SourceHandler)
+--   header:   Column title
+--   fill:     Takes up the width left by the other columns (one per table)
+--   width:    Fixed width. Without it, the column fits its widest text
+--   maxWidth: Width limit of a column that fits its text
+--   align:    Text alignment. "LEFT", "CENTER" (default) or "RIGHT"
+--   format:   Function converting the field's value into the cell's text
 local columns = {
     ["trainer"] = {
-        L.name,
-        L.zone
+        {field = "name", header = L.name, fill = true, align = "LEFT"},
+        {field = "zone", header = L.zone, width = 130}
     },
     ["vendor"] = {
-        L.name,
-        L.price,
-        L.stock,
-        L.zone
+        {field = "name", header = L.name, fill = true, align = "LEFT"},
+        {field = "price", header = L.price, width = 77},
+        {field = "stock", header = L.stock, width = 59},
+        {field = "zone", header = L.zone, maxWidth = 110}
     },
     ["quest"] = {
-        L.name,
-        L.level,
-        L.minimum
+        {field = "name", header = L.name, fill = true, align = "LEFT"},
+        {field = "level", header = L.level, width = 60},
+        {field = "minimum", header = L.minimum, width = 80}
     },
     ["drop"] = {
-        L.name,
-        L.level,
-        L.chance,
-        L.zone
+        {field = "name", header = L.name, fill = true, align = "LEFT"},
+        {field = "level", header = L.level, width = 60},
+        {field = "chance", header = L.chance, width = 60, format = formatChance},
+        {field = "zone", header = L.zone, width = 100}
     },
     ["pickpocket"] = {
-        L.name,
-        L.level,
-        L.chance,
-        L.zone
+        {field = "name", header = L.name, fill = true, align = "LEFT"},
+        {field = "level", header = L.level, width = 60},
+        {field = "chance", header = L.chance, width = 60, format = formatChance},
+        {field = "zone", header = L.zone, width = 100}
     },
     ["item"] = {
-        L.name,
-        L.chance
+        {field = "name", header = L.name, fill = true, align = "LEFT"},
+        {field = "chance", header = L.chance, width = 80, format = formatChance}
     },
     ["object"] = {
-        L.name,
-        L.chance,
-        L.zone
+        {field = "name", header = L.name, fill = true, align = "LEFT"},
+        {field = "chance", header = L.chance, width = 60, format = formatChance},
+        {field = "zone", header = L.zone, width = 130}
     },
     ["fishing"] = {
-        L.zone,
-        L.chance
+        {field = "zone", header = L.zone, fill = true, align = "LEFT"},
+        {field = "chance", header = L.chance, width = 80, format = formatChance}
     },
     ["unique"] = {
-        L.name,
-        L.level,
-        L.zone
+        {field = "name", header = L.name, fill = true, align = "LEFT"},
+        {field = "level", header = L.level, width = 60},
+        {field = "zone", header = L.zone, width = 130}
     }
 }
 
-local function getSourceColumns(sourceType)
-    return columns[sourceType]
-end
+local displayedSources = {} -- [sourceType] = Info of each source of the displayed recipe
 
 local function getAllSourcesInfo(sourceType, recipeSource)
     local info = {}
@@ -80,63 +92,59 @@ local function getAllSourcesInfo(sourceType, recipeSource)
     return info
 end
 
+local function getSortableChance(source)
+    return tonumber(source.chance) or 0 -- Unknown chances go last
+end
+
 local function sortListByChance(sources)
-    if sources[1][L.chance] then
+    if sources[1].chance then
         table.sort(sources, function(a, b)
-            return a[L.chance] > b[L.chance]
+            return getSortableChance(a) > getSortableChance(b)
         end)
     end
     return sources
 end
 
-local function showSourceColumns(columnList)
-    for _, column in pairs(columnList) do
-        column:Show()
-    end
-end
-
-function rm.showTabRows(sources, sourceType, columnList)
-    showSourceColumns(columnList)
-    if sources[sourceType] then
-        rm.createAllRowsForSourceType(sources[sourceType], columnList)
-    else
-        rm.createAllRowsForSourceType(sources, columnList)
-    end
-    rm.updateListHeight()
-    if sourceType == "unique" then
-        rm.showUniqueSourceText(sources[sourceType][1]["instructions"])
-    end
-    rm.activateSourcesTabAndDeactivateOthers(sourceType)
-end
-
-local function openFirstTab(sources)
-    for _, sourceType in ipairs(rm.sourcesOrder) do
-        local columnList = rm.sourcesListColumns[sourceType]
-        if columnList then
-            rm.showTabRows(sources, sourceType, columnList)
-            break
+-- A source present in multiple zones takes up one row per zone
+local function getTableRows(sources)
+    local rows = {}
+    for _, source in ipairs(sources) do
+        if type(source.zone) == "table" then
+            for _, zone in ipairs(source.zone) do
+                table.insert(rows, setmetatable({zone = zone}, {__index = source}))
+            end
+        else
+            table.insert(rows, source)
         end
     end
+    return rows
+end
+
+function rm.showSourcesTab(sourceType)
+    local sources = displayedSources[sourceType]
+    rm.populateSourcesTable(columns[sourceType], getTableRows(sources))
+    if sourceType == "unique" then
+        rm.showUniqueSourceText(sources[1].instructions)
+    else
+        rm.uniqueSourceText:Hide()
+    end
+    rm.activateSourcesTabAndDeactivateOthers(sourceType)
 end
 
 function rm.showAllSources(recipe)
     rm.showUpdatedSourcesHeader(recipe)
     if recipe.sources then
-        rm.clearSourcesColumns()
-        rm.sourcesScrollFame:Show()
-        local tabXOffset = 0
-        local sources = {}
+        local sourceTypes = {}
+        wipe(displayedSources)
         for _, sourceType in ipairs(rm.sourcesOrder) do
             if recipe.sources[sourceType] then
                 local sourcesInfo = getAllSourcesInfo(sourceType, recipe.sources[sourceType])
-                sources[sourceType] = sortListByChance(sourcesInfo)
-                local sourceName = rm.getLocalizedSourceType(sourceType)
-                local sourceTab = rm.createSourceTypeTab(sourceName, sourceType, tabXOffset, sources[sourceType])
-                local columnList = getSourceColumns(sourceType)
-                rm.sourcesListColumns[sourceType] = rm.createSourcesListColumns(columnList, sourceName)
-                tabXOffset = tabXOffset + sourceTab:GetWidth() + F.offsets.sourcesListTabX
+                displayedSources[sourceType] = sortListByChance(sourcesInfo)
+                table.insert(sourceTypes, sourceType)
             end
         end
-        openFirstTab(sources)
+        rm.showSourcesTabs(sourceTypes)
+        rm.sourcesTableArea:Show()
+        rm.showSourcesTab(sourceTypes[1])
     end
 end

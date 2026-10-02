@@ -41,13 +41,10 @@ function rm.createAllFrameElements()
     ------------------------- Sources frame -------------------------
     rm.sourcesInstructions = rm.createSourcesInstructions(rm.mainFrame)
     rm.sourcesHeader = rm.createSourcesHeader(rm.mainFrame) -- Recipe icon and name
-    rm.sourcesListTabs = {}
-    rm.sourcesScrollFame = rm.createSourcesScrollFrame(rm.mainFrame)
-    rm.sourcesList = rm.createSourcesList(rm.mainFrame)
-    rm.sourcesScrollFame:SetScrollChild(rm.sourcesList)
-    rm.sourcesColumnsContainer = rm.createColumnsContainer(rm.sourcesList)
-    rm.sourcesListColumns = {}
-    rm.uniqueSourceText = rm.createUniqueSourceText(rm.sourcesList)
+    rm.sourcesTableArea = rm.createSourcesTableArea(rm.mainFrame)
+    rm.sourcesTable = rm.createSourcesTable(rm.sourcesTableArea)
+    rm.sourcesTabs = {}
+    rm.uniqueSourceText = rm.createUniqueSourceText(rm.sourcesTableArea)
 
     ------------------------- Options frame -------------------------
     rm.optionsFrame = rm.createOptionsFrame()

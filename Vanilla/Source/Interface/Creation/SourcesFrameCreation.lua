@@ -1,5 +1,4 @@
 local _, rm = ...
-local L = rm.L
 local F = rm.F
 
 ----------------------------- Instructions -----------------------------
@@ -66,165 +65,190 @@ local function createTabTexture(tab)
     return texture
 end
 
-local function createTabText(tab, string)
+local function createTabText(tab)
     local text = tab:CreateFontString(nil, "OVERLAY")
     text:SetFont(F.fonts.sourcesListTab, F.fontSizes.sourcesListTab, "OUTLINE")
-    text:SetText(string)
     text:SetPoint("CENTER", tab.texture, F.offsets.sourcesListTabTextX, 0)
     return text
 end
 
-function rm.createSourceTypeTab(string, label, xOffset, sources)
-    local tab = CreateFrame("Button", nil, rm.sourcesScrollFame)
-    tab:SetFrameLevel(rm.sourcesList:GetFrameLevel() - 1)
-    tab:SetPoint("BOTTOMLEFT", rm.sourcesScrollFame, "TOPLEFT", xOffset + 4, F.offsets.sourcesListTabY)
+local function createSourcesTab()
+    local tab = CreateFrame("Button", nil, rm.sourcesTableArea)
+    tab:SetFrameLevel(rm.sourcesTable:GetFrameLevel() - 1)
     tab:SetFrameStrata("MEDIUM")
     tab.active = false
-    tab.label = label -- Source type (drop, quest, etc...)
     tab.texture = createTabTexture(tab)
-    tab.text = createTabText(tab, string)
-    tab:SetSize(tab.text:GetWidth() + F.sizes.sourcesListExtraTabWidth, F.sizes.sourcesListTabHeight)
-    rm.showSourcesOnTabClick(tab, sources)
+    tab.text = createTabText(tab)
+    rm.showSourcesOnTabClick(tab)
     rm.highlightInactiveOnMouseover(tab)
-    rm.sourcesListTabs[label] = tab
     return tab
 end
 
------------------------------ List -----------------------------
-function rm.createSourcesScrollFrame(parent)
-    local scrollFrame = CreateFrame("ScrollFrame", nil, parent, F.templates.scrollFrame)
-    scrollFrame:SetPoint("TOPLEFT", F.offsets.sourcesListX, F.offsets.sourcesListY)
-    scrollFrame:SetPoint("BOTTOMRIGHT", F.offsets.sourcesListScrollX, F.offsets.sourcesListScrollY)
-    scrollFrame:Hide()
+-- Tabs are reused between recipes
+function rm.getSourcesTab(index)
+    if not rm.sourcesTabs[index] then
+        rm.sourcesTabs[index] = createSourcesTab()
+    end
+    return rm.sourcesTabs[index]
+end
+
+----------------------------- Table -----------------------------
+function rm.createSourcesTableArea(parent)
+    local area = CreateFrame("Frame", nil, parent)
+    area:SetPoint("TOPLEFT", F.offsets.sourcesTableX, F.offsets.sourcesTableY)
+    area:SetPoint("BOTTOMLEFT", F.offsets.sourcesTableX, F.offsets.sourcesTableBottomY)
+    area:SetWidth(F.sizes.sourcesTableWidth)
+    area:Hide()
+    return area
+end
+
+local function createTableHeader(sourcesTable)
+    local inset = F.offsets.sourcesTableInset
+    local header = CreateFrame("Frame", nil, sourcesTable)
+    header:SetPoint("TOPLEFT", inset, -inset)
+    header:SetPoint("TOPRIGHT", -inset, -inset)
+    header:SetHeight(F.sizes.sourcesTableHeaderHeight)
+    header.texture = header:CreateTexture(nil, "BACKGROUND")
+    header.texture:SetAllPoints()
+    header.texture:SetColorTexture(unpack(F.colors.black))
+    header.separatorColor = F.colors.sourcesTableHeaderSeparator
+    header.cells = {}
+    header.separators = {}
+    return header
+end
+
+local function createTableScrollFrame(sourcesTable, area)
+    local inset = F.offsets.sourcesTableInset
+    local scrollFrame = CreateFrame("ScrollFrame", nil, sourcesTable, F.templates.scrollFrame)
+    scrollFrame:SetPoint("TOPLEFT", sourcesTable.header, "BOTTOMLEFT")
+    scrollFrame:SetPoint("BOTTOMRIGHT", -inset, inset)
+    -- Spans the whole area instead of the table, which may be too short for it
+    scrollFrame.ScrollBar:ClearAllPoints()
+    scrollFrame.ScrollBar:SetPoint("TOPLEFT", area, "TOPRIGHT", F.offsets.sourcesTableScrollBarX, -F.offsets.sourcesTableScrollBarY)
+    scrollFrame.ScrollBar:SetPoint("BOTTOMLEFT", area, "BOTTOMRIGHT", F.offsets.sourcesTableScrollBarX, F.offsets.sourcesTableScrollBarY)
     return scrollFrame
 end
 
-function rm.createSourcesList(parent)
-    local container = CreateFrame("Frame", nil, parent, F.templates.sourcesList)
-    container:SetSize(F.sizes.sourcesListWidth + 8, 1) -- Height adjusted based on the number of items in the list
-    container:SetBackdrop(F.backdrops.sourcesList)
-    container.children = {}
-    return container
+local function createTableContent(scrollFrame)
+    local content = CreateFrame("Frame", nil, scrollFrame)
+    content:SetSize(F.sizes.sourcesTableContentWidth, 1) -- Height adjusted based on the number of rows
+    scrollFrame:SetScrollChild(content)
+    return content
 end
 
-function rm.createColumnsContainer(parent)
-    local container = CreateFrame("Frame", nil, parent)
-    container:SetSize(F.sizes.sourcesListWidth, F.sizes.sourcesListColumnHeight)
-    container:SetPoint("TOPLEFT", F.offsets.columnsContainerX, -F.offsets.columnsContainerY)
-    container.texture = container:CreateTexture()
-    container.texture:SetAllPoints()
-    container.texture:SetColorTexture(unpack(F.colors.black))
-    return container
+-- Child frames are drawn above their parent's textures, so a border drawn by the table would be covered by its header and rows
+local function createTableBorder(sourcesTable)
+    local border = CreateFrame("Frame", nil, sourcesTable, F.templates.sourcesTable)
+    border:SetAllPoints()
+    border:SetFrameLevel(sourcesTable.content:GetFrameLevel() + 3) -- Above rows (+1) and their cells (+2)
+    border:SetBackdrop(F.backdrops.sourcesTableBorder)
+    return border
 end
 
-local function createListColumn(columnName, xOffset)
-    local column = rm.sourcesColumnsContainer:CreateFontString(nil, "OVERLAY", F.fonts.sourcesColumns)
-    column:SetPoint("LEFT", xOffset, 0)
-    column:SetText(columnName)
-    return column
+function rm.createSourcesTable(area)
+    local sourcesTable = CreateFrame("Frame", nil, area, F.templates.sourcesTable)
+    sourcesTable:SetPoint("TOPLEFT")
+    sourcesTable:SetPoint("TOPRIGHT")
+    sourcesTable:SetBackdrop(F.backdrops.sourcesTable)
+    sourcesTable.header = createTableHeader(sourcesTable)
+    sourcesTable.scrollFrame = createTableScrollFrame(sourcesTable, area)
+    sourcesTable.content = createTableContent(sourcesTable.scrollFrame)
+    sourcesTable.border = createTableBorder(sourcesTable)
+    sourcesTable.rows = {}
+    sourcesTable.rowCount = 0
+    rm.updateTableHeightOnAreaResize(area)
+    return sourcesTable
 end
 
-function rm.createSourcesListColumns(columnList, tabLabel)
-    local columns = {}
-    for i, column in ipairs(columnList) do
-        local column = createListColumn(column, F.offsets.sourcesListColumnsX[tabLabel][i])
-        column:Hide()
-        table.insert(columns, column)
-    end
-    return columns
+local function createCellIcon(cell)
+    local icon = cell:CreateTexture(nil, "ARTWORK")
+    icon:SetSize(F.sizes.sourcesTableCellIcon, F.sizes.sourcesTableCellIcon)
+    icon:SetPoint("LEFT", F.sizes.sourcesTableCellPadding + F.offsets.sourcesTableCellIconX, 0)
+    icon:Hide()
+    return icon
 end
 
-local function setRowColor(row)
-    if #rm.sourcesList.children % 2 == 0 then
-        row.texture:SetColorTexture(0.27, 0.27, 0.27)
+-- The text is anchored when the cell's content is set, depending on whether it has an icon
+local function createCell(parent)
+    local cell = CreateFrame("Frame", nil, parent)
+    cell.icon = createCellIcon(cell)
+    cell.text = cell:CreateFontString(nil, "OVERLAY")
+    cell.text:SetWordWrap(false) -- Text exceeding the cell is shortened with "..."
+    if parent == rm.sourcesTable.header then
+        cell.text:SetFontObject(F.fonts.sourcesTableHeader)
     else
-        row.texture:SetColorTexture(0.2, 0.2, 0.2)
+        cell.text:SetFont(F.fonts.sourcesTableCell, F.fontSizes.sourcesTableCell)
     end
-end
-
-local function createListRow(columns, yOffset)
-    local row = CreateFrame("Frame", nil, rm.sourcesList)
-    row:SetSize(F.sizes.sourcesListWidth, F.sizes.sourcesListRowHeight)
-    row:SetPoint("TOPLEFT", columns[1], "BOTTOMLEFT", F.offsets.sourcesListRowX, yOffset)
-    row.texture = row:CreateTexture()
-    row.texture:SetAllPoints()
-    row.texture:SetTexture(F.textures.sourcesListRow)
-    setRowColor(row)
-    table.insert(rm.sourcesList.children, row)
-    return row
-end
-
-local function setCellText(cell, text, data)
-    if data[L.chance] and type(text) == "number" then
-        cell:SetText(text.." %")
-    else
-        cell:SetText(text)
-    end
-end
-
-local function createListCell(row, data, text)
-    local cell = row:CreateFontString(nil, "OVERLAY")
-    cell:SetFont(F.fonts.sourcesListCell, F.fontSizes.sourcesListCell)
-    setCellText(cell, text, data)
-    rm.showTooltipOnMouseover(cell, data)
+    rm.showCellTooltipOnMouseover(cell)
     return cell
 end
 
-local function isFirstColumn(column, columns)
-    return column == columns[1]
-end
-
-local function setCellPosition(cell, column, columnName, columns, yOffset)
-    if isFirstColumn(column, columns) then
-        cell:SetPoint("TOPLEFT", column, "BOTTOMLEFT", 0, yOffset - F.offsets.sourcesListCellY)
+-- Separators take the color of the adjacent rows
+local function setRowColors(row, index)
+    if index % 2 == 1 then
+        row.texture:SetColorTexture(unpack(F.colors.sourcesTableOddRow))
+        row.separatorColor = F.colors.sourcesTableEvenRow
     else
-        cell:SetPoint("TOPLEFT", column, "BOTTOM", -(cell:GetWidth() / 2), yOffset - F.offsets.sourcesListCellY)
+        row.texture:SetColorTexture(unpack(F.colors.sourcesTableEvenRow))
+        row.separatorColor = F.colors.sourcesTableOddRow
     end
 end
 
-local function createSourceRow(columns, data)
-    local yOffset = (#rm.sourcesList.children * -F.sizes.sourcesListRowHeight) - 1
-    local row = createListRow(columns, yOffset)
-    local cells = {}
-    for _, column in ipairs(columns) do
-        local columnName = column:GetText()
-        local dataValue = data[columnName]
-        if type(dataValue) ~= "table" then
-            local cell = createListCell(row, data, dataValue)
-            setCellPosition(cell, column, columnName, columns, yOffset)
-            table.insert(cells, cell)
-        else -- Source present in multiple zones
-            row:Hide()
-            table.remove(rm.sourcesList.children, nil)
-            yOffset = yOffset + F.sizes.sourcesListRowHeight
-            local newCellYOffset = 0
-            for i = 1, #dataValue do
-                yOffset = yOffset - F.sizes.sourcesListRowHeight
-                local newRow = createListRow(columns, yOffset)
-                for _, cell in pairs(cells) do
-                    local newCell = createListCell(newRow, data, cell:GetText())
-                    newCell:SetPoint(cell:GetPoint())
-                    newCell:AdjustPointsOffset(0, newCellYOffset)
-                end
-                newCellYOffset = newCellYOffset - F.sizes.sourcesListRowHeight
-                local mapCell = createListCell(newRow, data, dataValue[i])
-                setCellPosition(mapCell, column, columnName, columns, yOffset)
-            end
-        end
-    end
+local function createRow(index)
+    local yOffset = -(index - 1) * F.sizes.sourcesTableRowHeight
+    local row = CreateFrame("Frame", nil, rm.sourcesTable.content)
+    row:SetPoint("TOPLEFT", 0, yOffset)
+    row:SetPoint("TOPRIGHT", 0, yOffset)
+    row:SetHeight(F.sizes.sourcesTableRowHeight)
+    row.texture = row:CreateTexture(nil, "BACKGROUND")
+    row.texture:SetAllPoints()
+    setRowColors(row, index)
+    row.cells = {}
+    row.separators = {}
+    return row
 end
 
-function rm.createAllRowsForSourceType(sources, columns)
-    for _, source in pairs(sources) do
-        createSourceRow(columns, source)
+-- Rows and cells are reused between tabs and recipes
+function rm.getSourcesTableRow(index)
+    local rows = rm.sourcesTable.rows
+    if not rows[index] then
+        rows[index] = createRow(index)
     end
+    return rows[index]
+end
+
+-- Each line has its own segment of the separator, so it can have a different color
+local function createSeparator(parent)
+    local separator = parent:CreateTexture(nil, "BORDER") -- Above the line's background
+    -- Snapping moves each edge to the nearest pixel, which can make the line a pixel wider or narrower
+    separator:SetSnapToPixelGrid(false)
+    separator:SetTexelSnappingBias(0)
+    separator:SetColorTexture(unpack(parent.separatorColor))
+    return separator
+end
+
+-- Parent is either the table's header or one of its rows.
+-- Index 1 separates the first column from the second
+function rm.getSourcesTableSeparator(parent, index)
+    if not parent.separators[index] then
+        parent.separators[index] = createSeparator(parent)
+    end
+    return parent.separators[index]
+end
+
+-- Parent is either the table's header or one of its rows
+function rm.getSourcesTableCell(parent, index)
+    if not parent.cells[index] then
+        parent.cells[index] = createCell(parent)
+    end
+    return parent.cells[index]
 end
 
 ----------------------------- Unique Source Instructions -----------------------------
 function rm.createUniqueSourceText(parent)
     local instructions = parent:CreateFontString(nil, "OVERLAY")
     instructions:SetFont(F.fonts.uniqueInstructions, F.fontSizes.uniqueInstructions, "OUTLINE")
-    instructions:SetPoint("TOP", rm.sourcesColumnsContainer, "CENTER", 0, -(F.sizes.sourcesListRowHeight + F.offsets.uniqueSourceTextY))
+    instructions:SetPoint("TOP", rm.sourcesTable, "BOTTOM", 0, F.offsets.uniqueSourceTextY)
     instructions:Hide()
     return instructions
 end

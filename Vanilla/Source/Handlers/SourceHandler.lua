@@ -12,24 +12,16 @@ local localizedClassifications = {
 
 ------------------------- Shared -------------------------
 local function getFactionIcon(data)
-    return "|T"..F.textures.factionIcons[data["faction"]]..":14.5:14.5:-1.5:-0.5:32:32:4:32:4:32|t"
-end
-
-local function shortenLongName(str, maxLength)
-    if #str > maxLength + 3 then
-        return string.sub(str, 1, maxLength).."..."
+    if data["faction"] then
+        return {
+            texture = F.textures.factionIcons[data["faction"]],
+            textureCoords = {0, 0.95, 0, 0.95} -- Crops the texture's top and left
+        }
     end
-    return str
 end
 
 local function getNPCName(npc)
-    local fullName = npc["names"][rm.locale] or npc["names"]["enUS"]
-    local displayName = ""
-    if npc["faction"] then
-        displayName = getFactionIcon(npc)
-    end
-    displayName = displayName..shortenLongName(fullName, F.sizes.sourcesCellTextLength["npc"])
-    return displayName, fullName
+    return npc["names"][rm.locale] or npc["names"]["enUS"]
 end
 
 local function getLocalizedClassification(data)
@@ -37,30 +29,27 @@ local function getLocalizedClassification(data)
     return localizedClassifications[classification] or false
 end
 
-local function getZoneName(infoTable, subject)
-    local fullName
+local function getZoneName(subject)
     if not subject["zones"] then
         return L.unknown
     elseif #subject["zones"] == 1 then
-        fullName = C_Map.GetAreaInfo(subject["zones"][1])
-        return shortenLongName(fullName, F.sizes.sourcesCellTextLength["zone"]), fullName
-    else
+        return C_Map.GetAreaInfo(subject["zones"][1])
+    else -- Source is present in multiple zones
         local names = {}
-        local fullNames = {}
         for _, zone in pairs(subject["zones"]) do
-            fullName = C_Map.GetAreaInfo(zone)
-            local shortName = shortenLongName(fullName, F.sizes.sourcesCellTextLength["zone"])
-            table.insert(names, shortName)
-            fullNames[shortName] = fullName
+            table.insert(names, C_Map.GetAreaInfo(zone))
         end
-        return names, fullNames
+        return names
     end
 end
 
+-- tooltips: Extra info shown when hovering over the cell of the same field
+-- icon: Shown at the left of the name
 local function storeCommonNPCInfo(infoTable, npc)
-    infoTable[L.name], infoTable["fullName"] = getNPCName(npc)
-    infoTable["classification"] = getLocalizedClassification(npc)
-    infoTable[L.zone], infoTable["fullZoneName"] = getZoneName(infoTable, npc)
+    infoTable.name = getNPCName(npc)
+    infoTable.zone = getZoneName(npc)
+    infoTable.tooltips = {level = getLocalizedClassification(npc)}
+    infoTable.icon = getFactionIcon(npc)
 end
 
 local function getClassificationColor(classification)
@@ -86,8 +75,8 @@ function rm.getCreatureInfo(sourceID, sourceData)
     local npcInfo = {}
     local npc = rm.npcDB[sourceID]
     storeCommonNPCInfo(npcInfo, npc)
-    npcInfo[L.level] = getColoredLevelBasedOnClassification(npc)
-    npcInfo[L.chance] = sourceData
+    npcInfo.level = getColoredLevelBasedOnClassification(npc)
+    npcInfo.chance = sourceData
     return npcInfo
 end
 
@@ -129,14 +118,14 @@ local function storeVendorSupply(sourceData, vendorInfo)
     local cost = sourceData["cost"]
     local stock = sourceData["stock"]
     if cost then
-        vendorInfo[L.price] = getFormattedCost(cost)
+        vendorInfo.price = getFormattedCost(cost)
     else
-        vendorInfo[L.price] = L.unknown
+        vendorInfo.price = L.unknown
     end
     if stock ~= nil then
-        vendorInfo[L.stock] = stock
+        vendorInfo.stock = stock
     else
-        vendorInfo[L.stock] = L.unlimited
+        vendorInfo.stock = L.unlimited
     end
 end
 
@@ -149,20 +138,6 @@ function rm.getVendorInfo(sourceID, sourceData)
 end
 
 ------------------------- Quest -------------------------
-local function getQuestName(sourceID, quest)
-    local fullName = C_QuestLog.GetQuestInfo(sourceID)
-    local displayName = ""
-    if quest["faction"] then
-        displayName = getFactionIcon(quest)
-    end
-    if fullName then
-        displayName = displayName..shortenLongName(fullName, F.sizes.sourcesCellTextLength["quest"])
-    else
-        displayName = displayName..L.unknown
-    end
-    return displayName, fullName
-end
-
 local function getClassAndRaceColor(classes, races)
     if not classes and not races then
         return F.colors.whiteHex
@@ -177,10 +152,10 @@ end
 
 local function colorQuestNameIfClassRaceOrCompleted(quest, classes, races)
     if quest["completed"] then
-        quest[L.name] = WrapTextInColorCode(quest[L.name], F.colors.grayHex)
+        quest.name = WrapTextInColorCode(quest.name, F.colors.grayHex)
     else
         local classAndRaceColor = getClassAndRaceColor(classes, races)
-        quest[L.name] = WrapTextInColorCode(quest[L.name], classAndRaceColor)
+        quest.name = WrapTextInColorCode(quest.name, classAndRaceColor)
     end
 end
 
@@ -225,18 +200,30 @@ local function getFormattedClassAndRaceInfo(classes, races)
     return formattedInfo:gsub("%%s, ", "") -- Removes every "%s, " found in formattedInfo
 end
 
+local function getQuestNameTooltip(questInfo, classesAndRaces)
+    if questInfo["completed"] then
+        return L.questCompleted
+    elseif classesAndRaces ~= "" then
+        return classesAndRaces
+    end
+end
+
 function rm.getQuestInfo(sourceID)
     local questInfo = {}
     local quest = rm.questDB[sourceID]
     local classes = quest["classes"]
     local races = quest["races"]
-    questInfo[L.name], questInfo["fullName"] = getQuestName(sourceID, quest)
+    local classesAndRaces = getFormattedClassAndRaceInfo(classes, races)
+    questInfo.name = C_QuestLog.GetQuestInfo(sourceID) or L.unknown
     questInfo["completed"] = C_QuestLog.IsQuestFlaggedCompleted(sourceID)
     colorQuestNameIfClassRaceOrCompleted(questInfo, classes, races)
-    questInfo[L.level] = getColoredLevelBasedOnClassification(quest)
-    questInfo[L.minimum] = quest["requiredLevel"] or 1
-    questInfo["classesAndRaces"] = getFormattedClassAndRaceInfo(classes, races)
-    questInfo["classification"] = getLocalizedClassification(quest)
+    questInfo.level = getColoredLevelBasedOnClassification(quest)
+    questInfo.minimum = quest["requiredLevel"] or 1
+    questInfo.tooltips = {
+        name = getQuestNameTooltip(questInfo, classesAndRaces),
+        level = getLocalizedClassification(quest)
+    }
+    questInfo.icon = getFactionIcon(quest)
     return questInfo
 end
 
@@ -246,29 +233,23 @@ function rm.getUniqueInfo(sourceID)
     local uniqueNPC = rm.uniqueDB[sourceID]
     if uniqueNPC then
         storeCommonNPCInfo(uniqueInfo, uniqueNPC)
-        uniqueInfo[L.level] = getColoredLevelBasedOnClassification(uniqueNPC)
+        uniqueInfo.level = getColoredLevelBasedOnClassification(uniqueNPC)
     else
-        uniqueInfo[L.name] = ""
-        uniqueInfo[L.level] = ""
-        uniqueInfo[L.zone] = ""
+        uniqueInfo.name = ""
+        uniqueInfo.level = ""
+        uniqueInfo.zone = ""
     end
-    uniqueInfo["instructions"] = L.uniqueSourceInstructions[sourceID][rm.locale] or L.uniqueSourceInstructions[sourceID]["enUS"]
+    uniqueInfo.instructions = L.uniqueSourceInstructions[sourceID][rm.locale] or L.uniqueSourceInstructions[sourceID]["enUS"]
     return uniqueInfo
 end
 
 ------------------------- Object -------------------------
-local function getObjectName(object)
-    local fullName = object["names"][rm.locale] or object["names"]["enUS"]
-    local displayName = shortenLongName(fullName, F.sizes.sourcesCellTextLength["object"])
-    return displayName, fullName
-end
-
 function rm.getObjectInfo(sourceID, sourceData)
     local objectInfo = {}
     local object = rm.objectDB[sourceID]
-    objectInfo[L.name], objectInfo["fullName"] = getObjectName(object)
-    objectInfo[L.chance] = sourceData
-    objectInfo[L.zone], objectInfo["fullZoneName"] = getZoneName(objectInfo, object)
+    objectInfo.name = object["names"][rm.locale] or object["names"]["enUS"]
+    objectInfo.chance = sourceData
+    objectInfo.zone = getZoneName(object)
     return objectInfo
 end
 
@@ -283,23 +264,19 @@ end
 ------------------------- Fishing -------------------------
 function rm.getFishingInfo(sourceID, sourceData)
     local info = {}
-    local name = C_Map.GetAreaInfo(sourceID)
-    info["fullName"] = name
-    info[L.zone] = shortenLongName(name, F.sizes.sourcesCellTextLength["firstOfTwoColumns"])
-    info[L.chance] = sourceData
+    info.zone = C_Map.GetAreaInfo(sourceID)
+    info.chance = sourceData
     return info
 end
 
 ------------------------- Item -------------------------
 function rm.getItemInfo(sourceID, sourceData)
     local info = {}
-    local name = rm.cachedItemNames[sourceID]
-    info["fullName"] = name
-    info[L.name] = shortenLongName(name, F.sizes.sourcesCellTextLength["firstOfTwoColumns"])
+    info.name = rm.cachedItemNames[sourceID]
     if sourceData ~= "" then
-        info[L.chance] = sourceData
+        info.chance = sourceData
     else
-        info[L.chance] = L.unknown
+        info.chance = L.unknown
     end
     return info
 end

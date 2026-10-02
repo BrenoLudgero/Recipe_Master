@@ -63,7 +63,7 @@ local function onMainFrameDragStart(frame, button, mainFrameWidth)
     if button == "LeftButton" then
         frame:StartMoving()
     elseif button == "RightButton" then
-        local isSourcesTabActive = (rm.activeTab == L.sources and #rm.sourcesList.children > 0)
+        local isSourcesTabActive = (rm.activeTab == L.sources and rm.sourcesTableArea:IsShown())
         local minHeight, maxHeight = 296, 700
         local width = isSourcesTabActive and F.sizes.sourcesFrameWidth or mainFrameWidth
         rm.mainFrame:SetResizeBounds(width, minHeight, width, maxHeight)
@@ -224,7 +224,7 @@ end
 function rm.hideSourcesFrameElements()
     rm.sourcesHeader.recipeIcon:Hide()
     rm.sourcesHeader.recipeName:Hide()
-    rm.sourcesScrollFame:Hide()
+    rm.sourcesTableArea:Hide()
     rm.uniqueSourceText:Hide()
     rm.sourcesInstructions:Hide()
 end

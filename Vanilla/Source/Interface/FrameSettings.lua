@@ -1,5 +1,4 @@
 local _, rm = ...
-local L = rm.L
 local F = rm.F
 
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -12,70 +11,35 @@ local function setLocaleSpecificOffsets()
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 19
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 20
         F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 20
-        F.offsets.sourcesListColumnsX[L.item] = {3, 326}
     elseif rm.locale == "ptBR" then
         F.offsets.dividerCheckButtonLabelY = 1
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 14
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 35
         F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 35
         F.offsets.sourcesListTabX = 2
-        F.offsets.sourcesListColumnsX[L.item] = {3, 320}
     elseif rm.locale == "deDE" then
         F.offsets.dividerCheckButtonLabelY = 1
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 13
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 18
         F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 18
         F.offsets.sourcesListTabX = 0
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 162, 234, 314}
     elseif rm.locale == "frFR" then
         F.offsets.iconDropdownX = F.offsets.thirdColumnX + 13
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 25
         F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 25
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 177, 230, 314}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 177, 230, 314}
     elseif rm.locale == "ruRU" then
         F.offsets.showSourceTooltipCheckX = F.offsets.secondColumnX + 25
         F.offsets.showOppositeFactionAltsTooltipCheckX = F.offsets.secondColumnX + 25
         F.offsets.bottomTabTextY = 6.2
         F.offsets.sourcesListTabX = 0
         F.offsets.sourcesListTabTextX = 2
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 180, 249, 296}
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 180, 249, 296}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 180, 249, 296}
-        F.offsets.sourcesListColumnsX[L.quest] = {3, 249, 320}
-        F.offsets.sourcesListColumnsX[L.unique] = {3, 230, 296}
-        F.offsets.sourcesListColumnsX[L.object] = {3, 249, 296}
-        F.offsets.sourcesListColumnsX[L.trainer] = {3, 296}
-        F.offsets.sourcesListColumnsX[L.fishing] = {3, 343}
-        F.offsets.sourcesListColumnsX[L.item] = {3, 343}
     elseif rm.locale == "koKR" then
         F.offsets.bottomTabTextY = 5.5
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 180, 260, 330}
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 196, 252, 330}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 196, 252, 330}
-        F.offsets.sourcesListColumnsX[L.quest] = {3, 252, 330}
-        F.offsets.sourcesListColumnsX[L.unique] = {3, 252, 330}
-        F.offsets.sourcesListColumnsX[L.object] = {3, 252, 330}
-        F.offsets.sourcesListColumnsX[L.trainer] = {3, 330}
     elseif rm.locale == "zhTW" then
         F.offsets.recipeInfoY = 2
-        F.offsets.sourcesListCellY = 2
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 177, 260, 327}
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 193, 249, 327}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 196, 249, 327}
-        F.offsets.sourcesListColumnsX[L.quest] = {3, 249, 327}
-        F.offsets.sourcesListColumnsX[L.unique] = {3, 249, 327}
-        F.offsets.sourcesListColumnsX[L.object] = {3, 249, 327}
     elseif rm.locale == "zhCN" then
         F.offsets.recipeInfoY = 2
         F.offsets.bottomTabTextY = 6.2
-        F.offsets.sourcesListCellY = 2
-        F.offsets.sourcesListColumnsX[L.vendor] = {3, 177, 260, 327}
-        F.offsets.sourcesListColumnsX[L.drop] = {3, 193, 254, 327}
-        F.offsets.sourcesListColumnsX[L.pickpocket] = {3, 196, 254, 327}
-        F.offsets.sourcesListColumnsX[L.quest] = {3, 254, 327}
-        F.offsets.sourcesListColumnsX[L.unique] = {3, 254, 327}
-        F.offsets.sourcesListColumnsX[L.object] = {3, 254, 327}
     end
 end
 
@@ -117,31 +81,17 @@ F.offsets.instructionsClickTextureY = -16
 F.offsets.instructionsRecipeX = -22
 F.offsets.instructionsRecipeY = 10
 F.offsets.sourcesHeaderY = -34
-F.offsets.uniqueSourceTextY = 15
---------------- List ---------------
-F.offsets.sourcesListX = 8.5
-F.offsets.sourcesListY = -82
-F.offsets.sourcesListScrollX = -33
-F.offsets.sourcesListScrollY = 10
------ Columns -----
-F.offsets.columnsContainerX = 4
-F.offsets.columnsContainerY = 3.5
-F.offsets.sourcesListColumnsX = {
--- [Tab label] = {columns' xOffset}
-    [L.vendor] = {3, 162, 230, 314},
-    [L.drop] = {3, 180, 230, 314},
-    [L.pickpocket] = {3, 180, 230, 314},
-    [L.quest] = {3, 230, 314},
-    [L.unique] = {3, 230, 314},
-    [L.object] = {3, 230, 314},
-    [L.trainer] = {3, 314},
-    [L.fishing] = {3, 330},
-    [L.item] = {3, 330}
-}
------ Rows -----
-F.offsets.sourcesListRowX = -3
------ Cells -----
-F.offsets.sourcesListCellY = 3.5
+F.offsets.uniqueSourceTextY = -7
+--------------- Table ---------------
+F.offsets.sourcesTableX = 8.5
+F.offsets.sourcesTableY = -78
+F.offsets.sourcesTableBottomY = 10
+F.offsets.sourcesTableInset = 3 -- Space between the table's border and its content
+F.offsets.sourcesTableCellIconX = -3 -- Space between a cell's icon and the border
+F.offsets.sourcesTableCellIconSpacing = 2 -- Space between a cell's icon and its text
+F.offsets.sourcesTableSeparatorSpacingX = 4 -- Space around the line separating columns
+F.offsets.sourcesTableScrollBarX = 6
+F.offsets.sourcesTableScrollBarY = 16
 ----- Tabs -----
 F.offsets.sourcesListActiveTabY = -3
 F.offsets.sourcesListInactiveTabY = -5.4
@@ -203,29 +153,8 @@ setLocaleSpecificOffsets()
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 local function setLocaleSpecificSizes()
-    if rm.locale == "ptBR" then
-        F.sizes.sourcesListExtraTabWidth = 19
-    elseif rm.locale == "deDE" then
-        F.sizes.sourcesListExtraTabWidth = 18
-    elseif rm.locale == "ruRU" then
-        F.sizes.sourcesListExtraTabWidth = 16
-        F.sizes.sourcesCellTextLength["firstOfTwoColumns"] = 94
-        F.sizes.sourcesCellTextLength["npc"] = 40
-        F.sizes.sourcesCellTextLength["object"] = 70
-        F.sizes.sourcesCellTextLength["quest"] = 70
-        F.sizes.sourcesCellTextLength["zone"] = 25
-    elseif rm.locale == "koKR" then
-        F.sizes.sourcesCellTextLength["firstOfTwoColumns"] = 90
-        F.sizes.sourcesCellTextLength["npc"] = 38
-        F.sizes.sourcesCellTextLength["object"] = 70
-        F.sizes.sourcesCellTextLength["quest"] = 66
-        F.sizes.sourcesCellTextLength["zone"] = 18
-    elseif rm.locale == "zhTW" or rm.locale == "zhCN" then
-        F.sizes.sourcesListExtraBorderHeight = 4.4
-        F.sizes.sourcesCellTextLength["firstOfTwoColumns"] = 66
-        F.sizes.sourcesCellTextLength["npc"] = 27
-        F.sizes.sourcesCellTextLength["object"] = 50
-        F.sizes.sourcesCellTextLength["quest"] = 47
+    if rm.locale == "ruRU" then
+        F.sizes.sourcesListTabPaddingX = 19
     end
 end
 
@@ -250,26 +179,23 @@ F.sizes.sortDropdownWidth = 110
 F.sizes.sortOrderButton = 34 -- Width and height
 
 ------------------------- Sources frame -------------------------
+--        Headers' width defined at SourcesDisplay.lua
 F.sizes.sourcesBackgroundTile = 220
-F.sizes.sourcesCellTextLength = {
-    ["firstOfTwoColumns"] = 53,
-    ["npc"] = 19,
-    ["object"] = 36,
-    ["quest"] = 33,
-    ["zone"] = 14
-}
 F.sizes.sourcesFrameWidth = 430
 F.sizes.sourcesHeaderIcon = 20 -- Width and height
 F.sizes.sourcesInstructions = 250 -- Width and height
 F.sizes.sourcesInstructionsCursor = 60 -- Width and height
 F.sizes.sourcesInstructionsClickTexture = 40 -- Width and height
 F.sizes.sourcesInstructionsRecipe = 85 -- Width and height
-F.sizes.sourcesListColumnHeight = 16
-F.sizes.sourcesListExtraTabWidth = 20
-F.sizes.sourcesListExtraBorderHeight = 2.6
-F.sizes.sourcesListRowHeight = 17
 F.sizes.sourcesListTabHeight = 25
-F.sizes.sourcesListWidth = 381
+F.sizes.sourcesListTabPaddingX = 20 -- Space around the inside of a tab and its text
+F.sizes.sourcesTableHeaderHeight = 18
+F.sizes.sourcesTableCellPadding = 4 -- Space between the inside of a cell and its text
+F.sizes.sourcesTableCellIcon = 14 -- Width and height of icons beside a cell's text (e.g., faction icons)
+F.sizes.sourcesTableRowHeight = 17
+F.sizes.sourcesTableSeparatorWidth = 1
+F.sizes.sourcesTableWidth = 389
+F.sizes.sourcesTableContentWidth = F.sizes.sourcesTableWidth - (2 * F.offsets.sourcesTableInset)
 
 ------------------------- Options frame -------------------------
 F.sizes.optionsDropdownWidth = 145
@@ -314,10 +240,10 @@ F.fonts.recipeText = "GameFontHighlightSmallOutline"
 F.fonts.dividerCheckButtonText = "SystemFont_Outline_Small"
 
 ------------------------- Sources frame -------------------------
-F.fonts.sourcesColumns = "GameFontHighlight"
 F.fonts.sourcesFrameHeader = specificFont
-F.fonts.sourcesListCell = specificFont
 F.fonts.sourcesListTab = specificFont
+F.fonts.sourcesTableCell = specificFont
+F.fonts.sourcesTableHeader = "GameFontHighlight"
 F.fonts.uniqueInstructions = specificFont
 
 ------------------------- Options frame -------------------------
@@ -344,12 +270,10 @@ local function setLocaleSpecificFontSizes()
         F.fontSizes.bottomTab = 10
     elseif rm.locale == "koKR" then
         F.fontSizes.bottomTab = 11
-        F.fontSizes.sourcesFrameHeader = 16
-        F.fontSizes.sourcesListCell = 10.5
     elseif rm.locale == "zhTW" or rm.locale == "zhCN"then
         F.fontSizes.bottomTab = 14
         F.fontSizes.sourcesFrameHeader = 17
-        F.fontSizes.sourcesListCell = 13
+        F.fontSizes.sourcesTableCell = 13
         F.fontSizes.sourcesListTab = 13
         F.fontSizes.uniqueInstructions = 15
     end
@@ -366,8 +290,8 @@ F.fontSizes.dividerCheckButton = 10
 
 ------------------------- Sources frame -------------------------
 F.fontSizes.sourcesFrameHeader = 15
-F.fontSizes.sourcesListCell = 9.5
 F.fontSizes.sourcesListTab = 10
+F.fontSizes.sourcesTableCell = 9.5
 F.fontSizes.uniqueInstructions = 13
 
 ------------------------- Recipes / Fishing frame -------------------------
@@ -401,6 +325,9 @@ F.colors.purple = {0.482, 0.192, 0.824}
 F.colors.red = {1, 0.125, 0.125}
 F.colors.redHex = "ffFF2020"
 F.colors.skyBlueHex = "ff57C8EA"
+F.colors.sourcesTableHeaderSeparator = {1, 1, 1, 0.4}
+F.colors.sourcesTableEvenRow = {0.2, 0.2, 0.2}
+F.colors.sourcesTableOddRow = {0.27, 0.27, 0.27}
 F.colors.tanHex = "ffAC885D"
 F.colors.white = {1, 1, 1}
 F.colors.whiteHex = "ffFFFFFF"
@@ -421,9 +348,9 @@ F.templates.innerBorder = "InsetFrameTemplate4"
 F.templates.mainFrame = "BackdropTemplate"
 F.templates.mainFrameBorder = "BaseBasicFrameTemplate"
 F.templates.search = "SearchBoxTemplate"
-F.templates.sourcesList = "BackdropTemplate"
 F.templates.scrollFrame = "UIPanelScrollFrameTemplate"
 F.templates.slider = "HorizontalSliderTemplate"
+F.templates.sourcesTable = "BackdropTemplate"
 
 
 
@@ -446,16 +373,15 @@ F.textures.header = "Interface/BankFrame/Bank-Background"
 F.textures.mainBackground = "Interface/FrameGeneral/UI-Background-Marble"
 F.textures.silverCoin = "Interface/MoneyFrame/UI-SilverIcon"
 F.textures.sourcesBackground = "Interface/AdventureMap/AdventureMapParchmentTile"
-F.textures.sourcesListBackground = "Interface/TutorialFrame/TutorialFrameBackground"
-F.textures.sourcesListEdge = "Interface/Tooltips/UI-Tooltip-Border"
 F.textures.sortOrderArrowUp = "Interface/Buttons/Arrow-Up-Up"
 F.textures.sortOrderArrowDown = "Interface/Buttons/Arrow-Down-Up"
 F.textures.sortOrderButton = "Interface/Buttons/LockButton-Border"
 F.textures.sortOrderButtonHighlight = "Interface/Buttons/UI-CheckBox-Highlight"
 F.textures.sourcesInstructionsMask = "Interface/Masks/CircleMaskScalable"
-F.textures.sourcesListRow = "Interface/Tooltips/UI-Tooltip-Background"
 F.textures.sourcesListActiveTab = "Interface/HELPFRAME/HelpFrameTab-Active"
 F.textures.sourcesListInactiveTab = "Interface/HELPFRAME/HelpFrameTab-Inactive"
+F.textures.sourcesTableBackground = "Interface/TutorialFrame/TutorialFrameBackground"
+F.textures.sourcesTableEdge = "Interface/Tooltips/UI-Tooltip-Border"
 F.textures.tarnishedUndermineReal = "Interface/Icons/INV_Misc_Coin_16"
 
 
@@ -476,12 +402,14 @@ F.backdrops.sourcesFrame = {
     tileSize = F.sizes.sourcesBackgroundTile,
     insets = {left = 4, right = 4, top = 4, bottom = 4}
 }
-F.backdrops.sourcesList = {
-    bgFile = F.textures.sourcesListBackground,
-    edgeFile = F.textures.sourcesListEdge,
+F.backdrops.sourcesTable = {
+    bgFile = F.textures.sourcesTableBackground,
     tile = true,
-    tileEdge = true,
     tileSize = 16,
-    edgeSize = 14,
     insets = {left = 4, right = 4, top = 4, bottom = 4},
+}
+F.backdrops.sourcesTableBorder = { -- Separate from the background so it's displayed above the header and rows
+    edgeFile = F.textures.sourcesTableEdge,
+    tileEdge = true,
+    edgeSize = 14,
 }
