@@ -169,18 +169,6 @@ rm.questDB = {
 		level = 44,
 		requiredLevel = 40,
 	},
-	[2521] = {
-		level = 55,
-		requiredLevel = 45,
-	},
-	[2522] = {
-		level = 55,
-		requiredLevel = 45,
-	},
-	[2747] = {
-		level = 60,
-		requiredLevel = 42,
-	},
 	[2751] = {
 		faction = "Horde",
 		level = 32,
@@ -311,19 +299,7 @@ rm.questDB = {
 		level = 45,
 		requiredLevel = 30,
 	},
-	[2882] = {
-		level = 45,
-		requiredLevel = 40,
-	},
-	[3385] = {
-		level = 50,
-		requiredLevel = 40,
-	},
 	[3402] = {
-		level = 50,
-		requiredLevel = 40,
-	},
-	[3481] = {
 		level = 50,
 		requiredLevel = 40,
 	},
@@ -344,10 +320,6 @@ rm.questDB = {
 		classification = "Dungeon",
 		level = 60,
 		requiredLevel = 55,
-	},
-	[5150] = {
-		level = 55,
-		requiredLevel = 47,
 	},
 	[5163] = {
 		level = 58,
@@ -399,14 +371,6 @@ rm.questDB = {
 		faction = "Alliance",
 		level = 45,
 		requiredLevel = 35,
-	},
-	[6984] = {
-		faction = "Horde",
-		requiredLevel = 30,
-	},
-	[7045] = {
-		faction = "Alliance",
-		requiredLevel = 30,
 	},
 	[7321] = {
 		faction = "Horde",
@@ -471,32 +435,6 @@ rm.questDB = {
 		level = 60,
 		requiredLevel = 50,
 	},
-	[7840] = {
-		faction = "Horde",
-		level = 49,
-		requiredLevel = 44,
-	},
-	[7931] = {
-		requiredLevel = 15,
-	},
-	[7932] = {
-		requiredLevel = 30,
-	},
-	[7933] = {
-		requiredLevel = 45,
-	},
-	[7937] = {
-		requiredLevel = 10,
-	},
-	[7938] = {
-		requiredLevel = 10,
-	},
-	[7944] = {
-		requiredLevel = 10,
-	},
-	[7945] = {
-		requiredLevel = 10,
-	},
 	[8307] = {
 		level = 57,
 		requiredLevel = 54,
@@ -505,42 +443,20 @@ rm.questDB = {
 		level = 60,
 		requiredLevel = 60,
 	},
-	[8769] = {
-		requiredLevel = 40,
-	},
 	[8798] = {
 		level = 60,
 		requiredLevel = 55,
-	},
-	[8862] = {
-		requiredLevel = 10,
-	},
-	[8868] = {
-		classification = "Raid",
-		requiredLevel = 40,
 	},
 	[8869] = {
 		classification = "Dungeon",
 		level = 60,
 		requiredLevel = 50,
 	},
-	[8876] = {
-		requiredLevel = 25,
-	},
 	[8877] = {
 		requiredLevel = 45,
 	},
 	[8878] = {
 		requiredLevel = 50,
-	},
-	[8879] = {
-		requiredLevel = 35,
-	},
-	[8880] = {
-		requiredLevel = 45,
-	},
-	[8881] = {
-		requiredLevel = 55,
 	},
 	[8882] = {
 		requiredLevel = 55,
@@ -602,50 +518,5 @@ rm.questDB = {
 		classification = "Dungeon",
 		level = 70,
 		requiredLevel = 68,
-	},
-	[11377] = {
-		classification = "Daily",
-		level = 70,
-		requiredLevel = 70,
-	},
-	[11379] = {
-		classification = "Daily",
-		level = 70,
-		requiredLevel = 70,
-	},
-	[11380] = {
-		classification = "Daily",
-		level = 70,
-		requiredLevel = 70,
-	},
-	[11381] = {
-		classification = "Daily",
-		level = 70,
-		requiredLevel = 70,
-	},
-	[11665] = {
-		classification = "Daily",
-		level = 70,
-		requiredLevel = 70,
-	},
-	[11666] = {
-		classification = "Daily",
-		level = 70,
-		requiredLevel = 70,
-	},
-	[11667] = {
-		classification = "Daily",
-		level = 70,
-		requiredLevel = 70,
-	},
-	[11668] = {
-		classification = "Daily",
-		level = 70,
-		requiredLevel = 70,
-	},
-	[11669] = {
-		classification = "Daily",
-		level = 70,
-		requiredLevel = 70,
 	},
 }
