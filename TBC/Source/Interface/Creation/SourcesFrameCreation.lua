@@ -74,8 +74,6 @@ end
 
 local function createSourcesTab()
     local tab = CreateFrame("Button", nil, rm.sourcesTableArea)
-    tab:SetFrameLevel(rm.sourcesTable:GetFrameLevel() - 1)
-    tab:SetFrameStrata("MEDIUM")
     tab.active = false
     tab.texture = createTabTexture(tab)
     tab.text = createTabText(tab)
