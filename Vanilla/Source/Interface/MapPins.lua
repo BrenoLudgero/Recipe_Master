@@ -26,7 +26,7 @@ function rm.createMapPinDot(pin)
 end
 
 -- Shared by the pins and areas of the world map and minimap
--- mapPinAction: What the source does, e.g. "Drops Recipe: X"
+-- mapPinAction: What the source does, e.g. "Drops Recipe: X" or "Starts Quest Name"
 function rm.showMarkerTooltip(owner, source, anchor)
     GameTooltip:SetOwner(owner, anchor)
     GameTooltip:SetText(source.name, 1, 1, 1)
@@ -262,7 +262,7 @@ local function closeDefaultProfessionFrames()
     end
 end
 
--- source: Sources table row with the NPC's or object's name, zone and coordinates in that zone.
+-- source: Sources table row with the NPC's or object's name, zone and coordinates in that zone, or a quest's starter.
 -- OpenWorldMap(mapID) can't be used, as it calls a method that the Classic world maps don't have
 function rm.showSourceOnWorldMap(source)
     closeDefaultProfessionFrames()

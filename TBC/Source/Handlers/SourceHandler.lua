@@ -211,13 +211,34 @@ local function getQuestNameTooltip(questInfo, classesAndRaces)
     end
 end
 
+-- The NPC who starts the quest, located by the quest's map button, in its first zone with coordinates.
+-- mapPinAction: "Starts <questName>", shown on the NPC's map pins.
+-- nil if the NPC or its coordinates are unknown
+local function getQuestStarter(npcID, questName)
+    local npc = rm.npcDB[npcID]
+    if not npc then
+        return nil
+    end
+    for _, zone in ipairs(getZones(npc, rm.npcCoordinatesDB[npcID])) do
+        if zone.pointsByMap then
+            return {
+                name = getNPCName(npc),
+                zone = zone.name,
+                pointsByMap = zone.pointsByMap,
+                mapPinAction = L.startsQuest:format(questName)
+            }
+        end
+    end
+end
+
 function rm.getQuestInfo(sourceID)
-    local questInfo = {}
+    local questInfo = {questID = sourceID}
     local quest = rm.questDB[sourceID]
     local classes = quest["classes"]
     local races = quest["races"]
     local classesAndRaces = getFormattedClassAndRaceInfo(classes, races)
-    questInfo.name = C_QuestLog.GetQuestInfo(sourceID) or L.unknown
+    local questName = C_QuestLog.GetQuestInfo(sourceID) or L.unknown
+    questInfo.name = questName
     questInfo["completed"] = C_QuestLog.IsQuestFlaggedCompleted(sourceID)
     colorQuestNameIfClassRaceOrCompleted(questInfo, classes, races)
     questInfo.level = getColoredLevelBasedOnClassification(quest)
@@ -227,6 +248,7 @@ function rm.getQuestInfo(sourceID)
         level = getLocalizedClassification(quest)
     }
     questInfo.icon = getFactionIcon(quest)
+    questInfo.starter = quest["startedByNPC"] and getQuestStarter(quest["startedByNPC"], questName)
     return questInfo
 end
 

@@ -64,7 +64,8 @@ local columns = {
     }
 }
 
--- What each source type does with the recipe, shown on the source's map pins
+-- What each source type does with the recipe, shown on the source's map pins.
+-- Quests show the NPC who starts them instead (see SourceHandler)
 local mapPinActions = {
     ["drop"] = L.dropsRecipe,
     ["pickpocket"] = L.dropsRecipe,

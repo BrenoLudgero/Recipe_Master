@@ -306,7 +306,7 @@ local function removeWaypoints()
     wipe(waypoints)
 end
 
--- source: Sources table row with the NPC's or object's name and coordinates in the row's zone
+-- source: Sources table row with the NPC's or object's name and coordinates in the row's zone, or a quest's starter
 function rm.setTomTomWaypoints(source)
     removeWaypoints()
     local destinations = getDestinations(source.pointsByMap)

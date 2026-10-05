@@ -263,6 +263,26 @@ function rm.getSourcesTableMapButton(cell)
     return cell.mapButton
 end
 
+-- Shows Questie's details of the quest
+local function createQuestieButton(cell)
+    local button = CreateFrame("Button", nil, cell)
+    button:SetSize(F.sizes.sourcesTableQuestieButton, F.sizes.sourcesTableQuestieButton)
+    button:SetNormalTexture(F.textures.questieButton)
+    button:SetHighlightTexture(F.textures.questieButton, "ADD")
+    rm.showQuestieButtonTooltipOnMouseover(button)
+    rm.showQuestieDetailsOnQuestieButtonClick(button)
+    button:Hide()
+    return button
+end
+
+-- Only cells of quests have a Questie button, while Questie is loaded
+function rm.getSourcesTableQuestieButton(cell)
+    if not cell.questieButton then
+        cell.questieButton = createQuestieButton(cell)
+    end
+    return cell.questieButton
+end
+
 ----------------------------- Unique Source Instructions -----------------------------
 function rm.createUniqueSourceText(parent)
     local instructions = parent:CreateFontString(nil, "OVERLAY")

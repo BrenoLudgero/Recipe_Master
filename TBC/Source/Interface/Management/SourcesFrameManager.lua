@@ -81,7 +81,20 @@ local function setCellMapButton(cell, nameElements, xOffset)
     end
 end
 
--- Places the map button, icons and text from left to right, skipping the ones not shown
+local function setCellQuestieButton(cell, nameElements, xOffset)
+    if cell.questieButton then
+        cell.questieButton:Hide()
+    end
+    if nameElements.questieQuestID then
+        local questieButton = rm.getSourcesTableQuestieButton(cell)
+        questieButton.questID = nameElements.questieQuestID
+        questieButton:ClearAllPoints()
+        questieButton:SetPoint("LEFT", xOffset, 0)
+        questieButton:Show()
+    end
+end
+
+-- Places the map button, Questie button, icons and text from left to right, skipping the ones not shown
 local function setCellnameElements(cell, nameElements)
     local padding = F.sizes.sourcesTableCellPadding
     local spacing = F.offsets.sourcesTableCellIconSpacing
@@ -90,6 +103,11 @@ local function setCellnameElements(cell, nameElements)
     cell.hasMapButtonSpace = nameElements.hasMapButtonSpace
     if cell.hasMapButtonSpace then
         xOffset = xOffset + F.sizes.sourcesTableMapButton + spacing
+    end
+    setCellQuestieButton(cell, nameElements, xOffset)
+    cell.hasQuestieButton = nameElements.questieQuestID ~= nil
+    if cell.hasQuestieButton then
+        xOffset = xOffset + F.sizes.sourcesTableQuestieButton + spacing
     end
     local icon = nameElements.icon
     if icon then
@@ -104,7 +122,7 @@ local function setCellnameElements(cell, nameElements)
     end
     cell.text:ClearAllPoints()
     cell.text:SetPoint("RIGHT", -padding, 0)
-    if icon or cell.hasMapButtonSpace then
+    if icon or cell.hasMapButtonSpace or cell.hasQuestieButton then
         cell.text:SetPoint("LEFT", xOffset, 0)
     else
         cell.text:SetPoint("LEFT", padding, 0)
@@ -114,6 +132,7 @@ end
 -- nameElements: Optional table of what's shown at the left of the text
 -- mapButtonSource: Source located by the map button. Without it, the button is hidden
 -- hasMapButtonSpace: Leaves space for a map button, aligning the text with the rows that have one
+-- questieQuestID: Quest whose details are shown by the Questie button. Without it, the button is hidden
 -- icon: Table with the icon's texture and textureCoords
 local function setCellContent(cell, text, align, tooltip, nameElements)
     setCellnameElements(cell, nameElements or {})
@@ -127,6 +146,9 @@ local function getCellContentWidth(cell)
     local width = cell.text:GetUnboundedStringWidth()
     if cell.hasMapButtonSpace then
         width = width + F.sizes.sourcesTableMapButton + F.offsets.sourcesTableCellIconSpacing
+    end
+    if cell.hasQuestieButton then
+        width = width + F.sizes.sourcesTableQuestieButton + F.offsets.sourcesTableCellIconSpacing
     end
     if cell.icon:IsShown() then
         width = width + cell.icon:GetWidth() + F.offsets.sourcesTableCellIconSpacing
@@ -240,9 +262,17 @@ local function clearSourcesTable()
     rm.sourcesTable.rowCount = 0
 end
 
+-- The source itself or, for quests, the NPC who starts it. nil without coordinates
+local function getMapButtonSource(data)
+    if data.pointsByMap then
+        return data
+    end
+    return data.starter
+end
+
 local function hasAnyCoordinates(rows)
     for _, data in ipairs(rows) do
-        if data.pointsByMap then
+        if getMapButtonSource(data) then
             return true
         end
     end
@@ -251,8 +281,9 @@ end
 
 local function getNameElements(data, hasMapButtonSpace)
     return {
-        mapButtonSource = data.pointsByMap and data,
+        mapButtonSource = getMapButtonSource(data),
         hasMapButtonSpace = hasMapButtonSpace,
+        questieQuestID = rm.isQuestieReady() and data.questID or nil,
         icon = data.icon
     }
 end

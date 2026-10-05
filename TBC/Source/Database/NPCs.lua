@@ -213,10 +213,22 @@ rm.npcDB = {
 		names = {enUS = "Farmer Ray", deDE = "Bauer Ray", esES = "Granjero Ray", esMX = "Granjero Ray", frFR = "Ray le fermier", ptBR = "Fazendeiro Raí", ruRU = "Фермер Рей", koKR = "농부 레이", zhCN = "农夫雷恩", zhTW = "農夫雷恩"},
 		zones = {267},
 	},
+	[235] = {
+		faction = "Alliance",
+		level = "20",
+		names = {enUS = "Salma Saldean", ptBR = "Salma Saldanha", ruRU = "Сальма Сальден", koKR = "살마 살딘", zhCN = "萨尔玛·萨丁", zhTW = "薩爾瑪·薩丁"},
+		zones = {40},
+	},
 	[257] = {
 		level = "3",
 		names = {enUS = "Kobold Worker", deDE = "Koboldtagelöhner", esES = "Trabajador kóbold", esMX = "Trabajador kóbold", frFR = "Ouvrier kobold", ptBR = "Trabalhador Kobold", ruRU = "Кобольд-рабочий", koKR = "코볼트 잡역부", zhCN = "狗头人劳工", zhTW = "狗頭人勞工"},
 		zones = {12},
+	},
+	[272] = {
+		faction = "Alliance",
+		level = "30",
+		names = {enUS = "Chef Grual", deDE = "Küchenchef Grual", ptBR = "Chef Goroba", ruRU = "Шеф-повар Груаль", koKR = "주방장 그루얼", zhCN = "厨师格鲁奥", zhTW = "廚師格魯奧"},
+		zones = {10},
 	},
 	[285] = {
 		level = "6 - 7",
@@ -255,9 +267,21 @@ rm.npcDB = {
 		names = {enUS = "Kendor Kabonka", ruRU = "Кендор Кабонка", koKR = "켄로드 카본카", zhCN = "肯多尔·卡邦卡", zhTW = "肯多爾·卡邦卡"},
 		zones = {1519},
 	},
+	[343] = {
+		faction = "Alliance",
+		level = "19",
+		names = {enUS = "Chef Breanna", deDE = "Küchenchefin Breanna", ptBR = "Mestre-cuca Breanna", ruRU = "Шеф-повар Брианна", koKR = "주방장 브리나", zhCN = "厨师布雷纳", zhTW = "廚師布雷納"},
+		zones = {44},
+	},
 	[345] = {
 		level = "24",
 		names = {enUS = "Bellygrub", deDE = "Stopfwanst", esES = "Panzallena", esMX = "Panzallena", frFR = "Fouailleventre", ptBR = "Ronquifuça", ruRU = "Грубобрюх", koKR = "서리먹보", zhCN = "贝利格拉布", zhTW = "貝利格拉布"},
+		zones = {44},
+	},
+	[381] = {
+		faction = "Alliance",
+		level = "20",
+		names = {enUS = "Dockmaster Baren", deDE = "Dockmeister Baren", esES = "Maestro de embarcadero Baren", esMX = "Maestro de embarcadero Baren", frFR = "Chef des docks Baren", ptBR = "Mestre de Doca Baren", ruRU = "Начальник дока Барен", koKR = "항구주임 바렌", zhCN = "码头管理员巴伦", zhTW = "碼頭管理員巴倫"},
 		zones = {44},
 	},
 	[390] = {
@@ -1516,6 +1540,12 @@ rm.npcDB = {
 		names = {enUS = "Crimson Whelp", deDE = "Purpurroter Welpe", esES = "Cría carmesí", esMX = "Cría carmesí", frFR = "Dragonnet cramoisi", ptBR = "Dragonete Carmesim", ruRU = "Багровый дракончик", koKR = "심홍색 새끼용", zhCN = "深红雏龙", zhTW = "深紅雛龍"},
 		zones = {11},
 	},
+	[1078] = {
+		faction = "Alliance",
+		level = "25",
+		names = {enUS = "Ormer Ironbraid", deDE = "Ormer Eisenzopf", esES = "Ormer Trenzaferro", esMX = "Ormer Trenzaferro", frFR = "Ormer Tressefer", ptBR = "Ormer Trançaferro", ruRU = "Ормер Сталеплет", koKR = "오머 아이언브레이드", zhCN = "奥莫尔·铁衣", zhTW = "奧莫爾·鐵衣"},
+		zones = {11},
+	},
 	[1081] = {
 		level = "42",
 		names = {enUS = "Mire Lord", deDE = "Morastlord", esES = "Señor del Lodo", frFR = "Seigneur du bourbier", ptBR = "Senhor do Brejo", ruRU = "Хозяин болота", koKR = "우두머리 늪괴물", zhCN = "泥沼之王", zhTW = "泥沼之王"},
@@ -1708,6 +1738,12 @@ rm.npcDB = {
 		level = "35 - 36",
 		names = {enUS = "Snapjaw Crocolisk", deDE = "Schnappkieferkrokilisk", esES = "Crocolisco Quijaforte", esMX = "Crocolisco Quijaforte", frFR = "Crocilisque Gueule d'acier", ptBR = "Crocolisco Arapuca", ruRU = "Кроколиск-хрустогрыз", koKR = "무쇠턱 악어", zhCN = "钳嘴鳄鱼", zhTW = "鉗嘴鱷魚"},
 		zones = {33},
+	},
+	[1154] = {
+		faction = "Alliance",
+		level = "15",
+		names = {enUS = "Marek Ironheart", deDE = "Marek Eisenherz", esES = "Marek Coracero", esMX = "Marek Coracero", frFR = "Marek Cœur-de-fer", ptBR = "Marek Ferrocordis", ruRU = "Марек Железносерд", koKR = "마렉 아이언하트", zhCN = "马雷克·铁心", zhTW = "馬雷克·鐵心"},
+		zones = {38},
 	},
 	[1157] = {
 		level = "26 - 27",
@@ -1967,6 +2003,12 @@ rm.npcDB = {
 		names = {enUS = "Gobbler", esES = "Engullidor", esMX = "Engullidor", frFR = "Enfourneur", ptBR = "Comilão", ruRU = "Жрун", koKR = "고블러", zhCN = "高布勒尔", zhTW = "高布勒爾"},
 		zones = {11},
 	},
+	[1267] = {
+		faction = "Alliance",
+		level = "30",
+		names = {enUS = "Ragnar Thunderbrew", deDE = "Ragnar Donnerbräu", esES = "Ragnar Cebatruenos", esMX = "Ragnar Cebatruenos", frFR = "Ragnar Tonnebière", ptBR = "Ragnar Cervaforte", ruRU = "Рагнар Громовар", koKR = "라그나르 썬더브루", zhCN = "拉格纳·雷酒", zhTW = "拉格納·雷酒"},
+		zones = {1},
+	},
 	[1270] = {
 		level = "29 - 30",
 		names = {enUS = "Fetid Corpse", deDE = "Stinkender Leichnam", esES = "Cadáver fétido", esMX = "Cadáver fétido", frFR = "Cadavre fétide", ptBR = "Cadáver Fétido", ruRU = "Зловонный труп", koKR = "악취나는 시체", zhCN = "恶臭的食尸鬼", zhTW = "惡臭的食屍鬼"},
@@ -2074,6 +2116,12 @@ rm.npcDB = {
 		faction = "Alliance",
 		level = "15",
 		names = {enUS = "Drac Roughcut", deDE = "Drac Grobschnitt", esES = "Drac Corteseco", esMX = "Drac Corteseco", frFR = "Drac Taillebrute", ptBR = "Drac Cortesseco", ruRU = "Драк Грубиян", koKR = "드락 러프컷", zhCN = "德拉克·卷刃", zhTW = "德拉克·卷刃"},
+		zones = {38},
+	},
+	[1470] = {
+		faction = "Alliance",
+		level = "25",
+		names = {enUS = "Ghak Healtouch", deDE = "Ghak Heilsegen", esES = "Ghak Sanadón", esMX = "Ghak Sanadón", frFR = "Ghak Touchesoins", ptBR = "Ghak Toquecura", ruRU = "Гхак Целитель", koKR = "가크 힐터치", zhCN = "加克", zhTW = "加克"},
 		zones = {38},
 	},
 	[1471] = {
@@ -2954,6 +3002,12 @@ rm.npcDB = {
 		names = {enUS = "Thule Ravenclaw", deDE = "Thule Rabenklaue", esES = "Thule Corvozarpa", esMX = "Thule Corvozarpa", frFR = "Thule Serres-de-corbeau", ptBR = "Thule Corvinalle", ruRU = "Тул Коготь Ворона", koKR = "까마귀발톱 쑤울", zhCN = "图勒·鸦爪", zhTW = "圖勒·鴉爪"},
 		zones = {130},
 	},
+	[1950] = {
+		faction = "Horde",
+		level = "15",
+		names = {enUS = "Rane Yorick", ruRU = "Ран Йорик", koKR = "레인 요릭", zhCN = "兰妮·尤瑞克", zhTW = "蘭妮·尤瑞克"},
+		zones = {130},
+	},
 	[1953] = {
 		level = "15 - 16",
 		names = {enUS = "Lake Skulker", deDE = "Seeschleicher", esES = "Vagador del Lago", esMX = "Vagador del Lago", frFR = "Furtif lacustre", ptBR = "Sorrateiro do Lago", ruRU = "Озерный тихоступ", koKR = "호수덤불괴물", zhCN = "湖岸潜藏者", zhTW = "湖岸潛藏者"},
@@ -2988,6 +3042,12 @@ rm.npcDB = {
 		level = "11",
 		names = {enUS = "Mangeclaw", deDE = "Marterklaue", esES = "Sarnagarra", esMX = "Sarnagarra", frFR = "Griffe galeuse", ptBR = "Ronhagarra", ruRU = "Паршивый Коготь", koKR = "썩은발톱", zhCN = "癞爪", zhTW = "癩爪"},
 		zones = {1},
+	},
+	[1963] = {
+		faction = "Alliance",
+		level = "10",
+		names = {enUS = "Vidra Hearthstove", deDE = "Vidra Ofenglut", esES = "Vidra Hogartufa", esMX = "Vidra Hogartufa", frFR = "Vidra Poêlâtre", ptBR = "Vidra Fornalenha", ruRU = "Видра Жаркий Очаг", koKR = "비드라 하트스토브", zhCN = "维德拉·壁炉", zhTW = "維德拉·壁爐"},
+		zones = {38},
 	},
 	[1972] = {
 		level = "15",
@@ -3216,6 +3276,12 @@ rm.npcDB = {
 		names = {enUS = "Chieftain Nek'rosh", deDE = "Häuptling Nek'rosh", esES = "Cabecilla Nek'rosh", esMX = "Cabecilla Nek'rosh", frFR = "Chef Nek'rosh", ptBR = "Chefe Nek'rosh", ruRU = "Вождь Нек'рош", koKR = "족장 네크로쉬", zhCN = "纳克罗什酋长", zhTW = "納克羅什酋長"},
 		zones = {11},
 	},
+	[2094] = {
+		faction = "Alliance",
+		level = "25",
+		names = {enUS = "James Halloran", ptBR = "Iago Halberque", ruRU = "Джеймс Халлоран", koKR = "제임스 할로란", zhCN = "詹姆斯·哈洛兰", zhTW = "詹姆士·哈洛倫"},
+		zones = {11},
+	},
 	[2102] = {
 		level = "20 - 21",
 		names = {enUS = "Dragonmaw Grunt", deDE = "Grunzer des Drachenmals", esES = "Bruto Faucedraco", esMX = "Bruto Faucedraco", frFR = "Grunt Gueule-de-dragon", ptBR = "Bruto Presa do Dragão", ruRU = "Рубака из клана Драконьей Пасти", koKR = "용아귀부족 그런트", zhCN = "龙喉步兵", zhTW = "龍喉蠻兵"},
@@ -3427,6 +3493,18 @@ rm.npcDB = {
 		level = "12 - 13",
 		names = {enUS = "Deth'ryll Satyr", deDE = "Satyr der Deth'ryll", esES = "Sátiro Deth'ryll", esMX = "Sátiro Deth'ryll", frFR = "Satyre Deth'ryll", ptBR = "Sátiro Deth'ryll", ruRU = "Сатир из племени Дет'рилл", koKR = "데스릴 사티로스", zhCN = "戴瑟雷萨特", zhTW = "戴瑟雷薩特"},
 		zones = {148},
+	},
+	[2216] = {
+		faction = "Horde",
+		level = "35",
+		names = {enUS = "Apothecary Lydon", deDE = "Apotheker Lydon", esES = "Boticario Lydon", esMX = "Boticario Lydon", frFR = "Apothicaire Lydon", ptBR = "Boticário Lindolfo", ruRU = "Аптекарь Лидон", koKR = "연금술사 라이던", zhCN = "药剂师林度恩", zhTW = "藥劑師林度恩"},
+		zones = {267},
+	},
+	[2229] = {
+		faction = "Horde",
+		level = "25",
+		names = {enUS = "Krusk", ruRU = "Круск", koKR = "크루스크", zhCN = "克鲁斯克", zhTW = "克魯斯克"},
+		zones = {267},
 	},
 	[2231] = {
 		level = "9 - 10",
@@ -3811,6 +3889,12 @@ rm.npcDB = {
 		names = {enUS = "Micha Yance", ruRU = "Мика Янс", koKR = "미카 얀스", zhCN = "米沙·杨斯", zhTW = "米莎·楊斯"},
 		zones = {267},
 	},
+	[2382] = {
+		faction = "Alliance",
+		level = "30",
+		names = {enUS = "Darren Malvew", deDE = "Darren Malve", esES = "Darren Malavista", esMX = "Darren Malavista", ptBR = "Dario Malavista", ruRU = "Даррен Малвей", koKR = "다렌 말뷰", zhCN = "达伦·玛尔维", zhTW = "達倫·瑪爾維"},
+		zones = {267},
+	},
 	[2383] = {
 		faction = "Alliance",
 		level = "29",
@@ -3896,6 +3980,12 @@ rm.npcDB = {
 		level = "39",
 		names = {enUS = "Glommus", ruRU = "Гломмус", koKR = "글롬무스", zhCN = "戈洛姆斯", zhTW = "戈洛姆斯"},
 		zones = {36},
+	},
+	[2430] = {
+		faction = "Alliance",
+		level = "35",
+		names = {enUS = "Chef Jessen", deDE = "Küchenchef Jessen", ptBR = "Mestre-cuca Jessé", ruRU = "Шеф-повар Джессен", koKR = "주방장 예센", zhCN = "厨师杰森", zhTW = "廚師傑森"},
+		zones = {267},
 	},
 	[2432] = {
 		classification = "Elite",
@@ -4678,6 +4768,11 @@ rm.npcDB = {
 		names = {enUS = "Androd Fadran", ruRU = "Андрод Фадран", koKR = "안드로드 패드랜", zhCN = "安多德·法德兰", zhTW = "安多德·法德蘭"},
 		zones = {45},
 	},
+	[2817] = {
+		level = "37",
+		names = {enUS = "Rigglefuzz", deDE = "Riggelfuzz", esES = "Aparejez", esMX = "Aparejez", ptBR = "Bertolezo", ruRU = "Ригглфазз", koKR = "리글퍼즈", zhCN = "里格弗兹", zhTW = "里格弗茲"},
+		zones = {3},
+	},
 	[2819] = {
 		faction = "Horde",
 		level = "34",
@@ -4743,6 +4838,11 @@ rm.npcDB = {
 	[2907] = {
 		level = "36 - 37",
 		names = {enUS = "Dustbelcher Mystic", deDE = "Mystiker der Staubspeier", esES = "Místico Rotapolvo", esMX = "Místico Rotapolvo", frFR = "Mystique Crache-poussières", ptBR = "Místico Arrota-pó", ruRU = "Мистик из клана Гнилобрюхих", koKR = "먼지목도리일족 비술사", zhCN = "火烟秘法师", zhTW = "火煙秘法師"},
+		zones = {3},
+	},
+	[2920] = {
+		level = "31",
+		names = {enUS = "Lucien Tosselwrench", deDE = "Lucien Knobelzang", esES = "Lucien Tosselramienta", esMX = "Lucien Borlallave", frFR = "Lucien Torsaclef", ptBR = "Lucien Tacachave", ruRU = "Люсьен Подай-Ключ", koKR = "루시앙 토셀렌치", zhCN = "卢希恩·枪穗", zhTW = "盧希恩·槍穗"},
 		zones = {3},
 	},
 	[2923] = {
@@ -4925,6 +5025,12 @@ rm.npcDB = {
 		faction = "Horde",
 		level = "40",
 		names = {enUS = "Sewa Mistrunner", deDE = "Sewa Nebelläufer", esES = "Seua Correbruma", esMX = "Seua Correbruma", frFR = "Sewa Cours-la-brume", ptBR = "Sewa Corre com a Névoa", ruRU = "Сива Вестница Туманов", koKR = "세와 미스트러너", zhCN = "苏瓦·迷雾行者", zhTW = "蘇瓦·迷霧行者"},
+		zones = {1638},
+	},
+	[3050] = {
+		faction = "Horde",
+		level = "21",
+		names = {enUS = "Veren Tallstrider", deDE = "Veren Weitschreiter", esES = "Veren Zancaalta", esMX = "Veren Zancaalta", frFR = "Veren Haut-trotteur", ptBR = "Veren Passo Alto", ruRU = "Верен Долгоног", koKR = "베렌 톨스트라이더", zhCN = "维尔伦·陆行者", zhTW = "維爾倫·陸行者"},
 		zones = {1638},
 	},
 	[3051] = {
@@ -5595,6 +5701,12 @@ rm.npcDB = {
 		names = {enUS = "Kreenig Snarlsnout", deDE = "Kreenig Grantelschnauze", esES = "Kreenig Gruñucico", esMX = "Kreenig Gruñucico", frFR = "Kreenig Grondegroin", ptBR = "Kreenig Rosnento", ruRU = "Криниг Грознорыл", koKR = "크리니그 스날스나웃", zhCN = "克里尼格·糟鼻", zhTW = "克里尼格·糟鼻"},
 		zones = {17},
 	},
+	[3443] = {
+		faction = "Horde",
+		level = "13",
+		names = {enUS = "Grub", esES = "Larva", esMX = "Larva", frFR = "Boustiff'", ptBR = "Grude", ruRU = "Грязнуля", koKR = "그럽", zhCN = "格拉布", zhTW = "格拉布"},
+		zones = {17},
+	},
 	[3445] = {
 		level = "18",
 		names = {enUS = "Supervisor Lugwizzle", deDE = "Vorsteher Lugwizz", esES = "Supervisor Palarrastre", esMX = "Supervisor Palarrastre", frFR = "Superviseur Trimballast", ptBR = "Supervisor Rancatraca", ruRU = "Бригадир Зубовиззл", koKR = "관리자 러그위즐", zhCN = "鲁格维兹主管", zhTW = "魯格維茲主管"},
@@ -5844,6 +5956,12 @@ rm.npcDB = {
 		level = "32",
 		names = {enUS = "Kiknikle", frFR = "Piéniklé", ptBR = "Jirimum", ruRU = "Пниподзад", koKR = "킥니클", zhCN = "吉克尼库", zhTW = "吉克尼庫"},
 		zones = {17},
+	},
+	[3702] = {
+		faction = "Alliance",
+		level = "18 - 22",
+		names = {enUS = "Alanndarian Nightsong", deDE = "Alanndarian Nachtweise", esES = "Alanndarian Arrullanoche", esMX = "Alanndarian Arrullanoche", frFR = "Alanndarian Chantenuit", ptBR = "Alanndária Noturcanto", ruRU = "Аландариан Песня Ночи", koKR = "알란다리안 나이트송", zhCN = "奥兰达利亚·夜歌", zhTW = "奧蘭達利亞·夜歌"},
+		zones = {148},
 	},
 	[3711] = {
 		level = "20 - 21",
@@ -9111,6 +9229,10 @@ rm.npcDB = {
 		names = {enUS = "Nightmare Ectoplasm", deDE = "Nachtmahrektoplasma", esES = "Ectoplasma pesadilla", esMX = "Ectoplasma pesadilla", frFR = "Ectoplasme cauchemardesque", ptBR = "Ectoplasma Pesadelar", ruRU = "Эктоплазма кошмаров", koKR = "악몽의 세포괴물", zhCN = "噩梦软浆怪", zhTW = "噩夢軟漿怪"},
 		zones = {718},
 	},
+	[5768] = {
+		level = "14",
+		names = {enUS = "Ebru", ruRU = "Эбру", koKR = "에브루", zhCN = "厄布鲁", zhTW = "厄布魯"},
+	},
 	[5783] = {
 		level = "27",
 		names = {enUS = "Kalldan Felmoon", deDE = "Kalldan Teufelsmond", esES = "Kalldan Lunavil", esMX = "Kalldan Lunavil", frFR = "Kalldan Gangrelune", ptBR = "Kalldan Luavil", ruRU = "Калидан Лунный Серп", koKR = "칼단 펠문", zhCN = "卡尔丹·暗月", zhTW = "卡爾丹·暗月"},
@@ -9366,6 +9488,18 @@ rm.npcDB = {
 		level = "18 - 19",
 		names = {enUS = "Slimeshell Makrura", deDE = "Schleimschalenmakrura", esES = "Valvababosa Makrura", esMX = "Valvababosa makrura", frFR = "Makrura à carapace gluante", ptBR = "Cascalimo Makrura", ruRU = "Скользкопанцирный макрура", koKR = "진흙껍질마크루라", zhCN = "滑壳龙虾人", zhTW = "滑殼龍蝦人"},
 		zones = {17},
+	},
+	[6031] = {
+		faction = "Alliance",
+		level = "30",
+		names = {enUS = "Tormus Deepforge", deDE = "Tormus Tiefenschmied", esES = "Tormus Forjahonda", esMX = "Tormus Forjahonda", frFR = "Tormus Forge-profonde", ptBR = "Tormus Baixaforja", ruRU = "Тормус Подземная Кузня", koKR = "토르무스 딥포지", zhCN = "托姆斯·深炉", zhTW = "托姆斯·深爐"},
+		zones = {1537},
+	},
+	[6034] = {
+		faction = "Alliance",
+		level = "35",
+		names = {enUS = "Lotherias", ruRU = "Лотериас", koKR = "로서리아스", zhCN = "洛瑟里亚斯", zhTW = "洛瑟里亞斯"},
+		zones = {1657},
 	},
 	[6035] = {
 		classification = "Elite",
@@ -9673,6 +9807,12 @@ rm.npcDB = {
 		level = "24",
 		names = {enUS = "Gelihast", ruRU = "Гелихаст", koKR = "겔리하스트", zhCN = "格里哈斯特", zhTW = "格里哈斯特"},
 		zones = {719},
+	},
+	[6286] = {
+		faction = "Alliance",
+		level = "13",
+		names = {enUS = "Zarrin", ruRU = "Заррин", koKR = "자린", zhCN = "扎瑞恩", zhTW = "札瑞恩"},
+		zones = {141},
 	},
 	[6329] = {
 		classification = "Elite",
@@ -10005,6 +10145,12 @@ rm.npcDB = {
 		names = {enUS = "Defias Bodyguard", deDE = "Leibwache der Defias", esES = "Guardaespaldas Defias", frFR = "Garde du corps défias", ptBR = "Guarda-costas Défias", ruRU = "Телохранитель из Братства Справедливости", koKR = "데피아즈단 경호원", zhCN = "迪菲亚保镖", zhTW = "迪菲亞保鏢"},
 		zones = {12},
 	},
+	[6868] = {
+		faction = "Horde",
+		level = "35",
+		names = {enUS = "Jarkal Mossmeld", deDE = "Jarkal Moosblut", esES = "Jarkal Musgofusión", esMX = "Jarkal Musgofusión", frFR = "Jarkal Fondemousse", ptBR = "Jarkal Limuno", ruRU = "Джаркал Замшелый Клык", koKR = "자칼 모스멜드", zhCN = "加卡尔", zhTW = "加卡爾"},
+		zones = {3},
+	},
 	[6906] = {
 		classification = "Elite",
 		faction = "Alliance",
@@ -10058,6 +10204,12 @@ rm.npcDB = {
 		level = "40",
 		names = {enUS = "Obsidian Sentinel", deDE = "Obsidianschildwache", esES = "Centinela Obsidiano", esMX = "Centinela obsidiana", frFR = "Sentinelle d'obsidienne", ptBR = "Sentinela de Obsidiana", ruRU = "Обсидиановый часовой", koKR = "흑요석 파수꾼", zhCN = "黑曜石哨兵", zhTW = "黑曜石哨兵"},
 		zones = {1337},
+	},
+	[7024] = {
+		faction = "Alliance",
+		level = "22",
+		names = {enUS = "Agent Kearnen", deDE = "Agentin Kearnen", esES = "Agente Kearnen", ptBR = "Agente Marta Hari", ruRU = "Агент Кирнен", koKR = "첩보원 켈넌", zhCN = "密探吉尔妮", zhTW = "密探吉爾妮"},
+		zones = {40},
 	},
 	[7025] = {
 		level = "55 - 56",
@@ -10340,6 +10492,12 @@ rm.npcDB = {
 		level = "35",
 		names = {enUS = "Stonevault Ambusher", deDE = "Wegelagerer der Steingrufttroggs", esES = "Emboscador Grutacanto", esMX = "Emboscador Grutacanto", frFR = "Embusqué Cavepierre", ptBR = "Emboscador da Abóbada de Pedra", ruRU = "Душитель из племени Каменного Свода", koKR = "바위동굴일족 복병", zhCN = "石窟伏击者", zhTW = "石窟伏擊者"},
 		zones = {1337},
+	},
+	[7233] = {
+		classification = "Elite",
+		level = "30",
+		names = {enUS = "Taskmaster Fizzule", deDE = "Zuchtmeister Fitzel", esES = "Capataz Fizzule", esMX = "Capataz Fizzule", frFR = "Sous-chef Fizzule", ptBR = "Capataz Arruela", ruRU = "Надсмотрщик Физзул", koKR = "감독관 피줄", zhCN = "工头费苏勒", zhTW = "工頭費蘇勒"},
+		zones = {17},
 	},
 	[7234] = {
 		level = "8",
@@ -10848,14 +11006,42 @@ rm.npcDB = {
 		names = {enUS = "Ilifar", ruRU = "Илифар", koKR = "일리파르", zhCN = "伊利法尔", zhTW = "伊利法爾"},
 		zones = {4},
 	},
+	[7790] = {
+		faction = "Horde",
+		level = "45",
+		names = {enUS = "Orokk Omosh", ruRU = "Орокк Омош", koKR = "오로크 오모쉬", zhCN = "奥罗克·沃姆什", zhTW = "奧羅克·沃姆什"},
+		zones = {1637},
+	},
+	[7792] = {
+		faction = "Horde",
+		level = "50",
+		names = {enUS = "Aturk the Anvil", deDE = "Aturk der Amboss", esES = "Aturk el Yunque", esMX = "Aturk el Yunque", frFR = "Aturk l'Enclume", ptBR = "Aturk, o Bigorna", ruRU = "Атурк Наковальня", koKR = "무쇠모루 아투르크", zhCN = "铁砧阿图尔克", zhTW = "『鐵砧』阿圖爾克"},
+		zones = {1637},
+	},
+	[7798] = {
+		faction = "Alliance",
+		level = "50",
+		names = {enUS = "Hank the Hammer", deDE = "Hank der Hammer", esES = "Hank el Martillo", esMX = "Hank el Martillo", frFR = "Hank le Marteau", ptBR = "Marcelo, o Martelo", ruRU = "Хэнк Молот", koKR = "쇠망치 행크", zhCN = "巨锤汉克", zhTW = "『巨錘』漢克"},
+		zones = {1519},
+	},
 	[7800] = {
 		classification = "Elite",
 		level = "28",
 		names = {enUS = "Mekgineer Thermaplugg", deDE = "Robogenieur Thermadraht", esES = "Mekigeniero Termochufe", esMX = "Mekigeniero Termochufe", frFR = "Mekgénieur Thermojoncteur", ptBR = "Mecangenheiro Termaplugue", ruRU = "Анжинер Термоштепсель", koKR = "멕기니어 텔마플러그", zhCN = "麦克尼尔·瑟玛普拉格", zhTW = "麥克尼爾·瑟瑪普拉格"},
 	},
+	[7802] = {
+		level = "60",
+		names = {enUS = "Galvan the Ancient", deDE = "Galvan der Alte", esES = "Galvan el Antiguo", esMX = "Galvan el Antiguo", frFR = "Galvan l'Ancien", ptBR = "Galvan, o Antigo", ruRU = "Гальван Древний", koKR = "전설의 대장장이 갈반", zhCN = "加尔文", zhTW = "『長者』加爾文"},
+		zones = {33},
+	},
 	[7803] = {
 		level = "46 - 47",
 		names = {enUS = "Scorpid Duneburrower", deDE = "Dünenbuddlerskorpid", esES = "Perforadunas escórpido", esMX = "Perforadunas escórpido", frFR = "Scorpide fouisseur de dune", ptBR = "Entocador Escorpídeo", ruRU = "Песчаный скорпид", koKR = "모래구덩이전갈", zhCN = "沙漠掘洞蝎", zhTW = "沙漠掘洞蠍"},
+		zones = {440},
+	},
+	[7804] = {
+		level = "55",
+		names = {enUS = "Trenton Lighthammer", deDE = "Trenton Lichthammer", esES = "Trenton Mazaligera", esMX = "Trenton Mazaligera", frFR = "Trenton Martelume", ptBR = "Trenton Lumartelo", ruRU = "Трентон Молот Света", koKR = "트렌튼 라이트해머", zhCN = "特伦顿·轻锤", zhTW = "特倫頓·輕錘"},
 		zones = {440},
 	},
 	[7805] = {
@@ -11149,6 +11335,11 @@ rm.npcDB = {
 		level = "49",
 		names = {enUS = "Hakkari Bloodkeeper", deDE = "Blutbewahrer der Hakkari", esES = "Vigilasangre Hakkari", esMX = "Vigilasangre Hakkari", frFR = "Garde de sang Hakkar'i", ptBR = "Guardião de Sangue Hakkari", ruRU = "Хранитель крови из племени Хаккари", koKR = "학카르 수호천둥매", zhCN = "哈卡莱护血者", zhTW = "哈卡萊護血者"},
 		zones = {1477},
+	},
+	[8439] = {
+		level = "48",
+		names = {enUS = "Nilith Lokrav", ruRU = "Нилита Локрав", koKR = "닐리스 로크라브", zhCN = "尼莉丝·洛克拉夫", zhTW = "尼莉絲·洛克拉夫"},
+		zones = {51},
 	},
 	[8442] = {
 		level = "47 - 50",
@@ -12309,6 +12500,11 @@ rm.npcDB = {
 		names = {enUS = "Solakar Flamewreath", deDE = "Solakar Feuerkrone", esES = "Solakar Corona de Fuego", frFR = "Solakar Voluteflamme", ptBR = "Solakar Chamarco", ruRU = "Солакар Пламя Гнева", koKR = "화염고리 솔라카르", zhCN = "索拉卡·火冠", zhTW = "索拉卡·火冠"},
 		zones = {1583},
 	},
+	[10305] = {
+		level = "57",
+		names = {enUS = "Umi Rumplesnicker", deDE = "Umi Rumpelkicher", esES = "Umi Risitas", esMX = "Umi Risitas", frFR = "Umi Sarcafroisse", ptBR = "Umi Zombarruga", ruRU = "Уми Смехотреп", koKR = "우미 럼플스니커", zhCN = "乌米", zhTW = "烏米"},
+		zones = {618},
+	},
 	[10316] = {
 		level = "59 - 60",
 		names = {enUS = "Blackhand Incarcerator", deDE = "Einkerkerer der Schwarzfaustlegion", esES = "Carcelero Puño Negro", esMX = "Carcelero Puño Negro", frFR = "Geôlier Main-noire", ptBR = "Carcereiro da Mão Negra", ruRU = "Тюремщик из легиона Чернорука", koKR = "검은손부대 집행자", zhCN = "黑手监禁者", zhTW = "黑手監禁者"},
@@ -12798,6 +12994,11 @@ rm.npcDB = {
 		names = {enUS = "Galak Messenger", deDE = "Bote der Galak", esES = "Mensajero Galak", esMX = "Mensajero Galak", frFR = "Messager galak", ptBR = "Mensageiro Galath", ruRU = "Вестник племени Галак", koKR = "갈라크일족 전령", zhCN = "加拉克信使", zhTW = "加拉克信差"},
 		zones = {400},
 	},
+	[10637] = {
+		level = "59",
+		names = {enUS = "Malyfous Darkhammer", deDE = "Malyfous Düsterhammer", esES = "Malyfous Martilloscuro", esMX = "Malyfous Martilloscuro", frFR = "Malyfous Sombremartel", ptBR = "Málifus Trevamalho", ruRU = "Малифой Черномолот", koKR = "말리퍼스 다크해머", zhCN = "玛雷弗斯·暗锤", zhTW = "瑪雷弗斯·暗錘"},
+		zones = {618},
+	},
 	[10642] = {
 		classification = "Rare",
 		names = {enUS = "Eck'alom", ruRU = "Эк'алом", koKR = "엑칼롬", zhCN = "埃卡洛姆", zhTW = "埃卡洛姆"},
@@ -12948,6 +13149,11 @@ rm.npcDB = {
 		names = {enUS = "Lorekeeper Polkelt", deDE = "Hüter des Wissens Polkelt", esES = "Tradicionalista Polkelt", esMX = "Tradicionalista Polkelt", frFR = "Gardien du savoir Polkelt", ptBR = "Erudito Pulquério", ruRU = "Хранитель знаний Полкелт", koKR = "현자 폴켈트", zhCN = "博学者普克尔特", zhTW = "博學者普克爾特"},
 		zones = {2057},
 	},
+	[10918] = {
+		level = "61",
+		names = {enUS = "Lorax", ptBR = "Vegax", ruRU = "Лоракс", koKR = "로락스", zhCN = "罗拉克斯", zhTW = "羅拉克斯"},
+		zones = {618},
+	},
 	[10919] = {
 		faction = "Horde",
 		level = "53 - 58",
@@ -13007,6 +13213,21 @@ rm.npcDB = {
 	[11189] = {
 		level = "51",
 		names = {enUS = "Qia", ruRU = "Кийя", koKR = "퀴아", zhCN = "琦亚", zhTW = "琪亞"},
+		zones = {618},
+	},
+	[11191] = {
+		level = "55",
+		names = {enUS = "Lilith the Lithe", deDE = "Lilith die Liebliche", esES = "Lilith la Pequeña", esMX = "Lilith la Ágil", frFR = "Lilith l'Agile", ptBR = "Lilith, a Ligeira", ruRU = "Лилит Гибкая", koKR = "호리호리한 릴리스", zhCN = "轻盈的莉莉丝", zhTW = "輕盈的莉莉絲"},
+		zones = {618},
+	},
+	[11192] = {
+		level = "58",
+		names = {enUS = "Kilram", ruRU = "Килрам", koKR = "킬램", zhCN = "基尔拉姆", zhTW = "基爾拉姆"},
+		zones = {618},
+	},
+	[11193] = {
+		level = "57",
+		names = {enUS = "Seril Scourgebane", deDE = "Seril Geißelbann", esES = "Seril Finiquiplaga", esMX = "Seril Finiquiplaga", frFR = "Seril Plaie-du-Fléau", ptBR = "Seril Flagelicida", ruRU = "Сирил Плетебой", koKR = "세릴 스컬지베인", zhCN = "亡灵杀手瑟里尔", zhTW = "亡靈殺手瑟里爾"},
 		zones = {618},
 	},
 	[11196] = {
@@ -14308,6 +14529,23 @@ rm.npcDB = {
 		names = {enUS = "Lorgus Jett", ruRU = "Лоргус Джетт", koKR = "로구스 제트", zhCN = "洛古斯·杰特", zhTW = "洛古斯·傑特"},
 		zones = {719},
 	},
+	[12919] = {
+		level = "45",
+		names = {enUS = "Nat Pagle", ruRU = "Нат Пэгл", koKR = "내트 페이글", zhCN = "纳特·帕格", zhTW = "納特·帕格"},
+		zones = {15},
+	},
+	[12920] = {
+		faction = "Horde",
+		level = "48",
+		names = {enUS = "Doctor Gregory Victor", deDE = "Doktor Gregory Victor", frFR = "Docteur Gregory Victor", ptBR = "Doutor Victor Zerbini", ruRU = "Доктор Грегори Виктор", koKR = "의사 그레고리 빅터", zhCN = "格里高利·维克托医生", zhTW = "格里高利·維克托醫生"},
+		zones = {45},
+	},
+	[12939] = {
+		faction = "Alliance",
+		level = "48",
+		names = {enUS = "Doctor Gustaf VanHowzen", deDE = "Doktor Gustaf Van Howzen", frFR = "Docteur Gustaf VanHowzen", ptBR = "Doutor Gregório Casagrande", ruRU = "Доктор Густав ван Склифф", koKR = "의사 구스타프 밴하우젠", zhCN = "古斯塔夫·范沃森医生", zhTW = "古斯塔夫·范沃森醫生"},
+		zones = {15},
+	},
 	[12940] = {
 		level = "22",
 		names = {enUS = "Vorsha the Lasher", deDE = "Vorsha die Peitscherin", esES = "Vorsha la Azotadora", frFR = "Vorsha la Flagellante", ptBR = "Vorsha, a Açoitadora", ruRU = "Ворша Хлестунья", koKR = "채찍꼬리 보르샤", zhCN = "鞭笞者沃尔沙", zhTW = "鞭笞者沃爾沙"},
@@ -14738,6 +14976,20 @@ rm.npcDB = {
 		names = {enUS = "Shen'dralar Provisioner", deDE = "Versorger der Shen'dralar", esES = "Proveedor Shen'dralar", esMX = "Proveedor Shen'dralar", frFR = "Approvisionneur Shen'dralar", ptBR = "Fornecedor Shen'dralar", ruRU = "Шен'дралар-поставщик", koKR = "셴드랄라 배급원", zhCN = "辛德拉圣职者", zhTW = "辛德拉聖職者"},
 		zones = {2557},
 	},
+	[14392] = {
+		classification = "Elite",
+		faction = "Horde",
+		level = "60",
+		names = {enUS = "Overlord Runthak", deDE = "Oberanführer Runthak", esES = "Señor Supremo Runthak", esMX = "Señor supremo Runthak", frFR = "Seigneur Runthak", ptBR = "Lorde Supremo Runthak", ruRU = "Властитель Рунтак", koKR = "대군주 룬탁", zhCN = "伦萨克", zhTW = "倫薩克霸主"},
+		zones = {1637},
+	},
+	[14394] = {
+		classification = "Elite",
+		faction = "Alliance",
+		level = "60",
+		names = {enUS = "Major Mattingly", esES = "Mayor Mattingly", esMX = "Mayor Mattingly", ptBR = "Major Valadão", ruRU = "Майор Маттингли", koKR = "상사 매팅글리", zhCN = "玛丁雷少校", zhTW = "瑪丁雷少校"},
+		zones = {1519},
+	},
 	[14399] = {
 		classification = "Elite",
 		level = "59 - 60",
@@ -14809,6 +15061,11 @@ rm.npcDB = {
 		names = {enUS = "Terrordale Spirit", deDE = "Schreckenstalgeist", esES = "Espíritu del Valle del Terror", esMX = "Espíritu del Valle del Terror", frFR = "Esprit de Val-Terreur", ptBR = "Espírito da Várzea do Medo", ruRU = "Дух долины Ужаса", koKR = "테러데일 영혼", zhCN = "恐惧谷的灵魂", zhTW = "恐懼谷的靈魂"},
 		zones = {139},
 	},
+	[14567] = {
+		level = "52",
+		names = {enUS = "Derotain Mudsipper", deDE = "Derotain Matschnipper", esES = "Derotain Sorbelodo", esMX = "Derotain Sorbelodo", frFR = "Derotain Siroteboue", ptBR = "Derotain Chupalodo", ruRU = "Деротайн Грязеглот", koKR = "데로타인 머드시퍼", zhCN = "德罗泰恩", zhTW = "德羅泰恩"},
+		zones = {440},
+	},
 	[14637] = {
 		level = "40",
 		names = {enUS = "Zorbin Fandazzle", deDE = "Zorbin von Schiller", esES = "Zorbin Ventipnotizador", esMX = "Zorbin Hipnoviento", frFR = "Zorbin Poudrozieu", ptBR = "Zorbin Cegasvista", ruRU = "Зорбин Дребезгун", koKR = "조브린 팬대즐", zhCN = "索尔宾·范达瑟", zhTW = "索爾賓·范達瑟"},
@@ -14852,6 +15109,10 @@ rm.npcDB = {
 		level = "60",
 		names = {enUS = "Withered Mistress", deDE = "Herrin des Siechens", esES = "Maestra marchita", frFR = "Maîtresse desséchée", ptBR = "Dama Seca", ruRU = "Иссохшая наложница", koKR = "부패한 무희", zhCN = "衰老的侍女", zhTW = "衰老的侍女"},
 		zones = {1977},
+	},
+	[14828] = {
+		names = {enUS = "Gelvas Grimegate", deDE = "Gelvas Rußgatter", esES = "Gelvas Roñas", esMX = "Gelvas Roñoso", frFR = "Gelvas Crasseporte", ptBR = "Gelvas Portassuja", ruRU = "Гелвас Углешлюз", koKR = "겔바스 그림게이트", zhCN = "吉瓦斯·格里加特", zhTW = "吉瓦斯·葛萊蓋特"},
+		zones = {12, 3519, 215},
 	},
 	[14861] = {
 		classification = "Elite",
@@ -14928,6 +15189,11 @@ rm.npcDB = {
 		level = "51",
 		names = {enUS = "Haughty Modiste", deDE = "Eingebildete Modeschöpferin", esES = "Modista Jonti", esMX = "Modista Jactancia", frFR = "Hautaine Lamodiste", ptBR = "Sissi Ashando", ruRU = "Отти Кутюри", koKR = "거만한 의류상", zhCN = "傲慢的店主", zhTW = "傲慢的店主"},
 		zones = {440},
+	},
+	[15174] = {
+		level = "54",
+		names = {enUS = "Calandrath", ruRU = "Каландрата", koKR = "캘랜드라스", zhCN = "卡兰德拉斯", zhTW = "卡蘭德拉斯"},
+		zones = {1377},
 	},
 	[15176] = {
 		level = "57",
@@ -15456,6 +15722,11 @@ rm.npcDB = {
 		level = "??",
 		names = {enUS = "Terestian Illhoof", deDE = "Terestian Siechhuf", esES = "Terestian Pezuña Enferma", frFR = "Terestian Malsabot", ptBR = "Terestian Cascopodre", ruRU = "Терестиан Больное Копыто", koKR = "테레스티안 일후프", zhCN = "特雷斯坦·邪蹄", zhTW = "泰瑞斯提安·疫蹄"},
 		zones = {3457},
+	},
+	[15909] = {
+		level = "60",
+		names = {enUS = "Fariel Starsong", deDE = "Fariel Sternensang", esES = "Fariel Cantostelar", frFR = "Fariel Chantétoile", ptBR = "Fariel Stelacanto", ruRU = "Фариэль Песнь Звезд", koKR = "파리엘 스타송", zhCN = "法蕾尔·星歌", zhTW = "法莉爾·星歌"},
+		zones = {493},
 	},
 	[15937] = {
 		level = "9",
@@ -16413,6 +16684,12 @@ rm.npcDB = {
 		names = {enUS = "Forsaken Raider", deDE = "Räuber der Verlassenen", esES = "Asaltante Renegado", esMX = "Asaltante Renegado", frFR = "Ecumeur réprouvé", ptBR = "Renegado Saqueador", ruRU = "Отрекшийся-налетчик", koKR = "포세이큰 약탈자", zhCN = "被遗忘者骑兵", zhTW = "被遺忘者劫掠者"},
 		zones = {267},
 	},
+	[17110] = {
+		faction = "Alliance",
+		level = "10",
+		names = {enUS = "Acteon", frFR = "Actéon", ruRU = "Актеон", koKR = "옥테온", zhCN = "艾克提恩"},
+		zones = {3524},
+	},
 	[17129] = {
 		level = "66 - 67",
 		names = {enUS = "Greater Windroc", deDE = "Großer Windroc", esES = "Vientorroc superior", esMX = "Vientorroc superior", frFR = "Venteroc supérieur", ptBR = "Roca-dos-ventos Maior", ruRU = "Большой ветрух", koKR = "거대한 바람올빼미", zhCN = "大型风鹏", zhTW = "巨型風翼貓頭鷹"},
@@ -16903,6 +17180,18 @@ rm.npcDB = {
 		names = {enUS = "Laughing Skull Legionnaire", deDE = "Legionär des Lachenden Schädels", esES = "Legionario Riecráneos", esMX = "Legionario Riecráneos", frFR = "Légionnaire du Crâne ricanant", ptBR = "Legionário Gargaveira", ruRU = "Легионер из клана Веселого Черепа", koKR = "웃는 해골부족 병사", zhCN = "嘲颅军团士兵", zhTW = "獰笑骷髏軍團士兵"},
 		zones = {3713},
 	},
+	[17634] = {
+		faction = "Alliance",
+		level = "65",
+		names = {enUS = "K. Lee Smallfry", deDE = "K. Lee Kleinfrey", esES = "K. Lee Fritito", esMX = "K. Lee Fritito", frFR = "Manue Fretin", ruRU = "К. Ли Мелюзга", koKR = "K. 리 스몰프라이", zhCN = "凯莉·弗莱", zhTW = "李小炸"},
+		zones = {3521},
+	},
+	[17637] = {
+		faction = "Horde",
+		level = "65",
+		names = {enUS = "Mack Diver", deDE = "Mack Dyver", ptBR = "Mergulhador Mack", ruRU = "Мак Дайвер", koKR = "맥 다이버", zhCN = "马克·迪沃", zhTW = "馬克·戴沃"},
+		zones = {3521},
+	},
 	[17657] = {
 		faction = "Alliance",
 		level = "62",
@@ -17165,6 +17454,11 @@ rm.npcDB = {
 	[17908] = {
 		classification = "Elite",
 		names = {enUS = "Giant Infernal", deDE = "Riesige Höllenbestie", esES = "Infernal gigante", frFR = "Infernal géant", ptBR = "Infernal Gigante", ruRU = "Гигантский инфернал", koKR = "거대한 지옥불정령", zhCN = "庞大的地狱火"},
+	},
+	[17909] = {
+		level = "68",
+		names = {enUS = "Lauranna Thar'well", ptBR = "Laurana Thar'well", ruRU = "Лоранна Тар'велл", koKR = "라우란나 사르웰", zhCN = "劳兰娜·萨维尔", zhTW = "羅安娜·薩威爾"},
+		zones = {3521},
 	},
 	[17916] = {
 		classification = "Elite",
@@ -17953,6 +18247,11 @@ rm.npcDB = {
 		names = {enUS = "Leeli Longhaggle", deDE = "Leeli Langfeilsch", esES = "Leeli Regateo", esMX = "Leeli Regateo", frFR = "Leeli Longnégoce", ptBR = "Lupe Chincha", ruRU = "Леели Нудноторг", koKR = "릴리 롱해글", zhCN = "莉莉·朗哈格", zhTW = "莉利·長爭"},
 		zones = {3519},
 	},
+	[19052] = {
+		level = "63",
+		names = {enUS = "Lorokeem", ruRU = "Лороким", koKR = "로로킴", zhCN = "罗罗基姆", zhTW = "羅洛其恩"},
+		zones = {3703},
+	},
 	[19074] = {
 		level = "60",
 		names = {enUS = "Skreah", ruRU = "Скреах", koKR = "스크레아", zhCN = "斯克雷亚", zhTW = "史卡瑞"},
@@ -18035,6 +18334,11 @@ rm.npcDB = {
 		level = "65",
 		names = {enUS = "Krek Cragcrush", deDE = "Krek Schmetterfels", esES = "Krek Peñazo", esMX = "Krek Muelerrisco", frFR = "Krek Cassecombe", ptBR = "Rok Racha-rocha", ruRU = "Крек Скалолом", koKR = "크레크 크랙크러쉬", zhCN = "克雷格·碎岩", zhTW = "克瑞克·碎岩"},
 		zones = {3520},
+	},
+	[19344] = {
+		level = "62",
+		names = {enUS = "Legassi", ptBR = "Ofélio", ruRU = "Легасси", koKR = "레가시", zhCN = "雷加希", zhTW = "雷噶西"},
+		zones = {3483},
 	},
 	[19351] = {
 		faction = "Alliance",
@@ -18798,6 +19102,12 @@ rm.npcDB = {
 		names = {enUS = "Enraged Fire Spirit", deDE = "Wütender Feuergeist", esES = "Espíritu de fuego iracundo", esMX = "Espíritu de fuego iracundo", frFR = "Esprit du feu enragé", ptBR = "Espírito Enfurecido do Fogo", ruRU = "Разъяренный дух огня", koKR = "분노한 불의 정령", zhCN = "愤怒的火灵", zhTW = "暴怒的火焰之靈"},
 		zones = {3520},
 	},
+	[21088] = {
+		faction = "Horde",
+		level = "60",
+		names = {enUS = "Matron Varah", deDE = "Matrone Varah", esES = "Matrona Varah", esMX = "Matrona Varah", frFR = "Matrone Varah", ptBR = "Máter Farrah", ruRU = "Сестра Вара", koKR = "간병인 바라", zhCN = "瓦拉伊", zhTW = "女總管瓦拉"},
+		zones = {3522},
+	},
 	[21089] = {
 		level = "70",
 		names = {enUS = "Sunfury Blood Knight", deDE = "Blutritter des Sonnenzorns", esES = "Caballero de sangre Furia del Sol", esMX = "Caballero de sangre Furia del Sol", frFR = "Chevalier de sang solfurie", ptBR = "Cavaleiro Sangrento Solfúria", ruRU = "Рыцарь крови из клана Ярости Солнца", koKR = "성난태양 혈기사", zhCN = "日怒血骑士", zhTW = "日怒血騎士"},
@@ -19301,6 +19611,11 @@ rm.npcDB = {
 		level = "73",
 		names = {enUS = "Reth'hedron the Subduer", deDE = "Reth'hedron der Unterdrücker", esES = "Reth'hedron el Avasallador", esMX = "Reth'hedron el Avasallador", frFR = "Reth'hedron le Dominateur", ptBR = "Reth'hedron, o Dominador", ruRU = "Рет'хедрон Покоритель", koKR = "정복자 레스히드론", zhCN = "征服者雷萨赫尔顿", zhTW = "『鎮壓者』雷斯海卓恩"},
 		zones = {3518},
+	},
+	[22427] = {
+		level = "68",
+		names = {enUS = "Zarevhi", ruRU = "Заревхи", koKR = "자레브히", zhCN = "萨雷维", zhTW = "薩爾菲"},
+		zones = {3523},
 	},
 	[22482] = {
 		level = "64 - 65",

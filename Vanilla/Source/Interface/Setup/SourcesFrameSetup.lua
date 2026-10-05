@@ -87,6 +87,32 @@ function rm.showSourceLocationOnMapButtonClick(button)
     end)
 end
 
+-- Questie's quest details need its database, loaded a few seconds after logging in
+function rm.isQuestieReady()
+    return C_AddOns.IsAddOnLoaded("Questie") and Questie.API ~= nil and Questie.API.isReady == true
+end
+
+function rm.showQuestieButtonTooltipOnMouseover(button)
+    button:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        GameTooltip:SetText(getMouseButtonIcon(F.atlases.leftMouseButton).." "..L.showQuestDetails)
+        GameTooltip:Show()
+    end)
+    button:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
+end
+
+-- Questie shows its own tooltip for quest links, as when clicking them in the chat.
+-- Clicking the same quest again closes it
+function rm.showQuestieDetailsOnQuestieButtonClick(button)
+    button:SetScript("OnClick", function(self)
+        if rm.isQuestieReady() then
+            ItemRefTooltip:SetHyperlink("quest:"..self.questID..":0")
+        end
+    end)
+end
+
 function rm.updateTableHeightOnAreaResize(area)
     area:SetScript("OnSizeChanged", function()
         rm.updateSourcesTableHeight()

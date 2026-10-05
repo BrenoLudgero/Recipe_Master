@@ -296,10 +296,12 @@ if rm.locale == "enUS" then
     L.pickpocket = "Pickpocket"
     L.trainer = "Trainer"
     L.showOnMap = "Show on Map"
+    L.showQuestDetails = "Show Quest Details"
     L.setTomTomWaypoint = "Set TomTom Waypoint"
     L.dropsRecipe = "Drops %s"
     L.sellsRecipe = "Sells %s"
     L.teachesRecipe = "Teaches %s"
+    L.startsQuest = "Starts %s"
     L.clickToDismiss = "Click to dismiss"
 
 elseif rm.locale == "esMX" or rm.locale == "esES" then
@@ -353,10 +355,12 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.pickpocket = "Robo"
     L.trainer = "Instructor"
     L.showOnMap = "Mostrar en el Mapa"
+    L.showQuestDetails = "Mostrar Detalles de la Misión"
     L.setTomTomWaypoint = "Crear Punto de Ruta en TomTom"
     L.dropsRecipe = "Suelta %s"
     L.sellsRecipe = "Vende %s"
     L.teachesRecipe = "Enseña %s"
+    L.startsQuest = "Inicia %s"
     L.clickToDismiss = "Haz clic para descartar"
 
 elseif rm.locale == "ptBR" then
@@ -404,10 +408,12 @@ elseif rm.locale == "ptBR" then
     L.pickpocket = "Bater carteira"
     L.trainer = "Instrutor"
     L.showOnMap = "Mostrar no Mapa"
+    L.showQuestDetails = "Mostrar Detalhes da Missão"
     L.setTomTomWaypoint = "Criar Ponto de Rota no TomTom"
     L.dropsRecipe = "Derruba %s"
     L.sellsRecipe = "Vende %s"
     L.teachesRecipe = "Ensina %s"
+    L.startsQuest = "Inicia %s"
     L.clickToDismiss = "Clique para descartar"
 
 elseif rm.locale == "deDE" then
@@ -456,10 +462,12 @@ elseif rm.locale == "deDE" then
     L.pickpocket = "Taschendieb"
     L.trainer = "Lehrer"
     L.showOnMap = "Auf der Karte Anzeigen"
+    L.showQuestDetails = "Questdetails Anzeigen"
     L.setTomTomWaypoint = "TomTom-Wegpunkt Setzen"
     L.dropsRecipe = "Lässt %s fallen"
     L.sellsRecipe = "Verkauft %s"
     L.teachesRecipe = "Lehrt %s"
+    L.startsQuest = "Startet %s"
     L.clickToDismiss = "Klicken zum Entfernen"
 
 elseif rm.locale == "frFR" then
@@ -509,10 +517,12 @@ elseif rm.locale == "frFR" then
     L.pickpocket = "Vol à la tire"
     L.trainer = "Maître"
     L.showOnMap = "Afficher sur la Carte"
+    L.showQuestDetails = "Afficher les Détails de la Quête"
     L.setTomTomWaypoint = "Placer un Point de Passage TomTom"
     L.dropsRecipe = "Laisse tomber %s"
     L.sellsRecipe = "Vend %s"
     L.teachesRecipe = "Enseigne %s"
+    L.startsQuest = "Commence %s"
     L.clickToDismiss = "Cliquez pour retirer"
 
 elseif rm.locale == "ruRU" then
@@ -562,10 +572,12 @@ elseif rm.locale == "ruRU" then
     L.pickpocket = "Карманник"
     L.trainer = "Учитель"
     L.showOnMap = "Показать на Карте"
+    L.showQuestDetails = "Показать Подробности Задания"
     L.setTomTomWaypoint = "Установить Точку Маршрута TomTom"
     L.dropsRecipe = "Роняет %s"
     L.sellsRecipe = "Продает %s"
     L.teachesRecipe = "Обучает %s"
+    L.startsQuest = "Начинает %s"
     L.clickToDismiss = "Щелкните, чтобы убрать"
 
 elseif rm.locale == "koKR" then
@@ -613,10 +625,12 @@ elseif rm.locale == "koKR" then
     L.pickpocket = "훔치기"
     L.trainer = "트레이너"
     L.showOnMap = "지도에 표시"
+    L.showQuestDetails = "퀘스트 세부 정보 표시"
     L.setTomTomWaypoint = "TomTom 웨이포인트 설정"
     L.dropsRecipe = "%s 드랍"
     L.sellsRecipe = "%s 판매"
     L.teachesRecipe = "%s 교육"
+    L.startsQuest = "%s 시작"
     L.clickToDismiss = "클릭하여 제거"
 
 elseif rm.locale == "zhTW" then
@@ -664,10 +678,12 @@ elseif rm.locale == "zhTW" then
     L.pickpocket = "搜索"
     L.trainer = "訓練師"
     L.showOnMap = "在地圖上顯示"
+    L.showQuestDetails = "顯示任務詳情"
     L.setTomTomWaypoint = "設定TomTom路徑點"
     L.dropsRecipe = "掉落%s"
     L.sellsRecipe = "販售%s"
     L.teachesRecipe = "教授%s"
+    L.startsQuest = "開始%s"
     L.clickToDismiss = "點擊以移除"
 
 elseif rm.locale == "zhCN" then
@@ -715,9 +731,11 @@ elseif rm.locale == "zhCN" then
     L.pickpocket = "搜索"
     L.trainer = "训练师"
     L.showOnMap = "在地图上显示"
+    L.showQuestDetails = "显示任务详情"
     L.setTomTomWaypoint = "设置TomTom路径点"
     L.dropsRecipe = "掉落%s"
     L.sellsRecipe = "出售%s"
     L.teachesRecipe = "教授%s"
+    L.startsQuest = "开始%s"
     L.clickToDismiss = "点击以移除"
 end
