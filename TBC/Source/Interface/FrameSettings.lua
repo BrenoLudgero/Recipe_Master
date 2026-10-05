@@ -44,8 +44,11 @@ local function setLocaleSpecificOffsets()
 end
 
 ------------------------- Main frame -------------------------
-F.offsets.mainHeaderX = 6
-F.offsets.mainHeaderY = 5
+F.offsets.headerCloseButtonX = 6
+F.offsets.headerCloseButtonY = 5
+F.offsets.headerLeftEdgeX = -1
+F.offsets.headerRightEndX = -1
+F.offsets.headerTextY = -5
 
 ------------------------- Bottom tabs -------------------------
 F.offsets.bottomTabTextX = 2
@@ -160,6 +163,7 @@ local function setLocaleSpecificSizes()
 end
 
 ------------------------- Main frame -------------------------
+F.sizes.borderShadowWidth = 5 -- Outer columns of the border's left side
 F.sizes.dividerHeight = 45
 F.sizes.mainBackgroundTile = 300
 F.sizes.restoreButton = 30 -- Width and height
@@ -239,7 +243,7 @@ local specificFont = getLocaleSpecificFont()
 
 ------------------------- Main frame -------------------------
 F.fonts.centeredText = specificFont
-F.fonts.header = "SystemFont_Outline_Small"
+F.fonts.header = "GameFontNormal"
 
 ------------------------- Bottom tabs -------------------------
 F.fonts.bottomTab = specificFont
@@ -384,7 +388,8 @@ F.textures.factionIcons = {
     ["Horde"] = "Interface/WorldStateFrame/HordeIcon"
 }
 F.textures.goldCoin = "Interface/MoneyFrame/UI-GoldIcon"
-F.textures.header = "Interface/BankFrame/Bank-Background"
+F.textures.headerLeft = "Interface/ClassTrainerFrame/UI-ClassTrainer-TopLeft" -- Main window's top textures
+F.textures.headerRight = "Interface/ClassTrainerFrame/UI-ClassTrainer-TopRight"
 F.textures.mainBackground = "Interface/FrameGeneral/UI-Background-Marble"
 F.textures.questieButton = "Interface/AddOns/Questie/Icons/questie.png" -- Questie's logo
 F.textures.silverCoin = "Interface/MoneyFrame/UI-SilverIcon"
@@ -410,6 +415,8 @@ F.textures.tarnishedUndermineReal = "Interface/Icons/INV_Misc_Coin_16"
 --                              Atlases
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+F.atlases.borderBottomRightCorner = "UI-Frame-BotCornerRight"
+F.atlases.borderLeftSide = "!UI-Frame-LeftTile"
 F.atlases.leftMouseButton = "newplayertutorial-icon-mouse-leftbutton"
 F.atlases.mapButton = "orderhall-commandbar-mapbutton-up"
 F.atlases.mapButtonPushed = "orderhall-commandbar-mapbutton-down"
