@@ -138,7 +138,7 @@ end
 local function createTableBorder(sourcesTable)
     local border = CreateFrame("Frame", nil, sourcesTable, F.templates.sourcesTable)
     border:SetAllPoints()
-    border:SetFrameLevel(sourcesTable.content:GetFrameLevel() + 3) -- Above rows (+1) and their cells (+2)
+    border:SetFrameLevel(sourcesTable.content:GetFrameLevel() + 4) -- Above rows (+1), their cells (+2) and map buttons (+3)
     border:SetBackdrop(F.backdrops.sourcesTableBorder)
     return border
 end
@@ -161,12 +161,11 @@ end
 local function createCellIcon(cell)
     local icon = cell:CreateTexture(nil, "ARTWORK")
     icon:SetSize(F.sizes.sourcesTableCellIcon, F.sizes.sourcesTableCellIcon)
-    icon:SetPoint("LEFT", F.sizes.sourcesTableCellPadding + F.offsets.sourcesTableCellIconX, 0)
     icon:Hide()
     return icon
 end
 
--- The text is anchored when the cell's content is set, depending on whether it has an icon
+-- The icon and text are anchored when the cell's content is set, depending on what is shown at the left of the text
 local function createCell(parent)
     local cell = CreateFrame("Frame", nil, parent)
     cell.icon = createCellIcon(cell)
@@ -240,6 +239,28 @@ function rm.getSourcesTableCell(parent, index)
         parent.cells[index] = createCell(parent)
     end
     return parent.cells[index]
+end
+
+-- Shows the source's location on the world map or sets TomTom waypoints to it
+local function createMapButton(cell)
+    local button = CreateFrame("Button", nil, cell)
+    button:SetSize(F.sizes.sourcesTableMapButton, F.sizes.sourcesTableMapButton)
+    button:SetNormalAtlas(F.atlases.mapButton)
+    button:SetPushedAtlas(F.atlases.mapButtonPushed)
+    button:SetHighlightAtlas(F.atlases.mapButton, "ADD")
+    button:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+    rm.showMapButtonTooltipOnMouseover(button)
+    rm.showSourceLocationOnMapButtonClick(button)
+    button:Hide()
+    return button
+end
+
+-- Only cells of sources with coordinates have a map button
+function rm.getSourcesTableMapButton(cell)
+    if not cell.mapButton then
+        cell.mapButton = createMapButton(cell)
+    end
+    return cell.mapButton
 end
 
 ----------------------------- Unique Source Instructions -----------------------------

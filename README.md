@@ -28,6 +28,7 @@
 
 ## Add-on compatibility
 The following add-ons have been thoroughly tested with Recipe Master:
+* TomTom
 * Skillet-Classic
 * TradeSkillMaster (TSM)
 * Dragonflight UI Classic

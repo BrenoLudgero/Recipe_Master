@@ -25,6 +25,7 @@ rm.locale = GetLocale()
 rm.recipeDB = {}
 rm.recipeSourceDB = {}
 rm.F = { -- Frame settings
+    atlases = {},
     backdrops = {},
     colors = {},
     fonts = {},

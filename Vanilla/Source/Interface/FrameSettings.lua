@@ -89,6 +89,7 @@ F.offsets.sourcesTableBottomY = 10
 F.offsets.sourcesTableInset = 3 -- Space between the table's border and its content
 F.offsets.sourcesTableCellIconX = -3 -- Space between a cell's icon and the border
 F.offsets.sourcesTableCellIconSpacing = 2 -- Space between a cell's icon and its text
+F.offsets.sourcesTableMapButtonY = -1
 F.offsets.sourcesTableSeparatorSpacingX = 4 -- Space around the line separating columns
 F.offsets.sourcesTableScrollBarX = 6
 F.offsets.sourcesTableScrollBarY = 16
@@ -192,6 +193,9 @@ F.sizes.sourcesListTabPaddingX = 20 -- Space around the inside of a tab and its 
 F.sizes.sourcesTableHeaderHeight = 18
 F.sizes.sourcesTableCellPadding = 4 -- Space between the inside of a cell and its text
 F.sizes.sourcesTableCellIcon = 14 -- Width and height of icons beside a cell's text (e.g., faction icons)
+F.sizes.sourcesTableMapButton = 14 -- Width and height
+F.sizes.sourcesTableMouseIconWidth = 12 -- Shown in the map button's tooltip
+F.sizes.sourcesTableMouseIconHeight = 16
 F.sizes.sourcesTableRowHeight = 17
 F.sizes.sourcesTableSeparatorWidth = 1
 F.sizes.sourcesTableWidth = 389
@@ -203,6 +207,11 @@ F.sizes.resetDefaultsButtonWidth = 140
 F.sizes.resetDefaultsButtonHeight = 35
 F.sizes.sliderWidth = 150
 F.sizes.sliderHeight = 18
+
+------------------------- World map -------------------------
+F.sizes.mapAreaBorder = 2
+F.sizes.mapPin = 12 -- Width and height
+F.sizes.mapPinBorder = 2
 
 setLocaleSpecificSizes()
 
@@ -319,6 +328,10 @@ F.colors.lightGrayHex = "ffCCCCCC"
 F.colors.lightGreenHex = "ff90EE90"
 F.colors.lightPinkHex = "ffFFB6C1"
 F.colors.lightPurpleHex = "ff956DD1"
+F.colors.mapArea = {0.8, 0.1, 0.05, 0.4}
+F.colors.mapAreaBorder = {0, 0, 0}
+F.colors.mapPinBorder = {0, 0, 0}
+F.colors.mapPinFill = {0.9, 0.15, 0.1}
 F.colors.orange = {1, 0.6, 0}
 F.colors.orangeHex = "ffFF9900"
 F.colors.purple = {0.482, 0.192, 0.824}
@@ -359,6 +372,7 @@ F.templates.sourcesTable = "BackdropTemplate"
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 F.textures.bottomTab = "Interface/SPELLBOOK/UI-SpellBook-Tab1-Selected"
+F.textures.circleMask = "Interface/Masks/CircleMaskScalable"
 F.textures.copperCoin = "Interface/MoneyFrame/UI-CopperIcon"
 F.textures.commonRecipe = "Interface/Icons/INV_Scroll_03"
 F.textures.cursor = "Interface/CURSOR/Point"
@@ -382,7 +396,19 @@ F.textures.sourcesListActiveTab = "Interface/HELPFRAME/HelpFrameTab-Active"
 F.textures.sourcesListInactiveTab = "Interface/HELPFRAME/HelpFrameTab-Inactive"
 F.textures.sourcesTableBackground = "Interface/TutorialFrame/TutorialFrameBackground"
 F.textures.sourcesTableEdge = "Interface/Tooltips/UI-Tooltip-Border"
+F.textures.squareMask = "Interface/Buttons/WHITE8X8"
 F.textures.tarnishedUndermineReal = "Interface/Icons/INV_Misc_Coin_16"
+
+
+
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+--                              Atlases
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+F.atlases.leftMouseButton = "newplayertutorial-icon-mouse-leftbutton"
+F.atlases.mapButton = "orderhall-commandbar-mapbutton-up"
+F.atlases.mapButtonPushed = "orderhall-commandbar-mapbutton-down"
+F.atlases.rightMouseButton = "newplayertutorial-icon-mouse-rightbutton"
 
 
 

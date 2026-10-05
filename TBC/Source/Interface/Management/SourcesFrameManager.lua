@@ -59,6 +59,7 @@ function rm.showSourcesTabs(sourceTypes)
         tab.sourceType = sourceType
         tab.text:SetText(rm.getLocalizedSourceType(sourceType))
         tab:SetSize(tab.text:GetWidth() + F.sizes.sourcesListTabPaddingX, F.sizes.sourcesListTabHeight)
+        tab:SetFrameLevel(rm.sourcesTable:GetFrameLevel() - 1) -- Behind the table's top edge, set on every display as the main frame is raised
         tab:ClearAllPoints()
         tab:SetPoint("BOTTOMLEFT", rm.sourcesTable, "TOPLEFT", xOffset + 4, F.offsets.sourcesListTabY)
         tab:Show()
@@ -67,24 +68,55 @@ function rm.showSourcesTabs(sourceTypes)
 end
 
 ----------------------------- Table -----------------------------
-local function setCellIcon(cell, icon)
+local function setCellMapButton(cell, nameElements, xOffset)
+    if cell.mapButton then
+        cell.mapButton:Hide()
+    end
+    if nameElements.mapButtonSource then
+        local mapButton = rm.getSourcesTableMapButton(cell)
+        mapButton.source = nameElements.mapButtonSource
+        mapButton:ClearAllPoints()
+        mapButton:SetPoint("LEFT", xOffset, F.offsets.sourcesTableMapButtonY)
+        mapButton:Show()
+    end
+end
+
+-- Places the map button, icons and text from left to right, skipping the ones not shown
+local function setCellnameElements(cell, nameElements)
     local padding = F.sizes.sourcesTableCellPadding
-    cell.text:ClearAllPoints()
-    cell.text:SetPoint("RIGHT", -padding, 0)
+    local spacing = F.offsets.sourcesTableCellIconSpacing
+    local xOffset = padding + F.offsets.sourcesTableCellIconX -- Left edge of the next element
+    setCellMapButton(cell, nameElements, xOffset)
+    cell.hasMapButtonSpace = nameElements.hasMapButtonSpace
+    if cell.hasMapButtonSpace then
+        xOffset = xOffset + F.sizes.sourcesTableMapButton + spacing
+    end
+    local icon = nameElements.icon
     if icon then
         cell.icon:SetTexture(icon.texture)
         cell.icon:SetTexCoord(unpack(icon.textureCoords))
+        cell.icon:ClearAllPoints()
+        cell.icon:SetPoint("LEFT", xOffset, 0)
         cell.icon:Show()
-        cell.text:SetPoint("LEFT", cell.icon, "RIGHT", F.offsets.sourcesTableCellIconSpacing, 0)
+        xOffset = xOffset + cell.icon:GetWidth() + spacing
     else
         cell.icon:Hide()
+    end
+    cell.text:ClearAllPoints()
+    cell.text:SetPoint("RIGHT", -padding, 0)
+    if icon or cell.hasMapButtonSpace then
+        cell.text:SetPoint("LEFT", xOffset, 0)
+    else
         cell.text:SetPoint("LEFT", padding, 0)
     end
 end
 
--- icon: Optional table with the icon's texture and textureCoords
-local function setCellContent(cell, text, align, tooltip, icon)
-    setCellIcon(cell, icon)
+-- nameElements: Optional table of what's shown at the left of the text
+-- mapButtonSource: Source located by the map button. Without it, the button is hidden
+-- hasMapButtonSpace: Leaves space for a map button, aligning the text with the rows that have one
+-- icon: Table with the icon's texture and textureCoords
+local function setCellContent(cell, text, align, tooltip, nameElements)
+    setCellnameElements(cell, nameElements or {})
     cell.text:SetText(text)
     cell.text:SetJustifyH(align or "CENTER")
     cell.tooltip = tooltip
@@ -93,6 +125,9 @@ end
 
 local function getCellContentWidth(cell)
     local width = cell.text:GetUnboundedStringWidth()
+    if cell.hasMapButtonSpace then
+        width = width + F.sizes.sourcesTableMapButton + F.offsets.sourcesTableCellIconSpacing
+    end
     if cell.icon:IsShown() then
         width = width + cell.icon:GetWidth() + F.offsets.sourcesTableCellIconSpacing
     end
@@ -205,10 +240,28 @@ local function clearSourcesTable()
     rm.sourcesTable.rowCount = 0
 end
 
+local function hasAnyCoordinates(rows)
+    for _, data in ipairs(rows) do
+        if data.pointsByMap then
+            return true
+        end
+    end
+    return false
+end
+
+local function getNameElements(data, hasMapButtonSpace)
+    return {
+        mapButtonSource = data.pointsByMap and data,
+        hasMapButtonSpace = hasMapButtonSpace,
+        icon = data.icon
+    }
+end
+
 function rm.populateSourcesTable(columns, rows)
     clearSourcesTable()
     local header = rm.sourcesTable.header
     local lines = {header}
+    local hasMapButtonSpace = hasAnyCoordinates(rows)
     for i, column in ipairs(columns) do
         setCellContent(rm.getSourcesTableCell(header, i), column.header, column.align)
     end
@@ -220,8 +273,8 @@ function rm.populateSourcesTable(columns, rows)
                 value = column.format(value)
             end
             local tooltip = data.tooltips and data.tooltips[column.field]
-            local icon = (column.field == "name") and data.icon or nil
-            setCellContent(rm.getSourcesTableCell(row, j), value, column.align, tooltip, icon)
+            local nameElements = (column.field == "name") and getNameElements(data, hasMapButtonSpace) or nil
+            setCellContent(rm.getSourcesTableCell(row, j), value, column.align, tooltip, nameElements)
         end
         row:Show()
         table.insert(lines, row)

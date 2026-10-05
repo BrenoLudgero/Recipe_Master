@@ -301,6 +301,12 @@ if rm.locale == "enUS" then
     L.updateIconDropdown = "Restore Window Icon"
     L.pickpocket = "Pickpocket"
     L.trainer = "Trainer"
+    L.showOnMap = "Show on Map"
+    L.setTomTomWaypoint = "Set TomTom Waypoint"
+    L.dropsRecipe = "Drops %s"
+    L.sellsRecipe = "Sells %s"
+    L.teachesRecipe = "Teaches %s"
+    L.clickToDismiss = "Click to dismiss"
 
 elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.professions = {
@@ -350,7 +356,14 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
     L.trivial = "Trivial"
     L.updateIconDropdown = "Icono de Restauración de la Ventana"
     L.pickpocket = "Robo"
+    L.showOnMap = "Mostrar en el Mapa"
     L.trainer = "Instructor"
+    L.setTomTomWaypoint = "Crear Punto de Ruta en TomTom"
+    L.dropsRecipe = "Suelta %s"
+    L.sellsRecipe = "Vende %s"
+    L.teachesRecipe = "Enseña %s"
+    L.clickToDismiss = "Haz clic para descartar"
+    L.startsQuest = "Inicia %s"
 
 elseif rm.locale == "ptBR" then
     L.professions = {
@@ -394,7 +407,14 @@ elseif rm.locale == "ptBR" then
     L.trivial = "Trivial"
     L.updateIconDropdown = "Ícone do Botão de Restaurar Janela"
     L.pickpocket = "Bater carteira"
+    L.showOnMap = "Mostrar no Mapa"
     L.trainer = "Instrutor"
+    L.setTomTomWaypoint = "Criar Ponto de Rota no TomTom"
+    L.dropsRecipe = "Derruba %s"
+    L.sellsRecipe = "Vende %s"
+    L.teachesRecipe = "Ensina %s"
+    L.clickToDismiss = "Clique para descartar"
+    L.startsQuest = "Inicia %s"
 
 elseif rm.locale == "deDE" then
     L.professions = {
@@ -439,7 +459,14 @@ elseif rm.locale == "deDE" then
     L.trivial = "Trivial"
     L.updateIconDropdown = "Symbol für Fenster Wiederherstellen"
     L.pickpocket = "Taschendieb"
+    L.showOnMap = "Auf der Karte Anzeigen"
     L.trainer = "Lehrer"
+    L.setTomTomWaypoint = "TomTom-Wegpunkt Setzen"
+    L.dropsRecipe = "Lässt %s fallen"
+    L.sellsRecipe = "Verkauft %s"
+    L.teachesRecipe = "Lehrt %s"
+    L.clickToDismiss = "Klicken zum Entfernen"
+    L.startsQuest = "Startet %s"
 
 elseif rm.locale == "frFR" then
     L.professions = {
@@ -485,7 +512,14 @@ elseif rm.locale == "frFR" then
     L.trivial = "Trivial"
     L.updateIconDropdown = "Icône de Restauration de la Fenêtre"
     L.pickpocket = "Vol à la tire"
+    L.showOnMap = "Afficher sur la Carte"
     L.trainer = "Maître"
+    L.setTomTomWaypoint = "Placer un Point de Passage TomTom"
+    L.dropsRecipe = "Laisse tomber %s"
+    L.sellsRecipe = "Vend %s"
+    L.teachesRecipe = "Enseigne %s"
+    L.clickToDismiss = "Cliquez pour retirer"
+    L.startsQuest = "Commence %s"
 
 elseif rm.locale == "ruRU" then
     L.professions = {
@@ -531,7 +565,14 @@ elseif rm.locale == "ruRU" then
     L.trivial = "Тривиальный"
     L.updateIconDropdown = "Значок окна Восстановления"
     L.pickpocket = "Карманник"
+    L.showOnMap = "Показать на Карте"
     L.trainer = "Учитель"
+    L.setTomTomWaypoint = "Установить Точку Маршрута TomTom"
+    L.dropsRecipe = "Роняет %s"
+    L.sellsRecipe = "Продает %s"
+    L.teachesRecipe = "Обучает %s"
+    L.clickToDismiss = "Щелкните, чтобы убрать"
+    L.startsQuest = "Начинает %s"
 
 elseif rm.locale == "koKR" then
     L.professions = {
@@ -575,7 +616,14 @@ elseif rm.locale == "koKR" then
     L.trivial = "사소한"
     L.updateIconDropdown = "복원 창 아이콘"
     L.pickpocket = "훔치기"
+    L.showOnMap = "지도에 표시"
     L.trainer = "트레이너"
+    L.setTomTomWaypoint = "TomTom 웨이포인트 설정"
+    L.dropsRecipe = "%s 드랍"
+    L.sellsRecipe = "%s 판매"
+    L.teachesRecipe = "%s 교육"
+    L.clickToDismiss = "클릭하여 제거"
+    L.startsQuest = "%s 시작"
 
 elseif rm.locale == "zhTW" then
     L.professions = {
@@ -619,7 +667,14 @@ elseif rm.locale == "zhTW" then
     L.trivial = "瑣碎"
     L.updateIconDropdown = "恢復視窗圖示"
     L.pickpocket = "搜索"
+    L.showOnMap = "在地圖上顯示"
     L.trainer = "訓練師"
+    L.setTomTomWaypoint = "設定TomTom路徑點"
+    L.dropsRecipe = "掉落%s"
+    L.sellsRecipe = "販售%s"
+    L.teachesRecipe = "教授%s"
+    L.clickToDismiss = "點擊以移除"
+    L.startsQuest = "開始%s"
 
 elseif rm.locale == "zhCN" then
     L.professions = {
@@ -663,5 +718,12 @@ elseif rm.locale == "zhCN" then
     L.trivial = "琐碎"
     L.updateIconDropdown = "恢复窗口图标"
     L.pickpocket = "搜索"
+    L.showOnMap = "在地图上显示"
     L.trainer = "训练师"
+    L.setTomTomWaypoint = "设置TomTom路径点"
+    L.dropsRecipe = "掉落%s"
+    L.sellsRecipe = "出售%s"
+    L.teachesRecipe = "教授%s"
+    L.clickToDismiss = "点击以移除"
+    L.startsQuest = "开始%s"
 end

@@ -79,12 +79,16 @@ Source/Database/Objects.lua
 Source/Database/Quests.lua
 Source/Database/Unique.lua
 
+Source/Database/Coordinates/NPCs.lua
+Source/Database/Coordinates/Objects.lua
+
 Source/Handlers/SpecializationHandler.lua
 Source/Handlers/ProfessionHandler.lua
 Source/Handlers/SkillHandler.lua
 Source/Handlers/ReputationHandler.lua
 Source/Handlers/RecipeHandler.lua
 Source/Handlers/SourceHandler.lua
+Source/Handlers/LocationHandler.lua
 Source/Handlers/TooltipHandler.lua
 
 Source/Interface/FrameSettings.lua
@@ -108,6 +112,10 @@ Source/Interface/Management/BottomTabManager.lua
 
 Source/Interface/Display/RecipesDisplay.lua
 Source/Interface/Display/SourcesDisplay.lua
+
+Source/Interface/MapPins.xml
+Source/Interface/MapPins.lua
+Source/Interface/MinimapPins.lua
 
 Source/Interface/Frames.lua
 

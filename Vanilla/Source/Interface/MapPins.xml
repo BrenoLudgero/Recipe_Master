@@ -1,0 +1,5 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- The world map only creates pins from XML templates. Their mixins are in MapPins.lua -->
+    <Frame name="RecipeMasterMapPinTemplate" mixin="RecipeMasterMapPinMixin" enableMouse="true" virtual="true"/>
+    <Frame name="RecipeMasterMapAreaTemplate" mixin="RecipeMasterMapAreaMixin" virtual="true"/>
+</Ui>

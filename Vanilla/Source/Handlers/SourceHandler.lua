@@ -29,25 +29,28 @@ local function getLocalizedClassification(data)
     return localizedClassifications[classification] or false
 end
 
-local function getZoneName(subject)
-    if not subject["zones"] then
-        return L.unknown
-    elseif #subject["zones"] == 1 then
-        return C_Map.GetAreaInfo(subject["zones"][1])
-    else -- Source is present in multiple zones
-        local names = {}
-        for _, zone in pairs(subject["zones"]) do
-            table.insert(names, C_Map.GetAreaInfo(zone))
-        end
-        return names
+-- The zones where the source is found. The sources table shows one row per zone
+-- name: Localized zone name
+-- pointsByMap: Coordinates of the source in the zone, by UiMapID (see Database/Coordinates). nil if unknown
+local function getZones(subject, coordinates)
+    local zones = {}
+    for _, zoneID in ipairs(subject["zones"] or {}) do
+        table.insert(zones, {
+            name = C_Map.GetAreaInfo(zoneID) or L.unknown,
+            pointsByMap = coordinates and coordinates[zoneID]
+        })
     end
+    if #zones == 0 then
+        table.insert(zones, {name = L.unknown})
+    end
+    return zones
 end
 
 -- tooltips: Extra info shown when hovering over the cell of the same field
 -- icon: Shown at the left of the name
-local function storeCommonNPCInfo(infoTable, npc)
+local function storeCommonNPCInfo(infoTable, npcID, npc)
     infoTable.name = getNPCName(npc)
-    infoTable.zone = getZoneName(npc)
+    infoTable.zones = getZones(npc, rm.npcCoordinatesDB[npcID])
     infoTable.tooltips = {level = getLocalizedClassification(npc)}
     infoTable.icon = getFactionIcon(npc)
 end
@@ -74,7 +77,7 @@ end
 function rm.getCreatureInfo(sourceID, sourceData)
     local npcInfo = {}
     local npc = rm.npcDB[sourceID]
-    storeCommonNPCInfo(npcInfo, npc)
+    storeCommonNPCInfo(npcInfo, sourceID, npc)
     npcInfo.level = getColoredLevelBasedOnClassification(npc)
     npcInfo.chance = sourceData
     return npcInfo
@@ -132,7 +135,7 @@ end
 function rm.getVendorInfo(sourceID, sourceData)
     local vendorInfo = {}
     local vendor = rm.npcDB[sourceID]
-    storeCommonNPCInfo(vendorInfo, vendor)
+    storeCommonNPCInfo(vendorInfo, sourceID, vendor)
     storeVendorSupply(sourceData, vendorInfo)
     return vendorInfo
 end
@@ -232,7 +235,7 @@ function rm.getUniqueInfo(sourceID)
     local uniqueInfo = {}
     local uniqueNPC = rm.uniqueDB[sourceID]
     if uniqueNPC then
-        storeCommonNPCInfo(uniqueInfo, uniqueNPC)
+        storeCommonNPCInfo(uniqueInfo, sourceID, uniqueNPC)
         uniqueInfo.level = getColoredLevelBasedOnClassification(uniqueNPC)
     else
         uniqueInfo.name = ""
@@ -249,7 +252,7 @@ function rm.getObjectInfo(sourceID, sourceData)
     local object = rm.objectDB[sourceID]
     objectInfo.name = object["names"][rm.locale] or object["names"]["enUS"]
     objectInfo.chance = sourceData
-    objectInfo.zone = getZoneName(object)
+    objectInfo.zones = getZones(object, rm.objectCoordinatesDB[sourceID])
     return objectInfo
 end
 
@@ -257,7 +260,7 @@ end
 function rm.getTrainerInfo(sourceID)
     local trainerInfo = {}
     local trainer = rm.npcDB[sourceID]
-    storeCommonNPCInfo(trainerInfo, trainer)
+    storeCommonNPCInfo(trainerInfo, sourceID, trainer)
     return trainerInfo
 end
 

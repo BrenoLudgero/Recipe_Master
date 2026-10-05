@@ -64,7 +64,27 @@ local columns = {
     }
 }
 
+-- What each source type does with the recipe, shown on the source's map pins
+local mapPinActions = {
+    ["drop"] = L.dropsRecipe,
+    ["pickpocket"] = L.dropsRecipe,
+    ["object"] = L.dropsRecipe,
+    ["vendor"] = L.sellsRecipe,
+    ["trainer"] = L.teachesRecipe
+}
+
 local displayedSources = {} -- [sourceType] = Info of each source of the displayed recipe
+
+local function setMapPinActions(sourceType, sources, recipe)
+    local action = mapPinActions[sourceType]
+    if action then
+        local _, _, _, qualityColor = C_Item.GetItemQualityColor(recipe.quality)
+        local text = action:format(WrapTextInColorCode(recipe.name, qualityColor))
+        for _, source in ipairs(sources) do
+            source.mapPinAction = text
+        end
+    end
+end
 
 local function getAllSourcesInfo(sourceType, recipeSource)
     local info = {}
@@ -109,9 +129,10 @@ end
 local function getTableRows(sources)
     local rows = {}
     for _, source in ipairs(sources) do
-        if type(source.zone) == "table" then
-            for _, zone in ipairs(source.zone) do
-                table.insert(rows, setmetatable({zone = zone}, {__index = source}))
+        if source.zones then
+            for _, zone in ipairs(source.zones) do
+                local row = {zone = zone.name, pointsByMap = zone.pointsByMap}
+                table.insert(rows, setmetatable(row, {__index = source}))
             end
         else
             table.insert(rows, source)
@@ -139,6 +160,7 @@ function rm.showAllSources(recipe)
         for _, sourceType in ipairs(rm.sourcesOrder) do
             if recipe.sources[sourceType] then
                 local sourcesInfo = getAllSourcesInfo(sourceType, recipe.sources[sourceType])
+                setMapPinActions(sourceType, sourcesInfo, recipe)
                 displayedSources[sourceType] = sortListByChance(sourcesInfo)
                 table.insert(sourceTypes, sourceType)
             end

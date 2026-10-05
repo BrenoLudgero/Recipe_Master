@@ -1,4 +1,6 @@
 local _, rm = ...
+local L = rm.L
+local F = rm.F
 
 function rm.highlightInactiveOnMouseover(tab)
     tab:SetScript("OnEnter", function(self)
@@ -49,6 +51,40 @@ function rm.showCellTooltipOnMouseover(cell)
     -- Clicks go through to the main frame so it can still be dragged from the table
     cell:EnableMouseMotion(true)
     cell:SetMouseClickEnabled(false)
+end
+
+local function getMouseButtonIcon(atlas)
+    return CreateAtlasMarkup(atlas, F.sizes.sourcesTableMouseIconWidth, F.sizes.sourcesTableMouseIconHeight)
+end
+
+local function getMapButtonTooltipText()
+    local lines = {getMouseButtonIcon(F.atlases.leftMouseButton).." "..L.showOnMap}
+    if rm.isTomTomLoaded() then
+        table.insert(lines, getMouseButtonIcon(F.atlases.rightMouseButton).." "..L.setTomTomWaypoint)
+    end
+    return table.concat(lines, "\n")
+end
+
+function rm.showMapButtonTooltipOnMouseover(button)
+    button:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        GameTooltip:SetText(getMapButtonTooltipText())
+        GameTooltip:Show()
+    end)
+    button:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
+end
+
+-- Without TomTom, both clicks show the map
+function rm.showSourceLocationOnMapButtonClick(button)
+    button:SetScript("OnClick", function(self, mouseButton)
+        if mouseButton == "RightButton" and rm.isTomTomLoaded() then
+            rm.setTomTomWaypoints(self.source)
+        else
+            rm.showSourceOnWorldMap(self.source)
+        end
+    end)
 end
 
 function rm.updateTableHeightOnAreaResize(area)
