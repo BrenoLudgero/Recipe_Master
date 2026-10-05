@@ -1,7 +1,7 @@
 # Recipe Master
 [![CF](https://img.shields.io/badge/Download-CurseForge-orange)](https://www.curseforge.com/wow/addons/recipe-master) [![WowInterface](https://img.shields.io/badge/Download-WoWInterface%20-blue)](https://www.wowinterface.com/downloads/info26887-RecipeMaster.html)
 
-![Recipes Window](.github/images/Recipes_Window.png)
+![Recipes Tab](.github/images/Recipes_Tab.png)
 
 ## Features
 * Complete Recipe Catalog:\
@@ -12,17 +12,28 @@
   Check which of your characters have or have not learned a recipe directly from its tooltip
 * Class, Specialization, Faction and Season:\
   Displayed recipes are always compatible with your character's unique attributes and the current season
+* Source Locations:\
+  Find where every vendor, trainer, creature, quest giver and object is, right on your world map and minimap
 * Localization:\
   Recipe Master is localized and compatible with all available languages
 
-![Sources Window](.github/images/Sources_Window_1.png)
+![Sources Tab](.github/images/Sources_Tab.png)
 
 ## Functionalities
 * Click a recipe icon to show its sources
 * Shift + Left-Click a recipe icon to create a chat link
 * Sort the recipes list by name, quality or required skill (ascending or descending)
+* Filter the recipes list by source (trainer, vendor, drop, quest, etc.)
 * Look for a specific recipe by typing in the search bar
+* Left-Click a source's map button to mark its location on the world map and minimap
+* Click a marker on the map to dismiss it
 * Type /RM to quickly open the add-on's options interface
+* (TomTom only) Right-Click a source's map button to set a waypoint to it
+* (Questie only) Click a quest's Questie button to show its details
+
+![Map Coordinates](.github/images/Map_Coordinates.png)
+
+![Questie Details](.github/images/Questie_Details.png)
 
 ![Options Window](.github/images/Options_Window.png)
 
