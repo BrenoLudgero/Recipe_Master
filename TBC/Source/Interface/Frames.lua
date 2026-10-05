@@ -41,6 +41,7 @@ function rm.createAllFrameElements()
     ------------------------- Sources frame -------------------------
     rm.sourcesInstructions = rm.createSourcesInstructions(rm.mainFrame)
     rm.sourcesHeader = rm.createSourcesHeader(rm.mainFrame) -- Recipe icon and name
+    rm.sourcesBackButton = rm.createSourcesBackButton(rm.mainFrame)
     rm.sourcesTableArea = rm.createSourcesTableArea(rm.mainFrame)
     rm.sourcesTable = rm.createSourcesTable(rm.sourcesTableArea)
     rm.sourcesTabs = {}

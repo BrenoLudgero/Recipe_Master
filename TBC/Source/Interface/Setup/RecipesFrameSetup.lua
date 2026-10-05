@@ -31,6 +31,7 @@ local function showSourcesForRecipe(recipe)
     rm.showSourcesFrameElements()
     rm.activateBottomTabAndDesaturateOthers(rm.recipeSourcesTab)
     rm.showAllSources(recipe)
+    rm.sourcesBackButton:Show()
 end
 
 function rm.createChatLinkOrDisplaySourcesOnClick(icon, recipe)

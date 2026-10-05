@@ -81,12 +81,12 @@ function rm.showRecipesForSpecificProfession(professionName)
     rm.updateRecipesList()
 end
 
-local function isFishingDisplayed()
+function rm.isFishingDisplayed()
     return rm.displayedProfession == L.professions[356]
 end
 
 function rm.showSortedRecipes()
-    if isFishingDisplayed() then
+    if rm.isFishingDisplayed() then
         rm.showRecipesForSpecificProfession(rm.displayedProfession)
     else
         rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)

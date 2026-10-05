@@ -151,6 +151,7 @@ end
 function rm.hideSourcesFrameElements()
     rm.sourcesHeader.recipeIcon:Hide()
     rm.sourcesHeader.recipeName:Hide()
+    rm.sourcesBackButton:Hide()
     rm.sourcesTableArea:Hide()
     rm.uniqueSourceText:Hide()
     rm.sourcesInstructions:Hide()

@@ -17,6 +17,16 @@ function rm.highlightInactiveOnMouseover(tab)
     end)
 end
 
+function rm.showPreviousTabOnBackButtonClick(button)
+    button:SetScript("OnClick", function()
+        if rm.isFishingDisplayed() then
+            rm.fishingTab:Click()
+        else
+            rm.recipesTab:Click()
+        end
+    end)
+end
+
 function rm.showSourcesOnTabClick(tab)
     tab:SetScript("OnClick", function(self)
         if not self.active then

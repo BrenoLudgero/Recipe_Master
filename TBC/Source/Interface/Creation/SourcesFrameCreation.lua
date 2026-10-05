@@ -57,6 +57,19 @@ function rm.createSourcesHeader(parent)
     return sourceHeader
 end
 
+function rm.createSourcesBackButton(parent)
+    local button = CreateFrame("Button", nil, parent)
+    button:SetSize(F.sizes.sourcesHeaderIcon, F.sizes.sourcesHeaderIcon)
+    button:SetNormalTexture(F.textures.sourcesBackButton)
+    button:SetPushedTexture(F.textures.sourcesBackButtonPushed)
+    button:SetHighlightTexture(F.textures.sourcesBackButtonHighlight, "ADD")
+    local yOffset = F.offsets.sourcesHeaderY - (F.sizes.sourcesHeaderIcon / 2)
+    button:SetPoint("LEFT", parent, "TOPLEFT", F.offsets.sourcesTableX, yOffset)
+    rm.showPreviousTabOnBackButtonClick(button)
+    button:Hide()
+    return button
+end
+
 ----------------------------- Tabs -----------------------------
 local function createTabTexture(tab)
     local texture = tab:CreateTexture()
