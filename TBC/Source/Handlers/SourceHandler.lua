@@ -21,7 +21,7 @@ local function getFactionIcon(data)
 end
 
 local function getNPCName(npc)
-    return npc["names"][rm.locale] or npc["names"]["enUS"]
+    return rm.getLocalizedName(npc["names"])
 end
 
 local function getLocalizedClassification(data)
@@ -272,7 +272,7 @@ end
 function rm.getObjectInfo(sourceID, sourceData)
     local objectInfo = {}
     local object = rm.objectDB[sourceID]
-    objectInfo.name = object["names"][rm.locale] or object["names"]["enUS"]
+    objectInfo.name = rm.getLocalizedName(object["names"])
     objectInfo.chance = sourceData
     objectInfo.zones = getZones(object, rm.objectCoordinatesDB[sourceID])
     return objectInfo

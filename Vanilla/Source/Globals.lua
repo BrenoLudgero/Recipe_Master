@@ -48,6 +48,20 @@ function rm.getLocalizedSourceType(sourceType)
     return sourceTypes[sourceType]
 end
 
+-- Used when the database has no name in the game's language
+local nearestLocales = {
+    ["esES"] = "esMX",
+    ["esMX"] = "esES",
+    ["zhCN"] = "zhTW",
+    ["zhTW"] = "zhCN"
+}
+
+-- names: Localized names from the database, by locale
+function rm.getLocalizedName(names)
+    local nearestLocale = nearestLocales[rm.locale]
+    return names[rm.locale] or (nearestLocale and names[nearestLocale]) or names["enUS"]
+end
+
 function rm.tableContains(table, item)
     for _, value in ipairs(table) do
         if value == item then
