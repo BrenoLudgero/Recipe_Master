@@ -287,9 +287,12 @@ function rm.getTrainerInfo(sourceID)
 end
 
 ------------------------- Fishing -------------------------
-function rm.getFishingInfo(sourceID, sourceData)
+function rm.getFishingInfo(sourceID, sourceData, recipeID)
     local info = {}
+    local coordinates = rm.fishingCoordinatesDB[recipeID]
+    info.name = L.fishing
     info.zone = C_Map.GetAreaInfo(sourceID)
+    info.pointsByMap = coordinates and coordinates[sourceID]
     info.chance = sourceData
     return info
 end

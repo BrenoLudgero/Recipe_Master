@@ -78,6 +78,7 @@ Source/Database/Quests.lua
 
 Source/Database/Coordinates/NPCs.lua
 Source/Database/Coordinates/Objects.lua
+Source/Database/Coordinates/Fishing.lua
 
 Source/Handlers/SpecializationHandler.lua
 Source/Handlers/ProfessionHandler.lua
