@@ -77,7 +77,6 @@ Source/Database/Sources/Recipes/Tailoring.lua
 Source/Database/NPCs.lua
 Source/Database/Objects.lua
 Source/Database/Quests.lua
-Source/Database/Unique.lua
 
 Source/Database/Coordinates/NPCs.lua
 Source/Database/Coordinates/Objects.lua

@@ -101,11 +101,6 @@ local function cacheAllZoneNames()
             end
         end
     end
-    for _, npc in pairs(rm.uniqueDB) do
-        for zoneID in pairs(npc.zones) do
-            local zone = C_Map.GetAreaInfo(zoneID)
-        end
-    end
 end
 
 local function cacheAllQuests()

@@ -255,7 +255,7 @@ end
 ------------------------- Unique Sources -------------------------
 function rm.getUniqueInfo(sourceID)
     local uniqueInfo = {}
-    local uniqueNPC = rm.uniqueDB[sourceID]
+    local uniqueNPC = rm.npcDB[sourceID]
     if uniqueNPC then
         storeCommonNPCInfo(uniqueInfo, sourceID, uniqueNPC)
         uniqueInfo.level = getColoredLevelBasedOnClassification(uniqueNPC)

@@ -11600,6 +11600,11 @@ rm.npcDB = {
 		names = {enUS = "Outfitter Eric", deDE = "Ausstatter Eric", esES = "Proveedor Eric", esMX = "Proveedor Eric", frFR = "Eric le tailleur", ptBR = "Provedor Eric", ruRU = "Галантерейщик Эрик", koKR = "재단사 에릭", zhCN = "埃瑞克", zhTW = "埃瑞克"},
 		zones = {1537},
 	},
+	[8696] = {
+		level = "36",
+		names = {enUS = "Henry Stern", ruRU = "Генри Штерн", koKR = "헨리 스턴", zhCN = "亨利·斯特恩", zhTW = "亨利·斯特恩"},
+		zones = {722},
+	},
 	[8716] = {
 		classification = "Elite",
 		level = "62",
@@ -11916,6 +11921,12 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "52",
 		names = {enUS = "Anub'shiah", ruRU = "Ануб'шиа", koKR = "아눕쉬아", zhCN = "阿努希尔", zhTW = "阿努希爾"},
+		zones = {1584},
+	},
+	[9037] = {
+		classification = "Elite",
+		level = "56",
+		names = {enUS = "Gloom'rel", deDE = "Dunk'rel", esES = "Penumbra'rel", frFR = "Funéb'rel", ptBR = "Umbra'rel", ruRU = "Мрак'нел", koKR = "그늘의 문지기", zhCN = "格鲁雷尔", zhTW = "格魯雷爾"},
 		zones = {1584},
 	},
 	[9043] = {
@@ -15001,6 +15012,12 @@ rm.npcDB = {
 		names = {enUS = "Arcane Feedback", deDE = "Arkane Rückkopplung", esES = "Reactivo Arcano", frFR = "Réaction arcanique", ptBR = "Fluxo Arcano", ruRU = "Волшебное искажение", koKR = "비전의 역류", zhCN = "奥术回馈者", zhTW = "祕法回饋者"},
 		zones = {2557},
 	},
+	[14401] = {
+		classification = "Elite",
+		level = "60",
+		names = {enUS = "Master Elemental Shaper Krixix", deDE = "Meisterelementarformer Krixix", esES = "Maestro de los elementos Formacio Krixix", esMX = "Maestro de los elementos Formacio Krixix", frFR = "Maître élémentaire Krixix le Sculpteur", ptBR = "Mestre Moldador Elemental Krixix", ruRU = "Ваятель стихий Криксикс", koKR = "수석 원소구현술사 크릭시스", zhCN = "大元素师克里希克", zhTW = "大元素師克里希克"},
+		zones = {2677},
+	},
 	[14428] = {
 		classification = "Rare",
 		level = "7",
@@ -16190,6 +16207,11 @@ rm.npcDB = {
 		level = "13 - 15",
 		names = {enUS = "Vampiric Mistbat", deDE = "Vampirnebelfledermaus", esES = "Murciélago brumoso vampírico", esMX = "Murciélago brumoso vampírico", frFR = "Brumoptère vampirique", ptBR = "Brumorcego Vampírico", ruRU = "Мрачница-вампир", koKR = "흡혈 안개박쥐", zhCN = "吸血迷雾蝠", zhTW = "吸血迷霧蝙蝠"},
 		zones = {3433},
+	},
+	[16365] = {
+		classification = "Elite",
+		names = {enUS = "Master Craftsman Omarion", deDE = "Meisterhandwerker Omarion", esES = "Maestro artesano Omarion", frFR = "Maître-artisan Omarion", ptBR = "Mestre Artesão Omarion", ruRU = "Мастер-ремесленник Омарион", koKR = "거장 오마리온", zhCN = "大工匠奥玛里恩", zhTW = "工匠大師歐瑪利安"},
+		zones = {3456},
 	},
 	[16368] = {
 		classification = "Elite",
