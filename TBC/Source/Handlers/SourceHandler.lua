@@ -98,6 +98,8 @@ local function getFormattedCost(cost)
     local copperAmount = getCost(cost, "cpr")
     local engineeringExchangeTicket = getCost(cost, "eet")
     local tarnishedUndermineReal = getCost(cost, "tur")
+    local glowcap = getCost(cost, "glc")
+    local haalaToken = getCost(cost, "hrt")
     local formattedCost = ""
     if goldAmount > 0 then
         formattedCost = formattedCost.." "..goldAmount..getCurrencyIcon(F.textures.goldCoin)
@@ -113,6 +115,12 @@ local function getFormattedCost(cost)
     end
     if tarnishedUndermineReal > 0 then
         formattedCost = tarnishedUndermineReal..getCurrencyIcon(F.textures.tarnishedUndermineReal)
+    end
+    if glowcap > 0 then
+        formattedCost = glowcap..getCurrencyIcon(F.textures.glowcap)
+    end
+    if haalaToken > 0 then
+        formattedCost = haalaToken..getCurrencyIcon(F.textures.haalaToken)
     end
     return formattedCost
 end
