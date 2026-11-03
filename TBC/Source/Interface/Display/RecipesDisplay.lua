@@ -43,7 +43,9 @@ local function handleLearnedRecipe(recipe)
 end
 
 local function handleMissingRecipe(recipe)
-    if not rm.isMissingRecipeOfCurrentFaction(recipe) or rm.isLearnedRecipe(recipe) then
+    if not rm.isMissingRecipeOfCurrentFaction(recipe)
+    or rm.isRecipeOfOpposingReputation(recipe)
+    or rm.isLearnedRecipe(recipe) then
         return
     end
     if rm.isRecipeFromSelectedSource(recipe) then
