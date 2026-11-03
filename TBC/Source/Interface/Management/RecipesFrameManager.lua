@@ -37,8 +37,17 @@ local function updateMainWidthBasedOnWidestRecipeName()
     end
 end
 
+-- With more than one specialization, shows the one that requires another (e.g. Master Swordsmith instead of Weaponsmith)
 local function getSavedSpecializationName()
-    local specializationID = rm.getSavedSpecializationByProfessionName(rm.displayedProfession)
+    local professionID = rm.getProfessionID(rm.displayedProfession)
+    local savedSpecialization = rm.getSavedSpecializationByProfessionName(rm.displayedProfession)
+    local specializationIDs = rm.getSpecializationsList(savedSpecialization)
+    local specializationID = specializationIDs[1]
+    for _, savedSpecializationID in ipairs(specializationIDs) do
+        if rm.getRequiredSpecialization(professionID, savedSpecializationID) then
+            specializationID = savedSpecializationID
+        end
+    end
     if specializationID then
         return GetSpellInfo(specializationID)
     end
