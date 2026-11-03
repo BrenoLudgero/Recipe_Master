@@ -167,7 +167,7 @@ local function getRecipeData(recipeID, recipeData, professionID, initialDataFunc
         ID = recipeID,
         classes = recipeData["classes"], 
         difficulty = recipeData["difficulty"],
-        faction = recipeData["faction"], 
+        faction = recipeData["faction"] or rm.getReputationFaction(recipeData["reputationFaction"]), 
         isFactionExclusive = recipeData["isFactionExclusive"], 
         isSpecialization = recipeData["isSpecialization"],
         link = rLink,
