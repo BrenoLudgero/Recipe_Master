@@ -7,7 +7,8 @@ local localizedClassifications = {
     ["Rare"] = L.rare,
     ["Elite"] = L.elite,
     ["Rare Elite"] = L.rareElite,
-    ["Dungeon"] = L.dungeon
+    ["Dungeon"] = L.dungeon,
+    ["Group"] = L.group
 }
 
 ------------------------- Shared -------------------------
@@ -61,7 +62,8 @@ local function getClassificationColor(classification)
         ["Rare"] = F.colors.cadetBlueHex,
         ["Elite"] = F.colors.orangeHex,
         ["Rare Elite"] = F.colors.lightPurpleHex,
-        ["Dungeon"] =  F.colors.tanHex
+        ["Dungeon"] =  F.colors.tanHex,
+        ["Group"] = F.colors.lightGreenHex
     }
     return classificationColors[classification] or F.colors.whiteHex
 end
