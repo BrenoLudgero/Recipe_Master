@@ -210,6 +210,11 @@ rm.questDB = {
 		startedByNPC = 7790,
 	},
 	[2752] = {
+		classes = {
+			1,
+			2,
+			3,
+		},
 		faction = "Horde",
 		level = 32,
 		requiredLevel = 32,

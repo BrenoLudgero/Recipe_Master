@@ -1994,15 +1994,16 @@ rm.recipeDB[202] = {
 		season = "SoD",
 		teaches = 235529,
 	},
-	[236871] = {
+	[236872] = {
 		difficulty = {
 			0,
 			275,
 			277,
 			280,
 		},
-		requiredSkill = 275,
+		requiredSkill = 250,
 		season = "SoD",
+		teaches = 236871,
 	},
 	[238782] = {
 		difficulty = {
