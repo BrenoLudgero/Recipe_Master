@@ -38,7 +38,7 @@ end
 
 local specializationIDs = {
     [164] = {9787, 9788, 17039, 17040, 17041}, -- Blacksmithing
-    [165] = {10657, 10658, 10660}, -- Leatherworking
+    [165] = {10656, 10658, 10660}, -- Leatherworking
     [202] = {20219, 20222}, -- Engineering
 }
 
