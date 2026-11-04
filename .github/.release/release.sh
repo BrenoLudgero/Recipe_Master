@@ -1095,7 +1095,7 @@ if [ -f "$pkgmeta_file" ]; then
 							alpha|beta|release)
 								file_type="$yaml_value"
 								file_template+="-$yaml_value"
-								label_template+="-$yaml_value"
+								label_template+=" $yaml_value"
 								;;
 						esac
 						;;
