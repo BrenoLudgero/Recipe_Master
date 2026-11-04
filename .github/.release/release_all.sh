@@ -18,7 +18,7 @@ fi
 if [ "$NEW_TAG" = "$LATEST_REMOTE_TAG" ]; then
     git tag --delete "$LATEST_REMOTE_TAG"
     gh release delete "$LATEST_REMOTE_TAG" -y
-    git push remote --delete "$LATEST_REMOTE_TAG"
+    git push origin --delete "$LATEST_REMOTE_TAG"
 fi
 
 git tag "$NEW_TAG"
