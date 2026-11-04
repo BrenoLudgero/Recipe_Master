@@ -981,7 +981,7 @@ rm.recipeDB[165] = {
 			265,
 		},
 		requiredSkill = 225,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[8348] = {
 		difficulty = {
@@ -1011,7 +1011,7 @@ rm.recipeDB[165] = {
 			295,
 		},
 		requiredSkill = 255,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[8384] = {
 		difficulty = {
@@ -1314,7 +1314,7 @@ rm.recipeDB[165] = {
 			300,
 		},
 		requiredSkill = 260,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 15045,
 	},
 	[15727] = {
@@ -1356,7 +1356,7 @@ rm.recipeDB[165] = {
 			340,
 		},
 		requiredSkill = 300,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 15047,
 	},
 	[15731] = {
@@ -1388,7 +1388,7 @@ rm.recipeDB[165] = {
 			310,
 		},
 		requiredSkill = 270,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 15046,
 	},
 	[15734] = {
@@ -1558,7 +1558,7 @@ rm.recipeDB[165] = {
 			325,
 		},
 		requiredSkill = 285,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 15048,
 	},
 	[15752] = {
@@ -1633,7 +1633,7 @@ rm.recipeDB[165] = {
 			330,
 		},
 		requiredSkill = 290,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 15050,
 	},
 	[15760] = {
@@ -1676,7 +1676,7 @@ rm.recipeDB[165] = {
 			335,
 		},
 		requiredSkill = 295,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 15049,
 	},
 	[15764] = {
@@ -1728,7 +1728,7 @@ rm.recipeDB[165] = {
 			340,
 		},
 		requiredSkill = 300,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 15051,
 	},
 	[15771] = {
@@ -1823,7 +1823,7 @@ rm.recipeDB[165] = {
 			340,
 		},
 		requiredSkill = 300,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 15052,
 	},
 	[17022] = {
@@ -1856,7 +1856,7 @@ rm.recipeDB[165] = {
 			340,
 		},
 		requiredSkill = 300,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 16984,
 	},
 	[17722] = {
@@ -1936,7 +1936,7 @@ rm.recipeDB[165] = {
 			340,
 		},
 		requiredSkill = 300,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 18509,
 	},
 	[18518] = {
@@ -2048,7 +2048,7 @@ rm.recipeDB[165] = {
 			340,
 		},
 		requiredSkill = 300,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 19157,
 	},
 	[19332] = {
@@ -2167,7 +2167,7 @@ rm.recipeDB[165] = {
 			340,
 		},
 		requiredSkill = 300,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[20296] = {
 		difficulty = {
@@ -2177,7 +2177,7 @@ rm.recipeDB[165] = {
 			320,
 		},
 		requiredSkill = 280,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[20382] = {
 		difficulty = {
@@ -2190,7 +2190,7 @@ rm.recipeDB[165] = {
 		reputationFaction = 609,
 		reputationLevel = 8,
 		requiredSkill = 300,
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 20380,
 	},
 	[20506] = {
@@ -2661,7 +2661,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 285,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 227875,
 	},
 	[227899] = {
@@ -2673,7 +2673,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 295,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 227873,
 	},
 	[227900] = {
@@ -2685,7 +2685,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 270,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 227877,
 	},
 	[227902] = {
@@ -2697,7 +2697,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 290,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 227851,
 	},
 	[227903] = {
@@ -2709,7 +2709,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 300,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 227852,
 	},
 	[227904] = {
@@ -2721,7 +2721,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 300,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 227853,
 	},
 	[227906] = {
@@ -2769,7 +2769,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 300,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 227869,
 	},
 	[228115] = {
@@ -2816,7 +2816,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 270,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 227878,
 	},
 	[228276] = {
@@ -2851,7 +2851,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 260,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 227879,
 	},
 	[228319] = {
@@ -2886,7 +2886,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 300,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 233803,
 	},
 	[234237] = {
@@ -3053,7 +3053,7 @@ rm.recipeDB[165] = {
 		reputationLevel = 8,
 		requiredSkill = 300,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 234324,
 	},
 	[234481] = {
@@ -3065,7 +3065,7 @@ rm.recipeDB[165] = {
 		},
 		requiredSkill = 300,
 		season = "SoD",
-		specialization = 10657,
+		specialization = 10656,
 		teaches = 234482,
 	},
 	[236698] = {

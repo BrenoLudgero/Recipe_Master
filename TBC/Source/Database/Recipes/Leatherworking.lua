@@ -977,7 +977,7 @@ rm.recipeDB[165] = {
 			265,
 		},
 		requiredSkill = 225,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[8348] = {
 		difficulty = {
@@ -1007,7 +1007,7 @@ rm.recipeDB[165] = {
 			295,
 		},
 		requiredSkill = 255,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[8384] = {
 		difficulty = {
@@ -2116,7 +2116,7 @@ rm.recipeDB[165] = {
 			340,
 		},
 		requiredSkill = 300,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[20296] = {
 		difficulty = {
@@ -2126,7 +2126,7 @@ rm.recipeDB[165] = {
 			320,
 		},
 		requiredSkill = 280,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[20382] = {
 		difficulty = {
@@ -2820,7 +2820,7 @@ rm.recipeDB[165] = {
 			405,
 		},
 		requiredSkill = 375,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[29516] = {
 		difficulty = {
@@ -2830,7 +2830,7 @@ rm.recipeDB[165] = {
 			405,
 		},
 		requiredSkill = 375,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[29517] = {
 		difficulty = {
@@ -2840,7 +2840,7 @@ rm.recipeDB[165] = {
 			405,
 		},
 		requiredSkill = 375,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[29519] = {
 		difficulty = {
@@ -2850,7 +2850,7 @@ rm.recipeDB[165] = {
 			405,
 		},
 		requiredSkill = 375,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[29520] = {
 		difficulty = {
@@ -2860,7 +2860,7 @@ rm.recipeDB[165] = {
 			405,
 		},
 		requiredSkill = 375,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[29521] = {
 		difficulty = {
@@ -2870,7 +2870,7 @@ rm.recipeDB[165] = {
 			405,
 		},
 		requiredSkill = 375,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[29522] = {
 		difficulty = {
@@ -3387,7 +3387,7 @@ rm.recipeDB[165] = {
 			300,
 		},
 		requiredSkill = 260,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[29973] = {
 		difficulty = {
@@ -3417,7 +3417,7 @@ rm.recipeDB[165] = {
 			370,
 		},
 		requiredSkill = 330,
-		specialization = 10657,
+		specialization = 10656,
 	},
 	[30301] = {
 		difficulty = {

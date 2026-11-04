@@ -22,6 +22,7 @@ L.faction = FACTION
 L.fishing = PROFESSIONS_FISHING
 L.fishingNotLearned = SPELL_FAILED_NOT_KNOWN -- "Spell not learned"
 L.general = GENERAL
+L.group = GROUP
 L.journeyman = JOURNEYMAN
 L.item = HELPFRAME_ITEM_TITLE
 L.learned = TRADE_SKILLS_LEARNED_TAB

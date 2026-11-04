@@ -387,7 +387,9 @@ F.textures.factionIcons = {
     ["Alliance"] = "Interface/WorldStateFrame/AllianceIcon",
     ["Horde"] = "Interface/WorldStateFrame/HordeIcon"
 }
+F.textures.glowcap = "Interface/Icons/INV_Mushroom_02"
 F.textures.goldCoin = "Interface/MoneyFrame/UI-GoldIcon"
+F.textures.haalaToken = "Interface/Icons/INV_Misc_Rune_09"
 F.textures.headerLeft = "Interface/ClassTrainerFrame/UI-ClassTrainer-TopLeft" -- Main window's top textures
 F.textures.headerRight = "Interface/ClassTrainerFrame/UI-ClassTrainer-TopRight"
 F.textures.mainBackground = "Interface/FrameGeneral/UI-Background-Marble"

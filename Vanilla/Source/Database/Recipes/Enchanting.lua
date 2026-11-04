@@ -1602,7 +1602,7 @@ rm.recipeDB[333] = {
 		},
 		requiredSkill = 120,
 		season = "SoD",
-		teaches = 220792,
+		teaches = 448624,
 	},
 	[228979] = {
 		difficulty = {
@@ -1926,6 +1926,72 @@ rm.recipeDB[333] = {
 		season = "SoD",
 		teaches = 1216024,
 	},
+	[235526] = {
+		difficulty = {
+			0,
+			320,
+			340,
+			360,
+		},
+		requiredSkill = 300,
+		season = "SoD",
+		teaches = 1217189,
+	},
+	[235528] = {
+		difficulty = {
+			0,
+			320,
+			340,
+			360,
+		},
+		requiredSkill = 300,
+		season = "SoD",
+		teaches = 1217203,
+	},
+	[241191] = {
+		difficulty = {
+			0,
+			305,
+			307,
+			310,
+		},
+		requiredSkill = 280,
+		season = "SoD",
+		teaches = 1231128,
+	},
+	[241195] = {
+		difficulty = {
+			0,
+			305,
+			307,
+			310,
+		},
+		requiredSkill = 280,
+		season = "SoD",
+		teaches = 1231139,
+	},
+	[241201] = {
+		difficulty = {
+			0,
+			305,
+			307,
+			310,
+		},
+		requiredSkill = 280,
+		season = "SoD",
+		teaches = 1231164,
+	},
+	[242361] = {
+		difficulty = {
+			0,
+			305,
+			307,
+			310,
+		},
+		requiredSkill = 280,
+		season = "SoD",
+		teaches = 1232172,
+	},
 	[439134] = {
 		difficulty = {
 			175,
@@ -1948,28 +2014,6 @@ rm.recipeDB[333] = {
 		isSpell = true,
 		quality = 2,
 		requiredSkill = 250,
-		season = "SoD",
-	},
-	[1217189] = {
-		difficulty = {
-			0,
-			320,
-			340,
-			360,
-		},
-		isSpell = true,
-		requiredSkill = 320,
-		season = "SoD",
-	},
-	[1217203] = {
-		difficulty = {
-			0,
-			320,
-			340,
-			360,
-		},
-		isSpell = true,
-		requiredSkill = 320,
 		season = "SoD",
 	},
 	[1219577] = {
@@ -2069,50 +2113,6 @@ rm.recipeDB[333] = {
 		},
 		isSpell = true,
 		requiredSkill = 320,
-		season = "SoD",
-	},
-	[1231128] = {
-		difficulty = {
-			0,
-			305,
-			307,
-			310,
-		},
-		isSpell = true,
-		requiredSkill = 305,
-		season = "SoD",
-	},
-	[1231139] = {
-		difficulty = {
-			0,
-			305,
-			307,
-			310,
-		},
-		isSpell = true,
-		requiredSkill = 305,
-		season = "SoD",
-	},
-	[1231164] = {
-		difficulty = {
-			0,
-			305,
-			307,
-			310,
-		},
-		isSpell = true,
-		requiredSkill = 305,
-		season = "SoD",
-	},
-	[1232172] = {
-		difficulty = {
-			0,
-			305,
-			307,
-			310,
-		},
-		isSpell = true,
-		requiredSkill = 305,
 		season = "SoD",
 	},
 }

@@ -77,7 +77,8 @@ end
 
 local function handleProfessionFrameOpened(getDisplayedProfessionFunction)
     rm.displayedProfession = getDisplayedProfessionFunction() -- e.g. Engineering (Localized)
-    if rm.getProfessionID(rm.displayedProfession) then
+    if rm.getProfessionID(rm.displayedProfession) 
+    and rm.getSavedProfessionByName(rm.displayedProfession) then
         rm.saveLearnedTradeSkills()
         rm.clearSearchBar()
         rm.showRecipesFrame()  

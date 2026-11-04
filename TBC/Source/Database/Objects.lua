@@ -27,7 +27,7 @@ rm.objectDB = {
 	},
 	[2849] = {
 		names = {enUS = "Battered Chest", deDE = "Ramponierte Truhe", esES = "Cofre maltrecho", esMX = "Cofre maltrecho", frFR = "Coffre endommagé", ptBR = "Baú Desgastado", ruRU = "Побитый сундук", koKR = "낡은 궤짝", zhCN = "破损的箱子", zhTW = "破損的箱子"},
-		zones = {44, 148, 406, 17, 3525, 38, 130, 3433, 331, 40},
+		zones = {44, 148, 406, 17, 38, 3525, 130, 331, 3433, 40},
 	},
 	[2850] = {
 		names = {enUS = "Solid Chest", deDE = "Robuste Truhe", esES = "Cofre macizo", esMX = "Cofre macizo", frFR = "Coffre solide", ptBR = "Baú Sólido", ruRU = "Добротный сундук", koKR = "단단한 궤짝", zhCN = "坚固的箱子", zhTW = "堅固的箱子"},
@@ -67,7 +67,7 @@ rm.objectDB = {
 	},
 	[74447] = {
 		names = {enUS = "Large Iron Bound Chest", deDE = "Große eisenbeschlagene Truhe", esES = "Cofre reforzado con hierro grande", frFR = "Grand coffre cerclé de fer", ptBR = "Baú Grande Reforçado com Ferro", ruRU = "Большой сундук, окованный железом", koKR = "큰 철제 궤짝", zhCN = "大型铁箍储物箱"},
-		zones = {721, 491, 796, 717},
+		zones = {721, 491},
 	},
 	[74448] = {
 		names = {enUS = "Large Solid Chest", deDE = "Große robuste Truhe", esES = "Cofre macizo grande", frFR = "Grand coffre solide", ptBR = "Baú Grande Sólido", ruRU = "Большой добротный сундук", koKR = "크고 단단한 궤짝", zhCN = "坚固的大箱子"},

@@ -71,7 +71,8 @@ local mapPinActions = {
     ["pickpocket"] = L.dropsRecipe,
     ["object"] = L.dropsRecipe,
     ["vendor"] = L.sellsRecipe,
-    ["trainer"] = L.teachesRecipe
+    ["trainer"] = L.teachesRecipe,
+    ["fishing"] = "%s" -- The recipe's name alone, under "Fishing"
 }
 
 local displayedSources = {} -- [sourceType] = Info of each source of the displayed recipe
@@ -87,7 +88,7 @@ local function setMapPinActions(sourceType, sources, recipe)
     end
 end
 
-local function getAllSourcesInfo(sourceType, recipeSource)
+local function getAllSourcesInfo(sourceType, recipeSource, recipeID)
     local info = {}
     for sourceID, sourceData in pairs(recipeSource) do
         local source
@@ -104,7 +105,7 @@ local function getAllSourcesInfo(sourceType, recipeSource)
         elseif sourceType == "trainer" then
             source = rm.getTrainerInfo(sourceID)
         elseif sourceType == "fishing" then
-            source = rm.getFishingInfo(sourceID, sourceData)
+            source = rm.getFishingInfo(sourceID, sourceData, recipeID)
         elseif sourceType == "item" then
             source = rm.getItemInfo(sourceID, sourceData)
         end
@@ -160,7 +161,7 @@ function rm.showAllSources(recipe)
         wipe(displayedSources)
         for _, sourceType in ipairs(rm.sourcesOrder) do
             if recipe.sources[sourceType] then
-                local sourcesInfo = getAllSourcesInfo(sourceType, recipe.sources[sourceType])
+                local sourcesInfo = getAllSourcesInfo(sourceType, recipe.sources[sourceType], recipe.ID)
                 setMapPinActions(sourceType, sourcesInfo, recipe)
                 displayedSources[sourceType] = sortListByChance(sourcesInfo)
                 table.insert(sourceTypes, sourceType)

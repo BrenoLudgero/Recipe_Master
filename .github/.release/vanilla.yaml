@@ -4,5 +4,6 @@ package-as: Vanilla
 
 ignore:
   - TBC
+  - Forever
   - README.md
   - Images

@@ -304,7 +304,8 @@ function rm.populateSourcesTable(columns, rows)
                 value = column.format(value)
             end
             local tooltip = data.tooltips and data.tooltips[column.field]
-            local nameElements = (column.field == "name") and getNameElements(data, hasMapButtonSpace) or nil
+            -- The first column is the name, or the zone in tables without names (fishing)
+            local nameElements = (j == 1) and getNameElements(data, hasMapButtonSpace) or nil
             setCellContent(rm.getSourcesTableCell(row, j), value, column.align, tooltip, nameElements)
         end
         row:Show()

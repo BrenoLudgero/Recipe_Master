@@ -19,10 +19,32 @@ function rm.getSpecializationName(specializationID)
     return specializationName
 end
 
+-- specialization: A saved specialization, which is a spell ID, a list of them or false / nil if none
+-- (see isProfessionWithMultipleSpecializations)
+function rm.getSpecializationsList(specialization)
+    if type(specialization) == "table" then
+        return specialization
+    elseif specialization then
+        return {specialization}
+    end
+    return {}
+end
+
+-- The specialization needed to learn another, e.g. Weaponsmith for Master Swordsmith. nil if none
+function rm.getRequiredSpecialization(professionID, specializationID)
+    local specializationRecipe = rm.cachedRecipes[professionID][specializationID]
+    return specializationRecipe and specializationRecipe.specialization
+end
+
 local specializationIDs = {
     [164] = {9787, 9788, 17039, 17040, 17041}, -- Blacksmithing
-    [165] = {10657, 10658, 10660}, -- Leatherworking
+    [165] = {10656, 10658, 10660}, -- Leatherworking
     [202] = {20219, 20222}, -- Engineering
+}
+
+-- Professions whose specializations are saved as a list, as they can be learned together
+local professionsWithMultipleSpecializations = {
+    [164] = true, -- Blacksmithing: Weaponsmith and Master Axesmith, Hammersmith or Swordsmith
 }
 
 -- Spellbook spell IDs that differ from the ones above (e.g. Dragonscale Leatherworking)
@@ -51,10 +73,18 @@ function rm.isSodProfessionWithSpecializations(professionID)
     return rm.currentSeason == "SoD" and professionHasSpecializations(professionID)
 end
 
+-- In Season of Discovery, all specializations of a profession can be learned together
+local function isProfessionWithMultipleSpecializations(professionID)
+    return (
+        professionsWithMultipleSpecializations[professionID] == true
+        or rm.isSodProfessionWithSpecializations(professionID)
+    )
+end
+
 local function storeLearnedSpecializations(currentSpecializations, spellID)
     for professionID, specs in pairs(specializationIDs) do
         if rm.tableContains(specs, spellID) then
-            if rm.isSodProfessionWithSpecializations(professionID) then
+            if isProfessionWithMultipleSpecializations(professionID) then
                 currentSpecializations[professionID] = currentSpecializations[professionID] or {}
                 if not rm.tableContains(currentSpecializations[professionID], spellID) then
                     table.insert(currentSpecializations[professionID], spellID)
@@ -82,19 +112,19 @@ end
 function rm.saveNewSpecializations(currentSpecializations)
     for professionID, specializationID in pairs(currentSpecializations) do
         local savedSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
-        if rm.isSodProfessionWithSpecializations(professionID) then
-            local savedSpecs = rm.getSavedProfessionByID(professionID)["specialization"]
-            if type(savedSpecs) ~= "table" then
-                savedSpecs = {}
-                rm.getSavedProfessionByID(professionID)["specialization"] = savedSpecs
+        if isProfessionWithMultipleSpecializations(professionID) then
+            -- Also replaces a single specialization saved by older versions
+            if type(savedSpecialization) ~= "table" then
+                savedSpecialization = {}
+                rm.getSavedProfessionByID(professionID)["specialization"] = savedSpecialization
             end
-            if not rm.tableContains(savedSpecs, specializationID) then
-                table.insert(savedSpecs, specializationID)
+            for _, learnedSpecializationID in ipairs(specializationID) do
+                if not rm.tableContains(savedSpecialization, learnedSpecializationID) then
+                    table.insert(savedSpecialization, learnedSpecializationID)
+                end
             end
-        else
-            if not savedSpecialization then
-                rm.getSavedProfessionByID(professionID)["specialization"] = specializationID
-            end
+        elseif not savedSpecialization then
+            rm.getSavedProfessionByID(professionID)["specialization"] = specializationID
         end
     end
 end

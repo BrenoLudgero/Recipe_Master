@@ -262,7 +262,7 @@ local function closeDefaultProfessionFrames()
     end
 end
 
--- source: Sources table row with the NPC's or object's name, zone and coordinates in that zone, or a quest's starter.
+-- source: Sources table row with the NPC's, object's or fishing spot's name, zone and coordinates in that zone, or a quest's starter.
 -- OpenWorldMap(mapID) can't be used, as it calls a method that the Classic world maps don't have
 function rm.showSourceOnWorldMap(source)
     closeDefaultProfessionFrames()

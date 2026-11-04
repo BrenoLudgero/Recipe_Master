@@ -7,7 +7,8 @@ local localizedClassifications = {
     ["Rare"] = L.rare,
     ["Elite"] = L.elite,
     ["Rare Elite"] = L.rareElite,
-    ["Dungeon"] = L.dungeon
+    ["Dungeon"] = L.dungeon,
+    ["Group"] = L.group
 }
 
 ------------------------- Shared -------------------------
@@ -21,7 +22,7 @@ local function getFactionIcon(data)
 end
 
 local function getNPCName(npc)
-    return npc["names"][rm.locale] or npc["names"]["enUS"]
+    return rm.getLocalizedName(npc["names"])
 end
 
 local function getLocalizedClassification(data)
@@ -61,7 +62,8 @@ local function getClassificationColor(classification)
         ["Rare"] = F.colors.cadetBlueHex,
         ["Elite"] = F.colors.orangeHex,
         ["Rare Elite"] = F.colors.lightPurpleHex,
-        ["Dungeon"] =  F.colors.tanHex
+        ["Dungeon"] =  F.colors.tanHex,
+        ["Group"] = F.colors.lightGreenHex
     }
     return classificationColors[classification] or F.colors.whiteHex
 end
@@ -255,7 +257,7 @@ end
 ------------------------- Unique Sources -------------------------
 function rm.getUniqueInfo(sourceID)
     local uniqueInfo = {}
-    local uniqueNPC = rm.uniqueDB[sourceID]
+    local uniqueNPC = rm.npcDB[sourceID]
     if uniqueNPC then
         storeCommonNPCInfo(uniqueInfo, sourceID, uniqueNPC)
         uniqueInfo.level = getColoredLevelBasedOnClassification(uniqueNPC)
@@ -272,7 +274,7 @@ end
 function rm.getObjectInfo(sourceID, sourceData)
     local objectInfo = {}
     local object = rm.objectDB[sourceID]
-    objectInfo.name = object["names"][rm.locale] or object["names"]["enUS"]
+    objectInfo.name = rm.getLocalizedName(object["names"])
     objectInfo.chance = sourceData
     objectInfo.zones = getZones(object, rm.objectCoordinatesDB[sourceID])
     return objectInfo
@@ -287,9 +289,12 @@ function rm.getTrainerInfo(sourceID)
 end
 
 ------------------------- Fishing -------------------------
-function rm.getFishingInfo(sourceID, sourceData)
+function rm.getFishingInfo(sourceID, sourceData, recipeID)
     local info = {}
+    local coordinates = rm.fishingCoordinatesDB[recipeID]
+    info.name = L.fishing
     info.zone = C_Map.GetAreaInfo(sourceID)
+    info.pointsByMap = coordinates and coordinates[sourceID]
     info.chance = sourceData
     return info
 end
