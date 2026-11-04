@@ -7,3 +7,4 @@ ignore:
   - Forever
   - README.md
   - Images
+  - TBC/Source/Debug.lua
