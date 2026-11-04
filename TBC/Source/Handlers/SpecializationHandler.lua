@@ -20,7 +20,7 @@ function rm.getSpecializationName(specializationID)
 end
 
 -- specialization: A saved specialization, which is a spell ID, a list of them or false / nil if none
--- (see rm.isProfessionWithMultipleSpecializations)
+-- (see isProfessionWithMultipleSpecializations)
 function rm.getSpecializationsList(specialization)
     if type(specialization) == "table" then
         return specialization
@@ -53,14 +53,14 @@ local function professionHasSpecializations(professionID)
     return specializationIDs[professionID] ~= nil
 end
 
-function rm.isProfessionWithMultipleSpecializations(professionID)
+local function isProfessionWithMultipleSpecializations(professionID)
     return professionsWithMultipleSpecializations[professionID] == true
 end
 
 local function storeLearnedSpecializations(currentSpecializations, spellID)
     for professionID, specs in pairs(specializationIDs) do
         if rm.tableContains(specs, spellID) then
-            if rm.isProfessionWithMultipleSpecializations(professionID) then
+            if isProfessionWithMultipleSpecializations(professionID) then
                 currentSpecializations[professionID] = currentSpecializations[professionID] or {}
                 if not rm.tableContains(currentSpecializations[professionID], spellID) then
                     table.insert(currentSpecializations[professionID], spellID)
@@ -88,7 +88,7 @@ end
 function rm.saveNewSpecializations(currentSpecializations)
     for professionID, specializationID in pairs(currentSpecializations) do
         local savedSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
-        if rm.isProfessionWithMultipleSpecializations(professionID) then
+        if isProfessionWithMultipleSpecializations(professionID) then
             -- Also replaces a single specialization saved by older versions
             if type(savedSpecialization) ~= "table" then
                 savedSpecialization = {}

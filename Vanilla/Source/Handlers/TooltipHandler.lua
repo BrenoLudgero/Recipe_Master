@@ -45,8 +45,8 @@ end
 local function getColoredSpecialization(characterProfessionData, recipeSpecialization)
     local specialization = ""
     local specializationName = rm.getSpecializationName(recipeSpecialization)
-    local characterSpecialization = characterProfessionData["specialization"]
-    if characterSpecialization ~= recipeSpecialization then
+    local characterSpecializations = rm.getSpecializationsList(characterProfessionData["specialization"])
+    if not rm.tableContains(characterSpecializations, recipeSpecialization) then
         specialization = WrapTextInColorCode(specializationName, F.colors.lightPinkHex)
     else
         specialization = WrapTextInColorCode(specializationName, F.colors.lightGreenHex)

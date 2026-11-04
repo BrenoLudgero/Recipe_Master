@@ -19,13 +19,39 @@ local function isRecipeForCurrentClass(recipe)
     return rm.tableContains(recipe.classes, currentCharacterClass)
 end
 
--- Detects if recipe teaches a specialization that's not the character's current specialization
-local function recipeTeachesDifferentSpecialization(currentSpecialization, recipe)
+local function getCurrentSpecializations(professionID)
+    return rm.getSpecializationsList(rm.getSavedSpecializationByProfessionID(professionID))
+end
+
+-- Detects if recipe teaches a specialization that's an alternative to one of the character's current specializations
+-- e.g. Armorsmith for a Weaponsmith or Master Axesmith for a Master Swordsmith, but not Master Swordsmith for a Weaponsmith
+local function recipeTeachesDifferentSpecialization(professionID, currentSpecializations, recipe)
+    if not recipe.isSpecialization or rm.tableContains(currentSpecializations, recipe.teaches) then
+        return false
+    end
+    for _, specializationID in ipairs(currentSpecializations) do
+        if rm.getRequiredSpecialization(professionID, specializationID) == recipe.specialization then
+            return true
+        end
+    end
+    return false
+end
+
+-- The character has the specialization or can still learn it, along with the specialization it requires
+-- e.g. Master Swordsmith for a Weaponsmith or a character without specializations, but not for an Armorsmith
+local function isSpecializationAvailable(professionID, currentSpecializations, specializationID)
+    if rm.tableContains(currentSpecializations, specializationID) then
+        return true
+    end
+    local specializationRecipe = rm.cachedRecipes[professionID][specializationID]
+    if not specializationRecipe then
+        return #currentSpecializations == 0
+    end
+    local requiredSpecialization = specializationRecipe.specialization
     return (
-        currentSpecialization
-        and recipe.isSpecialization
-        and recipe.teaches ~= currentSpecialization
-    )
+        not requiredSpecialization
+        or isSpecializationAvailable(professionID, currentSpecializations, requiredSpecialization)
+    ) and not recipeTeachesDifferentSpecialization(professionID, currentSpecializations, specializationRecipe)
 end
 
 local function isRecipeForCurrentSpecialization(recipe)
@@ -33,12 +59,11 @@ local function isRecipeForCurrentSpecialization(recipe)
         return true
     end
     local professionID = rm.getProfessionID(rm.displayedProfession)
-    local currentSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
+    local currentSpecializations = getCurrentSpecializations(professionID)
     return (
         not recipe.specialization 
-        or not currentSpecialization 
-        or currentSpecialization == recipe.specialization
-    ) and not recipeTeachesDifferentSpecialization(currentSpecialization, recipe)
+        or isSpecializationAvailable(professionID, currentSpecializations, recipe.specialization)
+    ) and not recipeTeachesDifferentSpecialization(professionID, currentSpecializations, recipe)
 end
 
 function rm.isRecipeAvailableForCharacter(recipe)
@@ -78,21 +103,13 @@ local function isLearnedRankupRecipe(recipe)
     return rankOrder[recipe.teaches] <= rankOrder[professionRank]
 end
 
--- Identifies a specialization recipe that matches the character's current specialization
+-- Identifies a specialization recipe that matches one of the character's current specializations
 local function isLearnedSpecializationRecipe(recipe)
     if not recipe.isSpecialization then
         return false
     end
     local professionID = rm.getProfessionID(rm.displayedProfession)
-    local currentSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
-    if not currentSpecialization then
-        return false
-    end
-    if type(currentSpecialization) == "table" then
-        return rm.tableContains(currentSpecialization, recipe.teaches)
-    else
-        return recipe.teaches == currentSpecialization
-    end
+    return rm.tableContains(getCurrentSpecializations(professionID), recipe.teaches)
 end
 
 function rm.isLearnedRecipe(recipe)
