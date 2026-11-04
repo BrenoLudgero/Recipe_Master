@@ -2,7 +2,6 @@
 ## Version: @project-version@
 ## IconTexture: Interface/Icons/INV_Scroll_03
 
-## X-WoWI-ID: 26887
 ## X-Curse-Project-ID: 983613
 
 ## Title: Recipe Master
