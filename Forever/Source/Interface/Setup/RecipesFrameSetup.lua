@@ -1,0 +1,279 @@
+local _, rm = ...
+local L = rm.L
+local F = rm.F
+
+local function showTooltipOnMouseover(icon, recipe)
+    GameTooltip:SetOwner(icon, "ANCHOR_RIGHT", 0, 0)
+    GameTooltip:SetHyperlink(recipe.link)
+    GameTooltip:Show()
+end
+
+function rm.displayInspectIconAndTooltipOnMouseover(icon, recipe)
+    icon:HookScript("OnEnter", function(self)
+        showTooltipOnMouseover(self, recipe)
+        if recipe.sources then
+            ShowInspectCursor()
+        end
+    end)
+    icon:HookScript("OnLeave", function()
+        ResetCursor()
+        GameTooltip:Hide()
+    end)
+end
+
+local function createChatLink(recipe)
+    local chatBox = ChatFrameUtil.ChooseBoxForSend()
+    ChatFrameUtil.ActivateChat(chatBox)
+    chatBox:Insert(recipe.link)
+end
+
+local function showSourcesForRecipe(recipe)
+    rm.showSourcesFrameElements()
+    rm.activateBottomTabAndDesaturateOthers(rm.recipeSourcesTab)
+    rm.showAllSources(recipe)
+    rm.sourcesBackButton:Show()
+end
+
+function rm.createChatLinkOrDisplaySourcesOnClick(icon, recipe)
+    icon:HookScript("OnMouseDown", function(self, button)
+        if IsShiftKeyDown() and button == "LeftButton" then
+            createChatLink(recipe)
+        elseif not IsShiftKeyDown() and recipe.sources then
+            rm.clearFrameContent()
+            rm.mainFrame:SetWidth(F.sizes.sourcesFrameWidth)
+            showSourcesForRecipe(recipe)
+        end
+    end)
+end
+
+local function getMissingRequirementsText(recipe)
+    local missingRequirements = ""
+    if recipe.requiredSkill > rm.getSavedProfessionLevelByName(rm.displayedProfession) then
+        local skillInfo = L.skill..": "..recipe.requiredSkill.."  "
+        missingRequirements = missingRequirements..skillInfo
+    end
+    if recipe.specialization then
+        local savedSpecialization = rm.getSavedSpecializationByProfessionName(rm.displayedProfession)
+        if not rm.tableContains(rm.getSpecializationsList(savedSpecialization), recipe.specialization) then 
+            local specializationInfo = rm.getSpecializationName(recipe.specialization).."  "
+            missingRequirements = missingRequirements..specializationInfo
+        end
+    end
+    if recipe.reputationLevel and not rm.isReputationRequirementMet(recipe) then
+        local reputationInfo = rm.getFactionName(recipe.reputationFaction).."  "
+        missingRequirements = missingRequirements..reputationInfo
+    end
+    if recipe.requiredLevel > rm.currentLevel then
+        local levelInfo = L.level..": "..recipe.requiredLevel.."  "
+        missingRequirements = missingRequirements..levelInfo
+    end
+    return missingRequirements
+end
+
+local function getDifficultyTextAndColor(recipe)
+    local professionSkill = rm.getSavedProfessionLevelByName(rm.displayedProfession)
+    for index, diffLevel in ipairs(recipe.difficulty) do
+        if diffLevel ~= 0 and diffLevel >= professionSkill then
+            return rm.difficultyLevels[index].name, rm.difficultyLevels[index].color
+        end
+    end
+    return rm.difficultyLevels[4].name, rm.difficultyLevels[4].color -- Trivial
+end
+
+function rm.getRequirementsText(recipe, recipeInfo)
+    local missingRequirements = getMissingRequirementsText(recipe)
+    if missingRequirements == "" then
+        if recipe.difficulty then
+            local difficultyLevel, difficultyColor = getDifficultyTextAndColor(recipe)
+            recipeInfo:SetText(
+                WrapTextInColorCode(L.canLearn, F.colors.yellowHex)..
+                WrapTextInColorCode(" | ", F.colors.whiteHex)..
+                WrapTextInColorCode(difficultyLevel, difficultyColor)
+            )
+        else
+            recipeInfo:SetText(WrapTextInColorCode(L.canLearn, F.colors.yellowHex))
+        end
+    else
+        recipeInfo:SetText(missingRequirements:gsub("(%s%s)(%C)", ", %2")) -- Replaces all "  " with ", " when followed by a character
+        recipeInfo:SetTextColor(unpack(F.colors.red))
+    end
+end
+
+function rm.storeWidestRecipeTextWidth(recipeNameWidth, recipeInfoWidth)
+    if recipeNameWidth > rm.widestRecipeTextWidth then
+        rm.widestRecipeTextWidth = recipeNameWidth
+    end
+    if recipeInfoWidth and recipeInfoWidth > rm.widestRecipeTextWidth then
+        rm.widestRecipeTextWidth = recipeInfoWidth
+    end
+end
+
+function rm.displayPlaceholderTextBasedOnFocus(searchBar)
+    searchBar:SetScript("OnEditFocusGained", function(self)
+        self.Instructions:Hide()
+        self.clearButton:Show()
+        rm.frame:RegisterEvent("GLOBAL_MOUSE_DOWN") -- Handled by handleMouseDown while focused (EventHandler.lua)
+    end)
+    searchBar:SetScript("OnEditFocusLost", function(self)
+        rm.frame:UnregisterEvent("GLOBAL_MOUSE_DOWN")
+        -- Keeps existing search text when pressing Escape
+        if self:GetText() == "" then
+            self.Instructions:Show()
+            self.clearButton:Hide()
+        end
+    end)
+end
+
+local function isSearchInRecipeName(row, searchText)
+    local recipeName = row.recipeText:GetText():lower()
+    return string.find(recipeName, searchText, 1, true)
+end
+
+function rm.filterRecipesBySearchText()
+    local searchText = rm.searchBar:GetText():lower()
+    for _, row in ipairs(rm.recipesList.children) do
+        if isSearchInRecipeName(row, searchText) then
+            row:Show()
+        else
+            row:Hide()
+        end
+    end
+end
+
+-- Called when switching professions or tabs
+function rm.clearSearchBar()
+    rm.searchBar:SetText("")
+    rm.searchBar:ClearFocus()
+    rm.searchBar.Instructions:Show()
+    rm.searchBar.clearButton:Hide()
+end
+
+function rm.showMatchingRecipesOnTop(searchBar)
+    searchBar:SetScript("OnTextChanged", function(self)
+        rm.filterRecipesBySearchText()
+        rm.updateRecipesFrameElementsPosition()
+    end)
+end
+
+function rm.toggleRecipesListPreferenceOnClick(button, preference)
+    button:SetScript("OnClick", function(self)
+        rm.toggleBooleanPreference(preference)
+        rm.showSortedRecipes()
+    end)
+end
+
+local function isSortedBySelectedValue(dropdown, value)
+    return value == rm.getPreference("sortRecipesBy")
+end
+
+local function updateSortByPreference(dropdown, value)
+    if not isSortedBySelectedValue(dropdown, value) then
+        rm.setPreference("sortRecipesBy", value)
+    end
+end
+
+local function sortRecipesByValue(dropdown, value)
+    updateSortByPreference(dropdown, value)
+    rm.showSortedRecipes()
+end
+
+function rm.handleSortingOptions(dropdown, options)
+    dropdown:SetupMenu(function(self, rootDescription)
+        for _, item in ipairs(options) do
+            local name = item[1]
+            local value = item[2]
+            rootDescription:CreateButton(name, function()
+                sortRecipesByValue(self, value)
+                self:SetDefaultText(name)
+            end)
+        end
+    end)
+end
+
+local function getDisplayedProfessionSources()
+    local professionID = rm.getProfessionID(rm.displayedProfession)
+    return rm.recipesBySource[professionID] or {}
+end
+
+local function getSourceFilterName(sourceType)
+    if sourceType == "All" then
+        return L.all
+    end
+    return rm.getLocalizedSourceType(sourceType)
+end
+
+local function filterRecipesBySource(dropdown, sourceType)
+    rm.selectedRecipeSource = sourceType
+    dropdown:SetDefaultText(getSourceFilterName(sourceType))
+    rm.showSortedRecipes()
+end
+
+function rm.handleSourceFilterOptions(dropdown)
+    dropdown:SetupMenu(function(self, rootDescription)
+        rootDescription:CreateButton(L.all, function()
+            filterRecipesBySource(self, "All")
+        end)
+        local professionSources = getDisplayedProfessionSources()
+        for _, sourceType in ipairs(rm.sourcesOrder) do
+            if professionSources[sourceType] then
+                rootDescription:CreateButton(getSourceFilterName(sourceType), function()
+                    filterRecipesBySource(self, sourceType)
+                end)
+            end
+        end
+    end)
+end
+
+-- Resets the filter if the displayed profession has no recipes from the selected source
+function rm.updateSourceFilterDropdown()
+    if not getDisplayedProfessionSources()[rm.selectedRecipeSource] then
+        rm.selectedRecipeSource = "All"
+    end
+    rm.sourceFilterDropdown:GenerateMenu()
+    rm.sourceFilterDropdown:SetDefaultText(getSourceFilterName(rm.selectedRecipeSource))
+end
+
+function rm.isRecipeFromSelectedSource(recipe)
+    if rm.selectedRecipeSource == "All" then
+        return true
+    end
+    local professionSources = getDisplayedProfessionSources()
+    return professionSources[rm.selectedRecipeSource][recipe.ID]
+end
+
+local function isValueAColor(value, savedValue)
+    return type(value) == "table" and (unpack(value) == unpack(savedValue))
+end
+
+function rm.setInitialDropdownValue(dropdown, options, savedVariable)
+    local savedValue = rm.getPreference(savedVariable)
+    for _, item in ipairs(options) do
+        local name = item[1]
+        local value = item[2]
+        if value == savedValue or isValueAColor(value, savedValue) then
+            dropdown:SetDefaultText(name)
+        end
+    end
+end
+
+function rm.updateArrowOrientation(texture)
+    if rm.getPreference("sortAscending") then
+        texture:SetTexture(F.textures.sortOrderArrowUp)
+        texture:SetPoint("CENTER", texture:GetParent(), 1.4, 2)
+    else
+        texture:SetTexture(F.textures.sortOrderArrowDown)
+        texture:SetPoint("CENTER", texture:GetParent(), 1.4, -4.8)
+    end
+end
+
+local function updateSortOrder(texture)
+    rm.toggleBooleanPreference("sortAscending")
+    rm.updateArrowOrientation(texture)
+    rm.showSortedRecipes()
+end
+
+function rm.updateSortOrderOnClick(button, texture)
+    button:SetScript("OnClick", function(self)
+        updateSortOrder(texture)
+    end)
+end

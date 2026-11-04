@@ -44,8 +44,8 @@ The following add-ons have been thoroughly tested with Recipe Master:
 * Skillet-Classic
 * TradeSkillMaster (TSM)
 * Dragonflight UI Classic
-* CloudyTradeSkill - Hotfix
-* alaTradeSkill
+* (Vanilla, TBC) CloudyTradeSkill - Hotfix
+* (Vanilla, TBC) alaTradeSkill
 * Wider Professions
 * Leatrix Plus
 * MoveAny

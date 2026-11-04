@@ -27,5 +27,6 @@ git checkout "$NEW_TAG"
 
 sudo bash release.sh -m vanilla.yaml
 sudo bash release.sh -m tbc.yaml
+sudo bash release.sh -m forever.yaml
 
 git checkout "main"

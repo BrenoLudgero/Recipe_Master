@@ -1,0 +1,116 @@
+local addonName, rm = ...
+-- rm: Globals within Recipe Master (variables, functions, frames)
+
+rm.L = {} -- Localized text
+rm.L.title = C_AddOns.GetAddOnMetadata(addonName, "Title")
+rm.frame = CreateFrame("Frame")
+rm.frame.name = rm.L.title
+rm.version = C_AddOns.GetAddOnMetadata(addonName, "Version")
+rm.author = C_AddOns.GetAddOnMetadata(addonName, "Author")
+rm.currentCharacter = UnitName("player")
+rm.currentFaction = UnitFactionGroup("player") -- Alliance/Horde, always in English
+rm.currentLevel = UnitLevel("player")
+rm.currentServer = GetRealmName()
+rm.locale = GetLocale()
+rm.recipeDB = {}
+rm.recipeSourceDB = {}
+rm.F = { -- Frame settings
+    atlases = {},
+    backdrops = {},
+    colors = {},
+    fonts = {},
+    fontSizes = {},
+    offsets = {},
+    sizes = {},
+    templates = {},
+    textures = {},
+}
+
+local defaultMainFramePreferences = {
+    sortAscending = true,
+    sortRecipesBy = "Name",
+    showLearnedRecipes = false,
+    showRecipesInfo = true,
+    maximizeMainFrame = true,
+}
+
+local defaultOptionsFramePreferences = {
+    backgroundOpacity = 1,
+    iconSpacing = 5,
+    interfaceScale = 0.1,
+    progressColor = {0.00, 0.44, 0.87},
+    progressTexture = "Interface/TARGETINGFRAME/BarFill2",
+    restoreButtonIconTexture = "Interface/Icons/INV_Scroll_04",
+    showDifficultyTooltipInfo = true,
+    showAltsTooltipInfo = true,
+    showOppositeFactionAltsTooltipInfo = true,
+    showSourcesTooltipInfo = true,
+}
+
+function rm.resetOptionsFramePreferences()
+    RecipeMasterOptionsFramePreferences = defaultOptionsFramePreferences
+end
+
+-- Creates new tables to store the characters' learned skills and user preferences in SavedVariables
+function rm.createSavedVariables()
+    if not RecipeMasterProfessionsAndSkills then
+        RecipeMasterProfessionsAndSkills = {}
+    end
+    if not RecipeMasterMainFramePreferences then
+        RecipeMasterMainFramePreferences = defaultMainFramePreferences
+    end
+    if not RecipeMasterOptionsFramePreferences then
+        rm.resetOptionsFramePreferences()
+    end
+end
+
+local function insertNewOptionsInSavedVariables()
+    for key, value in pairs(defaultMainFramePreferences) do
+        if RecipeMasterMainFramePreferences[key] == nil then
+            RecipeMasterMainFramePreferences[key] = value
+        end
+    end
+    for key, value in pairs(defaultOptionsFramePreferences) do
+        if RecipeMasterOptionsFramePreferences[key] == nil then
+            RecipeMasterOptionsFramePreferences[key] = value
+        end
+    end
+end
+
+local function removeUnusedOptionsFromSavedVariables()
+    for key in pairs(RecipeMasterMainFramePreferences) do
+        if defaultMainFramePreferences[key] == nil then
+            RecipeMasterMainFramePreferences[key] = nil
+        end
+    end
+    for key in pairs(RecipeMasterOptionsFramePreferences) do
+        if defaultOptionsFramePreferences[key] == nil then
+            RecipeMasterOptionsFramePreferences[key] = nil
+        end
+    end
+end
+
+function rm.updateSavedVariables()
+    insertNewOptionsInSavedVariables()
+    removeUnusedOptionsFromSavedVariables()
+end
+
+function rm.updateSavedCharacters()
+    if not RecipeMasterProfessionsAndSkills[rm.currentServer] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer] = {}
+    end
+    if not RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction] = {}
+    end
+    if not RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction][rm.currentCharacter] then
+        RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction][rm.currentCharacter] = {}
+    end
+end
+
+-- Creates the chat command "/rm" to open the add-on's options menu
+function rm.createChatCommand()
+    SLASH_RECIPEMASTER1 = "/rm"
+    SlashCmdList["RECIPEMASTER"] = function()
+        Settings.OpenToCategory(rm.category:GetID())
+    end
+end

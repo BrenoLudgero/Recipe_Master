@@ -64,7 +64,7 @@ local function skillNotSavedYet(skillLineID, skillID)
     return (
         -- Profession exists in SavedVariables
         rm.getSavedProfessionByID(skillLineID)
-        --  the skill was not found in SavedVariables
+        -- the skill was not found in SavedVariables
         and not rm.tableContains(getSavedSkillsByProfessionID(skillLineID), skillID)
     )
 end
@@ -103,6 +103,7 @@ local function isRecipeNamePrefixedSkillName(professionID, recipeName, newSkillN
     return string.sub(prefix, -1) == ":" or string.sub(prefix, -3) == "：" -- Full-width colon (zhCN, zhTW)
 end
 
+-- newSkillID: The learned recipe's spell, which can be learned while its profession is closed (e.g. from a trainer)
 function rm.saveNewlyLearnedSkill(newSkillID)
     local newSkillName = GetSpellInfo(newSkillID)
     for professionID, recipes in pairs(rm.cachedRecipes) do
