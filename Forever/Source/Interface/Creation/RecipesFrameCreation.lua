@@ -3,13 +3,13 @@ local L = rm.L
 local F = rm.F
 
 function rm.createProgressContainer(parent)
-    local progressContainer = CreateFrame("Frame", nil, parent, F.templates.innerBorder)
+    local progressContainer = CreateFrame("Frame", nil, parent, F.templates.progressContainer)
     local frameStrata = parent:GetFrameStrata()
     local frameLevel = rm.mainFrameBorder:GetFrameLevel() - 2
     progressContainer:SetSize(parent:GetWidth(), F.sizes.progressContainerHeight)
     progressContainer:SetPoint("BOTTOM", 0, 5.5)
-    progressContainer:SetPoint("LEFT", rm.mainFrameBorder, 1.8, 0)
-    progressContainer:SetPoint("RIGHT", rm.mainFrameBorder, -4.3, 0)
+    progressContainer:SetPoint("LEFT", rm.mainFrameBorder, 9, 0)
+    progressContainer:SetPoint("RIGHT", rm.mainFrameBorder, -6, 0)
     progressContainer:SetFrameStrata(frameStrata)
     progressContainer:SetFrameLevel(frameLevel)
     return progressContainer
@@ -21,8 +21,8 @@ function rm.createDivider(parent)
     divider:SetHeight(F.sizes.dividerHeight)
     divider:SetFrameLevel(frameLevel)
     divider:SetPoint("BOTTOM", parent, "TOP")
-    divider:SetPoint("LEFT")
-    divider:SetPoint("RIGHT")
+    divider:SetPoint("LEFT", 1, 0)
+    divider:SetPoint("RIGHT", 1, 0)
     return divider
 end
 
@@ -55,7 +55,7 @@ end
 
 function rm.createRecipesScrollFrame(parent)
     local scroll = CreateFrame("ScrollFrame", nil, parent, F.templates.scrollFrame)
-    scroll:SetPoint("TOPLEFT", rm.header, "BOTTOMLEFT", 0, F.offsets.recipesListScrollTopY)
+    scroll:SetPoint("TOPLEFT", rm.header, "BOTTOMLEFT", 6, F.offsets.recipesListScrollTopY)
     scroll:SetPoint("BOTTOMRIGHT", rm.divider, "TOPRIGHT", 0, F.offsets.recipesListScrollBottomY)
     scroll:SetPoint("RIGHT", rm.mainFrameBorder, F.offsets.recipesListScrollX, 0)
     return scroll
@@ -138,9 +138,9 @@ function rm.createProgressBar(parent)
     progressBar:SetStatusBarTexture(rm.getPreference("progressTexture"))
     progressBar:SetMinMaxValues(0, 100)
     progressBar:SetFrameLevel(frameLevel)
-    progressBar:SetPoint("TOP", 0, -3.5)
-    progressBar:SetPoint("LEFT", 3, 0)
-    progressBar:SetPoint("RIGHT", -3, 0)
+    progressBar:SetPoint("TOP", 0, -3)
+    progressBar:SetPoint("LEFT", 4, 0)
+    progressBar:SetPoint("RIGHT", -4, 0)
     progressBar:SetPoint("BOTTOM", 0, 3)
     local background = progressBar:CreateTexture(nil, "BACKGROUND")
     background:SetTexture(F.textures.mainBackground)

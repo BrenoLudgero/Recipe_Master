@@ -12,7 +12,6 @@ function rm.createAllFrameElements()
     rm.mainFrameBorder = rm.createBorder(rm.mainFrame)
     rm.header = rm.createMainHeader(rm.mainFrameBorder)
     rm.createMainHeaderText(rm.header)
-    rm.createInnerBorder(rm.mainFrame)
     rm.restoreButton = rm.createRestoreButton() -- Displayed after clicking the "X" button to restore the mainFrame
     rm.centeredText = rm.createCenteredText(rm.mainFrame)
 
