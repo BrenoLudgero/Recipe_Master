@@ -1236,17 +1236,4 @@ rm.recipeDB[185] = {
 		requiredSkill = 225,
 		teaches = 1319313,
 	},
-	[1255241] = {
-		isSpell = true,
-	},
-	[1270632] = {
-		difficulty = {
-			0,
-			80,
-			82,
-			85,
-		},
-		isSpell = true,
-		requiredSkill = 80,
-	},
 }

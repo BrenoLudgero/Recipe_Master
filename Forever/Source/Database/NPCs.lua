@@ -432,7 +432,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "11",
 		names = {enUS = "Hogger", frFR = "Lardeur", ruRU = "Дробитель", koKR = "들창코", zhCN = "霍格", zhTW = "霍格"},
-		zones = {12, 10, 40, 1, 14, 141, 85},
+		zones = {12, 1, 14, 141},
 	},
 	[449] = {
 		level = "16 - 17",
@@ -613,7 +613,7 @@ rm.npcDB = {
 	[539] = {
 		level = "18 - 19",
 		names = {enUS = "Pygmy Venom Web Spider", deDE = "Zwerggiftweberspinne", esES = "Telarácnida pigmeovenenosa", esMX = "Telarácnida venenosa pigmea", frFR = "Araignée Tisse-venin pygmée", ptBR = "Veneracna Pigmeia", ruRU = "Карликовый ядовитый кругопряд", koKR = "새끼 그물독거미", zhCN = "小型结网毒蜘蛛", zhTW = "小型結網毒蜘蛛"},
-		zones = {10},
+		zones = {10, 12},
 	},
 	[544] = {
 		level = "21 - 22",
@@ -720,6 +720,7 @@ rm.npcDB = {
 		classification = "Rare Elite",
 		level = "18",
 		names = {enUS = "Marisa du'Paige", ruRU = "Мариса дю Пэж", koKR = "마리사 두페이지", zhCN = "玛里莎·杜派格", zhTW = "瑪里莎·杜派格"},
+		zones = {40},
 	},
 	[604] = {
 		level = "27 - 28",
@@ -1033,7 +1034,7 @@ rm.npcDB = {
 	[732] = {
 		level = "9 - 10",
 		names = {enUS = "Murloc Lurker", deDE = "Murloclauerer", esES = "Rondador múrloc", esMX = "Rondador múrloc", frFR = "Rôdeur murloc", ptBR = "Murloc Tocaieiro", ruRU = "Мурлок-скрытень", koKR = "멀록 잠복꾼", zhCN = "鱼人潜伏者", zhTW = "魚人潛伏者"},
-		zones = {12},
+		zones = {12, 10},
 	},
 	[734] = {
 		faction = "Alliance",
@@ -2564,7 +2565,7 @@ rm.npcDB = {
 	[1536] = {
 		level = "7 - 8",
 		names = {enUS = "Scarlet Missionary", deDE = "Scharlachroter Missionar", esES = "Misionero Escarlata", esMX = "Misionero Escarlata", frFR = "Missionnaire écarlate", ptBR = "Missionário Escarlate", ruRU = "Миссионер из Алого ордена", koKR = "붉은십자군 선교사", zhCN = "血色传教士", zhTW = "血色傳教士"},
-		zones = {85},
+		zones = {85, 1497},
 	},
 	[1537] = {
 		level = "8 - 9",
@@ -2973,7 +2974,7 @@ rm.npcDB = {
 	[1765] = {
 		level = "10 - 11",
 		names = {enUS = "Worg", esES = "Lupo", esMX = "Huargo", ruRU = "Ворг", koKR = "검은늑대", zhCN = "座狼", zhTW = "座狼"},
-		zones = {130, 85},
+		zones = {130, 85, 1497},
 	},
 	[1766] = {
 		level = "11 - 12",
@@ -3381,7 +3382,7 @@ rm.npcDB = {
 	[1922] = {
 		level = "7 - 8",
 		names = {enUS = "Gray Forest Wolf", deDE = "Grauer Forstwolf", esES = "Lobo gris del bosque", esMX = "Lobo grisáceo del bosque", frFR = "Loup forestier gris", ptBR = "Lobo Cinza da Floresta", ruRU = "Серый лесной волк", koKR = "회색 숲늑대", zhCN = "森林灰狼", zhTW = "森林灰狼"},
-		zones = {12},
+		zones = {12, 10},
 	},
 	[1923] = {
 		level = "16 - 17",
@@ -3470,7 +3471,7 @@ rm.npcDB = {
 	[1956] = {
 		level = "18 - 19",
 		names = {enUS = "Elder Lake Creeper", deDE = "Alter Seekrabbler", esES = "Trepador del Lago viejo", esMX = "Trepador del Lago viejo", frFR = "Ancien Rampant lacustre", ptBR = "Rastejante Ancião do Lago", ruRU = "Старый озерный ползун", koKR = "덩치큰 호수늪지괴물", zhCN = "老迈的湖岸爬行者", zhTW = "老邁的湖岸爬行者"},
-		zones = {130},
+		zones = {130, 36},
 	},
 	[1957] = {
 		level = "16 - 17",
@@ -3480,7 +3481,7 @@ rm.npcDB = {
 	[1958] = {
 		level = "17 - 18",
 		names = {enUS = "Vile Fin Tidecaller", deDE = "Gezeitenrufer der Finsterflossen", esES = "Llamamareas Anca Vil", esMX = "Clamamareas Anca Vil", frFR = "Maître des flots Aileron noir", ptBR = "Chamaré Pinavil", ruRU = "Волномут из племени Злобного Плавника", koKR = "썩은지느러미멀록 파도술사", zhCN = "邪鳍招潮者", zhTW = "邪鰭招潮者"},
-		zones = {130, 36},
+		zones = {36, 130},
 	},
 	[1961] = {
 		level = "11",
@@ -5230,7 +5231,7 @@ rm.npcDB = {
 		faction = "Horde",
 		level = "35",
 		names = {enUS = "Forsaken Bodyguard", deDE = "Leibwache der Verlassenen", esES = "Guardaespaldas Renegado", esMX = "Guardaespaldas Renegado", frFR = "Garde du corps Réprouvé", ptBR = "Renegado Guarda-costas", ruRU = "Отрекшийся-телохранитель", koKR = "포세이큰 경호원", zhCN = "被遗忘者保镖", zhTW = "被遺忘者保鏢"},
-		zones = {45, 267},
+		zones = {267, 45},
 	},
 	[2723] = {
 		level = "38 - 39",
@@ -5870,7 +5871,7 @@ rm.npcDB = {
 	[3100] = {
 		level = "8 - 9",
 		names = {enUS = "Elder Mottled Boar", deDE = "Alter scheckiger Eber", esES = "Jabalí jaspeado mayor", esMX = "Jabalí jaspeado mayor", frFR = "Ancien sanglier tacheté", ptBR = "Mosquetusco Ancião", ruRU = "Старый крапчатый вепрь", koKR = "덩치큰 점박이멧돼지", zhCN = "老杂斑野猪", zhTW = "老雜斑野豬"},
-		zones = {14, 1637},
+		zones = {14},
 	},
 	[3103] = {
 		level = "6 - 7",
@@ -7406,7 +7407,7 @@ rm.npcDB = {
 	[3823] = {
 		level = "19 - 20",
 		names = {enUS = "Ghostpaw Runner", deDE = "Geisterpfotenläufer", esES = "Corredor Fangarra", esMX = "Corredor Garraespectro", frFR = "Coureur Patte-fantôme", ptBR = "Corredor Patalmas", ruRU = "Светлолапый бегун", koKR = "유령발늑대", zhCN = "幽爪奔跑者", zhTW = "幽爪奔跑者"},
-		zones = {331, 17},
+		zones = {331},
 	},
 	[3824] = {
 		level = "23 - 24",
@@ -12044,7 +12045,7 @@ rm.npcDB = {
 	[6866] = {
 		level = "10",
 		names = {enUS = "Defias Bodyguard", deDE = "Leibwache der Defias", esES = "Guardaespaldas Defias", esMX = "Guardaespaldas Defias", frFR = "Garde du corps défias", ptBR = "Guarda-costas Défias", ruRU = "Телохранитель из Братства Справедливости", koKR = "데피아즈단 경호원", zhCN = "迪菲亚保镖", zhTW = "迪菲亞保鏢"},
-		zones = {12},
+		zones = {12, 10},
 	},
 	[6868] = {
 		faction = "Horde",
@@ -18405,7 +18406,6 @@ rm.npcDB = {
 	[242498] = {
 		level = "25",
 		names = {enUS = "Reagent Bot", deDE = "Materialbot", esES = "Robot de componentes", esMX = "Robot de componentes", frFR = "Robot vendeur de composants", ptBR = "Robô de Reagentes", ruRU = "Реагентобот", koKR = "재료 로봇", zhCN = "试剂机器人", zhTW = "材料機器人"},
-		zones = {40, 38, 17, 130, 44, 12, 14, 148, 16593, 1, 85},
 	},
 	[244512] = {
 		level = "60",
@@ -18864,7 +18864,6 @@ rm.npcDB = {
 	[254695] = {
 		level = "25",
 		names = {enUS = "Repair Bot", deDE = "Reparaturbot", ruRU = "Ремонтный робот"},
-		zones = {11, 130, 10, 17, 12, 85, 40, 3, 14, 15, 267, 400},
 	},
 	[255065] = {
 		classification = "Elite",
@@ -19399,6 +19398,12 @@ rm.npcDB = {
 		names = {enUS = "Ridgeshade Lurker", deDE = "Kammschattenlauerer", esES = "Rondador crestasombra", esMX = "Rondador sombrarrisco", frFR = "Rôdeuse noirecrête", ptBR = "Tocaieiro Crista-sombra", ruRU = "Темногорный скрытень", koKR = "능선그늘 잠복꾼", zhCN = "脊影潜伏者", zhTW = "脊影潛伏者"},
 		zones = {14},
 	},
+	[266851] = {
+		classification = "Elite",
+		level = "8",
+		names = {enUS = "Ukorsbane", esES = "Perdición de Ukor", esMX = "Ukorterror", frFR = "Fléau-d'Ukor", ruRU = "Бич Укора", koKR = "우코스베인", zhCN = "乌科斯之灾", zhTW = "烏寇班"},
+		zones = {14},
+	},
 	[266881] = {
 		faction = "Horde",
 		level = "25",
@@ -19454,10 +19459,20 @@ rm.npcDB = {
 		names = {enUS = "Razormane Raider", deDE = "Räuber der Grimmhauer", esES = "Asaltante Crines de Acero", esMX = "Asaltante Crines de Acero", frFR = "Pillard tranchecrin", ptBR = "Saqueador Crinavalha", ruRU = "Налетчик из племени Иглогривых", koKR = "서슬갈기 침략자", zhCN = "钢鬃掠夺者", zhTW = "剃鬃劫掠者"},
 		zones = {17},
 	},
+	[269075] = {
+		level = "6",
+		names = {enUS = "Snow Leopard Prowler", deDE = "Schneeleopardenpirscher", esES = "Leopardo de la nieve merodeador", frFR = "Léopard des neiges rôdeur", ptBR = "Leopardo da Neve Predador", ruRU = "Снежный леопард – охотник", koKR = "눈표범 배회자"},
+		zones = {1},
+	},
 	[269134] = {
 		classification = "Elite",
 		names = {enUS = "Kirin Tor Necromancer"},
 		zones = {36},
+	},
+	[270196] = {
+		level = "12",
+		names = {enUS = "Jai'vhanel", ruRU = "Ждай'ванель", koKR = "자이바넬", zhCN = "贾伊瓦内尔"},
+		zones = {148},
 	},
 	[270693] = {
 		level = "15",
@@ -19507,6 +19522,11 @@ rm.npcDB = {
 		level = "7 - 8",
 		names = {enUS = "Elder Wendigo", deDE = "Wendigoältester", esES = "Wendigo anciano", frFR = "Sage wendigo", ruRU = "Вендиго-старейшина", koKR = "장로 웬디고"},
 		zones = {1},
+	},
+	[271712] = {
+		level = "6",
+		names = {enUS = "Cloudrunner", deDE = "Wolkenreiter", esES = "Mensajero del cielo", frFR = "Cours-les-nuages", ptBR = "Correnuvens", ruRU = "Облачный бегун", koKR = "구름길잡이", zhCN = "踏云兽", zhTW = "踏雲者"},
+		zones = {16593},
 	},
 	[271749] = {
 		classification = "Elite",

@@ -844,23 +844,23 @@ rm.recipeDB[164] = {
 	},
 	[7938] = {
 		difficulty = {
-			200,
+			0,
 			220,
 			230,
 			240,
 		},
-		requiredSkill = 200,
+		requiredSkill = 220,
 		specialization = 9788,
 		teaches = 9954,
 	},
 	[7939] = {
 		difficulty = {
-			220,
+			0,
 			240,
 			250,
 			260,
 		},
-		requiredSkill = 220,
+		requiredSkill = 240,
 		specialization = 9788,
 		teaches = 9974,
 	},
@@ -2467,36 +2467,6 @@ rm.recipeDB[164] = {
 		reputationLevel = 7,
 		requiredSkill = 300,
 		teaches = 28244,
-	},
-	[28461] = {
-		difficulty = {
-			300,
-			320,
-			330,
-			340,
-		},
-		isSpell = true,
-		requiredSkill = 300,
-	},
-	[28462] = {
-		difficulty = {
-			300,
-			320,
-			330,
-			340,
-		},
-		isSpell = true,
-		requiredSkill = 300,
-	},
-	[28463] = {
-		difficulty = {
-			300,
-			320,
-			330,
-			340,
-		},
-		isSpell = true,
-		requiredSkill = 300,
 	},
 	[215155] = {
 		difficulty = {
@@ -4533,45 +4503,5 @@ rm.recipeDB[164] = {
 		},
 		requiredSkill = 270,
 		teaches = 1317964,
-	},
-	[429348] = {
-		difficulty = {
-			0,
-			175,
-			190,
-			205,
-		},
-		isSpell = true,
-		requiredSkill = 175,
-	},
-	[446179] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[446188] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[446191] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
 	},
 }

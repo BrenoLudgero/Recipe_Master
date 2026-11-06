@@ -1682,46 +1682,6 @@ rm.recipeDB[202] = {
 		specialization = 20222,
 		teaches = 12717,
 	},
-	[238734] = {
-		difficulty = {
-			260,
-			270,
-			280,
-			290,
-		},
-		requiredSkill = 260,
-		teaches = 1226207,
-	},
-	[238735] = {
-		difficulty = {
-			260,
-			270,
-			280,
-			290,
-		},
-		requiredSkill = 260,
-		teaches = 1226208,
-	},
-	[238736] = {
-		difficulty = {
-			260,
-			270,
-			280,
-			290,
-		},
-		requiredSkill = 260,
-		teaches = 1226209,
-	},
-	[238737] = {
-		difficulty = {
-			250,
-			260,
-			270,
-			280,
-		},
-		requiredSkill = 250,
-		teaches = 1226206,
-	},
 	[249432] = {
 		difficulty = {
 			120,
@@ -2498,36 +2458,6 @@ rm.recipeDB[202] = {
 		requiredSkill = 275,
 		teaches = 1319165,
 	},
-	[446236] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[446237] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[446238] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
 	[1226210] = {
 		difficulty = {
 			280,
@@ -2557,14 +2487,5 @@ rm.recipeDB[202] = {
 		},
 		isSpell = true,
 		requiredSkill = 280,
-	},
-	[1235244] = {
-		difficulty = {
-			0,
-			1,
-			1,
-			1,
-		},
-		isSpell = true,
 	},
 }
