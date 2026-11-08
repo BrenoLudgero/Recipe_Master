@@ -1,5 +1,4 @@
 local _, rm = ...
-local L = rm.L
 local F = rm.F
 
 local function getComparisonValues(a, b)
@@ -83,14 +82,6 @@ function rm.showRecipesForSpecificProfession(professionName)
     rm.updateRecipesList()
 end
 
-function rm.isFishingDisplayed()
-    return rm.displayedProfession == L.professions[356]
-end
-
 function rm.showSortedRecipes()
-    if rm.isFishingDisplayed() then
-        rm.showRecipesForSpecificProfession(rm.displayedProfession)
-    else
-        rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
-    end
+    rm.showRecipesForSpecificProfession(rm.lastDisplayedProfession)
 end

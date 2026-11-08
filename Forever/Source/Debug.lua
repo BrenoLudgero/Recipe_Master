@@ -99,17 +99,6 @@ function rm.getProfessionFrame()
     return professionFrame
 end
 
--- The Fishing tab checks the saved Fishing profession, which the debug one isn't
-local handleFishingTabClick = rm.handleFishingTabClick
-function rm.handleFishingTabClick()
-    if isDebugProfessionName(L.professions[356]) then
-        rm.showRecipesFrameElements()
-        rm.showRecipesForSpecificProfession(L.professions[356])
-        return
-    end
-    handleFishingTabClick()
-end
-
 ------------------------- Specializations -------------------------
 
 local function getSpecializationName(specializationID)

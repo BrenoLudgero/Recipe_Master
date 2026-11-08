@@ -19,11 +19,7 @@ end
 
 function rm.showPreviousTabOnBackButtonClick(button)
     button:SetScript("OnClick", function()
-        if rm.isFishingDisplayed() then
-            rm.fishingTab:Click()
-        else
-            rm.recipesTab:Click()
-        end
+        rm.recipesTab:Click()
     end)
 end
 

@@ -17,11 +17,11 @@ function rm.createAllFrameElements()
 
     ------------------------- Bottom tabs -------------------------
     rm.bottomTabs = {}
-    rm.recipesTab = rm.createBottomTab(L.recipes, "BOTTOMLEFT", F.offsets.recipesTabX, true)
-    rm.recipeSourcesTab = rm.createBottomTab(L.sources, "BOTTOM", 0, false)
-    rm.fishingTab = rm.createBottomTab(L.fishing, "BOTTOMRIGHT", F.offsets.fishingTabX, false)
+    local bottomTabX = (F.sizes.bottomTabWidth + F.offsets.bottomTabsGap) / 2 -- From the center of the frame
+    rm.recipesTab = rm.createBottomTab(L.recipes, "BOTTOM", -bottomTabX, true)
+    rm.recipeSourcesTab = rm.createBottomTab(L.sources, "BOTTOM", bottomTabX, false)
 
-    ------------------------- Recipes / Fishing frame -------------------------
+    ------------------------- Recipes frame -------------------------
     rm.progressContainer = rm.createProgressContainer(rm.mainFrame)
     rm.divider = rm.createDivider(rm.progressContainer) -- The frame containing searchBar and the check buttons
     rm.recipesScrollFrame = rm.createRecipesScrollFrame(rm.mainFrame)

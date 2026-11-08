@@ -52,10 +52,9 @@ F.offsets.bottomTabTextX = 2
 F.offsets.bottomTabTextY = 6.8
 F.offsets.bottomTabTextureX = -2.5
 F.offsets.bottomTabTextureY = -6
-F.offsets.fishingTabX = -55.1
-F.offsets.recipesTabX = 55
+F.offsets.bottomTabsGap = 14 -- Between the tabs, which are centered as a pair
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.offsets.dividerCheckButtonLabelY = 0
 F.offsets.recipeIconX = 20
 F.offsets.recipeInfoY = -3
@@ -166,12 +165,12 @@ F.sizes.mainBackgroundTile = 300
 F.sizes.restoreButton = 30 -- Width and height
 
 ------------------------- Bottom tabs -------------------------
-F.sizes.bottomTabWidth = 90
+F.sizes.bottomTabWidth = 120
 F.sizes.bottomTabHeight = 25
-F.sizes.bottomTabTextureWidth = 120
+F.sizes.bottomTabTextureWidth = 150
 F.sizes.bottomTabTextureHeight = 75
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.sizes.progressContainerHeight = 22
 F.sizes.recipeIcon = 26 -- Width and height
 F.sizes.recipesFrameWidth = 318 -- Minimum width!
@@ -245,7 +244,7 @@ F.fonts.header = "GameFontNormal"
 ------------------------- Bottom tabs -------------------------
 F.fonts.bottomTab = specificFont
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.fonts.progressBar = "SystemFont_Outline_Small"
 F.fonts.recipeText = "GameFontHighlightSmallOutline"
 F.fonts.dividerCheckButtonText = "SystemFont_Outline_Small"
@@ -296,7 +295,7 @@ F.fontSizes.centeredText = 18
 ------------------------- Bottom tabs -------------------------
 F.fontSizes.bottomTab = 9
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.fontSizes.dividerCheckButton = 10
 
 ------------------------- Sources frame -------------------------
@@ -305,7 +304,7 @@ F.fontSizes.sourcesListTab = 10
 F.fontSizes.sourcesTableCell = 9.5
 F.fontSizes.uniqueInstructions = 13
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.fontSizes.searchBar = 10
 F.fontSizes.sortDropdown = 12
 
