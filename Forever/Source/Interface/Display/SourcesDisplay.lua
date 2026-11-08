@@ -76,6 +76,8 @@ local mapPinActions = {
 }
 
 local displayedSources = {} -- [sourceType] = Info of each source of the displayed recipe
+local displayedSourceType
+local sortStates = {} -- [sourceType] = Field and order its table is sorted by, kept between recipes
 
 local function setMapPinActions(sourceType, sources, recipe)
     local action = mapPinActions[sourceType]
@@ -114,19 +116,6 @@ local function getAllSourcesInfo(sourceType, recipeSource, recipeID)
     return info
 end
 
-local function getSortableChance(source)
-    return tonumber(source.chance) or 0 -- Unknown chances go last
-end
-
-local function sortListByChance(sources)
-    if sources[1].chance then
-        table.sort(sources, function(a, b)
-            return getSortableChance(a) > getSortableChance(b)
-        end)
-    end
-    return sources
-end
-
 -- A source present in multiple zones takes up one row per zone
 local function getTableRows(sources)
     local rows = {}
@@ -143,9 +132,99 @@ local function getTableRows(sources)
     return rows
 end
 
+----------------------------- Sorting -----------------------------
+local function removeColorsAndIcons(text)
+    return (text:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("|T.-|t", ""))
+end
+
+-- The row's value in its sortValues (see SourceHandler) or the field's text without colors and icons.
+-- Numeric text is compared as a number and other text regardless of case. nil if unknown
+local function getSortValue(row, field)
+    local value = row.sortValues and row.sortValues[field]
+    if value == nil then
+        value = row[field]
+    end
+    if type(value) ~= "string" then
+        return value
+    end
+    local text = strtrim(removeColorsAndIcons(value))
+    if text == "" or text == L.unknown then
+        return nil
+    end
+    return tonumber(text) or text:lower()
+end
+
+-- nil if the values are equal. Unknown values go last and numbers before text, in both orders
+local function isSortedBefore(valueA, valueB, ascending)
+    if valueA == valueB then
+        return nil
+    elseif valueA == nil or valueB == nil then
+        return valueB == nil
+    elseif type(valueA) ~= type(valueB) then
+        return type(valueA) == "number"
+    elseif ascending then
+        return valueA < valueB
+    end
+    return valueA > valueB
+end
+
+-- Ties are sorted by name, then by zone (e.g., a source found in multiple zones, or fishing)
+local function sortRows(rows, sortState)
+    table.sort(rows, function(a, b)
+        local isBefore = isSortedBefore(getSortValue(a, sortState.field), getSortValue(b, sortState.field), sortState.ascending)
+        if isBefore == nil then
+            isBefore = isSortedBefore(getSortValue(a, "name"), getSortValue(b, "name"), true)
+        end
+        if isBefore == nil then
+            isBefore = isSortedBefore(getSortValue(a, "zone"), getSortValue(b, "zone"), true)
+        end
+        return isBefore == true
+    end)
+end
+
+-- How each source type's table is sorted until another column is chosen
+local defaultSortStates = {
+    ["trainer"] = {field = "zone", ascending = true},
+    ["vendor"] = {field = "price", ascending = true},
+    ["quest"] = {field = "level", ascending = true},
+    ["drop"] = {field = "chance", ascending = false},
+    ["pickpocket"] = {field = "chance", ascending = false},
+    ["item"] = {field = "chance", ascending = false},
+    ["object"] = {field = "chance", ascending = false},
+    ["fishing"] = {field = "chance", ascending = false},
+    ["unique"] = {field = "name", ascending = true},
+}
+
+local function getSortState(sourceType)
+    local default = defaultSortStates[sourceType]
+    if not sortStates[sourceType] and default then
+        -- A copy, as the order is reversed when clicking the column's header
+        sortStates[sourceType] = {field = default.field, ascending = default.ascending}
+    end
+    return sortStates[sourceType]
+end
+
+-- Clicking the header of the column the table is sorted by reverses the order
+function rm.sortDisplayedSourcesBy(field)
+    local sortState = getSortState(displayedSourceType)
+    if sortState and sortState.field == field then
+        sortState.ascending = not sortState.ascending
+    else
+        sortStates[displayedSourceType] = {field = field, ascending = true}
+    end
+    rm.showSourcesTab(displayedSourceType)
+end
+
+----------------------------- Display -----------------------------
 function rm.showSourcesTab(sourceType)
     local sources = displayedSources[sourceType]
-    rm.populateSourcesTable(columns[sourceType], getTableRows(sources))
+    local rows = getTableRows(sources)
+    local sortState = getSortState(sourceType)
+    if sortState then
+        sortRows(rows, sortState)
+    end
+    displayedSourceType = sourceType
+    rm.populateSourcesTable(columns[sourceType], rows, sortState)
     if sourceType == "unique" then
         rm.showUniqueSourceText(sources[1].instructions)
     else
@@ -163,7 +242,7 @@ function rm.showAllSources(recipe)
             if recipe.sources[sourceType] then
                 local sourcesInfo = getAllSourcesInfo(sourceType, recipe.sources[sourceType], recipe.ID)
                 setMapPinActions(sourceType, sourcesInfo, recipe)
-                displayedSources[sourceType] = sortListByChance(sourcesInfo)
+                displayedSources[sourceType] = sourcesInfo
                 table.insert(sourceTypes, sourceType)
             end
         end

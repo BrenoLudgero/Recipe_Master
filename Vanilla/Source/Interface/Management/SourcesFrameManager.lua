@@ -142,6 +142,15 @@ local function setCellContent(cell, text, align, tooltip, nameElements)
     cell:Show()
 end
 
+-- sortState: Field and order the table is sorted by (see SourcesDisplay). nil keeps the sources' order
+local function setHeaderSortColor(cell, sortState)
+    if sortState and sortState.field == cell.field then
+        cell.text:SetTextColor(unpack(F.colors.yellow))
+    else
+        cell.text:SetTextColor(unpack(F.colors.white))
+    end
+end
+
 local function getCellContentWidth(cell)
     local width = cell.text:GetUnboundedStringWidth()
     if cell.hasMapButtonSpace then
@@ -218,6 +227,18 @@ local function positionSeparator(line, index, centerX, separatorWidth)
     separator:Show()
 end
 
+-- The header's highlight and clickable area cover the spacing around the separators, which is outside the cells.
+-- The last separator has no spacing at its right
+local function extendHeaderCellToSeparators(cell, index, columnCount)
+    local spacing = F.offsets.sourcesTableSeparatorSpacingX
+    local leftSpacing = (index > 1 and index < columnCount) and spacing or 0
+    local rightSpacing = (index < columnCount) and spacing or 0
+    cell.highlight:ClearAllPoints()
+    cell.highlight:SetPoint("TOPLEFT", -leftSpacing, 0)
+    cell.highlight:SetPoint("BOTTOMRIGHT", rightSpacing, 0)
+    cell:SetHitRectInsets(-leftSpacing, -rightSpacing, 0, 0)
+end
+
 local function positionCellsAndSeparators(line, widths, separatorWidth)
     local xOffset = 0
     for i, width in ipairs(widths) do
@@ -226,6 +247,9 @@ local function positionCellsAndSeparators(line, widths, separatorWidth)
         cell:SetPoint("TOPLEFT", xOffset, 0)
         cell:SetPoint("BOTTOMLEFT", xOffset, 0)
         cell:SetWidth(width)
+        if cell.highlight then
+            extendHeaderCellToSeparators(cell, i, #widths)
+        end
         if i < #widths then
             local centerX = xOffset + width + F.offsets.sourcesTableSeparatorSpacingX + (separatorWidth / 2)
             positionSeparator(line, i, centerX, separatorWidth)
@@ -288,13 +312,16 @@ local function getNameElements(data, hasMapButtonSpace)
     }
 end
 
-function rm.populateSourcesTable(columns, rows)
+function rm.populateSourcesTable(columns, rows, sortState)
     clearSourcesTable()
     local header = rm.sourcesTable.header
     local lines = {header}
     local hasMapButtonSpace = hasAnyCoordinates(rows)
     for i, column in ipairs(columns) do
-        setCellContent(rm.getSourcesTableCell(header, i), column.header, column.align)
+        local cell = rm.getSourcesTableCell(header, i)
+        setCellContent(cell, column.header, column.align)
+        cell.field = column.field -- Sorted by when clicked
+        setHeaderSortColor(cell, sortState)
     end
     for i, data in ipairs(rows) do
         local row = rm.getSourcesTableRow(i)

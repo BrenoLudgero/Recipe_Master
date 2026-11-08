@@ -339,6 +339,7 @@ F.colors.red = {1, 0.125, 0.125}
 F.colors.redHex = "ffFF2020"
 F.colors.skyBlueHex = "ff57C8EA"
 F.colors.sourcesTableHeaderSeparator = {1, 1, 1, 0.4}
+F.colors.sourcesTableHeaderHighlight = {1, 1, 1, 0.1}
 F.colors.sourcesTableEvenRow = {0.2, 0.2, 0.2}
 F.colors.sourcesTableOddRow = {0.27, 0.27, 0.27}
 F.colors.tanHex = "ffAC885D"
