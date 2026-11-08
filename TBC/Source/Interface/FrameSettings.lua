@@ -70,8 +70,8 @@ F.offsets.searchBarX = 8
 F.offsets.searchBarY = -4
 F.offsets.sortByDropdownX = -32
 F.offsets.sortByDropdownY = -7
-F.offsets.sortOrderDropdownX = -8
-F.offsets.sortOrderDropdownY = -4
+F.offsets.sortOrderDropdownX = -11
+F.offsets.sortOrderDropdownY = -2
 F.offsets.sourceFilterDropdownX = F.offsets.sortOrderDropdownX - 1
 F.offsets.sourceFilterDropdownY = -2.5
 
@@ -181,7 +181,7 @@ F.sizes.recipesFrameWidth = 314 -- Minimum width!
 F.sizes.searchBarHeight = 18 -- Clickable area height
 F.sizes.dividerCheckButton = 22 -- Width and height
 F.sizes.sortDropdownWidth = 110
-F.sizes.sortOrderButton = 34 -- Width and height
+F.sizes.sortOrderButton = 36 -- Width and height
 
 ------------------------- Sources frame -------------------------
 --        Headers' width defined at SourcesDisplay.lua
