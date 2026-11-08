@@ -54,13 +54,14 @@ function rm.createCenteredText(parent)
     return text
 end
 
+-- Looks like the profession tabs on ProfessionsFrame's right side, which set its size, tooltip and click sound
 function rm.createRestoreButton()
-    local button = CreateFrame("Button", nil)
-    button:SetSize(F.sizes.restoreButton, F.sizes.restoreButton)
-    rm.showTooltipTextOnMouseover(button, "Recipe Master", "ANCHOR_RIGHT")
+    local button = CreateFrame("Button", nil, nil, "LargeSideTabButtonTemplate")
+    button.tooltipText = "Recipe Master"
     rm.restoreMainFrameOnClick(button)
-    button.texture = button:CreateTexture()
+    button.texture = button.Icon
     button.texture:SetTexture(rm.getPreference("restoreButtonIconTexture"))
-    button.texture:SetAllPoints(button)
+    button:SetFillToInterior(true)
+    button:SetChecked(false) -- Hides the selected tab's border
     return button
 end

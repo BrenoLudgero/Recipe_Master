@@ -45,7 +45,7 @@ local function setFramePointsRelativeToParent(professionFrame)
     rm.mainFrame:ClearAllPoints()
     rm.restoreButton:ClearAllPoints()
     if professionFrame == ProfessionsFrame then
-        rm.restoreButton:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 4, 2)
+        rm.restoreButton:SetPoint("BOTTOMLEFT", professionFrame, "BOTTOMRIGHT", 0, 60)
         rm.mainFrame:SetPoint("TOPLEFT", professionFrame, "TOPRIGHT", 48, 0)
         rm.mainFrame:SetPoint("BOTTOM", professionFrame)
     elseif professionFrame == DragonflightUIProfessionFrame then

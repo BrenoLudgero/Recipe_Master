@@ -11,12 +11,13 @@ rm.frame:RegisterEvent("TRADE_SKILL_LIST_UPDATE")
 rm.frame:RegisterEvent("TRADE_SKILL_CLOSE")
 
 -- Scales the interface elements based on the UI Scale setting + scale preference
+-- The restoreButton ignores the scale preference to match the profession tabs
 -- This fires when the setting is updated and after every login / reload
 function rm.handleScaleChange(event)
     if event == "UI_SCALE_CHANGED" then
         local interfaceScale = UIParent:GetEffectiveScale() + rm.getPreference("interfaceScale")
         rm.mainFrame:SetScale(interfaceScale)
-        rm.restoreButton:SetScale(interfaceScale)
+        rm.restoreButton:SetScale(UIParent:GetEffectiveScale())
     end
 end
 

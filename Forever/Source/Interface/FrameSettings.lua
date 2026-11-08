@@ -162,7 +162,6 @@ end
 F.sizes.dividerHeight = 45
 F.sizes.headerHeight = 21 -- The title bar in the border's top side
 F.sizes.mainBackgroundTile = 300
-F.sizes.restoreButton = 30 -- Width and height
 
 ------------------------- Bottom tabs -------------------------
 F.sizes.bottomTabWidth = 120
