@@ -1203,6 +1203,7 @@ rm.recipeDB[185] = {
 			230,
 			240,
 		},
+		faction = "Horde",
 		requiredSkill = 200,
 		teaches = 1295805,
 	},

@@ -2,7 +2,7 @@ local _, rm = ...
 
 rm.objectDB = {
 	[2849] = {
-		names = {enUS = "Battered Chest", deDE = "Ramponierte Truhe", esES = "Cofre maltrecho", esMX = "Cofre maltrecho", frFR = "Coffre endommagé", ptBR = "Baú Desgastado", ruRU = "Побитый сундук", koKR = "낡은 궤짝", zhCN = "破损的箱子", zhTW = "破損的箱子"},
+		names = {enUS = "Battered Chest", deDE = "Ramponierte Truhe", esES = "Cofre maltrecho", esMX = "Cofre maltrecho", frFR = "Coffre endommagé", ptBR = "Baú Desgastado", ruRU = "Побитый сундук", koKR = "찌그러진 궤짝", zhCN = "破损的箱子", zhTW = "破損的箱子"},
 		zones = {44, 148, 406, 38, 17, 331, 130, 40},
 	},
 	[2850] = {
@@ -10,7 +10,7 @@ rm.objectDB = {
 		zones = {44, 11, 10, 331, 406, 267, 17},
 	},
 	[3642] = {
-		names = {enUS = "Kolkars' Booty", deDE = "Kolkars Beute", esES = "Botín Kolkar", esMX = "Botín de Kolkar", frFR = "Butin des Kolkar", ptBR = "Butim de Kolkar", ruRU = "Добыча Колкара", koKR = "콜카르 노획물 궤짝", zhCN = "科卡尔的战利品", zhTW = "科卡爾的戰利品"},
+		names = {enUS = "Kolkars' Booty", deDE = "Beute der Kolkar", esES = "Botín de Kolkar", esMX = "Botín de Kolkar", frFR = "Butin des Kolkar", ptBR = "Butim de Kolkar", ruRU = "Добыча Колкара", koKR = "콜카르 노획물 궤짝", zhCN = "科卡尔的战利品", zhTW = "科卡爾的戰利品"},
 		zones = {17},
 	},
 	[3714] = {
@@ -34,7 +34,7 @@ rm.objectDB = {
 		zones = {721, 491},
 	},
 	[75293] = {
-		names = {enUS = "Large Battered Chest", deDE = "Große ramponierte Truhe", esES = "Cofre grande abollado", esMX = "Cofre grande abollado", frFR = "Grand coffre endommagé", ptBR = "Baú Desgastado Grande", ruRU = "Большой побитый сундук", koKR = "낡은 대형 궤짝", zhCN = "破碎的大箱子", zhTW = "破碎的大箱子"},
+		names = {enUS = "Large Battered Chest", deDE = "Große ramponierte Truhe", esES = "Cofre grande abollado", esMX = "Cofre grande abollado", frFR = "Grand coffre endommagé", ptBR = "Baú Desgastado Grande", ruRU = "Большой побитый сундук", koKR = "찌그러진 대형 궤짝", zhCN = "破碎的大箱子", zhTW = "破碎的大箱子"},
 		zones = {2597, 209, 1581, 718},
 	},
 	[75295] = {
@@ -74,12 +74,12 @@ rm.objectDB = {
 		zones = {45},
 	},
 	[106318] = {
-		names = {enUS = "Battered Chest", deDE = "Ramponierte Truhe", esES = "Cofre maltrecho", esMX = "Cofre maltrecho", frFR = "Coffre endommagé", ptBR = "Baú Desgastado", ruRU = "Побитый сундук", koKR = "낡은 궤짝", zhCN = "破损的箱子", zhTW = "破損的箱子"},
+		names = {enUS = "Battered Chest", deDE = "Ramponierte Truhe", esES = "Cofre maltrecho", esMX = "Cofre maltrecho", frFR = "Coffre endommagé", ptBR = "Baú Desgastado", ruRU = "Побитый сундук", koKR = "찌그러진 궤짝", zhCN = "破损的箱子", zhTW = "破損的箱子"},
 		zones = {215, 14, 12, 1, 141, 85},
 	},
 	[106319] = {
-		names = {enUS = "Battered Chest", deDE = "Ramponierte Truhe", esES = "Cofre maltrecho", esMX = "Cofre maltrecho", frFR = "Coffre endommagé", ptBR = "Baú Desgastado", ruRU = "Побитый сундук", koKR = "낡은 궤짝", zhCN = "破损的箱子", zhTW = "破損的箱子"},
-		zones = {40, 38, 17, 130, 148},
+		names = {enUS = "Battered Chest", deDE = "Ramponierte Truhe", esES = "Cofre maltrecho", esMX = "Cofre maltrecho", frFR = "Coffre endommagé", ptBR = "Baú Desgastado", ruRU = "Побитый сундук", koKR = "찌그러진 궤짝", zhCN = "破损的箱子", zhTW = "破損的箱子"},
+		zones = {40, 17, 38, 130, 148},
 	},
 	[111095] = {
 		names = {enUS = "Alliance Chest", deDE = "Truhe der Allianz", esES = "Cofre de la Alianza", esMX = "Cofre de la Alianza", frFR = "Coffre de l'Alliance", ptBR = "Baú da Aliança", ruRU = "Сундук Альянса", koKR = "얼라이언스 궤짝", zhCN = "联盟宝箱", zhTW = "聯盟寶箱"},
@@ -158,7 +158,7 @@ rm.objectDB = {
 		zones = {33},
 	},
 	[626752] = {
-		names = {enUS = "Dented Chest", deDE = "Verbeulte Truhe", esES = "Cofre abollado", frFR = "Coffre abîmé", ptBR = "Baú Cheio de Mossas", ruRU = "Проломленный ящик", koKR = "찌그러진 궤짝", zhCN = "凹陷的箱子", zhTW = "凹陷的箱子"},
+		names = {enUS = "Dented Chest", deDE = "Verbeulte Truhe", esES = "Cofre abollado", esMX = "Cofre abollado", frFR = "Coffre abîmé", ptBR = "Baú Cheio de Mossas", ruRU = "Проломленный ящик", koKR = "찌그러진 궤짝", zhCN = "凹陷的箱子", zhTW = "凹陷的箱子"},
 		zones = {16593},
 	},
 }

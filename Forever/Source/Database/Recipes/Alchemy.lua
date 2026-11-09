@@ -1,16 +1,6 @@
 local _, rm = ...
 
 rm.recipeDB[171] = {
-	[2365] = {
-		difficulty = {
-			0,
-			100,
-			120,
-			140,
-		},
-		isSpell = true,
-		requiredSkill = 100,
-	},
 	[2454] = {
 		difficulty = {
 			15,
@@ -1793,15 +1783,5 @@ rm.recipeDB[171] = {
 		},
 		requiredSkill = 275,
 		teaches = 1317279,
-	},
-	[1250775] = {
-		difficulty = {
-			0,
-			205,
-			207,
-			210,
-		},
-		isSpell = true,
-		requiredSkill = 205,
 	},
 }
