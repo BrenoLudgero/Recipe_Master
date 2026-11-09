@@ -28,10 +28,11 @@ local function getRankName(maxSkillRank)
 end
 
 local function storeLearnedProfession(currentProfessions, skillName, skillRank, maxSkillRank)
-    local professionID = rm.getProfessionID(skillName)
+    local professionID = rm.getTrackedProfessionID(skillName)
     if professionID then
         currentProfessions[professionID] = {
             ["level"] = skillRank,
+            ["maxLevel"] = maxSkillRank,
             ["rank"] = getRankName(maxSkillRank),
             ["skills"] = {},
             ["specialization"] = false,
@@ -90,6 +91,10 @@ local function updateSavedProfessions(currentProfessions)
         -- Transforms a previously unique saved specialization into a table of specializations (2.6.0 -> 2.6.1)
         if isSodSavedSpecializationFormatOutdated(professionID, savedProfessionSpecialization) then
             savedProfessionSpecialization = {}
+        end
+        -- Stored separately as it is only needed to display the characters' progress in tooltips
+        if professionData["maxLevel"] ~= rm.getSavedProfessionByID(professionID)["maxLevel"] then
+            rm.getSavedProfessionByID(professionID)["maxLevel"] = professionData["maxLevel"]
         end
         if professionLevel ~= savedProfessionLevel then
             rm.getSavedProfessionByID(professionID)["level"] = professionLevel

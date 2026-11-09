@@ -85,7 +85,7 @@ function rm.getAllCharactersRecipeStatus(recipe, professionID)
         local professionSkills = professionData["skills"]
         if professionSkills then
             if isSkillLearnedByCharacter(professionSkills, recipe) then
-                table.insert(charactersWithRecipeSkill, characterName)
+                charactersWithRecipeSkill[characterName] = professionData
             else
                 charactersMissingRecipeSkill[characterName] = professionData
             end

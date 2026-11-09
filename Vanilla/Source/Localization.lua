@@ -273,6 +273,11 @@ if rm.locale == "enUS" then
         [197] = "Tailoring",
         [2842] = L.poisons
     }
+    -- Gathering professions have no recipes; they are only tracked to display skill levels in tooltips
+    L.gatheringProfessions = {
+        [182] = "Herbalism",
+        [393] = "Skinning"
+    }
     L.recipePrefixes = {"Recipe: ", "Plans: ", "Formula: ", "Schematic: ", "Pattern: ", "Manual: "}
     L.backgroundOpacity = "Background Opacity"
     L.blue = "Blue"
@@ -324,6 +329,11 @@ elseif rm.locale == "esMX" or rm.locale == "esES" then
         [186] = "Minería",
         [197] = "Sastrería",
         [2842] = L.poisons
+    }
+    -- Gathering professions have no recipes; they are only tracked to display skill levels in tooltips
+    L.gatheringProfessions = {
+        [182] = "Herboristería",
+        [393] = "Desuello"
     }
     if rm.locale == "esES" then
         L.professions[197] = "Costura"
@@ -383,6 +393,11 @@ elseif rm.locale == "ptBR" then
         [197] = "Alfaiataria",
         [2842] = L.poisons
     }
+    -- Gathering professions have no recipes; they are only tracked to display skill levels in tooltips
+    L.gatheringProfessions = {
+        [182] = "Herborismo",
+        [393] = "Esfolamento"
+    }
     L.recipePrefixes = {"Receita: ", "Instruções: ", "Fórmula: ", "Diagrama: ", "Molde: ", "Manual: "}
     L.backgroundOpacity = "Opacidade do Fundo"
     L.blue = "Azul"
@@ -434,6 +449,11 @@ elseif rm.locale == "deDE" then
         [186] = "Bergbau",
         [197] = "Schneiderei",
         [2842] = L.poisons
+    }
+    -- Gathering professions have no recipes; they are only tracked to display skill levels in tooltips
+    L.gatheringProfessions = {
+        [182] = "Kräuterkunde",
+        [393] = "Kürschnerei"
     }
     L.recipePrefixes = {"Rezept: ", "Pläne: ", "Formel: ", "Bauplan: ", "Muster: ", "Handbuch: "}
     L.backgroundOpacity = "Hintergrundopazität"
@@ -487,6 +507,11 @@ elseif rm.locale == "frFR" then
         [186] = "Minage",
         [197] = "Couture",
         [2842] = L.poisons
+    }
+    -- Gathering professions have no recipes; they are only tracked to display skill levels in tooltips
+    L.gatheringProfessions = {
+        [182] = "Herboristerie",
+        [393] = "Dépeçage"
     }
     L.recipePrefixes = {"Recette : ", "Plan : ", "Plans : ", "Formule : ", "Schéma : ", "Patron : ", "Manuel : "}
     L.backgroundOpacity = "Opacité de l'Arrière-plan"
@@ -542,6 +567,11 @@ elseif rm.locale == "ruRU" then
         [197] = "Портняжное дело",
         [2842] = L.poisons
     }
+    -- Gathering professions have no recipes; they are only tracked to display skill levels in tooltips
+    L.gatheringProfessions = {
+        [182] = "Травничество",
+        [393] = "Снятие шкур"
+    }
     L.recipePrefixes = {"Рецепт: ", "Чертеж: ", "Формула ", "Формула: ", "Схема: ", "Выкройка: ", "Учебник: "}
     L.backgroundOpacity = "Прозрачность фона"
     L.blue = "Синий"
@@ -596,6 +626,11 @@ elseif rm.locale == "koKR" then
         [197] = "재봉술",
         [2842] = L.poisons
     }
+    -- Gathering professions have no recipes; they are only tracked to display skill levels in tooltips
+    L.gatheringProfessions = {
+        [182] = "약초 채집",
+        [393] = "무두질"
+    }
     L.recipePrefixes = {"조리법: ", "도면: ", "주문식: ", "설계도: ", "도안: ", "처방전: "}
     L.backgroundOpacity = "배경 불투명도"
     L.blue = "파랑"
@@ -648,6 +683,11 @@ elseif rm.locale == "zhTW" then
         [197] = "裁縫",
         [2842] = L.poisons
     }
+    -- Gathering professions have no recipes; they are only tracked to display skill levels in tooltips
+    L.gatheringProfessions = {
+        [182] = "草藥學",
+        [393] = "剝皮"
+    }
     L.recipePrefixes = {"食譜：", "設計圖：", "公式：", "結構圖：", "結構圖 : ", "圖樣：", "圖樣 : ", "說明書：", "手冊：", "配方："}
     L.backgroundOpacity = "背景不透明度"
     L.blue = "藍色"
@@ -699,6 +739,11 @@ elseif rm.locale == "zhCN" then
         [186] = "采矿",
         [197] = "裁缝",
         [2842] = L.poisons
+    }
+    -- Gathering professions have no recipes; they are only tracked to display skill levels in tooltips
+    L.gatheringProfessions = {
+        [182] = "草药学",
+        [393] = "剥皮"
     }
     L.recipePrefixes = {"食谱：", "配方：", "设计图：", "公式：", "结构图：", "图样：", "手册："}
     L.backgroundOpacity = "背景不透明度"
