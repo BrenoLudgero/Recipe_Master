@@ -6,6 +6,11 @@ rm.npcDB = {
 		names = {enUS = "Flesh Eater", deDE = "Fleischfresser", esES = "Comecarnes", frFR = "Dévoreur", ptBR = "Comedor de Carne", ruRU = "Плотояд", koKR = "굶주린 시체", zhCN = "食腐者", zhTW = "食腐者"},
 		zones = {10},
 	},
+	[30] = {
+		level = "5 - 6",
+		names = {enUS = "Forest Spider", deDE = "Waldspinne", esES = "Araña del bosque", esMX = "Araña del bosque", frFR = "Araignée forestière", ptBR = "Aranha da Floresta", ruRU = "Лесной паук", koKR = "숲거미", zhCN = "森林蜘蛛", zhTW = "森林蜘蛛"},
+		zones = {12},
+	},
 	[36] = {
 		level = "11 - 12",
 		names = {enUS = "Harvest Golem", deDE = "Erntegolem", esES = "Gólem de la cosecha", esMX = "Gólem de la cosecha", frFR = "Golem des moissons", ptBR = "Golem Colheiteiro", ruRU = "Уборочный голем", koKR = "허수아비골렘", zhCN = "麦田傀儡", zhTW = "麥田傀儡"},
@@ -37,17 +42,6 @@ rm.npcDB = {
 		names = {enUS = "Skeletal Warrior", deDE = "Skelettkrieger", esES = "Guerrero esquelético", frFR = "Guerrier squelette", ptBR = "Guerreiro Descarnado", ruRU = "Скелет-воин", koKR = "해골 전사", zhCN = "骷髅战士", zhTW = "骷髏戰士"},
 		zones = {10},
 	},
-	[60] = {
-		level = "8",
-		names = {enUS = "Ruklar the Trapper", deDE = "Ruklar der Fallensteller", esES = "Ruklar el Trampero", esMX = "Ruklar el Trampero", frFR = "Ruklar le trappeur", ptBR = "Ruklar, o Coureador", ruRU = "Руклар Зверолов", koKR = "덫사냥꾼 루클라", zhCN = "矿工鲁克拉尔", zhTW = "礦工魯克拉爾"},
-		zones = {12},
-	},
-	[61] = {
-		classification = "Rare",
-		level = "11",
-		names = {enUS = "Thuros Lightfingers", esES = "Thuros Dedoluz", esMX = "Thuros Dedos Ligeros", frFR = "Thuros Doigts-agiles", ptBR = "Turos Mão-leve", ruRU = "Турос Ловкорук", koKR = "투로스 라이트핑거", zhCN = "索罗斯·莱特芬格", zhTW = "索羅斯·萊特芬格"},
-		zones = {12},
-	},
 	[66] = {
 		faction = "Alliance",
 		level = "10",
@@ -62,7 +56,7 @@ rm.npcDB = {
 	[92] = {
 		level = "39 - 40",
 		names = {enUS = "Rock Elemental", deDE = "Felselementar", esES = "Elemental de piedra", esMX = "Elemental de roca", frFR = "Elémentaire de roche", ptBR = "Elemental da Rocha", ruRU = "Каменный элементаль", koKR = "바위 정령", zhCN = "石元素", zhTW = "石元素"},
-		zones = {3, 400},
+		zones = {3},
 	},
 	[94] = {
 		level = "5 - 6",
@@ -77,7 +71,7 @@ rm.npcDB = {
 	[97] = {
 		level = "8 - 9",
 		names = {enUS = "Riverpaw Runt", deDE = "Wicht der Flusspfoten", esES = "Jabato Zarparrío", esMX = "Cachorro Zarparrío", frFR = "Rivepatte chétif", ptBR = "Pata Molhada Miúdo", ruRU = "Недоросток из стаи Речной Лапы", koKR = "갈퀴발일족 심부름꾼", zhCN = "矮小的河爪豺狼人", zhTW = "矮小的河爪豺狼人"},
-		zones = {12},
+		zones = {12, 40},
 	},
 	[98] = {
 		level = "17 - 18",
@@ -88,6 +82,11 @@ rm.npcDB = {
 		classification = "Rare",
 		level = "10",
 		names = {enUS = "Morgaine the Sly", deDE = "Morgaine die Verschlagene", esES = "Morgaine el Astuto", esMX = "Morgaine la Astuta", frFR = "Morgaine la rusée", ptBR = "Morgana, a Dissimulada", ruRU = "Моргана Лукавая", koKR = "교활한 도적 몰게니", zhCN = "狡猾的莫加尼", zhTW = "狡猾的莫加尼"},
+		zones = {12},
+	},
+	[113] = {
+		level = "5 - 6",
+		names = {enUS = "Stonetusk Boar", deDE = "Steinhauereber", esES = "Jabalí colmillopétreo", esMX = "Jabalí Colmipétreo", frFR = "Sanglier Brocheroc", ptBR = "Javali Pedratusco", ruRU = "Вепрь-камнеклык", koKR = "돌엄니멧돼지", zhCN = "石牙野猪", zhTW = "石牙野豬"},
 		zones = {12},
 	},
 	[114] = {
@@ -143,7 +142,7 @@ rm.npcDB = {
 	[126] = {
 		level = "12 - 13",
 		names = {enUS = "Murloc Coastrunner", deDE = "Murlocküstenläufer", esES = "Correcostas múrloc", esMX = "Correcostas múrloc", frFR = "Cours-la-côte murloc", ptBR = "Murloc Correcosta", ruRU = "Мурлок-береговик", koKR = "멀록 길잡이", zhCN = "滩行鱼人", zhTW = "灘行魚人"},
-		zones = {40, 12},
+		zones = {40},
 	},
 	[127] = {
 		level = "18 - 19",
@@ -164,12 +163,6 @@ rm.npcDB = {
 		level = "15 - 16",
 		names = {enUS = "Murloc Warrior", deDE = "Murlockrieger", esES = "Guerrero múrloc", esMX = "Guerrero múrloc", frFR = "Guerrier murloc", ptBR = "Murloc Guerreiro", ruRU = "Мурлок-воин", koKR = "멀록 전사", zhCN = "鱼人战士", zhTW = "魚人戰士"},
 		zones = {40},
-	},
-	[193] = {
-		classification = "Elite",
-		level = "50 - 51",
-		names = {enUS = "Blue Dragonspawn", deDE = "Blaudrachenbrut", esES = "Dragauro azul", frFR = "Draconide bleu", ptBR = "Dragomorfo Azul", ruRU = "Синий драконид", koKR = "푸른용혈족", zhCN = "蓝色龙人", zhTW = "藍色龍人"},
-		zones = {16},
 	},
 	[199] = {
 		level = "10 - 11",
@@ -219,7 +212,7 @@ rm.npcDB = {
 	[217] = {
 		level = "19 - 20",
 		names = {enUS = "Venom Web Spider", deDE = "Giftweberspinne", esES = "Telarácnida venenosa", esMX = "Telarácnida venenosa", frFR = "Araignée Tisse-venin", ptBR = "Venaracna", ruRU = "Ядовитый кругопряд", koKR = "그물독거미", zhCN = "结网毒蜘蛛", zhTW = "結網毒蜘蛛"},
-		zones = {10, 12},
+		zones = {10, 12, 40},
 	},
 	[218] = {
 		level = "24 - 25",
@@ -263,12 +256,17 @@ rm.npcDB = {
 	[300] = {
 		level = "30",
 		names = {enUS = "Zzarc' Vul", deDE = "Zzarc'Vul", ruRU = "Ззарк'Вул", koKR = "짜르크불", zhCN = "扎克乌尔", zhTW = "札克烏爾"},
-		zones = {10},
+		zones = {10, 33},
 	},
 	[314] = {
 		classification = "Elite",
 		level = "31",
 		names = {enUS = "Eliza", ptBR = "Elisa", ruRU = "Элиза", koKR = "엘리자", zhCN = "伊莉莎", zhTW = "伊莉莎"},
+		zones = {10},
+	},
+	[315] = {
+		level = "32",
+		names = {enUS = "Stalvan Mistmantle", esES = "Stalvan Mantoniebla", esMX = "Stalvan Mantoniebla", ptBR = "Galvão Brumanto", ruRU = "Сталван Мистмантл", koKR = "스탈반 미스트맨틀", zhCN = "斯塔文·密斯特曼托", zhTW = "斯塔文·密斯特曼托"},
 		zones = {10},
 	},
 	[327] = {
@@ -432,7 +430,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "11",
 		names = {enUS = "Hogger", frFR = "Lardeur", ruRU = "Дробитель", koKR = "들창코", zhCN = "霍格", zhTW = "霍格"},
-		zones = {12, 1, 14, 141},
+		zones = {12, 40},
 	},
 	[449] = {
 		level = "16 - 17",
@@ -498,7 +496,7 @@ rm.npcDB = {
 	[478] = {
 		level = "9 - 10",
 		names = {enUS = "Riverpaw Outrunner", deDE = "Kundschafter der Flusspfoten", esES = "Avanzado Zarparrío", esMX = "Avanzado Zarparrío", frFR = "Estafette Rivepatte", ptBR = "Vanguardeiro Pata Molhada", ruRU = "Гонец стаи Речной Лапы", koKR = "갈퀴발일족 길잡이", zhCN = "河爪豺狼人前锋", zhTW = "河爪豺狼人前鋒"},
-		zones = {12},
+		zones = {12, 40, 10},
 	},
 	[480] = {
 		level = "9 - 10",
@@ -598,7 +596,12 @@ rm.npcDB = {
 	[524] = {
 		level = "7 - 8",
 		names = {enUS = "Rockhide Boar", deDE = "Steinhauteber", esES = "Jabalí Ocultorroca", esMX = "Jabalí Pielroca", frFR = "Sanglier Rochecuir", ptBR = "Javali Couropedra", ruRU = "Твердошкурый вепрь", koKR = "돌가죽멧돼지", zhCN = "石皮野猪", zhTW = "石皮野豬"},
-		zones = {12, 1519},
+		zones = {12},
+	},
+	[525] = {
+		level = "5 - 6",
+		names = {enUS = "Mangy Wolf", deDE = "Räudiger Wolf", esES = "Lobo sarnoso", esMX = "Lobo sarnoso", frFR = "Loup galeux", ptBR = "Lobo Sarnento", ruRU = "Облезлый волк", koKR = "병든 늑대", zhCN = "癞皮狼", zhTW = "癩皮狼"},
+		zones = {12},
 	},
 	[531] = {
 		level = "24 - 25",
@@ -660,6 +663,12 @@ rm.npcDB = {
 		names = {enUS = "Brain Eater", deDE = "Hirnfresser", esES = "Comesesos", esMX = "Comesesos", frFR = "Mangeur de cervelle", ptBR = "Devora-Cérebros", ruRU = "Мозгоед", koKR = "걸신들린 시체", zhCN = "食脑者", zhTW = "食腦者"},
 		zones = {10},
 	},
+	[573] = {
+		classification = "Rare",
+		level = "20",
+		names = {enUS = "Foe Reaper 4000", deDE = "Feindschnitter 4000", esES = "Revientaenemigos 4000", esMX = "Siegaenemigos 4000", frFR = "Découpeur 4000", ptBR = "Ceifador de Inimigos 4000", ruRU = "Врагорез-4", koKR = "전투 절단기 4000", zhCN = "死神4000型", zhTW = "死神4000型"},
+		zones = {40},
+	},
 	[578] = {
 		level = "19 - 20",
 		names = {enUS = "Murloc Scout", deDE = "Murlocspäher", esES = "Explorador múrloc", esMX = "Explorador múrloc", frFR = "Eclaireur murloc", ptBR = "Batedor Murloc", ruRU = "Мурлок-разведчик", koKR = "멀록 정찰병", zhCN = "鱼人斥候", zhTW = "魚人斥候"},
@@ -705,6 +714,12 @@ rm.npcDB = {
 		level = "34 - 35",
 		names = {enUS = "Bloodscalp Hunter", deDE = "Jäger der Bloodscalp", esES = "Cazador Cabellesangre", frFR = "Chasseur Bloodscalp", ptBR = "Caçador Sanguescalpo", ruRU = "Охотник из племени Кровавого Скальпа", koKR = "붉은머리부족 사냥꾼", zhCN = "血顶猎人", zhTW = "血頂獵人"},
 		zones = {33},
+	},
+	[596] = {
+		classification = "Rare Elite",
+		level = "18",
+		names = {enUS = "Brainwashed Noble", deDE = "Manipulierter Adliger", esES = "Noble aducido", esMX = "Noble con lavado de cerebro", frFR = "Noble manipulé", ptBR = "Nobre Reprogramado", ruRU = "Зомбированный дворянин", koKR = "세뇌당한 귀족", zhCN = "被洗脑的贵族", zhTW = "被洗腦的貴族"},
+		zones = {40},
 	},
 	[597] = {
 		level = "36 - 37",
@@ -992,6 +1007,16 @@ rm.npcDB = {
 		names = {enUS = "Bloodscalp Scavenger", deDE = "Aasfresser der Bloodscalp", esES = "Carroñero Cabellesangre", frFR = "Charognard Bloodscalp", ptBR = "Catador Sanguescalpo", ruRU = "Падальщик из племени Кровавого Скальпа", koKR = "붉은머리부족 청소부", zhCN = "血顶食腐者", zhTW = "血頂食腐者"},
 		zones = {33},
 	},
+	[703] = {
+		level = "26",
+		names = {enUS = "Lieutenant Fangore", deDE = "Lieutenant Fangor", esES = "Teniente Fangore", ptBR = "Tenente Mordente", ruRU = "Лейтенант Фангор", koKR = "부대장 붉은송곳니", zhCN = "范高雷中尉", zhTW = "范高雷中尉"},
+		zones = {44},
+	},
+	[706] = {
+		level = "3 - 4",
+		names = {enUS = "Frostmane Troll Whelp", deDE = "Trollwelpe der Frostmane", esES = "Cría de trol Peloescarcha", esMX = "Cría de trol Peloescarcha", frFR = "Jeune troll Frostmane", ptBR = "Jovem Troll Jubafria", ruRU = "Тролль-подросток из племени Мерзлогривов", koKR = "어린 서리갈기트롤", zhCN = "霜鬃巨魔幼崽", zhTW = "小霜鬃食人妖"},
+		zones = {1},
+	},
 	[709] = {
 		classification = "Elite",
 		level = "41 - 42",
@@ -1018,6 +1043,11 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "40",
 		names = {enUS = "Bhag'thera", ruRU = "Баг'тира", koKR = "바그테라", zhCN = "巴尔瑟拉", zhTW = "巴爾瑟拉"},
+		zones = {33},
+	},
+	[729] = {
+		level = "37",
+		names = {enUS = "Sin'Dall", ruRU = "Син'Далл", koKR = "신달", zhCN = "辛达尔", zhTW = "辛達爾"},
 		zones = {33},
 	},
 	[730] = {
@@ -1075,6 +1105,11 @@ rm.npcDB = {
 	[745] = {
 		level = "43 - 44",
 		names = {enUS = "Scalebane Captain", deDE = "Bannschuppencaptain", esES = "Capitán Horrocrusto", frFR = "Capitaine Plaiedécaille", ptBR = "Capitão Escamorte", ruRU = "Капитан чешуйчатых губителей", koKR = "비늘맹독혈족 우두머리", zhCN = "刃鳞龙人队长", zhTW = "刃鱗龍人隊長"},
+		zones = {8},
+	},
+	[746] = {
+		level = "45",
+		names = {enUS = "Elder Dragonkin", deDE = "Alter Drachkin", esES = "Ancestro dragonante", frFR = "Ancien draconien", ptBR = "Draconiano Ancião", ruRU = "Старый драконор", koKR = "덩치큰 녹색용혈족", zhCN = "刃鳞龙人长者", zhTW = "刃鱗龍人長者"},
 		zones = {8},
 	},
 	[747] = {
@@ -1157,6 +1192,11 @@ rm.npcDB = {
 		names = {enUS = "Stranglethorn Tigress", deDE = "Schlingendorntigerin", esES = "Tigresa de Tuercespina", esMX = "Tigresa de Tuercespina", frFR = "Tigresse de Strangleronce", ptBR = "Tigresa-do-espinhaço", ruRU = "Тигрица Тернистой долины", koKR = "가시덤불 암호랑이", zhCN = "荆棘谷雌虎", zhTW = "荊棘谷雌虎"},
 		zones = {33},
 	},
+	[775] = {
+		level = "32 - 33",
+		names = {enUS = "Kurzen's Agent", deDE = "Kurzens Agent", esES = "Agente de Kurzen", esMX = "Agente de Kurzen", frFR = "Agent de Kurzen", ptBR = "Agente de Kurzen", ruRU = "Посланник Курцена", koKR = "쿠르젠의 요원", zhCN = "库尔森的密探", zhTW = "庫爾森的密探"},
+		zones = {33},
+	},
 	[777] = {
 		faction = "Alliance",
 		level = "20",
@@ -1218,7 +1258,7 @@ rm.npcDB = {
 	[822] = {
 		level = "8 - 9",
 		names = {enUS = "Young Forest Bear", deDE = "Junger Waldbär", esES = "Oso del bosque joven", esMX = "Oso del bosque joven", frFR = "Jeune ours des forêts", ptBR = "Jovem Urso da Floresta", ruRU = "Молодой лесной медведь", koKR = "새끼 숲곰", zhCN = "森林熊幼崽", zhTW = "小森林熊"},
-		zones = {12},
+		zones = {12, 40},
 	},
 	[824] = {
 		level = "15 - 16",
@@ -1243,7 +1283,7 @@ rm.npcDB = {
 	[833] = {
 		level = "11 - 12",
 		names = {enUS = "Coyote Packleader", deDE = "Kojotenrudelanführer", esES = "Coyote líder", esMX = "Coyote líder", frFR = "Chef de meute coyote", ptBR = "Coiote-alfa", ruRU = "Вожак стаи койотов", koKR = "우두머리 코요테", zhCN = "山狗首领", zhTW = "山狗首領"},
-		zones = {40},
+		zones = {40, 10},
 	},
 	[834] = {
 		level = "10 - 11",
@@ -1274,7 +1314,7 @@ rm.npcDB = {
 	[858] = {
 		level = "36 - 37",
 		names = {enUS = "Sorrow Spinner", deDE = "Trauerspinner", esES = "Girapenas", esMX = "Hilapenas", frFR = "Tisseuse des pleurs", ptBR = "Tece-mágoa", ruRU = "Ткач скорби", koKR = "늪그물거미", zhCN = "沼泽纺丝蛛", zhTW = "沼澤紡絲蛛"},
-		zones = {8},
+		zones = {8, 4},
 	},
 	[871] = {
 		classification = "Elite",
@@ -1320,10 +1360,20 @@ rm.npcDB = {
 		names = {enUS = "Splinter Fist Fire Weaver", deDE = "Feuerwirker der Splitterfäuste", esES = "Tejefuego Puñastilla", frFR = "Tisseur de flamme Brisepoing", ptBR = "Tece-chamas Punhalasca", ruRU = "Огнепряд из клана Дробящего Кулака", koKR = "망치주먹일족 불마술사", zhCN = "裂拳控火者", zhTW = "裂拳控火者"},
 		zones = {10},
 	},
+	[892] = {
+		level = "27 - 28",
+		names = {enUS = "Splinter Fist Taskmaster", deDE = "Zuchtmeister der Splitterfäuste", esES = "Capataz Puñastilla", frFR = "Sous-chef Brisepoing", ptBR = "Capataz Punhalasca", ruRU = "Надсмотрщик из клана Дробящего Кулака", koKR = "망치주먹일족 싸움꾼", zhCN = "裂拳工头", zhTW = "裂拳工頭"},
+		zones = {10},
+	},
 	[898] = {
 		level = "26 - 27",
 		names = {enUS = "Nightbane Worgen", deDE = "Worg der Nachtheuler", esES = "Ferocanis Nocturno", esMX = "Huargen Penumbría", frFR = "Worgen Plaie-de-nuit", ptBR = "Worgen Nocturno", ruRU = "Ворген из стаи Ночной Погибели", koKR = "파멸의어둠일족 늑대인간", zhCN = "夜行狼人", zhTW = "夜行狼人"},
 		zones = {10},
+	},
+	[905] = {
+		level = "31 - 32",
+		names = {enUS = "Sharptooth Frenzy", deDE = "Nadelzahnfrenzy", esES = "Demente dienteafilado", esMX = "Furia Dienteafilado", frFR = "Trancheur frénétique", ptBR = "Farnesim Agudente", ruRU = "Острозубая бешенка", koKR = "톱니프렌지", zhCN = "利齿狂鱼", zhTW = "利齒狂魚"},
+		zones = {33},
 	},
 	[908] = {
 		level = "44",
@@ -1356,6 +1406,11 @@ rm.npcDB = {
 		level = "30 - 31",
 		names = {enUS = "Nightbane Tainted One", deDE = "Besudelter Nachtheuler", esES = "Corrupto Nocturno", frFR = "Contaminé Plaie-de-nuit", ptBR = "Maculado Nocturno", ruRU = "Нечистый ворген из стаи Ночной Погибели", koKR = "파멸의어둠일족 타락전사", zhCN = "夜行堕落狼人", zhTW = "夜行墮落狼人"},
 		zones = {10},
+	},
+	[921] = {
+		level = "34 - 35",
+		names = {enUS = "Venture Co. Lumberjack", deDE = "Holzfäller der Venture Co.", esES = "Leñador de Ventura y Cía.", esMX = "Leñador de Ventura y Cía.", frFR = "Bûcheron de la KapitalRisk", ptBR = "Lenhador da Empreendimentos S.A.", ruRU = "Дровосек Торговой компании", koKR = "투자개발회사 벌목꾼", zhCN = "风险投资公司伐木工", zhTW = "風險投資公司伐木工"},
+		zones = {33},
 	},
 	[922] = {
 		level = "40 - 41",
@@ -1416,11 +1471,6 @@ rm.npcDB = {
 		level = "25 - 26",
 		names = {enUS = "Carrion Recluse", deDE = "Aaskrabbler", esES = "Ermitaño carroñero", frFR = "Solitaire putride", ptBR = "Reclusa Carniceira", ruRU = "Падальщик-отшельник", koKR = "청소부그늘거미", zhCN = "食腐独行蛛", zhTW = "食腐獨行蛛"},
 		zones = {10},
-	},
-	[950] = {
-		level = "50",
-		names = {enUS = "Swamp Talker", deDE = "Sumpfredner", esES = "Hablador del pantano", frFR = "Parleur des marécages", ptBR = "Falastrão do Pantanal", ruRU = "Болотный говорун", koKR = "수다쟁이 늪지멀록", zhCN = "沼泽空谈者", zhTW = "沼澤空談者"},
-		zones = {8},
 	},
 	[957] = {
 		faction = "Alliance",
@@ -1484,6 +1534,11 @@ rm.npcDB = {
 		names = {enUS = "Mosshide Mystic", deDE = "Mystiker der Moosfelle", esES = "Místico Pellejomusgo", frFR = "Mystique Poil-moussu", ptBR = "Místico Pelemusgo", ruRU = "Мистик из стаи Мохошкуров", koKR = "이끼가죽일족 비술사", zhCN = "藓皮秘法师", zhTW = "蘚皮秘法師"},
 		zones = {11},
 	},
+	[1014] = {
+		level = "27",
+		names = {enUS = "Mosshide Alpha", deDE = "Alpha der Moosfelle", esES = "Alfa Pellejomusgo", frFR = "Alpha Poil-moussu", ptBR = "Pelemusgo-alfa", ruRU = "Вожак стаи Мохошкуров", koKR = "이끼가죽일족 우두머리", zhCN = "藓皮突击队员", zhTW = "蘚皮突擊隊員"},
+		zones = {11},
+	},
 	[1015] = {
 		level = "23 - 24",
 		names = {enUS = "Highland Raptor", deDE = "Hochlandraptor", esES = "Raptor de las Tierras Altas", esMX = "Raptor de las Tierras Altas", frFR = "Raptor des hautes-terres", ptBR = "Raptor do Planalto", ruRU = "Ящер нагорья", koKR = "고원랩터", zhCN = "高地迅猛龙", zhTW = "高地迅猛龍"},
@@ -1492,11 +1547,6 @@ rm.npcDB = {
 	[1016] = {
 		level = "24 - 25",
 		names = {enUS = "Highland Lashtail", deDE = "Hochlandschmetterschwanz", esES = "Colazote de las Tierras Altas", frFR = "Flagellant des hautes-terres", ptBR = "Batecauda Montanhês", ruRU = "Кнутохвост нагорья", koKR = "채찍꼬리 고원랩터", zhCN = "高地鞭尾龙", zhTW = "高地鞭尾龍"},
-		zones = {11},
-	},
-	[1017] = {
-		level = "25 - 26",
-		names = {enUS = "Highland Scytheclaw", deDE = "Hochlandsensenklaue", esES = "Segador de la Tierras Altas", frFR = "Faucheur des hautes-terres", ptBR = "Garrafoice Montanhês", ruRU = "Смертехват нагорья", koKR = "갈퀴발톱 고원랩터", zhCN = "高地镰爪龙", zhTW = "高地鐮爪龍"},
 		zones = {11},
 	},
 	[1018] = {
@@ -1569,6 +1619,11 @@ rm.npcDB = {
 		names = {enUS = "Black Ooze", deDE = "Schwarzer Brühschlammer", esES = "Moco negro", esMX = "Moco negro", frFR = "Limon noir", ptBR = "Gosma Preta", ruRU = "Черный слизнюк", koKR = "검은 수액괴물", zhCN = "黑色软泥怪", zhTW = "黑色軟泥怪"},
 		zones = {11},
 	},
+	[1033] = {
+		level = "25 - 26",
+		names = {enUS = "Monstrous Ooze", deDE = "Monströser Brühschlammer", esES = "Moco monstruoso", frFR = "Limon monstrueux", ptBR = "Gosma Monstruosa", ruRU = "Чудовищный слизнюк", koKR = "돌연변이 수액괴물", zhCN = "残忍的软泥怪", zhTW = "殘忍的軟泥怪"},
+		zones = {11},
+	},
 	[1034] = {
 		level = "26 - 27",
 		names = {enUS = "Dragonmaw Raider", deDE = "Räuber der Dragonmaw", esES = "Asaltante Faucedraco", esMX = "Asaltante Faucedraco", frFR = "Ecumeur Dragonmaw", ptBR = "Saqueador Presa do Dragão", ruRU = "Налетчик из клана Драконьей Пасти", koKR = "용아귀부족 약탈자", zhCN = "龙喉袭击者", zhTW = "龍喉襲擊者"},
@@ -1614,34 +1669,10 @@ rm.npcDB = {
 		names = {enUS = "Flamesnorting Whelp", deDE = "Flammenschnaubender Welpe", esES = "Cría de Escupefuego", frFR = "Dragonnet crache-flammes", ptBR = "Dragonete Espirrafogo", ruRU = "Огнедышащий дракончик", koKR = "불뿜는 새끼용", zhCN = "喷火雏龙", zhTW = "噴火雛龍"},
 		zones = {11},
 	},
-	[1046] = {
-		classification = "Elite",
-		level = "58 - 59",
-		names = {enUS = "Red Wyrmkin", deDE = "Roter Wyrmkin", esES = "Vermis rojo", frFR = "Wyrmide rouge", ptBR = "Draconoide Vermelho", ruRU = "Красная драконида", koKR = "붉은고룡족", zhCN = "红色龙族", zhTW = "紅色龍族"},
-		zones = {11},
-	},
-	[1047] = {
-		classification = "Elite",
-		level = "59 - 60",
-		names = {enUS = "Red Scalebane", deDE = "Rote Bannschuppe", esES = "Horrocrusto rojo", frFR = "Plaiedécaille rouge", ptBR = "Escamorte Vermelha", ruRU = "Красный чешуйчатый губитель", koKR = "붉은용혈족 맹독전사", zhCN = "红色刃鳞龙人", zhTW = "紅色刃鱗龍人"},
-		zones = {11},
-	},
-	[1048] = {
-		classification = "Elite",
-		level = "60 - 61",
-		names = {enUS = "Scalebane Lieutenant", deDE = "Bannschuppenlieutenant", esES = "Teniente Horrocrusto", frFR = "Lieutenant Plaiedécaille", ptBR = "Tenente Escamorte", ruRU = "Лейтенант чешуйчатых губителей", koKR = "비늘맹독혈족 부관", zhCN = "刃鳞龙人副官", zhTW = "刃鱗龍人副官"},
-		zones = {11},
-	},
-	[1049] = {
-		classification = "Elite",
-		level = "61 - 62",
-		names = {enUS = "Wyrmkin Firebrand", deDE = "Feuerbrandwyrmkin", esES = "Verminte Pirotigma", frFR = "Wyrmide de braise", ptBR = "Draconoide Temerário", ruRU = "Драконида Огненного Клейма", koKR = "고룡족 선봉대원", zhCN = "烈焰龙族", zhTW = "烈焰龍族"},
-		zones = {11},
-	},
 	[1050] = {
 		classification = "Elite",
 		level = "61 - 62",
-		names = {enUS = "Scalebane Royal Guard", deDE = "Bannschuppenkönigswache", esES = "Guardia Real Horrocrusto", frFR = "Garde royal Plaiedécaille", ptBR = "Guarda Real Escamorte", ruRU = "Чешуйчатый королевский стражник", koKR = "비늘맹독혈족 근위병", zhCN = "刃鳞皇家卫士", zhTW = "刃鱗皇家衛士"},
+		names = {enUS = "Scalebane Royal Guard", deDE = "Bannschuppenkönigswache", esES = "Guardia Real Horrocrusto", frFR = "Garde royal Plaiedécaille", ptBR = "Guarda Real Escamorte", ruRU = "Чешуйчатый королевский стражник", koKR = "비늘맹독혈족 근위병", zhCN = "刃鳞皇家卫士", zhTW = "逆鱗龍人皇家衛士"},
 		zones = {11},
 	},
 	[1051] = {
@@ -1761,6 +1792,12 @@ rm.npcDB = {
 		names = {enUS = "Eldrin", ptBR = "Elgin", ruRU = "Элдрин", koKR = "엘드린", zhCN = "艾尔丁", zhTW = "艾爾丁"},
 		zones = {12},
 	},
+	[1106] = {
+		classification = "Rare",
+		level = "37",
+		names = {enUS = "Lost One Cook", deDE = "Koch der Verirrten", esES = "Cocinero perdido", esMX = "Cocinero Perdido", frFR = "Cuisinier perdu", ptBR = "Cozinheiro dos Perdidos", ruRU = "Повар из племени Заблудших", koKR = "드레노어 난민 요리사", zhCN = "失落者厨师", zhTW = "失落者廚師"},
+		zones = {8},
+	},
 	[1108] = {
 		level = "32 - 33",
 		names = {enUS = "Mistvale Gorilla", deDE = "Nebeltalgorilla", esES = "Gorila Velo de Bruma", esMX = "Gorila Velo de Bruma", frFR = "Gorille de Valbrume", ptBR = "Gorila do Vale da Névoa", ruRU = "Горилла из Мглистой долины", koKR = "안개계곡고릴라", zhCN = "迷雾谷猩猩", zhTW = "迷霧谷猩猩"},
@@ -1843,10 +1880,15 @@ rm.npcDB = {
 		names = {enUS = "Frostmane Shadowcaster", deDE = "Schattenzauberer der Frostmane", esES = "Nigromante Peloescarcha", esMX = "Taumaturgo umbrío Peloescarcha", frFR = "Exhalombre Frostmane", ptBR = "Lança-sombras Jubafria", ruRU = "Темный чародей племени Мерзлогривов", koKR = "서리갈기부족 흑마술사", zhCN = "霜鬃暗法师", zhTW = "霜鬃暗法師"},
 		zones = {1},
 	},
+	[1125] = {
+		level = "5 - 6",
+		names = {enUS = "Crag Boar", deDE = "Klippeneber", esES = "Jabalí del risco", esMX = "Jabalí del risco", frFR = "Sanglier des rochers", ptBR = "Rochetusco", ruRU = "Скальный вепрь", koKR = "멧돼지", zhCN = "峭壁野猪", zhTW = "峭壁野豬"},
+		zones = {1},
+	},
 	[1126] = {
 		level = "6 - 7",
 		names = {enUS = "Large Crag Boar", deDE = "Großer Klippeneber", esES = "Grande jabalí del risco", esMX = "Jabalí del risco grande", frFR = "Grand sanglier des rochers", ptBR = "Rochetusco Grande", ruRU = "Большой скальный вепрь", koKR = "큰 멧돼지", zhCN = "大峭壁野猪", zhTW = "大峭壁野豬"},
-		zones = {1},
+		zones = {1, 1537},
 	},
 	[1127] = {
 		level = "7 - 8",
@@ -1861,6 +1903,12 @@ rm.npcDB = {
 	[1131] = {
 		level = "7 - 8",
 		names = {enUS = "Winter Wolf", deDE = "Winterwolf", esES = "Lobo invernal", esMX = "Lobo invernal", frFR = "Loup blanc", ptBR = "Lobo Invernal", ruRU = "Снежный волк", koKR = "겨울 늑대", zhCN = "冬狼", zhTW = "冬狼"},
+		zones = {1},
+	},
+	[1132] = {
+		classification = "Rare",
+		level = "10",
+		names = {enUS = "Timber", deDE = "Holzplanke", esES = "Maderero", esMX = "Gris", frFR = "Grumeux", ptBR = "Lenho", ruRU = "Серый", koKR = "팀버", zhCN = "狂暴的冬狼", zhTW = "狂暴的冬狼"},
 		zones = {1},
 	},
 	[1133] = {
@@ -2117,6 +2165,17 @@ rm.npcDB = {
 		names = {enUS = "Stonesplinter Shaman", deDE = "Schamane der Splittersteintroggs", esES = "Chamán Rompecantos", esMX = "Chamán Rompecantos", frFR = "Chaman Brisepierre", ptBR = "Xamã Lascapedra", ruRU = "Шаман из племени Камнедробов", koKR = "가루바위일족 주술사", zhCN = "碎石怪萨满祭司", zhTW = "碎石怪薩滿"},
 		zones = {38},
 	},
+	[1199] = {
+		level = "5 - 6",
+		names = {enUS = "Juvenile Snow Leopard", deDE = "Halbwüchsiger Schneeleopard", esES = "Leopardo de la nieve joven", esMX = "Leopardo de las nieves juvenil", frFR = "Jeune Léopard des neiges", ptBR = "Leopardo da Neve Juvenil", ruRU = "Молодой снежный леопард", koKR = "어린 눈표범", zhCN = "雪豹幼崽", zhTW = "小雪豹"},
+		zones = {1},
+	},
+	[1200] = {
+		classification = "Elite",
+		level = "32",
+		names = {enUS = "Morbent Fel", esES = "Morbent Vil", ptBR = "Morbídio Vil", ruRU = "Морбент Скверн", koKR = "모벤트 펠", zhCN = "摩本特·费尔", zhTW = "摩本特·費爾"},
+		zones = {10},
+	},
 	[1201] = {
 		level = "7 - 8",
 		names = {enUS = "Snow Leopard", deDE = "Schneeleopard", esES = "Leopardo de la nieve", esMX = "Leopardo de las nieves", frFR = "Léopard des neiges", ptBR = "Leopardo da Neve", ruRU = "Снежный леопард", koKR = "눈표범", zhCN = "雪豹", zhTW = "雪豹"},
@@ -2150,7 +2209,7 @@ rm.npcDB = {
 	},
 	[1211] = {
 		level = "8 - 10",
-		names = {enUS = "Leper Gnome", deDE = "Lepragnom", esES = "Gnomo paria", frFR = "Gnome lépreux", ptBR = "Gnomo Leproso", ruRU = "Лепрогном", koKR = "오염된 노움", zhCN = "麻疯侏儒", zhTW = "麻瘋地精"},
+		names = {enUS = "Leper Gnome", deDE = "Lepragnom", esES = "Gnomo paria", esMX = "Gnomo paria", frFR = "Gnome lépreux", ptBR = "Gnomo Leproso", ruRU = "Лепрогном", koKR = "오염된 노움", zhCN = "麻疯侏儒", zhTW = "麻瘋地精"},
 		zones = {1},
 	},
 	[1215] = {
@@ -2172,7 +2231,7 @@ rm.npcDB = {
 	},
 	[1222] = {
 		level = "17",
-		names = {enUS = "Dark Iron Sapper", deDE = "Pionier der Dunkeleisenzwerge", esES = "Zapador Hierro Negro", frFR = "Sapeur Sombrefer", ptBR = "Sapador Ferro Negro", ruRU = "Сапер из клана Черного Железа", koKR = "검은무쇠단 공병", zhCN = "黑铁工兵", zhTW = "黑鐵工兵"},
+		names = {enUS = "Dark Iron Sapper", deDE = "Pionier der Dunkeleisenzwerge", esES = "Zapador Hierro Negro", frFR = "Sapeur Sombrefer", ptBR = "Sapador Ferro Negro", ruRU = "Сапер из клана Черного Железа", koKR = "검은무쇠 공병", zhCN = "黑铁工兵", zhTW = "黑鐵工兵"},
 		zones = {38},
 	},
 	[1225] = {
@@ -2459,18 +2518,6 @@ rm.npcDB = {
 		names = {enUS = "Gorlash", ruRU = "Горлаш", koKR = "고를라쉬", zhCN = "高拉什", zhTW = "高拉什"},
 		zones = {33},
 	},
-	[1493] = {
-		classification = "Elite",
-		level = "50",
-		names = {enUS = "Mok'rash", ruRU = "Мок'раш", koKR = "모크라쉬", zhCN = "摩卡什", zhTW = "摩卡什"},
-		zones = {33},
-	},
-	[1494] = {
-		classification = "Elite",
-		level = "52",
-		names = {enUS = "Negolash", ruRU = "Неголаш", koKR = "네골라쉬", zhCN = "奈古拉什", zhTW = "奈古拉什"},
-		zones = {33},
-	},
 	[1502] = {
 		level = "1 - 2",
 		names = {enUS = "Wretched Zombie", deDE = "Elender Zombie", esES = "Zombi desdichado", esMX = "Zombi espantoso", frFR = "Zombie décharné", ptBR = "Zumbi Atormentado", ruRU = "Презренный зомби", koKR = "흉측한 좀비", zhCN = "丑陋的僵尸", zhTW = "醜陋的殭屍"},
@@ -2561,7 +2608,7 @@ rm.npcDB = {
 	[1536] = {
 		level = "7 - 8",
 		names = {enUS = "Scarlet Missionary", deDE = "Scharlachroter Missionar", esES = "Misionero Escarlata", esMX = "Misionero Escarlata", frFR = "Missionnaire écarlate", ptBR = "Missionário Escarlate", ruRU = "Миссионер из Алого ордена", koKR = "붉은십자군 선교사", zhCN = "血色传教士", zhTW = "血色傳教士"},
-		zones = {85},
+		zones = {85, 1497},
 	},
 	[1537] = {
 		level = "8 - 9",
@@ -2596,6 +2643,11 @@ rm.npcDB = {
 	[1545] = {
 		level = "9 - 10",
 		names = {enUS = "Vile Fin Muckdweller", deDE = "Matschkrabbler der Finsterflossen", esES = "Habitabosta Anca Vil", esMX = "Habitabosta Anca Vil", frFR = "Marche-boue Aileron noir", ptBR = "Moralodo Pinavil", ruRU = "Грязекоп из племени Злобного Плавника", koKR = "썩은지느러미멀록 땅꾼", zhCN = "邪鳍泥浆鱼人", zhTW = "邪鰭泥漿魚人"},
+		zones = {85},
+	},
+	[1547] = {
+		level = "5 - 6",
+		names = {enUS = "Decrepit Darkhound", deDE = "Altersschwacher Schattenhund", esES = "Can oscuro decrépito", esMX = "Can oscuro decrépito", frFR = "Sombredogue décrépit", ptBR = "Cão das Trevas Decrépito", ruRU = "Дряхлый пес тьмы", koKR = "광포한 암흑사냥개", zhCN = "衰老的黑暗犬", zhTW = "衰老的黑暗犬"},
 		zones = {85},
 	},
 	[1548] = {
@@ -2636,12 +2688,6 @@ rm.npcDB = {
 	[1557] = {
 		level = "40 - 41",
 		names = {enUS = "Elder Mistvale Gorilla", deDE = "Alter Nebeltalgorilla", esES = "Gorila del Valle Velo de Bruma viejo", esMX = "Gorila Velo de Bruma anciano", frFR = "Ancien gorille de Valbrume", ptBR = "Gorila Ancião do Vale da Névoa", ruRU = "Старая горилла из Мглистой долины", koKR = "덩치큰 안개계곡고릴라", zhCN = "老迈的迷雾谷猩猩", zhTW = "老邁的迷霧谷猩猩"},
-		zones = {33},
-	},
-	[1559] = {
-		classification = "Elite",
-		level = "50 - 51",
-		names = {enUS = "King Mukla", deDE = "König Mukla", esES = "Rey Mukla", frFR = "Roi Mukla", ptBR = "Rei Mukla", ruRU = "Король Мукла", koKR = "밀림의왕 무클라", zhCN = "穆克拉", zhTW = "穆克拉"},
 		zones = {33},
 	},
 	[1561] = {
@@ -3052,12 +3098,6 @@ rm.npcDB = {
 		names = {enUS = "Skeletal Executioner", deDE = "Skeletthenker", esES = "Ejecutor esquelético", esMX = "Verdugo esquelético", frFR = "Bourreau Squelette", ptBR = "Carrasco Descarnado", ruRU = "Скелет-палач", koKR = "해골 사형집행인", zhCN = "骷髅刽子手", zhTW = "骷髏劊子手"},
 		zones = {28},
 	},
-	[1788] = {
-		classification = "Elite",
-		level = "56 - 57",
-		names = {enUS = "Skeletal Warlord", deDE = "Skelettkriegsherr", esES = "Señor de la Guerra esquelético", esMX = "Señor de la guerra esquelético", frFR = "Chef de guerre Squelette", ptBR = "Senhor da Guerra Descarnado", ruRU = "Скелет-вождь", koKR = "해골 사령관", zhCN = "骷髅军官", zhTW = "骷髏軍官"},
-		zones = {28},
-	},
 	[1789] = {
 		level = "55 - 56",
 		names = {enUS = "Skeletal Acolyte", deDE = "Skelettakolyth", esES = "Acólito esquelético", esMX = "Acólito esquelético", frFR = "Acolyte Squelette", ptBR = "Acólito Descarnado", ruRU = "Скелет-послушник", koKR = "해골 수행사제", zhCN = "骷髅侍僧", zhTW = "骷髏侍僧"},
@@ -3066,11 +3106,6 @@ rm.npcDB = {
 	[1791] = {
 		level = "50 - 52",
 		names = {enUS = "Slavering Ghoul", deDE = "Sabbernder Ghul", esES = "Necrófago esclavizante", esMX = "Necrófago esclavizante", frFR = "Goule écumante", ptBR = "Carniçal Salivante", ruRU = "Слюнявый вурдалак", koKR = "걸신들린 구울", zhCN = "被奴役的食尸鬼", zhTW = "被奴役的食屍鬼"},
-		zones = {28},
-	},
-	[1793] = {
-		level = "54 - 55",
-		names = {enUS = "Rotting Ghoul", deDE = "Faulender Ghul", esES = "Necrófago putrefacto", frFR = "Goule purulente", ptBR = "Carniçal Apodrecido", ruRU = "Гниющий вурдалак", koKR = "썩어가는 구울", zhCN = "腐烂的食尸鬼", zhTW = "腐爛的食屍鬼"},
 		zones = {28},
 	},
 	[1794] = {
@@ -3083,31 +3118,10 @@ rm.npcDB = {
 		names = {enUS = "Searing Ghoul", deDE = "Sengender Ghul", esES = "Necrófago abrasador", esMX = "Necrófago abrasador", frFR = "Goule incendiaire", ptBR = "Carniçal Ardente", ruRU = "Опаляющий вурдалак", koKR = "불타죽은 구울", zhCN = "灼热的食尸鬼", zhTW = "灼熱的食屍鬼"},
 		zones = {28},
 	},
-	[1796] = {
-		level = "55 - 56",
-		names = {enUS = "Freezing Ghoul", deDE = "Eiskalter Ghul", esES = "Necrófago gélido", frFR = "Goule glaciale", ptBR = "Carniçal Friento", ruRU = "Леденящий вурдалак", koKR = "얼어죽은 구울", zhCN = "冰冷的食尸鬼", zhTW = "冰冷的食屍鬼"},
-		zones = {28},
-	},
 	[1797] = {
 		level = "12 - 13",
 		names = {enUS = "Giant Grizzled Bear", deDE = "Ergrauter Riesenbär", esES = "Grisoso gigante", esMX = "Oso grisáceo gigante", frFR = "Vieil ours géant", ptBR = "Urso Cinzento Gigante", ruRU = "Гигантский седой медведь", koKR = "거대한 불곰", zhCN = "巨型灰斑熊", zhTW = "巨型灰斑熊"},
 		zones = {130},
-	},
-	[1802] = {
-		level = "56 - 58",
-		names = {enUS = "Hungering Wraith", deDE = "Hungerndes Gespenst", esES = "Espectro hambriento", esMX = "Ánima hambrienta", frFR = "Ame en peine affamée", ptBR = "Assombração Voraz", ruRU = "Алчущий призрак", koKR = "굶주린 망령", zhCN = "饥饿的鬼魂", zhTW = "饑餓的鬼魂"},
-		zones = {28},
-	},
-	[1804] = {
-		level = "56 - 57",
-		names = {enUS = "Wailing Death", deDE = "Klagender Tod", esES = "Muerte de los Lamentos", esMX = "Muerte gemebunda", frFR = "Morte gémissante", ptBR = "Morte Lamentosa", ruRU = "Вопящая Смерть", koKR = "울부짖는 망자", zhCN = "哀嚎的死者", zhTW = "哀嚎的死者"},
-		zones = {28},
-	},
-	[1805] = {
-		classification = "Elite",
-		level = "56 - 57",
-		names = {enUS = "Flesh Golem", deDE = "Fleischgolem", esES = "Gólem de carne", esMX = "Gólem de carne", frFR = "Golem de chair", ptBR = "Golem de Carne", ruRU = "Мясной голем", koKR = "살덩어리 골렘", zhCN = "血肉傀儡", zhTW = "血肉傀儡"},
-		zones = {28},
 	},
 	[1806] = {
 		level = "54 - 55",
@@ -3117,31 +3131,6 @@ rm.npcDB = {
 	[1808] = {
 		level = "55 - 56",
 		names = {enUS = "Devouring Ooze", deDE = "Verschlingender Brühschlammer", esES = "Moco devorador", esMX = "Moco devorador", frFR = "Limon dévorant", ptBR = "Gosma Devoradora", ruRU = "Всепожирающий слизнюк", koKR = "포식성 수액괴물", zhCN = "吞噬淤泥怪", zhTW = "吞噬淤泥怪"},
-		zones = {28},
-	},
-	[1812] = {
-		level = "55 - 56",
-		names = {enUS = "Rotting Behemoth", deDE = "Faulendes Ungetüm", esES = "Benemoth putrefacto", esMX = "Behemoth en podredumbre", frFR = "Béhémoth pourrissant", ptBR = "Beemote Apodrecido", ruRU = "Гниющее чудище", koKR = "썩어가는 늪괴물", zhCN = "腐烂的巨兽", zhTW = "腐爛的巨獸"},
-		zones = {28},
-	},
-	[1813] = {
-		level = "56 - 57",
-		names = {enUS = "Decaying Horror", deDE = "Verfallender Schrecken", esES = "Horror en descomposición", esMX = "Horror putrefacto", frFR = "Horreur décomposée", ptBR = "Terror em Decomposição", ruRU = "Гниющий ужас", koKR = "부패한 늪괴물", zhCN = "枯萎的恐兽", zhTW = "枯萎的恐獸"},
-		zones = {28},
-	},
-	[1815] = {
-		level = "51 - 52",
-		names = {enUS = "Diseased Black Bear", deDE = "Kranker Schwarzbär", esES = "Oso negro malsano", esMX = "Oso negro malsano", frFR = "Ours noir malade", ptBR = "Urso Preto Doente", ruRU = "Больной черный медведь", koKR = "오염된 흑곰", zhCN = "生病的黑熊", zhTW = "生病的黑熊"},
-		zones = {28, 85},
-	},
-	[1816] = {
-		level = "55 - 56",
-		names = {enUS = "Diseased Grizzly", deDE = "Kranker Grizzly", esES = "Grisezno malsano", esMX = "Oso pardo malsano", frFR = "Grizzly malade", ptBR = "Urso-cinzento Doente", ruRU = "Болезненный гризли", koKR = "오염된 불곰", zhCN = "生病的灰熊", zhTW = "生病的灰熊"},
-		zones = {28},
-	},
-	[1817] = {
-		level = "53 - 54",
-		names = {enUS = "Diseased Wolf", deDE = "Kranker Wolf", esES = "Lobo malsano", esMX = "Lobo malsano", frFR = "Loup malade", ptBR = "Lobo Doente", ruRU = "Больной волк", koKR = "역병에 걸린 늑대", zhCN = "生病的狼", zhTW = "生病的狼"},
 		zones = {28},
 	},
 	[1821] = {
@@ -3159,66 +3148,15 @@ rm.npcDB = {
 		names = {enUS = "Plague Lurker", deDE = "Seuchenlauerer", esES = "Rondador de la Peste", esMX = "Rondador de peste", frFR = "Rôdeuse pestilentielle", ptBR = "Tocaieira Pestilenta", ruRU = "Чумной воронковый паук", koKR = "돌연변이 늑대거미", zhCN = "瘟疫潜伏者", zhTW = "瘟疫潛伏者"},
 		zones = {28},
 	},
-	[1826] = {
-		level = "55 - 56",
-		names = {enUS = "Scarlet Mage", deDE = "Scharlachroter Magier", esES = "Mago Escarlata", esMX = "Mago Escarlata", frFR = "Mage écarlate", ptBR = "Mago Escarlate", ruRU = "Маг из Алого ордена", koKR = "붉은십자군 마법사", zhCN = "血色法师", zhTW = "血色法師"},
-		zones = {28},
-	},
-	[1827] = {
-		classification = "Elite",
-		level = "55 - 56",
-		names = {enUS = "Scarlet Sentinel", deDE = "Scharlachrote Schildwache", esES = "Centinela Escarlata", esMX = "Centinela Escarlata", frFR = "Sentinelle écarlate", ptBR = "Sentinela Escarlate", ruRU = "Часовой из Алого ордена", koKR = "붉은십자군 파수꾼", zhCN = "血色徘徊者", zhTW = "血色徘徊者"},
-		zones = {28},
-	},
 	[1831] = {
 		level = "52 - 53",
 		names = {enUS = "Scarlet Hunter", deDE = "Scharlachroter Jäger", esES = "Cazador Escarlata", esMX = "Cazador Escarlata", frFR = "Chasseur écarlate", ptBR = "Caçador Escarlate", ruRU = "Охотник из Алого ордена", koKR = "붉은십자군 사냥꾼", zhCN = "血色猎人", zhTW = "血色獵人"},
-		zones = {28},
-	},
-	[1832] = {
-		classification = "Elite",
-		level = "56 - 57",
-		names = {enUS = "Scarlet Magus", deDE = "Scharlachroter Magus", esES = "Magus Escarlata", esMX = "Magus Escarlata", frFR = "Magus écarlate", ptBR = "Magus Escarlate", ruRU = "Волхв из Алого ордена", koKR = "붉은십자군 학자", zhCN = "血色占星师", zhTW = "血色占星師"},
-		zones = {28},
-	},
-	[1833] = {
-		level = "54 - 55",
-		names = {enUS = "Scarlet Knight", deDE = "Scharlachroter Ritter", esES = "Caballero Escarlata", esMX = "Caballero Escarlata", frFR = "Chevalier écarlate", ptBR = "Cavaleiro Escarlate", ruRU = "Рыцарь из Алого ордена", koKR = "붉은십자군 기사", zhCN = "血色骑士", zhTW = "血色騎士"},
 		zones = {28},
 	},
 	[1834] = {
 		classification = "Elite",
 		level = "55 - 56",
 		names = {enUS = "Scarlet Paladin", deDE = "Scharlachroter Paladin", esES = "Paladín Escarlata", esMX = "Paladín Escarlata", frFR = "Paladin écarlate", ptBR = "Paladino Escarlate", ruRU = "Паладин из Алого ордена", koKR = "붉은십자군 성기사", zhCN = "血色圣骑士", zhTW = "血色聖騎士"},
-		zones = {28},
-	},
-	[1835] = {
-		level = "53 - 54",
-		names = {enUS = "Scarlet Invoker", deDE = "Scharlachroter Herbeirufer", esES = "Invocador Escarlata", esMX = "Convocador Escarlata", frFR = "Conjureur écarlate", ptBR = "Evocador Escarlate", ruRU = "Призыватель духов из Алого ордена", koKR = "붉은십자군 기원사", zhCN = "血色祈求者", zhTW = "血色祈求者"},
-		zones = {28},
-	},
-	[1836] = {
-		classification = "Elite",
-		level = "57 - 58",
-		names = {enUS = "Scarlet Cavalier", deDE = "Scharlachroter Chevalier", esES = "Hidalgo Escarlata", esMX = "Hidalgo Escarlata", frFR = "Cavalier écarlate", ptBR = "Fidalgo Escarlate", ruRU = "Кавалерист из Алого ордена", koKR = "붉은십자군 근위병", zhCN = "血色骑兵", zhTW = "血色騎兵"},
-		zones = {28},
-	},
-	[1844] = {
-		classification = "Rare",
-		level = "58",
-		names = {enUS = "Foreman Marcrid", deDE = "Großknecht Marcrid", esES = "Supervisor Marcrid", esMX = "Supervisor Marcrid", frFR = "Contremaître Marcrid", ptBR = "Encarregado Marcrid", ruRU = "Штейгер Маркрид", koKR = "현장감독 마크리드", zhCN = "工头玛希瑞德", zhTW = "工頭瑪希瑞德"},
-		zones = {28},
-	},
-	[1846] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "High Protector Lorik", deDE = "Hochbeschützer Lorik", esES = "Sumo Protector Lorik", esMX = "Sumo Protector Lorik", frFR = "Haut Protecteur Lorik", ptBR = "Sumo Protetor Lorik", ruRU = "Верховный заступник Лорик", koKR = "수호대장 로릭", zhCN = "保卫者洛瑞克", zhTW = "保衛者洛瑞克"},
-		zones = {28},
-	},
-	[1852] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Araj the Summoner", deDE = "Araj der Beschwörer", esES = "Araj el Invocador", esMX = "Araj el Invocador", frFR = "Araj l'Invocateur", ptBR = "Araj, o Evocador", ruRU = "Араж Призыватель", koKR = "소환사 아라즈", zhCN = "召唤者阿拉基", zhTW = "召喚者阿拉基"},
 		zones = {28},
 	},
 	[1853] = {
@@ -3240,7 +3178,7 @@ rm.npcDB = {
 	[1867] = {
 		faction = "Alliance",
 		level = "13 - 14",
-		names = {enUS = "Dalaran Apprentice", deDE = "Lehrling von Dalaran", esES = "Aprendiz Dalaran", esMX = "Aprendiz de Dalaran", frFR = "Apprenti de Dalaran", ptBR = "Aprendiz de Dalaran", ruRU = "Даларанский ученик", koKR = "달라란 견습마법사", zhCN = "达拉然学徒", zhTW = "達拉然學徒"},
+		names = {enUS = "Dalaran Apprentice", deDE = "Lehrling von Dalaran", esES = "Aprendiz Dalaran", esMX = "Aprendiz de Dalaran", frFR = "Apprenti de Dalaran", ptBR = "Aprendiz de Dalaran", ruRU = "Даларанский ученик", koKR = "달라란 수습마법사", zhCN = "达拉然学徒", zhTW = "達拉然學徒"},
 		zones = {130},
 	},
 	[1868] = {
@@ -3258,20 +3196,9 @@ rm.npcDB = {
 		names = {enUS = "Hand of Ravenclaw", deDE = "Hand von Rabenklaue", esES = "Mano de Corvozarpa", esMX = "Mano de Corvozarpa", frFR = "Main de Ravenclaw", ptBR = "Mão de Corvinalle", ruRU = "Длань Когтя Ворона", koKR = "까마귀발톱 심복", zhCN = "鸦爪之手", zhTW = "鴉爪之手"},
 		zones = {130},
 	},
-	[1883] = {
-		level = "55 - 57",
-		names = {enUS = "Scarlet Worker", deDE = "Scharlachroter Tagelöhner", esES = "Trabajador Escarlata", esMX = "Trabajador Escarlata", frFR = "Ouvrier écarlate", ptBR = "Trabalhador Escarlate", ruRU = "Рабочий из Алого Ордена", koKR = "붉은십자군 노동자", zhCN = "血色工人", zhTW = "血色工人"},
-		zones = {28},
-	},
 	[1884] = {
 		level = "54 - 56",
 		names = {enUS = "Scarlet Lumberjack", deDE = "Scharlachroter Holzfäller", esES = "Leñador Escarlata", esMX = "Leñador Escarlata", frFR = "Bûcheron écarlate", ptBR = "Lenhador Escarlate", ruRU = "Дровосек из Алого ордена", koKR = "붉은십자군 벌목꾼", zhCN = "血色伐木工", zhTW = "血色伐木工"},
-		zones = {28},
-	},
-	[1885] = {
-		classification = "Rare",
-		level = "58 - 59",
-		names = {enUS = "Scarlet Smith", deDE = "Scharlachroter Schmied", esES = "Herrero Escarlata", esMX = "Herrero Escarlata", frFR = "Forgeron écarlate", ptBR = "Ferreiro Escarlate", ruRU = "Кузнец из Алого ордена", koKR = "붉은십자군 대장장이", zhCN = "血色铁匠", zhTW = "血色鐵匠"},
 		zones = {28},
 	},
 	[1888] = {
@@ -3281,10 +3208,9 @@ rm.npcDB = {
 		zones = {130},
 	},
 	[1889] = {
-		faction = "Alliance",
 		level = "19 - 20",
 		names = {enUS = "Dalaran Wizard", deDE = "Hexer von Dalaran", esES = "Zahorí Dalaran", esMX = "Zahorí de Dalaran", frFR = "Sorcier de Dalaran", ptBR = "Teurgo de Dalaran", ruRU = "Даларанский волшебник", koKR = "달라란 마술사", zhCN = "达拉然巫师", zhTW = "達拉然巫師"},
-		zones = {130},
+		zones = {130, 267},
 	},
 	[1890] = {
 		level = "2 - 3",
@@ -3338,39 +3264,29 @@ rm.npcDB = {
 	[1908] = {
 		level = "19 - 20",
 		names = {enUS = "Vile Fin Oracle", deDE = "Orakel der Finsterflossen", esES = "Oráculo Anca Vil", esMX = "Oráculo Anca Vil", frFR = "Oracle Aileron noir", ptBR = "Oráculo Pinavil", ruRU = "Оракул из племени Злобного Плавника", koKR = "썩은지느러미멀록 점쟁이", zhCN = "邪鳍智者", zhTW = "邪鰭智者"},
-		zones = {130},
+		zones = {130, 1497, 36},
 	},
 	[1909] = {
 		level = "18 - 19",
 		names = {enUS = "Vile Fin Lakestalker", deDE = "Seepirscher der Finsterflossen", esES = "Acechalagos Anca Vil", esMX = "Acechalagos Anca Vil", frFR = "Rôdeur lacustre Aileron noir", ptBR = "Espreita-Lagos Pinavil", ruRU = "Озерник из племени Злобного Плавника", koKR = "썩은지느러미멀록 술사", zhCN = "邪鳍巡湖者", zhTW = "邪鰭巡湖者"},
-		zones = {130, 1497, 36},
-	},
-	[1911] = {
-		classification = "Rare",
-		level = "12",
-		names = {enUS = "Deeb", ptBR = "Díbi", ruRU = "Диб", koKR = "디브", zhCN = "迪布", zhTW = "迪布"},
-		zones = {85},
+		zones = {130, 36, 1497},
 	},
 	[1912] = {
-		faction = "Alliance",
 		level = "14 - 15",
 		names = {enUS = "Dalaran Protector", deDE = "Beschützer von Dalaran", esES = "Protector Dalaran", esMX = "Protector de Dalaran", frFR = "Protecteur de Dalaran", ptBR = "Protetora de Dalaran", ruRU = "Даларанский заступник", koKR = "달라란 수호병", zhCN = "达拉然保卫者", zhTW = "達拉然保衛者"},
 		zones = {130},
 	},
 	[1913] = {
-		faction = "Alliance",
 		level = "16 - 17",
 		names = {enUS = "Dalaran Warder", deDE = "Wärter von Dalaran", esES = "Pastor Dalaran", esMX = "Depositario de Dalaran", frFR = "Garde de Dalaran", ptBR = "Guardião de Dalaran", ruRU = "Даларанский тюремщик", koKR = "달라란 보초병", zhCN = "达拉然守卫", zhTW = "達拉然守衛"},
 		zones = {130},
 	},
 	[1914] = {
-		faction = "Alliance",
 		level = "15 - 16",
 		names = {enUS = "Dalaran Mage", deDE = "Magier von Dalaran", esES = "Mago Dalaran", esMX = "Mago de Dalaran", frFR = "Mage de Dalaran", ptBR = "Mago de Dalaran", ruRU = "Даларанский маг", koKR = "달라란 마법사", zhCN = "达拉然法师", zhTW = "達拉然法師"},
 		zones = {130},
 	},
 	[1915] = {
-		faction = "Alliance",
 		level = "17 - 18",
 		names = {enUS = "Dalaran Conjuror", deDE = "Herbeizauberer von Dalaran", esES = "Conjurador Dalaran", esMX = "Conjuradora de Dalaran", frFR = "Conjurateur de Dalaran", ptBR = "Conjurador de Dalaran", ruRU = "Даларанский окудник", koKR = "달라란 요술사", zhCN = "达拉然咒术师", zhTW = "達拉然咒術師"},
 		zones = {130},
@@ -3400,12 +3316,6 @@ rm.npcDB = {
 		names = {enUS = "Tirisfal Farmhand", deDE = "Landarbeiter von Tirisfal", esES = "Mozo de labranza de Tirisfal", esMX = "Mozo de labranza de Tirisfal", frFR = "Journalier de Tirisfal", ptBR = "Lavrador de Tirisfal", ruRU = "Тирисфальский батрак", koKR = "티리스팔 농장 일꾼", zhCN = "提瑞斯法雇农", zhTW = "提里斯法雇農"},
 		zones = {85},
 	},
-	[1936] = {
-		classification = "Rare",
-		level = "8",
-		names = {enUS = "Farmer Solliden", deDE = "Bauer Solliden", esES = "Granjero Solliden", esMX = "Granjero Solliden", frFR = "Fermier de Solliden", ptBR = "Fazendeiro Solliden", ruRU = "Фермер Соллиден", koKR = "농부 솔리덴", zhCN = "农夫索利丹", zhTW = "農夫索利丹"},
-		zones = {85},
-	},
 	[1937] = {
 		faction = "Horde",
 		level = "14",
@@ -3420,7 +3330,7 @@ rm.npcDB = {
 	[1940] = {
 		level = "17 - 18",
 		names = {enUS = "Rot Hide Plague Weaver", deDE = "Seuchenwirker der Moderfelle", esES = "Siembrapestes Putrepellejo", esMX = "Siembrapestes Putrepellejo", frFR = "Pestilentiel Poil-Putride", ptBR = "Tece-peste Putricouro", ruRU = "Насылающий чуму из стаи Гнилошкуров", koKR = "썩은가죽일족 역병술사", zhCN = "腐皮瘟疫传播者", zhTW = "腐皮瘟疫傳播者"},
-		zones = {130, 36},
+		zones = {130},
 	},
 	[1941] = {
 		level = "6 - 7",
@@ -3462,7 +3372,7 @@ rm.npcDB = {
 	[1955] = {
 		level = "17 - 18",
 		names = {enUS = "Lake Creeper", deDE = "Seekrabbler", esES = "Trepador del Lago", esMX = "Trepador del Lago", frFR = "Rampant lacustre", ptBR = "Rastejante do Lago", ruRU = "Озерный ползун", koKR = "호수늪지괴물", zhCN = "湖岸爬行者", zhTW = "湖岸爬行者"},
-		zones = {130},
+		zones = {130, 36},
 	},
 	[1956] = {
 		level = "18 - 19",
@@ -3477,7 +3387,7 @@ rm.npcDB = {
 	[1958] = {
 		level = "17 - 18",
 		names = {enUS = "Vile Fin Tidecaller", deDE = "Gezeitenrufer der Finsterflossen", esES = "Llamamareas Anca Vil", esMX = "Clamamareas Anca Vil", frFR = "Maître des flots Aileron noir", ptBR = "Chamaré Pinavil", ruRU = "Волномут из племени Злобного Плавника", koKR = "썩은지느러미멀록 파도술사", zhCN = "邪鳍招潮者", zhTW = "邪鰭招潮者"},
-		zones = {130},
+		zones = {130, 36},
 	},
 	[1961] = {
 		level = "11",
@@ -3512,7 +3422,7 @@ rm.npcDB = {
 	},
 	[1981] = {
 		level = "10",
-		names = {enUS = "Dark Iron Ambusher", deDE = "Wegelagerer der Dunkeleisenzwerge", esES = "Emboscador Hierro Negro", frFR = "Embusqué Sombrefer", ptBR = "Emboscador Ferro Negro", ruRU = "Душитель из клана Черного Железа", koKR = "검은무쇠단 복병", zhCN = "黑铁伏击者", zhTW = "黑鐵伏擊者"},
+		names = {enUS = "Dark Iron Ambusher", deDE = "Wegelagerer der Dunkeleisenzwerge", esES = "Emboscador Hierro Negro", frFR = "Embusqué Sombrefer", ptBR = "Emboscador Ferro Negro", ruRU = "Душитель из клана Черного Железа", koKR = "검은무쇠 복병", zhCN = "黑铁伏击者", zhTW = "黑鐵伏擊者"},
 		zones = {38},
 	},
 	[1983] = {
@@ -3525,6 +3435,11 @@ rm.npcDB = {
 		names = {enUS = "Greenpaw", deDE = "Grünpfote", esES = "Zarpaverde", esMX = "Zarpaverde", frFR = "Patte-verte", ptBR = "Pataverde", ruRU = "Зеленолап", koKR = "그린포우", zhCN = "绿爪", zhTW = "綠爪"},
 		zones = {141},
 	},
+	[1995] = {
+		level = "5 - 6",
+		names = {enUS = "Strigid Owl", deDE = "Strigideule", esES = "Lechuza estrígida", esMX = "Lechuza estrígida", frFR = "Hibou Strigid", ptBR = "Coruja Estrígida", ruRU = "Сова", koKR = "스트리기드 올빼미", zhCN = "巨翼枭", zhTW = "巨翼梟"},
+		zones = {141},
+	},
 	[1996] = {
 		level = "7 - 8",
 		names = {enUS = "Strigid Screecher", deDE = "Strigidkreischer", esES = "Estridador estrígido", esMX = "Estridador estrígido", frFR = "Hurleur Strigid", ptBR = "Guinchadora Estrígida", ruRU = "Сова-крикун", koKR = "비명소리 스트리기드 올빼미", zhCN = "巨翼恶枭", zhTW = "巨翼惡梟"},
@@ -3533,6 +3448,11 @@ rm.npcDB = {
 	[1997] = {
 		level = "8 - 9",
 		names = {enUS = "Strigid Hunter", deDE = "Strigidjäger", esES = "Cazador estrígido", esMX = "Cazador estrígido", frFR = "Chasseur Strigid", ptBR = "Caçadora Estrígida", ruRU = "Сова-охотник", koKR = "푸른부리 스트리기드 올빼미", zhCN = "巨翼猎枭", zhTW = "巨翼獵梟"},
+		zones = {141},
+	},
+	[1998] = {
+		level = "5 - 6",
+		names = {enUS = "Webwood Lurker", deDE = "Waldweberlauerer", esES = "Rondador Tejemadera", esMX = "Rondador Tejemadera", frFR = "Rôdeuse Tissebois", ptBR = "Tocaieira Lenhateia", ruRU = "Чащобный тенетник", koKR = "나무그물 늑대거미", zhCN = "树林潜伏者", zhTW = "樹林潛伏者"},
 		zones = {141},
 	},
 	[1999] = {
@@ -3610,11 +3530,6 @@ rm.npcDB = {
 		names = {enUS = "Gnarlpine Avenger", deDE = "Rächer der Knarzklauen", esES = "Vengador Tuercepinos", esMX = "Vengador Tuercepinos", frFR = "Vengeur Pin-tordu", ptBR = "Vingador Masca-pinho", ruRU = "Мститель из племени Кривой Сосны", koKR = "나무옹이일족 복수자", zhCN = "瘤背复仇者", zhTW = "瘤背復仇者"},
 		zones = {141},
 	},
-	[2014] = {
-		level = "10 - 11",
-		names = {enUS = "Gnarlpine Totemic", deDE = "Totemiker der Knarzklauen", esES = "Totémico Tuercepinos", esMX = "Totémico Tuercepinos", frFR = "Totémique Pin-tordu", ptBR = "Totemista Masca-pinho", ruRU = "Тотемист из племени Кривой Сосны", koKR = "나무옹이일족 토템술사", zhCN = "瘤背图腾师", zhTW = "瘤背圖騰師"},
-		zones = {141},
-	},
 	[2015] = {
 		level = "8 - 9",
 		names = {enUS = "Bloodfeather Harpy", deDE = "Harpyie der Blutfedern", esES = "Arpía Sangrepluma", esMX = "Arpía Sangrepluma", frFR = "Harpie Plumesang", ptBR = "Harpia Plumassangue", ruRU = "Гарпия из стаи Кровавого Пера", koKR = "붉은깃털하피", zhCN = "血羽鹰身人", zhTW = "血羽鷹身人"},
@@ -3690,6 +3605,11 @@ rm.npcDB = {
 		names = {enUS = "Ursal the Mauler", deDE = "Ursal der Raufer", esES = "Ursal el Violento", esMX = "Ursal el Violento", frFR = "Ursal le Mutileur", ptBR = "Ursal, o Espancador", ruRU = "Урсал Изверг", koKR = "투사 우르살", zhCN = "大槌乌萨尔", zhTW = "大槌烏薩爾"},
 		zones = {141},
 	},
+	[2042] = {
+		level = "5 - 6",
+		names = {enUS = "Nightsaber", deDE = "Nachtsäbler", esES = "Sable de la Noche", esMX = "Sable de la noche", frFR = "Sabre-de-nuit sauvage", ptBR = "Sabre-da-noite", ruRU = "Ночной саблезуб", koKR = "흑호", zhCN = "夜刃豹", zhTW = "夜刃豹"},
+		zones = {141},
+	},
 	[2043] = {
 		level = "7 - 8",
 		names = {enUS = "Nightsaber Stalker", deDE = "Pirschender Nachtsäbler", esES = "Acechador sable de la noche", esMX = "Acechador sable de la noche", frFR = "Rôdeur sabre-de-nuit", ptBR = "Espreitador Sabre-da-noite", ruRU = "Ночной саблезуб-охотник", koKR = "긴발톱 흑호", zhCN = "夜刃捕食者", zhTW = "夜刃捕食者"},
@@ -3729,12 +3649,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "13",
 		names = {enUS = "Councilman Wilhelm", deDE = "Ratsherr Wilhelm", esES = "Consejero Fijalontad", esMX = "Consejero Wilhelm", frFR = "Conseiller Wilhelm", ptBR = "Conselheiro Wilhelm", ruRU = "Член совета Вильгельм", koKR = "원로원 빌헬름", zhCN = "议员维尔海姆", zhTW = "議員維爾海姆"},
-		zones = {130},
-	},
-	[2064] = {
-		classification = "Elite",
-		level = "13",
-		names = {enUS = "Councilman Hartin", deDE = "Ratsherr Hartin", esES = "Consejero Hartin", esMX = "Consejero Hartin", frFR = "Conseiller Hartin", ptBR = "Conselheiro Hartin", ruRU = "Член совета Хартин", koKR = "원로원 하틴", zhCN = "议员哈尔丁", zhTW = "議員哈爾丁"},
 		zones = {130},
 	},
 	[2065] = {
@@ -3821,6 +3735,12 @@ rm.npcDB = {
 		names = {enUS = "Abigail Shiel", ptBR = "Sheila Abigail", ruRU = "Эбигейл Шиль", koKR = "애비게일 시엘", zhCN = "阿比盖尔·沙伊尔", zhTW = "阿比蓋爾·沙伊爾"},
 		zones = {85},
 	},
+	[2120] = {
+		faction = "Alliance",
+		level = "22",
+		names = {enUS = "Archmage Ataeric", deDE = "Erzmagier Ataeric", esES = "Archimago Ataeric", esMX = "Archimago Ataeric", frFR = "Archimage Ataeric", ptBR = "Arquimago Ataeric", ruRU = "Верховный маг Атаерик", koKR = "대마법사 아테릭", zhCN = "大法师阿塔瑞克", zhTW = "大法師阿塔瑞克"},
+		zones = {130},
+	},
 	[2130] = {
 		faction = "Horde",
 		level = "13",
@@ -3835,7 +3755,7 @@ rm.npcDB = {
 	},
 	[2149] = {
 		level = "14",
-		names = {enUS = "Dark Iron Raider", deDE = "Räuber der Dunkeleisenzwerge", esES = "Asantante Hierro Negro", frFR = "Ecumeur Sombrefer", ptBR = "Saqueador Ferro Negro", ruRU = "Налетчик из клана Черного Железа", koKR = "검은무쇠단 약탈자", zhCN = "黑铁袭击者", zhTW = "黑鐵襲擊者"},
+		names = {enUS = "Dark Iron Raider", deDE = "Räuber der Dunkeleisenzwerge", esES = "Asantante Hierro Negro", frFR = "Ecumeur Sombrefer", ptBR = "Saqueador Ferro Negro", ruRU = "Налетчик из клана Черного Железа", koKR = "검은무쇠 약탈자", zhCN = "黑铁袭击者", zhTW = "黑鐵襲擊者"},
 		zones = {38},
 	},
 	[2152] = {
@@ -3931,7 +3851,7 @@ rm.npcDB = {
 	},
 	[2178] = {
 		level = "12 - 13",
-		names = {enUS = "Wailing Highborne", deDE = "Klagende Hochgeborene", esES = "Altonato de los Lamentos", esMX = "Altonato gemebunda", frFR = "Bien-née gémissante", ptBR = "Altaneira Ululante", ruRU = "Стенающая Высокорожденная", koKR = "울부짖는 명가의 원혼", zhCN = "哀嚎的贵族", zhTW = "哀嚎的貴族"},
+		names = {enUS = "Wailing Highborne", deDE = "Klagende Hochgeborene", esES = "Altonato de los Lamentos", esMX = "Altonato gemebunda", frFR = "Bien-née gémissante", ptBR = "Altaneira Ululante", ruRU = "Стенающая Высокорожденная", koKR = "울부짖는 명가의 원혼", zhCN = "哀嚎的贵族", zhTW = "哀嚎的精靈貴族"},
 		zones = {148},
 	},
 	[2179] = {
@@ -3985,6 +3905,12 @@ rm.npcDB = {
 		names = {enUS = "Wild Grell", deDE = "Wilder Grell", esES = "Grel salvaje", esMX = "Grell salvaje", frFR = "Grell sauvage", ptBR = "Capeta Selvagem", ruRU = "Дикий грелль", koKR = "광기어린 그렐", zhCN = "野生劣魔", zhTW = "野生劣魔"},
 		zones = {148},
 	},
+	[2191] = {
+		classification = "Rare",
+		level = "14",
+		names = {enUS = "Licillin", ptBR = "Licillino", ruRU = "Лисиллин", koKR = "리킬린", zhCN = "利斯林", zhTW = "利斯林"},
+		zones = {148},
+	},
 	[2201] = {
 		level = "11 - 12",
 		names = {enUS = "Greymist Raider", deDE = "Räuber der Grauflossen", esES = "Asaltante Brumagris", esMX = "Asaltante Brumagris", frFR = "Ecumeur Grisebrume", ptBR = "Saqueador Brumagris", ruRU = "Налетчик из племени Серой Мглы", koKR = "잿빛안개멀록 약탈꾼", zhCN = "灰雾袭击者", zhTW = "灰霧襲擊者"},
@@ -4007,7 +3933,7 @@ rm.npcDB = {
 	},
 	[2205] = {
 		level = "15 - 16",
-		names = {enUS = "Greymist Warrior", deDE = "Krieger der Grauflossen", esES = "Guerrero Brumagris", frFR = "Guerrier Grisebrume", ptBR = "Guerreiro Brumagris", ruRU = "Воин из племени Серой Мглы", koKR = "잿빛안개멀록 전사", zhCN = "灰雾战士", zhTW = "灰霧戰士"},
+		names = {enUS = "Greymist Warrior", deDE = "Krieger der Grauflossen", esES = "Guerrero Brumagris", esMX = "Guerrero Brumagris", frFR = "Guerrier Grisebrume", ptBR = "Guerreiro Brumagris", ruRU = "Воин из племени Серой Мглы", koKR = "잿빛안개멀록 전사", zhCN = "灰雾战士", zhTW = "灰霧戰士"},
 		zones = {148},
 	},
 	[2206] = {
@@ -4079,13 +4005,13 @@ rm.npcDB = {
 	},
 	[2240] = {
 		level = "32 - 33",
-		names = {enUS = "Syndicate Footpad", deDE = "Schleicher des Syndikats", esES = "Asaltante de caminos del Sindicato", frFR = "Détrousseur du Syndicat", ptBR = "Salteador da Camarilha", ruRU = "Преступник Синдиката", koKR = "비밀결사대 노상강도", zhCN = "辛迪加劫匪", zhTW = "辛迪加劫匪"},
+		names = {enUS = "Syndicate Footpad", deDE = "Schleicher des Syndikats", esES = "Asaltante de caminos de la Hermandad", frFR = "Détrousseur du Syndicat", ptBR = "Salteador da Camarilha", ruRU = "Преступник Синдиката", koKR = "비밀결사대 노상강도", zhCN = "辛迪加劫匪", zhTW = "辛迪加劫匪"},
 		zones = {36},
 	},
 	[2241] = {
 		level = "33 - 34",
-		names = {enUS = "Syndicate Thief", deDE = "Dieb des Syndikats", esES = "Ladrón del Sindicato", esMX = "Ladrón de la Hermandad", frFR = "Larron du Syndicat", ptBR = "Ladrão da Camarilha", ruRU = "Вор Синдиката", koKR = "비밀결사대 도둑", zhCN = "辛迪加窃贼", zhTW = "辛迪加竊賊"},
-		zones = {36},
+		names = {enUS = "Syndicate Thief", deDE = "Dieb des Syndikats", esES = "Ladrón de la Hermandad", esMX = "Ladrón de la Hermandad", frFR = "Larron du Syndicat", ptBR = "Ladrão da Camarilha", ruRU = "Вор Синдиката", koKR = "비밀결사대 도둑", zhCN = "辛迪加窃贼", zhTW = "辛迪加竊賊"},
+		zones = {36, 267},
 	},
 	[2242] = {
 		level = "35 - 36",
@@ -4317,7 +4243,7 @@ rm.npcDB = {
 	},
 	[2337] = {
 		level = "28 - 29",
-		names = {enUS = "Dark Strand Voidcaller", deDE = "Leerruferin des dunklen Strangs", esES = "Llamacío de la Facción Oscura", frFR = "Anéantisseur de la Rive noire", ptBR = "Arauto do Caos da Linhagem das Trevas", ruRU = "Призыватель Бездны из клана Темной Нити", koKR = "암흑이교도 소환사", zhCN = "暗滩唤魔师", zhTW = "暗灘喚魔師"},
+		names = {enUS = "Dark Strand Voidcaller", deDE = "Leerruferin des dunklen Strangs", esES = "Llamacío de la Facción Oscura", esMX = "Clamavacío de la Facción Oscura", frFR = "Anéantisseur de la Rive noire", ptBR = "Arauto do Caos da Linhagem das Trevas", ruRU = "Призыватель Бездны из клана Темной Нити", koKR = "암흑이교도 소환사", zhCN = "暗滩唤魔师", zhTW = "暗灘喚魔師"},
 		zones = {148},
 	},
 	[2338] = {
@@ -4351,6 +4277,11 @@ rm.npcDB = {
 		names = {enUS = "Dun Garok Priest", deDE = "Priester von Dun Garok", esES = "Sacerdote de Dun Garok", frFR = "Prêtre de Dun Garok", ptBR = "Sacerdote de Dun Garok", ruRU = "Жрец Дун Гарока", koKR = "던 가록 사제", zhCN = "丹加洛克牧师", zhTW = "丹加洛克牧師"},
 		zones = {267},
 	},
+	[2347] = {
+		level = "40",
+		names = {enUS = "Wild Gryphon", deDE = "Wilder Greif", esES = "Grifo salvaje", esMX = "Grifo salvaje", frFR = "Gryphon sauvage", ptBR = "Grifo Selvagem", ruRU = "Дикий грифон", koKR = "야생 그리핀", zhCN = "野生狮鹫", zhTW = "野生獅鷲獸"},
+		zones = {267},
+	},
 	[2348] = {
 		level = "26 - 27",
 		names = {enUS = "Elder Moss Creeper", deDE = "Alter Mooskrabbler", esES = "Trepamusgo mayor", frFR = "Ancienne Rampemousse", ptBR = "Rastejamusgo Anciã", ruRU = "Старый моховой ползун", koKR = "덩치큰 이끼거미", zhCN = "老食苔蛛", zhTW = "老食苔蛛"},
@@ -4359,12 +4290,12 @@ rm.npcDB = {
 	[2349] = {
 		level = "24 - 25",
 		names = {enUS = "Giant Moss Creeper", deDE = "Riesiger Mooskrabbler", esES = "Trepamusgo gigante", esMX = "Trepamusgo gigante", frFR = "Rampemousse géante", ptBR = "Rastejante do Musgo Gigante", ruRU = "Гигантский моховой ползун", koKR = "거대한 이끼거미", zhCN = "巨型食苔蛛", zhTW = "巨型食苔蛛"},
-		zones = {267, 130, 36, 45},
+		zones = {267, 36, 130, 45},
 	},
 	[2350] = {
 		level = "20 - 21",
 		names = {enUS = "Forest Moss Creeper", deDE = "Waldmooskrabbler", esES = "Trepamusgo del bosque", esMX = "Trepamusgo del bosque", frFR = "Rampemousse forestière", ptBR = "Rastejante do Musgo da Floresta", ruRU = "Лесной моховой ползун", koKR = "숲이끼거미", zhCN = "森林食苔蛛", zhTW = "森林食苔蛛"},
-		zones = {267},
+		zones = {267, 36},
 	},
 	[2351] = {
 		level = "21 - 22",
@@ -4534,6 +4465,12 @@ rm.npcDB = {
 		names = {enUS = "Farmer Getz", deDE = "Bauer Getz", esES = "Granjero Getz", frFR = "Getz le fermier", ptBR = "Fazendeiro Pegaz", ruRU = "Фермер Гетц", koKR = "농부 게츠", zhCN = "农夫盖兹", zhTW = "農夫蓋茲"},
 		zones = {267},
 	},
+	[2404] = {
+		faction = "Alliance",
+		level = "26",
+		names = {enUS = "Blacksmith Verringtan", deDE = "Schmied Verringtan", esES = "Herrero Verrintan", esMX = "Herrero Verringtan", frFR = "Forgeron Verringtan", ptBR = "Ferreiro Verrintão", ruRU = "Кузнец Верринтан", koKR = "대장장이 베링턴", zhCN = "铁匠维林坦", zhTW = "鐵匠維林坦"},
+		zones = {267},
+	},
 	[2406] = {
 		level = "32 - 33",
 		names = {enUS = "Mountain Lion", deDE = "Berglöwe", esES = "León montés", esMX = "León de montaña", frFR = "Lion des montagnes", ptBR = "Leão da Montanha", ruRU = "Горный лев", koKR = "산사자", zhCN = "山地狮", zhTW = "山地獅"},
@@ -4544,9 +4481,29 @@ rm.npcDB = {
 		names = {enUS = "Hulking Mountain Lion", deDE = "Titanischer Berglöwe", esES = "León montés descomunal", esMX = "León de montaña descomunal", frFR = "Lion des montagnes massif", ptBR = "Leão da Montanha Imponente", ruRU = "Крупный горный лев", koKR = "덩치큰 산사자", zhCN = "巨型山地狮", zhTW = "巨型山地獅"},
 		zones = {36, 267},
 	},
+	[2408] = {
+		level = "29 - 31",
+		names = {enUS = "Snapjaw", deDE = "Schnappkiefer", esES = "Quijaforte", esMX = "Quijaforte", frFR = "Gueule d'acier", ptBR = "Mordelisca", ruRU = "Хрустогрыз", koKR = "무쇠턱거북", zhCN = "钳嘴龟", zhTW = "鉗嘴龜"},
+		zones = {36, 267, 130},
+	},
+	[2411] = {
+		level = "33",
+		names = {enUS = "Ricter", ruRU = "Рихтер", koKR = "릭터", zhCN = "瑞克特尔", zhTW = "瑞克特爾"},
+		zones = {36, 267},
+	},
+	[2412] = {
+		level = "33",
+		names = {enUS = "Alina", ruRU = "Алина", koKR = "앨리나", zhCN = "奥丽娜", zhTW = "奧麗娜"},
+		zones = {36},
+	},
 	[2413] = {
 		level = "33 - 34",
 		names = {enUS = "Dermot", ruRU = "Дермот", koKR = "더모트", zhCN = "德莫特", zhTW = "德莫特"},
+		zones = {36},
+	},
+	[2414] = {
+		level = "33 - 35",
+		names = {enUS = "Kegan Darkmar", ptBR = "Kegan Trevaneiro", ruRU = "Кеган Мракмар", koKR = "케간 다크마르", zhCN = "克甘达玛", zhTW = "克甘達瑪"},
 		zones = {36},
 	},
 	[2416] = {
@@ -4567,11 +4524,22 @@ rm.npcDB = {
 		names = {enUS = "Targ", ruRU = "Тарг", koKR = "타르그", zhCN = "塔尔格", zhTW = "塔爾格"},
 		zones = {36},
 	},
+	[2421] = {
+		classification = "Elite",
+		level = "40",
+		names = {enUS = "Muckrake", esES = "Rastricacas", frFR = "Fouilleboue", ptBR = "Revirestrume", ruRU = "Навозер", koKR = "무크라케", zhCN = "玛克拉克", zhTW = "瑪克拉克"},
+		zones = {36},
+	},
 	[2422] = {
 		classification = "Elite",
 		level = "39",
 		names = {enUS = "Glommus", ruRU = "Гломмус", koKR = "글롬무스", zhCN = "戈洛姆斯", zhTW = "戈洛姆斯"},
 		zones = {36},
+	},
+	[2427] = {
+		level = "24",
+		names = {enUS = "Jailor Eston", deDE = "Kerkermeister Eston", frFR = "Geôlier Eston", ptBR = "Carcereiro Elton", ruRU = "Тюремный надзиратель Эстон", koKR = "교도관 에스턴", zhCN = "狱卒埃斯顿", zhTW = "獄卒埃斯頓"},
+		zones = {267},
 	},
 	[2430] = {
 		faction = "Alliance",
@@ -4588,7 +4556,7 @@ rm.npcDB = {
 	},
 	[2434] = {
 		level = "37 - 38",
-		names = {enUS = "Shadowy Assassin", deDE = "Schattenhafter Auftragsmörder", esES = "Asesino oscuro", frFR = "Assassin des ténèbres", ptBR = "Assassino Sombrio", ruRU = "Мрачный убийца", koKR = "어둠의 암살자", zhCN = "暗影刺客", zhTW = "暗影刺客"},
+		names = {enUS = "Shadowy Assassin", deDE = "Schattenhafter Auftragsmörder", esES = "Asesino enigmático", frFR = "Assassin des ténèbres", ptBR = "Assassino Sombrio", ruRU = "Мрачный убийца", koKR = "어둠의 암살자", zhCN = "暗影刺客", zhTW = "暗影刺客"},
 		zones = {267},
 	},
 	[2440] = {
@@ -4606,6 +4574,11 @@ rm.npcDB = {
 		faction = "Alliance",
 		level = "25",
 		names = {enUS = "Citizen Wilkes", deDE = "Bürger Wilkes", esES = "Ciudadano Wilkes", frFR = "Citoyen Wilkes", ptBR = "Cidadão Urbano", ruRU = "Горожанин Вилкс", koKR = "민간인 윌키스", zhCN = "平民维尔克斯", zhTW = "平民維爾克斯"},
+		zones = {267},
+	},
+	[2450] = {
+		level = "29",
+		names = {enUS = "Miner Hackett", deDE = "Minenarbeiter Hackett", esES = "Minero Hackett", esMX = "Minero Hackett", frFR = "Mineur Hackett", ptBR = "Minerador Talhatudo", ruRU = "Шахтер Хакетт", koKR = "광부 하켓", zhCN = "矿工哈克特", zhTW = "礦工哈克特"},
 		zones = {267},
 	},
 	[2451] = {
@@ -4627,6 +4600,7 @@ rm.npcDB = {
 		zones = {36},
 	},
 	[2481] = {
+		faction = "Alliance",
 		level = "36",
 		names = {enUS = "Bliztik", ruRU = "Близтик", koKR = "블리즈틱", zhCN = "布里兹提克", zhTW = "布里茲提克"},
 		zones = {10},
@@ -4688,19 +4662,14 @@ rm.npcDB = {
 		names = {enUS = "Chucky \"Ten Thumbs\"", deDE = "Chucky \"Zehn Daumen\"", esES = "Chucky \"Diezdedos\"", frFR = "Chucky \"Dix pouces\"", ptBR = "Chucky \"Sem-Jeito\"", ruRU = "Чаки \"Недотепа\"", koKR = "\"왕손가락\" 처키", zhCN = "拇指苏克", zhTW = "拇指蘇克"},
 		zones = {33},
 	},
-	[2546] = {
-		level = "48",
-		names = {enUS = "Fleet Master Firallon", deDE = "Flottenmeister Firallon", esES = "Maestro de Flota Firallon", frFR = "Amiral Firallon", ptBR = "Mestre de Frota Firalião", ruRU = "Командир флота Фираллон", koKR = "함장 피랠론", zhCN = "舰队指挥官菲尔拉伦", zhTW = "艦隊指揮官菲爾拉倫"},
-		zones = {33},
-	},
 	[2547] = {
 		level = "43",
 		names = {enUS = "Ironpatch", deDE = "Stahlauge", esES = "Parchierro", frFR = "Oeil de fer", ptBR = "Olho de Ferro", ruRU = "Многоглаз", koKR = "아이언패치", zhCN = "艾隆帕", zhTW = "艾隆帕"},
 		zones = {33},
 	},
-	[2548] = {
-		level = "47",
-		names = {enUS = "Captain Keelhaul", deDE = "Käpt'n Kielhol", esES = "Capitán Sinquilla", frFR = "Capitaine Keelhaul", ptBR = "Capitão Querena", ruRU = "Капитан Кильватель", koKR = "선장 킬하울", zhCN = "尼哈鲁船长", zhTW = "尼哈魯船長"},
+	[2549] = {
+		level = "43",
+		names = {enUS = "Garr Salthoof", deDE = "Garr Salzhuf", esES = "Garr Fausal", ptBR = "Garr Casco Salgado", ruRU = "Гарр Просоленное Копыто", koKR = "가르 살트후프", zhCN = "加尔·盐蹄", zhTW = "加爾·鹽蹄"},
 		zones = {33},
 	},
 	[2550] = {
@@ -4748,6 +4717,11 @@ rm.npcDB = {
 		level = "36 - 37",
 		names = {enUS = "Witherbark Berserker", deDE = "Berserker der Witherbark", esES = "Rabioso Secacorteza", frFR = "Berserker Witherbark", ptBR = "Berserker Cascasseca", ruRU = "Берсерк из племени Сухокожих", koKR = "마른나무껍질부족 광전사", zhCN = "枯木狂战士", zhTW = "枯木狂戰士"},
 		zones = {45},
+	},
+	[2559] = {
+		level = "30 - 31",
+		names = {enUS = "Highland Strider", deDE = "Hochlandschreiter", esES = "Zancudo de las Tierras Altas", esMX = "Zancudo de las Tierras Altas", frFR = "Arpenteur des hautes-terres", ptBR = "Andarilho do Planalto", ruRU = "Долгоног нагорья", koKR = "줄무늬 고원랩터", zhCN = "高地阔步龙", zhTW = "高地闊步龍"},
+		zones = {45, 267},
 	},
 	[2560] = {
 		level = "33 - 34",
@@ -4825,6 +4799,11 @@ rm.npcDB = {
 	[2577] = {
 		level = "31 - 32",
 		names = {enUS = "Dark Iron Shadowcaster", deDE = "Schattenzauberer der Dunkeleisenzwerge", esES = "Nigromante Hierro Negro", esMX = "Taumaturgo umbrío Hierro Negro", frFR = "Exhalombre Sombrefer", ptBR = "Lança-sombras Ferro Negro", ruRU = "Темный чародей из клана Черного Железа", koKR = "검은무쇠단 흑마술사", zhCN = "黑铁暗法师", zhTW = "黑鐵暗法師"},
+		zones = {45},
+	},
+	[2579] = {
+		level = "34 - 35",
+		names = {enUS = "Mesa Buzzard", deDE = "Mesabussard", esES = "Águila ratonera Mesa", esMX = "Águila ratonera de meseta", frFR = "Busard des mésas", ptBR = "Urubu da Chapada", ruRU = "Равнинный канюк", koKR = "절벽대머리수리", zhCN = "山地秃鹰", zhTW = "山地禿鷹"},
 		zones = {45},
 	},
 	[2580] = {
@@ -4919,6 +4898,12 @@ rm.npcDB = {
 		names = {enUS = "Lord Falconcrest", deDE = "Lord Falkenstein", esES = "Lord Cresta de Halcón", frFR = "Seigneur Falconcrest", ptBR = "Lorde Falcocrista", ruRU = "Лорд Фалконкрест", koKR = "팰컨크레스트 경", zhCN = "法库雷斯特公爵", zhTW = "法庫雷斯特公爵"},
 		zones = {45},
 	},
+	[2599] = {
+		classification = "Elite",
+		level = "38",
+		names = {enUS = "Otto", ruRU = "Отто", koKR = "오토", zhCN = "奥图", zhTW = "奧圖"},
+		zones = {45},
+	},
 	[2602] = {
 		classification = "Rare Elite",
 		level = "39",
@@ -4948,6 +4933,11 @@ rm.npcDB = {
 		level = "34 - 35",
 		names = {enUS = "Hammerfall Grunt", deDE = "Grunzer von Hammerfall", esES = "Bruto Sentencia", esMX = "Bruto de Sentencia", frFR = "Grunt de Trépas-d'Orgrim", ptBR = "Bruto da Ruína do Martelo", ruRU = "Рубака Павшего Молота", koKR = "해머폴 그런트", zhCN = "落锤步兵", zhTW = "落錘蠻兵"},
 		zones = {45},
+	},
+	[2624] = {
+		level = "40",
+		names = {enUS = "Gazban", ruRU = "Газбан", koKR = "가즈반", zhCN = "加兹班", zhTW = "加茲班"},
+		zones = {33},
 	},
 	[2626] = {
 		level = "43",
@@ -5066,6 +5056,12 @@ rm.npcDB = {
 	[2656] = {
 		level = "47 - 48",
 		names = {enUS = "Jade Ooze", deDE = "Jadegrüner Brühschlammer", esES = "Moco de jade", frFR = "Limon de jade", ptBR = "Gosma Jade", ruRU = "Нефритовый слизнюк", koKR = "비취 수액괴물", zhCN = "玉石软泥怪", zhTW = "玉石軟泥怪"},
+		zones = {47},
+	},
+	[2657] = {
+		faction = "Alliance",
+		level = "40 - 42",
+		names = {enUS = "Trained Razorbeak", deDE = "Ausgebildeter Klingenschnabel", esES = "Picovaja instruído", frFR = "Bec-rasoir apprivoisé", ptBR = "Bicavalha Adestrado", ruRU = "Обученный остроклюв", koKR = "길들인 뾰족부리그리핀", zhCN = "训练有素的锋喙狮鹫", zhTW = "訓練有素的鋒喙獅鷲獸"},
 		zones = {47},
 	},
 	[2658] = {
@@ -5205,6 +5201,11 @@ rm.npcDB = {
 		names = {enUS = "Dustbelcher Ogre", deDE = "Oger der Staubspeier", esES = "Ogro Rotapolvo", esMX = "Ogro Rotapolvo", frFR = "Ogre Crache-poussières", ptBR = "Ogro Arrota-pó", ruRU = "Огр из клана Гнилобрюхов", koKR = "먼지목도리 오우거", zhCN = "火烟食人魔", zhTW = "火煙巨魔"},
 		zones = {3},
 	},
+	[2715] = {
+		level = "39 - 40",
+		names = {enUS = "Dustbelcher Brute", deDE = "Schläger der Staubspeier", esES = "Tosco Rotapolvo", esMX = "Tosco Rotapolvo", frFR = "Brute Crache-poussières", ptBR = "Brutamontes Arrota-pó", ruRU = "Громила из клана Гнилобрюхов", koKR = "먼지목도리일족 투사", zhCN = "火烟蛮兵", zhTW = "火煙蠻兵"},
+		zones = {3},
+	},
 	[2716] = {
 		level = "40 - 41",
 		names = {enUS = "Dustbelcher Wyrmhunter", deDE = "Wyrmjäger der Staubspeier", esES = "Cazavermis Rotapolvo", esMX = "Cazavermis Rotapolvo", frFR = "Chasseur Wyrm Crache-poussières", ptBR = "Caçador de Serpes Arrota-pó", ruRU = "Охотник на драконов из клана Гнилобрюхов", koKR = "먼지목도리일족 고룡사냥꾼", zhCN = "火烟猎龙者", zhTW = "火煙獵龍者"},
@@ -5220,11 +5221,6 @@ rm.npcDB = {
 		names = {enUS = "Dustbelcher Shaman", deDE = "Schamane der Staubspeier", esES = "Chamán Rotapolvo", esMX = "Chamán Rotapolvo", frFR = "Chaman Crache-poussières", ptBR = "Xamã Arrota-pó", ruRU = "Шаман из клана Гнилобрюхов", koKR = "먼지목도리일족 주술사", zhCN = "火烟萨满祭司", zhTW = "火煙薩滿"},
 		zones = {3},
 	},
-	[2719] = {
-		level = "44 - 45",
-		names = {enUS = "Dustbelcher Lord", deDE = "Lord der Staubspeier", esES = "Señor Rotapolvo", frFR = "Seigneur Crache-poussières", ptBR = "Grande Arrota-pó", ruRU = "Вождь клана Гнилобрюхов", koKR = "먼지목도리일족 우두머리", zhCN = "火烟领主", zhTW = "火煙領主"},
-		zones = {3},
-	},
 	[2720] = {
 		level = "43 - 44",
 		names = {enUS = "Dustbelcher Ogre Mage", deDE = "Ogermagier der Staubspeier", esES = "Mago ogro Rotapolvo", frFR = "Ogre-mage Crache-poussières", ptBR = "Ogro-mago Arrota-pó", ruRU = "Огр-маг из клана Гнилобрюхов", koKR = "먼지목도리일족 오우거 마법사", zhCN = "火烟食人魔法师", zhTW = "火煙巨魔法師"},
@@ -5234,7 +5230,7 @@ rm.npcDB = {
 		faction = "Horde",
 		level = "35",
 		names = {enUS = "Forsaken Bodyguard", deDE = "Leibwache der Verlassenen", esES = "Guardaespaldas Renegado", esMX = "Guardaespaldas Renegado", frFR = "Garde du corps Réprouvé", ptBR = "Renegado Guarda-costas", ruRU = "Отрекшийся-телохранитель", koKR = "포세이큰 경호원", zhCN = "被遗忘者保镖", zhTW = "被遺忘者保鏢"},
-		zones = {267, 45},
+		zones = {45, 267},
 	},
 	[2723] = {
 		level = "38 - 39",
@@ -5318,6 +5314,12 @@ rm.npcDB = {
 		level = "38 - 39",
 		names = {enUS = "Shadowforge Warrior", deDE = "Krieger der Schattenschmiede", esES = "Guerrero Forjatiniebla", esMX = "Guerrero de Forjatiniebla", frFR = "Guerrier Ombreforge", ptBR = "Guerreiro de Umbraforja", ruRU = "Тенегорнский воин", koKR = "어둠괴철로단 전사", zhCN = "暗炉战士", zhTW = "暗爐戰士"},
 		zones = {3},
+	},
+	[2748] = {
+		classification = "Elite",
+		level = "47",
+		names = {enUS = "Archaedas", ptBR = "Arkhaedas", ruRU = "Аркедас", koKR = "아카에다스", zhCN = "阿扎达斯", zhTW = "阿札達斯"},
+		zones = {1337},
 	},
 	[2755] = {
 		classification = "Elite",
@@ -5451,7 +5453,7 @@ rm.npcDB = {
 	[2829] = {
 		level = "35 - 37",
 		names = {enUS = "Starving Buzzard", deDE = "Verhungernder Bussard", esES = "Águila ratonera hambriento", esMX = "Águila ratonera famélica", frFR = "Busard affamé", ptBR = "Urubu Faminto", ruRU = "Голодный канюк", koKR = "굶주린 대머리수리", zhCN = "饥饿的秃鹫", zhTW = "饑餓的禿鷲"},
-		zones = {3, 38},
+		zones = {3},
 	},
 	[2830] = {
 		level = "37 - 39",
@@ -5469,6 +5471,7 @@ rm.npcDB = {
 		zones = {33},
 	},
 	[2836] = {
+		faction = "Alliance",
 		level = "54",
 		names = {enUS = "Brikk Keencraft", esES = "Brikk Finoficio", esMX = "Brikk Finoficio", ptBR = "Brikk Belofício", ruRU = "Брикк Мастерец", koKR = "브리크 킨크래프트", zhCN = "布里克·基克拉夫", zhTW = "布里克·基克拉夫"},
 		zones = {33},
@@ -5479,6 +5482,7 @@ rm.npcDB = {
 		zones = {33},
 	},
 	[2838] = {
+		faction = "Alliance",
 		level = "46",
 		names = {enUS = "Crazk Sparks", esES = "Craz Chispaz", esMX = "Craz Chispaz", ptBR = "Crazk Chispas", ruRU = "Кразк Искрец", koKR = "크라즈크 스팍스", zhCN = "克拉赛·斯巴克斯", zhTW = "克拉賽·斯巴克斯"},
 		zones = {33},
@@ -5576,12 +5580,6 @@ rm.npcDB = {
 		names = {enUS = "Savage Owlbeast", deDE = "Wilde Eulenbestie", esES = "Lechubestia salvaje", frFR = "Chouettard sauvage", ptBR = "Feruja Selvagem", ruRU = "Дикий совух", koKR = "포악한 올빼미야수", zhCN = "野蛮的枭兽", zhTW = "野蠻的梟獸"},
 		zones = {47},
 	},
-	[2937] = {
-		classification = "Elite",
-		level = "43",
-		names = {enUS = "Dagun the Ravenous", deDE = "Dagun der Gefräßige", esES = "Dagun el Voraz", esMX = "Dagun el Voraz", frFR = "Dagun le Vorace", ptBR = "Dagun, o Voraz", ruRU = "Дагун Ненасытный", koKR = "포악한 다군", zhCN = "贪婪的达古恩", zhTW = "貪婪的達古恩"},
-		zones = {15},
-	},
 	[2949] = {
 		level = "5 - 6",
 		names = {enUS = "Palemane Tanner", deDE = "Gerber der Bleichmähnen", esES = "Peletero Crines Pálidos", esMX = "Peletero Crines Pálidas", frFR = "Tanneur crin-pâle", ptBR = "Coureiro Jubalba", ruRU = "Дубильщик из стаи Бледногривов", koKR = "회색갈기일족 무두장이", zhCN = "白鬃制革工", zhTW = "白鬃製革工"},
@@ -5594,7 +5592,7 @@ rm.npcDB = {
 	},
 	[2951] = {
 		level = "7 - 8",
-		names = {enUS = "Palemane Poacher", deDE = "Wilderer der Bleichmähnen", esES = "Furtivo Crines Pálidos", frFR = "Braconnier crin-pâle", ptBR = "Larápio Jubalba", ruRU = "Браконьер из стаи Бледногривов", koKR = "회색갈기일족 밀렵꾼", zhCN = "白鬃偷猎者", zhTW = "白鬃偷獵者"},
+		names = {enUS = "Palemane Poacher", deDE = "Wilderer der Bleichmähnen", esES = "Furtivo Crines Pálidos", esMX = "Furtivo Crines Pálidas", frFR = "Braconnier crin-pâle", ptBR = "Larápio Jubalba", ruRU = "Браконьер из стаи Бледногривов", koKR = "회색갈기일족 밀렵꾼", zhCN = "白鬃偷猎者", zhTW = "白鬃偷獵者"},
 		zones = {215},
 	},
 	[2956] = {
@@ -5650,7 +5648,7 @@ rm.npcDB = {
 	[2968] = {
 		level = "9 - 10",
 		names = {enUS = "Galak Outrunner", deDE = "Kundschafter der Galak", esES = "Avanzado Galak", esMX = "Avanzado Galak", frFR = "Estafette galak", ptBR = "Vanguardeiro Galath", ruRU = "Гонец из племени Галак", koKR = "갈라크일족 정찰꾼", zhCN = "加拉克前锋", zhTW = "加拉克前鋒"},
-		zones = {215, 17},
+		zones = {215},
 	},
 	[2969] = {
 		level = "5 - 7",
@@ -5684,7 +5682,7 @@ rm.npcDB = {
 	},
 	[2975] = {
 		level = "5 - 6",
-		names = {enUS = "Venture Co. Hireling", deDE = "Mietling der Venture Co.", esES = "Contratista de Ventura y Cía.", frFR = "Journalier de la KapitalRisk", ptBR = "Mercenário da Empreendimentos S.A.", ruRU = "Наймит Торговой компании", koKR = "투자개발회사 고용인", zhCN = "风险投资公司雇员", zhTW = "風險投資公司雇員"},
+		names = {enUS = "Venture Co. Hireling", deDE = "Mietling der Venture Co.", esES = "Contratista de Ventura y Cía.", esMX = "Contratista de Ventura y Cía.", frFR = "Journalier de la KapitalRisk", ptBR = "Mercenário da Empreendimentos S.A.", ruRU = "Наймит Торговой компании", koKR = "투자개발회사 고용인", zhCN = "风险投资公司雇员", zhTW = "風險投資公司雇員"},
 		zones = {215},
 	},
 	[2976] = {
@@ -5872,11 +5870,6 @@ rm.npcDB = {
 		names = {enUS = "Franklin Hamar", ruRU = "Франклин Хамар", koKR = "프랭클린 하머", zhCN = "富兰克林·哈玛", zhTW = "佛蘭克林·哈瑪"},
 		zones = {44},
 	},
-	[3094] = {
-		level = "49 - 51",
-		names = {enUS = "Unseen", deDE = "Unsichtbarer", esES = "Oculto", frFR = "Invisible", ptBR = "Oculto", ruRU = "Незримый", koKR = "혼령", zhCN = "隐迹鬼魂", zhTW = "隱跡鬼魂"},
-		zones = {10},
-	},
 	[3096] = {
 		level = "22",
 		names = {enUS = "Captured Servant of Azora", deDE = "Gefangener Diener von Azora", esES = "Sirviente de Azora capturado", esMX = "Sirviente de Azora capturado", frFR = "Serviteur d’Azora capturé", ptBR = "Serviçal de Azora Capturado", ruRU = "Пленный слуга Азоры", koKR = "사로잡힌 아조라의 하인", zhCN = "阿祖拉的仆从", zhTW = "阿祖拉的僕從"},
@@ -5885,7 +5878,7 @@ rm.npcDB = {
 	[3099] = {
 		level = "3 - 7",
 		names = {enUS = "Dire Mottled Boar", deDE = "Scheckiger Terroreber", esES = "Jabalí jaspeado feroz", esMX = "Jabalí jaspeado temible", frFR = "Sanglier tacheté redoutable", ptBR = "Mosquetusco Hediondo", ruRU = "Лютый пятнистый вепрь", koKR = "사나운 점박이멧돼지", zhCN = "可怕的杂斑野猪", zhTW = "可怕的雜斑野豬"},
-		zones = {14},
+		zones = {1637, 14},
 	},
 	[3100] = {
 		level = "8 - 9",
@@ -5900,6 +5893,11 @@ rm.npcDB = {
 	[3104] = {
 		level = "6 - 7",
 		names = {enUS = "Makrura Shellhide", deDE = "Makruramuschelhaut", esES = "Caparapiel Makrura", esMX = "Caparapiel makrura", frFR = "Coquillard makrura", ptBR = "Conchacouro Makrura", ruRU = "Макрура-панцирник", koKR = "등껍질 마크루라", zhCN = "厚壳龙虾人", zhTW = "厚殼龍蝦人"},
+		zones = {14},
+	},
+	[3106] = {
+		level = "5 - 6",
+		names = {enUS = "Pygmy Surf Crawler", deDE = "Zwergbrandungskriecher", esES = "Correspuma pígmeo", esMX = "Reptador de espuma pigmeo", frFR = "Clampant de l'écume pygmée", ptBR = "Surfatisco Pigmeu", ruRU = "Карликовый приливный краб", koKR = "새끼 붉은톱니게", zhCN = "小海浪蟹", zhTW = "小海浪蟹"},
 		zones = {14},
 	},
 	[3107] = {
@@ -5953,7 +5951,7 @@ rm.npcDB = {
 		zones = {14},
 	},
 	[3119] = {
-		level = "5 - 7",
+		level = "4 - 7",
 		names = {enUS = "Kolkar Drudge", deDE = "Zwangsarbeiter der Kolkar", esES = "Esclavo Kolkar", esMX = "Bracero Kolkar", frFR = "Manoeuvre kolkar", ptBR = "Mourejante Kolkar", ruRU = "Чернорабочий из племени Колкар", koKR = "콜카르일족 싸움꾼", zhCN = "科卡尔苦工", zhTW = "科卡爾苦工"},
 		zones = {14},
 	},
@@ -5975,6 +5973,11 @@ rm.npcDB = {
 	[3123] = {
 		level = "8 - 10",
 		names = {enUS = "Bloodtalon Scythemaw", deDE = "Blutkrallensensenschlund", esES = "Garrasangre Rojomorro", esMX = "Rojomorro Garrasangre", frFR = "Tranche-gueule Griffesang", ptBR = "Bocalfanje Garrassangre", ruRU = "Лезвезуб Кровавого Когтя", koKR = "채찍꼬리 붉은발톱랩터", zhCN = "血爪锐齿龙", zhTW = "血爪銳齒龍"},
+		zones = {14},
+	},
+	[3125] = {
+		level = "5 - 6",
+		names = {enUS = "Clattering Scorpid", deDE = "Rasselnder Skorpid", esES = "Escórpido castañeante", esMX = "Escórpido castañeteante", frFR = "Scorpide cliquetant", ptBR = "Escorpídeo Estalador", ruRU = "Гремучий скорпид", koKR = "집게발전갈", zhCN = "巨钳蝎", zhTW = "巨鉗蠍"},
 		zones = {14},
 	},
 	[3126] = {
@@ -6165,6 +6168,11 @@ rm.npcDB = {
 	[3234] = {
 		level = "14 - 15",
 		names = {enUS = "Lost Barrens Kodo", deDE = "Verirrter Brachlandkodo", esES = "Kodo de los Baldíos Perdidos", esMX = "Kodo de Los Baldíos perdido", frFR = "Kodo égaré des Tarides", ptBR = "Kodo Perdido dos Sertões", ruRU = "Потерявшийся степной кодо", koKR = "길잃은 황무지 코도", zhCN = "落单的草原科多兽", zhTW = "落單的草原科多獸"},
+		zones = {17},
+	},
+	[3235] = {
+		level = "24 - 25",
+		names = {enUS = "Greater Barrens Kodo", deDE = "Großer Brachlandkodo", esES = "Kodo mayor de Los Baldíos", esMX = "Kodo de Los Baldíos superior", frFR = "Grand kodo des Tarides", ptBR = "Grande Kodo dos Sertões", ruRU = "Большой степной кодо", koKR = "거대한 황무지 코도", zhCN = "巨型草原科多兽", zhTW = "巨型草原科多獸"},
 		zones = {17},
 	},
 	[3236] = {
@@ -6576,7 +6584,7 @@ rm.npcDB = {
 	[3386] = {
 		faction = "Alliance",
 		level = "16 - 17",
-		names = {enUS = "Theramore Preserver", deDE = "Bewahrerin von Theramore", esES = "Presertor de Theramonte", frFR = "Protectrice de Theramore", ptBR = "Preservadora de Theramore", ruRU = "Тераморская оберегательница", koKR = "테라모어 치료사", zhCN = "塞拉摩医师", zhTW = "塞拉摩醫師"},
+		names = {enUS = "Theramore Preserver", deDE = "Bewahrerin von Theramore", esES = "Presertor de Theramonte", esMX = "Valedora de Theramore", frFR = "Protectrice de Theramore", ptBR = "Preservadora de Theramore", ruRU = "Тераморская оберегательница", koKR = "테라모어 치료사", zhCN = "塞拉摩医师", zhTW = "塞拉摩醫師"},
 		zones = {17},
 	},
 	[3392] = {
@@ -6713,11 +6721,6 @@ rm.npcDB = {
 		names = {enUS = "Supervisor Lugwizzle", deDE = "Vorsteher Lugwizzle", esMX = "Supervisor Palarrastre", frFR = "Superviseur Lugwizzle", ptBR = "Supervisor Rancatraca", ruRU = "Бригадир Зубовиззл", koKR = "관리자 러그위즐", zhCN = "鲁格维兹主管", zhTW = "魯格維茲主管"},
 		zones = {17},
 	},
-	[3452] = {
-		level = "20",
-		names = {enUS = "Serena Bloodfeather", deDE = "Serena Blutfeder", esES = "Serena Sangrepluma", esMX = "Serena Sangrepluma", frFR = "Serena Plumesang", ptBR = "Serena Plumassangue", ruRU = "Серена Кровавое Перо", koKR = "붉은깃털 세레나", zhCN = "塞瑞娜·血羽", zhTW = "塞瑞娜·血羽"},
-		zones = {17},
-	},
 	[3454] = {
 		level = "19",
 		names = {enUS = "Cannoneer Smythe", deDE = "Kanonier Hecksler", esES = "Cañonero Smythe", esMX = "Cañonero Smythe", frFR = "Canonnier Smythe", ptBR = "Canhoneiro Smythe", ruRU = "Канонир Смайт", koKR = "포병 스미스", zhCN = "炮兵斯密瑟", zhTW = "炮兵斯密瑟"},
@@ -6745,7 +6748,7 @@ rm.npcDB = {
 	},
 	[3459] = {
 		level = "24 - 25",
-		names = {enUS = "Razormane Warfrenzy", deDE = "Kriegsberserker der Grimmhauer", esES = "Frenético bélico Crines de Acero", frFR = "Frénétique Tranchecrin", ptBR = "Belicoso Crinavalha", ruRU = "Бешенер из племени Иглогривых", koKR = "서슬갈기일족 광전사", zhCN = "钢鬃战士", zhTW = "鋼鬃戰士"},
+		names = {enUS = "Razormane Warfrenzy", deDE = "Kriegsberserker der Grimmhauer", esES = "Demente bélico Crines de Acero", frFR = "Frénétique Tranchecrin", ptBR = "Belicoso Crinavalha", ruRU = "Бешенер из племени Иглогривых", koKR = "서슬갈기일족 광전사", zhCN = "钢鬃战士", zhTW = "鋼鬃戰士"},
 		zones = {17},
 	},
 	[3461] = {
@@ -6766,12 +6769,6 @@ rm.npcDB = {
 	[3467] = {
 		level = "16",
 		names = {enUS = "Baron Longshore", deDE = "Baron Küstenschipper", esES = "Barón Longavera", esMX = "Barón Longavera", frFR = "Baron de Longrivage", ptBR = "Barão Longacosta", ruRU = "Барон Дольноберег", koKR = "남작 롱쇼어", zhCN = "巴隆·朗绍尔", zhTW = "巴隆·朗紹爾"},
-		zones = {17},
-	},
-	[3470] = {
-		classification = "Rare",
-		level = "15",
-		names = {enUS = "Rathorian", ruRU = "Раториан", koKR = "라소리안", zhCN = "拉索利安", zhTW = "拉索利安"},
 		zones = {17},
 	},
 	[3471] = {
@@ -7000,6 +6997,12 @@ rm.npcDB = {
 		names = {enUS = "Androl Oakhand", esES = "Androl Manorroble", esMX = "Androl Manorroble", ptBR = "Androl Carvalmanos", ruRU = "Андрол Дубовая Длань", koKR = "안드롤 오크핸드", zhCN = "安多尔·橡木之手", zhTW = "安多爾·橡木之手"},
 		zones = {141},
 	},
+	[3621] = {
+		faction = "Horde",
+		level = "50",
+		names = {enUS = "Kurll", ptBR = "Korll", ruRU = "Курлл", koKR = "쿠를", zhCN = "库尔", zhTW = "庫爾"},
+		zones = {16},
+	},
 	[3630] = {
 		classification = "Elite",
 		level = "15 - 16",
@@ -7033,13 +7036,13 @@ rm.npcDB = {
 	[3636] = {
 		classification = "Elite",
 		level = "18 - 19",
-		names = {enUS = "Deviate Ravager", deDE = "Deviatverheerer", esES = "Devastador descarriado", frFR = "Ravageur déviant", ptBR = "Assolador Anormal", ruRU = "Загадочный опустошитель", koKR = "돌연변이 약탈자랩터", zhCN = "变异破坏者", zhTW = "變異破壞者"},
+		names = {enUS = "Deviate Ravager", deDE = "Deviatverheerer", esES = "Devastador descarriado", esMX = "Devastador descarriado", frFR = "Ravageur déviant", ptBR = "Assolador Anormal", ruRU = "Загадочный опустошитель", koKR = "돌연변이 약탈자랩터", zhCN = "变异破坏者", zhTW = "變異破壞者"},
 		zones = {718},
 	},
 	[3637] = {
 		classification = "Elite",
 		level = "18 - 19",
-		names = {enUS = "Deviate Guardian", deDE = "Deviatwächter", esES = "Guardián descarriado", frFR = "Gardien déviant", ptBR = "Guardião Anormal", ruRU = "Загадочный страж", koKR = "돌연변이 우두머리랩터", zhCN = "变异守护者", zhTW = "變異守護者"},
+		names = {enUS = "Deviate Guardian", deDE = "Deviatwächter", esES = "Guardián descarriado", esMX = "Guardián descarriado", frFR = "Gardien déviant", ptBR = "Guardião Anormal", ruRU = "Загадочный страж", koKR = "돌연변이 우두머리랩터", zhCN = "变异守护者", zhTW = "變異守護者"},
 		zones = {718},
 	},
 	[3638] = {
@@ -7051,13 +7054,14 @@ rm.npcDB = {
 	[3640] = {
 		classification = "Elite",
 		level = "17 - 18",
-		names = {enUS = "Evolving Ectoplasm", deDE = "Entstehendes Ektoplasma", esES = "Ectoplasma en desarrollo", frFR = "Ectoplasme grandissant", ptBR = "Ectoplasma Evolutivo", ruRU = "Изменчивая эктоплазма", koKR = "진화된 세포괴물", zhCN = "大型软浆怪", zhTW = "大型軟漿怪"},
+		names = {enUS = "Evolving Ectoplasm", deDE = "Entstehendes Ektoplasma", esES = "Ectoplasma en desarrollo", esMX = "Ectoplasma en desarrollo", frFR = "Ectoplasme grandissant", ptBR = "Ectoplasma Evolutivo", ruRU = "Изменчивая эктоплазма", koKR = "진화된 세포괴물", zhCN = "大型软浆怪", zhTW = "大型軟漿怪"},
 		zones = {718},
 	},
 	[3641] = {
 		classification = "Elite",
 		level = "16 - 17",
 		names = {enUS = "Deviate Lurker", deDE = "Deviatlauerer", esES = "Rondador descarriado", esMX = "Rondador descarriado", frFR = "Rôdeur déviant", ptBR = "Tocaieiro Anormal", ruRU = "Загадочный скрытень", koKR = "돌연변이 비늘트레샤돈", zhCN = "变异潜伏者", zhTW = "變異潛伏者"},
+		zones = {17},
 	},
 	[3652] = {
 		classification = "Rare Elite",
@@ -7070,10 +7074,38 @@ rm.npcDB = {
 		names = {enUS = "Kresh", ptBR = "Cresh", ruRU = "Криг", koKR = "크레쉬", zhCN = "克雷什", zhTW = "克雷什"},
 		zones = {718},
 	},
+	[3654] = {
+		classification = "Elite",
+		level = "22",
+		names = {enUS = "Mutanus the Devourer", deDE = "Mutanus der Verschlinger", esES = "Mutanus el Devorador", esMX = "Mutanus el Devorador", frFR = "Mutanus le Dévoreur", ptBR = "Mutanus, o Devorador", ruRU = "Мутанус Пожиратель", koKR = "걸신들린 무타누스", zhCN = "吞噬者穆坦努斯", zhTW = "吞噬者穆坦努斯"},
+		zones = {718},
+	},
+	[3660] = {
+		level = "31",
+		names = {enUS = "Athrikus Narassin", ruRU = "Атрикус Нарассин", koKR = "애스리쿠스 나라신", zhCN = "埃瑟里克斯·纳拉辛", zhTW = "埃瑟里克斯·納拉辛"},
+		zones = {148},
+	},
+	[3662] = {
+		level = "17",
+		names = {enUS = "Delmanis the Hated", deDE = "Delmanis der Verhasste", esES = "Delmanis el Odiado", esMX = "Delmanis el Odiado", frFR = "Delmanis le Haï", ptBR = "Delmanis, o Odiado", ruRU = "Делманис Ненавистный", koKR = "증오의 델마니스", zhCN = "被憎恨的德玛尼斯", zhTW = "被憎恨的德瑪尼斯"},
+		zones = {148},
+	},
 	[3667] = {
 		level = "16",
 		names = {enUS = "Anaya Dawnrunner", esES = "Anaia Correalba", esMX = "Anaia Correalba", ptBR = "Anaya Correalba", ruRU = "Анайя Вестница Рассвета", koKR = "아나야 돈러너", zhCN = "安娜雅·晨路", zhTW = "安娜雅·晨路"},
 		zones = {148},
+	},
+	[3669] = {
+		classification = "Elite",
+		level = "20",
+		names = {enUS = "Lord Cobrahn", deDE = "Lord Kobrahn", frFR = "Seigneur Cobrahn", ptBR = "Lorde Cobrahn", ruRU = "Лорд Кобран", koKR = "군주 코브란", zhCN = "考布莱恩", zhTW = "考布萊恩"},
+		zones = {718},
+	},
+	[3670] = {
+		classification = "Elite",
+		level = "21",
+		names = {enUS = "Lord Pythas", frFR = "Seigneur Pythas", ptBR = "Lorde Pítias", ruRU = "Лорд Питонас", koKR = "군주 피타스", zhCN = "皮萨斯", zhTW = "皮薩斯"},
+		zones = {718},
 	},
 	[3671] = {
 		classification = "Elite",
@@ -7092,7 +7124,14 @@ rm.npcDB = {
 		names = {enUS = "Lord Serpentis", frFR = "Seigneur Serpentis", ptBR = "Lorde Serpentis", ruRU = "Лорд Серпентис", koKR = "군주 서펜티스", zhCN = "瑟芬迪斯", zhTW = "瑟芬迪斯"},
 		zones = {718},
 	},
+	[3674] = {
+		classification = "Elite",
+		level = "21",
+		names = {enUS = "Skum", ptBR = "Skória", ruRU = "Шкам", koKR = "스컴", zhCN = "斯卡姆", zhTW = "斯卡姆"},
+		zones = {718},
+	},
 	[3683] = {
+		faction = "Horde",
 		level = "32",
 		names = {enUS = "Kiknikle", ptBR = "Jirimum", ruRU = "Пниподзад", koKR = "킥니클", zhCN = "吉克尼库", zhTW = "吉克尼庫"},
 		zones = {17},
@@ -7153,22 +7192,22 @@ rm.npcDB = {
 	[3725] = {
 		level = "18 - 19",
 		names = {enUS = "Dark Strand Cultist", deDE = "Kultist des dunklen Strangs", esES = "Fiel de la Facción Oscura", frFR = "Sectateur de la Rive noire", ptBR = "Sectário da Linhagem das Trevas", ruRU = "Сектант из клана Темной Нити", koKR = "암흑이교도 제사장", zhCN = "暗滩祭司", zhTW = "暗灘祭司"},
-		zones = {331},
+		zones = {331, 148},
 	},
 	[3727] = {
 		level = "20 - 21",
 		names = {enUS = "Dark Strand Enforcer", deDE = "Vollstrecker des dunklen Strangs", esES = "Déspota de la Facción Oscura", frFR = "Massacreur de la Rive noire", ptBR = "Impositor da Linhagem das Trevas", ruRU = "Головорез из клана Темной Нити", koKR = "암흑이교도 집행자", zhCN = "暗滩执行者", zhTW = "暗灘執行者"},
-		zones = {331},
+		zones = {331, 148},
 	},
 	[3728] = {
 		level = "18 - 19",
 		names = {enUS = "Dark Strand Adept", deDE = "Adept des dunklen Strangs", esES = "Adepto de la Facción Oscura", frFR = "Adepte de la Rive noire", ptBR = "Adepto da Linhagem das Trevas", ruRU = "Адепт из клана Темной Нити", koKR = "암흑이교도 마법사", zhCN = "暗滩精兵", zhTW = "暗灘精兵"},
-		zones = {331},
+		zones = {331, 148},
 	},
 	[3730] = {
 		level = "19 - 20",
 		names = {enUS = "Dark Strand Excavator", deDE = "Ausgräber des dunklen Strangs", esES = "Excavador de la Facción Oscura", frFR = "Excavateur de la Rive noire", ptBR = "Escavador da Linhagem das Trevas", ruRU = "Землечерп из клана Темной Нити", koKR = "암흑이교도 굴착자", zhCN = "暗滩挖掘者", zhTW = "暗灘挖掘者"},
-		zones = {331},
+		zones = {331, 148},
 	},
 	[3732] = {
 		faction = "Horde",
@@ -7213,6 +7252,11 @@ rm.npcDB = {
 		names = {enUS = "Foulweald Warrior", deDE = "Krieger der Fäulnisklauen", esES = "Guerrero Maderiza", esMX = "Guerrero Maderiza", frFR = "Guerrier Vile-sylve", ptBR = "Guerreiro Torpeflora", ruRU = "Воин из племени Гиблой Чащи", koKR = "썩은나무일족 전사", zhCN = "污林战士", zhTW = "汙林戰士"},
 		zones = {331},
 	},
+	[3745] = {
+		level = "23 - 24",
+		names = {enUS = "Foulweald Pathfinder", deDE = "Pfadfinder der Fäulnisklauen", esES = "Abrecaminos Maderiza", esMX = "Abrecaminos Maderiza", frFR = "Guide Vile-sylve", ptBR = "Desbravador Torpeflora", ruRU = "Землепроходец из племени Гиблой Чащи", koKR = "썩은나무일족 길잡이", zhCN = "污林探险者", zhTW = "汙林探險者"},
+		zones = {331},
+	},
 	[3746] = {
 		level = "24 - 25",
 		names = {enUS = "Foulweald Den Watcher", deDE = "Höhlenbehüter der Fäulnisklauen", esES = "Vigilante del cubil Maderiza", esMX = "Vigía del cubil Maderiza", frFR = "Protecteur Vile-sylve", ptBR = "Vigia do Covil Torpeflora", ruRU = "Дозорный из племени Гиблой Чащи", koKR = "썩은나무일족 보초", zhCN = "污林卫兵", zhTW = "汙林衛兵"},
@@ -7255,12 +7299,12 @@ rm.npcDB = {
 	},
 	[3758] = {
 		level = "25 - 26",
-		names = {enUS = "Felmusk Satyr", deDE = "Satyr der Teufelshufe", esES = "Sátiro Putredor", frFR = "Satyre Gangremusc", ptBR = "Sátiro Malmíscar", ruRU = "Сатир из племени Мускуса Скверны", koKR = "검은유혹의 사티로스", zhCN = "魔草萨特", zhTW = "魔草薩特"},
+		names = {enUS = "Felmusk Satyr", deDE = "Satyr der Teufelshufe", esES = "Sátiro Putredor", esMX = "Sátiro Putredor", frFR = "Satyre Gangremusc", ptBR = "Sátiro Malmíscar", ruRU = "Сатир из племени Мускуса Скверны", koKR = "검은유혹의 사티로스", zhCN = "魔草萨特", zhTW = "魔草薩特"},
 		zones = {331},
 	},
 	[3759] = {
 		level = "26 - 27",
-		names = {enUS = "Felmusk Rogue", deDE = "Schurke der Teufelshufe", esES = "Pícaro Putredor", frFR = "Voleur Gangremusc", ptBR = "Ladino Malmíscar", ruRU = "Разбойник из племени Мускуса Скверны", koKR = "검은유혹의 도적", zhCN = "魔草潜行者", zhTW = "魔草盜賊"},
+		names = {enUS = "Felmusk Rogue", deDE = "Schurke der Teufelshufe", esES = "Pícaro Putredor", esMX = "Pícaro Putredor", frFR = "Voleur Gangremusc", ptBR = "Ladino Malmíscar", ruRU = "Разбойник из племени Мускуса Скверны", koKR = "검은유혹의 도적", zhCN = "魔草潜行者", zhTW = "魔草盜賊"},
 		zones = {331},
 	},
 	[3762] = {
@@ -7270,7 +7314,7 @@ rm.npcDB = {
 	},
 	[3763] = {
 		level = "26 - 27",
-		names = {enUS = "Felmusk Shadowstalker", deDE = "Schattenpirscher der Teufelshufe", esES = "Acechasombras Putredor", frFR = "Traqueur des ténèbres Gangremusc", ptBR = "Assombrante Malmíscar", ruRU = "Тенелов из племени Мускуса Скверны", koKR = "검은유혹의 그림자추적자", zhCN = "魔草巡影者", zhTW = "魔草巡影者"},
+		names = {enUS = "Felmusk Shadowstalker", deDE = "Schattenpirscher der Teufelshufe", esES = "Acechasombras Putredor", esMX = "Acechasombras Putredor", frFR = "Traqueur des ténèbres Gangremusc", ptBR = "Assombrante Malmíscar", ruRU = "Тенелов из племени Мускуса Скверны", koKR = "검은유혹의 그림자추적자", zhCN = "魔草巡影者", zhTW = "魔草巡影者"},
 		zones = {331},
 	},
 	[3765] = {
@@ -7341,7 +7385,7 @@ rm.npcDB = {
 	[3797] = {
 		faction = "Alliance",
 		level = "25 - 26",
-		names = {enUS = "Cenarion Protector", deDE = "Cenarischer Beschützer", esES = "Protector Cenarion", frFR = "Protecteur cénarien", ptBR = "Protetor Cenariano", ruRU = "Кенарийский заступник", koKR = "세나리온 관리인", zhCN = "塞纳里奥保卫者", zhTW = "塞納里奧保衛者"},
+		names = {enUS = "Cenarion Protector", deDE = "Cenarischer Beschützer", esES = "Protector Cenarion", esMX = "Protector Cenarion", frFR = "Protecteur cénarien", ptBR = "Protetor Cenariano", ruRU = "Кенарийский заступник", koKR = "세나리온 관리인", zhCN = "塞纳里奥保卫者", zhTW = "塞納里奧保衛者"},
 		zones = {331},
 	},
 	[3799] = {
@@ -7459,20 +7503,20 @@ rm.npcDB = {
 	},
 	[3834] = {
 		level = "27 - 28",
-		names = {enUS = "Crazed Ancient", deDE = "Wahnsinniges Urtum", esES = "Anciano enloquecido", frFR = "Ancien fou", ptBR = "Anciente Enlouquecido", ruRU = "Безумный древняк", koKR = "광기어린 고대정령", zhCN = "疯狂的古树", zhTW = "瘋狂的古樹"},
+		names = {enUS = "Crazed Ancient", deDE = "Wahnsinniges Urtum", esES = "Anciano enloquecido", esMX = "Anciano enloquecido", frFR = "Ancien fou", ptBR = "Anciente Enlouquecido", ruRU = "Безумный древняк", koKR = "광기어린 고대정령", zhCN = "疯狂的古树", zhTW = "瘋狂的古樹"},
 		zones = {331},
 	},
 	[3840] = {
 		classification = "Elite",
 		level = "19 - 20",
-		names = {enUS = "Druid of the Fang", deDE = "Druide des Giftzahns", esES = "Druida del Colmillo", frFR = "Druide du Croc", ptBR = "Druida da Presa", ruRU = "Друид Клыка", koKR = "송곳니의 드루이드", zhCN = "尖牙德鲁伊", zhTW = "尖牙德魯伊"},
+		names = {enUS = "Druid of the Fang", deDE = "Druide des Giftzahns", esES = "Druida del Colmillo", esMX = "Druida del Colmillo", frFR = "Druide du Croc", ptBR = "Druida da Presa", ruRU = "Друид Клыка", koKR = "송곳니의 드루이드", zhCN = "尖牙德鲁伊", zhTW = "尖牙德魯伊"},
 		zones = {718},
 	},
 	[3849] = {
 		classification = "Elite",
 		faction = "Horde",
 		level = "18",
-		names = {enUS = "Deathstalker Adamant", deDE = "Todespirscher Adamant", esES = "Mortacechador Adamant", esMX = "Mortacechador Adamant", frFR = "Traqueur noir Adamant", ptBR = "Sicário Admeto", ruRU = "Страж смерти Адамант", koKR = "죽음의추적자 아다만트", zhCN = "亡灵哨兵阿达曼特", zhTW = "亡靈哨兵阿達曼特"},
+		names = {enUS = "Deathstalker Adamant", deDE = "Todespirscher Adamant", esES = "Mortacechador Adamant", esMX = "Mortacechador Adamant", frFR = "Traqueur noir Adamant", ptBR = "Sicário Admeto", ruRU = "Страж смерти Адамант", koKR = "죽음추적자 아다만트", zhCN = "亡灵哨兵阿达曼特", zhTW = "亡靈哨兵阿達曼特"},
 		zones = {209},
 	},
 	[3850] = {
@@ -7539,13 +7583,13 @@ rm.npcDB = {
 	[3864] = {
 		classification = "Elite",
 		level = "19 - 20",
-		names = {enUS = "Fel Steed", deDE = "Teufelsross", esES = "Corcel nefasto", frFR = "Palefroi corrompu", ptBR = "Corcel Vil", ruRU = "Конь скверны", koKR = "지옥마", zhCN = "地狱战马", zhTW = "地獄戰馬"},
+		names = {enUS = "Fel Steed", deDE = "Teufelsross", esES = "Corcel nefasto", esMX = "Corcel vil", frFR = "Palefroi corrompu", ptBR = "Corcel Vil", ruRU = "Конь скверны", koKR = "지옥마", zhCN = "地狱战马", zhTW = "地獄戰馬"},
 		zones = {209},
 	},
 	[3865] = {
 		classification = "Elite",
 		level = "20 - 21",
-		names = {enUS = "Shadow Charger", deDE = "Schattenstürmer", esES = "Cargador de las Sombras", esMX = "Destrero de la Sombra", frFR = "Destrier des ténèbres", ptBR = "Corcel das Sombras", ruRU = "Скакун тени", koKR = "암흑마", zhCN = "暗影军马", zhTW = "暗影戰馬"},
+		names = {enUS = "Shadow Charger", deDE = "Schattenstürmer", esES = "Cargador de las Sombras", esMX = "Destrero de la Sombra", frFR = "Destrier des ténèbres", ptBR = "Corcel das Sombras", ruRU = "Скакун тени", koKR = "암흑마", zhCN = "暗影军马", zhTW = "暗影戰騎"},
 		zones = {209},
 	},
 	[3866] = {
@@ -7558,6 +7602,12 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "23 - 24",
 		names = {enUS = "Blood Seeker", deDE = "Blutsucher", esES = "Rastreasangre", esMX = "Rastreasangre", frFR = "Sanguinaire", ptBR = "Busca-sangue", ruRU = "Кровожад", koKR = "흡혈박쥐", zhCN = "觅血者", zhTW = "覓血者"},
+		zones = {209},
+	},
+	[3872] = {
+		classification = "Rare Elite",
+		level = "25",
+		names = {enUS = "Deathsworn Captain", deDE = "Todeshöriger Captain", esES = "Capitán Juramorte", esMX = "Capitán Juramorte", frFR = "Capitaine Ligemort", ptBR = "Capitão Devoto da Morte", ruRU = "Капитан служителей Смерти", koKR = "죽음의 경비대장", zhCN = "死亡之誓", zhTW = "死亡之誓"},
 		zones = {209},
 	},
 	[3873] = {
@@ -7595,6 +7645,12 @@ rm.npcDB = {
 		names = {enUS = "Razorclaw the Butcher", deDE = "Klingenklaue der Metzger", esES = "Zarpador el Carnicero", esMX = "Zarpador el Carnicero", frFR = "Tranchegriffe le Boucher", ptBR = "Garraguda, o Açougueiro", ruRU = "Остроклык Мясник", koKR = "도살자 칼날발톱", zhCN = "屠夫拉佐克劳", zhTW = "屠夫拉佐克勞"},
 		zones = {209},
 	},
+	[3887] = {
+		classification = "Elite",
+		level = "24",
+		names = {enUS = "Baron Silverlaine", esES = "Barón Filargenta", esMX = "Barón Filargenta", frFR = "Baron d'Argelaine", ptBR = "Barão Silverlaine", ruRU = "Барон Сребролен", koKR = "남작 실버레인", zhCN = "席瓦莱恩男爵", zhTW = "席瓦萊恩男爵"},
+		zones = {209},
+	},
 	[3893] = {
 		level = "23",
 		names = {enUS = "Forsaken Scout", deDE = "Späher der Verlassenen", esES = "Explorador Renegado", frFR = "Eclaireur Réprouvé", ptBR = "Batedor Renegado", ruRU = "Отрекшийся разведчик", koKR = "포세이큰 정찰병", zhCN = "亡灵斥候", zhTW = "亡靈斥候"},
@@ -7603,12 +7659,18 @@ rm.npcDB = {
 	[3898] = {
 		level = "24",
 		names = {enUS = "Aligar the Tormentor", deDE = "Aligar der Peiniger", esES = "Aligar el Torturador", frFR = "Aligar le Tourmenteur", ptBR = "Aligar, o Atormentador", ruRU = "Алигар Мучитель", koKR = "원한의 알리가르", zhCN = "折磨者奥利加尔", zhTW = "折磨者奧利加爾"},
-		zones = {148},
+		zones = {331, 148},
 	},
-	[3899] = {
+	[3900] = {
 		level = "24",
-		names = {enUS = "Balizar the Umbrage", deDE = "Balizar der Anstößige", esES = "Balizar el Agraviado", frFR = "Balizar l’Ombrageux", ptBR = "Balizar, o Ofensor", ruRU = "Бализар Скверный", koKR = "증오의 발리자르", zhCN = "幽怨的巴利扎尔", zhTW = "幽怨的巴利札爾"},
-		zones = {148},
+		names = {enUS = "Caedakar the Vicious", deDE = "Caedakar der Heimtückische", esES = "Caedakar el Vicioso", frFR = "Caedakar le Vicieux", ptBR = "Caedakar, o Malévolo", ruRU = "Землеройный червь", koKR = "타락의 캘다카르", zhCN = "邪恶的凯达卡尔", zhTW = "邪惡的凱達卡爾"},
+		zones = {331, 148},
+	},
+	[3914] = {
+		classification = "Elite",
+		level = "20",
+		names = {enUS = "Rethilgore", ruRU = "Ретилгор", koKR = "레실고어", zhCN = "雷希戈尔", zhTW = "雷希戈爾"},
+		zones = {209},
 	},
 	[3917] = {
 		level = "23 - 25",
@@ -7617,7 +7679,7 @@ rm.npcDB = {
 	},
 	[3919] = {
 		level = "26 - 27",
-		names = {enUS = "Withered Ancient", deDE = "Welkes Urtum", esES = "Anciano marchito", frFR = "Ancien flétri", ptBR = "Anciente Fenescido", ruRU = "Высохший древняк", koKR = "부패한 고대정령", zhCN = "干枯的古树", zhTW = "乾枯的古樹"},
+		names = {enUS = "Withered Ancient", deDE = "Welkes Urtum", esES = "Anciano marchito", esMX = "Anciano marchito", frFR = "Ancien flétri", ptBR = "Anciente Fenescido", ruRU = "Высохший древняк", koKR = "부패한 고대정령", zhCN = "干枯的古树", zhTW = "乾枯的古樹"},
 		zones = {331},
 	},
 	[3921] = {
@@ -7650,9 +7712,20 @@ rm.npcDB = {
 		names = {enUS = "Thistlefur Pathfinder", deDE = "Pfadfinder der Distelfelle", esES = "Abrecaminos Piel de Cardo", esMX = "Abrecaminos Piel de Cardo", frFR = "Guide Crin-de-Chardon", ptBR = "Desbravador Pelocardo", ruRU = "Землепроходец из племени Колючего Меха", koKR = "엉겅퀴일족 길잡이", zhCN = "蓟皮探路者", zhTW = "薊皮探路者"},
 		zones = {331},
 	},
+	[3927] = {
+		classification = "Elite",
+		level = "25",
+		names = {enUS = "Wolf Master Nandos", deDE = "Wolfmeister Nandos", esES = "Maestro de lobos Nandos", esMX = "Maestro de lobos Nandos", frFR = "Maître-loup Nandos", ptBR = "Nandos, o Mestre de Lobos", ruRU = "Командир воргенов Нандос", koKR = "늑대왕 난도스", zhCN = "狼王南杜斯", zhTW = "狼王南杜斯"},
+		zones = {209},
+	},
 	[3928] = {
 		level = "20 - 22",
 		names = {enUS = "Rotting Slime", deDE = "Faulender Brühschleimer", esES = "Babosa putrefacta", esMX = "Babosa en podredumbre", frFR = "Gelée pourrissante", ptBR = "Visco Putrefato", ruRU = "Гниющая слизь", koKR = "썩어가는 진흙괴물", zhCN = "腐烂的泥浆怪", zhTW = "腐爛的泥漿怪"},
+		zones = {331},
+	},
+	[3931] = {
+		level = "30",
+		names = {enUS = "Shadethicket Oracle", deDE = "Schattendickichtorakel", esES = "Oráculo Sombramatorral", esMX = "Oráculo Sombramatorral", frFR = "Oracle Sombretaillis", ptBR = "Oráculo Umbrárvore", ruRU = "Чащобный оракул", koKR = "그늘덤불 나무현자", zhCN = "沼泽兽智者", zhTW = "沼澤獸智者"},
 		zones = {331},
 	},
 	[3932] = {
@@ -7740,6 +7813,12 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "42",
 		names = {enUS = "Scarlet Commander Mograine", deDE = "Scharlachroter Kommandant Mograine", esES = "Comandante Escarlata Mograine", esMX = "Comandante Escarlata Mograine", frFR = "Commandant écarlate Mograine", ptBR = "Comandante Escarlate Mograine", ruRU = "Командир Могрейн из Алого ордена", koKR = "붉은십자군 사령관 모그레인", zhCN = "血色十字军指挥官莫格莱尼", zhTW = "血色十字軍指揮官莫格萊尼"},
+		zones = {796},
+	},
+	[3977] = {
+		classification = "Elite",
+		level = "42",
+		names = {enUS = "High Inquisitor Whitemane", deDE = "Hochinquisitor Whitemane", esES = "Alta Inquisidora Melenablanca", esMX = "Alta inquisidora Melenablanca", frFR = "Grand Inquisiteur Whitemane", ptBR = "Alta-inquisidora Cristalba", ruRU = "Верховный инквизитор Вайтмейн", koKR = "종교재판관 화이트메인", zhCN = "大检察官怀特迈恩", zhTW = "大檢察官懷特邁恩"},
 		zones = {796},
 	},
 	[3983] = {
@@ -7835,11 +7914,6 @@ rm.npcDB = {
 		names = {enUS = "Raging Cliff Stormer", deDE = "Tobender Klippenstürmer", esES = "Tormentabisal enfurecido", esMX = "Agitador de precipicio enfurecido", frFR = "Lézard-tempête enragé des falaises", ptBR = "Eletrocutor da Montanha Enfurecido", ruRU = "Гневный скалозавр", koKR = "흉포한 천둥절벽도마뱀", zhCN = "狂怒的峭壁雷鸣蜥蜴", zhTW = "狂怒的峭壁雷鳴蜥蜴"},
 		zones = {406},
 	},
-	[4011] = {
-		level = "19 - 20",
-		names = {enUS = "Young Pridewing", deDE = "Junge Prachtschwinge", esES = "Alargullo joven", esMX = "Alaorgullo joven", frFR = "Jeune Aile-fière", ptBR = "Asaltiva Jovem", ruRU = "Молодая величавая виверна", koKR = "새끼 사자날개 와이번", zhCN = "幼年巨翼双足飞龙", zhTW = "幼年巨翼蠍尾獅"},
-		zones = {406},
-	},
 	[4012] = {
 		level = "21 - 22",
 		names = {enUS = "Pridewing Wyvern", deDE = "Prachtschwingenflügeldrache", esES = "Dracoleón Alargullo", esMX = "Dracoleón Alaorgullo", frFR = "Wyverne Aile-fière", ptBR = "Mantícora Asaltiva", ruRU = "Гордокрылая виверна", koKR = "사자날개 와이번", zhCN = "巨翼双足飞龙", zhTW = "巨翼蠍尾獅"},
@@ -7847,7 +7921,7 @@ rm.npcDB = {
 	},
 	[4013] = {
 		level = "23 - 24",
-		names = {enUS = "Pridewing Skyhunter", deDE = "Prachtschwingenhimmelsjäger", esES = "Cazacielos Alargullo", frFR = "Chasseresse céleste Aile-fière", ptBR = "Predacéu Asaltiva", ruRU = "Небесный охотник-гордокрыл", koKR = "하늘발톱 사자날개 와이번", zhCN = "巨翼捕猎者", zhTW = "巨翼捕獵者"},
+		names = {enUS = "Pridewing Skyhunter", deDE = "Prachtschwingenhimmelsjäger", esES = "Cazacielos Alargullo", esMX = "Cazacielos Alaorgullo", frFR = "Chasseresse céleste Aile-fière", ptBR = "Predacéu Asaltiva", ruRU = "Небесный охотник-гордокрыл", koKR = "하늘발톱 사자날개 와이번", zhCN = "巨翼捕猎者", zhTW = "巨翼捕獵者"},
 		zones = {406},
 	},
 	[4014] = {
@@ -7855,29 +7929,34 @@ rm.npcDB = {
 		names = {enUS = "Pridewing Consort", deDE = "Prachtschwingenkonsort", esES = "Consorte Alargullo", esMX = "Consorte Alaorgullo", frFR = "Concubine Aile-fière", ptBR = "Consorte Asaltiva", ruRU = "Гордокрылый соправитель", koKR = "어미 사자날개 와이번", zhCN = "雄性巨翼双足飞龙", zhTW = "雄性巨翼蠍尾獅"},
 		zones = {406},
 	},
+	[4016] = {
+		level = "24 - 25",
+		names = {enUS = "Fey Dragon", deDE = "Siechdrache", esES = "Dragón clarividente", esMX = "Dragón hada", frFR = "Dragon-faë", ptBR = "Dragão Encantado", ruRU = "Волшебный дракончик", koKR = "마룡", zhCN = "灵龙", zhTW = "靈龍"},
+		zones = {406},
+	},
 	[4017] = {
 		level = "26 - 27",
-		names = {enUS = "Wily Fey Dragon", deDE = "Verschlagener Siechdrache", esES = "Dragón vidente Wily", frFR = "Dragon-faë rusé", ptBR = "Dragão Encantado Manhoso", ruRU = "Хитрый волшебный дракончик", koKR = "교활한 마룡", zhCN = "机敏的灵龙", zhTW = "機敏的靈龍"},
+		names = {enUS = "Wily Fey Dragon", deDE = "Verschlagener Siechdrache", esES = "Dragón vidente Wily", esMX = "Dragón hada avispado", frFR = "Dragon-faë rusé", ptBR = "Dragão Encantado Manhoso", ruRU = "Хитрый волшебный дракончик", koKR = "교활한 마룡", zhCN = "机敏的灵龙", zhTW = "機敏的靈龍"},
 		zones = {406},
 	},
 	[4018] = {
 		level = "22 - 23",
-		names = {enUS = "Antlered Courser", deDE = "Gehörnter Renner", esES = "Antlered Maledictor", frFR = "Coursier à ramure", ptBR = "Ginete Galhado", ruRU = "Беговой олень-рогач", koKR = "순록", zhCN = "巨角鹿", zhTW = "巨角鹿"},
+		names = {enUS = "Antlered Courser", deDE = "Gehörnter Renner", esES = "Antlered Maledictor", esMX = "Trotador cornamentado", frFR = "Coursier à ramure", ptBR = "Ginete Galhado", ruRU = "Беговой олень-рогач", koKR = "순록", zhCN = "巨角鹿", zhTW = "巨角鹿"},
 		zones = {406},
 	},
 	[4019] = {
 		level = "24 - 25",
-		names = {enUS = "Great Courser", deDE = "Großer Renner", esES = "Gran potro", frFR = "Grand coursier", ptBR = "Grande Ginete", ruRU = "Огромный быстроногий олень", koKR = "큰 순록", zhCN = "大型巨角鹿", zhTW = "大型巨角鹿"},
+		names = {enUS = "Great Courser", deDE = "Großer Renner", esES = "Gran potro", esMX = "Gran trotador", frFR = "Grand coursier", ptBR = "Grande Ginete", ruRU = "Огромный быстроногий олень", koKR = "큰 순록", zhCN = "大型巨角鹿", zhTW = "大型巨角鹿"},
 		zones = {406},
 	},
 	[4020] = {
 		level = "22 - 23",
-		names = {enUS = "Sap Beast", deDE = "Blutsaftbestie", esES = "Bestia de savia", frFR = "Bête de sève", ptBR = "Fera de Seiva", ruRU = "Сокотварь", koKR = "수액괴물", zhCN = "腐蚀兽", zhTW = "腐蝕獸"},
+		names = {enUS = "Sap Beast", deDE = "Blutsaftbestie", esES = "Bestia de savia", esMX = "Bestia de savia", frFR = "Bête de sève", ptBR = "Fera de Seiva", ruRU = "Сокотварь", koKR = "수액괴물", zhCN = "腐蚀兽", zhTW = "腐蝕獸"},
 		zones = {406},
 	},
 	[4021] = {
 		level = "24 - 25",
-		names = {enUS = "Corrosive Sap Beast", deDE = "Ätzblutsaftbestie", esES = "Bestia de savia corrosiva", frFR = "Bête de sève corrosive", ptBR = "Fera de Seiva Corrosiva", ruRU = "Едкая сокотварь", koKR = "부식성 수액괴물", zhCN = "腐蚀性的腐蚀兽", zhTW = "腐蝕性的腐蝕獸"},
+		names = {enUS = "Corrosive Sap Beast", deDE = "Ätzblutsaftbestie", esES = "Bestia de savia corrosiva", esMX = "Bestia de savia corrosiva", frFR = "Bête de sève corrosive", ptBR = "Fera de Seiva Corrosiva", ruRU = "Едкая сокотварь", koKR = "부식성 수액괴물", zhCN = "腐蚀性的腐蚀兽", zhTW = "腐蝕性的腐蝕獸"},
 		zones = {406},
 	},
 	[4022] = {
@@ -7985,7 +8064,7 @@ rm.npcDB = {
 		classification = "Elite",
 		faction = "Alliance",
 		level = "25 - 26",
-		names = {enUS = "Cenarion Caretaker", deDE = "Cenarischer Verwalter", esES = "Custodio Cenarion", frFR = "Conservateur cénarien", ptBR = "Zelador Cenariano", ruRU = "Кенарийский смотритель", koKR = "세나리온 관리인", zhCN = "塞纳里奥管理员", zhTW = "塞納里奧管理員"},
+		names = {enUS = "Cenarion Caretaker", deDE = "Cenarischer Verwalter", esES = "Custodio Cenarion", esMX = "Custodio Cenarion", frFR = "Conservateur cénarien", ptBR = "Zelador Cenariano", ruRU = "Кенарийский смотритель", koKR = "세나리온 관리인", zhCN = "塞纳里奥管理员", zhTW = "塞納里奧管理員"},
 		zones = {406},
 	},
 	[4051] = {
@@ -7998,7 +8077,7 @@ rm.npcDB = {
 		classification = "Elite",
 		faction = "Alliance",
 		level = "26 - 27",
-		names = {enUS = "Cenarion Druid", deDE = "Cenarischer Druide", esES = "Druida Cenarion", frFR = "Druide cénarien", ptBR = "Druida Cenariano", ruRU = "Кенарийский друид", koKR = "세나리온 드루이드", zhCN = "塞纳里奥德鲁伊", zhTW = "塞納里奧德魯伊"},
+		names = {enUS = "Cenarion Druid", deDE = "Cenarischer Druide", esES = "Druida Cenarion", esMX = "Druida Cenarion", frFR = "Druide cénarien", ptBR = "Druida Cenariano", ruRU = "Кенарийский друид", koKR = "세나리온 드루이드", zhCN = "塞纳里奥德鲁伊", zhTW = "塞納里奧德魯伊"},
 		zones = {406},
 	},
 	[4053] = {
@@ -8017,7 +8096,7 @@ rm.npcDB = {
 		classification = "Elite",
 		faction = "Alliance",
 		level = "26 - 27",
-		names = {enUS = "Mirkfallon Keeper", deDE = "Mirkfallonbewahrer", esES = "Vigilante Mirkfallon", frFR = "Gardien de Mirkfallon", ptBR = "Guardião de Mirkfallon", ruRU = "Хранитель Мутного озера", koKR = "땅거미호수 문지기", zhCN = "暗色守护者", zhTW = "暗色守護者"},
+		names = {enUS = "Mirkfallon Keeper", deDE = "Mirkfallonbewahrer", esES = "Vigilante Mirkfallon", esMX = "Vigilante Mirkfallon", frFR = "Gardien de Mirkfallon", ptBR = "Guardião de Mirkfallon", ruRU = "Хранитель Мутного озера", koKR = "땅거미호수 문지기", zhCN = "暗色守护者", zhTW = "暗色守護者"},
 		zones = {406},
 	},
 	[4057] = {
@@ -8030,7 +8109,7 @@ rm.npcDB = {
 		classification = "Elite",
 		faction = "Alliance",
 		level = "25 - 26",
-		names = {enUS = "Mirkfallon Dryad", deDE = "Mirkfallondryade", esES = "Dríada Mirkfallon", frFR = "Dryade de Mirkfallon", ptBR = "Dríade de Mirkfallon", ruRU = "Дриада Мутного Озера", koKR = "땅거미호수 드리아드", zhCN = "暗色湖树妖", zhTW = "暗色湖林精"},
+		names = {enUS = "Mirkfallon Dryad", deDE = "Mirkfallondryade", esES = "Dríada Mirkfallon", esMX = "Dríade Mirkfallon", frFR = "Dryade de Mirkfallon", ptBR = "Dríade de Mirkfallon", ruRU = "Дриада Мутного Озера", koKR = "땅거미호수 드리아드", zhCN = "暗色湖树妖", zhTW = "暗色湖林精"},
 		zones = {406},
 	},
 	[4062] = {
@@ -8052,7 +8131,7 @@ rm.npcDB = {
 	},
 	[4067] = {
 		level = "23 - 24",
-		names = {enUS = "Twilight Runner", deDE = "Mondlichtläufer", esES = "Corredor Crepuscular", frFR = "Coureur crépusculaire", ptBR = "Corredor do Crepúsculo", ruRU = "Сумеречный бегун", koKR = "황혼의 흑표범", zhCN = "夜行虎", zhTW = "夜行虎"},
+		names = {enUS = "Twilight Runner", deDE = "Mondlichtläufer", esES = "Corredor Crepuscular", esMX = "Corredor Crepuscular", frFR = "Coureur crépusculaire", ptBR = "Corredor do Crepúsculo", ruRU = "Сумеречный бегун", koKR = "황혼의 흑표범", zhCN = "夜行虎", zhTW = "夜行虎"},
 		zones = {406},
 	},
 	[4070] = {
@@ -8176,9 +8255,19 @@ rm.npcDB = {
 		names = {enUS = "Elder Cloud Serpent", deDE = "Alte Wolkenschlange", esES = "Serpiente nubosa viejo", esMX = "Serpiente nubosa anciana", frFR = "Ancien serpent-nuage", ptBR = "Serpente das Nuvens Anciã", ruRU = "Старый облачный змей", koKR = "덩치큰 구름천둥매", zhCN = "老风蛇", zhTW = "老風蛇"},
 		zones = {400},
 	},
+	[4120] = {
+		level = "28 - 29",
+		names = {enUS = "Thundering Boulderkin", deDE = "Donnernder Felsklopper", esES = "Rocoso tronador", esMX = "Rocoso tronador", frFR = "Eboulide fulminant", ptBR = "Penedo Trovejante", ruRU = "Грохочущий камнедор", koKR = "우레 바위 정령", zhCN = "雷鸣岩石元素", zhTW = "雷鳴岩石元素"},
+		zones = {400, 357},
+	},
 	[4124] = {
 		level = "27 - 28",
 		names = {enUS = "Needles Cougar", deDE = "Nadelpuma", esES = "Puma de las Agujas", esMX = "Puma de las Agujas", frFR = "Puma des pointes", ptBR = "Puma de Mil Agulhas", ruRU = "Игольчатая пума", koKR = "바위퓨마", zhCN = "千针石林山狮", zhTW = "千針石林山獅"},
+		zones = {400, 357},
+	},
+	[4126] = {
+		level = "25 - 26",
+		names = {enUS = "Crag Stalker", deDE = "Klippenpirscher", esES = "Acechador del risco", esMX = "Acechador del risco", frFR = "Traqueur des combes", ptBR = "Espreitador dos Penhascos", ruRU = "Скальный ловец", koKR = "바위표범", zhCN = "峭壁捕猎者", zhTW = "峭壁捕獵者"},
 		zones = {400},
 	},
 	[4127] = {
@@ -8397,6 +8486,11 @@ rm.npcDB = {
 		names = {enUS = "Pesterhide Snarler", deDE = "Pestfleckenkläffer", esES = "Gruñidor Irriculto", esMX = "Gruñidor Pestillejo", frFR = "Grogneuse Pestepoil", ptBR = "Rosnadora Courirrita", ruRU = "Паршивый рыкун", koKR = "사나운 점박이하이에나", zhCN = "杂毛嚎叫者", zhTW = "雜毛嚎叫者"},
 		zones = {400, 357},
 	},
+	[4250] = {
+		level = "24",
+		names = {enUS = "Galak Packhound", deDE = "Rudelhund der Galak", esES = "Can de manada Galak", esMX = "Can de manada Galak", frFR = "Chien de meute galak", ptBR = "Galath Alcateio", ruRU = "Гиена племени Галак", koKR = "갈라크일족 하이에나", zhCN = "加拉克猎犬", zhTW = "加拉克獵犬"},
+		zones = {400},
+	},
 	[4254] = {
 		faction = "Alliance",
 		level = "35",
@@ -8409,14 +8503,14 @@ rm.npcDB = {
 		names = {enUS = "Bengus Deepforge", esES = "Bengus Forjahonda", esMX = "Bengus Forjahonda", ptBR = "Bengus Baixaforja", ruRU = "Бенгус Подземная Кузня", koKR = "벤구스 딥포지", zhCN = "本古斯·深炉", zhTW = "本古斯·深爐"},
 		zones = {1537},
 	},
+	[4260] = {
+		level = "37",
+		names = {enUS = "Venture Co. Shredder", deDE = "Schredder der Venture Co.", esES = "Machacador de Ventura y Cía.", esMX = "Machacador de Ventura y Cía.", frFR = "Déchiqueteur de la KapitalRisk", ptBR = "Retalhador da Empreendimentos S.A.", ruRU = "Крошшер Торговой компании", koKR = "투자개발회사 벌목기", zhCN = "风险投资公司伐木机", zhTW = "風險投資公司伐木機"},
+		zones = {33},
+	},
 	[4263] = {
 		level = "14",
 		names = {enUS = "Deepmoss Hatchling", deDE = "Kluftmoosjungtier", esES = "Trampedor Musgondo", esMX = "Prole de Musgondo", frFR = "Jeune des mousses profondes", ptBR = "Filhote de Aranha de Fundolimo", ruRU = "Детеныш густого мха", koKR = "동굴이끼 새끼거미", zhCN = "深苔幼蛛", zhTW = "深苔幼蛛"},
-		zones = {406},
-	},
-	[4264] = {
-		level = "22",
-		names = {enUS = "Deepmoss Matriarch", deDE = "Kluftmoosmatriarchin", esES = "Matriarca Musgondo", esMX = "Matriarca Musgondo", frFR = "Matriarche des mousses profondes", ptBR = "Matriarca de Fundolimo", ruRU = "Моховая паучиха", koKR = "동굴이끼 우두머리거미", zhCN = "深苔雌蜘蛛", zhTW = "深苔雌蜘蛛"},
 		zones = {406},
 	},
 	[4265] = {
@@ -8425,17 +8519,35 @@ rm.npcDB = {
 		names = {enUS = "Nyoma", ruRU = "Ньома", koKR = "니오마", zhCN = "奈欧玛", zhTW = "奈歐瑪"},
 		zones = {141},
 	},
-	[4273] = {
-		faction = "Alliance",
-		level = "29",
-		names = {enUS = "Keeper Ordanus", deDE = "Bewahrer Ordanus", esES = "Vigilante Ordanus", frFR = "Gardien Ordanus", ptBR = "Guardião Ornanos", ruRU = "Хранитель Гордан", koKR = "수호자 오르다누스", zhCN = "守护者奥达努斯", zhTW = "守護者奧達努斯"},
-		zones = {331},
+	[4274] = {
+		classification = "Elite",
+		level = "25",
+		names = {enUS = "Fenrus the Devourer", deDE = "Fenrus der Verschlinger", esES = "Fenrus el Devorador", esMX = "Fenrus el Devorador", frFR = "Fenrus le Dévoreur", ptBR = "Fenrus, o Devorador", ruRU = "Фенрус Пожиратель", koKR = "파멸의 펜루스", zhCN = "吞噬者芬鲁斯", zhTW = "吞噬者芬魯斯"},
+		zones = {209},
+	},
+	[4275] = {
+		classification = "Elite",
+		level = "26",
+		names = {enUS = "Archmage Arugal", deDE = "Erzmagier Arugal", esES = "Archimago Arugal", esMX = "Archimago Arugal", frFR = "Archimage Arugal", ptBR = "Arquimago Arugal", ruRU = "Верховный маг Аругал", koKR = "대마법사 아루갈", zhCN = "大法师阿鲁高", zhTW = "大法師阿魯高"},
+		zones = {209},
 	},
 	[4278] = {
 		classification = "Elite",
 		level = "24",
 		names = {enUS = "Commander Springvale", deDE = "Kommandant Springvale", esES = "Comandante Vallefont", esMX = "Comandante Vallefont", frFR = "Commandant Springvale", ptBR = "Comandante Floraval", ruRU = "Командир Ручьедол", koKR = "사령관 스프링베일", zhCN = "指挥官斯普林瓦尔", zhTW = "指揮官斯普林瓦爾"},
 		zones = {209},
+	},
+	[4279] = {
+		classification = "Elite",
+		level = "24",
+		names = {enUS = "Odo the Blindwatcher", deDE = "Odo der Blindseher", esES = "Odo el Cegato", esMX = "Odo el Vigía Ciego", frFR = "Odo l'Aveugle", ptBR = "Odo, o Vigia Cego", ruRU = "Одо Слепой Страж", koKR = "눈먼감시자 오도", zhCN = "盲眼守卫奥杜", zhTW = "盲眼守衛奧杜"},
+		zones = {209},
+	},
+	[4280] = {
+		classification = "Elite",
+		level = "29 - 30",
+		names = {enUS = "Scarlet Preserver", deDE = "Scharlachroter Bewahrer", esES = "Presertor Escarlata", esMX = "Valedor Escarlata", frFR = "Sauveur écarlate", ptBR = "Preservador Escarlate", ruRU = "Оберегатель из Алого ордена", koKR = "붉은십자군 간호병", zhCN = "血色医师", zhTW = "血色醫師"},
+		zones = {85},
 	},
 	[4281] = {
 		classification = "Elite",
@@ -8453,7 +8565,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "30 - 31",
 		names = {enUS = "Scarlet Sentry", deDE = "Scharlachroter Wachposten", esES = "Argos Escarlata", frFR = "Sentinelle écarlate", ptBR = "Sentinela Escarlate", ruRU = "Караульный из Алого ордена", koKR = "붉은십자군 파수병", zhCN = "血色哨兵", zhTW = "血色哨兵"},
-		zones = {796},
+		zones = {85, 796},
 	},
 	[4284] = {
 		classification = "Elite",
@@ -8674,6 +8786,11 @@ rm.npcDB = {
 		names = {enUS = "Bloodfen Scytheclaw", deDE = "Blutsumpfsensenklaue", esES = "Segador Faucerroja", esMX = "Segador Cienorrojo", frFR = "Faucheur Rougefange", ptBR = "Garrafoice Dinossangue", ruRU = "Смертехват Кровавой Топи", koKR = "갈퀴발톱 붉은늪지랩터", zhCN = "血沼镰爪龙", zhTW = "血沼鐮爪龍"},
 		zones = {15},
 	},
+	[4356] = {
+		level = "39 - 40",
+		names = {enUS = "Bloodfen Razormaw", deDE = "Blutsumpfscharfzahn", esES = "Tajobuche Faucerroja", frFR = "Tranchegueule rougefange", ptBR = "Rasgaqueixo Dinossangue", ruRU = "Острозуб Кровавой Топи", koKR = "무쇠턱 붉은늪지랩터", zhCN = "血沼刺喉龙", zhTW = "血沼刺喉龍"},
+		zones = {15},
+	},
 	[4357] = {
 		level = "40 - 41",
 		names = {enUS = "Bloodfen Lashtail", deDE = "Blutsumpfschmetterschwanz", esES = "Colazote Faucerroja", frFR = "Flagellant Rougefange", ptBR = "Batecauda Dinossangue", ruRU = "Кнутохвост Кровавой Топи", koKR = "채찍꼬리 붉은늪지랩터", zhCN = "血沼鞭尾龙", zhTW = "血沼鞭尾龍"},
@@ -8707,36 +8824,6 @@ rm.npcDB = {
 	[4363] = {
 		level = "37 - 38",
 		names = {enUS = "Mirefin Oracle", deDE = "Orakel der Schlammflossen", esES = "Oráculo Ancalodo", esMX = "Oráculo Ancalodo", frFR = "Oracle Aileron boueux", ptBR = "Oráculo Lamapina", ruRU = "Оракул из племени Болотного Плавника", koKR = "진흙아가미멀록 점쟁이", zhCN = "黑鳍智者", zhTW = "黑鰭智者"},
-		zones = {15},
-	},
-	[4364] = {
-		classification = "Elite",
-		level = "59 - 60",
-		names = {enUS = "Strashaz Warrior", deDE = "Strashazkrieger", esES = "Guerrero Strashaz", frFR = "Guerrier Strashaz", ptBR = "Guerreiro Strashaz", ruRU = "Воин из клана Страшаз", koKR = "스트라샤즈 전사", zhCN = "斯塔莎兹战士", zhTW = "斯塔莎茲戰士"},
-		zones = {15},
-	},
-	[4366] = {
-		classification = "Elite",
-		level = "59 - 61",
-		names = {enUS = "Strashaz Serpent Guard", deDE = "Strashazschlangenwache", esES = "Guardia serpiente Strashaz", frFR = "Garde-serpent Strashaz", ptBR = "Guarda Viperino Strashaz", ruRU = "Змеестраж из клана Страшаз", koKR = "스트라샤즈 수호병", zhCN = "斯塔莎兹毒蛇守卫", zhTW = "斯塔莎茲毒蛇守衛"},
-		zones = {15},
-	},
-	[4368] = {
-		classification = "Elite",
-		level = "60 - 61",
-		names = {enUS = "Strashaz Myrmidon", deDE = "Strashazmyrmidone", esES = "Mirmidón Strashaz", frFR = "Myrmidon Strashaz", ptBR = "Mirmidão Strashaz", ruRU = "Мирмидон из клана Страшаз", koKR = "스트라샤즈 미르미돈", zhCN = "斯塔莎兹侍从", zhTW = "斯塔莎茲侍從"},
-		zones = {15},
-	},
-	[4370] = {
-		classification = "Elite",
-		level = "60 - 61",
-		names = {enUS = "Strashaz Sorceress", deDE = "Strashazzauberhexerin", esES = "Hechicera Strashaz", frFR = "Sorcière de Strashaz", ptBR = "Feiticeira Strashaz", ruRU = "Колдунья из клана Страшаз", koKR = "스트라샤즈 여마법사", zhCN = "斯塔莎兹巫师", zhTW = "斯塔莎茲巫師"},
-		zones = {15},
-	},
-	[4371] = {
-		classification = "Elite",
-		level = "59 - 60",
-		names = {enUS = "Strashaz Siren", deDE = "Strashazsirene", esES = "Sirena Strashaz", frFR = "Sirène Strashaz", ptBR = "Sirena Strashaz", ruRU = "Сирена из клана Страшаз", koKR = "스트라샤즈 세이렌", zhCN = "斯塔莎兹海妖", zhTW = "斯塔莎茲海妖"},
 		zones = {15},
 	},
 	[4374] = {
@@ -8773,6 +8860,11 @@ rm.npcDB = {
 	[4388] = {
 		level = "39 - 41",
 		names = {enUS = "Young Murk Thresher", deDE = "Junger Düsterdrescher", esES = "Trillador de la oscuridad joven", frFR = "Jeune batteur des boues", ptBR = "Mangualama Jovem", ruRU = "Молодой черный крепкозуб", koKR = "새끼 늪지트레샤돈", zhCN = "幼年黑色蛇颈龙", zhTW = "幼年黑色蛇頸龍"},
+		zones = {15},
+	},
+	[4391] = {
+		level = "37 - 39",
+		names = {enUS = "Swamp Ooze", deDE = "Sumpfbrühschlammer", esES = "Moco del pantano", esMX = "Moco del pantano", frFR = "Limon des marais", ptBR = "Gosma do Pântano", ruRU = "Болотный слизнюк", koKR = "늪수액괴물", zhCN = "沼泽软泥怪", zhTW = "沼澤軟泥怪"},
 		zones = {15},
 	},
 	[4392] = {
@@ -8814,7 +8906,7 @@ rm.npcDB = {
 		classification = "Elite",
 		faction = "Alliance",
 		level = "25",
-		names = {enUS = "Gatekeeper Kordurus", deDE = "Torhüter Kordurus", esES = "Guardián Kordurus", frFR = "Gardien de la porte Kordurus", ptBR = "Guardião do Portal Kordurus", ruRU = "Кордор Хранитель Врат", koKR = "문지기 콜두러스", zhCN = "守门人克杜鲁斯", zhTW = "守門人克杜魯斯"},
+		names = {enUS = "Gatekeeper Kordurus", deDE = "Torhüter Kordurus", esES = "Guardián Kordurus", esMX = "Guardián Kordurus", frFR = "Gardien de la porte Kordurus", ptBR = "Guardião do Portal Kordurus", ruRU = "Кордор Хранитель Врат", koKR = "문지기 콜두러스", zhCN = "守门人克杜鲁斯", zhTW = "守門人克杜魯斯"},
 		zones = {406},
 	},
 	[4411] = {
@@ -9009,6 +9101,11 @@ rm.npcDB = {
 		names = {enUS = "Marcel Dabyrie", ruRU = "Марсель Дабири", koKR = "마셸 다비리", zhCN = "马塞尔·达比雷", zhTW = "馬塞爾·達比雷"},
 		zones = {45},
 	},
+	[4490] = {
+		level = "31",
+		names = {enUS = "Grenka Bloodscreech", deDE = "Grenka Blutkreischer", esES = "Grenka Aullasangre", esMX = "Grenka Aullasangre", frFR = "Grenka Hurlesang", ptBR = "Grenka Sangrunhidos", ruRU = "Гренка Кровавый Визг", koKR = "그렌카 블러드스크리치", zhCN = "格林卡·血啸", zhTW = "格林卡·血嘯"},
+		zones = {400},
+	},
 	[4493] = {
 		level = "56 - 57",
 		names = {enUS = "Scarlet Avenger", deDE = "Scharlachroter Rächer", esES = "Vengador Escarlata", esMX = "Vengador Escarlata", frFR = "Vengeur écarlate", ptBR = "Vingador Escarlate", ruRU = "Мститель из Алого ордена", koKR = "붉은십자군 복수자", zhCN = "血色复仇者", zhTW = "血色復仇者"},
@@ -9018,6 +9115,12 @@ rm.npcDB = {
 		level = "57 - 58",
 		names = {enUS = "Scarlet Spellbinder", deDE = "Scharlachroter Zauberbinder", esES = "Vinculador de hechizos escarlata", esMX = "Vinculahechizos escarlata", frFR = "Lieur de sort écarlate", ptBR = "Mesmerizador Escarlate", ruRU = "Чароплет из Алого ордена", koKR = "붉은십자군 역술사", zhCN = "血色缚法者", zhTW = "血色縛法者"},
 		zones = {28},
+	},
+	[4499] = {
+		classification = "Elite",
+		level = "30",
+		names = {enUS = "Rok'Alim the Pounder", deDE = "Rok'Alim der Trommler", esES = "Rok'Alim el Aporreador", esMX = "Rok'Alim el Aporreador", frFR = "Rok'Alim le Marteleur", ptBR = "Petra'lim, o Batedor", ruRU = "Рок'Алим Крушитель", koKR = "돌주먹 로크알림", zhCN = "罗卡里姆", zhTW = "羅卡里姆"},
+		zones = {400},
 	},
 	[4504] = {
 		level = "37",
@@ -9202,6 +9305,12 @@ rm.npcDB = {
 		names = {enUS = "Millie Gregorian", ptBR = "Berta Gregório", ruRU = "Милли Грегориан", koKR = "밀리 그레고리안", zhCN = "米利尔·格里高利", zhTW = "米利爾·格里高利"},
 		zones = {1497},
 	},
+	[4578] = {
+		faction = "Horde",
+		level = "45",
+		names = {enUS = "Josephine Lister", ptBR = "Josefina Calisto", ruRU = "Джозефина Листер", koKR = "조세핀 리스터", zhCN = "约瑟芬·李斯特", zhTW = "約瑟芬·李斯特"},
+		zones = {1497},
+	},
 	[4582] = {
 		faction = "Horde",
 		level = "40",
@@ -9306,7 +9415,7 @@ rm.npcDB = {
 	},
 	[4627] = {
 		level = "24 - 25",
-		names = {enUS = "Arugal's Voidwalker", deDE = "Arugals Leerwandler", esES = "Abisario de Arugal", frFR = "Marcheur du Vide d’Arugal", ptBR = "Emissário do Caos de Arugal", ruRU = "Демон Бездны Аругала", koKR = "아루갈의 보이드워커", zhCN = "阿鲁高的虚空行者", zhTW = "阿魯高的虛空行者"},
+		names = {enUS = "Arugal's Voidwalker", deDE = "Arugals Leerwandler", esES = "Abisario de Arugal", esMX = "Abisario de Arugal", frFR = "Marcheur du Vide d’Arugal", ptBR = "Emissário do Caos de Arugal", ruRU = "Демон Бездны Аругала", koKR = "아루갈의 공허방랑자", zhCN = "阿鲁高的虚空行者", zhTW = "阿魯高的虛空行者"},
 		zones = {209},
 	},
 	[4632] = {
@@ -9372,12 +9481,12 @@ rm.npcDB = {
 	[4644] = {
 		level = "35 - 36",
 		names = {enUS = "Magram Marauder", deDE = "Marodeur der Magram", esES = "Maleante Magram", esMX = "Maleante Magram", frFR = "Maraudeur magram", ptBR = "Espoliador Magram", ruRU = "Мародер из племени Маграм", koKR = "마그람일족 약탈자", zhCN = "玛格拉姆掠夺者", zhTW = "瑪格拉姆掠奪者"},
-		zones = {405},
+		zones = {405, 16651},
 	},
 	[4645] = {
 		level = "35 - 36",
 		names = {enUS = "Magram Mauler", deDE = "Raufer der Magram", esES = "Destructor Maggram", esMX = "Aplastador Magram", frFR = "Marteleur magram", ptBR = "Espancador Magram", ruRU = "Изверг из племени Маграм", koKR = "마그람일족 투사", zhCN = "玛格拉姆虐待者", zhTW = "瑪格拉姆虐待者"},
-		zones = {405},
+		zones = {405, 16651},
 	},
 	[4646] = {
 		level = "32 - 33",
@@ -9432,6 +9541,11 @@ rm.npcDB = {
 	[4659] = {
 		level = "39 - 40",
 		names = {enUS = "Maraudine Marauder", deDE = "Marodeur der Maraudine", esES = "Maleante Maraudine", esMX = "Maleante Maraudine", frFR = "Maraudeur maraudine", ptBR = "Espoliador Maraudino", ruRU = "Мародер из племени Мародин", koKR = "마라우돈일족 약탈자", zhCN = "玛洛迪掠夺者", zhTW = "瑪洛迪掠奪者"},
+		zones = {405},
+	},
+	[4660] = {
+		level = "37 - 38",
+		names = {enUS = "Maraudine Bonepaw", deDE = "Skelettpfote der Maraudine", esES = "Zarpósea Maraudine", frFR = "Pattes-d'os maraudine", ptBR = "Pataóssea Maraudino", ruRU = "Костелап клана Мародин", koKR = "마라우돈일족 하이에나", zhCN = "玛洛迪骨爪土狼", zhTW = "瑪洛迪骨爪土狼"},
 		zones = {405},
 	},
 	[4662] = {
@@ -9499,11 +9613,6 @@ rm.npcDB = {
 		names = {enUS = "Lesser Infernal", deDE = "Geringe Höllenbestie", esES = "Infernal inferior", esMX = "Infernal inferior", frFR = "Infernal mineur", ptBR = "Infernal Menor", ruRU = "Младший инфернал", koKR = "하급 지옥불정령", zhCN = "次级地狱火", zhTW = "次級地獄火"},
 		zones = {405},
 	},
-	[4677] = {
-		level = "37 - 38",
-		names = {enUS = "Doomwarder", deDE = "Verdammniswächter", esES = "Guardiavil", esMX = "Guardiavil", frFR = "Garde funeste", ptBR = "Guardião da Ruína", ruRU = "Тюремщик судеб", koKR = "파멸의경비대", zhCN = "末日看守", zhTW = "末日看守"},
-		zones = {405},
-	},
 	[4679] = {
 		level = "37 - 38",
 		names = {enUS = "Nether Maiden", deDE = "Nethermaid", esES = "Doncella infernal", esMX = "Doncella abisal", frFR = "Vierge du néant", ptBR = "Donzela do Éter", ruRU = "Дева Пустоты", koKR = "황천의 요녀", zhCN = "地狱魔女", zhTW = "地獄魔女"},
@@ -9529,11 +9638,6 @@ rm.npcDB = {
 		names = {enUS = "Nether Sorceress", deDE = "Netherzauberhexerin", esES = "Hechicera infernal", frFR = "Ensorceleuse du Néant", ptBR = "Feiticeira do Éter", ruRU = "Колдунья Пустоты", koKR = "황천의 여마법사", zhCN = "地狱巫女", zhTW = "地獄巫女"},
 		zones = {405},
 	},
-	[4685] = {
-		level = "39 - 40",
-		names = {enUS = "Ley Hunter", deDE = "Leyjäger", esES = "Cazador Ley", frFR = "Chasseur Ley", ptBR = "Caçador do Meridiano", ruRU = "Охотник за магией", koKR = "평원의 지옥사냥개", zhCN = "灵能猎犬", zhTW = "靈能獵犬"},
-		zones = {405},
-	},
 	[4692] = {
 		level = "32 - 33",
 		names = {enUS = "Dread Swoop", deDE = "Schreckenssturzflieger", esES = "Aguilón aterrador", esMX = "Aguilón aterrador", frFR = "Rapace de l'effroi", ptBR = "Pavor Rapineiro", ruRU = "Жуткий перепелятник", koKR = "공포의 독수리", zhCN = "恐怖飞扑者", zhTW = "恐怖飛撲者"},
@@ -9556,8 +9660,13 @@ rm.npcDB = {
 	},
 	[4697] = {
 		level = "34 - 35",
-		names = {enUS = "Scorpashi Lasher", deDE = "Skorpashipeitscher", esES = "Latigador Scorpashi", esMX = "Azotador Scorpashi", frFR = "Flagellant scorpashi", ptBR = "Escorpachi Açoitador", ruRU = "Плеточник cкорпаши", koKR = "스콜파시 꼬리전갈", zhCN = "荒土鞭尾蝎", zhTW = "荒土鞭尾蠍"},
+		names = {enUS = "Scorpashi Lasher", deDE = "Skorpashipeitscher", esES = "Latigador Scorpashi", esMX = "Azotador Scorpashi", frFR = "Flagellant scorpashi", ptBR = "Escorpachi Açoitador", ruRU = "Плеточник скорпаши", koKR = "스콜파시 꼬리전갈", zhCN = "荒土鞭尾蝎", zhTW = "荒土鞭尾蠍"},
 		zones = {405},
+	},
+	[4699] = {
+		level = "38 - 39",
+		names = {enUS = "Scorpashi Venomlash", deDE = "Skorpashigiftpeitscher", esES = "Lativenenoso Scorpashi", esMX = "Lativenenoso Scorpashi", frFR = "Empoisonneur scorpashi", ptBR = "Escorpachi Venelátego", ruRU = "Ядохлыст скорпаши", koKR = "스콜파시 맹독전갈", zhCN = "荒土毒尾蝎", zhTW = "荒土毒尾蠍"},
+		zones = {405, 16651},
 	},
 	[4700] = {
 		level = "34 - 35",
@@ -9609,14 +9718,14 @@ rm.npcDB = {
 		names = {enUS = "Slitherblade Sea Witch", deDE = "Meerhexe der Zackenkämme", esES = "Bruja de mar Filozante", frFR = "Sorcière des mers Ondulame", ptBR = "Bruxa do Mar Sibilâmina", ruRU = "Морская ведьма из клана Скользящего Плавника", koKR = "뱀갈퀴일족 바다마녀", zhCN = "滑刃海巫", zhTW = "滑刃海巫"},
 		zones = {405},
 	},
+	[4725] = {
+		level = "37 - 39",
+		names = {enUS = "Crazed Sandstrider", deDE = "Wahnsinniger Sandschreiter", esES = "Zancarena enloquecido", frFR = "Trotteur des sables fou", ptBR = "Arenomoa Enlouquecido", ruRU = "Бешеный песчаный долгоног", koKR = "광포한 사막타조", zhCN = "疯狂的沙漠陆行鸟", zhTW = "瘋狂的沙漠陸行鳥"},
+		zones = {405},
+	},
 	[4726] = {
 		level = "33 - 34",
 		names = {enUS = "Raging Thunder Lizard", deDE = "Tobende Donnerechse", esES = "Truenagarto enfurecido", esMX = "Truenagarto enfurecido", frFR = "Lézard-tonnerre enragé", ptBR = "Lagarto Trovejante Enraivecido", ruRU = "Разъяренная рокочущая ящерица", koKR = "흉포한 번개도마뱀", zhCN = "暴怒的雷霆蜥蜴", zhTW = "暴怒的雷霆蜥蜴"},
-		zones = {405},
-	},
-	[4727] = {
-		level = "37 - 38",
-		names = {enUS = "Elder Thunder Lizard", deDE = "Alte Donnerechse", esES = "Ancestro truenagarto", esMX = "Truenagarto anciano", frFR = "Ancien lézard-tonnerre", ptBR = "Lagarto Trovejante Ancião", ruRU = "Старая рокочущая ящерица", koKR = "덩치큰 번개도마뱀", zhCN = "老迈的雷霆蜥蜴", zhTW = "老邁的雷霆蜥蜴"},
 		zones = {405},
 	},
 	[4728] = {
@@ -9639,7 +9748,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "20 - 21",
 		names = {enUS = "Fallenroot Satyr", deDE = "Satyr der Leidbringer", esES = "Sátiro Malarraíz", esMX = "Sátiro Malarraíz", frFR = "Satyre Sans-racines", ptBR = "Sátiro Satíricon", ruRU = "Сатир из племени Змеящегося Корня", koKR = "썩은뿌리의 사티로스", zhCN = "腐根萨特", zhTW = "腐根薩特"},
-		zones = {331},
+		zones = {331, 148},
 	},
 	[4789] = {
 		classification = "Elite",
@@ -9809,6 +9918,11 @@ rm.npcDB = {
 		names = {enUS = "Theramore Infiltrator", deDE = "Spitzel von Theramore", esES = "Infiltrador de Theramore", esMX = "Infiltrado de Theramore", frFR = "Infiltrateur de Theramore", ptBR = "Infiltrador de Theramore", ruRU = "Тераморский секретный агент", koKR = "테라모어 첩보원", zhCN = "塞拉摩间谍", zhTW = "塞拉摩間諜"},
 		zones = {15},
 	},
+	[4841] = {
+		level = "45",
+		names = {enUS = "Deadmire", deDE = "Schlammwühler", esES = "Lodomuerto", esMX = "Lodomuerto", frFR = "Mortebourbe", ptBR = "Mortocharco", ruRU = "Зыбун", koKR = "붉은눈늪지악어", zhCN = "死沼巨鳄", zhTW = "死沼巨鱷"},
+		zones = {15},
+	},
 	[4842] = {
 		classification = "Rare Elite",
 		level = "32",
@@ -9819,7 +9933,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "35 - 36",
 		names = {enUS = "Shadowforge Surveyor", deDE = "Feldmesser der Schattenschmiede", esES = "Perito Forjatiniebla", esMX = "Perito de Forjatiniebla", frFR = "Géomètre Ombreforge", ptBR = "Topógrafo de Umbraforja", ruRU = "Тенегорнский геодезист", koKR = "어둠괴철로단 감독관", zhCN = "暗炉勘探员", zhTW = "暗爐勘探員"},
-		zones = {3},
+		zones = {3, 38},
 	},
 	[4845] = {
 		classification = "Elite",
@@ -9861,7 +9975,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "36 - 37",
 		names = {enUS = "Stonevault Rockchewer", deDE = "Felskauer der Steingrufttroggs", esES = "Masticapiedras Grutacanto", frFR = "Mange-roches Cavepierre", ptBR = "Masca-rochas da Abóbada de Pedra", ruRU = "Камнеед из племени Каменного Свода", koKR = "바위동굴일족 돌장이", zhCN = "石窟嚼石者", zhTW = "石窟嚼石者"},
-		zones = {1337},
+		zones = {3, 1337},
 	},
 	[4852] = {
 		classification = "Elite",
@@ -9875,6 +9989,12 @@ rm.npcDB = {
 		names = {enUS = "Stonevault Geomancer", deDE = "Geomant der Steingrufttroggs", esES = "Geomántico Grutacanto", frFR = "Géomancien Cavepierre", ptBR = "Geomante da Abóbada de Pedra", ruRU = "Геомант из племени Каменного Свода", koKR = "바위동굴일족 흙점쟁이", zhCN = "石窟地占师", zhTW = "石窟地占師"},
 		zones = {1337},
 	},
+	[4854] = {
+		classification = "Elite",
+		level = "45",
+		names = {enUS = "Grimlok", ruRU = "Гримлок", koKR = "그림로크", zhCN = "格瑞姆洛克", zhTW = "格瑞姆洛克"},
+		zones = {1337},
+	},
 	[4855] = {
 		classification = "Elite",
 		level = "43 - 44",
@@ -9886,6 +10006,12 @@ rm.npcDB = {
 		level = "36 - 37",
 		names = {enUS = "Stonevault Cave Hunter", deDE = "Höhlenjäger der Steingrufttroggs", esES = "Cazador de las cuevas Grutacanto", frFR = "Chasseur Cavepierre", ptBR = "Caçador das Cavernas da Abóbada de Pedra", ruRU = "Охотник из племени Каменного Свода", koKR = "바위동굴일족 굴사냥꾼", zhCN = "石窟猎手", zhTW = "石窟獵手"},
 		zones = {3},
+	},
+	[4857] = {
+		classification = "Elite",
+		level = "46",
+		names = {enUS = "Stone Keeper", deDE = "Steinbewahrer", esES = "Vigilante de piedra", frFR = "Gardien des pierres", ptBR = "Guardião de Pedra", ruRU = "Каменный хранитель", koKR = "바위 문지기", zhCN = "石头看守者", zhTW = "石頭看守者"},
+		zones = {1337},
 	},
 	[4860] = {
 		classification = "Elite",
@@ -9978,7 +10104,7 @@ rm.npcDB = {
 	},
 	[5053] = {
 		level = "18 - 19",
-		names = {enUS = "Deviate Crocolisk", deDE = "Deviatkrokilisk", esES = "Crocolisco descarriado", frFR = "Crocilisque déviant", ptBR = "Crocolisco Anormal", ruRU = "Загадочный кроколиск", koKR = "돌연변이 악어", zhCN = "变异鳄鱼", zhTW = "變異鱷魚"},
+		names = {enUS = "Deviate Crocolisk", deDE = "Deviatkrokilisk", esES = "Crocolisco descarriado", esMX = "Crocolisco descarriado", frFR = "Crocilisque déviant", ptBR = "Crocolisco Anormal", ruRU = "Загадочный кроколиск", koKR = "돌연변이 악어", zhCN = "变异鳄鱼", zhTW = "變異鱷魚"},
 		zones = {718},
 	},
 	[5056] = {
@@ -10074,7 +10200,7 @@ rm.npcDB = {
 	[5166] = {
 		faction = "Alliance",
 		level = "50",
-		names = {enUS = "Ormyr Flinteye", esES = "Ormyr Ojílex", ptBR = "Ormyr Pedernolho", ruRU = "Ормир Кремнеглаз", koKR = "오미르 플린트아이", zhCN = "奥米尔·火眼", zhTW = "奧米爾·火眼"},
+		names = {enUS = "Ormyr Flinteye", esES = "Ormyr Ojílex", esMX = "Ormyr Ojílex", ptBR = "Ormyr Pedernolho", ruRU = "Ормир Кремнеглаз", koKR = "오미르 플린트아이", zhCN = "奥米尔·火眼", zhTW = "奧米爾·火眼"},
 		zones = {1537},
 	},
 	[5167] = {
@@ -10107,6 +10233,12 @@ rm.npcDB = {
 		names = {enUS = "Soolie Berryfizz", esES = "Soolie Burbubaya", esMX = "Soolie Burbubaya", ptBR = "Soolie Frisamora", ruRU = "Сули Гонобобельзз", koKR = "술리 베리피즈", zhCN = "苏雷·浆泡", zhTW = "蘇雷·漿泡"},
 		zones = {1537},
 	},
+	[5184] = {
+		faction = "Alliance",
+		level = "35 - 36",
+		names = {enUS = "Theramore Sentry", deDE = "Wachposten von Theramore", esES = "Argos de Theramore", frFR = "Sentinelle de Theramore", ptBR = "Sentinela de Theramore", ruRU = "Караульный Терамора", koKR = "테라모어 보초병", zhCN = "塞拉摩哨兵", zhTW = "塞拉摩哨兵"},
+		zones = {15},
+	},
 	[5224] = {
 		classification = "Elite",
 		level = "45 - 46",
@@ -10117,6 +10249,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "46 - 47",
 		names = {enUS = "Murk Spitter", deDE = "Düsterspeier", esES = "Escupidor de la oscuridad", frFR = "Cracheur des boues", ptBR = "Cospelodo", ruRU = "Мракоплюй", koKR = "진흙맹독뱀", zhCN = "黑暗粘液虫", zhTW = "黑暗粘液蟲"},
+		zones = {8},
 	},
 	[5226] = {
 		classification = "Elite",
@@ -10149,6 +10282,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "45 - 46",
 		names = {enUS = "Fungal Ooze", deDE = "Fungusbrühschlammer", esES = "Moco fúngico", frFR = "Limon fongique", ptBR = "Gosma Fúngica", ruRU = "Грибковый слизнюк", koKR = "곰팡이 수액괴물", zhCN = "真菌软泥怪", zhTW = "真菌軟泥怪"},
+		zones = {8},
 	},
 	[5236] = {
 		level = "44 - 45",
@@ -10184,6 +10318,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "45 - 46",
 		names = {enUS = "Cursed Atal'ai", deDE = "Verfluchter Atal'ai", esES = "Atal'ai maldito", frFR = "Atal'ai maudit", ptBR = "Atal'ai Amaldiçoado", ruRU = "Проклятый тролль из племени Атал'ай", koKR = "저주받은 아탈라이트롤", zhCN = "被诅咒的阿塔莱巨魔", zhTW = "被詛咒的阿塔萊食人妖"},
+		zones = {8},
 	},
 	[5244] = {
 		level = "45 - 46",
@@ -10267,6 +10402,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "46 - 47",
 		names = {enUS = "Mummified Atal'ai", deDE = "Mumifizierter Atal'ai", esES = "Atal'ai momificado", frFR = "Atal'ai momifié", ptBR = "Atal'ai Mumificado", ruRU = "Мумифицированный тролль из племени Атал'ай", koKR = "미라가 된 아탈라이트롤", zhCN = "阿塔莱木乃伊", zhTW = "阿塔萊木乃伊"},
+		zones = {8},
 	},
 	[5267] = {
 		classification = "Elite",
@@ -10283,6 +10419,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "46 - 47",
 		names = {enUS = "Atal'ai Priest", deDE = "Priester der Atal'ai", esES = "Sacerdote Atal'ai", frFR = "Prêtre atal'ai", ptBR = "Sacerdote Atal'ai", ruRU = "Жрец племени Атал'ай", koKR = "아탈라이부족 사제", zhCN = "阿塔莱祭司", zhTW = "阿塔萊祭司"},
+		zones = {8},
 	},
 	[5270] = {
 		classification = "Elite",
@@ -10301,11 +10438,6 @@ rm.npcDB = {
 		level = "50 - 51",
 		names = {enUS = "Atal'ai High Priest", deDE = "Hohepriester der Atal'ai", esES = "Sumo sacerdote Atal'ai", frFR = "Grand prêtre atal'ai", ptBR = "Sumo Sacerdote Atal'ai", ruRU = "Верховный жрец племени Атал'ай", koKR = "아탈라이부족 대사제", zhCN = "阿塔莱高阶祭司", zhTW = "阿塔萊高階祭司"},
 		zones = {1477},
-	},
-	[5274] = {
-		level = "48 - 49",
-		names = {enUS = "Ironfur Patriarch", deDE = "Eisenfellpatriarch", esES = "Patriarca Cueracero", esMX = "Patriarca Cueracero", frFR = "Patriarche Ferpoil", ptBR = "Patriarca Veloférreo", ruRU = "Сталемех-патриарх", koKR = "우두머리 무쇠가죽곰", zhCN = "铁鬃熊王", zhTW = "鐵鬃熊王"},
-		zones = {357},
 	},
 	[5277] = {
 		classification = "Elite",
@@ -10343,7 +10475,7 @@ rm.npcDB = {
 	},
 	[5288] = {
 		level = "8 - 48",
-		names = {enUS = "Rabid Longtooth", deDE = "Tollwütiger Forstwolf", esES = "Lobo rabioso del bosque", esMX = "Lobo del bosque rabioso", frFR = "Loup des bois enragé", ptBR = "Lobo da Floresta Raivoso", ruRU = "Бешеный лесной волк", koKR = "광포한 송곳니늑대", zhCN = "狂暴森林狼", zhTW = "瘋狂的長牙狼"},
+		names = {enUS = "Rabid Longtooth", deDE = "Tollwütiger Langzahn", esES = "Lobo rabioso del bosque", esMX = "Lobo del bosque rabioso", frFR = "Loup des bois enragé", ptBR = "Lobo da Floresta Raivoso", ruRU = "Бешеный лесной волк", koKR = "광포한 송곳니늑대", zhCN = "狂暴森林狼", zhTW = "瘋狂的長牙狼"},
 		zones = {357, 85},
 	},
 	[5291] = {
@@ -10411,18 +10543,6 @@ rm.npcDB = {
 		level = "44 - 46",
 		names = {enUS = "Rogue Vale Screecher", deDE = "Wilder Talkreischer", esES = "Pícaro estridador del valle", esMX = "Estridador del valle huido", frFR = "Hurleur des vallées insoumis", ptBR = "Guinchador Errante do Vale", ruRU = "Норовистый дольный крикун", koKR = "사나운 계곡천둥매", zhCN = "游荡的山谷尖啸者", zhTW = "遊蕩的山谷尖嘯者"},
 		zones = {357},
-	},
-	[5317] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Jademir Oracle", deDE = "Jademirorakel", esES = "Oráculo Jademir", esMX = "Oráculo Jademir", frFR = "Oracle Jademir", ptBR = "Oráculo de Jademir", ruRU = "Нефритор-оракул", koKR = "비취비늘혈족 예언자", zhCN = "加德米尔龙族", zhTW = "加德米爾龍族"},
-		zones = {357, 16018},
-	},
-	[5320] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Jademir Boughguard", deDE = "Jademirastwache", esES = "Guardarrama Fuego de Jade", esMX = "Guardarrama Fuego de Jade", frFR = "Gardien des marais Jademir", ptBR = "Ramaguarda de Jademir", ruRU = "Нефритор-страж ветвей", koKR = "비취비늘혈족 가지경비병", zhCN = "加德米尔卫兵", zhTW = "加德米爾衛兵"},
-		zones = {357, 405, 16018},
 	},
 	[5331] = {
 		level = "42 - 43",
@@ -10602,45 +10722,25 @@ rm.npcDB = {
 		names = {enUS = "Hazzali Stinger", deDE = "Stecher der Hazzali", esES = "Aguijonero Hazzali", frFR = "Dard Hazzali", ptBR = "Aguilhante Hazzali", ruRU = "Острожал из улья Хаззали", koKR = "독침 하잘리", zhCN = "哈扎里毒刺蝎", zhTW = "哈札里毒刺蠍"},
 		zones = {440},
 	},
-	[5451] = {
-		level = "49 - 50",
-		names = {enUS = "Hazzali Swarmer", deDE = "Schwärmer der Hazzali", esES = "Enjambrista Hazali", frFR = "Traînard Hazzali", ptBR = "Enxameador Hazzali", ruRU = "Членистоног из улья Хаззали", koKR = "우두머리 하잘리", zhCN = "哈扎里群居蝎", zhTW = "哈札里群居蠍"},
-		zones = {440},
-	},
-	[5452] = {
-		level = "47 - 48",
-		names = {enUS = "Hazzali Worker", deDE = "Arbeiter der Hazzali", esES = "Trabajador Hazzali", frFR = "Ouvrier Hazzali", ptBR = "Trabalhador Hazzali", ruRU = "Рабочий из улья Хаззали", koKR = "일꾼 하잘리", zhCN = "哈扎里工蝎", zhTW = "哈札里工蠍"},
-		zones = {440},
-	},
 	[5453] = {
 		level = "48 - 49",
 		names = {enUS = "Hazzali Tunneler", deDE = "Tunnelgräber der Hazzali", esES = "Tunelador Hazzali", frFR = "Tunnelière Hazzali", ptBR = "Escavador Hazzali", ruRU = "Проходчик из улья Хаззали", koKR = "땅꾼 하잘리", zhCN = "哈扎里掘洞蝎", zhTW = "哈札里掘洞蠍"},
 		zones = {440},
 	},
-	[5454] = {
-		level = "49 - 50",
-		names = {enUS = "Hazzali Sandreaver", deDE = "Sandhäscher der Hazzali", esES = "Atracador Hazzali", frFR = "Ravageur des sables Hazzali", ptBR = "Arrasareias Hazzali", ruRU = "Песчаный разоритель из улья Хаззали", koKR = "모래무지 하잘리", zhCN = "哈扎里沙行者", zhTW = "哈札里沙行者"},
-		zones = {440},
-	},
 	[5455] = {
 		level = "47 - 48",
 		names = {enUS = "Centipaar Wasp", deDE = "Wespe der Centipaar", esES = "Avispa Centipaar", frFR = "Guêpe Centipaar", ptBR = "Vespa Centiparte", ruRU = "Оса-сентипаар", koKR = "병정 센티파르", zhCN = "森提帕尔异种蝎", zhTW = "森提帕爾異種蠍"},
-		zones = {440, 490},
+		zones = {440},
 	},
 	[5456] = {
 		level = "48 - 49",
 		names = {enUS = "Centipaar Stinger", deDE = "Stecher der Centipaar", esES = "Aguijonero Centipaar", frFR = "Dard Centipaar", ptBR = "Aguilhante Centiparte", ruRU = "Жалоносец-сентипаар", koKR = "독침 센티파르", zhCN = "森提帕尔毒刺蝎", zhTW = "森提帕爾毒刺蠍"},
-		zones = {440, 490},
+		zones = {440},
 	},
 	[5457] = {
 		level = "49 - 50",
 		names = {enUS = "Centipaar Swarmer", deDE = "Schwärmer der Centipaar", esES = "Enjambrista Centipaar", frFR = "Traînard Centipaar", ptBR = "Enxameador Centiparte", ruRU = "Членистоног-сентипаар", koKR = "우두머리 센티파르", zhCN = "森提帕尔群居蝎", zhTW = "森提帕爾群居蠍"},
 		zones = {440, 490},
-	},
-	[5459] = {
-		level = "47 - 48",
-		names = {enUS = "Centipaar Tunneler", deDE = "Tunnelgräber der Centipaar", esES = "Tunelador Centipaar", frFR = "Tunnelière centipaar", ptBR = "Escavador Centiparte", ruRU = "Проходчик-сентипаар", koKR = "땅꾼 센티파르", zhCN = "森提帕尔掘洞蝎", zhTW = "森提帕爾掘洞蠍"},
-		zones = {440},
 	},
 	[5461] = {
 		level = "48 - 49",
@@ -10800,7 +10900,7 @@ rm.npcDB = {
 	[5601] = {
 		level = "37 - 42",
 		names = {enUS = "Khan Jehn", ruRU = "Вождь Джен", koKR = "칸 젠", zhCN = "杰恩可汗", zhTW = "傑恩可汗"},
-		zones = {405},
+		zones = {405, 16651},
 	},
 	[5615] = {
 		level = "43 - 44",
@@ -10876,13 +10976,19 @@ rm.npcDB = {
 	[5695] = {
 		faction = "Horde",
 		level = "31",
-		names = {enUS = "Vance Undergloom", deDE = "Vance Niederglimm", esES = "Vance Bajopenumbra", esMX = "Vance Bajopenumbra", ptBR = "Vance Merencório", ruRU = "Ванс Мрачнейший", koKR = "밴스 언더글룸", zhCN = "范斯·安德格鲁姆", zhTW = "范斯·安德格魯姆"},
+		names = {enUS = "Vance Undergloom", esES = "Vance Bajopenumbra", esMX = "Vance Bajopenumbra", ptBR = "Vance Merencório", ruRU = "Ванс Мрачнейший", koKR = "밴스 언더글룸", zhCN = "范斯·安德格鲁姆", zhTW = "范斯·安德格魯姆"},
 		zones = {85},
 	},
-	[5708] = {
+	[5709] = {
 		classification = "Elite",
-		level = "50 - 51",
-		names = {enUS = "Spawn of Hakkar", deDE = "Brut von Hakkar", esES = "Alevín de Hakkar", esMX = "Engendro de Hakkar", frFR = "Rejeton d'Hakkar", ptBR = "Rebento de Hakkar", ruRU = "Порождение Хаккара", koKR = "학카르의 피조물", zhCN = "哈卡的后代", zhTW = "哈卡的後代"},
+		level = "55",
+		names = {enUS = "Shade of Eranikus", deDE = "Eranikus' Schemen", esES = "Sombra de Eranikus", frFR = "Ombre d'Eranikus", ptBR = "Vulto de Erânicos", ruRU = "Тень Эраникуса", koKR = "에라니쿠스의 사령", zhCN = "伊兰尼库斯的阴影", zhTW = "伊蘭尼庫斯的陰影"},
+		zones = {1477},
+	},
+	[5710] = {
+		classification = "Elite",
+		level = "54",
+		names = {enUS = "Jammal'an the Prophet", deDE = "Jammal'an der Prophet", esES = "Jammal'an el Profeta", frFR = "Jammal'an le prophète", ptBR = "Jammal'an, o Profeta", ruRU = "Джаммал'ан Пророк", koKR = "예언자 잠말란", zhCN = "预言者迦玛兰", zhTW = "預言者迦瑪蘭"},
 		zones = {1477},
 	},
 	[5712] = {
@@ -10915,17 +11021,11 @@ rm.npcDB = {
 		names = {enUS = "Zul'Lor", ruRU = "Зул'Лор", koKR = "줄로", zhCN = "祖罗尔", zhTW = "祖羅爾"},
 		zones = {1477},
 	},
-	[5717] = {
+	[5719] = {
 		classification = "Elite",
 		level = "52",
-		names = {enUS = "Mijan", ptBR = "Mirran", ruRU = "Миджан", koKR = "마이잔", zhCN = "米杉", zhTW = "米杉"},
+		names = {enUS = "Morphaz", ruRU = "Морфаз", koKR = "몰파즈", zhCN = "摩弗拉斯", zhTW = "摩弗拉斯"},
 		zones = {1477},
-	},
-	[5718] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Rothos", ruRU = "Ротос", koKR = "로소스", zhCN = "洛索斯", zhTW = "洛索斯"},
-		zones = {47, 16029},
 	},
 	[5720] = {
 		classification = "Elite",
@@ -10939,6 +11039,12 @@ rm.npcDB = {
 		names = {enUS = "Dreamscythe", deDE = "Traumsense", esES = "Guadañasueños", esMX = "Segasueños", frFR = "Fauche-rêve", ptBR = "Darquimeros", ruRU = "Жнец Снов", koKR = "드림사이드", zhCN = "德姆塞卡尔", zhTW = "德姆塞卡爾"},
 		zones = {1477},
 	},
+	[5722] = {
+		classification = "Elite",
+		level = "53",
+		names = {enUS = "Hazzas", ruRU = "Хаззас", koKR = "하자스", zhCN = "哈扎斯", zhTW = "哈札斯"},
+		zones = {1477},
+	},
 	[5748] = {
 		faction = "Horde",
 		level = "18 - 20",
@@ -10948,7 +11054,7 @@ rm.npcDB = {
 	[5755] = {
 		classification = "Elite",
 		level = "19 - 20",
-		names = {enUS = "Deviate Viper", deDE = "Deviatviper", esES = "Víbora descarriada", frFR = "Vipère déviante", ptBR = "Víbora Anormal", ruRU = "Загадочная гадюка", koKR = "돌연변이 독사", zhCN = "剧毒飞蛇", zhTW = "劇毒飛蛇"},
+		names = {enUS = "Deviate Viper", deDE = "Deviatviper", esES = "Víbora descarriada", esMX = "Víbora descarriada", frFR = "Vipère déviante", ptBR = "Víbora Anormal", ruRU = "Загадочная гадюка", koKR = "돌연변이 독사", zhCN = "剧毒飞蛇", zhTW = "劇毒飛蛇"},
 		zones = {718},
 	},
 	[5756] = {
@@ -10978,7 +11084,7 @@ rm.npcDB = {
 	[5761] = {
 		classification = "Elite",
 		level = "19 - 20",
-		names = {enUS = "Deviate Shambler", deDE = "Deviatschlurfer", esES = "Arrastrado descarriado", frFR = "Glacial déviant", ptBR = "Trôpego Anormal", ruRU = "Загадочный шаркун", koKR = "돌연변이 늪괴물", zhCN = "变异蹒跚者", zhTW = "變異蹣跚者"},
+		names = {enUS = "Deviate Shambler", deDE = "Deviatschlurfer", esES = "Arrastrado descarriado", esMX = "Arrastrapiés descarriado", frFR = "Glacial déviant", ptBR = "Trôpego Anormal", ruRU = "Загадочный шаркун", koKR = "돌연변이 늪괴물", zhCN = "变异蹒跚者", zhTW = "變異蹣跚者"},
 		zones = {718},
 	},
 	[5762] = {
@@ -10995,6 +11101,12 @@ rm.npcDB = {
 	[5768] = {
 		level = "14",
 		names = {enUS = "Ebru", ruRU = "Эбру", koKR = "에브루", zhCN = "厄布鲁", zhTW = "厄布魯"},
+	},
+	[5775] = {
+		classification = "Elite",
+		level = "21",
+		names = {enUS = "Verdan the Everliving", deDE = "Verdan der Ewiglebende", esES = "Verdan el Eterno", esMX = "Verdan el Eterno", frFR = "Verdan l'Immortel", ptBR = "Verdan, o Sempre-vivo", ruRU = "Вердан Бессмертный", koKR = "영생의 베르단", zhCN = "永生者沃尔丹", zhTW = "永生者沃爾丹"},
+		zones = {718},
 	},
 	[5783] = {
 		level = "27",
@@ -11015,6 +11127,13 @@ rm.npcDB = {
 		faction = "Alliance",
 		level = "25",
 		names = {enUS = "Aean Swiftriver", esES = "Aean Río Veloz", esMX = "Aean Río Veloz", ptBR = "Aean Veloflumen", ruRU = "Эан Быстрая Река", koKR = "이안 스위프트리버", zhCN = "艾恩·流水", zhTW = "艾恩·流水"},
+		zones = {17},
+	},
+	[5798] = {
+		classification = "Rare Elite",
+		faction = "Alliance",
+		level = "25",
+		names = {enUS = "Thora Feathermoon", esES = "Thora Plumaluna", esMX = "Thora Plumaluna", ptBR = "Thora Plumaluna", ruRU = "Тора Оперенная Луна", koKR = "토라 페더문", zhCN = "索拉·羽月", zhTW = "索拉·羽月"},
 		zones = {17},
 	},
 	[5799] = {
@@ -11055,6 +11174,12 @@ rm.npcDB = {
 		names = {enUS = "Felweaver Scornn", deDE = "Höllenwirker Hoohn", esES = "Tejeyel Scronn", esMX = "Tejeyel Scronn", frFR = "Gangretisseur Scornn", ptBR = "Tecevil Dezzprezo", ruRU = "Скорнн Ткач Скверны", koKR = "펠위버 스코른", zhCN = "斯考恩", zhTW = "斯考恩"},
 		zones = {14},
 	},
+	[5824] = {
+		classification = "Rare Elite",
+		level = "11",
+		names = {enUS = "Captain Flat Tusk", deDE = "Captain Stumpfhauer", esES = "Capitán Colmillo Plano", esMX = "Capitán Colmillo Plano", frFR = "Capitaine Plate-défense", ptBR = "Capitão Presa Chata", ruRU = "Капитан Тупой Клык", koKR = "호위대장 납작어금니", zhCN = "獠牙队长", zhTW = "獠牙隊長"},
+		zones = {14},
+	},
 	[5827] = {
 		classification = "Rare Elite",
 		level = "27",
@@ -11067,11 +11192,29 @@ rm.npcDB = {
 		names = {enUS = "Sister Rathtalon", deDE = "Schwester Wildkralle", esES = "Hermana Rathtalon", esMX = "Hermana Rathtalon", frFR = "Sœur Rathtalon", ptBR = "Irmã Rathalon", ruRU = "Сестра Коготь Кургана", koKR = "마녀 라스탈론", zhCN = "莱丝塔伦", zhTW = "萊絲塔倫"},
 		zones = {17},
 	},
-	[5833] = {
-		classification = "Elite",
-		level = "48",
-		names = {enUS = "Margol the Rager", deDE = "Margol der Wüterich", esES = "Margol la Furiosa", frFR = "Margol l'Enragée", ptBR = "Margol, a Enfurecida", ruRU = "Маргол Яростень", koKR = "난폭한 마르골", zhCN = "狂暴的玛尔戈", zhTW = "狂暴的瑪爾戈"},
-		zones = {51},
+	[5835] = {
+		classification = "Rare",
+		level = "19",
+		names = {enUS = "Foreman Grills", deDE = "Großknecht Grills", esES = "Supervisor Asas", esMX = "Supervisor Asas", frFR = "Contremaître Grills", ptBR = "Feitor Grelha", ruRU = "Штейгер Грилз", koKR = "현장감독 그릴즈", zhCN = "工头葛瑞尔斯", zhTW = "工頭葛瑞爾斯"},
+		zones = {17},
+	},
+	[5836] = {
+		classification = "Rare",
+		level = "19",
+		names = {enUS = "Engineer Whirleygig", deDE = "Ingenieur Whirleygig", esES = "Ingeniero Giralesín", esMX = "Ingeniero Giralesín", frFR = "Ingénieur Whirleygig", ptBR = "Engenheiro Revestrés", ruRU = "Инженер Безобразец", koKR = "기술자 휠리기그", zhCN = "技师维尔雷格", zhTW = "技師維爾雷格"},
+		zones = {17},
+	},
+	[5837] = {
+		classification = "Rare",
+		level = "15",
+		names = {enUS = "Stonearm", deDE = "Steinarm", esES = "Brazorroca", esMX = "Brazorroca", frFR = "Bras-de-pierre", ptBR = "Braço-de-pedra", ruRU = "Каменная рука", koKR = "무쇠팔", zhCN = "石臂", zhTW = "石臂"},
+		zones = {17},
+	},
+	[5838] = {
+		classification = "Rare",
+		level = "17",
+		names = {enUS = "Brokespear", deDE = "Bruchspeer", esES = "Lanzarrota", esMX = "Lanzarrota", frFR = "Brise-épieu", ptBR = "Lança-partida", ruRU = "Копьелом", koKR = "부러진창", zhCN = "断矛", zhTW = "斷矛"},
+		zones = {17},
 	},
 	[5839] = {
 		level = "43 - 44",
@@ -11146,11 +11289,6 @@ rm.npcDB = {
 		names = {enUS = "Glassweb Spider", deDE = "Glasnetzspinne", esES = "Araña Cristalderma", esMX = "Araña Cristalderma", frFR = "Araignée verrière", ptBR = "Aranha Teia-de-vidro", ruRU = "Хрустальный паук", koKR = "유리그물거미", zhCN = "晶网蜘蛛", zhTW = "晶網蜘蛛"},
 		zones = {51},
 	},
-	[5857] = {
-		level = "45 - 47",
-		names = {enUS = "Searing Lava Spider", deDE = "Sengende Lavaspinne", esES = "Lavaraña abrasadora", esMX = "Araña de lava abrasadora", frFR = "Araignée de lave incendiaire", ptBR = "Aranha de Lava Causticante", ruRU = "Опаляющий лавовый паук", koKR = "불타는 용암거미", zhCN = "灼热熔岩蜘蛛", zhTW = "灼熱熔岩蜘蛛"},
-		zones = {51},
-	},
 	[5858] = {
 		level = "47 - 49",
 		names = {enUS = "Searing Lava Spider", deDE = "Versengende Lavaspinne", esES = "Araña de lava abrasadora", esMX = "Araña de lava superior", frFR = "Araignée de lave incendiaire", ptBR = "Aranha de Lava Abrasadora", ruRU = "Опаляющий лавовый паук", koKR = "불타는 용암거미", zhCN = "灼热熔岩蜘蛛", zhTW = "灼熱熔岩蜘蛛"},
@@ -11190,6 +11328,12 @@ rm.npcDB = {
 		classification = "Rare Elite",
 		level = "24",
 		names = {enUS = "Foreman Rigger", deDE = "Großknecht Rigger", esES = "Supervisor Rigger", esMX = "Supervisor Rigger", frFR = "Contremaître Rigger", ptBR = "Encarregado Armador", ruRU = "Штейгер Риггер", koKR = "현장감독 리거", zhCN = "工头里格尔", zhTW = "工頭里格爾"},
+		zones = {406},
+	},
+	[5932] = {
+		classification = "Rare Elite",
+		level = "22",
+		names = {enUS = "Taskmaster Whipfang", deDE = "Zuchtmeister Whipfang", esES = "Capataz Latimillo", esMX = "Capataz Latimillo", frFR = "Sous-chef Fouettecroc", ptBR = "Capataz Presaçoite", ruRU = "Надсмотрщик Хлестоклык", koKR = "행동대장 채찍송곳니", zhCN = "工头维普弗恩", zhTW = "工頭維普弗恩"},
 		zones = {406},
 	},
 	[5938] = {
@@ -11234,29 +11378,14 @@ rm.npcDB = {
 		names = {enUS = "Yonada", esMX = "Ionada", ruRU = "Йонада", koKR = "요나다", zhCN = "犹纳达", zhTW = "猶納達"},
 		zones = {17},
 	},
-	[5974] = {
-		level = "45 - 46",
-		names = {enUS = "Dreadmaul Ogre", deDE = "Schreckensfelsoger", esES = "Ogro Fauzatroz", frFR = "Ogre Cognepeur", ptBR = "Ogro de Malhorrendo", ruRU = "Огр из клана Молота Ужаса", koKR = "우레망치일족 오우거", zhCN = "巨槌食人魔", zhTW = "巨槌巨魔"},
-		zones = {4},
-	},
-	[5976] = {
+	[5975] = {
 		level = "46 - 47",
-		names = {enUS = "Dreadmaul Brute", deDE = "Schläger der Schreckensfelsoger", esES = "Tosco Fauzatroz", frFR = "Brute Cognepeur", ptBR = "Brutamontes de Malhorrendo", ruRU = "Громила из клана Молота Ужаса", koKR = "우레망치일족 투사", zhCN = "巨槌蛮兵", zhTW = "巨槌蠻兵"},
+		names = {enUS = "Dreadmaul Ogre Mage", deDE = "Ogermagier der Schreckensfelsoger", esES = "Mago ogro Fauzatroz", frFR = "Ogre-mage Cognepeur", ptBR = "Ogro-mago de Malhorrendo", ruRU = "Огр-маг из клана Молота Ужаса", koKR = "우레망치일족 오우거 마법사", zhCN = "巨槌食人魔法师", zhTW = "巨槌巨魔法師"},
 		zones = {4},
 	},
 	[5977] = {
 		level = "53 - 54",
 		names = {enUS = "Dreadmaul Mauler", deDE = "Raufer der Schreckensfelsoger", esES = "Destructor Fauzatroz", frFR = "Marteleur Cognepeur", ptBR = "Espancador de Malhorrendo", ruRU = "Изверг из клана Молота Ужаса", koKR = "우레망치일족 싸움꾼", zhCN = "巨槌战士", zhTW = "巨槌戰士"},
-		zones = {4},
-	},
-	[5978] = {
-		level = "54 - 55",
-		names = {enUS = "Dreadmaul Warlock", deDE = "Hexenmeister der Schreckensfelsoger", esES = "Brujo Fauzatroz", frFR = "Démoniste Cognepeur", ptBR = "Bruxo de Malhorrendo", ruRU = "Чернокнижник из клана Молота Ужаса", koKR = "우레망치일족 흑마법사", zhCN = "巨槌术士", zhTW = "巨槌術士"},
-		zones = {4},
-	},
-	[5979] = {
-		level = "45 - 47",
-		names = {enUS = "Wretched Lost One", deDE = "Elender Verirrter", esES = "Perdido desdichado", frFR = "Perdu décati", ptBR = "Miserável dos Perdidos", ruRU = "Презренный из племени Заблудших", koKR = "비참한 드레노어 난민", zhCN = "悲惨的失落者", zhTW = "悲慘的失落者"},
 		zones = {4},
 	},
 	[5981] = {
@@ -11272,11 +11401,6 @@ rm.npcDB = {
 	[5984] = {
 		level = "44 - 46",
 		names = {enUS = "Starving Snickerfang", deDE = "Verhungernder Kicherfang", esES = "Hiena risitas hambrienta", frFR = "Raillecroc affamée", ptBR = "Rasgarrindo Faminta", ruRU = "Голодный хохотун", koKR = "굶주린 칼송곳니하이에나", zhCN = "饥饿的弯牙土狼", zhTW = "饑餓的彎牙土狼"},
-		zones = {4},
-	},
-	[5985] = {
-		level = "49 - 50",
-		names = {enUS = "Snickerfang Hyena", deDE = "Kicherfanghyäne", esES = "Hiena risitas", frFR = "Hyène Raillecroc", ptBR = "Hiena Rasgarrindo", ruRU = "Хохочущая гиена", koKR = "칼송곳니하이에나", zhCN = "弯牙土狼", zhTW = "彎牙土狼"},
 		zones = {4},
 	},
 	[5988] = {
@@ -11310,12 +11434,6 @@ rm.npcDB = {
 		names = {enUS = "Nethergarde Miner", deDE = "Minenarbeiter von Nethergarde", esES = "Minero de Nethergarde", esMX = "Minero de Nethergarde", frFR = "Mineur de Rempart-du-Néant", ptBR = "Minerador de Etergarde", ruRU = "Шахтер из крепости Стражей Пустоты", koKR = "네더가드 광부", zhCN = "守望堡矿工", zhTW = "守望堡礦工"},
 		zones = {4},
 	},
-	[5998] = {
-		faction = "Alliance",
-		level = "46 - 48",
-		names = {enUS = "Nethergarde Foreman", deDE = "Großknecht von Nethergarde", esES = "Supervisor de Nethergarde", esMX = "Supervisor de Nethergarde", frFR = "Contremaître de Rempart-du-Néant", ptBR = "Encarregado de Etergarde", ruRU = "Штейгер из крепости Стражей Пустоты", koKR = "네더가드 현장감독", zhCN = "守望堡工头", zhTW = "守望堡工頭"},
-		zones = {4},
-	},
 	[6004] = {
 		level = "51 - 52",
 		names = {enUS = "Shadowsworn Cultist", deDE = "Kultist der Schattenanbeter", esES = "Fiel Sombraída", frFR = "Sectateur lige d'ombre", ptBR = "Sectário Devoto da Sombra", ruRU = "Сектант Культа Приверженцев Тени", koKR = "어둠의혈맹 이교도", zhCN = "魔誓祭司", zhTW = "魔誓祭司"},
@@ -11331,24 +11449,9 @@ rm.npcDB = {
 		names = {enUS = "Shadowsworn Adept", deDE = "Adept der Schattenanbeter", esES = "Adepto Sombraída", frFR = "Adepte lige d'ombre", ptBR = "Adepto Devoto da Sombra", ruRU = "Адепт Культа Приверженцев Тени", koKR = "어둠의혈맹 숙련사제", zhCN = "魔誓专家", zhTW = "魔誓專家"},
 		zones = {4},
 	},
-	[6007] = {
-		level = "53 - 54",
-		names = {enUS = "Shadowsworn Enforcer", deDE = "Vollstrecker der Schattenanbeter", esES = "Déspota Sombraída", frFR = "Massacreur lige d'ombre", ptBR = "Impositor Devoto da Sombra", ruRU = "Головорез из Культа Приверженцев Тени", koKR = "어둠의혈맹 집행자", zhCN = "魔誓执行者", zhTW = "魔誓執行者"},
-		zones = {4},
-	},
-	[6009] = {
-		level = "54 - 55",
-		names = {enUS = "Shadowsworn Dreadweaver", deDE = "Schreckenswirker der Schattenanbeter", esES = "Tejedor de Tinieblas Sombraída", frFR = "Lige d'ombre tisseur d’effroi", ptBR = "Tecemedo Devoto da Sombra", ruRU = "Страхопряд Культа Приверженцев Тени", koKR = "어둠의혈맹 공포술사", zhCN = "魔誓恐法师", zhTW = "魔誓恐法師"},
-		zones = {4},
-	},
 	[6010] = {
 		level = "54 - 55",
 		names = {enUS = "Felhound", deDE = "Teufelshund", esES = "Can manáfago", frFR = "Gangrechien", ptBR = "Canisvil", ruRU = "Гончая Скверны", koKR = "지옥사냥개", zhCN = "地狱巨犬", zhTW = "地獄巨犬"},
-		zones = {4},
-	},
-	[6011] = {
-		level = "54 - 55",
-		names = {enUS = "Felguard Sentry", deDE = "Wachposten der Teufelswache", esES = "Argos guardia maldito", frFR = "Gangregarde sentinelle", ptBR = "Sentinela Guarda Vil", ruRU = "Караульный-страж Скверны", koKR = "지옥군단병 보초", zhCN = "地狱卫士斥候", zhTW = "地獄衛士斥候"},
 		zones = {4},
 	},
 	[6020] = {
@@ -11374,6 +11477,21 @@ rm.npcDB = {
 		names = {enUS = "Razorfen Stalker", deDE = "Pirscher von Razorfen", esES = "Acechador de Rajacieno", esMX = "Acechador de Rajacieno", frFR = "Traqueur  de Tranchebauge", ptBR = "Espreitador do Urzal", ruRU = "Ловчий из племени Иглошкурых", koKR = "가시덩굴일족 추종자", zhCN = "剃刀沼泽捕猎者", zhTW = "剃刀沼澤捕獵者"},
 		zones = {491},
 	},
+	[6068] = {
+		level = "35 - 36",
+		names = {enUS = "Warug's Bodyguard", deDE = "Warugs Leibwache", esES = "Guardaespaldas de Warug", frFR = "Garde du corps de Warug", ptBR = "Guarda-costas de Warug", ruRU = "Телохранитель Варуга", koKR = "와루그의 경호원", zhCN = "瓦鲁格的保镖", zhTW = "瓦魯格的保鏢"},
+		zones = {405},
+	},
+	[6069] = {
+		level = "39 - 40",
+		names = {enUS = "Maraudine Khan Guard", deDE = "Khanwache der Maraudine", esES = "Guardia Khan Maraudine", frFR = "Garde du khan maraudine", ptBR = "Guarda do Khan Maraudino", ruRU = "Охранник хана из племени Мародин", koKR = "마라우돈일족 칸 호위병", zhCN = "玛洛迪可汗保镖", zhTW = "瑪洛迪可汗保鏢"},
+		zones = {405},
+	},
+	[6073] = {
+		level = "29 - 30",
+		names = {enUS = "Searing Infernal", deDE = "Sengende Höllenbestie", esES = "Infernal abrasador", esMX = "Infernal abrasador", frFR = "Infernal incendiaire", ptBR = "Infernal Abrasador", ruRU = "Опаляющий инфернал", koKR = "불타는 지옥불정령", zhCN = "灼热的地狱火", zhTW = "灼熱的地獄火"},
+		zones = {331},
+	},
 	[6094] = {
 		faction = "Alliance",
 		level = "22",
@@ -11388,12 +11506,12 @@ rm.npcDB = {
 	},
 	[6116] = {
 		level = "45 - 46",
-		names = {enUS = "Highborne Apparition", deDE = "Erscheinung einer Hochgeborenen", esES = "Aparición de Altonato", esMX = "Aparecida Altonato", frFR = "Apparition bien-née", ptBR = "Aparição Altaneira", ruRU = "Тень высокорожденной", koKR = "명가의 유령", zhCN = "上层精灵的幻影", zhTW = "高等精靈的幻影"},
+		names = {enUS = "Highborne Apparition", deDE = "Erscheinung einer Hochgeborenen", esES = "Aparición de Altonato", esMX = "Aparecida Altonato", frFR = "Apparition bien-née", ptBR = "Aparição Altaneira", ruRU = "Тень высокорожденной", koKR = "명가의 유령", zhCN = "上层精灵的幻影", zhTW = "精靈貴族的幻影"},
 		zones = {16},
 	},
 	[6117] = {
 		level = "46 - 47",
-		names = {enUS = "Highborne Lichling", deDE = "Lichling eines Hochgeborenen", esES = "Exanimato Altonato", esMX = "Exanimato Altonato", frFR = "Jeune liche bien-née", ptBR = "Sub-lich Altaneiro", ruRU = "Призрак высокорожденного", koKR = "명가의 망령", zhCN = "上层精灵鬼巫", zhTW = "高等精靈鬼巫"},
+		names = {enUS = "Highborne Lichling", deDE = "Lichling eines Hochgeborenen", esES = "Exanimato Altonato", esMX = "Exanimato Altonato", frFR = "Jeune liche bien-née", ptBR = "Sub-lich Altaneiro", ruRU = "Призрак высокорожденного", koKR = "명가의 망령", zhCN = "上层精灵鬼巫", zhTW = "精靈貴族鬼巫"},
 		zones = {16},
 	},
 	[6123] = {
@@ -11421,12 +11539,6 @@ rm.npcDB = {
 		names = {enUS = "Haldarr Felsworn", deDE = "Teufelsanbeter der Haldarr", esES = "Jurapenas Haldarr", esMX = "Jurapenas Haldarr", frFR = "Lige de la corruption Haldarr", ptBR = "Devoto Vil Haldarr", ruRU = "Скверноподданный из племени Халдарр", koKR = "할다르 악마추종자", zhCN = "哈达尔魔仆", zhTW = "哈達爾魔僕"},
 		zones = {16},
 	},
-	[6130] = {
-		classification = "Elite",
-		level = "52 - 53",
-		names = {enUS = "Blue Scalebane", deDE = "Blaue Bannschuppe", esES = "Horrocrusto azul", frFR = "Plaiedécaille bleu", ptBR = "Escamorte Azul", ruRU = "Синий чешуйчатый губитель", koKR = "푸른용혈족 맹독전사", zhCN = "蓝色刃鳞龙人", zhTW = "藍色刃鱗龍人"},
-		zones = {16},
-	},
 	[6131] = {
 		classification = "Elite",
 		level = "51 - 52",
@@ -11439,55 +11551,11 @@ rm.npcDB = {
 		names = {enUS = "Razorfen Servitor", deDE = "Bediensteter von Razorfen", esES = "Servidor de Rajacieno", esMX = "Servidor de Rajacieno", frFR = "Serviteur de Tranchebauge", ptBR = "Servidor do Urzal", ruRU = "Служитель племени Иглошкурых", koKR = "가시덩굴일족 하수인", zhCN = "剃刀沼泽仆从", zhTW = "剃刀沼澤僕從"},
 		zones = {17},
 	},
-	[6135] = {
-		level = "53 - 54",
-		names = {enUS = "Arkkoran Clacker", deDE = "Arkkoranklacker", esES = "Pinzador Arkkoran", frFR = "Claqueur Arkkoran", ptBR = "Estalador Arkkoran", ruRU = "Аркоранский трещот", koKR = "딸깍이 아크코란마크루라", zhCN = "亚考兰响钳龙虾人", zhTW = "亞考蘭響鉗龍蝦人"},
-		zones = {16},
-	},
-	[6136] = {
-		level = "53 - 54",
-		names = {enUS = "Arkkoran Muckdweller", deDE = "Arkkoranmatschkrabbler", esES = "Habitabosta Arkkoran", esMX = "Habitabosta Arkkoran", frFR = "Habitant du bourbier Arkkoran", ptBR = "Moralodo Arkkoran", ruRU = "Аркоранский грязекоп", koKR = "아크코란멀록 땅꾼", zhCN = "亚考兰泥浆鱼人", zhTW = "亞考蘭泥漿魚人"},
-		zones = {16},
-	},
-	[6137] = {
-		level = "54 - 55",
-		names = {enUS = "Arkkoran Pincer", deDE = "Arkkoranzange", esES = "Tenazario Arkkoran", frFR = "Pinceur Arkkoran", ptBR = "Tenaz Arkkoran", ruRU = "Аркоранский клешневик", koKR = "뾰족뿔 아크코란마크루라", zhCN = "亚考兰巨钳龙虾人", zhTW = "亞考蘭巨鉗龍蝦人"},
-		zones = {16},
-	},
-	[6138] = {
-		level = "54 - 55",
-		names = {enUS = "Arkkoran Oracle", deDE = "Arkkoranorakel", esES = "Oráculo Arkkoran", frFR = "Oracle Arkkoran", ptBR = "Oráculo Arkkoran", ruRU = "Аркоранский оракул", koKR = "아크코란멀록 점쟁이", zhCN = "亚考兰智者", zhTW = "阿克蘭智者"},
-		zones = {16},
-	},
-	[6143] = {
-		classification = "Elite",
-		level = "53 - 54",
-		names = {enUS = "Servant of Arkkoroc", deDE = "Diener von Arkkoroc", esES = "Vasallo de Arkkoroc", frFR = "Servant d’Arkkoroc", ptBR = "Serviçal de Arkkoroc", ruRU = "Слуга Аркорока", koKR = "아크코로크의 하수인", zhCN = "阿考洛克的仆从", zhTW = "阿考洛克的僕從"},
-		zones = {16},
-	},
-	[6144] = {
-		classification = "Elite",
-		level = "54 - 55",
-		names = {enUS = "Son of Arkkoroc", deDE = "Arkkorocs Sohn", esES = "Hijo de Arkkoroc", frFR = "Fils d’Arkkoroc", ptBR = "Filho de Arkkoroc", ruRU = "Сын Арккороса", koKR = "아크코로크의 후예", zhCN = "亚考罗克之子", zhTW = "亞考羅克之子"},
-		zones = {16},
-	},
-	[6146] = {
-		classification = "Elite",
-		level = "54 - 62",
-		names = {enUS = "Cliff Breaker", deDE = "Klippenbrecher", esES = "Rompedor del risco", frFR = "Brise-falaises", ptBR = "Rachador do Penhasco", ruRU = "Скальный разрушитель", koKR = "우레절벽거인", zhCN = "峭壁击碎者", zhTW = "峭壁擊碎者"},
-		zones = {16, 15532},
-	},
 	[6147] = {
 		classification = "Elite",
 		level = "53 - 62",
 		names = {enUS = "Cliff Thunderer", deDE = "Klippendonnerer", esES = "Tronarisco", frFR = "Foudroyeur des falaises", ptBR = "Trovejador do Penhasco", ruRU = "Скальный рокотун", koKR = "천둥절벽거인", zhCN = "峭壁咆哮者", zhTW = "峭壁咆哮者"},
 		zones = {16, 15532},
-	},
-	[6148] = {
-		classification = "Elite",
-		level = "52 - 62",
-		names = {enUS = "Cliff Walker", deDE = "Klippengänger", esES = "Caminarisco", frFR = "Marcheur des falaises", ptBR = "Andarilho do Penhasco", ruRU = "Скалоход", koKR = "절벽거인", zhCN = "峭壁行者", zhTW = "峭壁行者"},
-		zones = {16},
 	},
 	[6168] = {
 		classification = "Elite",
@@ -11495,15 +11563,15 @@ rm.npcDB = {
 		names = {enUS = "Roogug", ptBR = "Rugug", ruRU = "Ругуг", koKR = "루구그", zhCN = "鲁古格", zhTW = "魯古格"},
 		zones = {491},
 	},
+	[6170] = {
+		level = "32",
+		names = {enUS = "Gutspill", frFR = "Videssac", ptBR = "Espirratripa", ruRU = "Кишкодер", koKR = "거트스필", zhCN = "加特斯比尔", zhTW = "加特斯比爾"},
+		zones = {10},
+	},
 	[6180] = {
 		level = "17 - 18",
 		names = {enUS = "Defias Raider", deDE = "Räuber der Defias", esES = "Asaltante Defias", frFR = "Ecumeur défias", ptBR = "Saqueador Défias", ruRU = "Налетчик из Братства Справедливости", koKR = "데피아즈단 공격대원", zhCN = "迪菲亚袭击者", zhTW = "迪菲亞襲擊者"},
 		zones = {40},
-	},
-	[6190] = {
-		level = "46 - 47",
-		names = {enUS = "Spitelash Warrior", deDE = "Krieger der Grollflossen", esES = "Guerrera Látigo de Ira", esMX = "Guerrero Látigo de Ira", frFR = "Guerrier Fouette-bile", ptBR = "Guerreiro Iralisca", ruRU = "Воин из клана Бича Злобы", koKR = "원한의꼬리일족 전사", zhCN = "恶鞭战士", zhTW = "惡鞭戰士"},
-		zones = {16},
 	},
 	[6193] = {
 		level = "47 - 48",
@@ -11588,6 +11656,12 @@ rm.npcDB = {
 		level = "24 - 26",
 		names = {enUS = "Irradiated Invader", deDE = "Bestrahlter Eindringling", esES = "Invasor irradiado", frFR = "Envahisseur irradié", ptBR = "Invasor Irradiado", ruRU = "Облученный захватчик", koKR = "오염된 침략꾼", zhCN = "辐射入侵者", zhTW = "輻射入侵者"},
 	},
+	[6215] = {
+		classification = "Elite",
+		level = "30",
+		names = {enUS = "Chomper", deDE = "Mümmler", esES = "Mastic", frFR = "Mâchouilleur", ptBR = "Mastigus", ruRU = "Чавккер", koKR = "강철이빨 바실리스크", zhCN = "咀嚼者", zhTW = "咀嚼者"},
+		zones = {721},
+	},
 	[6218] = {
 		classification = "Elite",
 		level = "27 - 40",
@@ -11663,6 +11737,11 @@ rm.npcDB = {
 		names = {enUS = "Peacekeeper Security Suit", deDE = "Friedensbewahrer-Sicherheitsanzug", esES = "Traje de seguridad de Pacificador", frFR = "Tenue de maintien de l'ordre", ptBR = "Armadura de Segurança do Pacificador", ruRU = "Защитный скафандр миротворца", koKR = "평화감시단 방사능처리반", zhCN = "动力保安装甲", zhTW = "動力保安裝甲"},
 		zones = {721},
 	},
+	[6231] = {
+		classification = "Elite",
+		level = "26",
+		names = {enUS = "Techbot", esES = "Tecnobot", ptBR = "Tecnobô", ruRU = "Техбот", koKR = "첨단로봇", zhCN = "尖端机器人", zhTW = "尖端機器人"},
+	},
 	[6232] = {
 		classification = "Elite",
 		level = "32 - 41",
@@ -11681,10 +11760,11 @@ rm.npcDB = {
 		names = {enUS = "Mechanized Guardian", deDE = "Mechanischer Wächter", esES = "Guardián mecanizado", frFR = "Gardien mécanique", ptBR = "Guardião Mecanoide", ruRU = "Механический страж", koKR = "기계화 수호병", zhCN = "机械守护者", zhTW = "機械守護者"},
 		zones = {721},
 	},
-	[6238] = {
-		level = "33",
-		names = {enUS = "Big Will", esES = "Will el Grande", frFR = "Grand Will", ptBR = "Grande Gui", ruRU = "Большой Билл", koKR = "싸움꾼 윌", zhCN = "比格维尔", zhTW = "比格維爾"},
-		zones = {17},
+	[6235] = {
+		classification = "Elite",
+		level = "32",
+		names = {enUS = "Electrocutioner 6000", deDE = "Elektrokutor 6000", esES = "Electrocutor 6000", frFR = "Electrocuteur 6000", ptBR = "Eletrocutor 6000", ruRU = "Электрошокер 6000", koKR = "기계화 문지기 6000", zhCN = "电刑器6000型", zhTW = "電刑器6000型"},
+		zones = {721},
 	},
 	[6243] = {
 		classification = "Elite",
@@ -11764,30 +11844,10 @@ rm.npcDB = {
 		names = {enUS = "Irradiated Pillager", deDE = "Bestrahlter Plünderer", esES = "Saqueador irradiado", frFR = "Pilleur irradié", ptBR = "Pilhador Irradiado", ruRU = "Облученный погромщик", koKR = "오염된 약탈자", zhCN = "辐射抢劫者", zhTW = "輻射搶劫者"},
 		zones = {721},
 	},
-	[6348] = {
-		level = "52 - 53",
-		names = {enUS = "Wavethrasher", deDE = "Wellenhauer", esES = "Vándalo marino", frFR = "Vandale des flots", ptBR = "Fura-ondas", ruRU = "Волношлеп", koKR = "폭풍히드라", zhCN = "碎浪多头怪", zhTW = "碎浪多頭怪"},
-		zones = {16},
-	},
-	[6350] = {
-		level = "54 - 55",
-		names = {enUS = "Makrinni Razorclaw", deDE = "Makrinniklingenklaue", esES = "Zarpador Makrinni", frFR = "Pince-tranchante Makrinni", ptBR = "Garraguda Makrinni", ruRU = "Острощип Макринни", koKR = "칼날집게 마크리니마크루라", zhCN = "玛科尼锐爪龙虾人", zhTW = "瑪科尼銳爪龍蝦人"},
-		zones = {16},
-	},
 	[6372] = {
 		level = "50 - 51",
 		names = {enUS = "Makrinni Snapclaw", deDE = "Makrinnischnappklaue", esES = "Quebrador Makrinni", esMX = "Quebrador Makrinni", frFR = "Claque-pinces Makrinni", ptBR = "Estalagarra Makrinni", ruRU = "Макринни-клешнехват", koKR = "집게발 마크리니마크루라", zhCN = "玛科尼巨爪龙虾人", zhTW = "瑪科尼巨爪龍蝦人"},
 		zones = {16},
-	},
-	[6379] = {
-		level = "52 - 61",
-		names = {enUS = "Thunderhead Patriarch", deDE = "Donnerkopfpatriarch", esES = "Patriarca tronador", frFR = "Patriarche Tête-tonnerre", ptBR = "Patriarca Cabeça-de-trovão", ruRU = "Громоголовый патриарх", koKR = "우두머리 천둥뿔 히포그리프", zhCN = "雷首角鹰雄兽", zhTW = "雷首角鷹雄獸"},
-		zones = {16, 15532},
-	},
-	[6380] = {
-		level = "52 - 61",
-		names = {enUS = "Thunderhead Consort", deDE = "Donnerkopfkonsort", esES = "Consorte tronador", frFR = "Concubine Tête-tonnerre", ptBR = "Consorte Cabeça-de-trovão", ruRU = "Громоголовый соправитель", koKR = "어미 천둥뿔 히포그리프", zhCN = "雷首角鹰雌兽", zhTW = "雷首角鷹雌獸"},
-		zones = {16, 15532},
 	},
 	[6387] = {
 		faction = "Horde",
@@ -11867,18 +11927,6 @@ rm.npcDB = {
 		names = {enUS = "Ironhide Devilsaur", deDE = "Eisenhautteufelssaurier", esES = "Devilsaurio Pielférrea", frFR = "Diablosaure Cuiracier", ptBR = "Demossauro Couroférreo", ruRU = "Железношкурый девизавр", koKR = "무쇠가죽 데빌사우루스", zhCN = "铁皮魔暴龙", zhTW = "鐵皮魔暴龍"},
 		zones = {490},
 	},
-	[6500] = {
-		classification = "Elite",
-		level = "54 - 55",
-		names = {enUS = "Tyrant Devilsaur", deDE = "Tyrannoteufelssaurier", esES = "Devilsaurio Tirano", frFR = "Diablosaure Rex", ptBR = "Demossauro Tirano", ruRU = "Тиранодевизавр", koKR = "폭군 데빌사우루스", zhCN = "霸王魔暴龙", zhTW = "霸王魔暴龍"},
-		zones = {490},
-	},
-	[6501] = {
-		classification = "Elite",
-		level = "52 - 53",
-		names = {enUS = "Stegodon", frFR = "Stégodon", ptBR = "Estegodon", ruRU = "Стегодон", koKR = "스테고돈", zhCN = "剑龙", zhTW = "劍龍"},
-		zones = {490},
-	},
 	[6505] = {
 		level = "48 - 49",
 		names = {enUS = "Ravasaur", deDE = "Ravasaurus", esES = "Ravasaurio", frFR = "Ravasaure", ptBR = "Ravassauro", ruRU = "Равазавр", koKR = "라바사우루스", zhCN = "暴掠龙", zhTW = "暴掠龍"},
@@ -11907,11 +11955,6 @@ rm.npcDB = {
 	[6511] = {
 		level = "49 - 50",
 		names = {enUS = "Bloodpetal Thresher", deDE = "Blutblütendrescher", esES = "Trillador pétalo de sangre", frFR = "Batteur Pétale-de-sang", ptBR = "Látega Pétala Sangrenta", ruRU = "Кровоцвет-крепкозуб", koKR = "덩이줄기 붉은꽃잎덩굴손", zhCN = "血瓣花猛击者", zhTW = "血瓣花猛擊者"},
-		zones = {490},
-	},
-	[6512] = {
-		level = "52 - 53",
-		names = {enUS = "Bloodpetal Trapper", deDE = "Blutblütenfalle", esES = "Trampero pétalo de sangre", frFR = "Trappeur Pétale-de-sang", ptBR = "Laçadora Pétala Sangrenta", ruRU = "Кровоцвет-зверолов", koKR = "질긴뿌리 붉은꽃잎덩굴손", zhCN = "血瓣花捕兽者", zhTW = "血瓣花捕獸者"},
 		zones = {490},
 	},
 	[6513] = {
@@ -11957,7 +12000,7 @@ rm.npcDB = {
 	[6523] = {
 		classification = "Elite",
 		level = "27 - 28",
-		names = {enUS = "Dark Iron Rifleman", deDE = "Scharfschütze der Dunkeleisenzwerge", esES = "Fusilero Hierro Negro", esMX = "Fusilero Hierro Negro", frFR = "Fusilier Sombrefer", ptBR = "Carabineiro Ferro Negro", ruRU = "Ружейник из клана Черного Железа", koKR = "검은무쇠단 소총병", zhCN = "黑铁火枪手", zhTW = "黑鐵火槍手"},
+		names = {enUS = "Dark Iron Rifleman", deDE = "Scharfschütze der Dunkeleisenzwerge", esES = "Fusilero Hierro Negro", esMX = "Fusilero Hierro Negro", frFR = "Fusilier Sombrefer", ptBR = "Carabineiro Ferro Negro", ruRU = "Ружейник из клана Черного Железа", koKR = "검은무쇠 소총병", zhCN = "黑铁火枪手", zhTW = "黑鐵火槍手"},
 		zones = {11},
 	},
 	[6527] = {
@@ -11971,16 +12014,6 @@ rm.npcDB = {
 		names = {enUS = "Suffering Victim", deDE = "Leidendes Opfer", esES = "Víctima sufrida", esMX = "Víctima doliente", frFR = "Victime agonisante", ptBR = "Vítima Sofredora", ruRU = "Страдающая жертва", koKR = "괴로워하는 희생자", zhCN = "受难的牺牲者", zhTW = "受難的犧牲者"},
 		zones = {796},
 	},
-	[6551] = {
-		level = "51 - 52",
-		names = {enUS = "Gorishi Wasp", deDE = "Wespe der Gorishi", esES = "Avispa Gorishi", frFR = "Guêpe Gorishi", ptBR = "Vespa Gorishi", ruRU = "Оса из улья Гориши", koKR = "병정 고리쉬", zhCN = "格里什异种蝎", zhTW = "格里什異種蠍"},
-		zones = {490},
-	},
-	[6552] = {
-		level = "51 - 52",
-		names = {enUS = "Gorishi Worker", deDE = "Arbeiter der Gorishi", esES = "Obrero Gorishi", frFR = "Ouvrier Gorishi", ptBR = "Gorishi Trabalhadora", ruRU = "Рабочий из улья Гориши", koKR = "일꾼 고리쉬", zhCN = "格里什工蝎", zhTW = "格里什工蠍"},
-		zones = {490},
-	},
 	[6553] = {
 		level = "51 - 53",
 		names = {enUS = "Gorishi Reaver", deDE = "Häscher der Gorishi", esES = "Atracador Gorishi", frFR = "Ravageur Gorishi", ptBR = "Gorishi Aniquiladora", ruRU = "Разоритель из улья Гориши", koKR = "갈퀴발톱 고리쉬", zhCN = "格里什劫掠者", zhTW = "格里什劫掠者"},
@@ -11989,11 +12022,6 @@ rm.npcDB = {
 	[6554] = {
 		level = "52 - 53",
 		names = {enUS = "Gorishi Stinger", deDE = "Stecher der Gorishi", esES = "Aguijonero Gorishi", frFR = "Dard Gorishi", ptBR = "Gorishi Aguilhante", ruRU = "Острожал из улья Гориши", koKR = "독침 고리쉬", zhCN = "格里什毒刺蝎", zhTW = "格里什毒刺蠍"},
-		zones = {490},
-	},
-	[6555] = {
-		level = "52 - 53",
-		names = {enUS = "Gorishi Tunneler", deDE = "Tunnelgräber der Gorishi", esES = "Tunelador Gorishi", frFR = "Tunnelière Gorishi", ptBR = "Gorishi Escavadora", ruRU = "Проходчик из улья Гориши", koKR = "땅꾼 고리쉬", zhCN = "格里什掘洞蝎", zhTW = "格里什掘洞蠍"},
 		zones = {490},
 	},
 	[6556] = {
@@ -12009,12 +12037,6 @@ rm.npcDB = {
 	[6559] = {
 		level = "52 - 54",
 		names = {enUS = "Glutinous Ooze", deDE = "Klebriger Brühschlammer", esES = "Moco pegajoso", frFR = "Limon gluant", ptBR = "Gosma Pegajosa", ruRU = "Липкий слизнюк", koKR = "끈적끈적한 수액괴물", zhCN = "粘稠的软泥怪", zhTW = "粘稠的軟泥怪"},
-		zones = {490},
-	},
-	[6560] = {
-		classification = "Elite",
-		level = "60 - 61",
-		names = {enUS = "Stone Guardian", deDE = "Steinwächter", esES = "Guardián de piedra", frFR = "Garde de pierre", ptBR = "Guardião de Pedra", ruRU = "Каменный страж", koKR = "바위 수호자", zhCN = "石头守护者", zhTW = "石頭守護者"},
 		zones = {490},
 	},
 	[6567] = {
@@ -12045,6 +12067,12 @@ rm.npcDB = {
 		names = {enUS = "Brienna Starglow", esES = "Brienna Brillastrella", ptBR = "Brienna Cintiluna", ruRU = "Бриенна Мерцание Звезд", koKR = "브리에나 스타글로", zhCN = "布琳娜·星光", zhTW = "布琳娜·星光"},
 		zones = {357},
 	},
+	[6583] = {
+		classification = "Rare Elite",
+		level = "57",
+		names = {enUS = "Gruff", ptBR = "Grufo", ruRU = "Графф", koKR = "그러프", zhCN = "格鲁夫", zhTW = "格魯夫"},
+		zones = {490},
+	},
 	[6606] = {
 		level = "16",
 		names = {enUS = "Overseer Glibby", deDE = "Vorarbeiter Glibby", esES = "Sobrestante Glibby", esMX = "Sobrestante Glibby", frFR = "Surveillant Glibby", ptBR = "Feitor Glube", ruRU = "Надзиратель Глибби", koKR = "감독관 글리비", zhCN = "监工格里比", zhTW = "監工格里比"},
@@ -12052,7 +12080,7 @@ rm.npcDB = {
 	},
 	[6668] = {
 		level = "23",
-		names = {enUS = "Lord Cyrik Blackforge", deDE = "Lord Cyrik Schwarzschmied", esES = "Lord Cyrik Forjanegra", frFR = "Seigneur Cyrik Blackforge", ptBR = "Lorde Cyrik Umbraforja", ruRU = "Лорд Кайрик Черноковаль", koKR = "키리크 블랙포지 경", zhCN = "塞瑞克·黑炉公爵", zhTW = "塞瑞克·黑爐公爵"},
+		names = {enUS = "Lord Cyrik Blackforge", deDE = "Lord Cyrik Schwarzschmied", esES = "Lord Cyrik Forjanegra", esMX = "Lord Cyrik Forjanegra", frFR = "Seigneur Cyrik Blackforge", ptBR = "Lorde Cyrik Umbraforja", ruRU = "Лорд Кайрик Черноковаль", koKR = "키리크 블랙포지 경", zhCN = "塞瑞克·黑炉公爵", zhTW = "塞瑞克·黑爐公爵"},
 		zones = {17},
 	},
 	[6707] = {
@@ -12134,10 +12162,11 @@ rm.npcDB = {
 		names = {enUS = "Olaf", ruRU = "Олаф", koKR = "올라프", zhCN = "奥拉夫", zhTW = "奧拉夫"},
 		zones = {1337},
 	},
-	[6909] = {
-		level = "12",
-		names = {enUS = "Sethir the Ancient", deDE = "Sethir der Uralte", esES = "Sethir el Ancestro", esMX = "Sethir el Ancestro", frFR = "Sethir l’Ancien", ptBR = "Sethir, o Antigo", ruRU = "Сетир Древний", koKR = "고대정령 세시르", zhCN = "远古的塞希尔", zhTW = "遠古的塞希爾"},
-		zones = {141},
+	[6910] = {
+		classification = "Elite",
+		level = "40",
+		names = {enUS = "Revelosh", ruRU = "Ревелош", koKR = "레벨로쉬", zhCN = "鲁维罗什", zhTW = "魯維羅什"},
+		zones = {1337},
 	},
 	[6911] = {
 		level = "8 - 10",
@@ -12147,7 +12176,7 @@ rm.npcDB = {
 	[6927] = {
 		level = "8 - 9",
 		names = {enUS = "Defias Dockworker", deDE = "Dockarbeiter der Defias", esES = "Trabajador de embarcadero Defias", esMX = "Trabajador de embarcadero Defias", frFR = "Portefaix défias", ptBR = "Estivador Défias", ruRU = "Докер из Братства Справедливости", koKR = "데피아즈단 부두일꾼", zhCN = "迪菲亚码头工人", zhTW = "迪菲亞碼頭工人"},
-		zones = {12},
+		zones = {12, 10},
 	},
 	[7011] = {
 		level = "42 - 43",
@@ -12198,26 +12227,11 @@ rm.npcDB = {
 		names = {enUS = "Blackrock Slayer", deDE = "Töter der Blackrock", esES = "Destripador Roca Negra", frFR = "Pourfendeur rochenoire", ptBR = "Matador Rocha Negra", ruRU = "Душегуб из клана Черной Горы", koKR = "검은바위부족 학살자", zhCN = "黑石杀戮者", zhTW = "黑石殺戮者"},
 		zones = {46},
 	},
-	[7028] = {
-		level = "56 - 57",
-		names = {enUS = "Blackrock Warlock", deDE = "Hexenmeister der Blackrock", esES = "Brujo Roca Negra", frFR = "Démoniste rochenoire", ptBR = "Bruxo Rocha Negra", ruRU = "Чернокнижник клана Черной Горы", koKR = "검은바위부족 흑마법사", zhCN = "黑石术士", zhTW = "黑石術士"},
-		zones = {46},
-	},
-	[7029] = {
-		level = "57 - 58",
-		names = {enUS = "Blackrock Battlemaster", deDE = "Kampfmeister der Blackrock", esES = "Maestro de batalla Roca Negra", frFR = "Maître de guerre rochenoire", ptBR = "Mestre de Batalha Rocha Negra", ruRU = "Полководец из клана Черной Горы", koKR = "검은바위부족 지휘관", zhCN = "黑石军官", zhTW = "黑石軍官"},
-		zones = {46},
-	},
 	[7030] = {
 		classification = "Elite",
 		level = "40 - 41",
 		names = {enUS = "Shadowforge Geologist", deDE = "Geologe der Schattenschmiede", esES = "Geólogo Forjatiniebla", esMX = "Geólogo de Forjatiniebla", frFR = "Géologue Ombreforge", ptBR = "Geólogo de Umbraforja", ruRU = "Тенегорнский геолог", koKR = "어둠괴철로단 지질학자", zhCN = "暗炉地质学家", zhTW = "暗爐地質學家"},
 		zones = {1337},
-	},
-	[7032] = {
-		level = "55 - 57",
-		names = {enUS = "Greater Obsidian Elemental", deDE = "Großer Obsidianelementar", esES = "Elemental obsidiano mayor", frFR = "Grand élémentaire d'obsidienne", ptBR = "Elemental Obsidiano Maior", ruRU = "Большой обсидиановый элементаль", koKR = "상급 흑요석 정령", zhCN = "巨型黑曜石元素", zhTW = "巨型黑曜石元素"},
-		zones = {46},
 	},
 	[7033] = {
 		level = "50 - 51",
@@ -12232,21 +12246,6 @@ rm.npcDB = {
 	[7035] = {
 		level = "52 - 53",
 		names = {enUS = "Firegut Brute", deDE = "Schläger der Feuermägen", esES = "Tosco Pirontraña", frFR = "Brute Brûlentrailles", ptBR = "Brutamontes Pirobucho", ruRU = "Громила из клана Огненного Чрева", koKR = "불자루일족 투사", zhCN = "火腹蛮兵", zhTW = "火腹蠻兵"},
-		zones = {46},
-	},
-	[7036] = {
-		level = "53 - 54",
-		names = {enUS = "Thaurissan Spy", deDE = "Thaurissanischer Spion", esES = "Espía Thaurissan", frFR = "Espion de Thaurissan", ptBR = "Espião de Thaurissan", ruRU = "Шпион Тауриссана", koKR = "타우릿산 비밀요원", zhCN = "索瑞森间谍", zhTW = "索瑞森間諜"},
-		zones = {46},
-	},
-	[7037] = {
-		level = "53 - 55",
-		names = {enUS = "Thaurissan Firewalker", deDE = "Thaurissanischer Feuerwandler", esES = "Caminafuego Thaurissan", frFR = "Marchefeu de Thaurissan", ptBR = "Andachama de Thaurissan", ruRU = "Огнеход Тауриссана", koKR = "타우릿산 조사단원", zhCN = "索瑞森驭火者", zhTW = "索瑞森馭火者"},
-		zones = {46},
-	},
-	[7038] = {
-		level = "54 - 55",
-		names = {enUS = "Thaurissan Agent", deDE = "Thaurissanischer Agent", esES = "Agente Thaurissan", frFR = "Agent de Thaurissan", ptBR = "Agente de Thaurissan", ruRU = "Посланник Тауриcсана", koKR = "타우릿산 첩보원", zhCN = "索瑞森密探", zhTW = "索瑞森密探"},
 		zones = {46},
 	},
 	[7039] = {
@@ -12266,28 +12265,10 @@ rm.npcDB = {
 		names = {enUS = "Black Wyrmkin", deDE = "Schwarzwyrmkin", esES = "Vermis negro", frFR = "Wyrmide noir", ptBR = "Draconoide Negro", ruRU = "Черная драконида", koKR = "검은고룡족", zhCN = "火鳞龙人", zhTW = "火鱗龍人"},
 		zones = {46},
 	},
-	[7042] = {
-		classification = "Elite",
-		level = "56 - 57",
-		names = {enUS = "Flamescale Dragonspawn", deDE = "Flammenschuppendrachenbrut", esES = "Dragauro flamascala", frFR = "Draconide Flammécaille", ptBR = "Dragomorfo Flamescama", ruRU = "Огнечешуйчатый драконид", koKR = "화염비늘용혈족", zhCN = "火鳞龙人", zhTW = "黑色龍族"},
-		zones = {46},
-	},
-	[7043] = {
-		classification = "Elite",
-		level = "57 - 58",
-		names = {enUS = "Flamescale Wyrmkin", deDE = "Flammenschuppenwyrmkin", esES = "Vermis flamascala", frFR = "Wyrmide Flammécaille", ptBR = "Draconoide Flamescama", ruRU = "Огнекожая драконида", koKR = "화염비늘고룡족", zhCN = "火鳞龙族", zhTW = "火鱗龍族"},
-		zones = {46},
-	},
 	[7044] = {
 		classification = "Elite",
 		level = "50 - 52",
 		names = {enUS = "Black Drake", deDE = "Schwarzdrache", esES = "Draco negro", frFR = "Drake noir", ptBR = "Draco Negro", ruRU = "Черный дракон", koKR = "검은 비룡", zhCN = "黑色幼龙", zhTW = "黑色幼龍"},
-		zones = {46},
-	},
-	[7046] = {
-		classification = "Elite",
-		level = "56 - 58",
-		names = {enUS = "Searscale Drake", deDE = "Sengschuppendrache", esES = "Draco llamascama", frFR = "Drake torride", ptBR = "Draco Escamasseca", ruRU = "Дракон Жгучей Чешуи", koKR = "화염비늘 비룡", zhCN = "焦鳞幼龙", zhTW = "焦鱗幼龍"},
 		zones = {46},
 	},
 	[7047] = {
@@ -12300,11 +12281,6 @@ rm.npcDB = {
 		level = "23",
 		names = {enUS = "Klaven Mortwake", esES = "Klaven Mortoalerta", ptBR = "Filipe Pinel", ruRU = "Клейвен Мортвейк", koKR = "클라벤 몰트워크", zhCN = "克拉文·摩特维克", zhTW = "克拉文·摩特維克"},
 		zones = {40},
-	},
-	[7055] = {
-		level = "54 - 55",
-		names = {enUS = "Blackrock Worg", deDE = "Worg der Blackrock", esES = "Lupo Roca Negra", frFR = "Worg Blackrock", ptBR = "Worg Rocha Negra", ruRU = "Ворг из клана Черной Горы", koKR = "검은바위부족 검은늑대", zhCN = "黑石座狼", zhTW = "黑石座狼"},
-		zones = {46},
 	},
 	[7078] = {
 		level = "35 - 36",
@@ -12340,14 +12316,14 @@ rm.npcDB = {
 		names = {enUS = "Mooranta", ruRU = "Муранта", koKR = "무란타", zhCN = "莫兰塔", zhTW = "莫蘭塔"},
 		zones = {1638},
 	},
+	[7091] = {
+		level = "43 - 44",
+		names = {enUS = "Shadowforge Ambusher", deDE = "Wegelagerer der Schattenschmiede", esES = "Emboscador de Forjatiniebla", frFR = "Embusqué Ombreforge", ptBR = "Emboscador de Umbraforja", ruRU = "Тенегорнский душитель", koKR = "어둠괴철로단 복병", zhCN = "暗炉伏击者", zhTW = "暗爐伏擊者"},
+		zones = {1337},
+	},
 	[7092] = {
 		level = "51 - 52",
 		names = {enUS = "Tainted Ooze", deDE = "Besudelter Brühschlammer", esES = "Moco corrupto", frFR = "Limon corrompu", ptBR = "Gosma Maculada", ruRU = "Нечистый слизнюк", koKR = "부패한 수액괴물", zhCN = "被污染的软泥怪", zhTW = "被污染的軟泥怪"},
-		zones = {361},
-	},
-	[7097] = {
-		level = "48 - 49",
-		names = {enUS = "Ironbeak Owl", deDE = "Eisenschnabeleule", esES = "Lechuza Cortezaférrea", esMX = "Lechuza Cortezaférrea", frFR = "Chouette Bec-de-fer", ptBR = "Coruja Bico-de-ferro", ruRU = "Железноклюв", koKR = "무쇠부리 올빼미", zhCN = "铁喙猫头鹰", zhTW = "鐵喙貓頭鷹"},
 		zones = {361},
 	},
 	[7100] = {
@@ -12440,12 +12416,6 @@ rm.npcDB = {
 		names = {enUS = "Toxic Horror", deDE = "Toxinschrecken", esES = "Horror tóxico", frFR = "Horreur toxique", ptBR = "Horror Tóxico", ruRU = "Ядовитый ужас", koKR = "맹독 정령", zhCN = "剧毒之水", zhTW = "劇毒之水"},
 		zones = {361},
 	},
-	[7136] = {
-		classification = "Elite",
-		level = "52 - 53",
-		names = {enUS = "Infernal Sentry", deDE = "Höllenbestienwachposten", esES = "Argos Infernal", frFR = "Infernal Sentinelle", ptBR = "Sentinela Infernal", ruRU = "Караульный-инфернал", koKR = "지옥의 보초병", zhCN = "地狱火哨兵", zhTW = "地獄火哨兵"},
-		zones = {361},
-	},
 	[7139] = {
 		level = "52 - 53",
 		names = {enUS = "Irontree Stomper", deDE = "Donnerstampfer der Eisenstämme", esES = "Vapuleador Troncoferro", frFR = "Arbrefer marteleur", ptBR = "Pisoteador de Ferrárbol", ruRU = "Топотун Железнолесья", koKR = "천둥 강철나무정령", zhCN = "铁木践踏者", zhTW = "鐵木踐踏者"},
@@ -12486,11 +12456,29 @@ rm.npcDB = {
 		names = {enUS = "Stonevault Ambusher", deDE = "Wegelagerer der Steingrufttroggs", esES = "Emboscador Grutacanto", frFR = "Embusqué Cavepierre", ptBR = "Emboscador da Abóbada de Pedra", ruRU = "Душитель из племени Каменного Свода", koKR = "바위동굴일족 복병", zhCN = "石窟伏击者", zhTW = "石窟伏擊者"},
 		zones = {1337},
 	},
+	[7206] = {
+		classification = "Elite",
+		level = "44",
+		names = {enUS = "Ancient Stone Keeper", deDE = "Uralter Steinbewahrer", esES = "Vigilante pétreo anciano", frFR = "Ancien Gardien des pierres", ptBR = "Antigo Protetor de Pedra", ruRU = "Древний Хранитель Камня", koKR = "고대 바위 문지기", zhCN = "古代的石头看守者", zhTW = "古代的石頭看守者"},
+		zones = {1337},
+	},
+	[7228] = {
+		classification = "Elite",
+		level = "40",
+		names = {enUS = "Ironaya", esES = "Hierraya", ptBR = "Ferronaya", ruRU = "Иронайа", koKR = "아이로나야", zhCN = "艾隆纳亚", zhTW = "艾隆納亞"},
+		zones = {1337},
+	},
 	[7230] = {
 		faction = "Horde",
 		level = "60",
 		names = {enUS = "Shayis Steelfury", esES = "Shayis Furiacerada", esMX = "Shayis Furiacerada", ptBR = "Shayis Furiácero", ruRU = "Шайс Холодная Ярость", koKR = "샤이스 스틸퓨리", zhCN = "莎伊斯·钢怒", zhTW = "莎伊斯·鋼怒"},
 		zones = {1637},
+	},
+	[7232] = {
+		faction = "Alliance",
+		level = "60",
+		names = {enUS = "Borgus Steelhand", esES = "Borgus Mano de Acero", esMX = "Borgus Mano de Acero", ptBR = "Borgus Manácero", ruRU = "Боргус Сталерук", koKR = "보르구스 스틸핸드", zhCN = "博古斯·钢拳", zhTW = "博古斯·鋼拳"},
+		zones = {1519},
 	},
 	[7233] = {
 		classification = "Elite",
@@ -12520,6 +12508,12 @@ rm.npcDB = {
 		names = {enUS = "Sandfury Soul Eater", deDE = "Seelenfresser der Sandfury", esES = "Comealmas Furiarena", esMX = "Comealmas Furiarena", frFR = "Mangeur d'âmes Sandfury", ptBR = "Devorador de Almas Zangareia", ruRU = "Пожиратель душ из племени Песчаной Бури", koKR = "성난모래부족 영혼사냥꾼", zhCN = "沙怒噬魂者", zhTW = "沙怒噬魂者"},
 		zones = {1176},
 	},
+	[7267] = {
+		classification = "Elite",
+		level = "48",
+		names = {enUS = "Chief Ukorz Sandscalp", deDE = "Häuptling Ukorz Sandskalp", esES = "Jefe Ukorz Cabellarena", frFR = "Chef Ukorz Scalpessable", ptBR = "Chefe Ukorz Escalpareia", ruRU = "Вождь Укорз Песчаная Плешь", koKR = "족장 우코르즈 샌드스칼프", zhCN = "乌克兹·沙顶", zhTW = "烏克茲·沙頂"},
+		zones = {1176},
+	},
 	[7268] = {
 		classification = "Elite",
 		level = "45 - 46",
@@ -12529,6 +12523,36 @@ rm.npcDB = {
 	[7269] = {
 		level = "44 - 46",
 		names = {enUS = "Scarab", deDE = "Skarabäus", esES = "Escarabajo", esMX = "Escarabajo", frFR = "Scarabée", ptBR = "Escaravelho", ruRU = "Скарабей", koKR = "왕쇠똥구리", zhCN = "圣甲虫", zhTW = "聖甲蟲"},
+		zones = {1176},
+	},
+	[7271] = {
+		classification = "Elite",
+		level = "46",
+		names = {enUS = "Witch Doctor Zum'rah", deDE = "Hexendoktor Zum'rah", esES = "Médico brujo Zum'rah", esMX = "Médico brujo Zum'rah", frFR = "Sorcier-docteur Zum'rah", ptBR = "Mandingueiro Zum'rah", ruRU = "Знахарь Зум'рах", koKR = "의술사 줌라", zhCN = "巫医祖穆拉恩", zhTW = "巫醫祖穆拉恩"},
+		zones = {1176},
+	},
+	[7272] = {
+		classification = "Elite",
+		level = "45 - 46",
+		names = {enUS = "Theka the Martyr", deDE = "Theka der Märtyrer", esES = "Theka el Mártir", esMX = "Theka el Mártir", frFR = "Theka le Martyr", ptBR = "Theka, o Mártir", ruRU = "Тека Мученик", koKR = "순교자 데카", zhCN = "殉教者塞卡", zhTW = "殉教者塞卡"},
+		zones = {1176},
+	},
+	[7273] = {
+		classification = "Elite",
+		level = "46",
+		names = {enUS = "Gahz'rilla", ruRU = "Газ'рилла", koKR = "가즈릴라", zhCN = "加兹瑞拉", zhTW = "加茲瑞拉"},
+		zones = {1176},
+	},
+	[7274] = {
+		classification = "Elite",
+		level = "46",
+		names = {enUS = "Sandfury Executioner", deDE = "Henker der Sandfury", esES = "Verdugo Furiarena", frFR = "Bourreau Sandfury", ptBR = "Carrasco Zangareia", ruRU = "Палач из клана Песчаной Бури", koKR = "성난모래부족 사형집행인", zhCN = "沙怒刽子手", zhTW = "沙怒劊子手"},
+		zones = {1176},
+	},
+	[7275] = {
+		classification = "Elite",
+		level = "47",
+		names = {enUS = "Shadowpriest Sezz'ziz", deDE = "Schattenpriester Sezz'ziz", esES = "Sacerdote oscuro Sezz'ziz", frFR = "Prêtre des ombres Sezz'ziz", ptBR = "Sacerdote Sombrio Diz'ieh", ruRU = "Темный жрец Шезз'зиз", koKR = "어둠의사제 세즈지즈", zhCN = "暗影祭司塞瑟斯", zhTW = "暗影祭司塞瑟斯"},
 		zones = {1176},
 	},
 	[7276] = {
@@ -12546,6 +12570,12 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "43 - 44",
 		names = {enUS = "Shadowforge Sharpshooter", deDE = "Scharfschütze der Schattenschmiede", esES = "Tirador Forjatiniebla", frFR = "Tireur d'élite Ombreforge", ptBR = "Atirador de Elite de Umbraforja", ruRU = "Тенегорнский меткий стрелок", koKR = "어둠괴철로단 저격수", zhCN = "暗炉狙击手", zhTW = "暗爐狙擊手"},
+		zones = {1337},
+	},
+	[7291] = {
+		classification = "Elite",
+		level = "45",
+		names = {enUS = "Galgann Firehammer", deDE = "Galgann Feuerhammer", esES = "Galgann Flamartillo", ptBR = "Galnann Martelígneo", ruRU = "Галганн Огнемолот", koKR = "갈간 파이어해머", zhCN = "加加恩·火锤", zhTW = "加加恩·火錘"},
 		zones = {1337},
 	},
 	[7318] = {
@@ -12709,14 +12739,15 @@ rm.npcDB = {
 		names = {enUS = "Amnennar the Coldbringer", deDE = "Amnennar der Kältebringer", esES = "Amnennar el Gélido", esMX = "Amnennar el Gélido", frFR = "Amnennar le Porte-froid", ptBR = "Amnennar, o Frigífero", ruRU = "Амненнар Хладовей", koKR = "혹한의 암네나르", zhCN = "寒冰之王亚门纳尔", zhTW = "寒冰之王亞門納爾"},
 		zones = {722},
 	},
+	[7361] = {
+		classification = "Elite",
+		level = "32",
+		names = {enUS = "Grubbis", ptBR = "Grúdio", ruRU = "Грязнюк", koKR = "그루비스", zhCN = "格鲁比斯", zhTW = "格魯比斯"},
+		zones = {721},
+	},
 	[7369] = {
 		level = "55 - 56",
 		names = {enUS = "Deadwind Brute", deDE = "Schläger der Totenwindoger", esES = "Tosco Vientomuerto", frFR = "Brute de Deuillevent", ptBR = "Brutamontes do Vento Morto", ruRU = "Громила с перевала Мертвого Ветра", koKR = "죽음의고개 투사", zhCN = "逆风蛮兵", zhTW = "逆風蠻兵"},
-		zones = {41},
-	},
-	[7370] = {
-		level = "58 - 60",
-		names = {enUS = "Restless Shade", deDE = "Ruheloser Schemen", esES = "Sombra inquieta", frFR = "Ame errante", ptBR = "Vulto Inquieto", ruRU = "Беспокойный дух", koKR = "비운의 망령", zhCN = "不安宁的阴影", zhTW = "不安寧的陰影"},
 		zones = {41},
 	},
 	[7371] = {
@@ -12724,10 +12755,10 @@ rm.npcDB = {
 		names = {enUS = "Deadwind Mauler", deDE = "Raufer der Totenwindoger", esES = "Destructor Vientomuerto", frFR = "Marteleur de Deuillevent", ptBR = "Espancador do Vento Morto", ruRU = "Изверг с перевала Мертвого Ветра", koKR = "죽음의고개 싸움꾼", zhCN = "逆风虐待者", zhTW = "逆風虐待者"},
 		zones = {41},
 	},
-	[7372] = {
-		level = "57 - 58",
-		names = {enUS = "Deadwind Warlock", deDE = "Hexenmeister der Totenwindoger", esES = "Brujo Vientomuerto", frFR = "Démoniste de Deuillevent", ptBR = "Bruxo do Vento Morto", ruRU = "Чернокнижник с перевала Мертвого Ветра", koKR = "죽음의고개 흑마법사", zhCN = "逆风术士", zhTW = "逆風術士"},
-		zones = {41},
+	[7376] = {
+		level = "55 - 56",
+		names = {enUS = "Sky Shadow", deDE = "Himmelsschatten", esES = "Sombra de los cielos", esMX = "Sombra de los cielos", frFR = "Ombre céleste", ptBR = "Sombra Celeste", ruRU = "Небесная тень", koKR = "하늘그늘독수리", zhCN = "暗影鹫", zhTW = "暗影鷲"},
+		zones = {41, 10},
 	},
 	[7379] = {
 		level = "55 - 57",
@@ -12776,11 +12807,6 @@ rm.npcDB = {
 		names = {enUS = "Frostsaber Cub", deDE = "Frostsäblerjunges", esES = "Cachorro Sable de Hielo", esMX = "Cachorro sable de hielo", frFR = "Jeune sabre-de-givre", ptBR = "Filhote de Sabre-de-gelo", ruRU = "Детеныш ледопарда", koKR = "새끼 눈호랑이", zhCN = "霜刃豹幼崽", zhTW = "小霜刃豹"},
 		zones = {618},
 	},
-	[7431] = {
-		level = "56 - 57",
-		names = {enUS = "Frostsaber", deDE = "Frostsäbler", esES = "Sable de Hielo", frFR = "Sabre-de-givre", ptBR = "Sabre-de-gelo", ruRU = "Ледопард", koKR = "눈호랑이", zhCN = "霜刃豹", zhTW = "霜刃豹"},
-		zones = {618},
-	},
 	[7432] = {
 		level = "59 - 60",
 		names = {enUS = "Frostsaber Stalker", deDE = "Frostsäblerpirscherin", esES = "Acechador Sable de Hielo", esMX = "Acechador sable de hielo", frFR = "Traqueur sabre-de-givre", ptBR = "Espreitador Sabre-de-gelo", ruRU = "Ловчий ледопард", koKR = "굶주린 눈호랑이", zhCN = "霜刃捕食者", zhTW = "霜刃捕食者"},
@@ -12789,11 +12815,6 @@ rm.npcDB = {
 	[7433] = {
 		level = "58 - 59",
 		names = {enUS = "Frostsaber Huntress", deDE = "Frostsäblerjägerin", esES = "Cazadora Sable de Hielo", frFR = "Chasseresse sabre-de-givre", ptBR = "Caçadora Sabre-de-gelo", ruRU = "Ледопард-охотница", koKR = "어미 눈호랑이", zhCN = "霜刃雌豹", zhTW = "霜刃雌豹"},
-		zones = {618},
-	},
-	[7434] = {
-		level = "59 - 60",
-		names = {enUS = "Frostsaber Pride Watcher", deDE = "Rudelbehüterin der Frostsäbler", esES = "Vigilorgullo Sable de Hielo", esMX = "Vigía de la manada sable de hielo", frFR = "Guetteur sabre-de-givre", ptBR = "Vigia Sabre-de-gelo", ruRU = "Дозорный прайда ледопардов", koKR = "우두머리 눈호랑이", zhCN = "霜刃守卫者", zhTW = "霜刃守衛者"},
 		zones = {618},
 	},
 	[7435] = {
@@ -12811,7 +12832,7 @@ rm.npcDB = {
 	[7437] = {
 		classification = "Elite",
 		level = "57 - 58",
-		names = {enUS = "Cobalt Mageweaver", deDE = "Kobaltblauer Magiewirker", esES = "Tejemagia de cobalto", frFR = "Tisse-magie cobalt", ptBR = "Magitramante de Cobalto", ruRU = "Кобальтовая чаровязка", koKR = "푸른비늘혈족 마술사", zhCN = "深蓝龙人法师", zhTW = "深藍龍人法師"},
+		names = {enUS = "Cobalt Mageweaver", deDE = "Kobaltblaue Magiewirkerin", esES = "Tejemagia de cobalto", frFR = "Tisse-magie cobalt", ptBR = "Magitramante de Cobalto", ruRU = "Кобальтовая чаровязка", koKR = "푸른비늘혈족 마술사", zhCN = "深蓝龙人法师", zhTW = "深藍龍人法師"},
 		zones = {618},
 	},
 	[7438] = {
@@ -12844,19 +12865,9 @@ rm.npcDB = {
 		names = {enUS = "Shardtooth Mauler", deDE = "Splitterzahnraufer", esES = "Destructor dentoesquirla", esMX = "Aplastador Dentoesquirla", frFR = "Marteleur Crocs acérés", ptBR = "Espancador Dentilhaço", ruRU = "Могучий щербозуб", koKR = "긴발톱 톱니이빨곰", zhCN = "碎齿暴熊", zhTW = "碎齒暴熊"},
 		zones = {618},
 	},
-	[7444] = {
-		level = "53 - 54",
-		names = {enUS = "Shardtooth Bear", deDE = "Splitterzahnbär", esES = "Oso dentoesquirla", frFR = "Ours Crocs acérés", ptBR = "Urso Dentilhaço", ruRU = "Медведь-щербозуб", koKR = "톱니이빨곰", zhCN = "碎齿熊", zhTW = "碎齒熊"},
-		zones = {618},
-	},
-	[7446] = {
-		level = "59 - 60",
-		names = {enUS = "Rabid Shardtooth", deDE = "Tollwütiger Splitterzahn", esES = "Dentoesquirla rabioso", esMX = "Dentoesquirla rabioso", frFR = "Croc acéré enragé", ptBR = "Dentilhaço Raivoso", ruRU = "Бешеный щербозуб", koKR = "광포한 톱니이빨곰", zhCN = "疯狂的碎齿熊", zhTW = "瘋狂的碎齒熊"},
-		zones = {618},
-	},
-	[7447] = {
-		level = "53 - 55",
-		names = {enUS = "Fledgling Chillwind", deDE = "Eiswindjunges", esES = "Venfresco Fugalante", frFR = "Petite Noroît", ptBR = "Assolador de Ventogelante", ruRU = "Стылодых-слеток", koKR = "어린 서리바람 키메라", zhCN = "冰风奇美拉幼兽", zhTW = "冰風奇美拉幼獸"},
+	[7445] = {
+		level = "57 - 58",
+		names = {enUS = "Elder Shardtooth", deDE = "Alter Splitterzahn", esES = "Ancestro Dentedazos", frFR = "Ancien Croc acéré", ptBR = "Ancião Dentilhaço", ruRU = "Старый щербозуб", koKR = "덩치큰 톱니이빨곰", zhCN = "老碎齿熊", zhTW = "老碎齒熊"},
 		zones = {618},
 	},
 	[7448] = {
@@ -12879,11 +12890,6 @@ rm.npcDB = {
 		names = {enUS = "Raging Owlbeast", deDE = "Tobende Eulenbestie", esES = "Lechubestia enfurecida", frFR = "Chouettard enragé", ptBR = "Feruja Furiosa", ruRU = "Бешеный совух", koKR = "흉포한 올빼미야수", zhCN = "狂怒的枭兽", zhTW = "狂怒的梟獸"},
 		zones = {618},
 	},
-	[7452] = {
-		level = "56 - 57",
-		names = {enUS = "Crazed Owlbeast", deDE = "Wahnsinnige Eulenbestie", esES = "Lechubestia enloquecida", esMX = "Lechubestia enloquecida", frFR = "Chouettard affolé", ptBR = "Feruja Enlouquecida", ruRU = "Безумный совух", koKR = "광기어린 올빼미야수", zhCN = "疯狂的枭兽", zhTW = "瘋狂的梟獸"},
-		zones = {618},
-	},
 	[7453] = {
 		level = "57 - 58",
 		names = {enUS = "Moontouched Owlbeast", deDE = "Mondbestrahlte Eulenbestie", esES = "Lechubestia lunadón", esMX = "Lechubestia lunadón", frFR = "Chouettard lunaire", ptBR = "Feruja Lunamarca", ruRU = "Луноподобный совух", koKR = "달빛 깃든 올빼미야수", zhCN = "月光枭兽", zhTW = "月光梟獸"},
@@ -12892,6 +12898,11 @@ rm.npcDB = {
 	[7454] = {
 		level = "58 - 59",
 		names = {enUS = "Berserk Owlbeast", deDE = "Berserkereulenbestie", esES = "Lechubestia rabiosa", esMX = "Lechubestia rabiosa", frFR = "Chouettard berserk", ptBR = "Feruja Berserk", ruRU = "Яростный совух", koKR = "광포한 올빼미야수", zhCN = "狂暴枭兽", zhTW = "狂暴梟獸"},
+		zones = {618},
+	},
+	[7455] = {
+		level = "54 - 56",
+		names = {enUS = "Winterspring Owl", deDE = "Winterspringeule", esES = "Lechuza invernal", esMX = "Lechuza de Cuna del Invierno", frFR = "Chouette du Berceau-de-l'Hiver", ptBR = "Coruja de Hibérnia", ruRU = "Сова Зимних Ключей", koKR = "여명의설원 올빼미", zhCN = "冬泉巨枭", zhTW = "冬泉巨梟"},
 		zones = {618},
 	},
 	[7457] = {
@@ -12907,17 +12918,6 @@ rm.npcDB = {
 	[7459] = {
 		level = "56 - 57",
 		names = {enUS = "Ice Thistle Matriarch", deDE = "Eisdistelmatriarchin", esES = "Matriarca Cardo Nevado", frFR = "Matriarche Chardon de glace", ptBR = "Matriarca Cardo de Gelo", ruRU = "Матриарх ледополохов", koKR = "맹렬한 얼음엉겅퀴설인", zhCN = "冰蓟雪人女王", zhTW = "冰薊雪人女王"},
-		zones = {618},
-	},
-	[7460] = {
-		level = "57 - 58",
-		names = {enUS = "Ice Thistle Patriarch", deDE = "Eisdistelpatriarch", esES = "Patriarca Cardo Nevado", frFR = "Patriarche Chardon de glace", ptBR = "Patriarca Cardo de Gelo", ruRU = "Патриарх ледополохов", koKR = "덩치큰 얼음엉겅퀴설인", zhCN = "冰蓟雪人王", zhTW = "冰薊雪人王"},
-		zones = {618},
-	},
-	[7461] = {
-		classification = "Elite",
-		level = "59 - 60",
-		names = {enUS = "Hederine Initiate", deDE = "Initiand von Hederine", esES = "Iniciado Hederine", frFR = "Initiée Hederine", ptBR = "Iniciada Hederine", ruRU = "Посвященная Хедерины", koKR = "헤더린의 신도", zhCN = "赫达琳新兵", zhTW = "赫達琳新兵"},
 		zones = {618},
 	},
 	[7462] = {
@@ -12976,22 +12976,6 @@ rm.npcDB = {
 		names = {enUS = "Murta Grimgut", deDE = "Murta Bauchgrimm", esES = "Murta Tripuriosa", ptBR = "Murta Pançabruta", ruRU = "Мурта Мрачнобрюх", koKR = "무르타 그림구트", zhCN = "穆尔塔", zhTW = "莫爾塔"},
 		zones = {1176},
 	},
-	[7665] = {
-		classification = "Elite",
-		level = "58",
-		names = {enUS = "Grol the Destroyer", deDE = "Grol der Zerstörer", esES = "Grol el Destructor", frFR = "Grol le Destructeur", ptBR = "Grol, o Destruidor", ruRU = "Грол Разрушитель", koKR = "파괴자 그롤", zhCN = "毁灭者戈洛尔", zhTW = "毀滅者戈洛爾"},
-		zones = {4},
-	},
-	[7668] = {
-		level = "57",
-		names = {enUS = "Servant of Razelikh", deDE = "Diener von Razelikh", esES = "Sirviente de Razelikh", frFR = "Serviteur de Razelikh", ptBR = "Serviçal de Razelikh", ruRU = "Слуга Разелиха", koKR = "라젤리크의 하수인", zhCN = "拉瑟莱克的仆从", zhTW = "拉瑟萊克的僕從"},
-		zones = {4},
-	},
-	[7671] = {
-		level = "55 - 56",
-		names = {enUS = "Servant of Sevine", deDE = "Diener von Sevine", esES = "Vasallo de Sevine", frFR = "Serviteur de Sevine", ptBR = "Serviçal de Sevine", ruRU = "Слуга Севины", koKR = "세바인의 하수인", zhCN = "瑟温妮的仆从", zhTW = "瑟溫妮的僕從"},
-		zones = {4},
-	},
 	[7725] = {
 		level = "42 - 43",
 		names = {enUS = "Grimtotem Raider", deDE = "Räuber der Grimmtotem", esES = "Asaltante Tótem Siniestro", esMX = "Asaltante Tótem Siniestro", frFR = "Ecumeur du Totem sinistre", ptBR = "Saqueador dos Temível Totem", ruRU = "Налетчик из племени Зловещего Тотема", koKR = "그림토템부족 침략자", zhCN = "恐怖图腾袭击者", zhTW = "恐怖圖騰襲擊者"},
@@ -13013,12 +12997,6 @@ rm.npcDB = {
 		names = {enUS = "Innkeeper Fizzgrimble", deDE = "Gastwirt Fizzgrimble", esES = "Tabernero Fizzgrimble", esMX = "Tabernero Fizzgrimble", frFR = "Aubergiste Fizzgrimble", ptBR = "Estalajadeiro Gabor Bulho", ruRU = "Хозяин таверны Ворчунелло", koKR = "여관주인 피즈그림블", zhCN = "旅店老板菲兹格瑞博", zhTW = "旅店老闆菲茲格瑞博"},
 		zones = {440},
 	},
-	[7734] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Ilifar", ruRU = "Илифар", koKR = "일리파르", zhCN = "伊利法尔", zhTW = "伊利法爾"},
-		zones = {4},
-	},
 	[7790] = {
 		faction = "Horde",
 		level = "45",
@@ -13030,6 +13008,18 @@ rm.npcDB = {
 		level = "50",
 		names = {enUS = "Aturk the Anvil", deDE = "Aturk der Amboss", esES = "Aturk el Yunque", esMX = "Aturk el Yunque", frFR = "Aturk l'Enclume", ptBR = "Aturk, o Bigorna", ruRU = "Атурк Наковальня", koKR = "무쇠모루 아투르크", zhCN = "铁砧阿图尔克", zhTW = "鐵砧阿圖爾克"},
 		zones = {1637},
+	},
+	[7795] = {
+		classification = "Elite",
+		level = "46",
+		names = {enUS = "Hydromancer Velratha", deDE = "Wasserbeschwörerin Velratha", esES = "Hidromántica Velratha", frFR = "Hydromancienne Velratha", ptBR = "Hidromante Velratha", ruRU = "Гидромант Велрата", koKR = "유체술사 벨라타", zhCN = "水占师维蕾萨", zhTW = "水占師維蕾薩"},
+		zones = {1176},
+	},
+	[7796] = {
+		classification = "Elite",
+		level = "45 - 46",
+		names = {enUS = "Nekrum Gutchewer", deDE = "Nekrum der Ausweider", esES = "Nekrum Cometripas", frFR = "Nekrum Mâchetripes", ptBR = "Nekrum Cometripas", ruRU = "Некрум Кишкожуй", koKR = "네크룸 거트츄어", zhCN = "耐克鲁姆", zhTW = "耐克魯姆"},
+		zones = {1176},
 	},
 	[7797] = {
 		classification = "Elite",
@@ -13054,9 +13044,9 @@ rm.npcDB = {
 		names = {enUS = "Galvan the Ancient", deDE = "Galvan der Alte", esES = "Galvan el Antiguo", frFR = "Galvan l'Ancien", ptBR = "Galvan, o Antigo", ruRU = "Гальван Древний", koKR = "전설의 대장장이 갈반", zhCN = "加尔文", zhTW = "加爾文"},
 		zones = {33},
 	},
-	[7803] = {
-		level = "46 - 47",
-		names = {enUS = "Scorpid Duneburrower", deDE = "Dünenbuddlerskorpid", esES = "Hurgadunas escórpido", frFR = "Scorpide fouisseur de dune", ptBR = "Entocador Escorpídeo", ruRU = "Песчаный скорпид", koKR = "모래구덩이전갈", zhCN = "沙漠掘洞蝎", zhTW = "沙漠掘洞蠍"},
+	[7804] = {
+		level = "55",
+		names = {enUS = "Trenton Lighthammer", esES = "Trenton Mazaligera", esMX = "Trenton Mazaligera", ptBR = "Trenton Lumartelo", ruRU = "Трентон Молот Света", koKR = "트렌튼 라이트해머", zhCN = "特伦顿·轻锤", zhTW = "特倫頓·輕錘"},
 		zones = {440},
 	},
 	[7805] = {
@@ -13068,17 +13058,6 @@ rm.npcDB = {
 		level = "47",
 		names = {enUS = "Vilebranch Ambusher", deDE = "Wegelagerer der Vilebranch", esES = "Emboscador Vilrama", frFR = "Embusqué Vilebranch", ptBR = "Emboscador Ramatorpe", ruRU = "Душитель из племени Порочной Ветви", koKR = "썩은가지부족 복병", zhCN = "邪枝伏击者", zhTW = "邪枝伏擊者"},
 		zones = {47},
-	},
-	[7846] = {
-		classification = "Rare Elite",
-		level = "??",
-		names = {enUS = "Teremus the Devourer", deDE = "Teremus der Verschlinger", esES = "Teremus el Devorador", frFR = "Teremus le Dévoreur", ptBR = "Teremus, o Devorador", ruRU = "Теремус Пожиратель", koKR = "파멸의 테레무스", zhCN = "吞噬者特雷姆斯", zhTW = "吞噬者特雷姆斯"},
-		zones = {4, 1519, 8, 12},
-	},
-	[7848] = {
-		level = "46",
-		names = {enUS = "Lurking Feral Scar", deDE = "Lauernder Wildschrammyeti", esES = "Cicatriz Feral acechante", esMX = "Cicatriz Feral acechante", frFR = "Griffe farouche patibulaire", ptBR = "Furtivo Abominável", ruRU = "Крадущийся йети со Свирепого Утеса", koKR = "어슬렁거리는 원시설인", zhCN = "潜伏的深痕雪人", zhTW = "潛伏的深痕雪人"},
-		zones = {357},
 	},
 	[7852] = {
 		faction = "Alliance",
@@ -13112,9 +13091,10 @@ rm.npcDB = {
 		names = {enUS = "Southsea Swashbuckler", deDE = "Schwadroneur der Südmeerfreibeuter", esES = "Aventurero del Mar del Sur", esMX = "Espadachín de los Mares del Sur", frFR = "Bretteur des Mers du sud", ptBR = "Espadachim dos Mares do Sul", ruRU = "Висельник Южных морей", koKR = "남쪽바다해적단 칼잡이", zhCN = "南海流氓", zhTW = "南海流氓"},
 		zones = {440},
 	},
-	[7864] = {
-		level = "48 - 50",
-		names = {enUS = "Lingering Highborne", deDE = "Verweilender Hochgeborener", esES = "Altonato persistente", esMX = "Altonato persistente", frFR = "Bien-né survivant", ptBR = "Altaneiro Persistente", ruRU = "Неупокоенный высокорожденный", koKR = "명가의 악령", zhCN = "徘徊的上层精灵", zhTW = "徘徊的高等精靈"},
+	[7866] = {
+		faction = "Alliance",
+		level = "50",
+		names = {enUS = "Peter Galen", ptBR = "Pedro Galho", ruRU = "Питер Гален", koKR = "피터 갈렌", zhCN = "彼得·加林", zhTW = "彼得·加林"},
 		zones = {16},
 	},
 	[7867] = {
@@ -13122,6 +13102,30 @@ rm.npcDB = {
 		level = "50",
 		names = {enUS = "Thorkaf Dragoneye", esES = "Thorkaf Dragonojo", esMX = "Thorkaf Ojo de Dragón", ptBR = "Thorkaf Olho-de-tigre", ruRU = "Торкаф Око Дракона", koKR = "토르카프 드래곤아이", zhCN = "索卡夫·龙眼", zhTW = "索卡夫·龍眼"},
 		zones = {3},
+	},
+	[7868] = {
+		faction = "Alliance",
+		level = "50",
+		names = {enUS = "Sarah Tanner", esES = "Sarah Peletero", ptBR = "Sara Correia", ruRU = "Сара Дубильщица", koKR = "사라 터너", zhCN = "萨拉·坦尼", zhTW = "薩拉·坦尼"},
+		zones = {51},
+	},
+	[7869] = {
+		faction = "Horde",
+		level = "50",
+		names = {enUS = "Brumn Winterhoof", esES = "Brumm Pezuña Invernal", esMX = "Brumm Pezuña Invernal", ptBR = "Brum Casco Invernal", ruRU = "Брумн Заиндевевшее Копыто", koKR = "부룸 윈터후프", zhCN = "布鲁姆·白蹄", zhTW = "布魯姆·冰蹄"},
+		zones = {45},
+	},
+	[7870] = {
+		faction = "Alliance",
+		level = "50",
+		names = {enUS = "Caryssia Moonhunter", esES = "Caryssia Cazaluna", ptBR = "Caryssia Caçaluna", ruRU = "Кариссия Лунная Охотница", koKR = "카리시아 문헌터", zhCN = "凯雷希亚·猎月", zhTW = "凱雷希亞·獵月"},
+		zones = {357},
+	},
+	[7871] = {
+		faction = "Horde",
+		level = "50",
+		names = {enUS = "Se'Jib", ruRU = "Сех'Джиб", koKR = "세지브", zhCN = "瑟伊布", zhTW = "瑟伊布"},
+		zones = {33},
 	},
 	[7872] = {
 		classification = "Elite",
@@ -13191,12 +13195,6 @@ rm.npcDB = {
 		names = {enUS = "Xylinnia Starshine", esES = "Xylinnia Brillestelar", ptBR = "Xylinnia Reluztela", ruRU = "Ксилинния Звездное Сияние", koKR = "실린니아 스타샤인", zhCN = "辛琳妮亚·星光", zhTW = "辛琳妮亞·星光"},
 		zones = {357},
 	},
-	[7977] = {
-		classification = "Elite",
-		level = "48",
-		names = {enUS = "Gammerita", ruRU = "Гаммерита", koKR = "감메리타", zhCN = "加莫里塔", zhTW = "加莫里塔"},
-		zones = {47},
-	},
 	[7995] = {
 		classification = "Elite",
 		level = "51",
@@ -13230,6 +13228,12 @@ rm.npcDB = {
 		level = "55",
 		names = {enUS = "Nixx Sprocketspring", esES = "Nixx Muellepiñón", esMX = "Nixx Muellepiñón", ptBR = "Nixx Molapinhão", ruRU = "Никс Шепружин", koKR = "닉스 스프로켓스프링", zhCN = "尼克斯·斯普克斯宾", zhTW = "尼克斯·斯普克斯賓"},
 		zones = {440},
+	},
+	[8127] = {
+		classification = "Elite",
+		level = "48",
+		names = {enUS = "Antu'sul", ruRU = "Анту'сул", koKR = "안투술", zhCN = "安图苏尔", zhTW = "安圖蘇爾"},
+		zones = {1176},
 	},
 	[8128] = {
 		level = "40",
@@ -13334,12 +13338,6 @@ rm.npcDB = {
 		names = {enUS = "Occulus", ruRU = "Оккулюс", koKR = "오크쿨루스", zhCN = "奥库鲁斯", zhTW = "奧庫魯斯"},
 		zones = {440},
 	},
-	[8197] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Chronalis", ruRU = "Хроналис", koKR = "크로날리스", zhCN = "克鲁纳里斯", zhTW = "克魯納里斯"},
-		zones = {440},
-	},
 	[8216] = {
 		classification = "Rare",
 		level = "48",
@@ -13351,12 +13349,6 @@ rm.npcDB = {
 		level = "52",
 		names = {enUS = "Mith'rethis the Enchanter", deDE = "Mith'rethis der Verzauberer", esES = "Mith'rethis el Encantador", esMX = "Mith'rethis el Encantador", frFR = "Mith'rethis l'Enchanteur", ptBR = "Mith'rethis, o Encantador", ruRU = "Мит'ретис Зачаровыватель", koKR = "마법부여사 미스레디스", zhCN = "附魔师米瑟雷希斯", zhTW = "附魔師米瑟雷希斯"},
 		zones = {47},
-	},
-	[8280] = {
-		classification = "Rare",
-		level = "47",
-		names = {enUS = "Shleipnarr", ruRU = "Шлейпнарр", koKR = "셸리나르", zhCN = "夏雷纳尔", zhTW = "夏雷納爾"},
-		zones = {51},
 	},
 	[8306] = {
 		faction = "Horde",
@@ -13419,6 +13411,12 @@ rm.npcDB = {
 		names = {enUS = "Nilith Lokrav", ruRU = "Нилита Локрав", koKR = "닐리스 로크라브", zhCN = "尼莉丝·洛克拉夫", zhTW = "尼莉絲·洛克拉夫"},
 		zones = {51},
 	},
+	[8440] = {
+		classification = "Elite",
+		level = "49 - 50",
+		names = {enUS = "Shade of Hakkar", deDE = "Schemen von Hakkar", esES = "Sombra de Hakkar", frFR = "Ombre d'Hakkar", ptBR = "Vulto de Hakkar", ruRU = "Тень Хаккара", koKR = "학카르의 사령", zhCN = "哈卡的阴影", zhTW = "哈卡的陰影"},
+		zones = {1477},
+	},
 	[8497] = {
 		classification = "Elite",
 		level = "49 - 50",
@@ -13447,7 +13445,7 @@ rm.npcDB = {
 		classification = "Elite",
 		faction = "Alliance",
 		level = "29",
-		names = {enUS = "Rynthariel the Keymaster", deDE = "Rynthariel die Schlüsselmeisterin", esES = "Rynthariel la Maestra de llaves", frFR = "Rynthariel le Maître des clés", ptBR = "Rynthariel, a Guardiã da Chave", ruRU = "Ринтариэль Хранительница Ключей", koKR = "열쇠지기 린타리엘", zhCN = "琳萨瑞尔", zhTW = "琳薩瑞爾"},
+		names = {enUS = "Rynthariel the Keymaster", deDE = "Rynthariel die Schlüsselmeisterin", esES = "Rynthariel la Maestra de llaves", esMX = "Rynthariel la Maestra de llaves", frFR = "Rynthariel le Maître des clés", ptBR = "Rynthariel, a Guardiã da Chave", ruRU = "Ринтариэль Хранительница Ключей", koKR = "열쇠지기 린타리엘", zhCN = "琳萨瑞尔", zhTW = "琳薩瑞爾"},
 		zones = {406},
 	},
 	[8519] = {
@@ -13455,74 +13453,14 @@ rm.npcDB = {
 		names = {enUS = "Blighted Surge", deDE = "Verseuchte Woge", esES = "Marea apestada", esMX = "Marea contagiada", frFR = "Fléau", ptBR = "Elemental Empesteado", ruRU = "Зачумленный волноплеск", koKR = "황폐의 물결", zhCN = "荒芜巨浪", zhTW = "荒蕪巨浪"},
 		zones = {139},
 	},
-	[8520] = {
-		level = "55 - 56",
-		names = {enUS = "Plague Ravager", deDE = "Seuchenverheerer", esES = "Devastador de la Peste", esMX = "Devastador de peste", frFR = "Ravageur de la peste", ptBR = "Assolador da Peste", ruRU = "Чумной опустошитель", koKR = "역병의 재앙", zhCN = "瘟疫破坏者", zhTW = "瘟疫破壞者"},
-		zones = {139},
-	},
-	[8521] = {
-		level = "56 - 57",
-		names = {enUS = "Blighted Horror", deDE = "Verseuchter Schrecken", esES = "Horror apestado", frFR = "Horreur corrompue", ptBR = "Horror Empesteado", ruRU = "Зачумленный ужас", koKR = "황폐의 그림자", zhCN = "荒芜水元素", zhTW = "荒蕪水元素"},
-		zones = {139},
-	},
-	[8522] = {
-		level = "57 - 58",
-		names = {enUS = "Plague Monstrosity", deDE = "Seuchenmonster", esES = "Monstruosidad de la Peste", frFR = "Monstruosité de la peste", ptBR = "Monstruosidade da Peste", ruRU = "Чумное чудовище", koKR = "역병의 괴수", zhCN = "瘟疫水元素", zhTW = "瘟疫水元素"},
-		zones = {139},
-	},
-	[8523] = {
-		level = "53 - 54",
-		names = {enUS = "Scourge Soldier", deDE = "Soldat der Geißel", esES = "Soldado de la Plaga", frFR = "Soldat du Fléau", ptBR = "Soldado do Flagelo", ruRU = "Солдат Плети", koKR = "스컬지 병사", zhCN = "天灾士兵", zhTW = "天災士兵"},
-		zones = {139},
-	},
-	[8524] = {
-		level = "54 - 55",
-		names = {enUS = "Cursed Mage", deDE = "Verfluchter Magier", esES = "Mago maldito", esMX = "Mago maldito", frFR = "Mage maudit", ptBR = "Mago Amaldiçoado", ruRU = "Проклятый маг", koKR = "저주받은 마법사", zhCN = "诅咒法师", zhTW = "詛咒法師"},
-		zones = {139},
-	},
-	[8526] = {
-		level = "56 - 57",
-		names = {enUS = "Dark Caster", deDE = "Dunkler Zauberer", esES = "Taumaturgo oscuro", esMX = "Taumaturgo oscuro", frFR = "Magicien noir", ptBR = "Lançador Tenebroso", ruRU = "Темный заклинатель", koKR = "암흑의 마술사", zhCN = "黑暗法师", zhTW = "黑暗法師"},
-		zones = {139},
-	},
-	[8528] = {
-		level = "58 - 59",
-		names = {enUS = "Dread Weaver", deDE = "Schreckenswirker", esES = "Sastrón aterrador", esMX = "Tejedor aterrador", frFR = "Tisseur d'effroi", ptBR = "Tecemedo", ruRU = "Ткач Ужаса", koKR = "공포술사", zhCN = "恐怖编织者", zhTW = "恐怖編織者"},
-		zones = {139},
-	},
-	[8529] = {
-		level = "59 - 60",
-		names = {enUS = "Scourge Champion", deDE = "Champion der Geißel", esES = "Campeón de la Plaga", esMX = "Campeón de la Plaga", frFR = "Champion du Fléau", ptBR = "Campeão do Flagelo", ruRU = "Воитель Плети", koKR = "스컬지 용사", zhCN = "天灾勇士", zhTW = "天災勇士"},
-		zones = {139},
-	},
-	[8530] = {
-		level = "54 - 55",
-		names = {enUS = "Cannibal Ghoul", deDE = "Menschenfresserghul", esES = "Necrófago caníbal", frFR = "Goule cannibale", ptBR = "Carniçal Canibal", ruRU = "Каннибал-вурдалак", koKR = "식인 구울", zhCN = "吃人的食尸鬼", zhTW = "吃人的食屍鬼"},
-		zones = {139},
-	},
-	[8532] = {
-		level = "58 - 59",
-		names = {enUS = "Diseased Flayer", deDE = "Kranker Schinder", esES = "Despellejador malsano", esMX = "Despellejador malsano", frFR = "Ecorcheur maladif", ptBR = "Açoitador Doente", ruRU = "Болезненный живодер", koKR = "전염병 구울", zhCN = "生病的剥皮者", zhTW = "生病的剝皮者"},
-		zones = {139},
-	},
 	[8534] = {
 		level = "54 - 56",
 		names = {enUS = "Putrid Gargoyle", deDE = "Eitriger Gargoyle", esES = "Gárgola pútrida", esMX = "Gárgola pútrida", frFR = "Gargouille putride", ptBR = "Gárgula Pútrido", ruRU = "Гнилая горгулья", koKR = "썩은날개 가고일", zhCN = "腐烂的石像鬼", zhTW = "腐爛的石像鬼"},
-		zones = {139, 28},
-	},
-	[8535] = {
-		level = "56 - 58",
-		names = {enUS = "Putrid Shrieker", deDE = "Eitriger Schriller", esES = "Chillador pútrido", frFR = "Hurleuse putride", ptBR = "Guincho Pútrido", ruRU = "Гнилой визгун", koKR = "비명소리 썩은날개 가고일", zhCN = "腐烂的尖啸者", zhTW = "腐爛的尖嘯者"},
 		zones = {139},
 	},
 	[8538] = {
 		level = "55 - 56",
 		names = {enUS = "Unseen Servant", deDE = "Ungesehener Diener", esES = "Sirviente no-visto", esMX = "Sirviente oculto", frFR = "Serviteur invisible", ptBR = "Serviçal Evanescente", ruRU = "Незримый слуга", koKR = "보이지 않는 하수인", zhCN = "无影仆从", zhTW = "無影僕從"},
-		zones = {139},
-	},
-	[8539] = {
-		level = "57 - 58",
-		names = {enUS = "Eyeless Watcher", deDE = "Augenloser Behüter", esES = "Vigilante Sinojos", frFR = "Gardien aveugle", ptBR = "Vigia Sem Olhos", ruRU = "Безглазый дозорный", koKR = "보이지 않는 감시자", zhCN = "无眼观察者", zhTW = "無眼觀察者"},
 		zones = {139},
 	},
 	[8540] = {
@@ -13535,76 +13473,15 @@ rm.npcDB = {
 		names = {enUS = "Hate Shrieker", deDE = "Hassschriller", esES = "Chillador odial", esMX = "Chillona de odio", frFR = "Hurleuse haineuse", ptBR = "Guincha Odiosa", ruRU = "Яростная визгунья", koKR = "원한의 밴시", zhCN = "憎恨吟唱者", zhTW = "憎恨吟唱者"},
 		zones = {139},
 	},
-	[8542] = {
-		level = "57 - 59",
-		names = {enUS = "Death Singer", deDE = "Todessänger", esES = "Cantor de la Muerte", esMX = "Trovamuerte", frFR = "Chante-mort", ptBR = "Solista da Morte", ruRU = "Певица Смерти", koKR = "죽음의 밴시", zhCN = "死亡歌手", zhTW = "死亡歌手"},
-		zones = {139},
-	},
-	[8543] = {
-		level = "57 - 58",
-		names = {enUS = "Stitched Horror", deDE = "Stichelnarbenschrecken", esES = "Horror cosido", esMX = "Horror cosido", frFR = "Horreur raccommodée", ptBR = "Horror Remendado", ruRU = "Лоскутный ужас", koKR = "끔찍한 누더기골렘", zhCN = "缝合憎恶", zhTW = "縫合憎惡"},
-		zones = {139},
-	},
-	[8546] = {
-		level = "58 - 59",
-		names = {enUS = "Dark Adept", deDE = "Dunkler Adept", esES = "Adepto oscuro", frFR = "Adepte noir", ptBR = "Adepto das Trevas", ruRU = "Адепт Тьмы", koKR = "암흑의 수행사제", zhCN = "黑暗教徒", zhTW = "黑暗教徒"},
-		zones = {139},
-	},
-	[8548] = {
-		level = "56 - 57",
-		names = {enUS = "Vile Tutor", deDE = "Übler Tutor", esES = "Tutor vil", esMX = "Tutor vil", frFR = "Vil tuteur", ptBR = "Docente Torpe", ruRU = "Злобный воспитатель", koKR = "타락한 학자", zhCN = "邪恶导师", zhTW = "邪惡導師"},
-		zones = {139},
-	},
-	[8550] = {
-		level = "59 - 60",
-		names = {enUS = "Shadowmage", deDE = "Schattenmagier", esES = "Mago oscuro", frFR = "Ombremage", ptBR = "Umbramante", ruRU = "Темный маг", koKR = "어둠마법사", zhCN = "暗影法师", zhTW = "暗影法師"},
-		zones = {139},
-	},
-	[8551] = {
-		level = "55 - 56",
-		names = {enUS = "Dark Summoner", deDE = "Dunkler Beschwörer", esES = "Invocador Oscuro", esMX = "Invocador oscuro", frFR = "Invocateur des ténèbres", ptBR = "Evocador das Trevas", ruRU = "Призыватель Тьмы", koKR = "암흑의 소환사", zhCN = "黑暗召唤师", zhTW = "黑暗召喚師"},
-		zones = {139},
-	},
-	[8555] = {
-		level = "53 - 54",
-		names = {enUS = "Crypt Fiend", deDE = "Gruftsatanskreatur", esES = "Mefisto de la cripta", frFR = "Démon des cryptes", ptBR = "Carnífice da Cripta", ruRU = "Некрорахнид", koKR = "지하마귀", zhCN = "地穴恶魔", zhTW = "地穴惡魔"},
-		zones = {139},
-	},
 	[8556] = {
 		level = "55 - 56",
 		names = {enUS = "Crypt Walker", deDE = "Gruftwandler", esES = "Caminante de la cripta", frFR = "Marcheur des cryptes", ptBR = "Andarilho da Cripta", ruRU = "Некрорахнид-могильщик", koKR = "거미턱 지하마귀", zhCN = "地穴巡逻者", zhTW = "地穴巡邏者"},
 		zones = {139},
 	},
-	[8558] = {
-		level = "58 - 59",
-		names = {enUS = "Crypt Slayer", deDE = "Grufttöter", esES = "Destripador de la cripta", frFR = "Pourfendeur des cryptes", ptBR = "Matador da Cripta", ruRU = "Некрорахнид-душегуб", koKR = "학살자 지하마귀", zhCN = "地穴屠戮者", zhTW = "地穴屠戮者"},
-		zones = {139},
-	},
-	[8560] = {
-		level = "57 - 58",
-		names = {enUS = "Mossflayer Scout", deDE = "Späher der Moosschinder", esES = "Explorador Fustamusgo", frFR = "Eclaireur Mossflayer", ptBR = "Batedor Esfolamusgo", ruRU = "Разведчик из племени Моходеров", koKR = "이끼껍질부족 정찰병", zhCN = "烂苔斥候", zhTW = "爛苔斥候"},
-		zones = {139},
-	},
-	[8561] = {
-		level = "58 - 59",
-		names = {enUS = "Mossflayer Shadowhunter", deDE = "Schattenjäger der Moosschinder", esES = "Cazasombras Fustamusgo", frFR = "Chasseur des ténèbres Mossflayer", ptBR = "Caçador Furtivo Esfolamusgo", ruRU = "Темный охотник из племени Моходеров", koKR = "이끼껍질부족 어둠사냥꾼", zhCN = "烂苔暗影猎手", zhTW = "爛苔暗影獵手"},
-		zones = {139},
-	},
-	[8562] = {
-		level = "57 - 59",
-		names = {enUS = "Mossflayer Cannibal", deDE = "Kannibale der Moosschinder", esES = "Caníbal Fustamusgo", frFR = "Cannibale Mossflayer", ptBR = "Canibal Esfolamusgo", ruRU = "Каннибал из племени Моходеров", koKR = "이끼껍질부족 식인종", zhCN = "烂苔食尸者", zhTW = "爛苔食屍者"},
-		zones = {139},
-	},
-	[8563] = {
+	[8564] = {
 		faction = "Alliance",
-		level = "58 - 59",
-		names = {enUS = "Woodsman", deDE = "Waldmann", esES = "Leñantro", frFR = "Bûcheron", ptBR = "Mateiro", ruRU = "Лесник", koKR = "수렵꾼", zhCN = "护林者", zhTW = "護林者"},
-		zones = {139},
-	},
-	[8565] = {
-		faction = "Alliance",
-		level = "57 - 58",
-		names = {enUS = "Pathstrider", deDE = "Pfadschreiter", esES = "Zancamino", frFR = "Eclaireur", ptBR = "Trilheiro", ruRU = "Разведчица дорог", koKR = "길잡이", zhCN = "巡路者", zhTW = "巡路者"},
+		level = "59 - 60",
+		names = {enUS = "Ranger", deDE = "Waldläufer", esES = "Especialista", frFR = "Forestier", ptBR = "Patrulheiro", ruRU = "Следопыт", koKR = "순찰자", zhCN = "游侠", zhTW = "遊俠"},
 		zones = {139},
 	},
 	[8566] = {
@@ -13618,16 +13495,16 @@ rm.npcDB = {
 		names = {enUS = "Glutton", deDE = "Nimmersatt", esES = "Glotón", frFR = "Glouton", ptBR = "Glutão", ruRU = "Обжора", koKR = "게걸먹보", zhCN = "暴食者", zhTW = "暴食者"},
 		zones = {722},
 	},
-	[8578] = {
-		level = "55",
-		names = {enUS = "Magus Rimtori", ptBR = "Maga Rimtori", ruRU = "Волхв Римтори", koKR = "학자 림토리", zhCN = "大法师雷姆托里", zhTW = "大法師雷姆托里"},
-		zones = {16},
-	},
 	[8580] = {
 		classification = "Elite",
 		level = "50",
 		names = {enUS = "Atal'alarion", ruRU = "Атал'аларион", koKR = "아탈알라리온", zhCN = "阿塔拉利恩", zhTW = "阿塔拉利恩"},
 		zones = {1477},
+	},
+	[8581] = {
+		level = "51",
+		names = {enUS = "Blood Elf Defender", deDE = "Blutelfenverteidiger", esES = "Defensor elfo de sangre", frFR = "Défenseur elfe de sang", ptBR = "Defensor Elfo Sangrento", ruRU = "Эльф крови-защитник", koKR = "블러드 엘프 파수병", zhCN = "血精灵防御者", zhTW = "血精靈防禦者"},
+		zones = {16},
 	},
 	[8596] = {
 		level = "53 - 54",
@@ -13642,7 +13519,7 @@ rm.npcDB = {
 	[8600] = {
 		level = "53 - 55",
 		names = {enUS = "Plaguebat", deDE = "Seuchenfledermaus", esES = "Murcipeste", esMX = "Murcipeste", frFR = "Chauve-souris pestiférée", ptBR = "Quiróprago", ruRU = "Чумной нетопырь", koKR = "역병박쥐", zhCN = "瘟疫蝙蝠", zhTW = "瘟疫蝙蝠"},
-		zones = {139, 28},
+		zones = {139},
 	},
 	[8601] = {
 		level = "54 - 56",
@@ -13659,20 +13536,15 @@ rm.npcDB = {
 		names = {enUS = "Carrion Grub", deDE = "Aaslarve", esES = "Larva carroñera", esMX = "Larva carroñera", frFR = "Larve putride", ptBR = "Verme Carniceiro", ruRU = "Личинка-падальщик", koKR = "청소부구더기", zhCN = "腐肉虫", zhTW = "腐肉蟲"},
 		zones = {139},
 	},
-	[8605] = {
-		level = "56 - 57",
-		names = {enUS = "Carrion Devourer", deDE = "Aasverschlinger", esES = "Devorador carroñero", esMX = "Devorador carroñero", frFR = "Dévoreur putride", ptBR = "Devorador de Carniça", ruRU = "Падальщик-пожиратель", koKR = "걸신들린 청소부구더기", zhCN = "腐肉吞噬者", zhTW = "腐肉吞噬者"},
-		zones = {139},
-	},
-	[8606] = {
-		level = "55 - 56",
-		names = {enUS = "Living Decay", deDE = "Lebender Verfall", esES = "Pútrido viviente", esMX = "Pútrido viviente", frFR = "Pourriture vivante", ptBR = "Decomposição Viva", ruRU = "Живая гниль", koKR = "움직이는 부패물", zhCN = "腐朽软泥怪", zhTW = "腐朽軟泥怪"},
-		zones = {139},
-	},
 	[8637] = {
 		level = "44 - 45",
 		names = {enUS = "Dark Iron Watchman", deDE = "Wachmann der Dunkeleisenzwerge", esES = "Vigilante Hierro Negro", esMX = "Velador Hierro Negro", frFR = "Garde Sombrefer", ptBR = "Vigia Ferro Negro", ruRU = "Сторож из клана Черного Железа", koKR = "검은무쇠단 보초", zhCN = "黑铁巡逻兵", zhTW = "黑鐵巡邏兵"},
 		zones = {51},
+	},
+	[8667] = {
+		level = "43 - 45",
+		names = {enUS = "Gusting Vortex", deDE = "Windstoßvortex", esES = "Vórtice ráfaga", frFR = "Vortex violent", ptBR = "Vórtice Soprador", ruRU = "Порывистый вихрь", koKR = "휘몰아치는 소용돌이", zhCN = "狂风漩涡", zhTW = "狂風漩渦"},
+		zones = {440},
 	},
 	[8675] = {
 		level = "50 - 51",
@@ -13700,18 +13572,6 @@ rm.npcDB = {
 		names = {enUS = "Henry Stern", ruRU = "Генри Штерн", koKR = "헨리 스턴", zhCN = "亨利·斯特恩", zhTW = "亨利·斯特恩"},
 		zones = {722},
 	},
-	[8716] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Dreadlord", deDE = "Schreckenslord", esES = "Señor del Terror", frFR = "Seigneur de l'effroi", ptBR = "Senhor do Medo", ruRU = "Повелитель ужаса", koKR = "공포의군주", zhCN = "恐惧魔王", zhTW = "恐懼魔王"},
-		zones = {4, 15531},
-	},
-	[8717] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Felguard Elite", deDE = "Eliteteufelswache", esES = "Élite guardia vil", frFR = "Gangregarde d'élite", ptBR = "Guarda Vil de Elite", ruRU = "Элитный страж Скверны", koKR = "정예 지옥군단병", zhCN = "地狱卫士精英", zhTW = "地獄衛士精英"},
-		zones = {4, 15531},
-	},
 	[8736] = {
 		level = "53",
 		names = {enUS = "Buzzek Bracketswing", esES = "Buzzek Giracorchete", esMX = "Buzzek Giracorchete", ptBR = "Zumbo Dobradiço", ruRU = "Жужжер Скрепокрыл", koKR = "부젝 브라켓스윙", zhCN = "巴兹克·布拉斯温", zhTW = "巴茲克·布拉斯溫"},
@@ -13722,20 +13582,10 @@ rm.npcDB = {
 		names = {enUS = "Vazario Linkgrease", esES = "Vazario Grasenlace", esMX = "Vazario Grasenlace", ptBR = "Tucho Raspagraxa", ruRU = "Вазарио Цепесмаз", koKR = "바자리오 링크그리즈", zhCN = "瓦萨里奥·林克格雷斯", zhTW = "瓦薩里奧·林克格雷斯"},
 		zones = {17},
 	},
-	[8761] = {
-		level = "52 - 60",
-		names = {enUS = "Mosshoof Courser", deDE = "Mooshufrenner", esES = "Maledictor Pezuñamusgo", frFR = "Coursier Sabots-de-mousse", ptBR = "Ginete Cascomusgo", ruRU = "Мохоногий олень", koKR = "덩치큰 이끼발굽순록", zhCN = "苔蹄快步者", zhTW = "苔蹄快步者"},
-		zones = {16, 15532},
-	},
-	[8762] = {
-		level = "47 - 48",
-		names = {enUS = "Timberweb Recluse", deDE = "Baumspinnereremit", esES = "Ermitaña Telamadera", esMX = "Ermitaña Telamadera", frFR = "Grumetoile solitaire", ptBR = "Reclusa Xilaracna", ruRU = "Древесный отшельник", koKR = "그물나무그늘거미", zhCN = "林木隐匿者", zhTW = "林木隱匿者"},
-		zones = {16},
-	},
-	[8766] = {
-		level = "52 - 53",
-		names = {enUS = "Forest Ooze", deDE = "Waldbrühschlammer", esES = "Moco del bosque", frFR = "Limon forestier", ptBR = "Gosma Florestal", ruRU = "Лесной слизнюк", koKR = "숲수액괴물", zhCN = "森林软泥怪", zhTW = "森林軟泥怪"},
-		zones = {16},
+	[8759] = {
+		level = "45 - 47",
+		names = {enUS = "Mosshoof Runner", deDE = "Mooshufläufer", esES = "Corredor Pezuñamusgo", esMX = "Corredor Pezuñamusgo", frFR = "Coureur Sabots-de-mousse", ptBR = "Corredor Cascomusgo", ruRU = "Мохокопытный бегун", koKR = "작은 이끼발굽순록", zhCN = "苔蹄奔跑者", zhTW = "苔蹄奔跑者"},
+		zones = {16, 1637, 331},
 	},
 	[8878] = {
 		faction = "Horde",
@@ -13898,15 +13748,6 @@ rm.npcDB = {
 		names = {enUS = "Twilight's Hammer Ambassador", deDE = "Botschafter der Twilight-Hammer", esES = "Embajador del Martillo Crepuscular", frFR = "Ambassadeur du Marteau du crépuscule", ptBR = "Embaixador do Martelo do Crepúsculo", ruRU = "Посол из культа Сумеречного Молота", koKR = "황혼의망치단 사절", zhCN = "暮光之锤特使", zhTW = "暮光之錘特使"},
 		zones = {1584},
 	},
-	[8916] = {
-		level = "52 - 54",
-		names = {enUS = "Arena Spectator", deDE = "Arenazuschauer", esES = "Espectador de la Arena", frFR = "Spectateur de l'arène", ptBR = "Espectador da Arena", ruRU = "Зритель арены", koKR = "원형투기장 관중", zhCN = "竞技场观众", zhTW = "競技場觀眾"},
-		zones = {1584},
-	},
-	[8917] = {
-		level = "46 - 48",
-		names = {enUS = "Quarry Slave", deDE = "Steinbruchsklave", esES = "Esclavo de la cantera", esMX = "Esclavo de la cantera", frFR = "Esclave de la carrière", ptBR = "Escravo da Pedreira", ruRU = "Раб с каменоломни", koKR = "채석장 노예", zhCN = "挖掘场奴隶", zhTW = "挖掘場奴隸"},
-	},
 	[8920] = {
 		level = "54 - 56",
 		names = {enUS = "Weapon Technician", deDE = "Waffentechniker", esES = "Técnico de armas", frFR = "Ingénieur de siège", ptBR = "Técnico em Armas", ruRU = "Оружейный техник", koKR = "병기전문 기술병", zhCN = "武器技师", zhTW = "武器技師"},
@@ -13921,11 +13762,6 @@ rm.npcDB = {
 		level = "54 - 55",
 		names = {enUS = "Bloodhound Mastiff", deDE = "Aggressiver Bluthund", esES = "Masadura Canisangre", frFR = "Limier mastiff", ptBR = "Mastim Canissangue", ruRU = "Гончий мастиф", koKR = "덩치큰 핏빛사냥개", zhCN = "巨型血犬", zhTW = "巨型血犬"},
 		zones = {1584},
-	},
-	[8924] = {
-		classification = "Rare Elite",
-		level = "50",
-		names = {enUS = "The Behemoth", deDE = "Das Ungetüm", esES = "El Behemoth", esMX = "El Behemoth", frFR = "Le Béhémoth", ptBR = "O Beemote", ruRU = "Чудище", koKR = "거수", zhCN = "贝哈默斯", zhTW = "貝哈默斯"},
 	},
 	[8925] = {
 		level = "50 - 52",
@@ -13993,6 +13829,24 @@ rm.npcDB = {
 		names = {enUS = "Golem Lord Argelmach", deDE = "Golemlord Argelmach", esES = "Señor Gólem Argelmach", frFR = "Seigneur golem Argelmach", ptBR = "Lorde Golem Argelmach", ruRU = "Повелитель големов Аргелмах", koKR = "골렘 군주 아젤마크", zhCN = "傀儡统帅阿格曼奇", zhTW = "傀儡統帥阿格曼奇"},
 		zones = {1584},
 	},
+	[9016] = {
+		classification = "Elite",
+		level = "54",
+		names = {enUS = "Bael'Gar", ptBR = "Bael'gar", ruRU = "Бейл'Гор", koKR = "밸가르", zhCN = "贝尔加", zhTW = "貝爾加"},
+		zones = {1584},
+	},
+	[9017] = {
+		classification = "Elite",
+		level = "55",
+		names = {enUS = "Lord Incendius", frFR = "Seigneur Incendius", ptBR = "Lorde Incendius", ruRU = "Лорд Опалитель", koKR = "불의군주 인센디우스", zhCN = "伊森迪奥斯", zhTW = "伊森迪奧斯"},
+		zones = {1584},
+	},
+	[9018] = {
+		classification = "Elite",
+		level = "52",
+		names = {enUS = "High Interrogator Gerstahn", deDE = "Verhörmeisterin Gerstahn", esES = "Alto Interrogador Gerstahn", frFR = "Grand Interrogateur Gerstahn", ptBR = "Suprema Interrogadora Gerstahn", ruRU = "Верховный дознаватель Герштан", koKR = "대심문관 게르스탄", zhCN = "审讯官格斯塔恩", zhTW = "審訊官格斯塔恩"},
+		zones = {1584},
+	},
 	[9024] = {
 		classification = "Elite",
 		level = "52",
@@ -14009,17 +13863,12 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "52",
 		names = {enUS = "Overmaster Pyron", deDE = "Übermeister Pyron", esES = "Gran Maestro Pyron", frFR = "Grand seigneur Pyron", ptBR = "Mestre Supremo Piro", ruRU = "Подчинитель Пирон", koKR = "멸망의 파이론", zhCN = "征服者派隆", zhTW = "征服者派隆"},
+		zones = {51},
 	},
 	[9028] = {
 		classification = "Elite",
 		level = "54",
 		names = {enUS = "Grizzle", esES = "Grisez", esMX = "Grisez", frFR = "Grison", ptBR = "Resmungo", ruRU = "Гриззл", koKR = "그리즐", zhCN = "格里兹尔", zhTW = "格里茲爾"},
-		zones = {1584},
-	},
-	[9031] = {
-		classification = "Elite",
-		level = "54",
-		names = {enUS = "Anub'shiah", ruRU = "Ануб'шиа", koKR = "아눕쉬아", zhCN = "阿努希尔", zhTW = "阿努希爾"},
 		zones = {1584},
 	},
 	[9037] = {
@@ -14046,6 +13895,12 @@ rm.npcDB = {
 		names = {enUS = "Scarshield Acolyte", deDE = "Akolyt der Schmetterschilde", esES = "Acólito Escudo del Estigma", esMX = "Acólito del Escudo del Estigma", frFR = "Acolyte du Bouclier balafré", ptBR = "Acólito do Escudo Marcado", ruRU = "Послушник из легиона Изрубленного Щита", koKR = "방패부대 수행사제", zhCN = "裂盾侍僧", zhTW = "裂盾侍僧"},
 		zones = {1583},
 	},
+	[9056] = {
+		classification = "Elite",
+		level = "54",
+		names = {enUS = "Fineous Darkvire", esES = "Finoso Virunegro", ptBR = "Fineous Forçanegra", ruRU = "Точень Темнострой", koKR = "파이너스 다크바이어", zhCN = "弗诺斯·达克维尔", zhTW = "弗諾斯·達克維爾"},
+		zones = {1584},
+	},
 	[9096] = {
 		classification = "Elite",
 		level = "57 - 59",
@@ -14063,6 +13918,13 @@ rm.npcDB = {
 		level = "54 - 55",
 		names = {enUS = "Scarshield Spellbinder", deDE = "Zauberbinder der Schmetterschilde", esES = "Vinculador de hechizo Escudo del Estigma", esMX = "Vinculahechizos del Escudo del Estigma", frFR = "Lieur de sort du Bouclier balafré", ptBR = "Mesmerizador do Escudo Marcado", ruRU = "Чароплет из легиона Изрубленного Щита", koKR = "방패부대 역술사", zhCN = "裂盾缚法师", zhTW = "裂盾縛法師"},
 		zones = {1583},
+	},
+	[9156] = {
+		classification = "Elite",
+		faction = "Alliance",
+		level = "57",
+		names = {enUS = "Ambassador Flamelash", deDE = "Botschafter Flammenschlag", esES = "Embajador Latifuego", frFR = "Ambassadeur Cinglefouet", ptBR = "Embaixador Fogaçoite", ruRU = "Посол Огнехлыст", koKR = "사자 화염채찍", zhCN = "弗莱拉斯大使", zhTW = "弗萊拉斯大使"},
+		zones = {1584},
 	},
 	[9162] = {
 		level = "49 - 59",
@@ -14100,12 +13962,6 @@ rm.npcDB = {
 		names = {enUS = "Jazzrik", ruRU = "Джаззрик", koKR = "자즈릭", zhCN = "加兹里克", zhTW = "加茲里克"},
 		zones = {3},
 	},
-	[9197] = {
-		classification = "Elite",
-		level = "57 - 58",
-		names = {enUS = "Spirestone Battle Mage", deDE = "Kampfmagier der Felsspitzoger", esES = "Mago de batalla Cumbrerroca", esMX = "Mago de batalla Cumbrerroca", frFR = "Mage de bataille Pierre-du-pic", ptBR = "Mago de Batalha Agulhapétrea", ruRU = "Боевой маг из клана Черной Вершины", koKR = "뾰족바위일족 전투마법사", zhCN = "尖石战斗法师", zhTW = "尖石戰鬥法師"},
-		zones = {1583},
-	},
 	[9198] = {
 		classification = "Elite",
 		level = "55 - 56",
@@ -14136,10 +13992,10 @@ rm.npcDB = {
 		names = {enUS = "Spirestone Warlord", deDE = "Kriegsherr der Felsspitzoger", esES = "Señor de la Guerra Cumbrerroca", esMX = "Señor de la guerra Cumbrerroca", frFR = "Chef de guerre Pierre-du-pic", ptBR = "Senhor da Guerra Agulhapétrea", ruRU = "Полководец из клана Черной Вершины", koKR = "뾰족바위일족 투사", zhCN = "尖石军阀", zhTW = "尖石軍閥"},
 		zones = {1583},
 	},
-	[9217] = {
-		classification = "Rare Elite",
+	[9236] = {
+		classification = "Elite",
 		level = "58",
-		names = {enUS = "Spirestone Lord Magus", deDE = "Maguslord der Felsspitzoger", esES = "Señor Magus Cumbrerroca", esMX = "Señor Magus Cumbrerroca", frFR = "Seigneur magus Pierre-du-pic", ptBR = "Mestre Mago Agulhapétrea", ruRU = "Лорд-волхв из клана Черной Вершины", koKR = "뾰족바위일족 마법사장", zhCN = "尖石首席法师", zhTW = "尖石首席法師"},
+		names = {enUS = "Shadow Hunter Vosh'gajin", deDE = "Schattenjägerin Vosh'gajin", esES = "Cazador de las Sombras Vosh'gajin", frFR = "Chasseresse des ombres Vosh'gajin", ptBR = "Caçadora Sombria Vosh'gajin", ruRU = "Темная охотница Вос'гаджин", koKR = "어둠사냥꾼 보쉬가진", zhCN = "暗影猎手沃什加斯", zhTW = "暗影獵手沃許加斯"},
 		zones = {1583},
 	},
 	[9239] = {
@@ -14164,12 +14020,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "54 - 55",
 		names = {enUS = "Scarshield Warlock", deDE = "Hexenmeister der Schmetterschilde", esES = "Brujo Escudo del Estigma", esMX = "Brujo del Escudo del Estigma", frFR = "Démoniste du Bouclier balafré", ptBR = "Bruxo do Escudo Marcado", ruRU = "Чернокнижник из легиона Изрубленного Щита", koKR = "방패부대 흑마법사", zhCN = "裂盾术士", zhTW = "裂盾術士"},
-		zones = {1583},
-	},
-	[9258] = {
-		classification = "Elite",
-		level = "55 - 56",
-		names = {enUS = "Scarshield Raider", deDE = "Räuber der Schmetterschilde", esES = "Asaltante Escudo del Estigma", esMX = "Asaltante del Escudo del Estigma", frFR = "Ecumeur du Bouclier balafré", ptBR = "Saqueador do Escudo Marcado", ruRU = "Налетчик из легиона Изрубленного Щита", koKR = "방패부대 공격대원", zhCN = "裂盾袭击者", zhTW = "裂盾襲擊者"},
 		zones = {1583},
 	},
 	[9259] = {
@@ -14208,12 +14058,6 @@ rm.npcDB = {
 		names = {enUS = "Firebrand Pyromancer", deDE = "Pyromant der Feuerbrand", esES = "Pirómano Pirotigma", frFR = "Pyromancien de Brandefeu", ptBR = "Piromante Temerário", ruRU = "Пиромант из легиона Огненного Клейма", koKR = "횃불부대 화염술사", zhCN = "火印炎术师", zhTW = "火印炎術師"},
 		zones = {1583},
 	},
-	[9265] = {
-		classification = "Elite",
-		level = "56 - 57",
-		names = {enUS = "Smolderthorn Shadow Hunter", deDE = "Schattenjäger der Gluthauer", esES = "Cazador de las Sombras Espina Ahumada", frFR = "Chasseur d'ombre Smolderthorn", ptBR = "Caçador Sombrio Fumocardo", ruRU = "Темный охотник из племени Тлеющего Терновника", koKR = "가시불꽃부족 어둠사냥꾼", zhCN = "燃棘暗影猎手", zhTW = "燃棘暗影獵手"},
-		zones = {1583},
-	},
 	[9266] = {
 		classification = "Elite",
 		level = "56 - 57",
@@ -14238,16 +14082,26 @@ rm.npcDB = {
 		names = {enUS = "Smolderthorn Seer", deDE = "Seher der Gluthauer", esES = "Profeta Espina Ahumada", frFR = "Prophète Smolderthorn", ptBR = "Vidente Fumocardo", ruRU = "Ясновидец из племени Тлеющего Терновника", koKR = "가시불꽃부족 예언자", zhCN = "燃棘先知", zhTW = "燃棘先知"},
 		zones = {1583},
 	},
+	[9318] = {
+		level = "47 - 49",
+		names = {enUS = "Incendosaur", deDE = "Incendosaurier", esES = "Incendosaurio", frFR = "Incendosaure", ptBR = "Incendossauro", ruRU = "Пламезавр", koKR = "인센도사우루스", zhCN = "熏火龙", zhTW = "燻火龍"},
+		zones = {51},
+	},
+	[9319] = {
+		classification = "Elite",
+		level = "52",
+		names = {enUS = "Houndmaster Grebmar", deDE = "Hundemeister Grebmar", esES = "Domador de jaurías Grebmar", esMX = "Maestro de canes Grebmar", frFR = "Maître-chien Grebmar", ptBR = "Mestre de Matilha Grebmar", ruRU = "Псарь Гребмар", koKR = "사냥개조련사 그렙마르", zhCN = "驯犬者格雷布玛尔", zhTW = "馴犬者格雷布瑪爾"},
+		zones = {1584},
+	},
 	[9336] = {
 		level = "19",
 		names = {enUS = "Boss Copperplug", esES = "Jefe Encobre", esMX = "Jefe Encobre", frFR = "Chef Copperplug", ptBR = "Chefe Cobreplugue", ruRU = "Начальник Медноклин", koKR = "사장 코퍼플러그", zhCN = "考博普拉格", zhTW = "考博普拉格"},
 		zones = {17},
 	},
-	[9376] = {
-		classification = "Elite",
-		level = "56",
-		names = {enUS = "Blazerunner", deDE = "Sturmflamme", esES = "Correfuego", ptBR = "Agni", ruRU = "Яропламень", koKR = "불바람", zhCN = "火焰使者", zhTW = "火焰使者"},
-		zones = {490},
+	[9377] = {
+		level = "33 - 34",
+		names = {enUS = "Swirling Vortex", deDE = "Wirbelvortex", esES = "Vórtice espiral", esMX = "Vórtice espiral", frFR = "Vortex tourbillonnant", ptBR = "Vórtice Giratório", ruRU = "Стремительный вихрь", koKR = "소용돌이치는 회오리", zhCN = "空气漩涡", zhTW = "空氣漩渦"},
+		zones = {400},
 	},
 	[9396] = {
 		level = "41 - 43",
@@ -14283,22 +14137,10 @@ rm.npcDB = {
 		names = {enUS = "Scarlet Warder", deDE = "Scharlachroter Wärter", esES = "Guarda Escarlata", esMX = "Depositario Escarlata", frFR = "Gardien écarlate", ptBR = "Guardião Escarlate", ruRU = "Тюремщик из Алого ордена", koKR = "붉은십자군 문지기", zhCN = "血色典狱官", zhTW = "血色典獄官"},
 		zones = {139},
 	},
-	[9448] = {
-		classification = "Elite",
-		level = "56 - 57",
-		names = {enUS = "Scarlet Praetorian", deDE = "Scharlachroter Prätorianer", esES = "Pretoriano Escarlata", esMX = "Pretoriano Escarlata", frFR = "Prétorien écarlate", ptBR = "Pretoriano Escarlate", ruRU = "Претор из Алого ордена", koKR = "붉은십자군 근위병", zhCN = "血色禁卫队", zhTW = "血色禁衛隊"},
-		zones = {139},
-	},
 	[9449] = {
 		classification = "Elite",
 		level = "54 - 55",
 		names = {enUS = "Scarlet Cleric", deDE = "Scharlachroter Kleriker", esES = "Clérico Escarlata", esMX = "Clérigo Escarlata", frFR = "Clerc écarlate", ptBR = "Clérigo Escarlate", ruRU = "Священник из Алого ордена", koKR = "붉은십자군 성직자", zhCN = "血色宣教士", zhTW = "血色宣教士"},
-		zones = {139},
-	},
-	[9450] = {
-		classification = "Elite",
-		level = "55 - 56",
-		names = {enUS = "Scarlet Curate", deDE = "Scharlachroter Kurat", esES = "Coadjutor Escarlata", esMX = "Coadjutor Escarlata", frFR = "Vicaire écarlate", ptBR = "Curador Escarlate", ruRU = "Викарий из Алого ордена", koKR = "붉은십자군 목사", zhCN = "血色助理牧师", zhTW = "血色助理牧師"},
 		zones = {139},
 	},
 	[9451] = {
@@ -14313,32 +14155,11 @@ rm.npcDB = {
 		names = {enUS = "Scarlet Enchanter", deDE = "Scharlachroter Verzauberer", esES = "Encantador Escarlata", esMX = "Encantador Escarlata", frFR = "Enchanteur écarlate", ptBR = "Encantador Escarlate", ruRU = "Зачаровыватель из Алого ордена", koKR = "붉은십자군 마법부여사", zhCN = "血色巫术师", zhTW = "血色巫術師"},
 		zones = {139},
 	},
-	[9454] = {
-		level = "54",
-		names = {enUS = "Xavathras", ruRU = "Ксаватрас", koKR = "사바스라스", zhCN = "萨瓦瑟拉斯", zhTW = "薩瓦瑟拉斯"},
-		zones = {361},
-	},
 	[9456] = {
 		classification = "Elite",
 		level = "20",
 		names = {enUS = "Warlord Krom'zar", deDE = "Kriegsherr Krom'zar", esES = "Señor de la Guerra Krom'zar", esMX = "Señor de la guerra Krom'zar", frFR = "Chef de guerre Krom'zar", ptBR = "Senhor da Guerra Krom'zar", ruRU = "Полководец Кром'зар", koKR = "장군 크롬자르", zhCN = "督军克罗姆扎", zhTW = "督軍克羅姆札"},
 		zones = {17},
-	},
-	[9462] = {
-		level = "56",
-		names = {enUS = "Chieftain Bloodmaw", deDE = "Häuptling Blutmagen", esES = "Jefe Sangrefauce", frFR = "Chef de clan Saignegueule", ptBR = "Chefe Gorjassangue", ruRU = "Вождь Кровавая Утроба", koKR = "대족장 블러드모우", zhCN = "血喉酋长", zhTW = "血喉酋長"},
-		zones = {361},
-	},
-	[9464] = {
-		level = "51",
-		names = {enUS = "Overlord Ror", deDE = "Oberanführer Ror", esES = "Señor Supremo Ror", frFR = "Seigneur Ror", ptBR = "Suserano Ror", ruRU = "Властитель Рор", koKR = "대군주 로르", zhCN = "主宰洛尔", zhTW = "主宰洛爾"},
-		zones = {361},
-	},
-	[9476] = {
-		classification = "Elite",
-		level = "55",
-		names = {enUS = "Watchman Doomgrip", deDE = "Wachmann Stahlgriff", esES = "Vigía Presaletal", frFR = "Sentinelle Doomgrip", ptBR = "Vigia Gadanho", ruRU = "Сторож Хватка Смерти", koKR = "보초 둠그립", zhCN = "卫兵杜格瑞普", zhTW = "衛兵杜格瑞普"},
-		zones = {1584},
 	},
 	[9477] = {
 		level = "50 - 52",
@@ -14351,6 +14172,12 @@ rm.npcDB = {
 		names = {enUS = "Plugger Spazzring", esES = "Plugger Aropatoso", ptBR = "Birra Guardachave", ruRU = "Штоппор Наливалс", koKR = "플러거 스파즈링", zhCN = "普拉格", zhTW = "普拉格"},
 		zones = {1584},
 	},
+	[9502] = {
+		classification = "Elite",
+		level = "55",
+		names = {enUS = "Phalanx", esES = "Falange", frFR = "Phalange", ptBR = "Falange", ruRU = "Фаланкс", koKR = "팔란스", zhCN = "法拉克斯", zhTW = "法拉克斯"},
+		zones = {1584},
+	},
 	[9523] = {
 		level = "15 - 16",
 		names = {enUS = "Kolkar Stormseer", deDE = "Sturmseher der Kolkar", esES = "Videntormento Kolkar", esMX = "Videntormento Kolkar", frFR = "Prophète-tempête kolkar", ptBR = "Profetisa da Tempestade Kolkar", ruRU = "Предвестница бури из племени Колкар", koKR = "콜카르일족 폭풍술사", zhCN = "科卡尔风暴先知", zhTW = "科卡爾風暴先知"},
@@ -14360,6 +14187,12 @@ rm.npcDB = {
 		level = "16 - 17",
 		names = {enUS = "Kolkar Invader", deDE = "Eindringling der Kolkar", esES = "Invasor Kolkar", esMX = "Invasor Kolkar", frFR = "Envahisseur kolkar", ptBR = "Invasor Kolkar", ruRU = "Захватчик из племени Колкар", koKR = "콜카르일족 침략꾼", zhCN = "科卡尔入侵者", zhTW = "科卡爾入侵者"},
 		zones = {17},
+	},
+	[9537] = {
+		classification = "Elite",
+		level = "55",
+		names = {enUS = "Hurley Blackbreath", deDE = "Hurley Pestatem", esES = "Hurley Negrálito", ptBR = "Hurley Bafonegro", ruRU = "Харли Пьянодых", koKR = "헐레이 블랙브레스", zhCN = "霍尔雷·黑须", zhTW = "霍爾雷·黑鬚"},
+		zones = {1584},
 	},
 	[9541] = {
 		classification = "Elite",
@@ -14407,84 +14240,17 @@ rm.npcDB = {
 		names = {enUS = "Jalane Ayrole", ptBR = "Lena Franz", ruRU = "Джелейна Айроль", koKR = "잘레인 에이롤", zhCN = "嘉莱恩·艾罗", zhTW = "嘉萊恩·艾羅"},
 		zones = {1519},
 	},
-	[9596] = {
-		classification = "Rare Elite",
-		level = "59",
-		names = {enUS = "Bannok Grimaxe", deDE = "Bannok Grimmaxt", esES = "Bannok Hachamacabra", esMX = "Bannok Hacha Macabra", ptBR = "Bannok Sinistracha", ruRU = "Баннок Люторез", koKR = "반노크 그림액스", zhCN = "班诺克·巨斧", zhTW = "班諾克·巨斧"},
-		zones = {1583},
-	},
-	[9622] = {
-		level = "55",
-		names = {enUS = "U'cha", ruRU = "У'ча", koKR = "우차", zhCN = "尤尔查", zhTW = "尤爾查"},
-		zones = {490},
-	},
 	[9636] = {
 		faction = "Horde",
 		level = "41",
 		names = {enUS = "Kireena", ruRU = "Киреена", koKR = "키리나", zhCN = "基瑞娜", zhTW = "基瑞娜"},
 		zones = {405},
 	},
-	[9677] = {
-		classification = "Elite",
-		level = "55",
-		names = {enUS = "Ograbisi", ruRU = "Ограбиси", koKR = "오그라비시", zhCN = "奥格拉比斯", zhTW = "奧格拉比斯"},
-		zones = {1584},
-	},
-	[9678] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "56",
-		names = {enUS = "Shill Dinger", ptBR = "Ronçalo Gamires", ruRU = "Шилл Динджер", koKR = "쉴 딩거", zhCN = "希尔·丁格", zhTW = "希爾·丁格"},
-		zones = {1584},
-	},
-	[9680] = {
-		classification = "Elite",
-		level = "54",
-		names = {enUS = "Crest Killer", deDE = "Wappentöter", esES = "Asesino de la cresta", frFR = "Tueur des sommets", ptBR = "Zak Arias", ruRU = "Крест Убийца", koKR = "가문의 암살자", zhCN = "火浪杀手", zhTW = "火浪殺手"},
-		zones = {1584},
-	},
-	[9681] = {
-		classification = "Elite",
-		level = "53",
-		names = {enUS = "Jaz", ruRU = "Джез", koKR = "재즈", zhCN = "贾兹", zhTW = "賈茲"},
-		zones = {1584},
-	},
-	[9683] = {
-		level = "49 - 50",
-		names = {enUS = "Lar'korwi Mate", deDE = "Lar'korwi-Weibchen", esES = "Amigo de Lar'korwi", frFR = "Compagne de Lar'korwi", ptBR = "Lar'korwi Fêmea", ruRU = "Самка Лар'корви", koKR = "라르코르위의 짝", zhCN = "拉克维的配偶", zhTW = "拉克維的配偶"},
-		zones = {490},
-	},
-	[9684] = {
-		level = "56",
-		names = {enUS = "Lar'korwi", ruRU = "Лар'корви", koKR = "라르코르위", zhCN = "拉克维", zhTW = "拉克維"},
-		zones = {490},
-	},
-	[9690] = {
-		level = "51 - 52",
-		names = {enUS = "Ember Worg", deDE = "Glutworg", esES = "Lupo Brasal", frFR = "Worg de braise", ptBR = "Worg Incandescente", ruRU = "Пепельный ворг", koKR = "검은불늑대", zhCN = "灰烬座狼", zhTW = "灰燼座狼"},
-		zones = {46},
-	},
-	[9691] = {
-		level = "52 - 53",
-		names = {enUS = "Venomtip Scorpid", deDE = "Giftstichskorpid", esES = "Escórpido Venopunta", frFR = "Scorpide dard-venin", ptBR = "Escorpídeo Furimata", ruRU = "Ядожалый скорпид", koKR = "화염독침전갈", zhCN = "毒尖蝎", zhTW = "毒尖蠍"},
-		zones = {46},
-	},
-	[9692] = {
-		classification = "Elite",
-		level = "57 - 58",
-		names = {enUS = "Bloodaxe Raider", deDE = "Räuber der Blutäxte", esES = "Asaltante Hacha de Sangre", esMX = "Asaltante Hacha de Sangre", frFR = "Ecumeur Bloodaxe", ptBR = "Saqueador do Machado Sangrento", ruRU = "Налетчик из легиона Кровавого Топора", koKR = "도끼부대 공격대원", zhCN = "血斧袭击者", zhTW = "血斧襲擊者"},
-		zones = {1583},
-	},
 	[9693] = {
 		classification = "Elite",
 		level = "58 - 59",
 		names = {enUS = "Bloodaxe Evoker", deDE = "Rufer der Blutäxte", esES = "Evocador Hacha de Sangre", esMX = "Evocador Hacha de Sangre", frFR = "Evocateur Bloodaxe", ptBR = "Conjurador do Machado Sangrento", ruRU = "Вызыватель из легиона Кровавого Топора", koKR = "도끼부대 기원사", zhCN = "血斧招魂师", zhTW = "血斧招魂師"},
 		zones = {1583},
-	},
-	[9695] = {
-		level = "54 - 55",
-		names = {enUS = "Deathlash Scorpid", deDE = "Todespeitschenskorpid", esES = "Escórpido Latimorte", frFR = "Scorpide fouet-mortel", ptBR = "Escorpídeo Letalátego", ruRU = "Скорпид-смертехлест", koKR = "화염집게전갈", zhCN = "死鞭蝎", zhTW = "死鞭蠍"},
-		zones = {46},
 	},
 	[9696] = {
 		level = "56 - 60",
@@ -14544,11 +14310,6 @@ rm.npcDB = {
 		names = {enUS = "Blackhand Veteran", deDE = "Blackhand-Veteran", esES = "Veterano Puño Negro", esMX = "Veterano Puño Negro", frFR = "Vétéran Blackhand", ptBR = "Veterano da Mão Negra", ruRU = "Ветеран легиона Чернорука", koKR = "검은손부대 고참병", zhCN = "黑手老兵", zhTW = "黑手老兵"},
 		zones = {1583},
 	},
-	[9861] = {
-		level = "52",
-		names = {enUS = "Moora", ruRU = "Моора", koKR = "무라", zhCN = "米莱恩", zhTW = "米萊恩"},
-		zones = {361},
-	},
 	[9862] = {
 		level = "55 - 60",
 		names = {enUS = "Jaedenar Legionnaire", deDE = "Legionär von Jaedenar", esES = "Legionario Jaedenar", frFR = "Légionnaire de Jaedenar", ptBR = "Legionário de Jaedenar", ruRU = "Джеденарский легионер", koKR = "자에데나르 부대원", zhCN = "加德纳尔军团士兵", zhTW = "加德納爾軍團士兵"},
@@ -14564,17 +14325,6 @@ rm.npcDB = {
 		names = {enUS = "Entropic Horror", deDE = "Entropischer Schrecken", esES = "Horror entrópico", frFR = "Horreur d'entropie", ptBR = "Horror Entrópico", ruRU = "Энтропический ужас", koKR = "혼돈의 소산물", zhCN = "热能恐兽", zhTW = "熱能恐獸"},
 		zones = {361},
 	},
-	[9938] = {
-		classification = "Elite",
-		level = "57",
-		names = {enUS = "Magmus", ruRU = "Магмус", koKR = "마그무스", zhCN = "玛格姆斯", zhTW = "瑪格姆斯"},
-		zones = {1584},
-	},
-	[10040] = {
-		level = "54",
-		names = {enUS = "Gorishi Hive Guard", deDE = "Schwarmwache der Gorishi", esES = "Guardia de la colmena Gorishi", frFR = "Garde Gorishi", ptBR = "Guarda da Colmeia Gorishi", ruRU = "Стражник улья Гориши", koKR = "파수꾼 고리쉬", zhCN = "格里什虫巢卫士", zhTW = "格里什蟲巢衛士"},
-		zones = {490},
-	},
 	[10043] = {
 		classification = "Elite",
 		level = "48 - 52",
@@ -14585,6 +14335,18 @@ rm.npcDB = {
 		classification = "Rare Elite",
 		level = "45",
 		names = {enUS = "Sandarr Dunereaver", deDE = "Sandarr der Wüstenräuber", esES = "Sandarr Asaltadunas", esMX = "Sandarr Asaltadunas", frFR = "Sandarr Ravadune", ptBR = "Sandarr Aniquiladunas", ruRU = "Сандарр Разоритель Барханов", koKR = "산다르 듄리버", zhCN = "杉达尔·沙掠者", zhTW = "杉達爾·沙掠者"},
+		zones = {1176},
+	},
+	[10081] = {
+		classification = "Rare Elite",
+		level = "45",
+		names = {enUS = "Dustwraith", deDE = "Karaburan", esES = "Suciespectro", esMX = "Ánima de polvo", frFR = "Ame en peine poudreuse", ptBR = "Assombração de Poeira", ruRU = "Пыльный призрак", koKR = "더스트레이스", zhCN = "灰尘怨灵", zhTW = "灰塵怨靈"},
+		zones = {1176},
+	},
+	[10082] = {
+		classification = "Rare Elite",
+		level = "45",
+		names = {enUS = "Zerillis", ruRU = "Зериллис", koKR = "제릴리스", zhCN = "泽雷利斯", zhTW = "澤雷利斯"},
 		zones = {1176},
 	},
 	[10083] = {
@@ -14635,33 +14397,10 @@ rm.npcDB = {
 		level = "??",
 		names = {enUS = "Onyxia", ruRU = "Ониксия", koKR = "오닉시아", zhCN = "奥妮克希亚", zhTW = "奧妮克希亞"},
 	},
-	[10200] = {
-		classification = "Rare",
-		level = "57",
-		names = {enUS = "Rak'shiri", ruRU = "Рак'шири", koKR = "라크쉬리", zhCN = "拉克西里", zhTW = "拉克西里"},
-		zones = {618},
-	},
 	[10220] = {
 		classification = "Elite",
 		level = "59",
 		names = {enUS = "Halycon", ruRU = "Халикон", koKR = "할리콘", zhCN = "哈雷肯", zhTW = "哈雷肯"},
-		zones = {1583},
-	},
-	[10221] = {
-		level = "52 - 53",
-		names = {enUS = "Bloodaxe Worg Pup", deDE = "Worgwelpe der Blutäxte", esES = "Mascolupo Hacha de Sangre", esMX = "Cachorro de huargo Hacha de Sangre", frFR = "Jeune worgen Bloodaxe", ptBR = "Filhote de Worg Machado Sangrento", ruRU = "Щенок ворга легиона Кровавого Топора", koKR = "도끼부대 새끼 검은늑대", zhCN = "血斧座狼幼崽", zhTW = "小血斧座狼"},
-		zones = {1583},
-	},
-	[10258] = {
-		classification = "Elite",
-		level = "58 - 59",
-		names = {enUS = "Rookery Guardian", deDE = "Krähenhorstwächter", esES = "Guardián de la Torre", frFR = "Gardien de la colonie", ptBR = "Guardião de Viveiro", ruRU = "Страж Гнездовья", koKR = "부화장 수호병", zhCN = "群居守卫者", zhTW = "群居守衛者"},
-		zones = {1583},
-	},
-	[10263] = {
-		classification = "Rare Elite",
-		level = "56 - 57",
-		names = {enUS = "Burning Felguard", deDE = "Brennende Teufelswache", esES = "Guardia maldito ardiente", esMX = "Guardia vil ardiente", frFR = "Gangregarde ardent", ptBR = "Guarda Vil Ardente", ruRU = "Пылающий страж Скверны", koKR = "불타는 지옥수호병", zhCN = "燃烧地狱卫士", zhTW = "燃燒地獄衛士"},
 		zones = {1583},
 	},
 	[10264] = {
@@ -14740,12 +14479,6 @@ rm.npcDB = {
 		names = {enUS = "Ressan the Needler", deDE = "Ressan der Aufstachler", esES = "Ressan el Agujas", esMX = "Ressan el Agujas", frFR = "Ressan le Harceleur", ptBR = "Ressan, o Agulheiro", ruRU = "Куссан Жалящий", koKR = "칼날비명 레산", zhCN = "毒针雷萨恩", zhTW = "毒針雷薩恩"},
 		zones = {85},
 	},
-	[10359] = {
-		classification = "Rare",
-		level = "13",
-		names = {enUS = "Sri'skulk", ptBR = "Tok'aya", ruRU = "Шри'скалк", koKR = "스리술크", zhCN = "瑟斯库克", zhTW = "瑟斯庫克"},
-		zones = {85},
-	},
 	[10363] = {
 		classification = "Boss",
 		level = "??",
@@ -14804,12 +14537,6 @@ rm.npcDB = {
 		names = {enUS = "Spectral Citizen", deDE = "Spektraler Bürger", esES = "Ciudadano espectral", frFR = "Citoyen spectral", ptBR = "Cidadão Espectral", ruRU = "Призрачный горожанин", koKR = "시민의 유령", zhCN = "鬼魂市民", zhTW = "鬼魂市民"},
 		zones = {2017},
 	},
-	[10385] = {
-		classification = "Elite",
-		level = "56 - 57",
-		names = {enUS = "Ghostly Citizen", deDE = "Geisterhafter Bürger", esES = "Ciudadano fantasmal", frFR = "Citoyen fantomatique", ptBR = "Cidadão Fantasmagórico", ruRU = "Фантомный горожанин", koKR = "시민의 영혼", zhCN = "幽灵市民", zhTW = "幽靈市民"},
-		zones = {2017},
-	},
 	[10390] = {
 		level = "54 - 56",
 		names = {enUS = "Skeletal Guardian", deDE = "Skelettwächter", esES = "Guardián esquelético", frFR = "Gardien squelettique", ptBR = "Guardião Descarnado", ruRU = "Скелет-страж", koKR = "해골 수사", zhCN = "骷髅守护者", zhTW = "骷髏守護者"},
@@ -14818,12 +14545,6 @@ rm.npcDB = {
 	[10391] = {
 		level = "55 - 57",
 		names = {enUS = "Skeletal Berserker", deDE = "Skelettberserker", esES = "Rabioso esquelético", frFR = "Berserker squelettique", ptBR = "Berserker Descarnado", ruRU = "Скелет-берсерк", koKR = "해골 광전사", zhCN = "骷髅狂战士", zhTW = "骷髏狂戰士"},
-		zones = {2017},
-	},
-	[10393] = {
-		classification = "Rare Elite",
-		level = "58",
-		names = {enUS = "Skul", frFR = "Krân", ptBR = "Kranio", ruRU = "Череп", koKR = "스컬", zhCN = "斯库尔", zhTW = "斯庫爾"},
 		zones = {2017},
 	},
 	[10394] = {
@@ -14896,12 +14617,6 @@ rm.npcDB = {
 		names = {enUS = "Crypt Beast", deDE = "Gruftbestie", esES = "Bestia de la cripta", frFR = "Bête des cryptes", ptBR = "Fera da Cripta", ruRU = "Некрорахнид-живоглот", koKR = "흉포한 지하마귀", zhCN = "地穴兽", zhTW = "地穴獸"},
 		zones = {2017},
 	},
-	[10414] = {
-		classification = "Elite",
-		level = "57 - 58",
-		names = {enUS = "Patchwork Horror", deDE = "Flickwerkschrecken", esES = "Horror retacero", frFR = "Horreur régénérée", ptBR = "Horror Remendado", ruRU = "Лоскутный ужас", koKR = "기워붙인 누더기골렘", zhCN = "缝补憎恶", zhTW = "縫補憎惡"},
-		zones = {2017},
-	},
 	[10416] = {
 		classification = "Elite",
 		level = "59 - 60",
@@ -14968,29 +14683,17 @@ rm.npcDB = {
 		names = {enUS = "Crimson Inquisitor", deDE = "Purpurroter Inquisitor", esES = "Inquisidor Carmesí", frFR = "Inquisiteur cramoisi", ptBR = "Inquisidor Carmesim", ruRU = "Инквизитор из Багрового Легиона", koKR = "진홍십자군 종교재판관", zhCN = "红衣审查者", zhTW = "紅衣審查者"},
 		zones = {2017},
 	},
-	[10429] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Warchief Rend Blackhand", deDE = "Kriegshäuptling Rend Blackhand", esES = "Jefe de Guerra Desgarro Puño Negro", esMX = "Jefe de Guerra Rend Puño Negro", frFR = "Chef de guerre Rend Blackhand", ptBR = "Chefe Guerreiro Laceral Mão Negra", ruRU = "Вождь Ренд Чернорук", koKR = "대족장 렌드 블랙핸드", zhCN = "大酋长雷德·黑手", zhTW = "大酋長雷德·黑手"},
-		zones = {1583},
-	},
 	[10430] = {
 		classification = "Boss",
 		level = "??",
 		names = {enUS = "The Beast", deDE = "Die Bestie", esES = "La Bestia", esMX = "La Bestia", frFR = "La Bête", ptBR = "A Fera", ruRU = "Зверь", koKR = "괴수", zhCN = "比斯巨兽", zhTW = "比斯巨獸"},
 		zones = {1583},
 	},
-	[10432] = {
+	[10436] = {
 		classification = "Elite",
-		level = "60",
-		names = {enUS = "Vectus", ruRU = "Вектус", koKR = "벡투스", zhCN = "维克图斯", zhTW = "維克圖斯"},
-		zones = {2057},
-	},
-	[10433] = {
-		classification = "Elite",
-		level = "58",
-		names = {enUS = "Marduk Blackpool", esES = "Marduz Pozonegro", frFR = "Marduk Noirétang", ptBR = "Marduque Lagonero", ruRU = "Мардук Блэкпул", koKR = "마르두크 블랙풀", zhCN = "马杜克·布莱克波尔", zhTW = "馬杜克·布萊克波爾"},
-		zones = {2057},
+		level = "59",
+		names = {enUS = "Baroness Anastari", esES = "Baronesa Anastari", frFR = "Baronne Anastari", ptBR = "Baronesa Anastari", ruRU = "Баронесса Анастари", koKR = "남작부인 아나스타리", zhCN = "安娜丝塔丽男爵夫人", zhTW = "安娜絲塔麗男爵夫人"},
+		zones = {2017},
 	},
 	[10438] = {
 		classification = "Elite",
@@ -14998,10 +14701,10 @@ rm.npcDB = {
 		names = {enUS = "Maleki the Pallid", deDE = "Maleki der Leichenblasse", esES = "Maleki el Pálido", frFR = "Maleki le Blafard", ptBR = "Malaki, o Pálido", ruRU = "Малекай Бледный", koKR = "냉혈한 말레키", zhCN = "苍白的玛勒基", zhTW = "蒼白的瑪勒基"},
 		zones = {2017},
 	},
-	[10440] = {
+	[10439] = {
 		classification = "Elite",
-		level = "62",
-		names = {enUS = "Baron Rivendare", esES = "Barón Osahendido", ptBR = "Barão Rivendare", ruRU = "Барон Ривендер", koKR = "남작 리븐데어", zhCN = "瑞文戴尔男爵", zhTW = "瑞文戴爾男爵"},
+		level = "61",
+		names = {enUS = "Ramstein the Gorger", deDE = "Ramstein der Verschlinger", esES = "Ramstein el Empachador", frFR = "Ramstein Grandgosier", ptBR = "Ramstein, o Devorador", ruRU = "Рамштайн Ненасытный", koKR = "먹보 람스타인", zhCN = "吞咽者拉姆斯登", zhTW = "吞嚥者拉姆斯登"},
 		zones = {2017},
 	},
 	[10442] = {
@@ -15074,20 +14777,9 @@ rm.npcDB = {
 		names = {enUS = "Unstable Corpse", deDE = "Faulender Leichnam", esES = "Cuerpo inestable", frFR = "Corps instable", ptBR = "Cadáver Instável", ruRU = "Нестабильный труп", koKR = "비틀거리는 시체", zhCN = "虚弱的尸体", zhTW = "虛弱的屍體"},
 		zones = {2057},
 	},
-	[10481] = {
-		level = "58 - 59",
-		names = {enUS = "Reanimated Corpse", deDE = "Reanimierter Kadaver", esES = "Cadáver reanimado", frFR = "Cadavre réanimé", ptBR = "Cadáver Reanimado", ruRU = "Оживленный труп", koKR = "되살아난 시체", zhCN = "复生的尸体", zhTW = "複生的屍體"},
-		zones = {2057},
-	},
 	[10485] = {
 		level = "57 - 58",
 		names = {enUS = "Risen Aberration", deDE = "Auferstandene Entartung", esES = "Aberración resucitada", frFR = "Aberration ressuscitée", ptBR = "Aberração Reanimada", ruRU = "Восставшая аберрация", koKR = "되살아난 돌연변이", zhCN = "复活的畸形骷髅", zhTW = "復活的畸形骷髏"},
-		zones = {2057},
-	},
-	[10486] = {
-		classification = "Elite",
-		level = "59 - 61",
-		names = {enUS = "Risen Warrior", deDE = "Auferstandener Krieger", esES = "Guerrero resucitado", frFR = "Guerrier ressuscité", ptBR = "Guerreiro Reanimado", ruRU = "Восставший воин", koKR = "되살아난 전사", zhCN = "复活的战士", zhTW = "復活的戰士"},
 		zones = {2057},
 	},
 	[10487] = {
@@ -15132,28 +14824,10 @@ rm.npcDB = {
 		names = {enUS = "Spectral Researcher", deDE = "Spektraler Forscher", esES = "Investigador espectral", frFR = "Chercheur spectral", ptBR = "Pesquisador Espectral", ruRU = "Призрачный ученый", koKR = "연구원 유령", zhCN = "鬼灵研究员", zhTW = "鬼靈研究員"},
 		zones = {2057},
 	},
-	[10500] = {
-		classification = "Elite",
-		level = "58 - 61",
-		names = {enUS = "Spectral Teacher", deDE = "Spektraler Lehrmeister", esES = "Maestro espectral", frFR = "Professeur spectral", ptBR = "Professor Espectral", ruRU = "Призрачный учитель", koKR = "교사 유령", zhCN = "鬼灵教师", zhTW = "鬼靈教師"},
-		zones = {2057},
-	},
-	[10502] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Lady Illucia Barov", frFR = "Dame Illucia Barov", ptBR = "Lady Ilúcia Barov", ruRU = "Леди Иллюсия Баров", koKR = "여군주 일루시아 바로브", zhCN = "伊露希亚·巴罗夫", zhTW = "伊露希亞·巴羅夫"},
-		zones = {2057},
-	},
 	[10503] = {
 		classification = "Elite",
 		level = "61",
 		names = {enUS = "Jandice Barov", ptBR = "Janice Barov", ruRU = "Джандис Баров", koKR = "잔다이스 바로브", zhCN = "詹迪斯·巴罗夫", zhTW = "詹迪斯·巴羅夫"},
-		zones = {2057},
-	},
-	[10504] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Lord Alexei Barov", frFR = "Seigneur Alexei Barov", ptBR = "Lorde Alexei Barov", ruRU = "Лорд Алексей Баров", koKR = "군주 알렉세이 바로브", zhCN = "阿雷克斯·巴罗夫", zhTW = "阿萊克斯·巴羅夫"},
 		zones = {2057},
 	},
 	[10505] = {
@@ -15168,40 +14842,17 @@ rm.npcDB = {
 		names = {enUS = "Kirtonos the Herald", deDE = "Kirtonos der Herold", esES = "Kirtonos el Heraldo", frFR = "Kirtonos le Héraut", ptBR = "Kirtonos, o Arauto", ruRU = "Киртонос Глашатай", koKR = "사자 키르토노스", zhCN = "传令官基尔图诺斯", zhTW = "傳令官基爾圖諾斯"},
 		zones = {2057},
 	},
-	[10507] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "The Ravenian", deDE = "Der Ravenier", esES = "El Devorador", frFR = "Le Voracien", ptBR = "O Corvino", ruRU = "Равениан", koKR = "라베니안", zhCN = "拉文尼亚", zhTW = "拉文尼亞"},
-		zones = {2057},
-	},
 	[10508] = {
 		classification = "Elite",
 		level = "62",
 		names = {enUS = "Ras Frostwhisper", deDE = "Ras Frostraunen", esES = "Ras Levescarcha", esMX = "Ras Murmuhielo", frFR = "Ras Murmegivre", ptBR = "Ras Friomúrmuro", ruRU = "Рас Снегошепот", koKR = "라스 프로스트위스퍼", zhCN = "莱斯·霜语", zhTW = "萊斯·霜語"},
 		zones = {2057},
 	},
-	[10509] = {
-		classification = "Rare Elite",
-		level = "59",
-		names = {enUS = "Jed Runewatcher", deDE = "Jed Runenblick", esES = "Jed Observarrunas", esMX = "Jed Vigía de las Runas", ptBR = "Jed Mirarruna", ruRU = "Джед Руновед", koKR = "제드 룬와처", zhCN = "杰德", zhTW = "傑德"},
-		zones = {1583},
-	},
-	[10584] = {
-		classification = "Rare Elite",
-		level = "60",
-		names = {enUS = "Urok Doomhowl", deDE = "Urok Schreckensbote", esES = "Urok Aullapocalipsis", esMX = "Urok Aullasino", frFR = "Urok Hurleruine", ptBR = "Urok Uivo-da-ruína", ruRU = "Аррок Смертный Вопль", koKR = "우로크 둠하울", zhCN = "乌洛克", zhTW = "烏洛克"},
-		zones = {1583},
-	},
-	[10605] = {
-		level = "52 - 54",
-		names = {enUS = "Scarlet Medic", deDE = "Scharlachroter Sanitäter", esES = "Médico Escarlata", esMX = "Médico Escarlata", frFR = "Médecin écarlate", ptBR = "Socorrista Escarlate", ruRU = "Медик из Алого ордена", koKR = "붉은십자군 의무병", zhCN = "血色医护员", zhTW = "血色醫護員"},
-		zones = {28},
-	},
-	[10608] = {
+	[10596] = {
 		classification = "Elite",
-		level = "55 - 57",
-		names = {enUS = "Scarlet Priest", deDE = "Scharlachroter Priester", esES = "Sacerdote Escarlata", esMX = "Sacerdote Escarlata", frFR = "Prêtre écarlate", ptBR = "Sacerdote Escarlate", ruRU = "Жрец из Алого ордена", koKR = "붉은십자군 사제", zhCN = "血色神父", zhTW = "血色神父"},
-		zones = {28},
+		level = "59",
+		names = {enUS = "Mother Smolderweb", deDE = "Mutter Glimmernetz", esES = "Madre Telabrasada", frFR = "Matriarche Couveuse", ptBR = "Mãe Queimateia", ruRU = "Мать Дымная Паутина", koKR = "여왕 불그물거미", zhCN = "烟网蛛后", zhTW = "煙網蛛后"},
+		zones = {1583},
 	},
 	[10617] = {
 		level = "26",
@@ -15225,48 +14876,15 @@ rm.npcDB = {
 		names = {enUS = "Prince Raze", deDE = "Prinz Schleifer", esES = "Príncipe Raze", esMX = "Príncipe Raze", ptBR = "Príncipe Arrazear", ruRU = "Принц Рейз", koKR = "왕자 라제", zhCN = "拉兹王子", zhTW = "拉茲王子"},
 		zones = {331},
 	},
-	[10648] = {
-		level = "55",
-		names = {enUS = "Xavaric", ruRU = "Ксаварик", koKR = "사바릭", zhCN = "萨瓦里克", zhTW = "薩瓦里克"},
-		zones = {361},
-	},
-	[10659] = {
-		level = "54 - 55",
-		names = {enUS = "Cobalt Whelp", deDE = "Kobaltblauer Welpe", esES = "Cría de cobalto", frFR = "Dragonnet cobalt", ptBR = "Dragonete Cobalto", ruRU = "Кобальтовый дракончик", koKR = "작은 푸른비늘 새끼용", zhCN = "深蓝雏龙", zhTW = "深藍雛龍"},
-		zones = {618},
-	},
 	[10660] = {
 		level = "55 - 56",
 		names = {enUS = "Cobalt Broodling", deDE = "Kobaltblauer Brutling", esES = "Cachorrillo de cobalto", frFR = "Rejeton de cobalt", ptBR = "Cria de Dragão de Cobalto", ruRU = "Детеныш кобальтового дракона", koKR = "푸른비늘 새끼용", zhCN = "深蓝龙崽", zhTW = "深藍小龍"},
-		zones = {618},
-	},
-	[10661] = {
-		level = "54 - 56",
-		names = {enUS = "Spell Eater", deDE = "Zauberfresser", esES = "Zampaconjuros", frFR = "Dévoreur de sorts", ptBR = "Comedor de Feitiços", ruRU = "Чароед", koKR = "마나먹는 푸른비늘 새끼용", zhCN = "噬魔龙崽", zhTW = "噬魔幼龍"},
-		zones = {618},
-	},
-	[10663] = {
-		classification = "Elite",
-		level = "58",
-		names = {enUS = "Manaclaw", deDE = "Manaklaue", esES = "Zarpamaná", frFR = "Griffemana", ptBR = "Patamana", ruRU = "Коготь Маны", koKR = "마나발톱", zhCN = "魔法利爪", zhTW = "魔法利爪"},
-		zones = {618},
-	},
-	[10664] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Scryer", esES = "Arúspice", esMX = "Arúspice", frFR = "Clairvoyant", ptBR = "Áugure", ruRU = "Провидец", koKR = "스크라이어", zhCN = "斯克利尔", zhTW = "斯克利爾"},
 		zones = {618},
 	},
 	[10678] = {
 		level = "57 - 59",
 		names = {enUS = "Plagued Hatchling", deDE = "Verseuchtes Jungtier", esES = "Trampedor infestado", frFR = "Jeune pestiféré", ptBR = "Filhote Pestilento", ruRU = "Зачумленный детеныш дракона", koKR = "역병 걸린 작은 새끼용", zhCN = "瘟疫龙崽", zhTW = "瘟疫幼龍"},
 		zones = {2057},
-	},
-	[10683] = {
-		classification = "Elite",
-		level = "58 - 59",
-		names = {enUS = "Rookery Hatcher", deDE = "Krähenhorstbrutwächter", esES = "Criador de la Torre", frFR = "Démolisseur de la colonie", ptBR = "Fecundador de Viveiro", ruRU = "Наседка из Питомника", koKR = "부화장 관리자", zhCN = "群居孵化者", zhTW = "群居孵化者"},
-		zones = {1583},
 	},
 	[10717] = {
 		level = "55 - 57",
@@ -15277,12 +14895,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "60",
 		names = {enUS = "Shy-Rotam", esES = "Vergonzoso-Rotam", esMX = "Shi-Rotam", ruRU = "Ши-Ротам", koKR = "샤이로탐", zhCN = "希洛塔姆", zhTW = "希洛塔姆"},
-		zones = {618},
-	},
-	[10738] = {
-		classification = "Elite",
-		level = "59",
-		names = {enUS = "High Chief Winterfall", deDE = "Oberhäuptling der Winterfelle", esES = "Gran Jefe Nevada", frFR = "Grand chef Tombe-hiver", ptBR = "Chefe Supremo Invernoso", ruRU = "Верховный вождь племени Зимней Спячки", koKR = "대족장 눈사태", zhCN = "冬泉酋长", zhTW = "冬泉酋長"},
 		zones = {618},
 	},
 	[10742] = {
@@ -15321,23 +14933,11 @@ rm.npcDB = {
 		names = {enUS = "Grimtotem Reaver", deDE = "Häscher der Grimmtotem", esES = "Atracador Tótem Siniestro", esMX = "Atracador Tótem Siniestro", frFR = "Ravageur du Totem sinistre", ptBR = "Aniquiladora Temível Totem", ruRU = "Разоритель из племени Зловещего Тотема", koKR = "그림토템부족 학살자", zhCN = "恐怖图腾抢夺者", zhTW = "恐怖圖騰搶奪者"},
 		zones = {400},
 	},
-	[10762] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Blackhand Thug", deDE = "Blackhand-Rohling", esES = "Matón Puño Negro", esMX = "Matón Puño Negro", frFR = "Nervi Blackhand", ptBR = "Capanga da Mão Negra", ruRU = "Лиходей из легиона Чернорука", koKR = "검은손부대 암살단원", zhCN = "黑手暴徒", zhTW = "黑手暴徒"},
-		zones = {1583},
-	},
 	[10802] = {
 		classification = "Elite",
 		level = "51",
 		names = {enUS = "Hitah'ya the Keeper", deDE = "Hitah'ya die Bewahrerin", esES = "Hitah'ya la Guardiana", frFR = "Hitah'ya la Gardienne", ptBR = "Hitah'ya, a Guardiã", ruRU = "Хита'йа Хранительница", koKR = "수호자 히타야", zhCN = "守护者希坦亚", zhTW = "守護者希坦亞"},
 		zones = {47},
-	},
-	[10806] = {
-		classification = "Elite",
-		level = "56",
-		names = {enUS = "Ursius", ptBR = "Úrsius", ruRU = "Урсиус", koKR = "우르시우스", zhCN = "尤西乌斯", zhTW = "尤西烏斯"},
-		zones = {618},
 	},
 	[10812] = {
 		classification = "Elite",
@@ -15356,17 +14956,6 @@ rm.npcDB = {
 		names = {enUS = "Chromatic Elite Guard", deDE = "Chromatische Elitewache", esES = "Guardia de élite cromático", esMX = "Guardia de élite cromático", frFR = "Garde d'élite chromatique", ptBR = "Guarda de Elite Cromático", ruRU = "Хроматический элитный страж", koKR = "오색용혈족 정예병", zhCN = "多彩精英卫士", zhTW = "多彩精英衛士"},
 		zones = {1583},
 	},
-	[10816] = {
-		level = "55",
-		names = {enUS = "Wandering Skeleton", deDE = "Wanderndes Skelett", esES = "Esqueleto deambulante", esMX = "Esqueleto deambulante", frFR = "Squelette errant", ptBR = "Esqueleto Errante", ruRU = "Бродячий скелет", koKR = "떠도는 해골", zhCN = "游荡的骷髅", zhTW = "遊蕩的骷髏"},
-		zones = {28},
-	},
-	[10825] = {
-		classification = "Rare",
-		level = "56",
-		names = {enUS = "Gish the Unmoving", deDE = "Gish der Unbewegliche", esES = "Gish el Inamovible", esMX = "Gish el Inamovible", frFR = "Gish l'Immobile", ptBR = "Gish, o Impassível", ruRU = "Гиш Недвижимый", koKR = "부동의 기쉬", zhCN = "僵硬的吉斯", zhTW = "僵硬的吉斯"},
-		zones = {139},
-	},
 	[10856] = {
 		level = "58",
 		names = {enUS = "Argent Quartermaster Hasana", deDE = "Argentumrüstmeister Hasana", esES = "Intendente Argenta Hasana", esMX = "Intendente Argenta Hasana", frFR = "Intendante de l'Aube d'argent Hasana", ptBR = "Intendente Argêntea Hasana", ruRU = "Интендант Хасна из ордена Серебряного Рассвета", koKR = "은빛병참장교 하사나", zhCN = "银色黎明军需官哈萨娜", zhTW = "銀色黎明軍需官哈薩娜"},
@@ -15381,7 +14970,7 @@ rm.npcDB = {
 	[10896] = {
 		level = "29",
 		names = {enUS = "Arnak Grimtotem", deDE = "Arnak Grimmtotem", esES = "Arnak Tótem Siniestro", esMX = "Arnak Tótem Siniestro", ptBR = "Arnak Temível Totem", ruRU = "Арнак Зловещий Тотем", koKR = "아르낙 그림토템", zhCN = "阿纳克·恐怖图腾", zhTW = "阿納克·恐怖圖騰"},
-		zones = {400},
+		zones = {400, 17},
 	},
 	[10899] = {
 		classification = "Elite",
@@ -15389,11 +14978,10 @@ rm.npcDB = {
 		names = {enUS = "Goraluk Anvilcrack", deDE = "Goraluk Hammerbruch", esES = "Goraluk Yunquegrieta", esMX = "Goraluk Yunquegrieta", ptBR = "Goraluk Rachadastra", ruRU = "Горалук Треснувшая Наковальня", koKR = "고랄루크 앤빌크랙", zhCN = "古拉鲁克", zhTW = "古拉魯克"},
 		zones = {1583},
 	},
-	[10901] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Lorekeeper Polkelt", deDE = "Hüter des Wissens Polkelt", esES = "Tradicionalista Polkelt", frFR = "Gardien du savoir Polkelt", ptBR = "Erudito Pulquério", ruRU = "Сказитель Полкелт", koKR = "현자 폴켈트", zhCN = "博学者普克尔特", zhTW = "博學者普克爾特"},
-		zones = {2057},
+	[10916] = {
+		level = "57",
+		names = {enUS = "Winterfall Runner", deDE = "Läufer der Winterfelle", esES = "Corredor Nevada", frFR = "Messager Tombe-hiver", ptBR = "Mensageiro Invernoso", ruRU = "Гонец из племени Зимней Спячки", koKR = "눈사태일족 정찰꾼", zhCN = "冬泉信使", zhTW = "冬泉信差"},
+		zones = {618, 361},
 	},
 	[10918] = {
 		level = "61",
@@ -15406,17 +14994,17 @@ rm.npcDB = {
 		names = {enUS = "Shatterspear Troll", deDE = "Troll der Shatterspear", esES = "Trol Rompelanzas", esMX = "Trol Rompelanzas", frFR = "Troll Shatterspear", ptBR = "Troll Lança Partida", ruRU = "Тролль из племени Пронзающего Копья", koKR = "뾰족창부족 트롤", zhCN = "碎矛巨魔", zhTW = "斷矛食人妖"},
 		zones = {148},
 	},
+	[10992] = {
+		classification = "Elite",
+		level = "30",
+		names = {enUS = "Enraged Panther", deDE = "Wütender Panther", esES = "Pantera enfurecido", esMX = "Pantera iracunda", frFR = "Panthère enragée", ptBR = "Pantera Enfurecida", ruRU = "Разъяренная пантера", koKR = "성난 퓨마", zhCN = "被激怒的黑豹", zhTW = "被激怒的黑豹"},
+		zones = {400},
+	},
 	[10993] = {
 		faction = "Horde",
 		level = "25",
 		names = {enUS = "Twizwick Sprocketgrind", esES = "Tuizgüik Muelodentado", ptBR = "Chacota Trincatreco", ruRU = "Твизвик Пружинаждак", koKR = "트위직 스프로켓그라인드", zhCN = "图兹维克·斯普格林", zhTW = "圖茲維克·斯普格林"},
 		zones = {215},
-	},
-	[10996] = {
-		classification = "Elite",
-		level = "58 - 60",
-		names = {enUS = "Fallen Hero", deDE = "Gefallener Held", esES = "Heroína caída", esMX = "Héroe caído", frFR = "Héros déchu", ptBR = "Herói Caído", ruRU = "Павший герой", koKR = "영웅의 넋", zhCN = "英雄之魂", zhTW = "英雄之魂"},
-		zones = {139, 28, 85},
 	},
 	[10997] = {
 		classification = "Elite",
@@ -15532,6 +15120,12 @@ rm.npcDB = {
 		names = {enUS = "Timothy Worthington", esES = "Timoteo Valión", ptBR = "Vítor Valenton", ruRU = "Тимоти Уортингтон", koKR = "티모시 워싱턴", zhCN = "提莫斯·沃森特", zhTW = "提莫斯·沃森特"},
 		zones = {15},
 	},
+	[11058] = {
+		classification = "Elite",
+		level = "61",
+		names = {enUS = "Ezra Grimm", esES = "Fras Siabi", frFR = "Fras Siabi", ptBR = "Fras Siabi", ruRU = "Фрас Сиаби", koKR = "프라스 샤비", zhCN = "弗拉斯·希亚比", zhTW = "弗拉斯·希亞比"},
+		zones = {2017},
+	},
 	[11065] = {
 		faction = "Alliance",
 		level = "25",
@@ -15591,12 +15185,6 @@ rm.npcDB = {
 		names = {enUS = "Faldron", ruRU = "Фальдрон", koKR = "팔드론", zhCN = "法多恩", zhTW = "法多恩"},
 		zones = {1657},
 	},
-	[11082] = {
-		classification = "Elite",
-		level = "57",
-		names = {enUS = "Stratholme Courier", deDE = "Kurier von Stratholme", esES = "Mensajero de Stratholme", frFR = "Messager de Stratholme", ptBR = "Mensageiro de Stratholme", ruRU = "Стратхольмский курьер", koKR = "스트라솔름 급사", zhCN = "斯坦索姆信使", zhTW = "斯坦索姆信差"},
-		zones = {2017},
-	},
 	[11083] = {
 		faction = "Alliance",
 		level = "24",
@@ -15627,23 +15215,23 @@ rm.npcDB = {
 		names = {enUS = "Hahrana Ironhide", esES = "Hahrana Pielférrea", esMX = "Hahrana Pielférrea", ptBR = "Hahrana Couro de Ferro", ruRU = "Нарана Железная Шкура", koKR = "하라나 아이언하이드", zhCN = "哈拉纳·铁皮", zhTW = "哈拉納·鐵皮"},
 		zones = {357},
 	},
-	[11120] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Crimson Hammersmith", deDE = "Purpurroter Hammerschmied", esES = "Forjador de martillos carmesí", esMX = "Forjador de martillos carmesí", frFR = "Forgeur de marteaux cramoisi", ptBR = "Forjador de Martelos Carmesim", ruRU = "Молотобоец из Багрового Легиона", koKR = "진홍십자군 대장장이", zhCN = "红衣铸锤师", zhTW = "紅衣鑄錘師"},
-		zones = {2017},
-	},
-	[11121] = {
-		classification = "Elite",
-		level = "61 - 62",
-		names = {enUS = "Black Guard Swordsmith", deDE = "Schwertschmied der schwarzen Wache", esES = "Armero Guardia Negra", frFR = "Fabricant d'épées de la Garde noire", ptBR = "Cuteleiro da Guarda Negra", ruRU = "Оружейник Черной Стражи", koKR = "검은호위대 검제작자", zhCN = "黑衣守卫铸剑师", zhTW = "黑衣守衛鑄劍師"},
-		zones = {2017},
-	},
 	[11146] = {
 		faction = "Alliance",
 		level = "54",
 		names = {enUS = "Ironus Coldsteel", esES = "Ironus Acero Frío", esMX = "Ironus Acero Frío", ptBR = "Ironus Açofrio", ruRU = "Железнус Хладосталь", koKR = "이로누스 콜드스틸", zhCN = "埃隆努斯·冷钢", zhTW = "埃隆努斯·冷鋼"},
 		zones = {1537},
+	},
+	[11177] = {
+		faction = "Horde",
+		level = "52",
+		names = {enUS = "Okothos Ironrager", esES = "Okothos Ferrofurecedor", esMX = "Okothos Ira de Hierro", ptBR = "Okothos Furiferro", ruRU = "Окофус Жарбулат", koKR = "오코토스 아이언레이저", zhCN = "奥克索斯·铁怒", zhTW = "奧克索斯·鐵怒"},
+		zones = {1637},
+	},
+	[11178] = {
+		faction = "Horde",
+		level = "51",
+		names = {enUS = "Borgosh Corebender", esES = "Borgosh Ramagma", esMX = "Borgosh Ramagma", ptBR = "Borgosh Dobranúcleo", ruRU = "Боргош Сгибатель", koKR = "보르고쉬 코어벤더", zhCN = "伯古什", zhTW = "伯古西"},
+		zones = {1637},
 	},
 	[11185] = {
 		level = "57",
@@ -15675,11 +15263,6 @@ rm.npcDB = {
 		names = {enUS = "Seril Scourgebane", esES = "Seril Finiquiplaga", esMX = "Seril Finiquiplaga", ptBR = "Seril Flagelicida", ruRU = "Сирил Плетебой", koKR = "세릴 스컬지베인", zhCN = "亡灵杀手瑟里尔", zhTW = "亡靈殺手瑟里爾"},
 		zones = {618},
 	},
-	[11196] = {
-		level = "52 - 58",
-		names = {enUS = "Shatterspear Drummer", deDE = "Trommler der Shatterspear", esES = "Tamborilero Rompelanzas", esMX = "Tamborilero Rompelanzas", frFR = "Tambour Shatterspear", ptBR = "Tocador de Tambor Lança Partida", ruRU = "Барабанщик из племени Пронзающего Копья", koKR = "뾰족창부족 고수", zhCN = "碎矛鼓手", zhTW = "斷矛鼓手"},
-		zones = {148},
-	},
 	[11257] = {
 		classification = "Elite",
 		level = "59 - 60",
@@ -15696,11 +15279,6 @@ rm.npcDB = {
 		level = "50",
 		names = {enUS = "Magnus Frostwake", esES = "Magnus Vespescarcha", ptBR = "Magnus Rastrogélido", ruRU = "Магнус Хладоступ", koKR = "마그누스 프로스트웨이크", zhCN = "玛格努斯·霜鸣", zhTW = "瑪格努斯·霜鳴"},
 		zones = {28},
-	},
-	[11290] = {
-		level = "53 - 54",
-		names = {enUS = "Mossflayer Zombie", deDE = "Zombie der Moosschinder", esES = "Zombi Fustamusgo", esMX = "Zombi Fustamusgo", frFR = "Zombie Mossflayer", ptBR = "Zumbi Esfolamusgo", ruRU = "Зомби из племени Моходеров", koKR = "이끼껍질부족 좀비", zhCN = "烂苔僵尸", zhTW = "爛苔殭屍"},
-		zones = {139},
 	},
 	[11291] = {
 		level = "54 - 55",
@@ -15749,12 +15327,6 @@ rm.npcDB = {
 		names = {enUS = "Searing Blade Warlock", deDE = "Searingblade-Hexenmeister", esES = "Brujo abrasador", esMX = "Brujo Hoja Abrasadora", frFR = "Démoniste de la Lame brûlante", ptBR = "Bruxo da Lâmina Calcinante", ruRU = "Чернокнижник из клана Огненного Клинка", koKR = "이글거리는 칼날단 흑마법사", zhCN = "燃刃术士", zhTW = "燃刃術士"},
 		zones = {2437},
 	},
-	[11338] = {
-		classification = "Elite",
-		level = "56 - 61",
-		names = {enUS = "Hakkari Shadowcaster", deDE = "Schattenzauberer der Hakkari", esES = "Nigromante Hakkari", frFR = "Exhalombre Hakkari", ptBR = "Lança-sombras Hakkari", ruRU = "Темный чародей из племени Хаккари", koKR = "학카르부족 흑마술사", zhCN = "哈卡暗影法师", zhTW = "哈卡萊暗影法師"},
-		zones = {1977},
-	},
 	[11339] = {
 		classification = "Elite",
 		level = "57 - 61",
@@ -15766,12 +15338,6 @@ rm.npcDB = {
 		level = "61",
 		names = {enUS = "Hakkari Blood Priest", deDE = "Blutpriester der Hakkari", esES = "Sacerdote de sangre Hakkari", frFR = "Grand prêtre Hakkari", ptBR = "Sacerdote Sangrento Hakkari", ruRU = "Жрец крови из племени Хаккари", koKR = "학카르부족 혈사제", zhCN = "哈卡高阶祭司", zhTW = "哈卡萊高階祭司"},
 		zones = {1977},
-	},
-	[11346] = {
-		classification = "Elite",
-		level = "55 - 56",
-		names = {enUS = "Hakkari Oracle", deDE = "Orakel der Hakkari", esES = "Oráculo Hakkari", frFR = "Oracle Hakkari", ptBR = "Oráculo Hakkari", ruRU = "Оракул из племени Хаккари", koKR = "학카르부족 현자", zhCN = "哈卡莱神谕者", zhTW = "哈卡萊神諭者"},
-		zones = {33},
 	},
 	[11350] = {
 		classification = "Elite",
@@ -15843,12 +15409,6 @@ rm.npcDB = {
 		names = {enUS = "Bloodseeker Bat", deDE = "Blutsucherfledermaus", esES = "Murciélago procurasangre", esMX = "Murciélago buscasangre", frFR = "Chauve-souris sanguinaire", ptBR = "Morcego Sanguinário", ruRU = "Кровососущий нетопырь", koKR = "흡혈박쥐", zhCN = "觅血蝙蝠", zhTW = "覓血蝙蝠"},
 		zones = {1977},
 	},
-	[11370] = {
-		classification = "Elite",
-		level = "56 - 61",
-		names = {enUS = "Razzashi Broodwidow", deDE = "Razzashibrutwitwe", esES = "Proleviuda Razzashi", frFR = "Sombre-veuve Razzashi", ptBR = "Proleviúva Razzashi", ruRU = "Черная вдова Раззаши", koKR = "래즈자쉬 과부거미", zhCN = "拉扎什寡妇蛛", zhTW = "拉札希寡婦蜘蛛"},
-		zones = {1977},
-	},
 	[11371] = {
 		classification = "Elite",
 		level = "59 - 60",
@@ -15861,31 +15421,11 @@ rm.npcDB = {
 		names = {enUS = "Razzashi Adder", deDE = "Razzashiotter", esES = "Agregador Razzashi", frFR = "Vipère Razzashi", ptBR = "Áspide Razzashi", ruRU = "Аспид Раззаши", koKR = "래즈자쉬 살무사", zhCN = "拉扎什蝰蛇", zhTW = "拉札希奎蛇"},
 		zones = {1977},
 	},
-	[11387] = {
-		level = "57 - 61",
-		names = {enUS = "Sandfury Speaker", deDE = "Sprecher der Sandfury", esES = "Portavoz Furiarena", frFR = "Porte-parole Sandfury", ptBR = "Orador dos Zangareia", ruRU = "Проповедник из племени Песчаной Бури", koKR = "성난모래부족 전령", zhCN = "沙怒部族演讲者", zhTW = "沙怒部族演講者"},
-		zones = {1977},
-	},
-	[11388] = {
-		level = "56 - 61",
-		names = {enUS = "Witherbark Speaker", deDE = "Sprecher der Witherbark", esES = "Portavoz Secacorteza", frFR = "Porte-parole Witherbark", ptBR = "Orador dos Cascasseca", ruRU = "Проповедник из племени Сухокожих", koKR = "마른나무껍질부족 전령", zhCN = "枯木部族演讲者", zhTW = "枯木部族演講者"},
-		zones = {1977},
-	},
-	[11391] = {
-		level = "61",
-		names = {enUS = "Vilebranch Speaker", deDE = "Sprecher der Vilebranch", esES = "Portavoz Vilrama", frFR = "Porte-parole Vilebranch", ptBR = "Orador dos Ramatorpe", ruRU = "Проповедник из племени Порочной Ветви", koKR = "썩은가지부족 전령", zhCN = "邪枝部族演讲者", zhTW = "邪枝部族演講者"},
-		zones = {1977},
-	},
 	[11441] = {
 		classification = "Elite",
 		level = "55 - 58",
 		names = {enUS = "Gordok Brute", deDE = "Schläger der Gordok", esES = "Tosco Gordok", frFR = "Brute Gordok", ptBR = "Brutamontes Gordok", ruRU = "Громила из клана Гордок", koKR = "고르독일족 투사", zhCN = "戈多克蛮兵", zhTW = "戈多克蠻兵"},
 		zones = {2557},
-	},
-	[11442] = {
-		classification = "Elite",
-		level = "53 - 54",
-		names = {enUS = "Gordok Mauler", deDE = "Raufer der Gordok", esES = "Destructor Gordok", frFR = "Marteleur Gordok", ptBR = "Espancador Gordok", ruRU = "Изверг из клана Гордок", koKR = "고르독일족 싸움꾼", zhCN = "戈多克虐待者", zhTW = "戈多克虐待者"},
 	},
 	[11443] = {
 		classification = "Elite",
@@ -15897,12 +15437,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "55 - 58",
 		names = {enUS = "Gordok Mage-Lord", deDE = "Magierlord der Gordok", esES = "Señor de la Magia Gordok", frFR = "Seigneur-mage Gordok", ptBR = "Lorde-mago Gordok", ruRU = "Маг-лорд из клана Гордок", koKR = "고르독일족 대마법사", zhCN = "戈多克大法师", zhTW = "戈多克大法師"},
-		zones = {2557},
-	},
-	[11445] = {
-		classification = "Elite",
-		level = "59 - 60",
-		names = {enUS = "Gordok Captain", deDE = "Captain der Gordok", esES = "Capitán Gordok", frFR = "Capitaine Gordok", ptBR = "Capitão Gordok", ruRU = "Капитан из клана Гордок", koKR = "고르독일족 전투대장", zhCN = "戈多克领主", zhTW = "戈多克領主"},
 		zones = {2557},
 	},
 	[11448] = {
@@ -15929,12 +15463,6 @@ rm.npcDB = {
 		names = {enUS = "Wildspawn Rogue", deDE = "Schurke der Wildhufe", esES = "Pícaro Mala Hierba", frFR = "Voleur Follengeance", ptBR = "Ladino Criasselvagem", ruRU = "Разбойник из племени Исчадий Природы", koKR = "야생혈족 도적", zhCN = "荒野游荡者", zhTW = "荒野遊蕩者"},
 		zones = {2557},
 	},
-	[11453] = {
-		classification = "Elite",
-		level = "56 - 57",
-		names = {enUS = "Wildspawn Trickster", deDE = "Schwindler der Wildhufe", esES = "Timador Mala Hierba", esMX = "Tramposo Mala Hierba", frFR = "Entourloupeur Follengeance", ptBR = "Trapaceiro Criasselvagem", ruRU = "Плут из племени Исчадий Природы", koKR = "야생혈족 요술사", zhCN = "荒野欺诈者", zhTW = "荒野欺詐者"},
-		zones = {2557},
-	},
 	[11454] = {
 		classification = "Elite",
 		level = "55 - 56",
@@ -15959,12 +15487,6 @@ rm.npcDB = {
 		names = {enUS = "Wildspawn Hellcaller", deDE = "Höllenrufer der Wildhufe", esES = "Clamainferno Mala Hierba", frFR = "Invocateur infernal Follengeance", ptBR = "Infernarauto Criasselvagem", ruRU = "Призыватель огня из племени Исчадий Природы", koKR = "야생혈족 지옥소환사", zhCN = "荒野唤魔者", zhTW = "荒野喚魔者"},
 		zones = {2557},
 	},
-	[11458] = {
-		classification = "Elite",
-		level = "57 - 59",
-		names = {enUS = "Petrified Treant", deDE = "Versteinerter Treant", esES = "Antárbol petrificado", frFR = "Tréant pétrifié", ptBR = "Arvoroso Petrificado", ruRU = "Одеревеневший древень", koKR = "무쇠껍질 나무정령", zhCN = "僵化的树人", zhTW = "僵化的樹人"},
-		zones = {2557},
-	},
 	[11459] = {
 		classification = "Elite",
 		level = "57 - 59",
@@ -15983,22 +15505,10 @@ rm.npcDB = {
 		names = {enUS = "Warpwood Treant", deDE = "Wucherborkentreant", esES = "Antárbol Combadera", frFR = "Tréant Crochebois", ptBR = "Arvoroso Lenhatorta", ruRU = "Древень-криводрев", koKR = "굽이나무정령", zhCN = "扭木树人", zhTW = "扭木樹人"},
 		zones = {2557},
 	},
-	[11464] = {
-		classification = "Elite",
-		level = "55 - 56",
-		names = {enUS = "Warpwood Tangler", deDE = "Wucherborkengreifer", esES = "Enmarañador Combadera", frFR = "Noueur Crochebois", ptBR = "Emaranhador Lenhatorta", ruRU = "Криводрев-ветвеплет", koKR = "뿌리의 굽이나무정령", zhCN = "扭木纠缠者", zhTW = "扭木糾纏者"},
-		zones = {2557},
-	},
 	[11465] = {
 		classification = "Elite",
 		level = "57 - 58",
 		names = {enUS = "Warpwood Stomper", deDE = "Wucherborkenstampfer", esES = "Vapuleador Combadera", frFR = "Ecraseur Crochebois", ptBR = "Pisoteador Lenhatorta", ruRU = "Криводрев-топотун", koKR = "우레의 굽이나무정령", zhCN = "扭木践踏者", zhTW = "扭木踐踏者"},
-		zones = {2557},
-	},
-	[11469] = {
-		classification = "Elite",
-		level = "58 - 59",
-		names = {enUS = "Eldreth Seether", deDE = "Schnauber der Eldreth", esES = "Bullidor Eldreth", frFR = "Rongé Eldreth", ptBR = "Furiário Eldretiano", ruRU = "Огнечар Элдрета", koKR = "엘드레스 군중", zhCN = "艾德雷斯怨魂", zhTW = "艾德雷斯怨魂"},
 		zones = {2557},
 	},
 	[11470] = {
@@ -16013,12 +15523,6 @@ rm.npcDB = {
 		names = {enUS = "Eldreth Apparition", deDE = "Erscheinung der Eldreth", esES = "Aparición Eldreth", frFR = "Fantôme Eldreth", ptBR = "Aparição Eldretiana", ruRU = "Элдретарская тень", koKR = "엘드레스 유령", zhCN = "艾德雷斯鬼怪", zhTW = "艾德雷斯鬼怪"},
 		zones = {2557},
 	},
-	[11472] = {
-		classification = "Elite",
-		level = "57 - 58",
-		names = {enUS = "Eldreth Spirit", deDE = "Geist der Eldreth", esES = "Espíritu Eldreth", frFR = "Esprit Eldreth", ptBR = "Espírito Eldretiano", ruRU = "Элдретарский дух", koKR = "엘드레스 영혼", zhCN = "艾德雷斯鬼巫", zhTW = "艾德雷斯鬼巫"},
-		zones = {2557},
-	},
 	[11473] = {
 		classification = "Elite",
 		level = "58 - 59",
@@ -16029,16 +15533,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "58 - 59",
 		names = {enUS = "Eldreth Phantasm", deDE = "Trugbild der Eldreth", esES = "Fantasma Eldreth", frFR = "Fantasme Eldreth", ptBR = "Fantasma Eldretiano", ruRU = "Элдретарский фантазм", koKR = "엘드레스 환영", zhCN = "艾德雷斯幻像", zhTW = "艾德雷斯幻象"},
-		zones = {2557},
-	},
-	[11476] = {
-		level = "57 - 58",
-		names = {enUS = "Skeletal Highborne", deDE = "Skeletthochgeborener", esES = "Altonato esquelético", frFR = "Bien-né squelette", ptBR = "Altaneiro Descarnado", ruRU = "Скелет высокорожденного", koKR = "해골이 된 귀족", zhCN = "上层精灵骷髅", zhTW = "高等精靈骷髏"},
-		zones = {2557},
-	},
-	[11477] = {
-		level = "58 - 59",
-		names = {enUS = "Rotting Highborne", deDE = "Faulender Hochgeborener", esES = "Altonato putrefacto", frFR = "Bien-né pourrissant", ptBR = "Altaneiro em Decomposição", ruRU = "Гниющий Высокорожденный", koKR = "썩어가는 귀족", zhCN = "腐烂的上层精灵", zhTW = "腐爛的高等精靈"},
 		zones = {2557},
 	},
 	[11480] = {
@@ -16053,23 +15547,17 @@ rm.npcDB = {
 		names = {enUS = "Mana Remnant", deDE = "Manarest", esES = "Despojos de maná", frFR = "Restes de mana", ptBR = "Vestígio de Mana", ruRU = "Клочок маны", koKR = "마나 파편", zhCN = "法力残渣", zhTW = "法力殘渣"},
 		zones = {2557},
 	},
-	[11484] = {
-		classification = "Elite",
-		level = "59 - 60",
-		names = {enUS = "Residual Monstrosity", deDE = "Verbleibender Monsterrest", esES = "Monstruosidad residual", frFR = "Monstruosité résiduelle", ptBR = "Monstruosidade Residual", ruRU = "Рудиментное чудовище", koKR = "불가사의한 마력의 소용돌이", zhCN = "畸形残渣", zhTW = "畸形殘渣"},
-		zones = {2557},
-	},
 	[11487] = {
 		classification = "Elite",
 		level = "60",
 		names = {enUS = "Magister Kalendris", frFR = "Magistère Kalendris", ptBR = "Magíster Kalendris", ruRU = "Магистр Календрис", koKR = "마술사 칼렌드리스", zhCN = "卡雷迪斯镇长", zhTW = "卡雷迪斯鎮長"},
 		zones = {2557},
 	},
-	[11498] = {
-		classification = "Rare Elite",
-		level = "58",
-		names = {enUS = "Skarr the Unbreakable", deDE = "Skarr der Unbezwingbare", esES = "Skarr el Inquebrantable", esMX = "Skarr el Inquebrantable", frFR = "Bâlhafr l'Invaincu", ptBR = "Skarr, o Inquebrável", ruRU = "Скарр Непреклонный", koKR = "무패의 스카르", zhCN = "无敌的斯卡尔", zhTW = "無敵的斯卡爾"},
-		zones = {357},
+	[11489] = {
+		classification = "Elite",
+		level = "60",
+		names = {enUS = "Tendris Warpwood", deDE = "Tendris Wucherborke", esES = "Tendris Madeguerra", frFR = "Tendris Crochebois", ptBR = "Gavíneo Lenhatorta", ruRU = "Тендрис Криводрев", koKR = "굽이나무 텐드리스", zhCN = "特迪斯·扭木", zhTW = "特迪斯·扭木"},
+		zones = {2557},
 	},
 	[11517] = {
 		classification = "Elite",
@@ -16154,22 +15642,6 @@ rm.npcDB = {
 		names = {enUS = "Nefarian", ruRU = "Нефариан", koKR = "네파리안", zhCN = "奈法利安", zhTW = "奈法利安"},
 		zones = {2677},
 	},
-	[11598] = {
-		level = "59 - 61",
-		names = {enUS = "Risen Guardian", deDE = "Auferstandener Wächter", esES = "Guardián resucitado", frFR = "Gardien ressuscité", ptBR = "Guardião Reanimado", ruRU = "Восставший страж", koKR = "되살아난 수호자", zhCN = "复活的守护者", zhTW = "復活的守護者"},
-		zones = {2057},
-	},
-	[11611] = {
-		level = "57",
-		names = {enUS = "Cavalier Durgen", deDE = "Chevalier Durgen", esES = "Hidalgo Durgen", esMX = "Hidalgo Durgen", ptBR = "Fidalgo Durgen", ruRU = "Кавалерист Дарген", koKR = "기병 드루겐", zhCN = "骑士杜尔根", zhTW = "騎士杜爾根"},
-		zones = {28},
-	},
-	[11622] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Rattlegore", deDE = "Blutrippe", esES = "Traquesangre", frFR = "Cliquettripes", ptBR = "Ossorrange", ruRU = "Громоклин", koKR = "들창어금니", zhCN = "血骨傀儡", zhTW = "血骨傀儡"},
-		zones = {2057},
-	},
 	[11658] = {
 		classification = "Elite",
 		level = "60 - 62",
@@ -16242,6 +15714,12 @@ rm.npcDB = {
 		names = {enUS = "Horde Grunt", deDE = "Grunzer der Horde", esES = "Bruto de la Horda", esMX = "Bruta de la Horda", frFR = "Grunt de la Horde", ptBR = "Bruta da Horda", ruRU = "Рубака Орды", koKR = "호드 그런트", zhCN = "部落步兵", zhTW = "部落步兵"},
 		zones = {331},
 	},
+	[11683] = {
+		faction = "Horde",
+		level = "28 - 29",
+		names = {enUS = "Horde Shaman", deDE = "Schamane der Horde", esES = "Chamán de la Horda", esMX = "Chamán de la Horda", frFR = "Chaman de la Horde", ptBR = "Xamã da Horda", ruRU = "Шаман Орды", koKR = "호드 주술사", zhCN = "部落萨满祭司", zhTW = "部落薩滿"},
+		zones = {331},
+	},
 	[11685] = {
 		level = "40 - 42",
 		names = {enUS = "Maraudine Priest", deDE = "Priester der Maraudine", esES = "Sacerdote Maraudine", esMX = "Sacerdote Maraudine", frFR = "Prêtre maraudine", ptBR = "Sacerdotisa Maraudina", ruRU = "Жрец из племени Мародин", koKR = "마라우돈일족 사제", zhCN = "玛洛迪祭司", zhTW = "瑪洛迪祭司"},
@@ -16257,15 +15735,9 @@ rm.npcDB = {
 		names = {enUS = "Ghostly Marauder", deDE = "Geisterhafter Marodeur", esES = "Maleante fantasmal", esMX = "Maleante fantasmal", frFR = "Maraudeur fantomatique", ptBR = "Espoliador Fantasma", ruRU = "Фантомный мародер", koKR = "유령 약탈자", zhCN = "鬼魅袭击者", zhTW = "鬼魅襲擊者"},
 		zones = {405},
 	},
-	[11698] = {
-		classification = "Elite",
-		level = "57 - 58",
-		names = {enUS = "Hive'Ashi Stinger", deDE = "Stecher des Ashischwarms", esES = "Aguijonero Colmen'Ashi", esMX = "Aguijonero Colmen'Ashi", frFR = "Aiguillonneur de la Ruche'Ashi", ptBR = "Aguilhante da Colme'Ashi", ruRU = "Острожал из улья Аши", koKR = "독침 하이브아쉬", zhCN = "亚什毒蝎", zhTW = "亞什毒蠍"},
-		zones = {1377},
-	},
 	[11714] = {
 		level = "16",
-		names = {enUS = "Marosh the Devious", deDE = "Marosh der Verschlagene", esES = "Marosh el Taimado", frFR = "Marosh le Sournois", ptBR = "Marosh, o Tortuoso", ruRU = "Марош Бесчестный", koKR = "험상궂은 마로쉬", zhCN = "玛洛什", zhTW = "瑪洛什"},
+		names = {enUS = "Marosh the Devious", deDE = "Marosh der Verschlagene", esES = "Marosh el Taimado", esMX = "Marosh el Taimado", frFR = "Marosh le Sournois", ptBR = "Marosh, o Tortuoso", ruRU = "Марош Бесчестный", koKR = "험상궂은 마로쉬", zhCN = "玛洛什", zhTW = "瑪洛什"},
 		zones = {148},
 	},
 	[11721] = {
@@ -16278,12 +15750,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "58 - 59",
 		names = {enUS = "Hive'Ashi Defender", deDE = "Verteidiger des Ashischwarms", esES = "Defensor Colmen'Ashi", esMX = "Defensor Colmen'Ashi", frFR = "Défenseur de la Ruche'Ashi", ptBR = "Defensor da Colme'Ashi", ruRU = "Защитник из улья Аши", koKR = "병정 하이브아쉬", zhCN = "亚什防御者", zhTW = "亞什防禦者"},
-		zones = {1377},
-	},
-	[11723] = {
-		classification = "Elite",
-		level = "58 - 59",
-		names = {enUS = "Hive'Ashi Sandstalker", deDE = "Sandpirscher des Ashischwarms", esES = "Acecharenas Colmen'Ashi", esMX = "Acecharenas Colmen'Ashi", frFR = "Traqueuse des sables de la Ruche'Ashi", ptBR = "Espreitareia Colme'Ashi", ruRU = "Пескоброд из улья Аши", koKR = "모래무지 하이브아쉬", zhCN = "亚什沙行者", zhTW = "亞什沙行者"},
 		zones = {1377},
 	},
 	[11724] = {
@@ -16302,6 +15768,11 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "58 - 59",
 		names = {enUS = "Hive'Zora Tunneler", deDE = "Tunnelgräber des Zoraschwarms", esES = "Tunelador de Colmen'Zora", esMX = "Tunelador de Colmen'Zora", frFR = "Tunnelière de la Ruche'Zora", ptBR = "Escavador da Colme'Zora", ruRU = "Проходчик из улья Зора", koKR = "땅꾼 하이브조라", zhCN = "佐拉坑道蝎", zhTW = "佐拉坑道蠍"},
+		zones = {1377},
+	},
+	[11727] = {
+		level = "58 - 59",
+		names = {enUS = "Hive'Zora Wasp", deDE = "Wespe des Zoraschwarms", esES = "Avispa Colmen'Zora", esMX = "Avispa de Colmen'Zora", frFR = "Guêpe de la Ruche'Zora", ptBR = "Vespa da Colme'Zora", ruRU = "Оса из улья Зора", koKR = "병정 하이브조라", zhCN = "佐拉巨蜂", zhTW = "佐拉黃蜂"},
 		zones = {1377},
 	},
 	[11728] = {
@@ -16351,24 +15822,9 @@ rm.npcDB = {
 		names = {enUS = "Stonelash Scorpid", deDE = "Steinpanzerskorpid", esES = "Escórpido Latigosólido", esMX = "Escórpido Latipiedra", frFR = "Scorpide Cinglepierre", ptBR = "Escorpídeo Petraçoite", ruRU = "Камнехвостый скорпид", koKR = "돌꼬리전갈", zhCN = "石鞭蝎", zhTW = "石鞭蠍"},
 		zones = {1377},
 	},
-	[11736] = {
-		level = "56",
-		names = {enUS = "Stonelash Pincer", deDE = "Steinpanzerzange", esES = "Tnazario Latigosólido", esMX = "Tenazario Latipiedra", frFR = "Pinceur Cinglepierre", ptBR = "Tenaz Petraçoite", ruRU = "Камнехвостый клешневик", koKR = "돌꼬리집게전갈", zhCN = "石鞭巨钳蝎", zhTW = "石鞭巨鉗蠍"},
-		zones = {1377},
-	},
-	[11737] = {
-		level = "57 - 58",
-		names = {enUS = "Stonelash Flayer", deDE = "Steinpanzerschinder", esES = "Cazador Latigosólido", esMX = "Despellejador Latipiedra", frFR = "Ecorcheur Cinglepierre", ptBR = "Esfolador Petraçoite", ruRU = "Камнехвостый живодер", koKR = "돌꼬리채찍전갈", zhCN = "石鞭掠夺者", zhTW = "石鞭掠奪者"},
-		zones = {1377},
-	},
 	[11738] = {
 		level = "55 - 56",
 		names = {enUS = "Sand Skitterer", deDE = "Sandhuscher", esES = "Arácnido de arena", esMX = "Arácnido de arena", frFR = "Glisseuse du sable", ptBR = "Rastejante da Areia", ruRU = "Песчаный паук-быстроног", koKR = "모래그물 바위거미", zhCN = "掠沙蜘蛛", zhTW = "掠沙蜘蛛"},
-		zones = {1377},
-	},
-	[11739] = {
-		level = "57 - 58",
-		names = {enUS = "Rock Stalker", deDE = "Felspirscher", esES = "Acechador de piedra", esMX = "Acecharrocas", frFR = "Traqueuse des rochers", ptBR = "Espreitadora de Rocha", ruRU = "Скальный паук-скакун", koKR = "긴다리 바위거미", zhCN = "石行蜘蛛", zhTW = "石行蜘蛛"},
 		zones = {1377},
 	},
 	[11740] = {
@@ -16376,9 +15832,19 @@ rm.npcDB = {
 		names = {enUS = "Dredge Striker", deDE = "Baggerschläger", esES = "Artillero de arrastre", esMX = "Asediador deslizante", frFR = "Frappeur térébrant", ptBR = "Dragataca", ruRU = "Землечерп", koKR = "작살미늘벌레", zhCN = "掘泥打击者", zhTW = "掘泥打擊者"},
 		zones = {1377},
 	},
-	[11745] = {
-		level = "57 - 59",
-		names = {enUS = "Cyclone Warrior", deDE = "Wirbelsturmkrieger", esES = "Guerrero ciclónico", esMX = "Guerrero ciclónico", frFR = "Guerrier cyclone", ptBR = "Guerreiro Ciclone", ruRU = "Воин циклона", koKR = "소용돌이 전사", zhCN = "飓风战士", zhTW = "颶風戰士"},
+	[11741] = {
+		level = "57 - 58",
+		names = {enUS = "Dredge Crusher", deDE = "Baggerbrecher", esES = "Triturador de arrastre", esMX = "Triturador deslizante", frFR = "Ecraseur térébrant", ptBR = "Dragasmaga", ruRU = "Земляной сокрушитель", koKR = "망치미늘벌레", zhCN = "掘泥摧毁者", zhTW = "掘泥摧毀者"},
+		zones = {1377},
+	},
+	[11744] = {
+		level = "55 - 57",
+		names = {enUS = "Dust Stormer", deDE = "Staubstürmer", esES = "Sirocoso", esMX = "Agitador sirocoso", frFR = "Tempétueux de poussière", ptBR = "Tempestade de Poeira", ruRU = "Пылевихрь", koKR = "먼지 폭풍", zhCN = "灰尘风暴", zhTW = "灰塵風暴"},
+		zones = {1377},
+	},
+	[11746] = {
+		level = "56 - 58",
+		names = {enUS = "Desert Rumbler", deDE = "Wüstenrumpler", esES = "Estruendor del desierto", esMX = "Estruendor del desierto", frFR = "Grondeur du désert", ptBR = "Estrondor do Deserto", ruRU = "Пустынный грохотун", koKR = "우레의 모래정령", zhCN = "沙漠奔行者", zhTW = "沙漠奔行者"},
 		zones = {1377},
 	},
 	[11777] = {
@@ -16502,6 +15968,16 @@ rm.npcDB = {
 		names = {enUS = "Masat T'andr", ruRU = "Масат Т'андр", koKR = "마사트 탄드르", zhCN = "马萨特·坦德", zhTW = "馬薩特·坦德"},
 		zones = {8},
 	},
+	[11880] = {
+		level = "58 - 59",
+		names = {enUS = "Twilight Avenger", deDE = "Rächer der Twilight", esES = "Vengador Crepuscular", esMX = "Vengador Crepuscular", frFR = "Vengeur du crépuscule", ptBR = "Vingador do Crepúsculo", ruRU = "Мститель из культа Сумеречного Молота", koKR = "황혼의 복수자", zhCN = "暮光复仇者", zhTW = "暮光復仇者"},
+		zones = {1377},
+	},
+	[11881] = {
+		level = "59 - 60",
+		names = {enUS = "Twilight Geolord", deDE = "Geolord der Twilight", esES = "Geoseñor Crepuscular", esMX = "Geoseñor Crepuscular", frFR = "Géoseigneur du crépuscule", ptBR = "Geolorde do Crepúsculo", ruRU = "Геолорд из культа Сумеречного Молота", koKR = "황혼의 대지술사", zhCN = "暮光地王", zhTW = "暮光地王"},
+		zones = {1377},
+	},
 	[11882] = {
 		level = "59 - 60",
 		names = {enUS = "Twilight Stonecaller", deDE = "Steinrufer der Twilight", esES = "Clamapiedras Crepuscular", esMX = "Clamapiedras Crepuscular", frFR = "Invocateur des pierres du crépuscule", ptBR = "Petraz do Crepúsculo", ruRU = "Камнезов из культа Сумеречного Молота", koKR = "황혼의 돌소환사", zhCN = "暮光唤石者", zhTW = "暮光喚石者"},
@@ -16511,11 +15987,6 @@ rm.npcDB = {
 		level = "60",
 		names = {enUS = "Twilight Master", deDE = "Meister der Twilight", esES = "Maestro Crepuscular", esMX = "Maestro Crepuscular", frFR = "Maître du crépuscule", ptBR = "Mestre do Crepúsculo", ruRU = "Мастер из культа Сумеречного Молота", koKR = "황혼의 장로", zhCN = "暮光主宰", zhTW = "暮光主宰"},
 		zones = {1377},
-	},
-	[11887] = {
-		level = "54 - 55",
-		names = {enUS = "Crypt Robber", deDE = "Grufträuber", esES = "Ladrón de la cripta", frFR = "Pilleur de crypte", ptBR = "Ladrão de Cripta", ruRU = "Некрорахнид-грабитель", koKR = "납골당 도굴꾼", zhCN = "地穴抢劫者", zhTW = "地穴搶劫者"},
-		zones = {139},
 	},
 	[11910] = {
 		level = "14 - 15",
@@ -16540,7 +16011,7 @@ rm.npcDB = {
 	[11915] = {
 		level = "16 - 17",
 		names = {enUS = "Gogger Rock Keeper", deDE = "Felsbewahrer der Gogger", esES = "Vigilapedras Gogger", esMX = "Vigilapiedras Gogger", frFR = "Gardien des rochers de Gogger", ptBR = "Guardião de Rocha Gogueiro", ruRU = "Хранитель скал из племени Гоггер", koKR = "고우저일족 바위지기", zhCN = "高戈护石者", zhTW = "高戈護石者"},
-		zones = {406},
+		zones = {406, 215},
 	},
 	[11917] = {
 		level = "16 - 17",
@@ -16550,7 +16021,7 @@ rm.npcDB = {
 	[11918] = {
 		level = "17 - 18",
 		names = {enUS = "Gogger Stonepounder", deDE = "Steinklopfer der Gogger", esES = "Machacapedras Gogger", esMX = "Machacapiedras Gogger", frFR = "Cassepierre de Gogger", ptBR = "Bate-pedra Gogueiro", ruRU = "Камнелом из племени Гоггер", koKR = "고우저일족 채굴꾼", zhCN = "高戈裂石者", zhTW = "高戈裂石者"},
-		zones = {406},
+		zones = {406, 215},
 	},
 	[11921] = {
 		classification = "Elite",
@@ -16562,32 +16033,6 @@ rm.npcDB = {
 		level = "38",
 		names = {enUS = "Demon Portal Guardian", deDE = "Dämonenportalwächter", esES = "Guardia del portal demoníaco", esMX = "Guardián del portal de demonios", frFR = "Gardien du Portail démoniaque", ptBR = "Guardião do Portal Demoníaco", ruRU = "Страж портала демонов", koKR = "악마의 차원문 수호병", zhCN = "恶魔之门的卫士", zhTW = "惡魔之門的衛士"},
 		zones = {405},
-	},
-	[11947] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "61",
-		names = {enUS = "Captain Galvangar", esES = "Capitán Galvangar", frFR = "Capitaine Galvangar", ptBR = "Capitão Galvangar", ruRU = "Капитан Гальвангар", koKR = "부대장 갈반가르", zhCN = "加尔范上尉", zhTW = "加爾范上尉"},
-		zones = {2597},
-	},
-	[11949] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "61",
-		names = {enUS = "Captain Balinda Stonehearth", esES = "Capitán Balinda Corapernal", frFR = "Capitaine Balinda Stonehearth", ptBR = "Capitão Balinda Larpétreo", ruRU = "Капитан Балинда Каменный Очаг", koKR = "부대장 발린다 스톤하스", zhCN = "巴琳达·斯通赫尔斯", zhTW = "巴琳達·斯通赫爾斯"},
-		zones = {2597},
-	},
-	[11982] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Magmadar", ruRU = "Магмадар", koKR = "마그마다르", zhCN = "玛格曼达", zhTW = "瑪格曼達"},
-		zones = {2717},
-	},
-	[11988] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Golemagg the Incinerator", deDE = "Golemagg der Verbrenner", esES = "Golemagg el Incinerador", esMX = "Golemagg el Incinerador", frFR = "Golemagg l'Incinérateur", ptBR = "Golemagg, o Incinerador", ruRU = "Големагг Испепелитель", koKR = "초열의 골레마그", zhCN = "焚化者古雷曼格", zhTW = "焚化者古雷曼格"},
-		zones = {2717},
 	},
 	[12022] = {
 		level = "51",
@@ -16623,30 +16068,6 @@ rm.npcDB = {
 		names = {enUS = "Kulwia", ptBR = "Kalwia", ruRU = "Кульвия", koKR = "쿨위아", zhCN = "库尔维亚", zhTW = "庫爾維亞"},
 		zones = {406},
 	},
-	[12051] = {
-		faction = "Horde",
-		level = "57",
-		names = {enUS = "Frostwolf Legionnaire", deDE = "Legionär der Frostwolf", esES = "Legionario Lobo Gélido", frFR = "Légionnaire Frostwolf", ptBR = "Legionário dos Lobo do Gelo", ruRU = "Легионер Северного Волка", koKR = "서리늑대 용사", zhCN = "霜狼军团士兵", zhTW = "霜狼軍團士兵"},
-		zones = {2597},
-	},
-	[12053] = {
-		faction = "Horde",
-		level = "58",
-		names = {enUS = "Frostwolf Guardian", deDE = "Gardist der Frostwolf", esES = "Guardián Lobo Gélido", frFR = "Gardien Frostwolf", ptBR = "Guardião dos Lobo do Gelo", ruRU = "Страж Северного Волка", koKR = "서리늑대 수호병", zhCN = "霜狼守卫者", zhTW = "霜狼守衛者"},
-		zones = {2597},
-	},
-	[12056] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Baron Geddon", esES = "Barón Geddon", esMX = "Barón Geddon", ptBR = "Barão Geddon", ruRU = "Барон Геддон", koKR = "남작 게돈", zhCN = "迦顿男爵", zhTW = "迦頓男爵"},
-		zones = {2717},
-	},
-	[12057] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Garr", ruRU = "Гарр", koKR = "가르", zhCN = "加尔", zhTW = "加爾"},
-		zones = {2717},
-	},
 	[12076] = {
 		classification = "Elite",
 		level = "61 - 62",
@@ -16665,23 +16086,11 @@ rm.npcDB = {
 		names = {enUS = "Lava Surger", deDE = "Lavawoger", esES = "Marea de lava", esMX = "Marea de lava", frFR = "Surgisseur de lave", ptBR = "Irrompedor de Lava", ruRU = "Лавовый волноплеск", koKR = "굽이치는 용암 정령", zhCN = "熔岩奔腾者", zhTW = "熔岩奔騰者"},
 		zones = {2717},
 	},
-	[12118] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Lucifron", ptBR = "Lúcifron", ruRU = "Люцифрон", koKR = "루시프론", zhCN = "鲁西弗隆", zhTW = "魯西弗隆"},
-		zones = {2717},
-	},
 	[12119] = {
 		classification = "Elite",
 		level = "62",
 		names = {enUS = "Flamewaker Protector", deDE = "Feuerschuppenbeschützer", esES = "Protector Caminallamas", esMX = "Protector despiertallamas", frFR = "Protecteur Attise-flammes", ptBR = "Protetor Ardilante", ruRU = "Заступник-поджигатель", koKR = "불꽃꼬리일족 수호병", zhCN = "烈焰行者护卫", zhTW = "烈焰行者護衛"},
 		zones = {2717},
-	},
-	[12127] = {
-		faction = "Alliance",
-		level = "57",
-		names = {enUS = "Stormpike Guardsman", deDE = "Stormpike-Gardist", esES = "Custodio de Pico Tormenta", frFR = "Garde Stormpike", ptBR = "Guarda de Lançatroz", ruRU = "Охранник из клана Грозовой Вершины", koKR = "스톰파이크 보초병", zhCN = "雷矛卫兵", zhTW = "雷矛衛兵"},
-		zones = {2597},
 	},
 	[12129] = {
 		classification = "Elite",
@@ -16698,10 +16107,17 @@ rm.npcDB = {
 		names = {enUS = "Tortured Druid", deDE = "Gequälter Druide", esES = "Druida torturado", esMX = "Druida torturado", frFR = "Druide torturé", ptBR = "Druida Torturado", ruRU = "Истерзанный друид", koKR = "고통받는 드루이드", zhCN = "被折磨的德鲁伊", zhTW = "被折磨的德魯伊"},
 		zones = {1377},
 	},
-	[12179] = {
-		level = "56 - 57",
-		names = {enUS = "Tortured Sentinel", deDE = "Gequälte Schildwache", esES = "Centinela torturada", esMX = "Centinela torturada", frFR = "Sentinelle torturée", ptBR = "Sentinela Torturada", ruRU = "Истерзанный часовой", koKR = "고통받는 파수꾼", zhCN = "被折磨的哨兵", zhTW = "被折磨的哨兵"},
-		zones = {1377},
+	[12201] = {
+		classification = "Elite",
+		level = "51",
+		names = {enUS = "Princess Theradras", deDE = "Prinzessin Theradras", esES = "Princesa Theradras", esMX = "Princesa Theradras", frFR = "Princesse Theradras", ptBR = "Princesa Theradras", ruRU = "Принцесса Терадрас", koKR = "공주 테라드라스", zhCN = "瑟莱德丝公主", zhTW = "瑟萊德絲公主"},
+		zones = {2100},
+	},
+	[12203] = {
+		classification = "Elite",
+		level = "50",
+		names = {enUS = "Landslide", deDE = "Erdrutsch", esES = "Derrumblo", frFR = "Glissement de terrain", ptBR = "Soterrador", ruRU = "Сель", koKR = "산사태", zhCN = "兰斯利德", zhTW = "蘭斯利德"},
+		zones = {2100},
 	},
 	[12206] = {
 		classification = "Elite",
@@ -16766,22 +16182,39 @@ rm.npcDB = {
 		names = {enUS = "Cavern Shambler", deDE = "Höhlenschlurfer", esES = "Arrastrapiés de la Caverna", esMX = "Arrastrapiés de la Caverna", frFR = "Traînard des grottes", ptBR = "Cambaleante das Cavernas", ruRU = "Пещерный шаркун", koKR = "파괴의 동굴껍질괴물", zhCN = "洞窟游荡者", zhTW = "洞窟遊蕩者"},
 		zones = {2100},
 	},
+	[12225] = {
+		classification = "Elite",
+		level = "49",
+		names = {enUS = "Celebras the Cursed", deDE = "Celebras der Verfluchte", esES = "Celebras el Maldito", esMX = "Celebras el Maldito", frFR = "Celebras le Maudit", ptBR = "Celebras, o Amaldiçoado", ruRU = "Селебрас Проклятый", koKR = "저주받은 셀레브라스", zhCN = "被诅咒的塞雷布拉斯", zhTW = "被詛咒的塞雷布拉斯"},
+		zones = {2100},
+	},
+	[12236] = {
+		classification = "Elite",
+		level = "47",
+		names = {enUS = "Lord Vyletongue", deDE = "Lord Schlangenzunge", esES = "Lord Lenguavil", esMX = "Lord Lenguavil", frFR = "Seigneur Vylelangue", ptBR = "Lorde Torpelíngua", ruRU = "Лорд Злоязыкий", koKR = "군주 바일텅", zhCN = "维利塔恩", zhTW = "維利塔恩"},
+		zones = {2100},
+	},
+	[12237] = {
+		classification = "Rare Elite",
+		level = "48",
+		names = {enUS = "Meshlok the Harvester", deDE = "Meshlok der Ernter", esES = "Meshlok el Cosechador", esMX = "Meshlok el Cosechador", frFR = "Meshlok le Moissonneur", ptBR = "Meshloc, o Ceifador", ruRU = "Мешлок Жнец", koKR = "정원사 메슬로크", zhCN = "收割者麦什洛克", zhTW = "收割者麥什洛克"},
+		zones = {2100},
+	},
 	[12239] = {
 		classification = "Elite",
 		level = "42",
 		names = {enUS = "Spirit of Gelk", deDE = "Geist von Gelk", esES = "Espíritu de Gelk", esMX = "Espíritu de Gelk", frFR = "Esprit de Gelk", ptBR = "Espírito de Gelk", ruRU = "Дух Гелка", koKR = "겔크의 영혼", zhCN = "格尔克之魂", zhTW = "格爾克之魂"},
 		zones = {405},
 	},
+	[12240] = {
+		classification = "Elite",
+		level = "43",
+		names = {enUS = "Spirit of Kolk", deDE = "Geist von Kolk", esES = "Espíritu de Kolk", esMX = "Espíritu de Kolk", frFR = "Esprit de Kolk", ptBR = "Espírito de Kolk", ruRU = "Дух Колка", koKR = "콜크의 영혼", zhCN = "考尔克之魂", zhTW = "考爾克之魂"},
+	},
 	[12241] = {
 		classification = "Elite",
 		level = "43",
 		names = {enUS = "Spirit of Magra", deDE = "Geist von Magra", esES = "Espíritu de Magra", esMX = "Espíritu de Magra", frFR = "Esprit de Magra", ptBR = "Espírito de Macra", ruRU = "Дух Магры", koKR = "마그라의 영혼", zhCN = "玛格拉之魂", zhTW = "瑪格拉之魂"},
-	},
-	[12242] = {
-		classification = "Elite",
-		level = "46",
-		names = {enUS = "Spirit of Maraudos", deDE = "Geist von Maraudos", esES = "Espíritu de Maraudos", esMX = "Espíritu de Maraudos", frFR = "Esprit de Maraudos", ptBR = "Espírito de Maraudos", ruRU = "Дух Мародоса", koKR = "마라우도스의 영혼", zhCN = "玛劳杜斯之魂", zhTW = "瑪勞杜斯之魂"},
-		zones = {2100},
 	},
 	[12243] = {
 		classification = "Elite",
@@ -16799,59 +16232,27 @@ rm.npcDB = {
 		names = {enUS = "Super-Seller 680", deDE = "Superverkaufomat 680", esES = "Supervendedor 680", esMX = "Supervendedor 680", frFR = "Super-Vendeur 680", ptBR = "Super-Loja 680", ruRU = "Робо-торговец 680", koKR = "슈퍼 판매기 680", zhCN = "超级商人680型", zhTW = "超級商人680型"},
 		zones = {405},
 	},
-	[12250] = {
-		level = "55",
-		names = {enUS = "Zaeldarr the Outcast", deDE = "Zaeldarr der Ausgestoßene", esES = "Zaeldarr el Marginado", esMX = "Zaeldarr el Marginado", frFR = "Zaeldarr le Banni", ptBR = "Zaeldarr, o Proscrito", ruRU = "Зельдарр Изгой", koKR = "추방자 잴다르", zhCN = "流亡者塞达尔", zhTW = "流亡者塞達爾"},
-		zones = {139},
+	[12258] = {
+		classification = "Elite",
+		level = "48",
+		names = {enUS = "Razorlash", deDE = "Schlingwurzler", esES = "Latisable", frFR = "Tranchefouet", ptBR = "Azorrague", ruRU = "Бритвохлест", koKR = "칼날채찍", zhCN = "锐刺鞭笞者", zhTW = "銳刺鞭笞者"},
+		zones = {2100},
 	},
-	[12259] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Gehennas", ptBR = "Geena", ruRU = "Гееннас", koKR = "게헨나스", zhCN = "基赫纳斯", zhTW = "基赫納斯"},
-		zones = {2717},
-	},
-	[12264] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Shazzrah", ruRU = "Шаззрах", koKR = "샤즈라", zhCN = "沙斯拉尔", zhTW = "沙斯拉爾"},
-		zones = {2717},
-	},
-	[12322] = {
-		faction = "Alliance",
-		level = "60",
-		names = {enUS = "Quel'Lithien Protector", deDE = "Beschützer von Quel'Lithien", esES = "Protector Quel'Lithien", frFR = "Protecteur Quel'Lithien", ptBR = "Protetor de Quel'Lithien", ruRU = "Заступник  Кель'Литиен", koKR = "쿠엘리시엔 수호병", zhCN = "奎尔林斯保卫者", zhTW = "奎爾林斯保衛者"},
-		zones = {139},
+	[12320] = {
+		level = "13",
+		names = {enUS = "Burning Blade Crusher", deDE = "Zermalmer der Burning Blade", esES = "Triturador Filo Ardiente", esMX = "Triturador Filo Ardiente", frFR = "Ecraseur de la Lame ardente", ptBR = "Esmagador da Lâmina Ardente", ruRU = "Сокрушитель из клана Пылающего Клинка", koKR = "불타는 칼날단 전사", zhCN = "火刃镇压者", zhTW = "燃刃鎮壓者"},
+		zones = {17},
 	},
 	[12347] = {
 		level = "30 - 32",
 		names = {enUS = "Enraged Reef Crawler", deDE = "Wütender Riffkriecher", esES = "Reptador Correarrecifes iracundo", frFR = "Clampant des récifs enragé", ptBR = "Tiscoral Enfurecido", ruRU = "Разъяренный рифовый краб", koKR = "사나운 모래톱게", zhCN = "狂怒的暗礁蟹", zhTW = "狂怒的暗礁蟹"},
 		zones = {405},
 	},
-	[12378] = {
-		level = "59 - 60",
-		names = {enUS = "Damned Soul", deDE = "Verdammte Seele", esES = "Alma maldita", frFR = "Ame damnée", ptBR = "Alma Penada", ruRU = "Проклятая душа", koKR = "저주받은 유령", zhCN = "被诅咒的灵魂", zhTW = "被詛咒的靈魂"},
-		zones = {41},
-	},
-	[12379] = {
-		level = "59 - 60",
-		names = {enUS = "Unliving Caretaker", deDE = "Untoter Verwalter", esES = "Custodio sin vida", frFR = "Fossoyeur non-vivant", ptBR = "Zelador Vivo-Morto", ruRU = "Неживой смотритель", koKR = "죽지 못하는 관리인", zhCN = "不死的看守者", zhTW = "不死的看守者"},
-		zones = {41},
-	},
-	[12380] = {
-		level = "59 - 60",
-		names = {enUS = "Unliving Resident", deDE = "Untoter Einwohner", esES = "Residente sin vida", frFR = "Résident non vivant", ptBR = "Residente Vivo-morto", ruRU = "Неживой обитатель", koKR = "죽지 못하는 주민", zhCN = "不死的居民", zhTW = "不死的居民"},
-		zones = {41},
-	},
 	[12397] = {
 		classification = "Boss",
 		level = "??",
 		names = {enUS = "Lord Kazzak", frFR = "Seigneur Kazzak", ptBR = "Lorde Kazzak", ruRU = "Владыка Каззак", koKR = "군주 카자크", zhCN = "卡扎克", zhTW = "卡札克"},
 		zones = {4},
-	},
-	[12418] = {
-		level = "52 - 54",
-		names = {enUS = "Gordok Hyena", deDE = "Hyäne der Gordok", esES = "Hiena Gordok", frFR = "Hyène Gordok", ptBR = "Hiena Gordok", ruRU = "Гиена клана Гордок", koKR = "고르독일족 하이에나", zhCN = "戈多克土狼", zhTW = "戈多克土狼"},
-		zones = {357},
 	},
 	[12457] = {
 		classification = "Elite",
@@ -16907,52 +16308,10 @@ rm.npcDB = {
 		names = {enUS = "Death Talon Hatcher", deDE = "Brutwächter der Todeskrallen", esES = "Criador Garramortal", frFR = "Eveilleur Griffemort", ptBR = "Fecundador Garra da Morte", ruRU = "Гнездовая Когтя Смерти", koKR = "죽음의발톱 알지기", zhCN = "死爪地卜师", zhTW = "死爪地卜師"},
 		zones = {2677},
 	},
-	[12474] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Emeraldon Boughguard", deDE = "Smaragdonastwache", esES = "Guardarrama Emeraldón", frFR = "Gardien Emeraldon", ptBR = "Ramaguarda Esmeraldônico", ruRU = "Изумрудон-страж ветвей", koKR = "에메랄돈 가지경비병", zhCN = "翡翠树林卫兵", zhTW = "翡翠樹林衛兵"},
-		zones = {1637, 331, 16169},
-	},
-	[12475] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Emeraldon Tree Warder", deDE = "Smaragdonbaumwärter", esES = "Depositario de árbol Emeraldon", frFR = "Gardien sylvestre Emeraldon", ptBR = "Guardárvore Esmeraldônico", ruRU = "Изумрудон-хранитель деревьев", koKR = "에메랄돈 나무지기", zhCN = "翡翠树林看守", zhTW = "翡翠樹林看守"},
-		zones = {331, 1637, 16169},
-	},
-	[12476] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Emeraldon Oracle", deDE = "Smaragdonorakel", esES = "Oráculo Emeraldon", frFR = "Oracle Emeraldon", ptBR = "Oráculo Esmeraldônico", ruRU = "Изумрудон-оракул", koKR = "에메랄돈 예언자", zhCN = "翡翠圣贤", zhTW = "翡翠聖賢"},
-		zones = {1637, 331, 16169},
-	},
-	[12477] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Verdantine Boughguard", deDE = "Tiefgrüne Astwache", esES = "Guardarrama Verdantine", frFR = "Gardien de Verdantis", ptBR = "Ramaguarda Verdejante", ruRU = "Малахитор-страж ветвей", koKR = "초록용혈족 가지경비병", zhCN = "青绿护卫者", zhTW = "青綠護衛者"},
-		zones = {47, 1537, 16029},
-	},
-	[12478] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Verdantine Oracle", deDE = "Tiefgrünes Orakel", esES = "Oráculo Verdantine", frFR = "Oracle de Verdantis", ptBR = "Oráculo Verdejante", ruRU = "Малахитор-оракул", koKR = "초록용혈족 예언자", zhCN = "青绿神谕者", zhTW = "青綠神諭者"},
-		zones = {47, 16029},
-	},
-	[12479] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Verdantine Tree Warder", deDE = "Tiefgrüner Baumwärter", esES = "Guardárbol Verdantine", frFR = "Gardien sylvestre de Verdantis", ptBR = "Guardárvore Verdejante", ruRU = "Малахитор-хранитель деревьев", koKR = "초록용혈족 나무지기", zhCN = "青绿守树者", zhTW = "青綠守樹者"},
-		zones = {47, 16029},
-	},
-	[12497] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Dreamroarer", deDE = "Traumbrüller", esES = "Bramasueños", frFR = "Hurle-rêve", ptBR = "Rugipnos", ruRU = "Рыкун Сна", koKR = "꿈의포효자", zhCN = "睡梦咆哮者", zhTW = "睡夢咆哮者"},
-		zones = {357, 16018},
-	},
 	[12579] = {
 		classification = "Elite",
 		level = "26",
-		names = {enUS = "Bloodfury Ripper", deDE = "Zerfetzerin der Blutfurien", esES = "Desgarradora Furia Sangrienta", frFR = "Déchiqueteuse Rougefurie", ptBR = "Estripadora Furissangue", ruRU = "Потрошительница из стаи Кровавой Ярости", koKR = "혈폭풍일족 갈퀴발톱", zhCN = "血怒撕裂者", zhTW = "血怒撕裂者"},
+		names = {enUS = "Bloodfury Ripper", deDE = "Zerfetzerin der Blutfurien", esES = "Desgarradora Furia Sangrienta", esMX = "Desgarradora Furia Sangrienta", frFR = "Déchiqueteuse Rougefurie", ptBR = "Estripadora Furissangue", ruRU = "Потрошительница из стаи Кровавой Ярости", koKR = "혈폭풍일족 갈퀴발톱", zhCN = "血怒撕裂者", zhTW = "血怒撕裂者"},
 		zones = {406},
 	},
 	[12676] = {
@@ -16967,23 +16326,10 @@ rm.npcDB = {
 		names = {enUS = "Ursangous", deDE = "Ursangus", ruRU = "Топтыжень", koKR = "우르산고우스", zhCN = "乌萨苟斯", zhTW = "烏薩苟斯"},
 		zones = {331},
 	},
-	[12800] = {
-		classification = "Elite",
-		level = "60 - 61",
-		names = {enUS = "Chimaerok", esES = "Quimerok", ptBR = "Quiméroco", ruRU = "Химера", koKR = "키메로크", zhCN = "奇美洛克", zhTW = "奇美洛克"},
-		zones = {357},
-	},
-	[12801] = {
-		classification = "Elite",
-		level = "60 - 62",
-		names = {enUS = "Arcane Chimaerok", deDE = "Arkaner Chimaerok", esES = "Quimerok Arcano", frFR = "Chimaerok des arcanes", ptBR = "Quiméroco Arcano", ruRU = "Волшебный химерон", koKR = "불가사의한 키메로크", zhCN = "魔法奇美洛克", zhTW = "祕法奇美洛克"},
-		zones = {357},
-	},
-	[12802] = {
-		classification = "Elite",
-		level = "61 - 62",
-		names = {enUS = "Chimaerok Devourer", deDE = "Chimaerok-Verschlinger", esES = "Devorador quimerok", frFR = "Dévoreur Chimaerok", ptBR = "Devorador Quiméroco", ruRU = "Химера-пожиратель", koKR = "굶주린 키메로크", zhCN = "奇美洛克吞噬者", zhTW = "奇美洛克吞噬者"},
-		zones = {357},
+	[12759] = {
+		level = "27",
+		names = {enUS = "Tideress", esMX = "Marearess", frFR = "Maréen", ptBR = "Mareante", ruRU = "Приливница", koKR = "타이더레스", zhCN = "泰德雷斯", zhTW = "泰德雷斯"},
+		zones = {331},
 	},
 	[12856] = {
 		faction = "Alliance",
@@ -17020,18 +16366,6 @@ rm.npcDB = {
 		level = "21 - 22",
 		names = {enUS = "Silverwing Warrior", deDE = "Krieger der Silverwing", esES = "Guerrero Ala de Plata", esMX = "Guerrera Ala de Plata", frFR = "Guerrier d'Aile-argent", ptBR = "Guerreira da Asa de Prata", ruRU = "Воительница клана Среброкрылых", koKR = "은빛날개 전사", zhCN = "银翼战士", zhTW = "銀翼戰士"},
 		zones = {331},
-	},
-	[12899] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Axtroz", ruRU = "Акстроз", koKR = "악트로즈", zhCN = "埃克托兹", zhTW = "埃克托茲"},
-		zones = {11},
-	},
-	[12900] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Somnus", ruRU = "Сомнус", koKR = "솜누스", zhCN = "索姆努斯", zhTW = "索姆努斯"},
-		zones = {8},
 	},
 	[12902] = {
 		classification = "Elite",
@@ -17120,6 +16454,11 @@ rm.npcDB = {
 		names = {enUS = "Kolkar Waylayer", deDE = "Abfänger der Kolkar", esES = "Abrecaminos Kolkar", frFR = "Intercepteur kolkar", ptBR = "Ciladeira Kolkar", ruRU = "Лиходейка из племени Колкар", koKR = "콜카르일족 잠복꾼", zhCN = "科卡尔抢劫者", zhTW = "科卡爾搶劫者"},
 		zones = {405},
 	},
+	[12977] = {
+		level = "34 - 35",
+		names = {enUS = "Kolkar Ambusher", deDE = "Wegelagerer der Kolkar", esES = "Emboscador Kolkar", frFR = "Embusqué kolkar", ptBR = "Emboscador Kolkar", ruRU = "Душитель из племени Колкар", koKR = "콜카르일족 매복병", zhCN = "科卡尔伏击者", zhTW = "科卡爾伏擊者"},
+		zones = {405},
+	},
 	[13019] = {
 		level = "33",
 		names = {enUS = "Burning Blade Seer", deDE = "Seher der Burning Blade", esES = "Vidente Filo Ardiente", esMX = "Vidente Filo Ardiente", frFR = "Prophète de la Lame ardente", ptBR = "Vidente da Lâmina Ardente", ruRU = "Ясновидец из клана Пылающего Клинка", koKR = "불타는칼날단 현자", zhCN = "火刃先知", zhTW = "火刃先知"},
@@ -17141,34 +16480,6 @@ rm.npcDB = {
 		names = {enUS = "Hive'Ashi Drone", deDE = "Drohne des Ashischwarms", esES = "Zángano Colmen'Ashi", esMX = "Zángano Colmen'Ashi", frFR = "Bourdon de la Ruche'Ashi", ptBR = "Zangão da Colme'Ashi", ruRU = "Трутень из улья Аши", koKR = "탐색꾼 하이브아쉬", zhCN = "亚什雄蝎", zhTW = "亞什雄蠍"},
 		zones = {1377},
 	},
-	[13137] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "59",
-		names = {enUS = "Lieutenant Rugba", esES = "Teniente Rugba", ptBR = "Tenente Rugba", ruRU = "Лейтенант Ругба", koKR = "부관 루그바", zhCN = "鲁格巴中尉", zhTW = "魯格巴中尉"},
-		zones = {2597},
-	},
-	[13138] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "59",
-		names = {enUS = "Lieutenant Spencer", esES = "Teniente Spencer", ptBR = "Tenente Spencer", ruRU = "Лейтенант Спенсер", koKR = "부관 스펜서", zhCN = "斯本瑟尔中尉", zhTW = "斯本瑟爾中尉"},
-		zones = {2597},
-	},
-	[13139] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "61",
-		names = {enUS = "Commander Randolph", deDE = "Kommandant Randolph", esES = "Comandante Randolf", frFR = "Commandant Randolph", ptBR = "Comandante Randolfo", ruRU = "Командир Рандольф", koKR = "지휘관 란돌프", zhCN = "指挥官拉多夫", zhTW = "指揮官拉多夫"},
-		zones = {2597},
-	},
-	[13140] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "61",
-		names = {enUS = "Commander Dardosh", deDE = "Kommandant Dardosh", esES = "Comandante Dardosh", frFR = "Commandant Dardosh", ptBR = "Comandante Dardosh", ruRU = "Командир Дардош", koKR = "지휘관 다르도쉬", zhCN = "指挥官达多什", zhTW = "指揮官達多許"},
-		zones = {2597},
-	},
 	[13141] = {
 		classification = "Elite",
 		level = "43 - 44",
@@ -17181,20 +16492,6 @@ rm.npcDB = {
 		names = {enUS = "Deeprot Tangler", deDE = "Rottwurzelgreifer", esES = "Enmarañador Raizonda", esMX = "Enmarañador Raizonda", frFR = "Noueur Sève-putride", ptBR = "Emaranhador Putrefundo", ruRU = "Загнивший плетун", koKR = "올가미의 깊은뿌리정령", zhCN = "深腐纠缠者", zhTW = "深腐糾纏者"},
 		zones = {2100},
 	},
-	[13143] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "59",
-		names = {enUS = "Lieutenant Stronghoof", esES = "Teniente Pezuñaforte", ptBR = "Tenente Casco Forte", ruRU = "Лейтенант Могучее Копыто", koKR = "부관 스트롱후프", zhCN = "斯托霍夫中尉", zhTW = "斯托霍夫中尉"},
-		zones = {2597},
-	},
-	[13144] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "59",
-		names = {enUS = "Lieutenant Vol'talar", esES = "Teniente Vol'talar", ptBR = "Tenente Vol'talar", ruRU = "Лейтенант Воль'талар", koKR = "부관 볼탈라", zhCN = "沃塔拉尔中尉", zhTW = "沃塔拉爾中尉"},
-		zones = {2597},
-	},
 	[13145] = {
 		classification = "Elite",
 		faction = "Horde",
@@ -17202,45 +16499,10 @@ rm.npcDB = {
 		names = {enUS = "Lieutenant Grummus", esES = "Teniente Grummus", ptBR = "Tenente Grummus", ruRU = "Лейтенант Грумм", koKR = "부관 그룸무스", zhCN = "格鲁姆斯中尉", zhTW = "格魯姆斯中尉"},
 		zones = {2597},
 	},
-	[13146] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "59",
-		names = {enUS = "Lieutenant Murp", esES = "Teniente Murp", ptBR = "Tenente Murp", ruRU = "Лейтенант Мурп", koKR = "부관 머프", zhCN = "莫普中尉", zhTW = "莫普中尉"},
-		zones = {2597},
-	},
-	[13147] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "59",
-		names = {enUS = "Lieutenant Lewis", esES = "Teniente Lewis", ptBR = "Tenente Lewis", ruRU = "Лейтенант Льюис", koKR = "부관 류이스", zhCN = "刘易斯中尉", zhTW = "路易斯中尉"},
-		zones = {2597},
-	},
-	[13152] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "61",
-		names = {enUS = "Commander Malgor", deDE = "Kommandant Malgor", esES = "Comandante Malgor", frFR = "Commandant Malgor", ptBR = "Comandante Malgor", ruRU = "Командир Малгор", koKR = "지휘관 말고르", zhCN = "指挥官玛戈尔", zhTW = "指揮官瑪戈爾"},
-		zones = {2597},
-	},
-	[13154] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "61",
-		names = {enUS = "Commander Louis Philips", deDE = "Kommandant Louis Philips", esES = "Comandante Luis Filis", frFR = "Commandant Louis Philips", ptBR = "Comandante Luis Filipe", ruRU = "Командир Луи Филипс", koKR = "지휘관 루이스 필립스", zhCN = "指挥官刘易斯·菲利普", zhTW = "指揮官路易斯·菲力浦"},
-		zones = {2597},
-	},
 	[13160] = {
 		level = "56 - 58",
 		names = {enUS = "Carrion Swarmer", deDE = "Aasschwärmer", esES = "Enjambrista carroñero", frFR = "Grouillant putride", ptBR = "Artrópode Carniceiro", ruRU = "Паук-падальщик", koKR = "청소부딱정벌레", zhCN = "腐蚀群居虫", zhTW = "腐蝕群居蟲"},
 		zones = {2557},
-	},
-	[13181] = {
-		classification = "Elite",
-		faction = "Horde",
-		level = "60",
-		names = {enUS = "Wing Commander Mulverick", deDE = "Schwadronskommandant Mulverick", esES = "Comandante del aire Mulverick", frFR = "Chef d'escadrille Mulverick", ptBR = "Comandante de Ala Mulverick", ruRU = "Командир звена Малверик", koKR = "편대사령관 멀베릭", zhCN = "空军指挥官穆维里克", zhTW = "空軍指揮官穆維里克"},
-		zones = {2597},
 	},
 	[13196] = {
 		classification = "Elite",
@@ -17265,6 +16527,12 @@ rm.npcDB = {
 		names = {enUS = "Hydrospawn", deDE = "Hydrobrut", esES = "Hidromilecio", frFR = "Hydrogénos", ptBR = "Rebentágua", ruRU = "Гидротварь", koKR = "히드로스폰", zhCN = "海多斯博恩", zhTW = "海多斯博恩"},
 		zones = {2557},
 	},
+	[13282] = {
+		classification = "Elite",
+		level = "48",
+		names = {enUS = "Noxxion", ptBR = "Tóxxico", ruRU = "Ноксион", koKR = "녹시온", zhCN = "诺克赛恩", zhTW = "諾克賽恩"},
+		zones = {2100},
+	},
 	[13283] = {
 		faction = "Alliance",
 		level = "60",
@@ -17277,120 +16545,17 @@ rm.npcDB = {
 		names = {enUS = "Death Lash", deDE = "Todespeitsche", esES = "Látigo de la Muerte", frFR = "Fouet-mortel", ptBR = "Açoita-morte", ruRU = "Смертельный плетник", koKR = "죽음의 덩굴손", zhCN = "死亡鞭笞者", zhTW = "死亡鞭笞者"},
 		zones = {2557},
 	},
-	[13296] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "59",
-		names = {enUS = "Lieutenant Largent", esES = "Teniente Largent", ptBR = "Tenente Largent", ruRU = "Лейтенант Ларжент", koKR = "부관 라전트", zhCN = "拉基特中尉", zhTW = "拉基特中尉"},
-		zones = {2597},
-	},
-	[13297] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "59",
-		names = {enUS = "Lieutenant Stouthandle", esES = "Teniente Durasa", ptBR = "Tenente Cabofirme", ruRU = "Лейтенант Крепкохват", koKR = "부관 스타우트핸들", zhCN = "斯托哈德中尉", zhTW = "斯托哈德中尉"},
-		zones = {2597},
-	},
-	[13298] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "59",
-		names = {enUS = "Lieutenant Greywand", esES = "Teniente Greywand", ptBR = "Tenente Varagris", ruRU = "Лейтенант Серожезлл", koKR = "부관 그레이원드", zhCN = "格雷瓦德中尉", zhTW = "格雷瓦德中尉"},
-		zones = {2597},
-	},
-	[13299] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "59",
-		names = {enUS = "Lieutenant Lonadin", esES = "Teniente Lonadin", ptBR = "Tenente Sóladin", ruRU = "Лейтенант Лонадин", koKR = "부관 로나딘", zhCN = "鲁纳丁中尉", zhTW = "魯納丁中尉"},
-		zones = {2597},
-	},
-	[13300] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "59",
-		names = {enUS = "Lieutenant Mancuso", esES = "Teniente Mancuso", ptBR = "Tenente Mancuso", ruRU = "Лейтенант Манкузо", koKR = "부관 만쿠소", zhCN = "曼库斯中尉", zhTW = "曼庫斯中尉"},
-		zones = {2597},
-	},
-	[13301] = {
-		level = "56 - 57",
-		names = {enUS = "Hive'Ashi Ambusher", deDE = "Wegelagerer des Ashischwarms", esES = "Emboscador Colmen'Ashi", frFR = "Embusquée de la Ruche'Ashi", ptBR = "Emboscador da Colme'Ashi", ruRU = "Душитель из улья Аши", koKR = "잠복꾼 하이브아쉬", zhCN = "亚什伏击者", zhTW = "亞什伏擊者"},
-		zones = {1377},
-	},
-	[13318] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "61",
-		names = {enUS = "Commander Mortimer", deDE = "Kommandant Mortimer", esES = "Comandante Mortimer", frFR = "Commandant Mortimer", ptBR = "Comandante Mortimer", ruRU = "Командир Мортимер", koKR = "지휘관 몰티머", zhCN = "指挥官莫塔米尔", zhTW = "指揮官莫泰咪爾"},
-		zones = {2597},
-	},
-	[13319] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "61",
-		names = {enUS = "Commander Duffy", deDE = "Kommandant Duffy", esES = "Comandante Duffy", frFR = "Commandant Duffy", ptBR = "Comandante Duffy", ruRU = "Командир Даффи", koKR = "지휘관 더피", zhCN = "指挥官杜菲", zhTW = "指揮官達菲"},
-		zones = {2597},
-	},
-	[13320] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "61",
-		names = {enUS = "Commander Karl Philips", deDE = "Kommandant Karl Philips", esES = "Comandante Karl Filis", frFR = "Commandant Karl Philips", ptBR = "Comandante Carlos Filipe", ruRU = "Командир Карл Филипс", koKR = "지휘관 칼 필립스", zhCN = "指挥官卡尔·菲利普", zhTW = "指揮官卡爾·菲力浦"},
-		zones = {2597},
-	},
 	[13323] = {
 		classification = "Elite",
 		level = "46 - 48",
 		names = {enUS = "Subterranean Diemetradon", deDE = "Unterirdisches Dimetrodon", esES = "Diemetradón subterráneo", esMX = "Diemetradón subterráneo", frFR = "Dimeurtrodon souterrain", ptBR = "Dimetrodonte Subterrâneo", ruRU = "Подземный деметродон", koKR = "지하 디메트로돈", zhCN = "地下双帆龙", zhTW = "地下雙帆龍"},
 		zones = {2100},
 	},
-	[13326] = {
-		faction = "Alliance",
-		level = "59",
-		names = {enUS = "Seasoned Defender", deDE = "Erfahrener Verteidiger", esES = "Defensor de estación", frFR = "Défenseur aguerri", ptBR = "Defensor Experiente", ruRU = "Опытный охранитель", koKR = "상급 수호병", zhCN = "经验丰富的防御者", zhTW = "經驗豐富的防禦者"},
-		zones = {2597},
-	},
-	[13328] = {
-		faction = "Horde",
-		level = "59",
-		names = {enUS = "Seasoned Guardian", deDE = "Erfahrener Wächter", esES = "Guardián de estación", frFR = "Gardien aguerri", ptBR = "Guardião Experiente", ruRU = "Опытный стражник", koKR = "상급 수호병", zhCN = "经验丰富的守卫者", zhTW = "經驗豐富的守衛者"},
-		zones = {2597},
-	},
-	[13331] = {
-		faction = "Alliance",
-		level = "60",
-		names = {enUS = "Veteran Defender", deDE = "Verteidigerveteran", esES = "Defensor veterano", frFR = "Défenseur vétéran", ptBR = "Defensor Veterano", ruRU = "Бывалый защитник", koKR = "정예 수호병", zhCN = "精练的防御者", zhTW = "精練的防禦者"},
-		zones = {2597},
-	},
-	[13332] = {
-		faction = "Horde",
-		level = "60",
-		names = {enUS = "Veteran Guardian", deDE = "Wächterveteran", esES = "Guardián veterano", frFR = "Gardien vétéran", ptBR = "Guardião Veterano", ruRU = "Бывалый страж", koKR = "정예 수호병", zhCN = "精练的守卫者", zhTW = "精練的守衛者"},
-		zones = {2597},
-	},
-	[13358] = {
-		faction = "Alliance",
-		level = "59 - 60",
-		names = {enUS = "Stormpike Bowman", deDE = "Stormpike-Bogenschütze", esES = "Arquero de Pico Tormenta", frFR = "Archer Stormpike", ptBR = "Arqueiro Lançatroz", ruRU = "Снайпер из клана Грозовой Вершины", koKR = "스톰파이크 궁병", zhCN = "联盟弓箭手", zhTW = "聯盟弓箭手"},
-		zones = {2597},
-	},
-	[13359] = {
-		faction = "Horde",
-		level = "59 - 60",
-		names = {enUS = "Frostwolf Bowman", deDE = "Bogenschütze der Frostwolf", esES = "Arquero Lobo Gélido", frFR = "Archer Frostwolf", ptBR = "Arqueiro dos Lobo do Gelo", ruRU = "Снайпер из клана Северного Волка", koKR = "서리늑대 궁병", zhCN = "霜狼弓箭手", zhTW = "霜狼弓箭手"},
-		zones = {2597},
-	},
 	[13420] = {
 		faction = "Horde",
 		level = "30",
 		names = {enUS = "Penney Copperpinch", esES = "Penney Cobrellizco", ptBR = "Zendas Pechisbeque", ruRU = "Ликоста Меднокноп", koKR = "펜니 코퍼핀치", zhCN = "本尼·考伯宾奇", zhTW = "本尼·考伯賓奇"},
 		zones = {1637},
-	},
-	[13422] = {
-		faction = "Alliance",
-		level = "61",
-		names = {enUS = "Champion Defender", deDE = "Verteidigerchampion", esES = "Defensor Campeón", frFR = "Défenseur champion", ptBR = "Defensor Campeão", ruRU = "Защитник-ветеран", koKR = "최정예 수호병", zhCN = "勇猛的防御者", zhTW = "勇猛的防禦者"},
-		zones = {2597},
 	},
 	[13429] = {
 		faction = "Horde",
@@ -17416,48 +16581,33 @@ rm.npcDB = {
 		names = {enUS = "Khole Jinglepocket", esES = "Khole Calderilla", ptBR = "Seyah \"Dindim\" Goubel", ruRU = "Деор Деньгозвон", koKR = "크홀 징글포켓", zhCN = "霍勒", zhTW = "霍勒"},
 		zones = {1519},
 	},
-	[13447] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "58 - 59",
-		names = {enUS = "Corporal Noreg Stormpike", esES = "Cabo Noreg Pico Tormenta", frFR = "Caporal Noreg Stormpike", ptBR = "Cabo Noreg Lançatroz", ruRU = "Капрал Норг Грозовая Вершина", koKR = "하사관 노레그 스톰파이크", zhCN = "诺雷格·雷矛中尉", zhTW = "諾雷格·雷矛中尉"},
-		zones = {2597},
-	},
-	[13448] = {
-		faction = "Horde",
-		level = "56 - 57",
-		names = {enUS = "Sergeant Yazra Bloodsnarl", esES = "Sargento Yazra Gruñidosangriento", frFR = "Sergent Yazra Bloodsnarl", ptBR = "Sargento Yazra Rosnassangue", ruRU = "Сержант Язра Кровавый Рык", koKR = "하사관 야즈라 블러드스날", zhCN = "亚斯拉·血矛", zhTW = "亞斯拉·血矛"},
-		zones = {2597},
-	},
 	[13476] = {
 		faction = "Horde",
 		level = "43",
 		names = {enUS = "Balai Lok'Wein", ruRU = "Бала Лок'Вен", koKR = "발라이 로크웨인", zhCN = "巴莱·洛克维", zhTW = "巴萊·洛克維"},
 		zones = {15},
 	},
-	[13577] = {
+	[13596] = {
 		classification = "Elite",
-		faction = "Alliance",
-		level = "60",
-		names = {enUS = "Stormpike Ram Rider Commander", deDE = "Kommandant der Stormpike-Widderreiter", esES = "Comandante de jinetes de carneros de Pico Tormenta", frFR = "Commandant Chevaucheur de bélier Stormpike", ptBR = "Comandante de Carneiros de Lançatroz", ruRU = "Командир наездников на баранах из клана Грозовой Вершины", koKR = "스톰파이크 산양기병대 지휘관", zhCN = "雷矛山羊骑兵指挥官", zhTW = "雷矛山羊騎兵指揮官"},
-		zones = {2597},
+		level = "50",
+		names = {enUS = "Rotgrip", deDE = "Faulschnapper", esES = "Escamapodrida", frFR = "Grippe-charogne", ptBR = "Putrigarra", ruRU = "Гнилопасть", koKR = "썩은아귀", zhCN = "洛特格里普", zhTW = "洛特格里普"},
+		zones = {2100},
 	},
 	[13599] = {
 		level = "46 - 47",
 		names = {enUS = "Stolid Snapjaw", deDE = "Phlegmatischer Schnappkiefer", esES = "Quijaforte imperturbable", esMX = "Quijaforte imperturbable", frFR = "Gueule d'acier impassible", ptBR = "Mordelisca Estólida", ruRU = "Вялый хрустогрыз", koKR = "느림보 무쇠턱거북", zhCN = "迟钝的钳嘴龟", zhTW = "遲鈍的鉗嘴龜"},
 		zones = {2100},
 	},
+	[13601] = {
+		classification = "Elite",
+		level = "50",
+		names = {enUS = "Tinkerer Gizlock", deDE = "Tüftler Gizlock", esES = "Manitas Gizlock", frFR = "Artisan Gizlock", ptBR = "Engenhoqueiro Bugitranca", ruRU = "Ремонтник Гизлок", koKR = "땜장이 기즐록", zhCN = "工匠吉兹洛克", zhTW = "工匠吉茲洛克"},
+		zones = {2100},
+	},
 	[13696] = {
 		level = "46",
 		names = {enUS = "Noxxious Scion", deDE = "Noxxious-Spross", esES = "Vástago tóxico", frFR = "Engeance de Noxxious", ptBR = "Rebento Tóxxico", ruRU = "Ядовитая лоза", koKR = "녹시온의 후예", zhCN = "诺克赛恩幼体", zhTW = "諾克賽恩幼體"},
 		zones = {2100},
-	},
-	[13797] = {
-		classification = "Elite",
-		faction = "Alliance",
-		level = "60 - 61",
-		names = {enUS = "Mountaineer Boombellow", deDE = "Gebirgsjäger Boombellow", esES = "Montaraz Bramibum", frFR = "Montagnard Boombellow", ptBR = "Montanhista Tony Troante", ruRU = "Горный пехотинец Гулкий Крик", koKR = "산악경비대 붐벨로", zhCN = "巡山人布比罗", zhTW = "巡山人布比羅"},
-		zones = {2597},
 	},
 	[13996] = {
 		classification = "Elite",
@@ -17469,12 +16619,6 @@ rm.npcDB = {
 		level = "42 - 43",
 		names = {enUS = "Steeljaw Snapper", deDE = "Stahlkieferschnapper", esES = "Sacudidor Mandiacero", esMX = "Sacudidor Quijacero", frFR = "Mordeuse mâchoire d'acier", ptBR = "Tartalisca Maxilaço", ruRU = "Стальноклювый крепкохват", koKR = "강철 무쇠턱거북", zhCN = "钢腭钳嘴龟", zhTW = "鋼齶鉗嘴龜"},
 		zones = {440},
-	},
-	[14187] = {
-		faction = "Alliance",
-		level = "60",
-		names = {enUS = "Athramanis", ruRU = "Атраманис", koKR = "아스라마니스", zhCN = "亚斯拉玛尼斯", zhTW = "亞斯拉瑪尼斯"},
-		zones = {2597},
 	},
 	[14226] = {
 		classification = "Rare",
@@ -17494,12 +16638,6 @@ rm.npcDB = {
 		names = {enUS = "Lord Condar", frFR = "Seigneur Condar", ptBR = "Lorde Condar", ruRU = "Лорд Кондар", koKR = "독수리왕 콘다르", zhCN = "康达尔", zhTW = "康達爾"},
 		zones = {38},
 	},
-	[14269] = {
-		classification = "Rare",
-		level = "21",
-		names = {enUS = "Seeker Aqualon", deDE = "Sucher Aqualon", esES = "Fustigador Aqualon", esMX = "Buscador Aqualon", frFR = "Aqualon le Chercheur", ptBR = "Perscrutador Aqualon", ruRU = "Искатель Аквалон", koKR = "수색자 아쿠알론", zhCN = "搜寻者埃库隆", zhTW = "搜尋者埃庫隆"},
-		zones = {44},
-	},
 	[14276] = {
 		classification = "Rare",
 		level = "30",
@@ -17512,34 +16650,10 @@ rm.npcDB = {
 		names = {enUS = "Ro'Bark", ptBR = "Do'Late", ruRU = "Ро'Барк", koKR = "로바크", zhCN = "洛巴尔克", zhTW = "洛巴爾克"},
 		zones = {267},
 	},
-	[14282] = {
-		faction = "Horde",
-		level = "53 - 54",
-		names = {enUS = "Frostwolf Bloodhound", deDE = "Bluthund der Frostwolf", esES = "Canisangre Lobo Gélido", frFR = "Limier frostwolf", ptBR = "Canissangue dos Lobo do Gelo", ruRU = "Гончий волк", koKR = "전투 서리늑대", zhCN = "霜狼血犬", zhTW = "霜狼血犬"},
-		zones = {2597},
-	},
-	[14283] = {
-		faction = "Alliance",
-		level = "53 - 54",
-		names = {enUS = "Stormpike Owl", deDE = "Stormpike-Eule", esES = "Lechuza de Pico Tormenta", frFR = "Hibou Stormpike", ptBR = "Coruja de Lançatroz", ruRU = "Сова клана Грозовой Вершины", koKR = "스톰파이크 올빼미", zhCN = "雷矛猫头鹰", zhTW = "雷矛貓頭鷹"},
-		zones = {2597},
-	},
-	[14303] = {
-		classification = "Elite",
-		level = "57 - 59",
-		names = {enUS = "Petrified Guardian", deDE = "Versteinerter Wächter", esES = "Guardián petrificado", frFR = "Gardien pétrifié", ptBR = "Guardião Petrificado", ruRU = "Одеревеневший страж", koKR = "무쇠껍질 수호정령", zhCN = "僵硬守护者", zhTW = "僵硬守護者"},
-		zones = {2557},
-	},
 	[14321] = {
 		classification = "Elite",
 		level = "58 - 59",
 		names = {enUS = "Guard Fengus", deDE = "Wache Fengus", esES = "Guardia Fengus", esMX = "Guardia Fengus", frFR = "Garde Fengus", ptBR = "Guarda Fengus", ruRU = "Стражник Фенгус", koKR = "경비병 펜구스", zhCN = "卫兵芬古斯", zhTW = "衛兵芬古斯"},
-		zones = {2557},
-	},
-	[14351] = {
-		classification = "Elite",
-		level = "58 - 59",
-		names = {enUS = "Gordok Bushwacker", deDE = "Einzelkämpfer der Gordok", esES = "Arbusloco Gordok", frFR = "Gordok Guet-apens", ptBR = "Batedor Gordok", ruRU = "Дубильщик из клана Гордок", koKR = "고르독일족 매복병", zhCN = "高多克·布斯瓦克", zhTW = "高多克·布斯瓦克"},
 		zones = {2557},
 	},
 	[14354] = {
@@ -17552,23 +16666,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "52",
 		names = {enUS = "Shen'dralar Provisioner", deDE = "Versorger der Shen'dralar", esES = "Proveedor Shen'dralar", frFR = "Approvisionneur Shen'dralar", ptBR = "Fornecedor Shen'dralar", ruRU = "Шен'драларский поставщик", koKR = "셴드랄라 배급원", zhCN = "辛德拉圣职者", zhTW = "辛德拉聖職者"},
-		zones = {2557},
-	},
-	[14398] = {
-		classification = "Elite",
-		level = "58 - 59",
-		names = {enUS = "Eldreth Darter", deDE = "Grimmlingflitzer der Eldreth", esES = "Dardo Eldreth", frFR = "Fléchetteuse Eldreth", ptBR = "Dardejador Eldretiano", ruRU = "Элдретарский хамелеон", koKR = "엘드레스 화살요정용", zhCN = "艾德雷斯精龙", zhTW = "艾德雷斯精龍"},
-		zones = {2557},
-	},
-	[14399] = {
-		classification = "Elite",
-		level = "59 - 60",
-		names = {enUS = "Arcane Torrent", deDE = "Arkaner Strom", esES = "Torrente Arcano", frFR = "Torrent arcanique", ptBR = "Torrente Arcana", ruRU = "Волшебный поток", koKR = "비전의 격류", zhCN = "奥术洪流", zhTW = "祕法洪流"},
-		zones = {2557},
-	},
-	[14400] = {
-		level = "59 - 60",
-		names = {enUS = "Arcane Feedback", deDE = "Arkane Rückkopplung", esES = "Reactivo Arcano", frFR = "Réaction arcanique", ptBR = "Fluxo Arcano", ruRU = "Волшебное искажение", koKR = "비전의 역류", zhCN = "奥术回馈者", zhTW = "祕法回饋者"},
 		zones = {2557},
 	},
 	[14401] = {
@@ -17589,54 +16686,17 @@ rm.npcDB = {
 		names = {enUS = "Grimmaw", deDE = "Grimmtatze", esES = "Faucenestra", esMX = "Faucenestra", ptBR = "Bocarranca", ruRU = "Зловещая Утроба", koKR = "검은아귀", zhCN = "格雷莫尔", zhTW = "格雷莫爾"},
 		zones = {141},
 	},
-	[14431] = {
-		classification = "Rare",
-		level = "8",
-		names = {enUS = "Fury Shelda", deDE = "Furie Shelda", esES = "Furia Shelda", esMX = "Furia Shelda", frFR = "Furie Shelda", ptBR = "Fúria Shelda", ruRU = "Фурия Шельда", koKR = "복수의 여신 쉘다", zhCN = "愤怒的谢尔达", zhTW = "憤怒的謝爾達"},
-		zones = {141},
-	},
-	[14454] = {
-		classification = "Rare Elite",
-		level = "60",
-		names = {enUS = "The Windreaver", deDE = "Der Windhäscher", esES = "El Atracavientos", frFR = "Le Déchirevent", ptBR = "O Teceventos", ruRU = "Ветробой", koKR = "칼날바람", zhCN = "烈风掠夺者", zhTW = "烈風掠奪者"},
-		zones = {1377},
-	},
-	[14455] = {
-		level = "57 - 58",
-		names = {enUS = "Whirling Invader", deDE = "Wirbelnder Eindringling", esES = "Invasor girandero", esMX = "Invasor giratorio", frFR = "Envahisseur tourbillonnant", ptBR = "Invasor Rodopiante", ruRU = "Вертящийся захватчик", koKR = "회오리치는 침략자", zhCN = "旋风入侵者", zhTW = "旋風入侵者"},
-		zones = {1377},
-	},
 	[14457] = {
 		classification = "Rare Elite",
 		level = "60",
 		names = {enUS = "Princess Tempestria", deDE = "Prinzessin Tempestria", esES = "Princesa Tempestria", frFR = "Princesse Tempestria", ptBR = "Princesa Tempestria", ruRU = "Принцесса Бурилла", koKR = "공주 템페스트리아", zhCN = "泰比斯蒂亚公主", zhTW = "泰比斯蒂亞公主"},
 		zones = {618},
 	},
-	[14458] = {
-		level = "56 - 58",
-		names = {enUS = "Watery Invader", deDE = "Wässriger Eindringling", esES = "Invasor acuático", frFR = "Envahisseur aqueux", ptBR = "Invasor Aquoso", ruRU = "Водянистый захватчик", koKR = "소용돌이치는 침략자", zhCN = "水流入侵者", zhTW = "水流入侵者"},
-		zones = {618},
-	},
-	[14460] = {
-		level = "54 - 56",
-		names = {enUS = "Blazing Invader", deDE = "Lodernder Eindringling", esES = "Invasor de fuego", frFR = "Envahisseur flamboyant", ptBR = "Invasor Fulgurante", ruRU = "Пылающий захватчик", koKR = "불타오르는 침략자", zhCN = "炽热入侵者", zhTW = "熾熱入侵者"},
-		zones = {490},
-	},
-	[14462] = {
-		level = "55 - 57",
-		names = {enUS = "Thundering Invader", deDE = "Donnernder Eindringling", esES = "Invasor tronador", frFR = "Envahisseur grondant", ptBR = "Invasor Trovejante", ruRU = "Грохочущий захватчик", koKR = "진동하는 침략자", zhCN = "雷霆入侵者", zhTW = "雷霆入侵者"},
-		zones = {16},
-	},
 	[14532] = {
 		classification = "Elite",
 		level = "55 - 60",
 		names = {enUS = "Razzashi Venombrood", deDE = "Razzashigiftbrut", esES = "Venenoso Razzashi", frFR = "Fils du venin Razzashi", ptBR = "Veneracnídea Razzashi", ruRU = "Ядокус Раззаши", koKR = "래즈자쉬 독거미", zhCN = "拉扎什毒血蜘蛛", zhTW = "拉札希毒液蜘蛛"},
 		zones = {1977},
-	},
-	[14564] = {
-		level = "59 - 60",
-		names = {enUS = "Terrordale Spirit", deDE = "Schreckenstalgeist", esES = "Espíritu del Valle del Terror", frFR = "Esprit de Val-Terreur", ptBR = "Espírito da Várzea do Medo", ruRU = "Дух долины Ужаса", koKR = "테러데일 영혼", zhCN = "恐惧谷的灵魂", zhTW = "恐懼谷的靈魂"},
-		zones = {139},
 	},
 	[14567] = {
 		faction = "Horde",
@@ -17648,12 +16708,6 @@ rm.npcDB = {
 		level = "40",
 		names = {enUS = "Zorbin Fandazzle", esES = "Zorbin Hipnoviento", ptBR = "Zorbin Cegasvista", ruRU = "Зорбин Дребезгун", koKR = "조브린 팬대즐", zhCN = "索尔宾·范达瑟", zhTW = "索爾賓·范達瑟"},
 		zones = {357},
-	},
-	[14684] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Balzaphon", ruRU = "Балзафон", koKR = "발자폰", zhCN = "巴尔萨冯", zhTW = "巴爾薩馮"},
-		zones = {2017},
 	},
 	[14738] = {
 		faction = "Horde",
@@ -17696,11 +16750,10 @@ rm.npcDB = {
 		names = {enUS = "Withered Mistress", deDE = "Herrin des Siechens", esES = "Maestra marchita", frFR = "Maîtresse desséchée", ptBR = "Dama Seca", ruRU = "Иссохшая Наложница", koKR = "부패한 무희", zhCN = "衰老的侍女", zhTW = "衰老的侍女"},
 		zones = {1977},
 	},
-	[14861] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Blood Steward of Kirtonos", deDE = "Blutdiener von Kirtonos", esES = "Ayudante de sangre de Kirtonos", esMX = "Administradora de sangre de Kirtonos", frFR = "Régisseuse sanglante de Kirtonos", ptBR = "Governanta Sangrenta de Kirtonos", ruRU = "Кровавая прислужница Киртоноса", koKR = "키르토노스의 혈지기", zhCN = "基尔图诺斯的卫士", zhTW = "基爾圖諾斯的衛士"},
-		zones = {2057},
+	[14828] = {
+		level = "25",
+		names = {enUS = "Gelvas Grimegate", esES = "Gelvas Roñas", esMX = "Gelvas Roñoso", ptBR = "Gelvas Portassuja", ruRU = "Гелвас Углешлюз", koKR = "겔바스 그림게이트", zhCN = "吉瓦斯·格里加特", zhTW = "吉瓦斯·葛萊蓋特"},
+		zones = {12, 215},
 	},
 	[14880] = {
 		classification = "Elite",
@@ -17789,46 +16842,6 @@ rm.npcDB = {
 		names = {enUS = "Cenarion Hold Infantry", deDE = "Soldat der Burg Cenarius", esES = "Infantería del Fuerte Cenarion", esMX = "Infantería del Fuerte Cenarion", frFR = "Infanterie du Fort cénarien", ptBR = "Infantaria do Forte Cenariano", ruRU = "Пехотинец из крепости Кенария", koKR = "세나리온 요새 보초병", zhCN = "塞纳里奥要塞步兵", zhTW = "塞納里奧城堡步兵"},
 		zones = {1377},
 	},
-	[15201] = {
-		level = "60",
-		names = {enUS = "Twilight Flamereaver", deDE = "Flammenhäscher der Twilight", esES = "Flamatracador Crepuscular", esMX = "Flamatracador Crepuscular", frFR = "Flamme ravageuse du crépuscule", ptBR = "Latroflamas do Crepúsculo", ruRU = "Пламехват из культа Сумеречного Молота", koKR = "황혼의 화염약탈자", zhCN = "暮光烈焰掠夺者", zhTW = "暮光烈焰掠奪者"},
-		zones = {1377},
-	},
-	[15207] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "The Duke of Fathoms", deDE = "Der Fürst der Tiefen", esES = "Duque de las Profundidades", esMX = "Duque de las Profundidades", frFR = "Le duc des Profondeurs", ptBR = "O Duque das Profundezas", ruRU = "Герцог Глубин", koKR = "나락의 군주", zhCN = "深渊公爵", zhTW = "深淵公爵"},
-		zones = {1377},
-	},
-	[15209] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Crimson Templar", deDE = "Purpurroter Templer", esES = "Templario Carmesí", esMX = "Templario Carmesí", frFR = "Templier cramoisi", ptBR = "Templário Carmesim", ruRU = "Багровый храмовник", koKR = "진홍 기사단", zhCN = "赤红圣殿骑士", zhTW = "赤紅聖殿騎士"},
-		zones = {1377},
-	},
-	[15211] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Azure Templar", deDE = "Azurblauer Templer", esES = "Templario azur", frFR = "Templier d'azur", ptBR = "Templário Lazúli", ruRU = "Лазурный храмовник", koKR = "청명 기사단", zhCN = "碧蓝圣殿骑士", zhTW = "碧藍聖殿騎士"},
-		zones = {1377},
-	},
-	[15212] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Hoary Templar", deDE = "Weißgrauer Templer", esES = "Templario vetusto", frFR = "Templier chenu", ptBR = "Templário Gris", ruRU = "Седой храмовник", koKR = "백색 기사단", zhCN = "苍白圣殿骑士", zhTW = "蒼白聖殿騎士"},
-		zones = {1377},
-	},
-	[15213] = {
-		level = "60 - 61",
-		names = {enUS = "Twilight Overlord", deDE = "Oberanführer der Twilight", esES = "Señor Supremo Crepuscular", esMX = "Señor supremo Crepuscular", frFR = "Suzerain du crépuscule", ptBR = "Suserano do Crepúsculo", ruRU = "Властитель культа Сумеречного Молота", koKR = "황혼의 대군주", zhCN = "暮光霸主", zhTW = "暮光霸主"},
-		zones = {1377},
-	},
-	[15229] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Vekniss Soldier", deDE = "Soldat der Vekniss", esES = "Soldado Vekniss", frFR = "Soldat vekniss", ptBR = "Soldado Vekniss", ruRU = "Векнисский солдат", koKR = "병정 베크니스", zhCN = "维克尼士兵", zhTW = "維克尼斯士兵"},
-		zones = {3428},
-	},
 	[15230] = {
 		classification = "Elite",
 		level = "61",
@@ -17889,34 +16902,10 @@ rm.npcDB = {
 		names = {enUS = "Qiraji Champion", deDE = "Champion der Qiraji", esES = "Campeón Qiraji", frFR = "Champion qiraji", ptBR = "Campeão Qiraji", ruRU = "Кирайский воитель", koKR = "퀴라지 용사", zhCN = "其拉勇士", zhTW = "其拉勇士"},
 		zones = {3428},
 	},
-	[15262] = {
-		classification = "Elite",
-		level = "59 - 60",
-		names = {enUS = "Obsidian Eradicator", deDE = "Obsidianvernichter", esES = "Erradicador Obsidiano", frFR = "Eradicateur d'obsidienne", ptBR = "Erradicador Obsidiano", ruRU = "Обсидиановый искоренитель", koKR = "흑요석 파멸자", zhCN = "黑曜石清除者", zhTW = "黑曜石根除者"},
-		zones = {3428},
-	},
-	[15263] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "The Prophet Skeram", deDE = "Der Prophet Skeram", esES = "El profeta Skeram", frFR = "Le Prophète Skeram", ptBR = "Profeta Skeram", ruRU = "Пророк Скерам", koKR = "예언자 스케람", zhCN = "预言者斯克拉姆", zhTW = "預言者斯克拉姆"},
-		zones = {3428},
-	},
 	[15264] = {
 		classification = "Elite",
 		level = "60 - 61",
 		names = {enUS = "Anubisath Sentinel", deDE = "Wächter des Anubisath", esES = "Centinela Anubisath", frFR = "Sentinelle Anubisath", ptBR = "Sentinela Anubisath", ruRU = "Анубисат-часовой", koKR = "아누비사스 파수병", zhCN = "阿努比萨斯哨兵", zhTW = "阿努比薩斯哨兵"},
-		zones = {3428},
-	},
-	[15275] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Emperor Vek'nilash", deDE = "Imperator Vek'nilash", esES = "Emperador Vek'nilash", frFR = "Empereur Vek'nilash", ptBR = "Imperador Vek'nilash", ruRU = "Император Век'нилаш", koKR = "제왕 베크닐라쉬", zhCN = "维克尼拉斯大帝", zhTW = "維克尼拉斯大帝"},
-		zones = {3428},
-	},
-	[15276] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Emperor Vek'lor", deDE = "Imperator Vek'lor", esES = "Emperador Vek'lor", frFR = "Empereur Vek'lor", ptBR = "Imperador Vek'lor", ruRU = "Император Век'лор", koKR = "제왕 베클로어", zhCN = "维克洛尔大帝", zhTW = "維克洛爾大帝"},
 		zones = {3428},
 	},
 	[15277] = {
@@ -17924,18 +16913,6 @@ rm.npcDB = {
 		level = "62",
 		names = {enUS = "Anubisath Defender", deDE = "Verteidiger des Anubisath", esES = "Defensor Anubisath", frFR = "Défenseur Anubisath", ptBR = "Defensor Anubisath", ruRU = "Анубисат-защитник", koKR = "아누비사스 문지기", zhCN = "阿努比萨斯防御者", zhTW = "阿努比薩斯防禦者"},
 		zones = {3428},
-	},
-	[15299] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Viscidus", ruRU = "Нечистотон", koKR = "비시디우스", zhCN = "维希度斯", zhTW = "維希度斯"},
-		zones = {3428},
-	},
-	[15307] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Earthen Templar", deDE = "Irdener Templer", esES = "Templario de tierra", frFR = "Templier terrestre", ptBR = "Templário Terrano", ruRU = "Земной храмовник", koKR = "황색 기사단", zhCN = "土色圣殿骑士", zhTW = "土色聖殿騎士"},
-		zones = {1377},
 	},
 	[15311] = {
 		classification = "Elite",
@@ -17948,18 +16925,6 @@ rm.npcDB = {
 		level = "61",
 		names = {enUS = "Obsidian Nullifier", deDE = "Obsidianauslöscher", esES = "Nulificador Obsidiano", frFR = "Annulateur d'obsidienne", ptBR = "Nulificador Obsidiano", ruRU = "Обсидиановый губитель", koKR = "흑요석 종결자", zhCN = "黑曜石终结者", zhTW = "黑曜石淨化者"},
 		zones = {3428},
-	},
-	[15318] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Hive'Zara Drone", deDE = "Drohne des Zaraschwarms", esES = "Zángano Colmen'Zara", esMX = "Zángano Colmen'Zara", frFR = "Bourdon de la Ruche'Zara", ptBR = "Zangão Colme'Zara", ruRU = "Трутень из улья Зара", koKR = "일꾼 하이브자라", zhCN = "佐拉雄蜂", zhTW = "札拉雄蜂"},
-		zones = {3429},
-	},
-	[15319] = {
-		classification = "Elite",
-		level = "60",
-		names = {enUS = "Hive'Zara Collector", deDE = "Sammler des Zaraschwarms", esES = "Coleccionista Colmen'Zara", esMX = "Coleccionista Colmen'Zara", frFR = "Collecteur de la Ruche'Zara", ptBR = "Recolhedor Colme'Zara", ruRU = "Сборщик из улья Зара", koKR = "채집꾼 하이브자라", zhCN = "佐拉采集者", zhTW = "札拉採集者"},
-		zones = {3429},
 	},
 	[15320] = {
 		classification = "Elite",
@@ -18002,34 +16967,10 @@ rm.npcDB = {
 		names = {enUS = "Flesh Hunter", deDE = "Fleischjäger", esES = "Cazador de carne", esMX = "Cazador de carne", frFR = "Chasse-chair", ptBR = "Caça-carne", ruRU = "Плотоед", koKR = "청소부 수액괴물", zhCN = "血肉猎手", zhTW = "血肉獵手"},
 		zones = {3429},
 	},
-	[15336] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Hive'Zara Tail Lasher", deDE = "Schwanzpeitscher des Zaraschwarms", esES = "Colazote Colmen'Zara", esMX = "Colazote Colmen'Zara", frFR = "Fouette-queue de la Ruche'Zara", ptBR = "Caudaçoite Colme'Zara", ruRU = "Бичехвост из улья Зара", koKR = "채찍꼬리 하이브자라", zhCN = "佐拉鞭尾蝎", zhTW = "札拉鞭尾蠍"},
-		zones = {3429},
-	},
 	[15338] = {
 		classification = "Elite",
 		level = "61",
 		names = {enUS = "Obsidian Destroyer", deDE = "Obsidianzerstörer", esES = "Destructor obsidiano", esMX = "Destructor obsidiano", frFR = "Destructeur d'obsidienne", ptBR = "Destruidor Obsidiano", ruRU = "Обсидиановый разрушитель", koKR = "흑요석 파괴자", zhCN = "黑曜石毁灭者", zhTW = "黑曜石毀滅者"},
-		zones = {3429},
-	},
-	[15339] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Ossirian the Unscarred", deDE = "Ossirian der Narbenlose", esES = "Osirio el Sinmarcas", esMX = "Osirio el Sinmarcas", frFR = "Ossirian l'Intouché", ptBR = "Ossirian, o Intocado", ruRU = "Оссириан Неуязвимый", koKR = "무적의 오시리안", zhCN = "无疤者奥斯里安", zhTW = "無疤者奧斯里安"},
-		zones = {3429},
-	},
-	[15340] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Moam", ruRU = "Моам", koKR = "모암", zhCN = "莫阿姆", zhTW = "莫阿姆"},
-		zones = {3429},
-	},
-	[15341] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "General Rajaxx", frFR = "Général Rajaxx", ruRU = "Генерал Раджакс", koKR = "장군 라작스", zhCN = "拉贾克斯将军", zhTW = "拉賈克斯將軍"},
 		zones = {3429},
 	},
 	[15343] = {
@@ -18038,40 +16979,10 @@ rm.npcDB = {
 		names = {enUS = "Qiraji Swarmguard", deDE = "Schwarmwache der Qiraji", esES = "Guardaenjambre qiraji", esMX = "Guardaenjambre qiraji", frFR = "Garde-essaim qiraji", ptBR = "Zanguarda Qiraji", ruRU = "Страж роя-кираж", koKR = "퀴라지 감시병", zhCN = "其拉虫群卫士", zhTW = "其拉蟲群衛士"},
 		zones = {3429},
 	},
-	[15348] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Kurinnaxx", ptBR = "Korinnaxx", ruRU = "Куриннакс", koKR = "쿠린낙스", zhCN = "库林纳克斯", zhTW = "庫林納克斯"},
-		zones = {3429},
-	},
 	[15355] = {
 		classification = "Elite",
 		level = "62",
 		names = {enUS = "Anubisath Guardian", deDE = "Beschützer des Anubisath", esES = "Guardián Anubisath", esMX = "Guardián Anubisath", frFR = "Gardien Anubisath", ptBR = "Guardião Anubisath", ruRU = "Анубисат-страж", koKR = "아누비사스 감시자", zhCN = "阿努比萨斯守卫者", zhTW = "阿努比薩斯守衛者"},
-		zones = {3429},
-	},
-	[15369] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Ayamiss the Hunter", deDE = "Ayamiss der Jäger", esES = "Ayamiss el Cazador", esMX = "Ayamiss el Cazador", frFR = "Ayamiss le Chasseur", ptBR = "Ayamiss, o Caçador", ruRU = "Аямисса Охотница", koKR = "사냥꾼 아야미스", zhCN = "狩猎者阿亚米斯", zhTW = "狩獵者阿亞米斯"},
-		zones = {3429},
-	},
-	[15370] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Buru the Gorger", deDE = "Buru der Verschlinger", esES = "Buru el Manducador", esMX = "Buru el Manducador", frFR = "Buru Grandgosier", ptBR = "Buru, o Banqueteador", ruRU = "Буру Ненасытный", koKR = "먹보 부루", zhCN = "吞咽者布鲁", zhTW = "吞咽者布魯"},
-		zones = {3429},
-	},
-	[15385] = {
-		classification = "Elite",
-		level = "63",
-		names = {enUS = "Colonel Zerran", esES = "Coronel Zerran", esMX = "Coronel Zerran", ptBR = "Coronel Zerran", ruRU = "Полковник Зерран", koKR = "사령관 제란", zhCN = "泽兰上校", zhTW = "澤朗上校"},
-		zones = {3429},
-	},
-	[15386] = {
-		classification = "Elite",
-		level = "63",
-		names = {enUS = "Major Yeggeth", esES = "Mayor Yeggeth", esMX = "Mayor Yeggeth", ruRU = "Майор Йеггет", koKR = "부사령관 예게스", zhCN = "耶吉斯少校", zhTW = "葉吉斯少校"},
 		zones = {3429},
 	},
 	[15388] = {
@@ -18084,24 +16995,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "63",
 		names = {enUS = "Captain Drenn", esES = "Capitán Drenn", esMX = "Capitán Drenn", frFR = "Capitaine Drenn", ptBR = "Capitão Drenn", ruRU = "Капитан Дренн", koKR = "부대장 드렌", zhCN = "德雷恩上尉", zhTW = "德蘭上尉"},
-		zones = {3429},
-	},
-	[15390] = {
-		classification = "Elite",
-		level = "63",
-		names = {enUS = "Captain Xurrem", esES = "Capitán Xurrem", esMX = "Capitán Xurrem", frFR = "Capitaine Xurrem", ptBR = "Capitão Xurrem", ruRU = "Капитан Ксуррем", koKR = "부대장 수렘", zhCN = "库雷姆上尉", zhTW = "瑟瑞姆上尉"},
-		zones = {3429},
-	},
-	[15391] = {
-		classification = "Elite",
-		level = "63",
-		names = {enUS = "Captain Qeez", esES = "Capitán Condurso", esMX = "Capitán Condurso", frFR = "Capitaine Qeez", ptBR = "Capitão Qeez", ruRU = "Капитан Квиз", koKR = "부대장 퀴즈", zhCN = "奎兹上尉", zhTW = "奎茲上尉"},
-		zones = {3429},
-	},
-	[15392] = {
-		classification = "Elite",
-		level = "63",
-		names = {enUS = "Captain Tuubid", esES = "Capitán Tuubid", esMX = "Capitán Tuubid", frFR = "Capitaine Tuubid", ptBR = "Capitão Tuubid", ruRU = "Капитан Туубид", koKR = "부대장 투비드", zhCN = "图比德上尉", zhTW = "圖畢德上尉"},
 		zones = {3429},
 	},
 	[15419] = {
@@ -18133,54 +17026,6 @@ rm.npcDB = {
 		names = {enUS = "Lieutenant General Andorov", deDE = "Generallieutenant Andorov", esES = "Teniente general Andorov", esMX = "Teniente general Andorov", frFR = "Général de division Andorov", ptBR = "Tenente-general Andorov", ruRU = "Генерал-лейтенант Андоров", koKR = "사령관 안도로브", zhCN = "安多洛夫中将", zhTW = "安多洛夫中將"},
 		zones = {3429},
 	},
-	[15509] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Princess Huhuran", deDE = "Prinzessin Huhuran", esES = "Princesa Huhuran", frFR = "Princesse Huhuran", ptBR = "Princesa Huhuran", ruRU = "Принцесса Хухуран", koKR = "공주 후후란", zhCN = "哈霍兰公主", zhTW = "哈霍蘭公主"},
-		zones = {3428},
-	},
-	[15510] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Fankriss the Unyielding", deDE = "Fankriss der Unnachgiebige", esES = "Fankriss el Implacable", frFR = "Fankriss l'Inflexible", ptBR = "Fankriss, o Obstinado", ruRU = "Фанкрисс Непреклонный", koKR = "불굴의 판크리스", zhCN = "顽强的范克瑞斯", zhTW = "頑強的范克里斯"},
-		zones = {3428},
-	},
-	[15511] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Lord Kri", frFR = "Seigneur Kri", ptBR = "Lorde Kri", ruRU = "Лорд Кри", koKR = "군주 크리", zhCN = "克里勋爵", zhTW = "克里勳爵"},
-		zones = {3428},
-	},
-	[15516] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Battleguard Sartura", deDE = "Schlachtwache Sartura", esES = "Guardia de batalla Sartura", frFR = "Garde de guerre Sartura", ptBR = "Guarda de Batalha Sartura", ruRU = "Боевой страж Сартура", koKR = "전투감시병 살투라", zhCN = "沙尔图拉", zhTW = "沙爾圖拉"},
-		zones = {3428},
-	},
-	[15517] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Ouro", ptBR = "Ouroboros", ruRU = "Оуро", koKR = "아우로", zhCN = "奥罗", zhTW = "奧羅"},
-		zones = {3428},
-	},
-	[15543] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Princess Yauj", deDE = "Prinzessin Yauj", esES = "Princesa Yauj", frFR = "Princesse Yauj", ptBR = "Princesa Yauj", ruRU = "Принцесса Яудж", koKR = "공주 야우즈", zhCN = "亚尔基公主", zhTW = "亞爾基公主"},
-		zones = {3428},
-	},
-	[15544] = {
-		classification = "Boss",
-		level = "??",
-		names = {enUS = "Vem", ptBR = "Veim", ruRU = "Вем", koKR = "벰", zhCN = "维姆", zhTW = "維姆"},
-		zones = {3428},
-	},
-	[15591] = {
-		classification = "Elite",
-		level = "60 - 61",
-		names = {enUS = "Minion of Weavil", deDE = "Diener von Weavil", esES = "Esbirro de Weavil", frFR = "Séide de Weavil", ptBR = "Lacaio do Ívio", ruRU = "Прислужник Жла", koKR = "위빌의 부하", zhCN = "维维尔的爪牙", zhTW = "維維爾的爪牙"},
-		zones = {15},
-	},
 	[15909] = {
 		level = "60",
 		names = {enUS = "Fariel Starsong", esES = "Fariel Cantostelar", ptBR = "Fariel Stelacanto", ruRU = "Фариэль Песнь Звезд", koKR = "파리엘 스타송", zhCN = "法蕾尔·星歌", zhTW = "法莉爾·星歌"},
@@ -18196,24 +17041,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "60 - 61",
 		names = {enUS = "Carrion Spinner", deDE = "Aasspinner", esES = "Engranasto carroñero", frFR = "Tisse-charogne", ptBR = "Tecelã Putrífaga", ruRU = "Ткач-падальщик", koKR = "청소부 그물거미", zhCN = "腐肉织网者", zhTW = "腐屍紡織者"},
-		zones = {3456},
-	},
-	[15976] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Venom Stalker", deDE = "Giftpirscher", esES = "Acechadora venenoso", frFR = "Traque-venin", ptBR = "Espreitadora Peçonhenta", ruRU = "Ядовитый паук-скакун", koKR = "맹독 늑대거미", zhCN = "毒性捕猎者", zhTW = "毒液捕獵者"},
-		zones = {3456},
-	},
-	[15978] = {
-		classification = "Elite",
-		level = "60 - 61",
-		names = {enUS = "Crypt Reaver", deDE = "Grufthäscher", esES = "Atracador de la cripta", frFR = "Ravageur des cryptes", ptBR = "Aniquilador da Cripta", ruRU = "Некрорахнид-разоритель", koKR = "칼날발톱 지하마귀", zhCN = "地穴剥夺者", zhTW = "地穴掠奪者"},
-		zones = {3456},
-	},
-	[15979] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Tomb Horror", deDE = "Grabschrecken", esES = "Horror de las tumbas", frFR = "Horreur des tombes", ptBR = "Horror da Tumba", ruRU = "Могильный ужас", koKR = "공포의 무덤마귀", zhCN = "墓穴恐惧蛛魔", zhTW = "墓碑之恐"},
 		zones = {3456},
 	},
 	[15980] = {
@@ -18234,22 +17061,10 @@ rm.npcDB = {
 		names = {enUS = "Patchwork Golem", deDE = "Zusammengeflickter Golem", esES = "Gólem retacero", frFR = "Golem recousu", ptBR = "Golem de Retalhos", ruRU = "Лоскутный голем", koKR = "기워 붙인 누더기골렘", zhCN = "缝补傀儡", zhTW = "縫補傀儡"},
 		zones = {3456},
 	},
-	[16018] = {
-		classification = "Elite",
-		level = "60 - 61",
-		names = {enUS = "Bile Retcher", deDE = "Gallwürger", esES = "Arcadano bílico", frFR = "Vomisseur de bile", ptBR = "Vomita-bile", ruRU = "Желчерыг", koKR = "부패의 역병골렘", zhCN = "胆汁呕吐者", zhTW = "膽汁反胃者"},
-		zones = {3456},
-	},
 	[16020] = {
 		classification = "Elite",
 		level = "60 - 61",
 		names = {enUS = "Mad Scientist", deDE = "Verrückter Wissenschaftler", esES = "Científico loco", frFR = "Savant fou", ptBR = "Cientista Louco", ruRU = "Безумный ученый", koKR = "미치광이 과학자", zhCN = "疯狂的科学家", zhTW = "發狂的科學家"},
-		zones = {3456},
-	},
-	[16021] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Living Monstrosity", deDE = "Lebende Monströsität", esES = "Monstruosidad viviente", frFR = "Monstruosité vivante", ptBR = "Monstruosidade Viva", ruRU = "Живое чудовище", koKR = "살아 움직이는 괴물", zhCN = "畸形妖", zhTW = "活巨怪"},
 		zones = {3456},
 	},
 	[16022] = {
@@ -18257,24 +17072,6 @@ rm.npcDB = {
 		level = "60",
 		names = {enUS = "Surgical Assistant", deDE = "Chirurgenassistent", esES = "Auxiliar quirúrgico", frFR = "Assistant en chirurgie", ptBR = "Assistente Cirúrgico", ruRU = "Ассистент хируга", koKR = "외과 조수", zhCN = "外科助手", zhTW = "外科助手"},
 		zones = {3456},
-	},
-	[16025] = {
-		classification = "Elite",
-		level = "63",
-		names = {enUS = "Stitched Spewer", deDE = "Narbenspeier", esES = "Vomitón cosido", frFR = "Cracheur raccomodé", ruRU = "Лоскутный изрыгатель", koKR = "기워 붙인 독액괴물", zhCN = "缝合呕吐者", zhTW = "縫合噴吐者"},
-		zones = {3456},
-	},
-	[16067] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Skeletal Steed", deDE = "Skelettross", esES = "Corcel esquelético", frFR = "Palefroi squelettique", ruRU = "Скакун-скелет", koKR = "해골 전투마", zhCN = "骸骨战马", zhTW = "骷髏駿馬"},
-		zones = {3456},
-	},
-	[16072] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Tidelord Rrurgaz", deDE = "Gezeitenlord Rrurgaz", esES = "Señor de las Mareas Rrurgaz", frFR = "Seigneur-marées Rrurgaz", ptBR = "Senhor das Marés Rrurgaz", ruRU = "Повелитель приливов Ррургаз", koKR = "바다군주 르룰가즈", zhCN = "海潮之王鲁尔加斯", zhTW = "潮王·魯爾加茲"},
-		zones = {15},
 	},
 	[16135] = {
 		classification = "Elite",
@@ -18286,72 +17083,6 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "60 - 61",
 		names = {enUS = "Deathknight Captain", deDE = "Captain der Todesritter", esES = "Capitán Caballero de la Muerte", frFR = "Capitaine des chevaliers de la mort", ruRU = "Капитан рыцарей смерти", koKR = "죽음의 기사단 대장", zhCN = "死亡骑士队长", zhTW = "死亡騎士隊長"},
-		zones = {3456},
-	},
-	[16154] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Risen Deathknight", deDE = "Auferstandener Todesritter", esES = "Caballero de la Muerte resucitado", frFR = "Chevalier de la mort ressuscité", ruRU = "Восставший рыцарь смерти", koKR = "부활한 죽음의 기사", zhCN = "复活的死亡骑士", zhTW = "復生的死亡騎士"},
-		zones = {3456},
-	},
-	[16163] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Deathknight Cavalier", deDE = "Chevalier der Todesritter", esES = "Hidalgo Caballero de la Muerte", frFR = "Cavalier de la mort", ruRU = "Рыцарь смерти - кавалерист", koKR = "죽음의 기사단 기병", zhCN = "死亡骑兵", zhTW = "死亡騎士騎兵"},
-		zones = {3456},
-	},
-	[16164] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Shade of Naxxramas", deDE = "Schemen von Naxxramas", esES = "Sombra de Naxxramas", frFR = "Ombre de Naxxramas", ptBR = "Vulto de Naxxramas", ruRU = "Тень Наксрамаса", koKR = "낙스라마스의 망령", zhCN = "纳克萨玛斯之影", zhTW = "納克薩瑪斯幻影"},
-		zones = {3456},
-	},
-	[16165] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Necro Knight", deDE = "Nekroritter", esES = "Caballero Necro", frFR = "Nécrochevalier", ptBR = "Necro-cavaleiro", ruRU = "Некрорыцарь", koKR = "해골 기사", zhCN = "死灵骑士", zhTW = "闇騎騎士"},
-		zones = {3456},
-	},
-	[16167] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Bony Construct", deDE = "Knochiges Konstrukt", esES = "Bony Constructo", frFR = "Assemblage osseux", ptBR = "Constructo Ossudo", ruRU = "Костлявое создание", koKR = "기괴한 해골 피조물", zhCN = "白骨构造体", zhTW = "骸骨組合者"},
-		zones = {3456},
-	},
-	[16168] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Stoneskin Gargoyle", deDE = "Steinhautgargoyle", esES = "Gárgola Pétradermis", frFR = "Gargouille peau de pierre", ptBR = "Gárgula Litopele", ruRU = "Каменная горгулья", koKR = "돌가죽 가고일", zhCN = "岩肤石像鬼", zhTW = "石膚石像鬼"},
-		zones = {3456},
-	},
-	[16193] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Skeletal Smith", deDE = "Skelettschmied", esES = "Herrero esquelético", frFR = "Forgeron squelettique", ptBR = "Ferreiro Descarnado", ruRU = "Скелет-кузнец", koKR = "해골 대장장이", zhCN = "骷髅铁匠", zhTW = "骸骨鐵匠"},
-		zones = {3456},
-	},
-	[16194] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Unholy Axe", deDE = "Unheilige Axt", esES = "Hachas profanas", frFR = "Hache impie", ptBR = "Machado Profano", ruRU = "Нечестивый топор", koKR = "악령 깃든 도끼", zhCN = "邪恶之斧", zhTW = "邪惡之斧"},
-		zones = {3456},
-	},
-	[16215] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Unholy Staff", deDE = "Unheiliger Stab", esES = "Bastón profano", frFR = "Bâton impie", ptBR = "Cajado Profano", ruRU = "Нечестивый посох", koKR = "악령 깃든 지팡이", zhCN = "邪恶法杖", zhTW = "邪惡之杖"},
-		zones = {3456},
-	},
-	[16216] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Unholy Swords", deDE = "Unheilige Schwerter", esES = "Espadas profanas", frFR = "Epées impies", ptBR = "Espadas Profanas", ruRU = "Нечестивые Мечи", koKR = "악령 깃든 검", zhCN = "邪恶之剑", zhTW = "邪惡之劍"},
-		zones = {3456},
-	},
-	[16244] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Infectious Ghoul", deDE = "Ansteckender Ghul", esES = "Necrófago infeccioso", frFR = "Goule infectieuse", ptBR = "Carniçal Infeccioso", ruRU = "Заразный вурдалак", koKR = "전염병 구울", zhCN = "感染的食尸鬼", zhTW = "會傳染的食屍鬼"},
 		zones = {3456},
 	},
 	[16365] = {
@@ -18372,40 +17103,10 @@ rm.npcDB = {
 		names = {enUS = "Argent Sentry", deDE = "Argentumwachposten", esES = "Argos Argenta", esMX = "Avizor Argenta", frFR = "Factionnaire de l'Aube d'argent", ptBR = "Sentinela Argêntea", ruRU = "Караульный из ордена Серебряного Рассвета", koKR = "은빛 여명회 보초병", zhCN = "银色哨兵", zhTW = "銀色斥侯"},
 		zones = {139},
 	},
-	[16446] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Plagued Gargoyle", deDE = "Verseuchter Gargoyle", esES = "Gárgola infestada", frFR = "Gargouille pestiférée", ptBR = "Gárgula Pestilenta", ruRU = "Чумная горгулья", koKR = "역병 걸린 가고일", zhCN = "疫病石像鬼", zhTW = "被感染的石像鬼"},
-		zones = {3456},
-	},
 	[16447] = {
 		classification = "Elite",
 		level = "61",
 		names = {enUS = "Plagued Ghoul", deDE = "Verseuchter Ghul", esES = "Necrófago infestado", frFR = "Goule pestiférée", ptBR = "Carniçal Pestilento", ruRU = "Зачумленный вурдалак", koKR = "역병 걸린 구울", zhCN = "疫病食尸鬼", zhTW = "被感染的食屍鬼"},
-		zones = {3456},
-	},
-	[16449] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Spirit of Naxxramas", deDE = "Geist von Naxxramas", esES = "Espíritu de Naxxramas", frFR = "Esprit de Naxxramas", ptBR = "Espírito de Naxxramas", ruRU = "Дух Наксрамаса", koKR = "낙스라마스의 영혼", zhCN = "纳克萨玛斯之魂", zhTW = "納克薩瑪斯幽魂"},
-		zones = {3456},
-	},
-	[16451] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Deathknight Vindicator", deDE = "Vollstrecker der Todesritter", esES = "Vindicador Caballero de la Muerte", frFR = "Chevalier de la mort justicier", ruRU = "Рыцарь смерти - воздаятель", koKR = "죽음의 기사단 근위병", zhCN = "死亡骑士辩护者", zhTW = "死亡騎士復仇者"},
-		zones = {3456},
-	},
-	[16452] = {
-		classification = "Elite",
-		level = "62",
-		names = {enUS = "Necro Knight Guardian", deDE = "Nekrowächter", esES = "Caballero Guardián Necro", frFR = "Nécro-chevalier garde", ptBR = "Guardião Necro-cavaleiro", ruRU = "Мертвый рыцарь-страж", koKR = "해골 기사 수호병", zhCN = "死灵骑士卫兵", zhTW = "闇騎守護者"},
-		zones = {3456},
-	},
-	[16453] = {
-		classification = "Elite",
-		level = "61",
-		names = {enUS = "Necro Stalker", deDE = "Nekropirscher", esES = "Acechamorte", frFR = "Nécrotraqueur", ptBR = "Espreitadora Necrótica", ruRU = "Некропаук-скакун", koKR = "죽음의 동굴거미", zhCN = "死灵捕猎者", zhTW = "闇術潛行者"},
 		zones = {3456},
 	},
 	[28694] = {
@@ -18426,11 +17127,10 @@ rm.npcDB = {
 		names = {enUS = "Zulian Tiger", deDE = "Zulianischer Tiger", esES = "Tigre Zulian", frFR = "Tigre zulien", ptBR = "Tigre Zulian", ruRU = "Зулианский тигр", koKR = "줄리안 호랑이", zhCN = "祖利安猛虎", zhTW = "祖利安猛虎"},
 		zones = {1977},
 	},
-	[203138] = {
-		classification = "Elite",
-		level = "48 - 49",
-		names = {enUS = "Anvilrage Overseer", frFR = "Surveillant ragenclume"},
-		zones = {46},
+	[185333] = {
+		level = "22",
+		names = {enUS = "Avelina Lilly", ptBR = "Avelina Lily", ruRU = "Авелина Лилли", koKR = "아벨리나 릴리", zhCN = "阿薇丽娜·莉莉"},
+		zones = {130},
 	},
 	[203139] = {
 		classification = "Elite",
@@ -18453,7 +17153,7 @@ rm.npcDB = {
 	[214519] = {
 		classification = "Elite",
 		level = "23",
-		names = {enUS = "Incinerator Gar'im", deDE = "Verbrenner Gar'im", esES = "Incinerador Gar'im", esMX = "Incinerador Gar'im", frFR = "Incinérateur Gar'im", ruRU = "Испепелитель Гар'им", koKR = "소각자 가림"},
+		names = {enUS = "Incinerator Gar'im", deDE = "Verbrenner Gar'im", esES = "Incinerador Gar'im", esMX = "Incinerador Gar'im", frFR = "Incinérateur Gar'im", ptBR = "Incinerador Gar'im", ruRU = "Испепелитель Гар'им", koKR = "소각자 가림", zhTW = "焚化者加林姆"},
 		zones = {44},
 	},
 	[216672] = {
@@ -18466,6 +17166,11 @@ rm.npcDB = {
 		level = "30",
 		names = {enUS = "Wulmort Jinglepocket"},
 		zones = {1537},
+	},
+	[217305] = {
+		level = "34 - 35",
+		names = {enUS = "Ancient Fire Elemental"},
+		zones = {36},
 	},
 	[217689] = {
 		level = "40",
@@ -18482,6 +17187,21 @@ rm.npcDB = {
 		names = {enUS = "Pix Xizzix", ruRU = "Пикс Ксиззикс", koKR = "픽스 시직스", zhTW = "皮克斯‧希吉克斯"},
 		zones = {33},
 	},
+	[236028] = {
+		level = "47 - 49",
+		names = {enUS = "Honey Wasp"},
+		zones = {16},
+	},
+	[236876] = {
+		names = {enUS = "Legashi Blackguard"},
+		zones = {16},
+	},
+	[240482] = {
+		faction = "Alliance",
+		level = "45",
+		names = {enUS = "Berdun Cliffbrew", frFR = "Berdun Brasse-Falaise", ptBR = "Berdúnio Cervanhasco", ruRU = "Бердан Скаловар", koKR = "버던 클리프브루", zhTW = "柏敦‧崖釀"},
+		zones = {16},
+	},
 	[240604] = {
 		level = "60",
 		names = {enUS = "Carrie Hearthfire"},
@@ -18491,9 +17211,24 @@ rm.npcDB = {
 		level = "25",
 		names = {enUS = "Reagent Bot", deDE = "Materialbot", esES = "Robot de componentes", esMX = "Robot de componentes", frFR = "Robot vendeur de composants", ptBR = "Robô de Reagentes", ruRU = "Реагентобот", koKR = "재료 로봇", zhCN = "试剂机器人", zhTW = "材料機器人"},
 	},
+	[243509] = {
+		level = "55 - 56",
+		names = {enUS = "Noxious Slime", deDE = "Giftiger Schleim"},
+		zones = {616},
+	},
+	[244511] = {
+		level = "60",
+		names = {enUS = "Zet'gan"},
+		zones = {616},
+	},
 	[244512] = {
 		level = "60",
 		names = {enUS = "Ortak Lomgok", ruRU = "Ортак Ломгок"},
+		zones = {616},
+	},
+	[244525] = {
+		level = "55 - 56",
+		names = {enUS = "Hyjal Bear", deDE = "Hyjalbär", zhTW = "海加爾熊"},
 		zones = {616},
 	},
 	[246017] = {
@@ -18508,20 +17243,20 @@ rm.npcDB = {
 	},
 	[246600] = {
 		classification = "Elite",
-		names = {enUS = "Mana Echo", deDE = "Manaecho", esES = "Eco de maná", frFR = "Echo de mana", ruRU = "Отзвук маны"},
+		names = {enUS = "Mana Echo", deDE = "Manaecho", esES = "Eco de maná", frFR = "Echo de mana", ruRU = "Отзвук маны", koKR = "마나 메아리"},
 		zones = {36},
 	},
 	[246602] = {
-		names = {enUS = "Mana Fiend", deDE = "Manageist"},
+		names = {enUS = "Mana Fiend", deDE = "Manageist", frFR = "Démon de mana", ruRU = "Исчадие маны"},
 		zones = {36},
 	},
 	[246664] = {
 		classification = "Elite",
-		names = {enUS = "Fragmented Sentry", deDE = "Gespaltener Wachposten"},
+		names = {enUS = "Fragmented Sentry", deDE = "Gespaltener Wachposten", frFR = "Factionnaire fragmenté", ruRU = "Фрагментированный караульный"},
 		zones = {36},
 	},
 	[246683] = {
-		names = {enUS = "Mana Phantom", deDE = "Manaphantom"},
+		names = {enUS = "Mana Phantom", deDE = "Manaphantom", frFR = "Fantôme de mana", ruRU = "Фантом маны"},
 		zones = {36},
 	},
 	[246795] = {
@@ -18532,37 +17267,61 @@ rm.npcDB = {
 	},
 	[246888] = {
 		classification = "Elite",
-		names = {enUS = "Arcane Elemental", deDE = "Arkanelementar"},
+		names = {enUS = "Arcane Elemental", deDE = "Arkanelementar", frFR = "Elémentaire des arcanes", ruRU = "Волшебный элементаль"},
 		zones = {36},
 	},
 	[246890] = {
-		names = {enUS = "Arcane Manaling", deDE = "Arkaner Manaling"},
+		names = {enUS = "Arcane Manaling", deDE = "Arkaner Manaling", frFR = "Wyrm juvénile des arcanes", ruRU = "Чародейский манаментальчик"},
+		zones = {36},
+	},
+	[246990] = {
+		classification = "Elite",
+		names = {enUS = "Phantasm", deDE = "Phantom", frFR = "Fantasme", ruRU = "Фантазм"},
 		zones = {36},
 	},
 	[246992] = {
 		classification = "Elite",
-		names = {enUS = "Arcane Echo", deDE = "Arkanes Echo"},
+		names = {enUS = "Arcane Echo", deDE = "Arkanes Echo", frFR = "Echo arcanique", ruRU = "Чародейский отголосок"},
 		zones = {36},
 	},
 	[246993] = {
 		classification = "Elite",
-		names = {enUS = "Mana Stalker", deDE = "Manapirscher"},
+		names = {enUS = "Mana Stalker", deDE = "Manapirscher", frFR = "Traqueur de mana", ruRU = "Волшебный охотник"},
 		zones = {36},
 	},
 	[247001] = {
 		classification = "Elite",
-		names = {enUS = "Saturated Remnant", deDE = "Gesättigtes Fragment", esES = "Remanente saturado", frFR = "Vestige saturé", ruRU = "Насыщенный осколок"},
+		names = {enUS = "Saturated Remnant", deDE = "Gesättigtes Fragment", esES = "Remanente saturado", frFR = "Vestige saturé", ruRU = "Насыщенный осколок", koKR = "포화된 잔재"},
 		zones = {36},
 	},
 	[247003] = {
 		classification = "Elite",
-		names = {enUS = "Seeking Remnant", deDE = "Suchendes Fragment", esES = "Remanente buscador", frFR = "Vestige en chasse", ruRU = "Ищущий осколок"},
+		names = {enUS = "Seeking Remnant", deDE = "Suchendes Fragment", esES = "Remanente buscador", frFR = "Vestige en chasse", ruRU = "Ищущий осколок", koKR = "추적하는 잔재"},
 		zones = {36},
 	},
 	[247016] = {
 		classification = "Elite",
-		names = {enUS = "Suffused Treant", deDE = "Durchsetzter Treant"},
+		names = {enUS = "Suffused Treant", deDE = "Durchsetzter Treant", frFR = "Tréant saturé", ruRU = "Зачарованный древень"},
 		zones = {36},
+	},
+	[247237] = {
+		classification = "Elite",
+		names = {enUS = "Blackmaw Berserker"},
+		zones = {16, 16554},
+	},
+	[247248] = {
+		classification = "Elite",
+		names = {enUS = "Legashi Summoner"},
+		zones = {16554},
+	},
+	[247470] = {
+		names = {enUS = "Makrinni Burrower"},
+		zones = {16},
+	},
+	[248041] = {
+		level = "56 - 57",
+		names = {enUS = "Hyjal Stag", deDE = "Hyjalhirsch"},
+		zones = {616},
 	},
 	[248196] = {
 		level = "60",
@@ -18603,13 +17362,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "11",
 		names = {enUS = "Croaky", esES = "Croador", frFR = "Coassie", ptBR = "Coaxinho", ruRU = "Квакс", koKR = "크로키", zhCN = "呱呱", zhTW = "呱奇"},
-		zones = {12, 10},
-	},
-	[248299] = {
-		classification = "Elite",
-		level = "12",
-		names = {enUS = "Elmpaw", deDE = "Ulmpfote", esES = "Zarpaolmo", esMX = "Patolmo", frFR = "Ormepatte", ptBR = "Patolmo", ruRU = "Вязолап", koKR = "엘름포"},
-		zones = {12},
+		zones = {10, 12},
 	},
 	[248464] = {
 		classification = "Elite",
@@ -18623,8 +17376,43 @@ rm.npcDB = {
 		names = {enUS = "Geosculptor Yip", deDE = "Geoformerin Yip", esES = "Geoescultora Yip", esMX = "Geoescultor Yip", frFR = "Géosculpteur Yip", ptBR = "Geoescultor Yip", ruRU = "Геоскульптор Йип", koKR = "땅조각가 이프", zhCN = "地貌雕刻师伊普", zhTW = "地塑師伊普"},
 		zones = {12},
 	},
+	[249221] = {
+		level = "57 - 59",
+		names = {enUS = "Wormwing Windwitch", deDE = "Windhexe der Wurmschwingen"},
+		zones = {616},
+	},
+	[249222] = {
+		level = "58",
+		names = {enUS = "Wormwing Ambusher", deDE = "Wegelagerin der Wurmschwingen"},
+		zones = {616},
+	},
+	[249229] = {
+		level = "58 - 59",
+		names = {enUS = "Felguard Sentinel", deDE = "Teufelswächter"},
+		zones = {616},
+	},
+	[249230] = {
+		level = "57 - 58",
+		names = {enUS = "Defiling Hound", deDE = "Besudelnder Bluthund"},
+		zones = {616},
+	},
 	[249235] = {
 		names = {enUS = "Kaylaena Springwhisper"},
+		zones = {616},
+	},
+	[249474] = {
+		level = "56 - 57",
+		names = {enUS = "Rustleaf Fox", deDE = "Rostlaubfuchs"},
+		zones = {616},
+	},
+	[249491] = {
+		level = "57 - 59",
+		names = {enUS = "Mountain Squallclimber", deDE = "Bergsturmsteiger"},
+		zones = {616},
+	},
+	[249493] = {
+		level = "57 - 59",
+		names = {enUS = "Nightsaber Guardian", deDE = "Nachtsäblerwächter"},
 		zones = {616},
 	},
 	[249713] = {
@@ -18634,8 +17422,24 @@ rm.npcDB = {
 	[249968] = {
 		faction = "Alliance",
 		level = "58",
-		names = {enUS = "Hnaz Blunderflame", frFR = "Hnaz Bourdeflame"},
+		names = {enUS = "Hnaz Blunderflame", frFR = "Hnaz Bourdeflame", ptBR = "Hnaz Flamasneira"},
 		zones = {616},
+	},
+	[250023] = {
+		classification = "Elite",
+		level = "55",
+		names = {enUS = "Blackmaw Thrall"},
+		zones = {16, 16554},
+	},
+	[250027] = {
+		classification = "Elite",
+		names = {enUS = "Blackmaw Headhunter"},
+		zones = {16, 16554},
+	},
+	[250187] = {
+		classification = "Elite",
+		names = {enUS = "Bladetooth Frenzy", deDE = "Blutzahnfrenzy", frFR = "Furie lamedent"},
+		zones = {16550},
 	},
 	[250282] = {
 		level = "9 - 10",
@@ -18650,6 +17454,11 @@ rm.npcDB = {
 	[250484] = {
 		classification = "Elite",
 		names = {enUS = "Spider", deDE = "Spinne", esES = "Araña", esMX = "Araña", frFR = "Araignée", ptBR = "Aranha", ruRU = "Паук", koKR = "거미", zhCN = "蜘蛛", zhTW = "蜘蛛"},
+		zones = {16611},
+	},
+	[250488] = {
+		classification = "Elite",
+		names = {enUS = "Tarantula", deDE = "Tarantel", esES = "Tarántula", esMX = "Tarántula", frFR = "Tarentule", ptBR = "Tarântula", ruRU = "Тарантул", koKR = "타란툴라", zhCN = "狼蛛", zhTW = "狼蛛"},
 		zones = {16611},
 	},
 	[250618] = {
@@ -18715,7 +17524,7 @@ rm.npcDB = {
 		zones = {16611},
 	},
 	[250652] = {
-		names = {enUS = "Spiteful Phantom", deDE = "Boshaftes Phantom", esES = "Fantasma malicioso", frFR = "Fantôme malveillant", ptBR = "Fantasma Rancoroso", ruRU = "Сердитый фантом", koKR = "원한의 악령", zhCN = "怀恨的幻影"},
+		names = {enUS = "Spiteful Phantom", deDE = "Boshaftes Phantom", esES = "Fantasma malicioso", esMX = "Aparición maliciosa", frFR = "Fantôme malveillant", ptBR = "Fantasma Rancoroso", ruRU = "Сердитый фантом", koKR = "원한의 악령", zhCN = "怀恨的幻影"},
 		zones = {16611},
 	},
 	[250654] = {
@@ -18760,6 +17569,11 @@ rm.npcDB = {
 	[251291] = {
 		level = "6",
 		names = {enUS = "Hippogryph Youth", deDE = "Junger Hippogryph", esES = "Hipogrifo joven", frFR = "Jeune hippogriffe", ptBR = "Jovem Hipogrifo", ruRU = "Молодой гиппогриф", koKR = "어린 히포그리프", zhCN = "幼年角鹰兽", zhTW = "幼角鷹獸"},
+		zones = {16593},
+	},
+	[251661] = {
+		level = "5 - 6",
+		names = {enUS = "Galestrider", deDE = "Windschreiter", esES = "Zancavendavales", esMX = "Zancavientos", frFR = "Trotteur des trombes", ptBR = "Vagaventos", ruRU = "Буреног", koKR = "돌풍타조", zhCN = "疾风陆行鸟", zhTW = "逐風者"},
 		zones = {16593},
 	},
 	[251684] = {
@@ -18846,12 +17660,12 @@ rm.npcDB = {
 	},
 	[252376] = {
 		level = "20",
-		names = {enUS = "Emerii Tallgust", esES = "Emerii Ráfaga Imponente", frFR = "Emerii Ventehaut", ptBR = "Emerii Altalufa", ruRU = "Эмерии Высший Порыв", koKR = "에메리 톨거스트", zhCN = "艾米丽·高风", zhTW = "伊梅里‧高風"},
+		names = {enUS = "Emerii Tallgust", esES = "Emerii Ráfaga Imponente", esMX = "Emerii Ráfaga Alta", frFR = "Emerii Ventehaut", ptBR = "Emerii Altalufa", ruRU = "Эмерии Высший Порыв", koKR = "에메리 톨거스트", zhCN = "艾米丽·高风", zhTW = "伊梅里‧高風"},
 		zones = {16593},
 	},
 	[252379] = {
 		level = "10",
-		names = {enUS = "Eltheen Nightbreeze", esES = "Eltheen Brisa Nocturna", frFR = "Eltheen Noctebrise", ptBR = "Eltheen Umbrísia", ruRU = "Элтин Ночной Бриз", koKR = "엘신 나이트브리즈", zhCN = "埃尔森·夜风", zhTW = "伊瑟恩‧夜風"},
+		names = {enUS = "Eltheen Nightbreeze", esES = "Eltheen Brisa Nocturna", esMX = "Eltheen Brisa Nocturna", frFR = "Eltheen Noctebrise", ptBR = "Eltheen Umbrísia", ruRU = "Элтин Ночной Бриз", koKR = "엘신 나이트브리즈", zhCN = "埃尔森·夜风", zhTW = "伊瑟恩‧夜風"},
 		zones = {16593},
 	},
 	[252380] = {
@@ -18876,19 +17690,24 @@ rm.npcDB = {
 	},
 	[252802] = {
 		level = "8 - 9",
-		names = {enUS = "Hungry Bandit", deDE = "Hungriger Bandit", esES = "Bandido hambriento", frFR = "Bandit affamé", ptBR = "Bandido Faminto", ruRU = "Голодный бандит", koKR = "굶주린 좀도둑", zhCN = "饥饿的强盗", zhTW = "飢餓的強盜"},
+		names = {enUS = "Hungry Bandit", deDE = "Hungriger Bandit", esES = "Bandido hambriento", esMX = "Bandido hambriento", frFR = "Bandit affamé", ptBR = "Bandido Faminto", ruRU = "Голодный бандит", koKR = "굶주린 좀도둑", zhCN = "饥饿的强盗", zhTW = "飢餓的強盜"},
 		zones = {16593},
 	},
 	[252820] = {
 		level = "8 - 9",
-		names = {enUS = "Bandit Highwayman", deDE = "Banditenstraßenräuber", esES = "Bandido salteador", frFR = "Bandit de grand chemin", ptBR = "Bandoleiro Bandido", ruRU = "Придорожный бандит", koKR = "산적 노상강도", zhCN = "强盗路霸", zhTW = "強盜路霸"},
+		names = {enUS = "Bandit Highwayman", deDE = "Banditenstraßenräuber", esES = "Bandido salteador", esMX = "Bandolero bandido", frFR = "Bandit de grand chemin", ptBR = "Bandoleiro Bandido", ruRU = "Придорожный бандит", koKR = "산적 노상강도", zhCN = "强盗路霸", zhTW = "強盜路霸"},
 		zones = {16593},
 	},
 	[253004] = {
 		faction = "Alliance",
 		level = "10",
-		names = {enUS = "Iaadaria Bitterwind", esES = "Iaadaria Vientoamargo", frFR = "Iaadaria Vent-Amer", ptBR = "Iaadaria Ventamargo", ruRU = "Иаадария Горький Ветер", koKR = "이아다리아 비터윈드", zhCN = "伊阿达瑞亚·苦风", zhTW = "亞妲莉雅‧苦風"},
+		names = {enUS = "Iaadaria Bitterwind", esES = "Iaadaria Vientoamargo", esMX = "Iaadaria Vientoglacial", frFR = "Iaadaria Vent-Amer", ptBR = "Iaadaria Ventamargo", ruRU = "Иаадария Горький Ветер", koKR = "이아다리아 비터윈드", zhCN = "伊阿达瑞亚·苦风", zhTW = "亞妲莉雅‧苦風"},
 		zones = {16593},
+	},
+	[253096] = {
+		level = "37",
+		names = {enUS = "Halea"},
+		zones = {405},
 	},
 	[253139] = {
 		level = "40",
@@ -18905,19 +17724,33 @@ rm.npcDB = {
 		names = {enUS = "Grolkar"},
 		zones = {405},
 	},
+	[253166] = {
+		level = "37",
+		names = {enUS = "Talra"},
+		zones = {405},
+	},
 	[253195] = {
 		level = "8 - 9",
-		names = {enUS = "Al'Aketh Preacher", deDE = "Prediger der Al'Aketh", esES = "Predicador Al'Aketh", frFR = "Prêcheur al'aketh", ptBR = "Pregador Al'Aketh", ruRU = "Ал'акетский проповедник", koKR = "알아케스 전도사", zhTW = "奧拉凱斯宣導者"},
+		names = {enUS = "Al'Aketh Preacher", deDE = "Prediger der Al'Aketh", esES = "Predicador Al'Aketh", esMX = "Predicador Al'Aketh", frFR = "Prêcheur al'aketh", ptBR = "Pregador Al'Aketh", ruRU = "Ал'акетский проповедник", koKR = "알아케스 전도사", zhTW = "奧拉凱斯宣導者"},
 		zones = {16593},
+	},
+	[253214] = {
+		classification = "Elite",
+		names = {enUS = "Ravasaur Hunter"},
+	},
+	[253272] = {
+		level = "42 - 43",
+		names = {enUS = "Magram Necromancer", deDE = "Totenbeschwörer der Magram", frFR = "Nécromancien magram", ruRU = "Некромант из племени Маграм"},
+		zones = {16651, 405},
 	},
 	[253282] = {
 		level = "8 - 9",
-		names = {enUS = "Shriekling Fledgling", deDE = "Kreischlingjunges", esES = "Cría de chilladora", frFR = "Jeune criailleuse", ptBR = "Filhote de Guinchote", ruRU = "Визгун-птенец", koKR = "새끼 괴성조", zhCN = "尖啸幼兽雏鸟", zhTW = "始祖鳥雛鳥"},
+		names = {enUS = "Shriekling Fledgling", deDE = "Kreischlingjunges", esES = "Cría de chilladora", esMX = "Volantón chillín", frFR = "Jeune criailleuse", ptBR = "Filhote de Guinchote", ruRU = "Визгун-птенец", koKR = "새끼 괴성조", zhCN = "尖啸幼兽雏鸟", zhTW = "始祖鳥雛鳥"},
 		zones = {16593},
 	},
 	[253283] = {
 		level = "9",
-		names = {enUS = "Shriekling Matriarch", deDE = "Kreischlingmatriarchin", esES = "Matriarca chilladora", frFR = "Matriarche criailleuse", ptBR = "Matriarca Guinchote", ruRU = "Визгун-матриарх", koKR = "괴성조 어미", zhCN = "尖啸幼兽主母", zhTW = "始祖鳥族母"},
+		names = {enUS = "Shriekling Matriarch", deDE = "Kreischlingmatriarchin", esES = "Matriarca chilladora", esMX = "Matriarca chillín", frFR = "Matriarche criailleuse", ptBR = "Matriarca Guinchote", ruRU = "Визгун-матриарх", koKR = "괴성조 어미", zhCN = "尖啸幼兽主母", zhTW = "始祖鳥族母"},
 		zones = {16593},
 	},
 	[253395] = {
@@ -18928,8 +17761,18 @@ rm.npcDB = {
 	},
 	[253511] = {
 		level = "8 - 9",
-		names = {enUS = "Al'Aketh Pillager", deDE = "Plünderer der Al'Aketh", esES = "Saqueador Al'Aketh", frFR = "Pilleur al'aketh", ptBR = "Pilhador Al'Aketh", ruRU = "Ал'акетский погромщик", koKR = "알아케스 약탈자", zhTW = "奧拉凱斯掠取者"},
+		names = {enUS = "Al'Aketh Pillager", deDE = "Plünderer der Al'Aketh", esES = "Saqueador Al'Aketh", esMX = "Saqueador Al'Aketh", frFR = "Pilleur al'aketh", ptBR = "Pilhador Al'Aketh", ruRU = "Ал'акетский погромщик", koKR = "알아케스 약탈자", zhTW = "奧拉凱斯掠取者"},
 		zones = {16593},
+	},
+	[253524] = {
+		level = "42 - 43",
+		names = {enUS = "Bristleback Nomad", deDE = "Nomade der Borstennacken", frFR = "Nomade dos-hirsute", ruRU = "Кочевник из племени Дыбогривов"},
+		zones = {16651},
+	},
+	[253526] = {
+		level = "42 - 43",
+		names = {enUS = "Bristleback Skullcrusher", deDE = "Schädelbrecher der Borstennacken", esES = "Rompecráneos Lomopelo", frFR = "Brise-têtes dos-hirsute", ptBR = "Quebra-crânios Costagulha", ruRU = "Череполом из племени Дыбогривов"},
+		zones = {16651},
 	},
 	[254087] = {
 		level = "10",
@@ -18943,55 +17786,61 @@ rm.npcDB = {
 	},
 	[254345] = {
 		level = "10",
-		names = {enUS = "Syriel Nightrain", esES = "Syriel Nochelluvia", frFR = "Syriel Noctepluie", ptBR = "Syriel Serenoite", ruRU = "Сириэль Ночной Дождь", koKR = "시리엘 나이트레인", zhCN = "希瑞尔·夜雨", zhTW = "賽瑞兒‧夜雨"},
+		names = {enUS = "Syriel Nightrain", esES = "Syriel Nochelluvia", esMX = "Syriel Noctiluvio", frFR = "Syriel Noctepluie", ptBR = "Syriel Serenoite", ruRU = "Сириэль Ночной Дождь", koKR = "시리엘 나이트레인", zhCN = "希瑞尔·夜雨", zhTW = "賽瑞兒‧夜雨"},
 		zones = {16593},
+	},
+	[254560] = {
+		level = "39 - 40",
+		names = {enUS = "Twilight Shadowmancer", deDE = "Twilight-Schattenbeschwörer", frFR = "Ténébromancien du Crépuscule", ptBR = "Sombramante do Crepúsculo", ruRU = "Сумеречный тенемант"},
+		zones = {16591},
 	},
 	[254596] = {
 		level = "9 - 10",
-		names = {enUS = "Al'Aketh Healer", deDE = "Heiler der Al'Aketh", esES = "Sanador Al'Aketh", frFR = "Soigneur al'aketh", ptBR = "Curandeiro de Al'Aketh", ruRU = "Ал'акетский целитель", koKR = "알아케스 치유사", zhCN = "奥拉凯斯治疗者", zhTW = "奧拉凱斯治療者"},
+		names = {enUS = "Al'Aketh Healer", deDE = "Heiler der Al'Aketh", esES = "Sanador Al'Aketh", esMX = "Sanador Al'Aketh", frFR = "Soigneur al'aketh", ptBR = "Curandeiro de Al'Aketh", ruRU = "Ал'акетский целитель", koKR = "알아케스 치유사", zhCN = "奥拉凯斯治疗者", zhTW = "奧拉凱斯治療者"},
 		zones = {16593},
 	},
 	[254626] = {
 		level = "9 - 10",
-		names = {enUS = "Al'Aketh Assassin", deDE = "Auftragsmörder der Al'Aketh", esES = "Asesino Al'Aketh", frFR = "Assassin al'aketh", ptBR = "Assassino de Al'Aketh", ruRU = "Ал'акетский убийца", koKR = "알아케스 암살자", zhCN = "奥拉凯斯刺客", zhTW = "奧拉凱斯刺客"},
+		names = {enUS = "Al'Aketh Assassin", deDE = "Auftragsmörder der Al'Aketh", esES = "Asesino Al'Aketh", esMX = "Asesino Al'Aketh", frFR = "Assassin al'aketh", ptBR = "Assassino de Al'Aketh", ruRU = "Ал'акетский убийца", koKR = "알아케스 암살자", zhCN = "奥拉凯斯刺客", zhTW = "奧拉凱斯刺客"},
 		zones = {16593},
 	},
 	[254695] = {
+		faction = "Alliance",
 		level = "25",
 		names = {enUS = "Repair Bot", deDE = "Reparaturbot", ruRU = "Ремонтный робот"},
 	},
 	[255065] = {
 		classification = "Elite",
-		names = {enUS = "Risen Terror", deDE = "Auferstandener Schrecken"},
+		names = {enUS = "Risen Terror", deDE = "Auferstandener Schrecken", frFR = "Terreur ressuscitée", ruRU = "Восставший ужасень"},
 		zones = {36},
 	},
 	[255066] = {
 		classification = "Elite",
-		names = {enUS = "Fallen Mage", deDE = "Gefallener Magier"},
+		names = {enUS = "Fallen Mage", deDE = "Gefallener Magier", frFR = "Mage déchu", ruRU = "Павший маг"},
 		zones = {36},
 	},
 	[255068] = {
 		classification = "Elite",
-		names = {enUS = "Mindless Horror", deDE = "Hirnloser Schrecken"},
+		names = {enUS = "Mindless Horror", deDE = "Hirnloser Schrecken", frFR = "Horreur décérébrée", ruRU = "Безмозглый ужас"},
 		zones = {36},
 	},
 	[255069] = {
 		classification = "Elite",
-		names = {enUS = "Fallen Warrior", deDE = "Gefallener Krieger"},
+		names = {enUS = "Fallen Warrior", deDE = "Gefallener Krieger", frFR = "Guerrier déchu", ruRU = "Павший воин"},
 		zones = {36},
 	},
 	[255070] = {
 		classification = "Elite",
-		names = {enUS = "Skeletal Warder", deDE = "Skelettwärter"},
+		names = {enUS = "Skeletal Warder", deDE = "Skelettwärter", frFR = "Gardien squelette", ruRU = "Скелет-хранитель"},
 		zones = {36},
 	},
 	[255071] = {
-		names = {enUS = "Sewer Fiend", deDE = "Kanalisationsscheusal"},
+		names = {enUS = "Sewer Fiend", deDE = "Kanalisationsscheusal", frFR = "Fiel des égouts", ruRU = "Сточное исчадие"},
 		zones = {36},
 	},
 	[255072] = {
 		classification = "Elite",
-		names = {enUS = "Dark Caster", deDE = "Dunkler Zauberwirker"},
+		names = {enUS = "Dark Caster", deDE = "Dunkler Zauberwirker", frFR = "Magicien noir", ruRU = "Темный заклинатель"},
 		zones = {36},
 	},
 	[255109] = {
@@ -18999,10 +17848,111 @@ rm.npcDB = {
 		names = {enUS = "Flesh Golem", deDE = "Fleischgolem", esES = "Gólem de carne", esMX = "Gólem de carne", frFR = "Golem de chair", ptBR = "Golem de Carne", ruRU = "Мясной голем", koKR = "살덩어리 골렘", zhCN = "血肉傀儡", zhTW = "血肉傀儡"},
 		zones = {16611},
 	},
+	[255247] = {
+		level = "55",
+		names = {enUS = "Swarming Imp"},
+		zones = {16, 16554},
+	},
+	[255262] = {
+		classification = "Elite",
+		names = {enUS = "Alcaz Chaplain"},
+		zones = {16620},
+	},
+	[255267] = {
+		classification = "Elite",
+		names = {enUS = "Slavering Hound"},
+		zones = {16620},
+	},
+	[255271] = {
+		classification = "Elite",
+		names = {enUS = "Defias Truthfinder"},
+		zones = {16620},
+	},
+	[255276] = {
+		classification = "Elite",
+		names = {enUS = "Defias Mercenary"},
+		zones = {16620},
+	},
+	[255309] = {
+		classification = "Elite",
+		names = {enUS = "Defias Bounty Hunter"},
+		zones = {16620},
+	},
+	[255347] = {
+		classification = "Elite",
+		names = {enUS = "Legashi Slayer"},
+		zones = {16, 16554},
+	},
+	[255364] = {
+		classification = "Elite",
+		names = {enUS = "Renegade Conjurer"},
+		zones = {16620},
+	},
+	[255373] = {
+		classification = "Elite",
+		names = {enUS = "Strashaz Enchantress"},
+		zones = {16620},
+	},
+	[255377] = {
+		classification = "Elite",
+		names = {enUS = "Alcaz Jailer"},
+		zones = {16620},
+	},
+	[255394] = {
+		classification = "Elite",
+		level = "55",
+		names = {enUS = "Blackmaw Champion"},
+		zones = {16, 16554},
+	},
 	[255534] = {
 		level = "7",
 		names = {enUS = "\"Badwind\" Bennic", deDE = "\"Übelwind\" Bennic", esES = "\"Malabrisa\" Bennic", frFR = "Bennic « Mauvais vent »", ptBR = "Bennic \"Malevento\"", ruRU = "Бенник-Баламут", koKR = "\"사악한 바람\" 베닉", zhCN = "“恶风”本尼克", zhTW = "『惡風』班尼克"},
 		zones = {16593},
+	},
+	[255699] = {
+		classification = "Rare Elite",
+		names = {enUS = "Lordaeron Captain", deDE = "Hauptmann von Lordaeron", esES = "Capitán de Lordaeron", esMX = "Capitán de Lordaeron", frFR = "Capitaine de Lordaeron", ptBR = "Capitão de Lordaeron", ruRU = "Лордеронский капитан", koKR = "로데론 부대장", zhCN = "洛丹伦上尉", zhTW = "羅德隆隊長"},
+		zones = {16611},
+	},
+	[255721] = {
+		level = "60",
+		names = {enUS = "Jarael"},
+		zones = {16651},
+	},
+	[255724] = {
+		level = "60",
+		names = {enUS = "Melanori"},
+		zones = {16651},
+	},
+	[255769] = {
+		level = "37 - 38",
+		names = {enUS = "Redridge Brute", deDE = "Schläger der Rotkammgnolle", frFR = "Brute des Carmines", ruRU = "Громила из стаи Красногорья"},
+		zones = {16591, 44},
+	},
+	[255770] = {
+		level = "36 - 37",
+		names = {enUS = "Redridge Mystic", deDE = "Mystiker der Rotkammgnolle", frFR = "Mystique des Carmines", ruRU = "Мистик из стаи Красногорья", zhCN = "赤脊山秘法师"},
+		zones = {16591, 44},
+	},
+	[255772] = {
+		level = "36 - 37",
+		names = {enUS = "Redridge Trapper", deDE = "Fallensteller der Rotkammgnolle", frFR = "Trappeur des Carmines", ruRU = "Зверолов из стаи Красногорья", zhCN = "赤脊山捕兽者"},
+		zones = {16591, 44},
+	},
+	[255849] = {
+		level = "40 - 41",
+		names = {enUS = "Bolder'ok Magus", deDE = "Magus von Bolder'ok", esES = "Magus Bolder'ok", frFR = "Magus de Bolder'ok"},
+		zones = {16591},
+	},
+	[255850] = {
+		level = "42 - 44",
+		names = {enUS = "Bolder'ok Brute", frFR = "Brute de Bolder'ok"},
+		zones = {16591},
+	},
+	[255851] = {
+		level = "38 - 39",
+		names = {enUS = "Mature Paletusk", deDE = "Ausgewachsener Bleichhauer", frFR = "Brochepâle adulte", ptBR = "Palitusco Adulto", ruRU = "Взрослый бледноклык"},
+		zones = {16591},
 	},
 	[255877] = {
 		faction = "Alliance",
@@ -19012,12 +17962,12 @@ rm.npcDB = {
 	},
 	[255891] = {
 		level = "43",
-		names = {enUS = "Grungle", ptBR = "Grungo"},
+		names = {enUS = "Grungle", ptBR = "Grungo", ruRU = "Грынгл"},
 		zones = {16591},
 	},
 	[255894] = {
 		level = "40",
-		names = {enUS = "Innkeeper Zizplink", deDE = "Gastwirtin Zizplink", ptBR = "Estalajadeira Zizplink"},
+		names = {enUS = "Innkeeper Zizplink", deDE = "Gastwirtin Zizplink", frFR = "Aubergiste Zizplink", ptBR = "Estalajadeira Zizplink"},
 		zones = {16591},
 	},
 	[255895] = {
@@ -19025,10 +17975,31 @@ rm.npcDB = {
 		names = {enUS = "Grizzek", koKR = "그리젝"},
 		zones = {16591},
 	},
+	[255898] = {
+		level = "38 - 39",
+		names = {enUS = "Murloc Oracle", deDE = "Murlocorakel", frFR = "Oracle murloc", ruRU = "Мурлок-оракул"},
+		zones = {16591},
+	},
+	[255901] = {
+		level = "36 - 37",
+		names = {enUS = "Sand Crawler", deDE = "Sandkriecher", frFR = "Clampant des sables", ruRU = "Песчаный краб"},
+		zones = {16591},
+	},
+	[255906] = {
+		classification = "Elite",
+		level = "40",
+		names = {enUS = "Snargl", ruRU = "Снаргл"},
+		zones = {44, 16591},
+	},
 	[255964] = {
 		classification = "Elite",
 		names = {enUS = "Fallen Necromancer", deDE = "Gefallener Totenbeschwörer", esES = "Nigromante caído", esMX = "Nigromante caído", frFR = "Nécromancien déchu", ptBR = "Necromante Caído", ruRU = "Павший некромант", koKR = "타락한 강령술사", zhCN = "堕落通灵师", zhTW = "死去的死靈法師"},
 		zones = {16611},
+	},
+	[255995] = {
+		classification = "Elite",
+		names = {enUS = "Strashaz Soldier"},
+		zones = {16620},
 	},
 	[256040] = {
 		classification = "Elite",
@@ -19039,6 +18010,22 @@ rm.npcDB = {
 		level = "10 - 11",
 		names = {enUS = "Shadowgale Shriekling", deDE = "Schattenwindkreischling", esES = "Chilladora ventosombra", frFR = "Criailleuse trombenoire", ptBR = "Guinchote Ventosombra", ruRU = "Теневейный визгун", koKR = "그늘돌풍 괴성조", zhTW = "影風始祖鳥"},
 		zones = {16593},
+	},
+	[256383] = {
+		level = "35 - 36",
+		names = {enUS = "Meadowsbrook Farmhand", deDE = "Landarbeiter von Wiesenbach", frFR = "Journalier de Ruissepré", ruRU = "Батрак из Ручьевины"},
+		zones = {16591},
+	},
+	[256410] = {
+		classification = "Rare",
+		level = "38",
+		names = {enUS = "Reginald Holmsby", ptBR = "Reginaldo Holmsby", ruRU = "Реджинальд Холмсби", koKR = "레지널드 홈스비", zhCN = "雷吉纳德·霍尔姆斯比", zhTW = "雷吉納德‧荷斯比"},
+		zones = {16591},
+	},
+	[256434] = {
+		level = "37 - 38",
+		names = {enUS = "Turner's Mill Lumberjack", deDE = "Holzfäller von Turners Mühle", frFR = "Bûcheron du moulin de Turner"},
+		zones = {16591},
 	},
 	[256629] = {
 		names = {enUS = "Dala Fairmaw", ruRU = "Дала Яснозуб"},
@@ -19054,6 +18041,12 @@ rm.npcDB = {
 		faction = "Horde",
 		level = "25",
 		names = {enUS = "Gur'dok", ruRU = "Гур'док", zhCN = "古尔多克"},
+		zones = {16591},
+	},
+	[256728] = {
+		faction = "Horde",
+		level = "40",
+		names = {enUS = "Na'zok"},
 		zones = {16591},
 	},
 	[256729] = {
@@ -19091,35 +18084,99 @@ rm.npcDB = {
 		names = {enUS = "Mivin Shadowweave", esES = "Mivin Tejesombra", esMX = "Mivin Tejesombra", frFR = "Mivin Tissombre", ptBR = "Mivin Umbratrama", ruRU = "Мивин Темное Руно", koKR = "미빈 섀도위브", zhTW = "米文‧影織"},
 		zones = {44},
 	},
+	[256749] = {
+		faction = "Horde",
+		level = "38 - 39",
+		names = {enUS = "Rog'mar Trainee", deDE = "Lehrling von Rog'mar", frFR = "Recrue de Rog'mar"},
+		zones = {16591},
+	},
+	[256795] = {
+		level = "42 - 43",
+		names = {enUS = "Twilight Fanatic", deDE = "Twilight-Fanatiker", frFR = "Fanatique du Crépuscule", ptBR = "Fanático do Crepúsculo"},
+		zones = {16591},
+	},
+	[256797] = {
+		level = "42 - 43",
+		names = {enUS = "Twilight Corrupter", deDE = "Zwielichtverderber", esES = "Corruptor Crepuscular", frFR = "Corrupteur du Crépuscule", ptBR = "Corruptor do Crepúsculo", ruRU = "Сумеречный осквернитель", koKR = "황혼의 타락자", zhCN = "暮光腐蚀者"},
+		zones = {16591},
+	},
+	[256798] = {
+		level = "37 - 38",
+		names = {enUS = "Twilight Neophyte", deDE = "Twilight-Neophyt", frFR = "Néophyte du Crépuscule", ptBR = "Neófito do Crepúsculo", ruRU = "Сумеречный неофит", zhCN = "暮光新教徒"},
+		zones = {16591},
+	},
+	[256799] = {
+		level = "43 - 44",
+		names = {enUS = "Twilight Champion", deDE = "Twilight-Champion", frFR = "Champion du Crépuscule", ptBR = "Campeão do Crepúsculo", ruRU = "Сумеречный воитель"},
+		zones = {16591},
+	},
+	[256800] = {
+		classification = "Elite",
+		level = "45",
+		names = {enUS = "Twilight Enforcer", deDE = "Twilight-Vollstrecker", frFR = "Massacreur du Crépuscule"},
+		zones = {16591},
+	},
+	[256801] = {
+		level = "39 - 41",
+		names = {enUS = "Murloc Warrior", deDE = "Murlockrieger", frFR = "Guerrier murloc"},
+		zones = {16591},
+	},
+	[256807] = {
+		level = "39 - 40",
+		names = {enUS = "Shore Crawler", deDE = "Küstenkriecher", frFR = "Clampant du rivage", ptBR = "Orlatisco"},
+		zones = {16591},
+	},
+	[256892] = {
+		classification = "Rare",
+		level = "46",
+		names = {enUS = "Kargra the Blind", deDE = "Karga die Blinde", esES = "Kargra la Ciega", esMX = "Kargra, la Ciega", frFR = "Kargra l'Aveugle", ptBR = "Kargra, a Cega", ruRU = "Каргра Слепая", koKR = "눈먼 카르그라", zhCN = "盲眼卡格拉", zhTW = "盲眼卡葛菈"},
+		zones = {16591},
+	},
+	[256952] = {
+		level = "39 - 40",
+		names = {enUS = "Twilight Raider", deDE = "Twilight-Räuber", frFR = "Ecumeur du Crépuscule", ptBR = "Saqueador do Crepúsculo", ruRU = "Сумеречный грабитель", zhCN = "暮光袭击者"},
+		zones = {16591},
+	},
+	[257001] = {
+		classification = "Elite",
+		level = "42",
+		names = {enUS = "Old Rot-Chum"},
+		zones = {16591},
+	},
 	[257003] = {
 		level = "10",
-		names = {enUS = "Ishlee Breezewhisper", esES = "Ishlee Brisasusurro", frFR = "Ishlee Murmebrise", ptBR = "Ishlee Murmurbrisa", ruRU = "Ишли Шепот Бриза", koKR = "이실리 브리즈위스퍼", zhCN = "伊什莉·微风低语", zhTW = "艾希莉‧風語"},
+		names = {enUS = "Ishlee Breezewhisper", esES = "Ishlee Brisasusurro", esMX = "Ishlee Brisarrullo", frFR = "Ishlee Murmebrise", ptBR = "Ishlee Murmurbrisa", ruRU = "Ишли Шепот Бриза", koKR = "이실리 브리즈위스퍼", zhCN = "伊什莉·微风低语", zhTW = "艾希莉‧風語"},
 		zones = {16593},
 	},
 	[257004] = {
 		level = "10",
-		names = {enUS = "Eaysaa Brightgust", esES = "Eaysaa Ráfagabrillante", frFR = "Eaysaa Vive-Bourrasque", ptBR = "Eaysaa Fulgéolo", ruRU = "Эайса Яркий Порыв", koKR = "에이사 브라이트거스트", zhCN = "伊莎·明风", zhTW = "伊莎‧亮颶"},
+		names = {enUS = "Eaysaa Brightgust", esES = "Eaysaa Ráfagabrillante", esMX = "Eaysaa Lumiventa", frFR = "Eaysaa Vive-Bourrasque", ptBR = "Eaysaa Fulgéolo", ruRU = "Эайса Яркий Порыв", koKR = "에이사 브라이트거스트", zhCN = "伊莎·明风", zhTW = "伊莎‧亮颶"},
 		zones = {16593},
 	},
 	[257005] = {
 		level = "10",
-		names = {enUS = "Valiena Swiftgale", esES = "Valiena Ventolera", frFR = "Valiena Vent-Agile", ptBR = "Valiena Rudevento", ruRU = "Валиена Быстрый Ветер", koKR = "발리에나 스위프트게일", zhCN = "瓦莉娜·迅风", zhTW = "法莉娜‧迅颺"},
+		names = {enUS = "Valiena Swiftgale", esES = "Valiena Ventolera", esMX = "Valiena Ventoveloz", frFR = "Valiena Vent-Agile", ptBR = "Valiena Rudevento", ruRU = "Валиена Быстрый Ветер", koKR = "발리에나 스위프트게일", zhCN = "瓦莉娜·迅风", zhTW = "法莉娜‧迅颺"},
 		zones = {16593},
 	},
 	[257006] = {
 		level = "10",
-		names = {enUS = "Nyalah Brightfire", esES = "Nyalah Brillofuego", frFR = "Nyalah Feu-Ardent", ptBR = "Nyalah Chamarrútila", ruRU = "Ниала Яркое Пламя", koKR = "니알라 브라이트파이어", zhCN = "妮雅拉·明火", zhTW = "妮雅菈‧亮火"},
+		names = {enUS = "Nyalah Brightfire", esES = "Nyalah Brillofuego", esMX = "Nyalah Lumifuego", frFR = "Nyalah Feu-Ardent", ptBR = "Nyalah Chamarrútila", ruRU = "Ниала Яркое Пламя", koKR = "니알라 브라이트파이어", zhCN = "妮雅拉·明火", zhTW = "妮雅菈‧亮火"},
 		zones = {16593},
 	},
 	[257007] = {
 		level = "10",
-		names = {enUS = "Melasa Fairmend", esES = "Melasa Aliviojusto", frFR = "Melasa Bonsoin", ptBR = "Melasa Belemenda", ruRU = "Меласа Чистый Эликсир", koKR = "멜라사 페어멘드", zhCN = "梅拉萨·晴愈", zhTW = "梅菈莎‧正癒"},
+		names = {enUS = "Melasa Fairmend", esES = "Melasa Aliviojusto", esMX = "Melasa Sanablanca", frFR = "Melasa Bonsoin", ptBR = "Melasa Belemenda", ruRU = "Меласа Чистый Эликсир", koKR = "멜라사 페어멘드", zhCN = "梅拉萨·晴愈", zhTW = "梅菈莎‧正癒"},
 		zones = {16593},
 	},
 	[257008] = {
 		level = "10",
-		names = {enUS = "Baelann Swiftcurrent", esES = "Baelann Corriente Presta", frFR = "Baelann Vif-Courant", ptBR = "Baelann Velocifluxo", ruRU = "Баэланн Быстрый Поток", koKR = "베일란 스위프트커런트", zhCN = "贝兰·湍流", zhTW = "貝藍‧迅流"},
+		names = {enUS = "Baelann Swiftcurrent", esES = "Baelann Corriente Presta", esMX = "Baelann Riorraudo", frFR = "Baelann Vif-Courant", ptBR = "Baelann Velocifluxo", ruRU = "Баэланн Быстрый Поток", koKR = "베일란 스위프트커런트", zhCN = "贝兰·湍流", zhTW = "貝藍‧迅流"},
 		zones = {16593},
+	},
+	[257017] = {
+		level = "37 - 38",
+		names = {enUS = "Twilight Worg", deDE = "Twilight-Worg", frFR = "Worg du Crépuscule", ptBR = "Worg do Crepúsculo", ruRU = "Сумеречный ворг"},
+		zones = {16591},
 	},
 	[257018] = {
 		level = "10",
@@ -19151,10 +18208,11 @@ rm.npcDB = {
 		names = {enUS = "Mendalass Tattermend", esES = "Mendalass Coseandrajo", esMX = "Mendalass Sanandrajo", frFR = "Mendalass Racommode", ptBR = "Mendalass Emendarrapo", ruRU = "Мендаласс Живительный Эликсир", koKR = "멘달라스 태터멘드", zhCN = "门达拉斯·碎补", zhTW = "曼達拉斯‧破癒"},
 		zones = {16593},
 	},
-	[257196] = {
-		level = "10",
-		names = {enUS = "Zaal Stormshield", esES = "Zaal Escudo de Tormenta", frFR = "Zaal Pare-tempête", ruRU = "Заал Щит Бури", koKR = "자알 스톰실드", zhTW = "札爾‧風暴盾"},
-		zones = {16593},
+	[257034] = {
+		classification = "Rare Elite",
+		level = "41",
+		names = {enUS = "Mad Marrius", deDE = "Irrer Marrius", esES = "Marrius el Loco", esMX = "Marrius, el Demente", frFR = "Marrius le Maboul", ptBR = "Marrius Louco", ruRU = "Маньяк Маррий", koKR = "미치광이 마리우스", zhCN = "疯狂的马里乌斯", zhTW = "瘋狂的瑪里厄斯"},
+		zones = {16591},
 	},
 	[257521] = {
 		faction = "Alliance",
@@ -19168,11 +18226,89 @@ rm.npcDB = {
 		names = {enUS = "Windshaper Novice Seer", deDE = "Sehernovize der Windformer", esES = "Vidente novato Formavientos", esMX = "Vidente novato formavientos", frFR = "Voyant novice des Sculpte-vents", ptBR = "Vidente Noviço Moldavento", ruRU = "Провидец-новичок Ваятелей ветра", koKR = "바람구체자 수습 선견자", zhCN = "塑风者见习先知", zhTW = "塑風者見習先知"},
 		zones = {16593},
 	},
+	[257885] = {
+		classification = "Elite",
+		names = {enUS = "Krol'dok Centurion"},
+	},
+	[257888] = {
+		classification = "Elite",
+		names = {enUS = "Krol'dok Shaman"},
+	},
+	[257900] = {
+		names = {enUS = "Redridge Prisoner"},
+	},
+	[257901] = {
+		level = "41 - 42",
+		names = {enUS = "Eastsea Buccaneer", frFR = "Boucanier des mers de l'Est"},
+		zones = {16591},
+	},
+	[257910] = {
+		level = "42 - 43",
+		names = {enUS = "Eastsea Musketeer", frFR = "Mousquetaire des mers de l'Est"},
+		zones = {16591},
+	},
+	[257915] = {
+		level = "44 - 45",
+		names = {enUS = "Eastsea Raider", frFR = "Ecumeur des mers de l'Est"},
+		zones = {16591},
+	},
+	[257916] = {
+		level = "43 - 44",
+		names = {enUS = "Eastsea Bombardier", frFR = "Bombardier des mers de l'Est"},
+		zones = {16591},
+	},
+	[257926] = {
+		level = "38 - 39",
+		names = {enUS = "Farholde Scout", deDE = "Späherlehrling von Farholde", frFR = "Jeune éclaireur de Fort-Lointain", ruRU = "Фархолдский разведчик-новобранец"},
+		zones = {16591},
+	},
+	[258032] = {
+		classification = "Rare Elite",
+		level = "46",
+		names = {enUS = "Twilight Forgemaster", deDE = "Twilight-Schmiedemeister", esES = "Maestro de forja Crepuscular", esMX = "Maestro de forja Crepuscular", frFR = "Maître-forge du Crépuscule", ptBR = "Mestre Forjador do Crepúsculo", ruRU = "Сумеречный главный кузнец", koKR = "황혼의 제련장인", zhCN = "暮光铸造师", zhTW = "暮光鍛造大師"},
+		zones = {16591},
+	},
+	[258038] = {
+		classification = "Elite",
+		names = {enUS = "Shadowhide Bully"},
+	},
+	[258040] = {
+		classification = "Elite",
+		names = {enUS = "Shadowhide Curseweaver"},
+	},
+	[258042] = {
+		classification = "Elite",
+		names = {enUS = "Twilight Grunt"},
+		zones = {16842},
+	},
+	[258100] = {
+		classification = "Elite",
+		names = {enUS = "Twilight Warlock"},
+	},
+	[258102] = {
+		classification = "Elite",
+		names = {enUS = "Twilight Outrider"},
+	},
+	[258104] = {
+		classification = "Elite",
+		names = {enUS = "Twilight Lieutenant"},
+		zones = {16842},
+	},
+	[258264] = {
+		classification = "Elite",
+		names = {enUS = "Depraved Owlbeast"},
+		zones = {16554},
+	},
 	[258306] = {
 		faction = "Alliance",
 		level = "24",
 		names = {enUS = "Granny Finespindle", deDE = "Oma Finespindle", esES = "Abuelita Bueneje", esMX = "Abuela Bueneje", frFR = "Mamie Finfuseau", ptBR = "Vovó Fusofino", ruRU = "Бабуля Остроигл", koKR = "할머니 파인스핀들", zhCN = "钢轴奶奶", zhTW = "葛蘭妮‧鋼軸"},
 		zones = {1537},
+	},
+	[258331] = {
+		level = "36 - 37",
+		names = {enUS = "Young Paletusk", deDE = "Junger Bleichhauer", frFR = "Jeune brochepâle", ptBR = "Palitusco Jovem", ruRU = "Молодой бледноклык", zhCN = "幼年苍牙野猪"},
+		zones = {16591},
 	},
 	[258415] = {
 		faction = "Horde",
@@ -19192,6 +18328,16 @@ rm.npcDB = {
 		names = {enUS = "Boramu", ruRU = "Бораму", koKR = "보라무", zhCN = "博拉姆", zhTW = "波拉姆"},
 		zones = {1638},
 	},
+	[258516] = {
+		classification = "Elite",
+		names = {enUS = "Blackmaw Druid"},
+		zones = {16554},
+	},
+	[258522] = {
+		level = "38",
+		names = {enUS = "Sootfur", deDE = "Rußpelz", frFR = "Fourre-Suie"},
+		zones = {16591},
+	},
 	[258548] = {
 		faction = "Alliance",
 		level = "30",
@@ -19210,9 +18356,94 @@ rm.npcDB = {
 		names = {enUS = "Dani'ill", ruRU = "Дани'илл", koKR = "다니일", zhCN = "丹尼伊尔", zhTW = "達尼爾"},
 		zones = {1657},
 	},
+	[258573] = {
+		level = "36 - 37",
+		names = {enUS = "Mudfin Oracle", deDE = "Orakel der Schlickflossen", frFR = "Oracle aileron-fangeux", ruRU = "Илистый оракул"},
+		zones = {16591},
+	},
+	[258574] = {
+		level = "37 - 38",
+		names = {enUS = "Mudfin Warrior", deDE = "Krieger der Schlickflossen", frFR = "Guerrier aileron-fangeux", ruRU = "Илистый воин"},
+		zones = {16591},
+	},
+	[258588] = {
+		level = "38 - 40",
+		names = {enUS = "Jumbo Crawfish", deDE = "Riesiger Flusskrebs", frFR = "Ecrevisse géante", ptBR = "Lagostim Gigante", ruRU = "Громадный рак", zhCN = "巨型小龙虾"},
+		zones = {16591},
+	},
+	[258687] = {
+		classification = "Elite",
+		names = {enUS = "Krol'dok Brute"},
+		zones = {16842},
+	},
+	[258792] = {
+		classification = "Elite",
+		names = {enUS = "Risen Sentry", deDE = "Auferstandener Wachposten", frFR = "Factionnaire ressuscité"},
+		zones = {16550},
+	},
+	[258797] = {
+		classification = "Elite",
+		names = {enUS = "Champion of the Deep", deDE = "Champion der Tiefe", frFR = "Champion des profondeurs"},
+		zones = {16550},
+	},
+	[258799] = {
+		classification = "Elite",
+		names = {enUS = "Brinescale Explorer", deDE = "Forscher der Laugenschuppen", frFR = "Explorateur écaille-de-mer"},
+		zones = {16550},
+	},
+	[258804] = {
+		classification = "Elite",
+		names = {enUS = "Brinescale Sorceress", deDE = "Zauberin der Laugenschuppen", frFR = "Ensorceleuse écaille-de-mer"},
+		zones = {16550},
+	},
+	[258818] = {
+		classification = "Elite",
+		names = {enUS = "Chasm Crawler", deDE = "Abgrundkrabbler", frFR = "Clampant du gouffre"},
+		zones = {16550},
+	},
+	[258897] = {
+		classification = "Elite",
+		names = {enUS = "Makrura Snapper", deDE = "Makruraschnapper", frFR = "Pinceur makrura"},
+		zones = {16550},
+	},
+	[258966] = {
+		classification = "Elite",
+		names = {enUS = "Slavecrusher Grox", deDE = "Sklavenbrecher Grox", esES = "Machacaesclavos Grox", esMX = "Muelesclavos Grox", frFR = "Brise-esclave Grox", ptBR = "Grox Esmaga-escravos", ruRU = "Рабомучитель Грокс", koKR = "노예파괴자 그록스", zhTW = "碎奴者古羅斯"},
+	},
+	[259046] = {
+		level = "38 - 39",
+		names = {enUS = "Freshwater Crocolisk", deDE = "Süßwasserkrokilisk", frFR = "Crocilisque d'eau douce", ptBR = "Crocolisco de Água Doce", ruRU = "Пресноводный кроколиск", zhCN = "淡水鳄"},
+		zones = {16591},
+	},
+	[259052] = {
+		faction = "Horde",
+		level = "38 - 39",
+		names = {enUS = "Rog'mar Poacher", deDE = "Wilderer von Rog'mar", frFR = "Braconnier de Rog'mar", ptBR = "Caçador de Rog'mar", zhCN = "洛格玛偷猎者"},
+		zones = {16591},
+	},
+	[259054] = {
+		level = "38 - 39",
+		names = {enUS = "Wildplains Patriarch", deDE = "Wildebenenpatriarch", frFR = "Patriarche des plaines sauvages", ptBR = "Patriarca Campobravo", zhCN = "狂野平原族长"},
+		zones = {16591},
+	},
+	[259055] = {
+		level = "38 - 39",
+		names = {enUS = "Wildplains Huntress", deDE = "Wildebenenjägerin", frFR = "Chasseresse des plaines sauvages", ptBR = "Caçadora Campobravo", zhCN = "狂野平原女猎手"},
+		zones = {16591},
+	},
 	[259250] = {
 		level = "25",
 		names = {enUS = "Alphonse Dumas", ruRU = "Альфонсо Дюма"},
+		zones = {16591},
+	},
+	[259267] = {
+		level = "36 - 37",
+		names = {enUS = "Plains Coyote", deDE = "Ebenenkojote", frFR = "Coyote des plaines", ruRU = "Равнинный койот", zhTW = "平原山狗"},
+		zones = {16591},
+	},
+	[259269] = {
+		level = "38 - 39",
+		names = {enUS = "High Plains Buzzard", deDE = "Hochebenenbussard", esES = "Águila ratonera de las mesetas", frFR = "Busard des hautes plaines", ptBR = "Urubu das Altas Planícies", ruRU = "Высотный равнинный канюк"},
 		zones = {16591},
 	},
 	[259287] = {
@@ -19242,17 +18473,33 @@ rm.npcDB = {
 	},
 	[259962] = {
 		level = "40",
-		names = {enUS = "Fimbo Greasemitz", esES = "Fimbo Grasas", esMX = "Fimbo Grasapuños", frFR = "Fimbo Lubrimitz", ruRU = "Фимбо Смазляп"},
+		names = {enUS = "Fimbo Greasemitz", esES = "Fimbo Grasas", esMX = "Fimbo Grasapuños", frFR = "Fimbo Lubrimitz", ptBR = "Fimbo Graxamix", ruRU = "Фимбо Смазляп"},
 		zones = {16591},
+	},
+	[259979] = {
+		classification = "Elite",
+		names = {enUS = "Saltseer Murderer", deDE = "Mörder der Salzseher", frFR = "Meurtrier sel-augure"},
+		zones = {16550},
+	},
+	[259981] = {
+		classification = "Elite",
+		names = {enUS = "Saltseer Cultist", deDE = "Kultist der Salzseher", frFR = "Sectateur sel-augure"},
+		zones = {16550},
 	},
 	[259987] = {
 		classification = "Elite",
-		names = {enUS = "Saltseer Manhunter"},
+		names = {enUS = "Saltseer Manhunter", deDE = "Menschenjäger der Salzseher", frFR = "Chasseur d'homme sel-augure"},
+		zones = {16550},
 	},
 	[260157] = {
 		level = "9 - 10",
 		names = {enUS = "Elder Snow Leopard", deDE = "Alter Schneeleopard", esES = "Leopardo de la nieve anciano", esMX = "Leopardo de las nieves mayor", frFR = "Ancien léopard des neiges", ptBR = "Leopardo da Neve Ancião", ruRU = "Старый снежный леопард", koKR = "늙은 눈표범", zhCN = "老年雪豹", zhTW = "老雪豹"},
 		zones = {1},
+	},
+	[260225] = {
+		level = "38",
+		names = {enUS = "Bloodsnout", frFR = "Flaire-Sang"},
+		zones = {16591},
 	},
 	[260325] = {
 		classification = "Elite",
@@ -19263,6 +18510,16 @@ rm.npcDB = {
 		classification = "Elite",
 		names = {enUS = "Relic Guardian", deDE = "Reliktwächter", esES = "Guardián de reliquias", frFR = "Gardien des reliques", ruRU = "Страж реликвий", koKR = "유물 수호자", zhCN = "遗迹守卫者", zhTW = "聖物守護者"},
 		zones = {16732},
+	},
+	[260353] = {
+		classification = "Elite",
+		names = {enUS = "Saltseer Coroner", deDE = "Leichensammler der Salzseher", esES = "Coronel Videntesal", frFR = "Légiste sel-augure", ptBR = "Legista Divinassais", ruRU = "Коронер из шайки Солевидцев"},
+		zones = {16550},
+	},
+	[260422] = {
+		level = "56 - 57",
+		names = {enUS = "Ashen Acolyte", deDE = "Aschenakolyth"},
+		zones = {616},
 	},
 	[260428] = {
 		level = "9 - 12",
@@ -19286,7 +18543,7 @@ rm.npcDB = {
 	},
 	[260487] = {
 		level = "44",
-		names = {enUS = "Gritta Chumwater", esES = "Gritta Carnadaguada", frFR = "Gritta Aimelo", ruRU = "Гритта Подкормита"},
+		names = {enUS = "Gritta Chumwater", esES = "Gritta Carnadaguada", frFR = "Gritta Aimelo", ruRU = "Гритта Подкормита", zhCN = "格丽塔·密水"},
 		zones = {16591},
 	},
 	[260558] = {
@@ -19296,7 +18553,7 @@ rm.npcDB = {
 	},
 	[260562] = {
 		level = "50",
-		names = {enUS = "Melbin Powderfuse", ptBR = "Melbino Detonapavio"},
+		names = {enUS = "Melbin Powderfuse", frFR = "Melbin Poudremèche", ptBR = "Melbino Detonapavio"},
 		zones = {16591},
 	},
 	[260565] = {
@@ -19306,12 +18563,12 @@ rm.npcDB = {
 	},
 	[260566] = {
 		level = "41",
-		names = {enUS = "Fizzix Boomshot", ptBR = "Fizzix Tirostrondo"},
+		names = {enUS = "Fizzix Boomshot", frFR = "Fizzix Boumcalibre", ptBR = "Fizzix Tirostrondo"},
 		zones = {16591},
 	},
 	[260570] = {
 		level = "41",
-		names = {enUS = "Stitch Pinwizzle", ptBR = "Stitch Alfineteiro", koKR = "스티치 핀위즐"},
+		names = {enUS = "Stitch Pinwizzle", frFR = "Koutur Filenaiguille", ptBR = "Stitch Alfineteiro", koKR = "스티치 핀위즐"},
 		zones = {16591},
 	},
 	[260796] = {
@@ -19330,22 +18587,22 @@ rm.npcDB = {
 		zones = {16732},
 	},
 	[260799] = {
-		names = {enUS = "Young Riptooth", deDE = "Junger Reißzahn", ruRU = "Молодой зубокус", koKR = "어린 톱날이빨"},
+		names = {enUS = "Young Riptooth", deDE = "Junger Reißzahn", frFR = "Jeune arracheur", ruRU = "Молодой зубокус", koKR = "어린 톱날이빨"},
 		zones = {16732},
 	},
 	[260800] = {
 		classification = "Elite",
-		names = {enUS = "Thicket Lurker", deDE = "Dickichtlauerer", ruRU = "Ловчий из чащи", koKR = "수풀 잠복꾼"},
+		names = {enUS = "Thicket Lurker", deDE = "Dickichtlauerer", frFR = "Rôdeur des fourrés", ruRU = "Ловчий из чащи", koKR = "수풀 잠복꾼"},
 		zones = {16732},
 	},
 	[260801] = {
 		classification = "Elite",
-		names = {enUS = "Thicket Hunter", deDE = "Dickichtjäger", esES = "Cazador de los matorrales", frFR = "Chasseur des fourrés", ruRU = "Хищник из чащи", koKR = "수풀 사냥꾼", zhCN = "灌木林猎人"},
+		names = {enUS = "Thicket Hunter", deDE = "Dickichtjäger", esES = "Cazador de los matorrales", frFR = "Chasseur des fourrés", ptBR = "Caçador da Mata", ruRU = "Хищник из чащи", koKR = "수풀 사냥꾼", zhCN = "灌木林猎人"},
 		zones = {16732},
 	},
 	[260802] = {
 		classification = "Elite",
-		names = {enUS = "Thicket Matriarch", deDE = "Dickichtmatriarchin", ruRU = "Матриарх из чащи", koKR = "덤불 어미"},
+		names = {enUS = "Thicket Matriarch", deDE = "Dickichtmatriarchin", frFR = "Matriarche des fourrés", ruRU = "Матриарх из чащи", koKR = "덤불 어미"},
 		zones = {16732},
 	},
 	[260803] = {
@@ -19363,7 +18620,7 @@ rm.npcDB = {
 		classification = "Elite",
 		level = "28",
 		names = {enUS = "Highland Horror", deDE = "Hochlandschrecken", esES = "Horror de las Tierras Altas", frFR = "Horreur des hautes-terres", ptBR = "Horror do Planalto", ruRU = "Ужас нагорья", koKR = "고원 공포", zhCN = "高地恐魔", zhTW = "高地之懼"},
-		zones = {16732},
+		zones = {11, 16732},
 	},
 	[260809] = {
 		level = "26",
@@ -19375,6 +18632,26 @@ rm.npcDB = {
 		names = {enUS = "Highland Snapper", deDE = "Hochlandschnapper", frFR = "Mordeuse des hautes-terres", ruRU = "Щелкун нагорья", koKR = "고원 덥썩이"},
 		zones = {16732},
 	},
+	[260968] = {
+		level = "41 - 42",
+		names = {enUS = "Twilight Mauler", frFR = "Marteleur du Crépuscule"},
+		zones = {16591},
+	},
+	[260969] = {
+		level = "39 - 40",
+		names = {enUS = "Twilight Instigator"},
+		zones = {16591},
+	},
+	[260995] = {
+		level = "42 - 43",
+		names = {enUS = "Ogre Miner", frFR = "Mineur ogre", ptBR = "Minerador Ogro", ruRU = "Огр-шахтер"},
+		zones = {16591},
+	},
+	[260996] = {
+		level = "41 - 42",
+		names = {enUS = "Twilight Subjugator", frFR = "Subjugateur du Crépuscule", ruRU = "Сумеречный поработитель"},
+		zones = {16591},
+	},
 	[261313] = {
 		faction = "Horde",
 		level = "36",
@@ -19385,6 +18662,83 @@ rm.npcDB = {
 		level = "16 - 18",
 		names = {enUS = "Kul Tiras Marine", deDE = "Marinesoldat von Kul Tiras", esES = "Marinero de Kul Tiras", esMX = "Marinero Kul Tiras", frFR = "Soldat de marine de Kul Tiras", ptBR = "Fuzileiro de Kul Tiraz", ruRU = "Кул-тирасский морпех", koKR = "쿨 티라스 해병", zhCN = "库尔提拉斯水兵", zhTW = "庫爾提拉斯水兵"},
 		zones = {17},
+	},
+	[261497] = {
+		level = "40 - 41",
+		names = {enUS = "Twilight Firecaller", frFR = "Mandefeu du Crépuscule"},
+		zones = {16591},
+	},
+	[261710] = {
+		level = "39 - 40",
+		names = {enUS = "Twilight Brute", deDE = "Twilight-Schläger", frFR = "Brute du Crépuscule", ptBR = "Brutamontes do Crepúsculo"},
+		zones = {16591},
+	},
+	[261711] = {
+		level = "38 - 39",
+		names = {enUS = "Empowered Brute", deDE = "Machterfüllter Grobian", frFR = "Brute surpuissante", ruRU = "Усиленный громила"},
+		zones = {16591},
+	},
+	[261898] = {
+		names = {enUS = "Ravasaur Juvenile"},
+	},
+	[262037] = {
+		level = "37 - 38",
+		names = {enUS = "Roosting Duskbat", deDE = "Nistender Nachtsauger", frFR = "Chauve-souris de la pénombre nichée", ruRU = "Отдыхающая сумеречница"},
+		zones = {16591},
+	},
+	[262065] = {
+		classification = "Elite",
+		names = {enUS = "Riding Wolf"},
+	},
+	[262119] = {
+		level = "17 - 18",
+		names = {enUS = "Corporal Adamore", esES = "Cabo Adamore", esMX = "Cabo Adamore", frFR = "Caporal Adamore", ptBR = "Cabo Adamauro", ruRU = "Капрал Адамор", koKR = "하사관 애더모어", zhCN = "阿达摩尔下士", zhTW = "艾達摩爾下士"},
+		zones = {17},
+	},
+	[262169] = {
+		level = "39 - 41",
+		names = {enUS = "Twilight Ritualist", deDE = "Twilight-Ritualist", frFR = "Ritualiste du Crépuscule", ruRU = "Сумеречный ритуалист"},
+		zones = {16591},
+	},
+	[262300] = {
+		classification = "Elite",
+		names = {enUS = "Eastgrotto Dweller"},
+	},
+	[262397] = {
+		level = "36 - 38",
+		names = {enUS = "Brinescale Skirmisher", deDE = "Scharmützler der Laugenschuppen", esES = "Hostigador Escamasalada", frFR = "Tirailleur écaille-de-mer", ptBR = "Escaramuçador Escamoura", ruRU = "Застрельщик из клана Соленой Чешуи", koKR = "소금비늘 척후병", zhCN = "盐鳞游击者", zhTW = "海鱗爭鬥者"},
+		zones = {33},
+	},
+	[262477] = {
+		level = "41 - 42",
+		names = {enUS = "Cinderscale Warrior", deDE = "Krieger der Glutschuppen", frFR = "Guerrier cendrécaille"},
+		zones = {16591},
+	},
+	[263141] = {
+		classification = "Rare Elite",
+		level = "43",
+		names = {enUS = "Scaldaron", esES = "Escaldaron", esMX = "Escaldaron", ruRU = "Жогрон", koKR = "스칼다론", zhCN = "斯卡达隆", zhTW = "斯卡達隆"},
+		zones = {16591},
+	},
+	[263196] = {
+		classification = "Elite",
+		names = {enUS = "Profane Necromancer", deDE = "Ruchloser Totenbeschwörer", frFR = "Nécromancien profane"},
+		zones = {16550},
+	},
+	[263307] = {
+		level = "37 - 38",
+		names = {enUS = "Glade Viper", deDE = "Lichtungsviper"},
+		zones = {16591},
+	},
+	[263343] = {
+		level = "37 - 38",
+		names = {enUS = "Low Plains Buzzard", deDE = "Tiefebenenbussard", esES = "Águila ratonera de las llanuras bajas", esMX = "Águila ratonera de las bajas llanuras", frFR = "Busard des basses plaines", ptBR = "Urubu das Baixas Planícies", ruRU = "Низинный канюк", zhCN = "低地秃鹰"},
+		zones = {16591},
+	},
+	[263348] = {
+		level = "37 - 38",
+		names = {enUS = "Roving Tallstrider", deDE = "Umherstreifender Weitschreiter", frFR = "Haut-trotteur en maraude", ptBR = "Moa Errante", zhCN = "游荡的陆行鸟"},
+		zones = {16591},
 	},
 	[263389] = {
 		classification = "Elite",
@@ -19409,13 +18763,18 @@ rm.npcDB = {
 	[263399] = {
 		faction = "Alliance",
 		level = "20",
-		names = {enUS = "Sam Sarsaparilla", esES = "Sam Zarzaparrilla", frFR = "Sam Salsepareille", ptBR = "Sam Salsaparrilha", ruRU = "Сэм Сарсапарилла", koKR = "샘 사르사파릴라", zhTW = "山姆‧薩沙帕里拉"},
+		names = {enUS = "Sam Sarsaparilla", esES = "Sam Zarzaparrilla", frFR = "Sam Salsepareille", ptBR = "Sam Salsaparrilha", ruRU = "Сэм Сарсапарилла", koKR = "샘 사르사파릴라", zhCN = "萨姆·萨斯帕里拉", zhTW = "山姆‧薩沙帕里拉"},
 		zones = {12},
 	},
 	[263438] = {
 		classification = "Elite",
 		names = {enUS = "Dark Iron Summoner", deDE = "Beschwörer der Dunkeleisenzwerge", esES = "Invocador Hierro Negro", esMX = "Invocador Hierro Negro", frFR = "Invocateur sombrefer", ptBR = "Evocador Ferro Negro", ruRU = "Призыватель из клана Черного Железа", koKR = "검은무쇠 소환사", zhCN = "黑铁召唤师", zhTW = "黑鐵召喚師"},
 		zones = {16919},
+	},
+	[263440] = {
+		level = "42",
+		names = {enUS = "Hamur"},
+		zones = {16591},
 	},
 	[263466] = {
 		classification = "Elite",
@@ -19431,30 +18790,30 @@ rm.npcDB = {
 		names = {enUS = "Raan Wildwind", esES = "Raan Vientosalvaje", esMX = "Raan Bravovento", frFR = "Raan Aile-sauvage", ptBR = "Raan Ventoferoz", ruRU = "Раан Дикий Ветер", koKR = "란 와일드윈드", zhCN = "拉安·狂风", zhTW = "拉恩‧荒風"},
 		zones = {16593},
 	},
+	[263899] = {
+		classification = "Elite",
+		names = {enUS = "Undying Offering", deDE = "Unvergängliche Opfergabe", frFR = "Offrande éternelle"},
+		zones = {16550},
+	},
 	[264078] = {
 		level = "30",
 		names = {enUS = "Sutara Plainstalker", esES = "Sutara Acechaprados", frFR = "Sutara Marche-plaines", ptBR = "Sutara Espreitaprados", ruRU = "Сутара Вольная Ловчая", koKR = "수타라 평원추적자", zhCN = "苏塔拉·平原行者", zhTW = "蘇塔菈‧平原行者"},
 		zones = {215},
 	},
-	[264079] = {
-		level = "27 - 28",
-		names = {enUS = "Gloomrise Hatchling", deDE = "Schlüpfling der Düsteranhöhe", esMX = "Prole del Alto Penumbroso", frFR = "Jeune araignée de la cime du Chagrin", ruRU = "Паучок с Мрачной вершины"},
-		zones = {215},
-	},
 	[264081] = {
 		level = "28",
 		names = {enUS = "Gloomrise Spinner", deDE = "Spinner der Düsteranhöhe", esMX = "Tejedora del Alto Penumbroso", frFR = "Tisseuse de la cime du Chagrin", ruRU = "Ткач с Мрачной вершины"},
-		zones = {215},
+		zones = {215, 406},
 	},
 	[264083] = {
 		level = "28 - 29",
 		names = {enUS = "Gloomrise Soldier", deDE = "Soldat der Düsteranhöhe", esMX = "Soldado del Alto Penumbroso", frFR = "Soldate de la cime du Chagrin", ruRU = "Солдат с Мрачной вершины"},
-		zones = {215},
+		zones = {215, 406},
 	},
 	[264797] = {
 		classification = "Elite",
 		level = "63",
-		names = {enUS = "Aisarra Nightmeadow"},
+		names = {enUS = "Aisarra Nightmeadow", frFR = "Aisarra Noctepré", ruRU = "Айсарра Ночной Луг"},
 		zones = {616},
 	},
 	[265809] = {
@@ -19478,7 +18837,7 @@ rm.npcDB = {
 	[265812] = {
 		faction = "Horde",
 		level = "12",
-		names = {enUS = "Eleanor Shackleton", esES = "Eleanor Tembleque", ptBR = "Eleonora Grilhões", ruRU = "Элеанор Шеклтон", koKR = "엘리노어 섀클턴", zhCN = "埃莉诺·沙克尔顿"},
+		names = {enUS = "Eleanor Shackleton", esES = "Eleanor Tembleque", ptBR = "Eleonora Grilhões", ruRU = "Элеанор Шеклтон", koKR = "엘리노어 섀클턴", zhCN = "埃莉诺·沙克尔顿", zhTW = "伊琳諾兒‧沙克爾頓"},
 		zones = {85},
 	},
 	[265813] = {
@@ -19514,6 +18873,17 @@ rm.npcDB = {
 		names = {enUS = "Ukorsbane", esES = "Perdición de Ukor", esMX = "Ukorterror", frFR = "Fléau-d'Ukor", ruRU = "Бич Укора", koKR = "우코스베인", zhCN = "乌科斯之灾", zhTW = "烏寇班"},
 		zones = {14},
 	},
+	[266852] = {
+		classification = "Elite",
+		level = "12",
+		names = {enUS = "Halikor", ruRU = "Халикор", koKR = "할리코르", zhCN = "哈利科尔", zhTW = "哈利寇"},
+		zones = {14},
+	},
+	[266862] = {
+		level = "33 - 34",
+		names = {enUS = "Juvenile Paletusk", frFR = "Brochepâle juvénile"},
+		zones = {16591},
+	},
 	[266881] = {
 		faction = "Horde",
 		level = "25",
@@ -19537,6 +18907,11 @@ rm.npcDB = {
 		names = {enUS = "Dark Neophyte", deDE = "Dunkler Neophyt", esES = "Neófito oscuro", esMX = "Neófito oscuro", frFR = "Néophyte sombre", ptBR = "Neófito Sombrio", ruRU = "Темный неофит", koKR = "암흑 수련사", zhCN = "黑暗新教徒", zhTW = "黑暗低階教徒"},
 		zones = {85},
 	},
+	[267065] = {
+		level = "33 - 35",
+		names = {enUS = "Syndicate Smuggler", deDE = "Schmuggler des Syndikats", esES = "Contrabandista de la Hermandad", frFR = "Contrebandier du Syndicat", ruRU = "Контрабандист Синдиката", zhTW = "辛迪加走私者"},
+		zones = {45},
+	},
 	[267307] = {
 		classification = "Elite",
 		level = "20",
@@ -19555,21 +18930,31 @@ rm.npcDB = {
 		names = {enUS = "Razormane Berserker", deDE = "Berserker der Grimmhauer", esES = "Rabioso Crines de Acero", esMX = "Rabioso Crines de Acero", frFR = "Berserker tranchecrin", ptBR = "Berserker Crinavalha", ruRU = "Берсерк из племени Иглогривых", koKR = "서슬갈기일족 광전사", zhCN = "钢鬃狂战士", zhTW = "鋼鬃狂戰士"},
 		zones = {17},
 	},
-	[268530] = {
-		level = "9",
-		names = {enUS = "Bloodtalon Matriarch", deDE = "Blutklauenmatriarchin", esES = "Matriarca Garrasangre", esMX = "Matriarca Garrasangre", frFR = "Matriarche griffesang", ptBR = "Matriarca Garrassangre", ruRU = "Матриарх кровопалых", koKR = "붉은발톱랩터 어미", zhCN = "血爪族母", zhTW = "血爪族母"},
-		zones = {14},
+	[268321] = {
+		classification = "Elite",
+		names = {enUS = "Bound Elemental", deDE = "Gebundener Elementar", frFR = "Elémentaire lié"},
+		zones = {16550},
 	},
-	[268558] = {
-		level = "5 - 6",
-		names = {enUS = "Chakuyak", ruRU = "Чакуак", koKR = "차쿠야크", zhTW = "查庫亞"},
-		zones = {215},
+	[268423] = {
+		classification = "Elite",
+		names = {enUS = "Zalfan Moonshadow", esES = "Zalfan Umbraluna", frFR = "Zalfan Lunombre", ptBR = "Zalfan Umbraluna", ruRU = "Залфан Тень Луны"},
+	},
+	[268462] = {
+		classification = "Elite",
+		names = {enUS = "Mana-Rich Frenzy", deDE = "Manareicher Frenzy", frFR = "Furie richemana"},
+		zones = {16550},
+	},
+	[268622] = {
+		faction = "Alliance",
+		level = "22 - 23",
+		names = {enUS = "Encroaching Soldier", deDE = "Eindringender Soldat", esES = "Soldado invasor", esMX = "Soldado invasor", frFR = "Soldat envahissant", ptBR = "Soldado Invasor", ruRU = "Вторгшийся солдат", koKR = "접근하는 병사", zhCN = "入侵的士兵", zhTW = "來犯的士兵"},
+		zones = {17},
 	},
 	[268623] = {
 		classification = "Elite",
 		faction = "Alliance",
 		level = "23",
-		names = {enUS = "Outraged Pillager", deDE = "Erzürnter Plünderer", esES = "Saqueador indignado", frFR = "Pilleur indigné", ptBR = "Pilhador Furioso", ruRU = "Разъяренный погромщик", koKR = "격분한 약탈자", zhCN = "愤怒的掠夺者", zhTW = "憤恨的掠取者"},
+		names = {enUS = "Outraged Pillager", deDE = "Erzürnter Plünderer", esES = "Saqueador indignado", esMX = "Saqueador indignado", frFR = "Pilleur indigné", ptBR = "Pilhador Furioso", ruRU = "Разъяренный погромщик", koKR = "격분한 약탈자", zhCN = "愤怒的掠夺者", zhTW = "憤恨的掠取者"},
 		zones = {17},
 	},
 	[268624] = {
@@ -19577,20 +18962,46 @@ rm.npcDB = {
 		names = {enUS = "Razormane Raider", deDE = "Räuber der Grimmhauer", esES = "Asaltante Crines de Acero", esMX = "Asaltante Crines de Acero", frFR = "Pillard tranchecrin", ptBR = "Saqueador Crinavalha", ruRU = "Налетчик из племени Иглогривых", koKR = "서슬갈기 침략자", zhCN = "钢鬃掠夺者", zhTW = "剃鬃劫掠者"},
 		zones = {17},
 	},
+	[268831] = {
+		level = "39 - 40",
+		names = {enUS = "Plains Prowler", deDE = "Ebenenstreuner", frFR = "Rôdeur des vallées", zhTW = "平原灰狼"},
+		zones = {16591},
+	},
 	[269075] = {
 		level = "6",
-		names = {enUS = "Snow Leopard Prowler", deDE = "Schneeleopardenpirscher", esES = "Leopardo de la nieve merodeador", frFR = "Léopard des neiges rôdeur", ptBR = "Leopardo da Neve Predador", ruRU = "Снежный леопард – охотник", koKR = "눈표범 배회자"},
+		names = {enUS = "Snow Leopard Prowler", deDE = "Schneeleopardenpirscher", esES = "Leopardo de la nieve merodeador", frFR = "Léopard des neiges rôdeur", ptBR = "Leopardo da Neve Predador", ruRU = "Снежный леопард – охотник", koKR = "눈표범 배회자", zhTW = "雪豹徘徊者"},
 		zones = {1},
 	},
 	[269134] = {
 		classification = "Elite",
-		names = {enUS = "Kirin Tor Necromancer", deDE = "Totenbeschwörer der Kirin Tor"},
+		names = {enUS = "Kirin Tor Necromancer", deDE = "Totenbeschwörer der Kirin Tor", frFR = "Nécromancien du Kirin Tor", ruRU = "Некромант из Кирин-Тора"},
 		zones = {36},
+	},
+	[269175] = {
+		level = "36 - 38",
+		names = {enUS = "Carnivorous Weed", deDE = "Fleischfressendes Unkraut", esES = "Hierba carnívora", esMX = "Hierba carnívora", frFR = "Herbe carnivore", ptBR = "Erva Carnívora", ruRU = "Хищный сорняк", koKR = "식충 잡초", zhCN = "食肉杂草", zhTW = "肉食雜草"},
+		zones = {33},
+	},
+	[270094] = {
+		classification = "Elite",
+		level = "30",
+		names = {enUS = "Stormheart", deDE = "Sturmherz", esMX = "Cuoretormenta", frFR = "Coeur-d'orage", ruRU = "Громосерд", zhCN = "风暴之心"},
+		zones = {400},
 	},
 	[270196] = {
 		level = "12",
-		names = {enUS = "Jai'vhanel", ruRU = "Джай'ванель", koKR = "자이바넬", zhCN = "贾伊瓦内尔"},
+		names = {enUS = "Jai'vhanel", ruRU = "Джай'ванель", koKR = "자이바넬", zhCN = "贾伊瓦内尔", zhTW = "賈瓦奈爾"},
 		zones = {148},
+	},
+	[270664] = {
+		level = "37 - 38",
+		names = {enUS = "Venomweb Spitter", deDE = "Giftweberspeier"},
+		zones = {16591},
+	},
+	[270667] = {
+		level = "38 - 39",
+		names = {enUS = "Farholde Priest", deDE = "Priesterinitiand von Farholde", frFR = "Prêtre initié de Fort-Lointain"},
+		zones = {16591},
 	},
 	[270693] = {
 		level = "15",
@@ -19605,7 +19016,7 @@ rm.npcDB = {
 	[270892] = {
 		classification = "Elite",
 		level = "32",
-		names = {enUS = "Goaz Warder", deDE = "Goazwärter", esES = "Guardián de Goaz", ruRU = "Хранитель Гоаз", koKR = "고아즈 수호병"},
+		names = {enUS = "Goaz Warder", deDE = "Goazwärter", esES = "Guardián de Goaz", frFR = "Gardien de Goaz", ruRU = "Хранитель Гоаз", koKR = "고아즈 수호병"},
 		zones = {11},
 	},
 	[271080] = {
@@ -19619,22 +19030,34 @@ rm.npcDB = {
 		names = {enUS = "Maddened Rotclaw", deDE = "Wahnsinnige Moderklaue", esES = "Garrapútrea enajenado", esMX = "Garrapútrea enajenado", frFR = "Griffe pourrie affolée", ptBR = "Patapodre Enlouquecido", ruRU = "Разъяренный гнилокоготь", koKR = "광기에 물든 썩은발톱", zhCN = "疯狂的腐爪", zhTW = "狂暴的腐爪"},
 		zones = {11},
 	},
+	[271336] = {
+		classification = "Elite",
+		level = "30",
+		names = {enUS = "Carnage", deDE = "Massaker", ruRU = "Резун"},
+		zones = {11},
+	},
+	[271338] = {
+		classification = "Elite",
+		level = "32",
+		names = {enUS = "Ados", frFR = "Adoss", ruRU = "Адос", koKR = "아도스"},
+		zones = {11},
+	},
 	[271346] = {
 		classification = "Elite",
 		level = "29 - 30",
-		names = {enUS = "Dragonmaw Infiltrator", deDE = "Infiltrator der Dragonmaw", esES = "Infiltrado Faucedraco", frFR = "Infitrateur gueule-de-dragon", ruRU = "Лазутчик из клана Драконьей Пасти", koKR = "용아귀부족 침투요원"},
+		names = {enUS = "Dragonmaw Infiltrator", deDE = "Infiltrator der Dragonmaw", esES = "Infiltrado Faucedraco", frFR = "Infitrateur gueule-de-dragon", ptBR = "Infiltrador Presa do Dragão", ruRU = "Лазутчик из клана Драконьей Пасти", koKR = "용아귀부족 침투요원", zhTW = "龍喉滲透者"},
 		zones = {11},
 	},
 	[271348] = {
 		classification = "Elite",
 		level = "29 - 30",
-		names = {enUS = "Dragonmaw Soulbinder", deDE = "Seelenbinder der Dragonmaw", esES = "Vinculador de almas Faucedraco", frFR = "Lieur d'âme gueule-de-dragon", ruRU = "Душеплет из клана Драконьей Пасти", koKR = "용아귀부족 영혼술사"},
+		names = {enUS = "Dragonmaw Soulbinder", deDE = "Seelenbinder der Dragonmaw", esES = "Vinculador de almas Faucedraco", frFR = "Lieur d'âme gueule-de-dragon", ptBR = "Atalmas Presa do Dragão", ruRU = "Душеплет из клана Драконьей Пасти", koKR = "용아귀부족 영혼술사", zhTW = "龍喉縛魂者"},
 		zones = {11},
 	},
 	[271351] = {
 		classification = "Elite",
 		level = "29 - 30",
-		names = {enUS = "Dragonmaw Reclaimer", deDE = "Pionier der Dragonmaw", esES = "Reivindicador Faucedraco", frFR = "Récupérateur gueule-de-dragon", ptBR = "Recuperador Presa do Dragão", ruRU = "Завоеватель из клана Драконьей Пасти", koKR = "용아귀부족 재생자", zhCN = "龙喉收复者"},
+		names = {enUS = "Dragonmaw Reclaimer", deDE = "Pionier der Dragonmaw", esES = "Reivindicador Faucedraco", frFR = "Récupérateur gueule-de-dragon", ptBR = "Recuperador Presa do Dragão", ruRU = "Завоеватель из клана Драконьей Пасти", koKR = "용아귀부족 재생자", zhCN = "龙喉收复者", zhTW = "龍喉回收者"},
 		zones = {11},
 	},
 	[271458] = {
@@ -19646,7 +19069,13 @@ rm.npcDB = {
 	[271460] = {
 		classification = "Elite",
 		level = "32",
-		names = {enUS = "Modr", ruRU = "Модр", koKR = "모드르", zhCN = "莫德尔"},
+		names = {enUS = "Modr", ruRU = "Модр", koKR = "모드르", zhCN = "莫德尔", zhTW = "莫德爾"},
+		zones = {11},
+	},
+	[271462] = {
+		classification = "Elite",
+		level = "32",
+		names = {enUS = "Golm", ruRU = "Голм", koKR = "골름", zhCN = "高尔姆", zhTW = "高爾姆"},
 		zones = {11},
 	},
 	[271486] = {
@@ -19656,7 +19085,7 @@ rm.npcDB = {
 	},
 	[271530] = {
 		level = "7 - 8",
-		names = {enUS = "Elder Wendigo", deDE = "Wendigoältester", esES = "Wendigo anciano", frFR = "Sage wendigo", ptBR = "Wendigo Ancião", ruRU = "Вендиго-старейшина", koKR = "장로 웬디고"},
+		names = {enUS = "Elder Wendigo", deDE = "Wendigoältester", esES = "Wendigo anciano", esMX = "Wendigo anciano", frFR = "Sage wendigo", ptBR = "Wendigo Ancião", ruRU = "Вендиго-старейшина", koKR = "장로 웬디고", zhTW = "年長雪怪"},
 		zones = {1},
 	},
 	[271587] = {
@@ -19664,29 +19093,39 @@ rm.npcDB = {
 		names = {enUS = "Frosthowl", deDE = "Eisheuler", esES = "Aúllaescarcha", frFR = "Hurlegivre", ptBR = "Uivo de Gelo", ruRU = "Ледяной Вой", koKR = "서리울음"},
 		zones = {1},
 	},
-	[271712] = {
-		level = "6",
-		names = {enUS = "Cloudrunner", deDE = "Wolkenreiter", esES = "Mensajero del cielo", frFR = "Cours-les-nuages", ptBR = "Correnuvens", ruRU = "Облачный бегун", koKR = "구름길잡이", zhCN = "踏云兽", zhTW = "踏雲者"},
+	[271710] = {
+		level = "9",
+		names = {enUS = "Cloudrunner Matriarch", deDE = "Wolkenreitermatriarchin", esES = "Mensajera del cielo matriarca", esMX = "Matriarca Correnubes", frFR = "Matriarche cours-les-nuages", ptBR = "Matriarca Correnuvens", ruRU = "Матриарх облачных бегунов", koKR = "구름길잡이 어미", zhCN = "踏云族母", zhTW = "踏雲者族母"},
 		zones = {16593},
 	},
-	[271749] = {
+	[271712] = {
+		level = "6",
+		names = {enUS = "Cloudrunner", deDE = "Wolkenreiter", esES = "Mensajero del cielo", esMX = "Correnubes", frFR = "Cours-les-nuages", ptBR = "Correnuvens", ruRU = "Облачный бегун", koKR = "구름길잡이", zhCN = "踏云兽", zhTW = "踏雲者"},
+		zones = {16593},
+	},
+	[271732] = {
 		classification = "Elite",
-		names = {enUS = "Oil Slime", deDE = "Ölschleim", frFR = "Gelée de naphte", ruRU = "Нефтяной слизнюк", koKR = "기름 수액괴물", zhCN = "石油软泥怪"},
+		names = {enUS = "Thicket Stalker", deDE = "Dickichtpirscher", frFR = "Traqueur des fourrés", ruRU = "Хищник из чащи", koKR = "수풀 추적자"},
 		zones = {16732},
 	},
 	[271750] = {
 		classification = "Elite",
-		names = {enUS = "Tar Ooze", deDE = "Teerschlamm", ruRU = "Битумный слизнюк", koKR = "타르 점액"},
+		names = {enUS = "Tar Ooze", deDE = "Teerschlamm", frFR = "Limon de goudron", ruRU = "Битумный слизнюк", koKR = "타르 점액"},
 		zones = {16732},
+	},
+	[271784] = {
+		classification = "Elite",
+		names = {enUS = "Alcaz Jailer"},
+		zones = {16620},
 	},
 	[271898] = {
 		level = "18 - 19",
-		names = {enUS = "Greater Tarantula", deDE = "Große Tarantel", esES = "Tarántula superior", frFR = "Grande tarentule", ptBR = "Grande Tarântula", ruRU = "Крупный тарантул", koKR = "거대한 타란툴라"},
+		names = {enUS = "Greater Tarantula", deDE = "Große Tarantel", esES = "Tarántula superior", frFR = "Grande tarentule", ptBR = "Grande Tarântula", ruRU = "Крупный тарантул", koKR = "거대한 타란툴라", zhTW = "巨型狼蛛"},
 		zones = {44},
 	},
 	[271903] = {
 		level = "19 - 20",
-		names = {enUS = "Stormscale Beastmistress", deDE = "Tierbändigerin der Sturmschuppen", esES = "Maestra de bestias Escama Tormentosa", esMX = "Dama de bestias Escama Tormentosa", frFR = "Maîtresse des bêtes tempécaille", ptBR = "Senhora das Feras Escamarraio", ruRU = "Укротительница из клана Гремучей Чешуи", koKR = "폭풍비늘 야수조련사", zhCN = "雷鳞兽王"},
+		names = {enUS = "Stormscale Beastmistress", deDE = "Tierbändigerin der Sturmschuppen", esES = "Maestra de bestias Escama Tormentosa", esMX = "Dama de bestias Escama Tormentosa", frFR = "Maîtresse des bêtes tempécaille", ptBR = "Senhora das Feras Escamarraio", ruRU = "Укротительница из клана Гремучей Чешуи", koKR = "폭풍비늘 야수조련사", zhCN = "雷鳞兽王", zhTW = "雷鱗訓獸師"},
 		zones = {148},
 	},
 	[272034] = {
@@ -19716,6 +19155,25 @@ rm.npcDB = {
 		names = {enUS = "Venture Co. Clearclutter", deDE = "Roder der Venture Co.", esES = "Desbrozadora de Ventura y Cía.", esMX = "Antidesordenador de Ventura y Cía.", frFR = "Déboiseur de la KapitalRisk", ptBR = "Limpa-tranqueira da Empreendimentos S.A", ruRU = "Чисторуб Торговой Компании", koKR = "투자개발회사 개벌꾼", zhTW = "風險投資公司伐木機器人"},
 		zones = {215},
 	},
+	[272228] = {
+		level = "36 - 37",
+		names = {enUS = "Harvest Sentry", deDE = "Erntewächter", frFR = "Factionnaire de la moisson"},
+		zones = {16591},
+	},
+	[272315] = {
+		level = "42 - 43",
+		names = {enUS = "Brineshell Snapper", deDE = "Salzpanzerschnapper", frFR = "Pinceur saumécaille", ptBR = "Tartalisca Salconcha"},
+		zones = {16591},
+	},
+	[272319] = {
+		classification = "Elite",
+		names = {enUS = "Scorching Elemental"},
+	},
+	[272389] = {
+		level = "34 - 36",
+		names = {enUS = "Marsh Owl", deDE = "Sumpfeule", esES = "Búho de marisma", esMX = "Búho de marisma", frFR = "Chouette des marais", ptBR = "Coruja do Pântano", ruRU = "Болотная сова", koKR = "습지 올빼미", zhCN = "沼泽猫头鹰", zhTW = "沼澤貓頭鷹"},
+		zones = {36},
+	},
 	[272646] = {
 		level = "36",
 		names = {enUS = "Miranda Turner", ruRU = "Миранда Тернер"},
@@ -19733,12 +19191,12 @@ rm.npcDB = {
 	},
 	[275045] = {
 		classification = "Elite",
-		names = {enUS = "Dragonmaw Saboteur", deDE = "Saboteur der Dragonmaw", ruRU = "Диверсант из клана Драконьей Пасти", koKR = "용아귀부족 파괴공작원"},
+		names = {enUS = "Dragonmaw Saboteur", deDE = "Saboteur der Dragonmaw", frFR = "Saboteur gueule-de-dragon", ruRU = "Диверсант из клана Драконьей Пасти", koKR = "용아귀부족 파괴공작원"},
 		zones = {16732},
 	},
 	[275046] = {
 		classification = "Elite",
-		names = {enUS = "Dragonmaw Thaumaturgist", deDE = "Thaumaturgist der Dragonmaw", esES = "Taumatúrgico Faucedraco", ruRU = "Чудотворец из клана Драконьей Пасти", koKR = "용아귀부족 재연마사", zhCN = "龙喉奇术师"},
+		names = {enUS = "Dragonmaw Thaumaturgist", deDE = "Thaumaturgist der Dragonmaw", esES = "Taumatúrgico Faucedraco", frFR = "Thaumaturge gueule-de-dragon", ruRU = "Чудотворец из клана Драконьей Пасти", koKR = "용아귀부족 재연마사", zhCN = "龙喉奇术师"},
 		zones = {16732},
 	},
 	[275321] = {
@@ -19785,7 +19243,12 @@ rm.npcDB = {
 	},
 	[276003] = {
 		level = "7 - 8",
-		names = {enUS = "Minor Ice Elemental", deDE = "Kleiner Eiselementar", esES = "Elemental de hielo menor", frFR = "Elémentaire de glace mineur", ptBR = "Elemental de Gelo Menor", ruRU = "Малый ледяной элементаль", koKR = "하급 얼음 정령", zhCN = "小型冰元素", zhTW = "小型冰元素"},
+		names = {enUS = "Minor Ice Elemental", deDE = "Kleiner Eiselementar", esES = "Elemental de hielo menor", esMX = "Elemental de hielo menor", frFR = "Elémentaire de glace mineur", ptBR = "Elemental de Gelo Menor", ruRU = "Малый ледяной элементаль", koKR = "하급 얼음 정령", zhCN = "小型冰元素", zhTW = "小型冰元素"},
+		zones = {1},
+	},
+	[276009] = {
+		level = "8",
+		names = {enUS = "Avala", ruRU = "Лавин", koKR = "아발라", zhTW = "阿瓦拉"},
 		zones = {1},
 	},
 	[276020] = {
@@ -19821,18 +19284,27 @@ rm.npcDB = {
 	[276415] = {
 		faction = "Horde",
 		level = "9 - 10",
-		names = {enUS = "Windshaper Guardian", deDE = "Wächter der Windformer", esES = "Guardián Formaviento", frFR = "Gardien sculpte-vent", ruRU = "Страж Ваятелей Ветра", koKR = "바람구체자 수호자", zhTW = "塑風者護衛"},
+		names = {enUS = "Windshaper Guardian", deDE = "Wächter der Windformer", esES = "Guardián Formaviento", esMX = "Guardia Formavientos", frFR = "Gardien sculpte-vent", ruRU = "Страж Ваятелей Ветра", koKR = "바람구체자 수호자", zhTW = "塑風者護衛"},
 		zones = {16593},
 	},
 	[276416] = {
 		faction = "Horde",
 		level = "9 - 10",
-		names = {enUS = "Windshaper Elementalist", deDE = "Elementarist der Windformer", esES = "Elementalista Formaviento", frFR = "Elémentaliste sculpte-vent", ruRU = "Повелитель стихий из Ваятелей Ветра", koKR = "바람구체자 정령술사", zhTW = "塑風者元素師"},
+		names = {enUS = "Windshaper Elementalist", deDE = "Elementarist der Windformer", esES = "Elementalista Formaviento", esMX = "Elementalista Formavientos", frFR = "Elémentaliste sculpte-vent", ruRU = "Повелитель стихий из Ваятелей Ветра", koKR = "바람구체자 정령술사", zhTW = "塑風者元素師"},
 		zones = {16593},
+	},
+	[277474] = {
+		names = {enUS = "Blackmaw Devotee"},
+		zones = {16554},
 	},
 	[277730] = {
 		level = "8 - 9",
 		names = {enUS = "Rabid Forest Wolf", deDE = "Tollwütiger Waldwolf", esES = "Lobo del bosque rabioso", esMX = "Lobo rabioso del bosque", frFR = "Loup des bois enragé", ptBR = "Lobo da Floresta Raivoso", ruRU = "Бешеный лесной волк", koKR = "광포한 숲늑대", zhCN = "狂暴森林狼", zhTW = "瘋狂的森林狼"},
 		zones = {85},
+	},
+	[278644] = {
+		classification = "Elite",
+		names = {enUS = "Warbringer Construct"},
+		zones = {1584},
 	},
 }

@@ -140,7 +140,7 @@ rm.questDB = {
 		classes = {
 			1,
 			2,
-			4,
+			7,
 		},
 		faction = "Alliance",
 		level = 12,
@@ -153,6 +153,11 @@ rm.questDB = {
 		startedByNPC = 6034,
 	},
 	[1618] = {
+		classes = {
+			1,
+			2,
+			4,
+		},
 		faction = "Alliance",
 		level = 16,
 		startedByNPC = 6031,
@@ -200,11 +205,6 @@ rm.questDB = {
 		classification = "Elite",
 		faction = "Horde",
 		level = 24,
-		races = {
-			2,
-			5,
-			8,
-		},
 		requiredLevel = 20,
 		startedByNPC = 7233,
 	},
@@ -304,6 +304,25 @@ rm.questDB = {
 		level = 45,
 		requiredLevel = 40,
 		startedByNPC = 7802,
+	},
+	[2771] = {
+		classes = {
+			1,
+			2,
+		},
+		level = 45,
+		requiredLevel = 40,
+		startedByNPC = 7804,
+	},
+	[2772] = {
+		level = 45,
+		requiredLevel = 40,
+		startedByNPC = 7804,
+	},
+	[2773] = {
+		level = 45,
+		requiredLevel = 40,
+		startedByNPC = 7804,
 	},
 	[2848] = {
 		faction = "Alliance",
@@ -408,6 +427,42 @@ rm.questDB = {
 		requiredLevel = 55,
 		startedByNPC = 10918,
 	},
+	[5141] = {
+		faction = "Alliance",
+		level = 55,
+		requiredLevel = 40,
+		startedByNPC = 7866,
+	},
+	[5143] = {
+		faction = "Alliance",
+		level = 55,
+		requiredLevel = 40,
+		startedByNPC = 7870,
+	},
+	[5144] = {
+		faction = "Alliance",
+		level = 55,
+		requiredLevel = 40,
+		startedByNPC = 7868,
+	},
+	[5145] = {
+		faction = "Horde",
+		level = 55,
+		requiredLevel = 40,
+		startedByNPC = 7867,
+	},
+	[5146] = {
+		faction = "Horde",
+		level = 55,
+		requiredLevel = 40,
+		startedByNPC = 7869,
+	},
+	[5148] = {
+		faction = "Horde",
+		level = 55,
+		requiredLevel = 40,
+		startedByNPC = 7871,
+	},
 	[5283] = {
 		classes = {
 			1,
@@ -428,6 +483,21 @@ rm.questDB = {
 		level = 40,
 		requiredLevel = 40,
 		startedByNPC = 11146,
+	},
+	[5301] = {
+		classes = {
+			1,
+		},
+		faction = "Horde",
+		level = 40,
+		requiredLevel = 40,
+		startedByNPC = 11177,
+	},
+	[5302] = {
+		faction = "Horde",
+		level = 40,
+		requiredLevel = 40,
+		startedByNPC = 11178,
 	},
 	[5305] = {
 		classification = "Dungeon",
@@ -579,11 +649,24 @@ rm.questDB = {
 		faction = "Alliance",
 		level = 48,
 		requiredLevel = 45,
+		startedByNPC = 240482,
+	},
+	[90854] = {
+		faction = "Horde",
+		level = 57,
+		requiredLevel = 54,
+		startedByNPC = 244511,
+	},
+	[91564] = {
+		faction = "Alliance",
+		level = 57,
+		requiredLevel = 54,
 	},
 	[91608] = {
 		faction = "Horde",
 		level = 48,
 		requiredLevel = 45,
+		startedByNPC = 3621,
 	},
 	[91920] = {
 		faction = "Horde",
@@ -597,6 +680,17 @@ rm.questDB = {
 		requiredLevel = 10,
 		startedByNPC = 249713,
 	},
+	[92189] = {
+		faction = "Alliance",
+		level = 57,
+		requiredLevel = 54,
+	},
+	[92433] = {
+		faction = "Alliance",
+		level = 57,
+		requiredLevel = 54,
+		startedByNPC = 249968,
+	},
 	[92553] = {
 		level = 6,
 		races = {
@@ -606,9 +700,19 @@ rm.questDB = {
 		startedByNPC = 251905,
 	},
 	[92755] = {
-		faction = "Alliance",
 		level = 35,
 		requiredLevel = 30,
+		startedByNPC = 253096,
+	},
+	[92814] = {
+		level = 35,
+		requiredLevel = 30,
+		startedByNPC = 253140,
+	},
+	[92817] = {
+		level = 35,
+		requiredLevel = 30,
+		startedByNPC = 253166,
 	},
 	[92818] = {
 		faction = "Alliance",
@@ -630,25 +734,20 @@ rm.questDB = {
 		requiredLevel = 4,
 		startedByNPC = 257006,
 	},
+	[95121] = {
+		level = 40,
+		requiredLevel = 36,
+		startedByNPC = 259962,
+	},
 	[95162] = {
 		faction = "Horde",
 		level = 41,
 		requiredLevel = 38,
+		startedByNPC = 256728,
 	},
 	[95217] = {
-		classes = {
-			1,
-			2,
-			7,
-		},
 		faction = "Alliance",
 		level = 10,
-		races = {
-			3,
-			4,
-			7,
-			95,
-		},
 		requiredLevel = 7,
 		startedByNPC = 1698,
 	},
@@ -659,10 +758,16 @@ rm.questDB = {
 		requiredLevel = 24,
 		startedByNPC = 3368,
 	},
+	[95769] = {
+		faction = "Horde",
+		level = 57,
+		requiredLevel = 54,
+	},
 	[96026] = {
 		faction = "Horde",
 		level = 41,
 		requiredLevel = 38,
+		startedByNPC = 263440,
 	},
 	[96031] = {
 		classes = {
@@ -725,11 +830,6 @@ rm.questDB = {
 	[96055] = {
 		faction = "Alliance",
 		level = 6,
-		races = {
-			3,
-			7,
-			95,
-		},
 		requiredLevel = 4,
 		startedByNPC = 265813,
 	},
@@ -767,21 +867,10 @@ rm.questDB = {
 	[96059] = {
 		faction = "Alliance",
 		level = 6,
-		races = {
-			3,
-			4,
-			7,
-			95,
-		},
 		requiredLevel = 4,
 		startedByNPC = 11065,
 	},
 	[96102] = {
-		classes = {
-			5,
-			8,
-			9,
-		},
 		faction = "Horde",
 		level = 6,
 		races = {
@@ -791,6 +880,12 @@ rm.questDB = {
 		},
 		requiredLevel = 4,
 		startedByNPC = 265809,
+	},
+	[96622] = {
+		faction = "Horde",
+		level = 57,
+		requiredLevel = 54,
+		startedByNPC = 244512,
 	},
 	[96874] = {
 		classes = {
@@ -809,25 +904,21 @@ rm.questDB = {
 		requiredLevel = 6,
 		startedByNPC = 5811,
 	},
+	[97119] = {
+		faction = "Horde",
+		level = 57,
+		requiredLevel = 54,
+		startedByNPC = 244512,
+	},
 	[97899] = {
 		faction = "Horde",
 		level = 6,
-		races = {
-			2,
-			5,
-			8,
-		},
 		requiredLevel = 4,
 		startedByNPC = 265809,
 	},
 	[97901] = {
 		faction = "Horde",
 		level = 6,
-		races = {
-			2,
-			5,
-			8,
-		},
 		requiredLevel = 4,
 		startedByNPC = 265809,
 	},
@@ -876,11 +967,6 @@ rm.questDB = {
 	[97915] = {
 		faction = "Alliance",
 		level = 6,
-		races = {
-			3,
-			4,
-			7,
-		},
 		requiredLevel = 4,
 		startedByNPC = 263399,
 	},
@@ -908,12 +994,6 @@ rm.questDB = {
 	[97919] = {
 		faction = "Alliance",
 		level = 6,
-		races = {
-			3,
-			4,
-			7,
-			95,
-		},
 		requiredLevel = 4,
 		startedByNPC = 263399,
 	},
@@ -924,7 +1004,6 @@ rm.questDB = {
 			3,
 			4,
 			7,
-			95,
 		},
 		requiredLevel = 4,
 		startedByNPC = 263399,
@@ -932,24 +1011,12 @@ rm.questDB = {
 	[97921] = {
 		faction = "Alliance",
 		level = 6,
-		races = {
-			3,
-			4,
-			7,
-			95,
-		},
 		requiredLevel = 4,
 		startedByNPC = 263399,
 	},
 	[97922] = {
 		faction = "Alliance",
 		level = 6,
-		races = {
-			3,
-			4,
-			7,
-			95,
-		},
 		requiredLevel = 4,
 		startedByNPC = 263399,
 	},
@@ -969,6 +1036,7 @@ rm.questDB = {
 		races = {
 			4,
 			7,
+			95,
 		},
 		requiredLevel = 4,
 		startedByNPC = 263399,
@@ -987,6 +1055,7 @@ rm.questDB = {
 		faction = "Horde",
 		level = 6,
 		races = {
+			5,
 			6,
 		},
 		requiredLevel = 4,
@@ -1036,7 +1105,6 @@ rm.questDB = {
 		faction = "Horde",
 		level = 6,
 		races = {
-			2,
 			6,
 		},
 		requiredLevel = 4,
@@ -1072,6 +1140,7 @@ rm.questDB = {
 		level = 6,
 		races = {
 			4,
+			7,
 		},
 		requiredLevel = 4,
 		startedByNPC = 265811,
@@ -1081,6 +1150,7 @@ rm.questDB = {
 		level = 6,
 		races = {
 			4,
+			7,
 		},
 		requiredLevel = 4,
 		startedByNPC = 265811,
@@ -1146,7 +1216,6 @@ rm.questDB = {
 		level = 6,
 		races = {
 			4,
-			95,
 		},
 		requiredLevel = 4,
 		startedByNPC = 265811,
@@ -1214,14 +1283,10 @@ rm.questDB = {
 		startedByNPC = 265812,
 	},
 	[97958] = {
-		classes = {
-			2,
-			4,
-			7,
-		},
 		faction = "Horde",
 		level = 6,
 		races = {
+			2,
 			5,
 		},
 		requiredLevel = 4,
@@ -1321,6 +1386,10 @@ rm.questDB = {
 		startedByNPC = 263664,
 	},
 	[97973] = {
+		classes = {
+			8,
+			11,
+		},
 		faction = "Alliance",
 		level = 6,
 		races = {
@@ -1332,11 +1401,6 @@ rm.questDB = {
 	[98284] = {
 		faction = "Horde",
 		level = 6,
-		races = {
-			5,
-			6,
-			8,
-		},
 		requiredLevel = 4,
 		startedByNPC = 263664,
 	},
@@ -1350,6 +1414,11 @@ rm.questDB = {
 		startedByNPC = 251684,
 	},
 	[98286] = {
+		classes = {
+			4,
+			8,
+			11,
+		},
 		faction = "Alliance",
 		level = 6,
 		races = {

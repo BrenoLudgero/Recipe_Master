@@ -381,6 +381,7 @@ F.textures.copperCoin = "Interface/MoneyFrame/UI-CopperIcon"
 F.textures.commonRecipe = "Interface/Icons/INV_Scroll_03"
 F.textures.cursor = "Interface/CURSOR/Point"
 F.textures.cursorClick = "Interface/Buttons/GLOWSTAR"
+F.textures.darkmoonPrizeTicket = "Interface/Icons/INV_Misc_Ticket_Darkmoon_01"
 F.textures.deadwoodTribalBeads = "Interface/Icons/INV_Jewelcrafting_DragonsEye02"
 F.textures.exchangeTicket = "Interface/Icons/Inv_inscription_parchment"
 F.textures.factionIcons = {

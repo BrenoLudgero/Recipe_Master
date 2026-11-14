@@ -104,6 +104,7 @@ local function getFormattedCost(cost)
     local carvedCentaurTotem = getCost(cost, "cct")
     local deadwoodTribalBeads = getCost(cost, "dtb")
     local malleableEssenceOfNature = getCost(cost, "men")
+    local darkmoonPrizeTicket = getCost(cost, "dpt")
     local formattedCost = ""
     if goldAmount > 0 then
         formattedCost = formattedCost.." "..goldAmount..getCurrencyIcon(F.textures.goldCoin)
@@ -131,6 +132,9 @@ local function getFormattedCost(cost)
     end
     if malleableEssenceOfNature > 0 then
         formattedCost = malleableEssenceOfNature..getCurrencyIcon(F.textures.malleableEssenceOfNature)
+    end
+    if darkmoonPrizeTicket > 0 then
+        formattedCost = darkmoonPrizeTicket..getCurrencyIcon(F.textures.darkmoonPrizeTicket)
     end
     return formattedCost
 end

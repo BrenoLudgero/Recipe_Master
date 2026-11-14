@@ -972,12 +972,12 @@ rm.recipeDB[197] = {
 	},
 	[10002] = {
 		difficulty = {
-			0,
+			175,
 			190,
 			205,
 			220,
 		},
-		requiredSkill = 190,
+		requiredSkill = 175,
 		teaches = 12052,
 	},
 	[10003] = {
@@ -992,12 +992,12 @@ rm.recipeDB[197] = {
 	},
 	[10004] = {
 		difficulty = {
-			0,
+			180,
 			195,
 			210,
 			225,
 		},
-		requiredSkill = 195,
+		requiredSkill = 180,
 		teaches = 12055,
 	},
 	[10019] = {
@@ -1022,72 +1022,72 @@ rm.recipeDB[197] = {
 	},
 	[10023] = {
 		difficulty = {
-			0,
+			190,
 			205,
 			220,
 			235,
 		},
-		requiredSkill = 205,
+		requiredSkill = 190,
 		teaches = 12071,
 	},
 	[10024] = {
 		difficulty = {
-			0,
+			190,
 			205,
 			220,
 			235,
 		},
-		requiredSkill = 205,
+		requiredSkill = 190,
 		teaches = 12072,
 	},
 	[10026] = {
 		difficulty = {
-			0,
+			190,
 			205,
 			220,
 			235,
 		},
-		requiredSkill = 205,
+		requiredSkill = 190,
 		teaches = 12073,
 	},
 	[10027] = {
 		difficulty = {
-			0,
+			190,
 			205,
 			220,
 			235,
 		},
-		requiredSkill = 205,
+		requiredSkill = 190,
 		teaches = 12074,
 	},
 	[10028] = {
 		difficulty = {
-			0,
+			195,
 			210,
 			225,
 			240,
 		},
-		requiredSkill = 210,
+		requiredSkill = 195,
 		teaches = 12076,
 	},
 	[10031] = {
 		difficulty = {
-			0,
+			200,
 			215,
 			230,
 			245,
 		},
-		requiredSkill = 215,
+		requiredSkill = 200,
 		teaches = 12082,
 	},
 	[10041] = {
 		difficulty = {
-			0,
+			205,
 			220,
 			235,
 			250,
 		},
-		requiredSkill = 220,
+		requiredSkill = 205,
 		teaches = 12092,
 	},
 	[10042] = {
@@ -1102,12 +1102,12 @@ rm.recipeDB[197] = {
 	},
 	[10044] = {
 		difficulty = {
-			0,
+			200,
 			215,
 			230,
 			245,
 		},
-		requiredSkill = 215,
+		requiredSkill = 200,
 		teaches = 12088,
 	},
 	[10045] = {
@@ -1152,22 +1152,22 @@ rm.recipeDB[197] = {
 	},
 	[10051] = {
 		difficulty = {
-			0,
+			195,
 			210,
 			225,
 			240,
 		},
-		requiredSkill = 210,
+		requiredSkill = 195,
 		teaches = 12079,
 	},
 	[10053] = {
 		difficulty = {
-			0,
+			195,
 			200,
 			205,
 			210,
 		},
-		requiredSkill = 200,
+		requiredSkill = 195,
 		teaches = 12077,
 	},
 	[10056] = {
@@ -1357,22 +1357,22 @@ rm.recipeDB[197] = {
 	},
 	[13856] = {
 		difficulty = {
-			0,
+			210,
 			225,
 			240,
 			255,
 		},
-		requiredSkill = 225,
+		requiredSkill = 210,
 		teaches = 18402,
 	},
 	[14048] = {
 		difficulty = {
-			0,
+			205,
 			210,
 			212,
 			215,
 		},
-		requiredSkill = 210,
+		requiredSkill = 205,
 		teaches = 18401,
 	},
 	[14466] = {
@@ -2338,30 +2338,6 @@ rm.recipeDB[197] = {
 		},
 		requiredSkill = 280,
 		teaches = 1224609,
-	},
-	[251735] = {
-		requiredSkill = 285,
-		teaches = 1252979,
-	},
-	[251736] = {
-		requiredSkill = 285,
-		teaches = 1252980,
-	},
-	[251737] = {
-		requiredSkill = 285,
-		teaches = 1252981,
-	},
-	[251750] = {
-		requiredSkill = 285,
-		teaches = 1252991,
-	},
-	[251751] = {
-		requiredSkill = 285,
-		teaches = 1252992,
-	},
-	[251752] = {
-		requiredSkill = 285,
-		teaches = 1252993,
 	},
 	[253665] = {
 		difficulty = {
@@ -3667,13 +3643,19 @@ rm.recipeDB[197] = {
 		requiredSkill = 185,
 		teaches = 12063,
 	},
+	[254684] = {
+		requiredSkill = 200,
+		teaches = 12083,
+	},
+	[254685] = {
+		requiredSkill = 200,
+		teaches = 12087,
+	},
+	[254686] = {
+		requiredSkill = 205,
+		teaches = 12090,
+	},
 	[273099] = {
-		difficulty = {
-			140,
-			140,
-			142,
-			145,
-		},
 		requiredSkill = 140,
 		teaches = 1263032,
 	},
@@ -4166,23 +4148,11 @@ rm.recipeDB[197] = {
 		teaches = 1306545,
 	},
 	[279972] = {
-		difficulty = {
-			20,
-			20,
-			22,
-			25,
-		},
 		faction = "Horde",
 		requiredSkill = 20,
 		teaches = 1229504,
 	},
 	[279973] = {
-		difficulty = {
-			20,
-			20,
-			22,
-			25,
-		},
 		faction = "Alliance",
 		requiredSkill = 20,
 		teaches = 1263425,
