@@ -1,21 +1,6 @@
 local _, rm = ...
 
 rm.recipeDB[393] = {
-	[8617] = {
-		isSpell = true,
-		requiredSkill = 50,
-		teaches = "Journeyman",
-	},
-	[8618] = {
-		isSpell = true,
-		requiredSkill = 125,
-		teaches = "Expert",
-	},
-	[10768] = {
-		isSpell = true,
-		requiredSkill = 200,
-		teaches = "Artisan",
-	},
 	[273098] = {
 		requiredSkill = 140,
 		teaches = 1262985,
@@ -27,5 +12,20 @@ rm.recipeDB[393] = {
 	[279979] = {
 		requiredSkill = 20,
 		teaches = 1229517,
+	},
+	[1240963] = {
+		isSpell = true,
+		requiredSkill = 50,
+		teaches = "Journeyman",
+	},
+	[1240974] = {
+		isSpell = true,
+		requiredSkill = 125,
+		teaches = "Expert",
+	},
+	[1240987] = {
+		isSpell = true,
+		requiredSkill = 200,
+		teaches = "Artisan",
 	},
 }

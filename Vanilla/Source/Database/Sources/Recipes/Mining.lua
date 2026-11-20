@@ -201,7 +201,7 @@ rm.recipeSourceDB[186] = {
 	[234278] = {
 		vendor = {
 			[15176] = {
-				cost = "5gld62svr50cpr",
+				cost = "5gld",
 			},
 		},
 	},
