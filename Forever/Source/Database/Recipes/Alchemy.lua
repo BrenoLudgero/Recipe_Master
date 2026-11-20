@@ -1,16 +1,6 @@
 local _, rm = ...
 
 rm.recipeDB[171] = {
-	[2365] = {
-		difficulty = {
-			0,
-			100,
-			120,
-			140,
-		},
-		isSpell = true,
-		requiredSkill = 100,
-	},
 	[2454] = {
 		difficulty = {
 			15,
@@ -1721,12 +1711,6 @@ rm.recipeDB[171] = {
 		teaches = 1251753,
 	},
 	[273085] = {
-		difficulty = {
-			140,
-			140,
-			142,
-			145,
-		},
 		requiredSkill = 140,
 		teaches = 1263005,
 	},
@@ -1775,12 +1759,6 @@ rm.recipeDB[171] = {
 		teaches = 1293562,
 	},
 	[279956] = {
-		difficulty = {
-			20,
-			20,
-			22,
-			25,
-		},
 		requiredSkill = 20,
 		teaches = 1230564,
 	},
@@ -1794,44 +1772,8 @@ rm.recipeDB[171] = {
 		requiredSkill = 275,
 		teaches = 1317279,
 	},
-	[446226] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[446851] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[448085] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[1250775] = {
-		difficulty = {
-			0,
-			205,
-			207,
-			210,
-		},
-		isSpell = true,
-		requiredSkill = 205,
+	[288206] = {
+		requiredSkill = 180,
+		teaches = 11447,
 	},
 }

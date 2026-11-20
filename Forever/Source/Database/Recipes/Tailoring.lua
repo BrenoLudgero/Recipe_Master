@@ -2339,30 +2339,6 @@ rm.recipeDB[197] = {
 		requiredSkill = 280,
 		teaches = 1224609,
 	},
-	[251735] = {
-		requiredSkill = 285,
-		teaches = 1252979,
-	},
-	[251736] = {
-		requiredSkill = 285,
-		teaches = 1252980,
-	},
-	[251737] = {
-		requiredSkill = 285,
-		teaches = 1252981,
-	},
-	[251750] = {
-		requiredSkill = 285,
-		teaches = 1252991,
-	},
-	[251751] = {
-		requiredSkill = 285,
-		teaches = 1252992,
-	},
-	[251752] = {
-		requiredSkill = 285,
-		teaches = 1252993,
-	},
 	[253665] = {
 		difficulty = {
 			5,
@@ -3667,13 +3643,19 @@ rm.recipeDB[197] = {
 		requiredSkill = 185,
 		teaches = 12063,
 	},
+	[254684] = {
+		requiredSkill = 200,
+		teaches = 12083,
+	},
+	[254685] = {
+		requiredSkill = 200,
+		teaches = 12087,
+	},
+	[254686] = {
+		requiredSkill = 205,
+		teaches = 12090,
+	},
 	[273099] = {
-		difficulty = {
-			140,
-			140,
-			142,
-			145,
-		},
 		requiredSkill = 140,
 		teaches = 1263032,
 	},
@@ -4166,55 +4148,13 @@ rm.recipeDB[197] = {
 		teaches = 1306545,
 	},
 	[279972] = {
-		difficulty = {
-			20,
-			20,
-			22,
-			25,
-		},
 		faction = "Horde",
 		requiredSkill = 20,
 		teaches = 1229504,
 	},
 	[279973] = {
-		difficulty = {
-			20,
-			20,
-			22,
-			25,
-		},
 		faction = "Alliance",
 		requiredSkill = 20,
 		teaches = 1263425,
-	},
-	[446193] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[446194] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[446195] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
 	},
 }

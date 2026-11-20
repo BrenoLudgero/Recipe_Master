@@ -19,7 +19,6 @@ function rm.updateInterfaceScale(scaleSlider)
         local valueToHundreds = (valueToTwoDecimals + 1) * 100
         self.valueDisplay:SetText(valueToHundreds.."%")
         rm.mainFrame:SetScale(UIParent:GetEffectiveScale() + rm.getPreference("interfaceScale"))
-        rm.restoreButton:SetScale(UIParent:GetEffectiveScale() + rm.getPreference("interfaceScale"))
     end)
 end
 
@@ -112,6 +111,5 @@ function rm.resetSavedOptionsOnClick(resetDefaultsButton)
         -- Frame scaling --
         local effectiveScale = UIParent:GetEffectiveScale()
         rm.mainFrame:SetScale(effectiveScale + scale)
-        rm.restoreButton:SetScale(effectiveScale + scale)
     end)
 end

@@ -19,11 +19,7 @@ end
 
 function rm.showPreviousTabOnBackButtonClick(button)
     button:SetScript("OnClick", function()
-        if rm.isFishingDisplayed() then
-            rm.fishingTab:Click()
-        else
-            rm.recipesTab:Click()
-        end
+        rm.recipesTab:Click()
     end)
 end
 
@@ -61,6 +57,14 @@ function rm.showCellTooltipOnMouseover(cell)
     -- Clicks go through to the main frame so it can still be dragged from the table
     cell:EnableMouseMotion(true)
     cell:SetMouseClickEnabled(false)
+end
+
+-- Unlike the other cells, the header's take clicks, so the main frame can't be dragged from them
+function rm.sortSourcesOnHeaderClick(cell)
+    cell:SetMouseClickEnabled(true)
+    cell:SetScript("OnClick", function(self)
+        rm.sortDisplayedSourcesBy(self.field)
+    end)
 end
 
 local function getMouseButtonIcon(atlas)

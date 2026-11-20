@@ -2093,12 +2093,6 @@ rm.recipeDB[333] = {
 		teaches = 1248665,
 	},
 	[273103] = {
-		difficulty = {
-			140,
-			140,
-			142,
-			145,
-		},
 		requiredSkill = 140,
 		teaches = 1263056,
 	},
@@ -2276,16 +2270,6 @@ rm.recipeDB[333] = {
 		requiredSkill = 280,
 		teaches = 1328948,
 	},
-	[446243] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
 	[1217189] = {
 		difficulty = {
 			0,
@@ -2297,12 +2281,6 @@ rm.recipeDB[333] = {
 		requiredSkill = 320,
 	},
 	[1230643] = {
-		difficulty = {
-			20,
-			20,
-			22,
-			25,
-		},
 		isSpell = true,
 		requiredSkill = 20,
 	},

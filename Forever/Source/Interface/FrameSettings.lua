@@ -44,34 +44,30 @@ local function setLocaleSpecificOffsets()
 end
 
 ------------------------- Main frame -------------------------
-F.offsets.headerCloseButtonX = 6
-F.offsets.headerCloseButtonY = 5
-F.offsets.headerLeftEdgeX = -1
-F.offsets.headerRightEndX = -1
-F.offsets.headerTextY = -5
+F.offsets.headerTextX = -15 -- Equivalent to the minimize button's width ("X")
+F.offsets.headerTextY = -4
 
 ------------------------- Bottom tabs -------------------------
 F.offsets.bottomTabTextX = 2
 F.offsets.bottomTabTextY = 6.8
 F.offsets.bottomTabTextureX = -2.5
 F.offsets.bottomTabTextureY = -6
-F.offsets.fishingTabX = -55.1
-F.offsets.recipesTabX = 55
+F.offsets.bottomTabsGap = 14 -- Between the tabs, which are centered as a pair
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.offsets.dividerCheckButtonLabelY = 0
 F.offsets.recipeIconX = 20
 F.offsets.recipeInfoY = -3
 F.offsets.recipeTextX = 6
 F.offsets.recipesListScrollX = -31
 F.offsets.recipesListScrollTopY = -6
-F.offsets.recipesListScrollBottomY = 4.5
+F.offsets.recipesListScrollBottomY = 5
 F.offsets.searchBarX = 8
 F.offsets.searchBarY = -4
 F.offsets.sortByDropdownX = -32
 F.offsets.sortByDropdownY = -7
-F.offsets.sortOrderDropdownX = -8
-F.offsets.sortOrderDropdownY = -4
+F.offsets.sortOrderDropdownX = -11
+F.offsets.sortOrderDropdownY = -2
 F.offsets.sourceFilterDropdownX = F.offsets.sortOrderDropdownX - 1
 F.offsets.sourceFilterDropdownY = -2.5
 
@@ -86,9 +82,9 @@ F.offsets.instructionsRecipeY = 10
 F.offsets.sourcesHeaderY = -34
 F.offsets.uniqueSourceTextY = -7
 --------------- Table ---------------
-F.offsets.sourcesTableX = 8.5
+F.offsets.sourcesTableX = 15
 F.offsets.sourcesTableY = -78
-F.offsets.sourcesTableBottomY = 10
+F.offsets.sourcesTableBottomY = 14
 F.offsets.sourcesTableInset = 3 -- Space between the table's border and its content
 F.offsets.sourcesTableCellIconX = -3 -- Space between a cell's icon and the border
 F.offsets.sourcesTableCellIconSpacing = 2 -- Space between a cell's icon and its text
@@ -163,30 +159,29 @@ local function setLocaleSpecificSizes()
 end
 
 ------------------------- Main frame -------------------------
-F.sizes.borderShadowWidth = 5 -- Outer columns of the border's left side
 F.sizes.dividerHeight = 45
+F.sizes.headerHeight = 21 -- The title bar in the border's top side
 F.sizes.mainBackgroundTile = 300
-F.sizes.restoreButton = 30 -- Width and height
 
 ------------------------- Bottom tabs -------------------------
-F.sizes.bottomTabWidth = 90
+F.sizes.bottomTabWidth = 120
 F.sizes.bottomTabHeight = 25
-F.sizes.bottomTabTextureWidth = 120
+F.sizes.bottomTabTextureWidth = 150
 F.sizes.bottomTabTextureHeight = 75
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.sizes.progressContainerHeight = 22
 F.sizes.recipeIcon = 26 -- Width and height
-F.sizes.recipesFrameWidth = 314 -- Minimum width!
+F.sizes.recipesFrameWidth = 318 -- Minimum width!
 F.sizes.searchBarHeight = 18 -- Clickable area height
 F.sizes.dividerCheckButton = 22 -- Width and height
 F.sizes.sortDropdownWidth = 110
-F.sizes.sortOrderButton = 34 -- Width and height
+F.sizes.sortOrderButton = 36 -- Width and height
 
 ------------------------- Sources frame -------------------------
 --        Headers' width defined at SourcesDisplay.lua
 F.sizes.sourcesBackgroundTile = 220
-F.sizes.sourcesFrameWidth = 430
+F.sizes.sourcesFrameWidth = 450
 F.sizes.sourcesHeaderIcon = 20 -- Width and height
 F.sizes.sourcesInstructions = 250 -- Width and height
 F.sizes.sourcesInstructionsCursor = 60 -- Width and height
@@ -203,7 +198,7 @@ F.sizes.sourcesTableMouseIconWidth = 12 -- Shown in the map button's tooltip
 F.sizes.sourcesTableMouseIconHeight = 16
 F.sizes.sourcesTableRowHeight = 17
 F.sizes.sourcesTableSeparatorWidth = 1
-F.sizes.sourcesTableWidth = 389
+F.sizes.sourcesTableWidth = 400
 F.sizes.sourcesTableContentWidth = F.sizes.sourcesTableWidth - (2 * F.offsets.sourcesTableInset)
 
 ------------------------- Options frame -------------------------
@@ -248,7 +243,7 @@ F.fonts.header = "GameFontNormal"
 ------------------------- Bottom tabs -------------------------
 F.fonts.bottomTab = specificFont
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.fonts.progressBar = "SystemFont_Outline_Small"
 F.fonts.recipeText = "GameFontHighlightSmallOutline"
 F.fonts.dividerCheckButtonText = "SystemFont_Outline_Small"
@@ -299,7 +294,7 @@ F.fontSizes.centeredText = 18
 ------------------------- Bottom tabs -------------------------
 F.fontSizes.bottomTab = 9
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.fontSizes.dividerCheckButton = 10
 
 ------------------------- Sources frame -------------------------
@@ -308,7 +303,7 @@ F.fontSizes.sourcesListTab = 10
 F.fontSizes.sourcesTableCell = 9.5
 F.fontSizes.uniqueInstructions = 13
 
-------------------------- Recipes / Fishing frame -------------------------
+------------------------- Recipes frame -------------------------
 F.fontSizes.searchBar = 10
 F.fontSizes.sortDropdown = 12
 
@@ -344,6 +339,7 @@ F.colors.red = {1, 0.125, 0.125}
 F.colors.redHex = "ffFF2020"
 F.colors.skyBlueHex = "ff57C8EA"
 F.colors.sourcesTableHeaderSeparator = {1, 1, 1, 0.4}
+F.colors.sourcesTableHeaderHighlight = {1, 1, 1, 0.1}
 F.colors.sourcesTableEvenRow = {0.2, 0.2, 0.2}
 F.colors.sourcesTableOddRow = {0.27, 0.27, 0.27}
 F.colors.tanHex = "ffAC885D"
@@ -360,11 +356,13 @@ F.colors.yellowHex = "ffFFD100" -- GameFontNormal color
 
 F.templates.button = "UIPanelButtonTemplate"
 F.templates.checkButton = "InterfaceOptionsCheckButtonTemplate"
+F.templates.closeButton = "UIPanelCloseButtonDefaultAnchors" -- The profession window's
 F.templates.divider = "HorizontalBarTemplate"
 F.templates.dropdown = "WowStyle1DropdownTemplate"
-F.templates.innerBorder = "InsetFrameTemplate4"
 F.templates.mainFrame = "BackdropTemplate"
-F.templates.mainFrameBorder = "BaseBasicFrameTemplate"
+F.templates.mainFrameBorder = "NineSlicePanelTemplate"
+F.templates.mainFrameBorderLayout = "ButtonFrameTemplateNoPortrait" -- The profession window's border (PortraitFrameTemplate) without its portrait
+F.templates.progressContainer = "InsetFrameTemplate4"
 F.templates.search = "SearchBoxTemplate"
 F.templates.scrollFrame = "UIPanelScrollFrameTemplate"
 F.templates.slider = "UISliderTemplate"
@@ -383,6 +381,7 @@ F.textures.copperCoin = "Interface/MoneyFrame/UI-CopperIcon"
 F.textures.commonRecipe = "Interface/Icons/INV_Scroll_03"
 F.textures.cursor = "Interface/CURSOR/Point"
 F.textures.cursorClick = "Interface/Buttons/GLOWSTAR"
+F.textures.darkmoonPrizeTicket = "Interface/Icons/INV_Misc_Ticket_Darkmoon_01"
 F.textures.deadwoodTribalBeads = "Interface/Icons/INV_Jewelcrafting_DragonsEye02"
 F.textures.exchangeTicket = "Interface/Icons/Inv_inscription_parchment"
 F.textures.factionIcons = {
@@ -390,8 +389,6 @@ F.textures.factionIcons = {
     ["Horde"] = "Interface/WorldStateFrame/HordeIcon"
 }
 F.textures.goldCoin = "Interface/MoneyFrame/UI-GoldIcon"
-F.textures.headerLeft = "Interface/ClassTrainerFrame/UI-ClassTrainer-TopLeft" -- Main window's top textures
-F.textures.headerRight = "Interface/ClassTrainerFrame/UI-ClassTrainer-TopRight"
 F.textures.mainBackground = "Interface/FrameGeneral/UI-Background-Marble"
 F.textures.malleableEssenceOfNature = "Interface/Icons/Ability_Druid_Cyclone"
 F.textures.merchantsFavor = "Interface/Icons/Racial_Dwarf_FindTreasure"
@@ -419,8 +416,6 @@ F.textures.tarnishedUndermineReal = "Interface/Icons/INV_Misc_Coin_16"
 --                              Atlases
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-F.atlases.borderBottomRightCorner = "UI-Frame-BotCornerRight"
-F.atlases.borderLeftSide = "!UI-Frame-LeftTile"
 F.atlases.leftMouseButton = "newplayertutorial-icon-mouse-leftbutton"
 F.atlases.mapButton = "orderhall-commandbar-mapbutton-up"
 F.atlases.mapButtonPushed = "orderhall-commandbar-mapbutton-down"

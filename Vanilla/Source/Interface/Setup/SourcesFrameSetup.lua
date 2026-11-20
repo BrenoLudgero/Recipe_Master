@@ -63,6 +63,14 @@ function rm.showCellTooltipOnMouseover(cell)
     cell:SetMouseClickEnabled(false)
 end
 
+-- Unlike the other cells, the header's take clicks, so the main frame can't be dragged from them
+function rm.sortSourcesOnHeaderClick(cell)
+    cell:SetMouseClickEnabled(true)
+    cell:SetScript("OnClick", function(self)
+        rm.sortDisplayedSourcesBy(self.field)
+    end)
+end
+
 local function getMouseButtonIcon(atlas)
     return CreateAtlasMarkup(atlas, F.sizes.sourcesTableMouseIconWidth, F.sizes.sourcesTableMouseIconHeight)
 end

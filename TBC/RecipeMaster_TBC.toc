@@ -122,3 +122,7 @@ Source/Interface/Frames.lua
 Source/Cacher.lua
 Source/Handlers/EventHandler.lua
 Source/Main.lua
+
+#@debug@
+Source/Debug.lua
+#@end-debug@

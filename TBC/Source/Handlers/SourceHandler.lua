@@ -127,11 +127,23 @@ local function getFormattedCost(cost)
     return formattedCost
 end
 
+-- Prices in other currencies are sorted by their amount alone
+local function getSortablePrice(cost)
+    local copperAmount = (getCost(cost, "gld") * 10000) + (getCost(cost, "svr") * 100) + getCost(cost, "cpr")
+    if copperAmount > 0 then
+        return copperAmount
+    end
+    return tonumber(cost:match("%d+"))
+end
+
+-- sortValues: Values the sources table is sorted by, for fields whose text can't be compared (see SourcesDisplay)
 local function storeVendorSupply(sourceData, vendorInfo)
     local cost = sourceData["cost"]
     local stock = sourceData["stock"]
+    vendorInfo.sortValues = {}
     if cost then
         vendorInfo.price = getFormattedCost(cost)
+        vendorInfo.sortValues.price = getSortablePrice(cost)
     else
         vendorInfo.price = L.unknown
     end
@@ -139,6 +151,7 @@ local function storeVendorSupply(sourceData, vendorInfo)
         vendorInfo.stock = stock
     else
         vendorInfo.stock = L.unlimited
+        vendorInfo.sortValues.stock = math.huge
     end
 end
 

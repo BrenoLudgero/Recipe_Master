@@ -70,8 +70,8 @@ F.offsets.searchBarX = 8
 F.offsets.searchBarY = -4
 F.offsets.sortByDropdownX = -32
 F.offsets.sortByDropdownY = -7
-F.offsets.sortOrderDropdownX = -8
-F.offsets.sortOrderDropdownY = -4
+F.offsets.sortOrderDropdownX = -11
+F.offsets.sortOrderDropdownY = -2
 F.offsets.sourceFilterDropdownX = F.offsets.sortOrderDropdownX - 1
 F.offsets.sourceFilterDropdownY = -2.5
 
@@ -181,7 +181,7 @@ F.sizes.recipesFrameWidth = 314 -- Minimum width!
 F.sizes.searchBarHeight = 18 -- Clickable area height
 F.sizes.dividerCheckButton = 22 -- Width and height
 F.sizes.sortDropdownWidth = 110
-F.sizes.sortOrderButton = 34 -- Width and height
+F.sizes.sortOrderButton = 36 -- Width and height
 
 ------------------------- Sources frame -------------------------
 --        Headers' width defined at SourcesDisplay.lua
@@ -344,6 +344,7 @@ F.colors.red = {1, 0.125, 0.125}
 F.colors.redHex = "ffFF2020"
 F.colors.skyBlueHex = "ff57C8EA"
 F.colors.sourcesTableHeaderSeparator = {1, 1, 1, 0.4}
+F.colors.sourcesTableHeaderHighlight = {1, 1, 1, 0.1}
 F.colors.sourcesTableEvenRow = {0.2, 0.2, 0.2}
 F.colors.sourcesTableOddRow = {0.27, 0.27, 0.27}
 F.colors.tanHex = "ffAC885D"

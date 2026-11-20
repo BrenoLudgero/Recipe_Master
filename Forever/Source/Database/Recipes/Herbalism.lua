@@ -17,12 +17,6 @@ rm.recipeDB[182] = {
 		teaches = "Artisan",
 	},
 	[273106] = {
-		difficulty = {
-			140,
-			140,
-			142,
-			145,
-		},
 		requiredSkill = 140,
 		teaches = 1262980,
 	},
@@ -31,12 +25,6 @@ rm.recipeDB[182] = {
 		teaches = 1263070,
 	},
 	[279962] = {
-		difficulty = {
-			20,
-			20,
-			22,
-			25,
-		},
 		requiredSkill = 20,
 		teaches = 1229705,
 	},

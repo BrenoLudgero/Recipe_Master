@@ -20,8 +20,6 @@ local function handleActiveTab(tab)
         rm.handleRecipesTabClick()
     elseif tab.label == L.sources then
         rm.handleSourcesTabClick()
-    elseif tab.label == L.fishing then
-        rm.handleFishingTabClick()
     end
 end
 

@@ -2785,6 +2785,10 @@ if [ -d "$version_dir" ]; then
 	# Moves the Source folder and .toc file to their parent folder
     mv "$version_dir/Source" "$parent_dir/"
     mv "$version_dir"/*.toc "$parent_dir/"
+	# Removes #@debug@ blocks from the .toc
+	for toc_file in "$parent_dir"/*.toc; do
+		toc_filter debug true < "$toc_file" > "$toc_file.tmp" && mv "$toc_file.tmp" "$toc_file"
+	done
     # Removes the now empty .release/VERSION/VERSION/ folder
     rmdir "$version_dir"
 else

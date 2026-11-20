@@ -736,12 +736,12 @@ rm.recipeDB[202] = {
 	},
 	[10577] = {
 		difficulty = {
-			0,
+			205,
 			225,
 			235,
 			245,
 		},
-		requiredSkill = 225,
+		requiredSkill = 205,
 		specialization = 20222,
 		teaches = 12716,
 	},
@@ -1682,46 +1682,6 @@ rm.recipeDB[202] = {
 		specialization = 20222,
 		teaches = 12717,
 	},
-	[238734] = {
-		difficulty = {
-			260,
-			270,
-			280,
-			290,
-		},
-		requiredSkill = 260,
-		teaches = 1226207,
-	},
-	[238735] = {
-		difficulty = {
-			260,
-			270,
-			280,
-			290,
-		},
-		requiredSkill = 260,
-		teaches = 1226208,
-	},
-	[238736] = {
-		difficulty = {
-			260,
-			270,
-			280,
-			290,
-		},
-		requiredSkill = 260,
-		teaches = 1226209,
-	},
-	[238737] = {
-		difficulty = {
-			250,
-			260,
-			270,
-			280,
-		},
-		requiredSkill = 250,
-		teaches = 1226206,
-	},
 	[249432] = {
 		difficulty = {
 			120,
@@ -1731,18 +1691,6 @@ rm.recipeDB[202] = {
 		},
 		requiredSkill = 120,
 		teaches = 1249634,
-	},
-	[251747] = {
-		requiredSkill = 250,
-		teaches = 1253004,
-	},
-	[251748] = {
-		requiredSkill = 250,
-		teaches = 1253005,
-	},
-	[251749] = {
-		requiredSkill = 250,
-		teaches = 1253006,
 	},
 	[264201] = {
 		difficulty = {
@@ -2165,12 +2113,6 @@ rm.recipeDB[202] = {
 		teaches = 1286796,
 	},
 	[273092] = {
-		difficulty = {
-			140,
-			140,
-			142,
-			145,
-		},
 		requiredSkill = 140,
 		teaches = 1263034,
 	},
@@ -2239,12 +2181,6 @@ rm.recipeDB[202] = {
 		teaches = 1306547,
 	},
 	[279950] = {
-		difficulty = {
-			20,
-			20,
-			22,
-			25,
-		},
 		requiredSkill = 20,
 		teaches = 1230656,
 	},
@@ -2498,36 +2434,6 @@ rm.recipeDB[202] = {
 		requiredSkill = 275,
 		teaches = 1319165,
 	},
-	[446236] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[446237] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
-	[446238] = {
-		difficulty = {
-			0,
-			250,
-			255,
-			260,
-		},
-		isSpell = true,
-		requiredSkill = 250,
-	},
 	[1226210] = {
 		difficulty = {
 			280,
@@ -2557,14 +2463,5 @@ rm.recipeDB[202] = {
 		},
 		isSpell = true,
 		requiredSkill = 280,
-	},
-	[1235244] = {
-		difficulty = {
-			0,
-			1,
-			1,
-			1,
-		},
-		isSpell = true,
 	},
 }

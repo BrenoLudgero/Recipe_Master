@@ -178,18 +178,30 @@ local function createCellIcon(cell)
     return icon
 end
 
--- The icon and text are anchored when the cell's content is set, depending on what is shown at the left of the text
+-- Buttons only show their HIGHLIGHT layer while hovered.
+-- Anchored when the columns are positioned, as it reaches the adjacent separators
+local function createHeaderHighlight(cell)
+    local highlight = cell:CreateTexture(nil, "HIGHLIGHT")
+    highlight:SetColorTexture(unpack(F.colors.sourcesTableHeaderHighlight))
+    return highlight
+end
+
+-- The icon and text are anchored when the cell's content is set, depending on what is shown at the left of the text.
+-- Header cells are buttons that sort the table by their column
 local function createCell(parent)
-    local cell = CreateFrame("Frame", nil, parent)
+    local isHeader = parent == rm.sourcesTable.header
+    local cell = CreateFrame(isHeader and "Button" or "Frame", nil, parent)
     cell.icon = createCellIcon(cell)
     cell.text = cell:CreateFontString(nil, "OVERLAY")
     cell.text:SetWordWrap(false) -- Text exceeding the cell is shortened with "..."
-    if parent == rm.sourcesTable.header then
+    rm.showCellTooltipOnMouseover(cell)
+    if isHeader then
         cell.text:SetFontObject(F.fonts.sourcesTableHeader)
+        cell.highlight = createHeaderHighlight(cell)
+        rm.sortSourcesOnHeaderClick(cell) -- After the tooltip's setup, which lets clicks go through
     else
         cell.text:SetFont(F.fonts.sourcesTableCell, F.fontSizes.sourcesTableCell)
     end
-    rm.showCellTooltipOnMouseover(cell)
     return cell
 end
 
