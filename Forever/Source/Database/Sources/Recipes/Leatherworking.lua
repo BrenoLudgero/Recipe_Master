@@ -1728,26 +1728,6 @@ rm.recipeSourceDB[165] = {
 			[20708] = 0.04,
 		},
 	},
-	[3104] = {
-		trainer = {
-			[1385] = "",
-			[3007] = "",
-			[3365] = "",
-			[3703] = "",
-			[3967] = "",
-			[4212] = "",
-			[4588] = "",
-			[5127] = "",
-			[5564] = "",
-			[8153] = "",
-			[11081] = "",
-			[11084] = "",
-			[11097] = "",
-			[11098] = "",
-			[252376] = "",
-			[255721] = "",
-		},
-	},
 	[3719] = {
 		trainer = {
 			[1385] = "",
@@ -1765,15 +1745,6 @@ rm.recipeSourceDB[165] = {
 			[11097] = "",
 			[11098] = "",
 			[252376] = "",
-			[255721] = "",
-		},
-	},
-	[3811] = {
-		trainer = {
-			[3007] = "",
-			[4212] = "",
-			[11097] = "",
-			[11098] = "",
 			[255721] = "",
 		},
 	},
@@ -3840,15 +3811,15 @@ rm.recipeSourceDB[165] = {
 	[5786] = {
 		vendor = {
 			[843] = {
-				cost = "5svr78cpr",
+				cost = "5svr50cpr",
 				stock = 1,
 			},
 			[3556] = {
-				cost = "5svr78cpr",
+				cost = "5svr50cpr",
 				stock = 1,
 			},
 			[4186] = {
-				cost = "5svr78cpr",
+				cost = "5svr50cpr",
 				stock = 1,
 			},
 		},
@@ -3860,15 +3831,15 @@ rm.recipeSourceDB[165] = {
 	[5787] = {
 		vendor = {
 			[843] = {
-				cost = "6svr31cpr",
+				cost = "6svr",
 				stock = 1,
 			},
 			[3556] = {
-				cost = "6svr31cpr",
+				cost = "6svr",
 				stock = 1,
 			},
 			[4186] = {
-				cost = "6svr31cpr",
+				cost = "6svr",
 				stock = 1,
 			},
 		},
@@ -3880,14 +3851,14 @@ rm.recipeSourceDB[165] = {
 	[5788] = {
 		vendor = {
 			[2381] = {
-				cost = "5svr85cpr",
+				cost = "6svr50cpr",
 			},
 			[2393] = {
-				cost = "6svr84cpr",
+				cost = "6svr50cpr",
 				stock = 1,
 			},
 			[2846] = {
-				cost = "6svr84cpr",
+				cost = "6svr50cpr",
 			},
 		},
 		drop = {
@@ -3898,7 +3869,7 @@ rm.recipeSourceDB[165] = {
 	[5789] = {
 		vendor = {
 			[2846] = {
-				cost = "29svr47cpr",
+				cost = "28svr",
 			},
 			[4897] = {
 				cost = "28svr",
@@ -4281,10 +4252,10 @@ rm.recipeSourceDB[165] = {
 				stock = 1,
 			},
 			[2821] = {
-				cost = "6svr84cpr",
+				cost = "6svr50cpr",
 			},
 			[3958] = {
-				cost = "6svr84cpr",
+				cost = "6svr50cpr",
 				stock = 1,
 			},
 			[4877] = {
@@ -6197,7 +6168,7 @@ rm.recipeSourceDB[165] = {
 	[7451] = {
 		vendor = {
 			[4225] = {
-				cost = "29svr47cpr",
+				cost = "28svr",
 				stock = 1,
 			},
 			[4589] = {
@@ -7528,7 +7499,7 @@ rm.recipeSourceDB[165] = {
 	[8409] = {
 		vendor = {
 			[7854] = {
-				cost = "42svr10cpr",
+				cost = "40svr",
 				stock = 1,
 			},
 			[8160] = {
@@ -7553,12 +7524,6 @@ rm.recipeSourceDB[165] = {
 		quest = {
 			[5143] = "",
 			[5148] = "",
-		},
-	},
-	[10662] = {
-		trainer = {
-			[11097] = "",
-			[11098] = "",
 		},
 	},
 	[12691] = {
@@ -7746,7 +7711,7 @@ rm.recipeSourceDB[165] = {
 	[14635] = {
 		vendor = {
 			[2699] = {
-				cost = "31svr57cpr",
+				cost = "30svr",
 				stock = 1,
 			},
 			[12245] = {
@@ -7781,7 +7746,7 @@ rm.recipeSourceDB[165] = {
 	[15725] = {
 		vendor = {
 			[12942] = {
-				cost = "1gld26svr31cpr",
+				cost = "1gld20svr",
 			},
 			[12943] = {
 				cost = "1gld20svr",
@@ -8670,7 +8635,7 @@ rm.recipeSourceDB[165] = {
 	[15756] = {
 		vendor = {
 			[12941] = {
-				cost = "2gld31svr57cpr",
+				cost = "2gld20svr",
 				stock = 1,
 			},
 		},
@@ -8993,7 +8958,7 @@ rm.recipeSourceDB[165] = {
 	[17022] = {
 		vendor = {
 			[12944] = {
-				cost = "15gld88svr23cpr",
+				cost = "15gld",
 				stock = 1,
 			},
 		},
@@ -9001,7 +8966,7 @@ rm.recipeSourceDB[165] = {
 	[17023] = {
 		vendor = {
 			[12944] = {
-				cost = "16gld94svr11cpr",
+				cost = "16gld",
 				stock = 1,
 			},
 		},
@@ -9009,7 +8974,7 @@ rm.recipeSourceDB[165] = {
 	[17025] = {
 		vendor = {
 			[12944] = {
-				cost = "16gld94svr11cpr",
+				cost = "16gld",
 				stock = 1,
 			},
 		},
@@ -9034,11 +8999,11 @@ rm.recipeSourceDB[165] = {
 	[18731] = {
 		vendor = {
 			[3366] = {
-				cost = "18svr82cpr",
+				cost = "20svr",
 				stock = 1,
 			},
 			[5128] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 				stock = 1,
 			},
 		},
@@ -9046,7 +9011,7 @@ rm.recipeSourceDB[165] = {
 	[18949] = {
 		vendor = {
 			[4225] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 				stock = 1,
 			},
 			[4589] = {
@@ -9061,41 +9026,41 @@ rm.recipeSourceDB[165] = {
 	[19202] = {
 		vendor = {
 			[11557] = {
-				cost = "2gld31svr57cpr",
+				cost = "2gld20svr",
 			},
 		},
 	},
 	[19204] = {
 		vendor = {
 			[11557] = {
-				cost = "4gld21svr5cpr",
+				cost = "4gld",
 			},
 		},
 	},
 	[19326] = {
 		vendor = {
 			[11557] = {
-				cost = "2gld31svr57cpr",
+				cost = "2gld20svr",
 			},
 		},
 	},
 	[19327] = {
 		vendor = {
 			[11557] = {
-				cost = "4gld21svr5cpr",
+				cost = "4gld",
 			},
 		},
 	},
 	[19328] = {
 		vendor = {
 			[10856] = {
-				cost = "2gld31svr57cpr",
+				cost = "2gld20svr",
 			},
 			[10857] = {
-				cost = "2gld8svr42cpr",
+				cost = "2gld20svr",
 			},
 			[11536] = {
-				cost = "2gld8svr42cpr",
+				cost = "2gld20svr",
 			},
 		},
 	},
@@ -9105,17 +9070,17 @@ rm.recipeSourceDB[165] = {
 				cost = "4gld",
 			},
 			[10857] = {
-				cost = "3gld78svr94cpr",
+				cost = "4gld",
 			},
 			[11536] = {
-				cost = "3gld78svr94cpr",
+				cost = "4gld",
 			},
 		},
 	},
 	[19330] = {
 		vendor = {
 			[12944] = {
-				cost = "6gld35svr29cpr",
+				cost = "6gld",
 				stock = 1,
 			},
 		},
@@ -9123,21 +9088,21 @@ rm.recipeSourceDB[165] = {
 	[19331] = {
 		vendor = {
 			[12944] = {
-				cost = "9gld52svr94cpr",
+				cost = "9gld",
 			},
 		},
 	},
 	[19332] = {
 		vendor = {
 			[12944] = {
-				cost = "9gld52svr94cpr",
+				cost = "9gld",
 			},
 		},
 	},
 	[19333] = {
 		vendor = {
 			[12944] = {
-				cost = "9gld52svr94cpr",
+				cost = "9gld",
 			},
 		},
 	},
@@ -9151,21 +9116,21 @@ rm.recipeSourceDB[165] = {
 	[19770] = {
 		vendor = {
 			[14921] = {
-				cost = "5gld62svr50cpr",
+				cost = "5gld",
 			},
 		},
 	},
 	[19771] = {
 		vendor = {
 			[14921] = {
-				cost = "5gld29svr41cpr",
+				cost = "5gld",
 			},
 		},
 	},
 	[19772] = {
 		vendor = {
 			[14921] = {
-				cost = "5gld29svr41cpr",
+				cost = "5gld",
 			},
 		},
 	},
@@ -9216,28 +9181,28 @@ rm.recipeSourceDB[165] = {
 	[252761] = {
 		vendor = {
 			[258306] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 		},
 	},
 	[252762] = {
 		vendor = {
 			[258306] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 		},
 	},
 	[252763] = {
 		vendor = {
 			[258306] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 		},
 	},
 	[252764] = {
 		vendor = {
 			[258306] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 		},
 	},
@@ -9494,25 +9459,25 @@ rm.recipeSourceDB[165] = {
 	[252783] = {
 		vendor = {
 			[3005] = {
-				cost = "4svr50cpr",
+				cost = "5svr",
 			},
 			[3366] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[4225] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[4589] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[5128] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[5565] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[7854] = {
-				cost = "5svr29cpr",
+				cost = "5svr",
 			},
 			[8160] = {
 				cost = "5svr",
@@ -9522,25 +9487,25 @@ rm.recipeSourceDB[165] = {
 	[252784] = {
 		vendor = {
 			[3005] = {
-				cost = "4svr50cpr",
+				cost = "5svr",
 			},
 			[3366] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[4225] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[4589] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[5128] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[5565] = {
-				cost = "5svr26cpr",
+				cost = "5svr",
 			},
 			[7854] = {
-				cost = "5svr29cpr",
+				cost = "5svr",
 			},
 			[8160] = {
 				cost = "5svr",
@@ -9867,13 +9832,13 @@ rm.recipeSourceDB[165] = {
 	[252811] = {
 		vendor = {
 			[3005] = {
-				cost = "18svr",
+				cost = "20svr",
 			},
 			[4225] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 			},
 			[7854] = {
-				cost = "21svr17cpr",
+				cost = "20svr",
 			},
 			[8160] = {
 				cost = "20svr",
@@ -9883,13 +9848,13 @@ rm.recipeSourceDB[165] = {
 	[252812] = {
 		vendor = {
 			[3005] = {
-				cost = "18svr",
+				cost = "20svr",
 			},
 			[4225] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 			},
 			[7854] = {
-				cost = "21svr17cpr",
+				cost = "20svr",
 			},
 			[8160] = {
 				cost = "20svr",
@@ -10149,49 +10114,49 @@ rm.recipeSourceDB[165] = {
 	[252826] = {
 		vendor = {
 			[258306] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 			},
 		},
 	},
 	[252827] = {
 		vendor = {
 			[258306] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 			},
 		},
 	},
 	[252828] = {
 		vendor = {
 			[258306] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 			},
 		},
 	},
 	[252829] = {
 		vendor = {
 			[258306] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 			},
 		},
 	},
 	[252830] = {
 		vendor = {
 			[258306] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 			},
 		},
 	},
 	[252831] = {
 		vendor = {
 			[258306] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 			},
 		},
 	},
 	[252832] = {
 		vendor = {
 			[258306] = {
-				cost = "21svr5cpr",
+				cost = "20svr",
 			},
 		},
 	},
@@ -11433,7 +11398,7 @@ rm.recipeSourceDB[165] = {
 	[252942] = {
 		vendor = {
 			[7854] = {
-				cost = "58svr23cpr",
+				cost = "55svr",
 			},
 			[8160] = {
 				cost = "55svr",
@@ -11759,7 +11724,7 @@ rm.recipeSourceDB[165] = {
 	[276934] = {
 		vendor = {
 			[254151] = {
-				cost = "13svr15cpr",
+				cost = "12svr50cpr",
 			},
 		},
 	},
@@ -11787,7 +11752,7 @@ rm.recipeSourceDB[165] = {
 	[276938] = {
 		vendor = {
 			[254151] = {
-				cost = "13svr15cpr",
+				cost = "12svr50cpr",
 			},
 		},
 	},
@@ -11801,7 +11766,7 @@ rm.recipeSourceDB[165] = {
 	[276940] = {
 		vendor = {
 			[254151] = {
-				cost = "13svr15cpr",
+				cost = "12svr50cpr",
 			},
 		},
 	},
@@ -11829,7 +11794,7 @@ rm.recipeSourceDB[165] = {
 	[276944] = {
 		vendor = {
 			[254151] = {
-				cost = "13svr15cpr",
+				cost = "12svr50cpr",
 			},
 		},
 	},
@@ -11843,7 +11808,7 @@ rm.recipeSourceDB[165] = {
 	[276958] = {
 		vendor = {
 			[254151] = {
-				cost = "13svr15cpr",
+				cost = "12svr50cpr",
 			},
 		},
 	},
@@ -11871,7 +11836,7 @@ rm.recipeSourceDB[165] = {
 	[276962] = {
 		vendor = {
 			[254151] = {
-				cost = "13svr15cpr",
+				cost = "12svr50cpr",
 			},
 		},
 	},
@@ -11885,7 +11850,7 @@ rm.recipeSourceDB[165] = {
 	[276964] = {
 		vendor = {
 			[254151] = {
-				cost = "13svr15cpr",
+				cost = "12svr50cpr",
 			},
 		},
 	},
@@ -11913,7 +11878,7 @@ rm.recipeSourceDB[165] = {
 	[276968] = {
 		vendor = {
 			[254151] = {
-				cost = "13svr15cpr",
+				cost = "12svr50cpr",
 			},
 		},
 	},
@@ -11955,38 +11920,38 @@ rm.recipeSourceDB[165] = {
 	[276986] = {
 		vendor = {
 			[32287] = {
-				cost = "10gld52svr63cpr",
+				cost = "10gld",
 			},
 		},
 	},
 	[276987] = {
 		vendor = {
 			[32287] = {
-				cost = "10gld52svr63cpr",
+				cost = "10gld",
 			},
 		},
 	},
 	[276988] = {
 		vendor = {
 			[32287] = {
-				cost = "10gld52svr63cpr",
+				cost = "10gld",
 			},
 		},
 	},
 	[276989] = {
 		vendor = {
 			[32287] = {
-				cost = "10gld52svr63cpr",
+				cost = "10gld",
 			},
 		},
 	},
 	[277716] = {
 		vendor = {
 			[3168] = {
-				cost = "1svr57cpr",
+				cost = "1svr50cpr",
 			},
 			[4225] = {
-				cost = "1svr57cpr",
+				cost = "1svr50cpr",
 			},
 		},
 		quest = {
@@ -12032,6 +11997,41 @@ rm.recipeSourceDB[165] = {
 			[97946] = "",
 			[97958] = "",
 			[97969] = "",
+		},
+	},
+	[1240961] = {
+		trainer = {
+			[1385] = "",
+			[3007] = "",
+			[3365] = "",
+			[3703] = "",
+			[3967] = "",
+			[4212] = "",
+			[4588] = "",
+			[5127] = "",
+			[5564] = "",
+			[8153] = "",
+			[11081] = "",
+			[11084] = "",
+			[11097] = "",
+			[11098] = "",
+			[252376] = "",
+			[255721] = "",
+		},
+	},
+	[1240972] = {
+		trainer = {
+			[3007] = "",
+			[4212] = "",
+			[11097] = "",
+			[11098] = "",
+			[255721] = "",
+		},
+	},
+	[1240985] = {
+		trainer = {
+			[11097] = "",
+			[11098] = "",
 		},
 	},
 }

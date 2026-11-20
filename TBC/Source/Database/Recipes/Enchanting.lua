@@ -2416,8 +2416,8 @@ rm.recipeDB[333] = {
 	[42615] = {
 		difficulty = {
 			0,
-			0,
 			335,
+			325,
 			335,
 		},
 		isSpell = true,

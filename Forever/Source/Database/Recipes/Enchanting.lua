@@ -81,16 +81,6 @@ rm.recipeDB[333] = {
 		requiredSkill = 125,
 		teaches = 7867,
 	},
-	[7412] = {
-		isSpell = true,
-		requiredSkill = 50,
-		teaches = "Journeyman",
-	},
-	[7413] = {
-		isSpell = true,
-		requiredSkill = 125,
-		teaches = "Expert",
-	},
 	[7418] = {
 		difficulty = {
 			0,
@@ -871,11 +861,6 @@ rm.recipeDB[333] = {
 		isSpell = true,
 		requiredSkill = 230,
 	},
-	[13920] = {
-		isSpell = true,
-		requiredSkill = 200,
-		teaches = "Artisan",
-	},
 	[13935] = {
 		difficulty = {
 			235,
@@ -1529,7 +1514,7 @@ rm.recipeDB[333] = {
 	[20758] = {
 		difficulty = {
 			0,
-			45,
+			30,
 			47,
 			65,
 		},
@@ -2283,6 +2268,21 @@ rm.recipeDB[333] = {
 	[1230643] = {
 		isSpell = true,
 		requiredSkill = 20,
+	},
+	[1240957] = {
+		isSpell = true,
+		requiredSkill = 50,
+		teaches = "Journeyman",
+	},
+	[1240968] = {
+		isSpell = true,
+		requiredSkill = 125,
+		teaches = "Expert",
+	},
+	[1240981] = {
+		isSpell = true,
+		requiredSkill = 200,
+		teaches = "Artisan",
 	},
 	[1245320] = {
 		difficulty = {
