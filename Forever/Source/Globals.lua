@@ -129,12 +129,20 @@ function rm.saveGuildMembersClasses()
     end
     local savedClasses = getSavedClasses()
     local savedCharacters = rm.getSavedVariablesForCurrentServerAndAllFactions()
+    -- Saved Forever characters have a surname ("Gogopriest Gogo"), which the roster may leave out
+    local savedNamesByFirstName = {}
+    for savedName in pairs(savedCharacters) do
+        savedNamesByFirstName[strsplit(" ", savedName)] = savedName
+    end
     for i = 1, GetNumGuildMembers() do
         local memberName, _, _, _, _, _, _, _, _, _, classFile = GetGuildRosterInfo(i)
         if memberName and classFile then
             local characterName, realm = strsplit("-", memberName)
             local isCurrentServer = not realm or realm == rm.currentServer:gsub("[%s%-]", "")
-            if isCurrentServer and savedCharacters[characterName] and not savedClasses[characterName] then
+            if not savedCharacters[characterName] then
+                characterName = savedNamesByFirstName[characterName]
+            end
+            if isCurrentServer and characterName and not savedClasses[characterName] then
                 savedClasses[characterName] = classFile
             end
         end
