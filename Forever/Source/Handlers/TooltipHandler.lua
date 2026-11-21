@@ -2,6 +2,11 @@ local _, rm = ...
 local L = rm.L
 local F = rm.F
 
+-- Some clients hide tooltip values behind secret values (e.g. in combat), which add-ons can't compare, test or index
+local function isSecret(value)
+    return issecretvalue ~= nil and issecretvalue(value)
+end
+
 -- Fallback for characters saved before the maximum skill level started being stored
 local professionRankCaps = {
     ["Apprentice"] = 75,
@@ -130,7 +135,9 @@ end
 local function isTooltipMessageDisplayed(tooltip)
     for i = 1, tooltip:NumLines() do
         local currentLineText = _G[tooltip:GetName().."TextLeft"..i]:GetText()
-        if not currentLineText or currentLineText:gsub("^%s*(.-)%s*$", "%1") == "Recipe Master" then
+        if isSecret(currentLineText) then
+            -- Not one of RecipeMaster's lines
+        elseif not currentLineText or currentLineText:gsub("^%s*(.-)%s*$", "%1") == "Recipe Master" then
             return true
         end
     end
@@ -197,7 +204,7 @@ end
 local function getSpellNameCandidates(tooltip, spellName, spellID)
     local names = {}
     local function add(name)
-        if type(name) == "string" and name ~= "" then
+        if not isSecret(name) and type(name) == "string" and name ~= "" then
             table.insert(names, (name:gsub("^%s*(.-)%s*$", "%1")))
         end
     end
@@ -304,6 +311,12 @@ TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tool
 end)
 
 local function showMessageInSpellTooltip(tooltip, spellName, spellID)
+    if isSecret(spellID) then
+        return
+    end
+    if isSecret(spellName) then
+        spellName = nil
+    end
     if not spellID then
         debugPrint("spell tooltip without a spell ID", tostring(spellName))
         return
@@ -339,6 +352,9 @@ TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Spell, function(too
         return
     end
     local spellName, spellID = TooltipUtil.GetDisplayedSpell(tooltip)
+    if isSecret(spellID) then
+        return
+    end
     showMessageInSpellTooltip(tooltip, spellName, spellID or (data and data.id))
 end)
 
@@ -359,7 +375,9 @@ end
 local function getMacroSpellOrItem(tooltip, data)
     if data and data.lines then
         for _, line in ipairs(data.lines) do
-            if line.tooltipID and line.tooltipType == Enum.TooltipDataType.Spell then
+            if isSecret(line.tooltipID) or isSecret(line.tooltipType) then
+                -- Hidden by the client
+            elseif line.tooltipID and line.tooltipType == Enum.TooltipDataType.Spell then
                 return line.tooltipID, nil
             elseif line.tooltipID and line.tooltipType == Enum.TooltipDataType.Item then
                 return nil, line.tooltipID
@@ -369,6 +387,9 @@ local function getMacroSpellOrItem(tooltip, data)
     local slot = getOwnerActionSlot(tooltip)
     if slot and GetActionInfo then
         local actionType, id, subType = GetActionInfo(slot)
+        if isSecret(actionType) or isSecret(id) or isSecret(subType) then
+            return nil, nil
+        end
         if actionType == "macro" then
             if subType == "spell" then
                 return id, nil
@@ -388,7 +409,7 @@ local function getMacroSpellOrItem(tooltip, data)
     -- Last resort: the spell named in the tooltip's header, when the character knows it
     local header = tooltip.GetName and tooltip:GetName() and _G[tooltip:GetName().."TextLeft1"]
     local headerText = header and header:GetText()
-    if headerText then
+    if headerText and not isSecret(headerText) then
         local spellInfo = C_Spell and C_Spell.GetSpellInfo and C_Spell.GetSpellInfo(headerText)
         if spellInfo and spellInfo.spellID then
             return spellInfo.spellID, nil
