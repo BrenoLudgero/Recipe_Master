@@ -7,7 +7,22 @@ rm.frame = CreateFrame("Frame")
 rm.frame.name = rm.L.title
 rm.version = C_AddOns.GetAddOnMetadata(addonName, "Version")
 rm.author = C_AddOns.GetAddOnMetadata(addonName, "Author")
-rm.currentCharacter = UnitName("player")
+-- On WoW Forever, UnitName's 2nd return is the character's surname instead of a realm name
+-- Characters are saved and displayed with their whole name there (e.g. "Gogopriest Gogo")
+local function getCurrentCharacterName()
+    local name, surname = (UnitNameUnmodified or UnitName)("player")
+    rm.currentFirstName = name
+    if surname and surname ~= "" and RegionalUniqueNamesEnabled and RegionalUniqueNamesEnabled() then
+        local separators = Constants.CharacterNameSeparatorConsts
+        local ending = (separators and separators.CHARACTERNAME_SURNAME_SEPARATOR or " ")..surname
+        if name:sub(-#ending) ~= ending then -- Some builds already return the whole name
+            name = name..ending
+        end
+    end
+    return name
+end
+
+rm.currentCharacter = getCurrentCharacterName()
 rm.currentFaction = UnitFactionGroup("player") -- Alliance/Horde, always in English
 rm.currentLevel = UnitLevel("player")
 rm.currentServer = GetRealmName()
@@ -102,8 +117,19 @@ function rm.updateSavedCharacters()
     if not RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction] then
         RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction] = {}
     end
-    if not RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction][rm.currentCharacter] then
-        RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction][rm.currentCharacter] = {}
+    local factionCharacters = RecipeMasterProfessionsAndSkills[rm.currentServer][rm.currentFaction]
+    local firstName = rm.currentFirstName
+    -- Moves data saved under the first name alone (before surnames were supported) to the whole name
+    if firstName ~= rm.currentCharacter and factionCharacters[firstName] then
+        factionCharacters[rm.currentCharacter] = factionCharacters[rm.currentCharacter] or factionCharacters[firstName]
+        factionCharacters[firstName] = nil
+        local classes = RecipeMasterProfessionsAndSkills[rm.currentServer]["classes"]
+        if classes then
+            classes[firstName] = nil
+        end
+    end
+    if not factionCharacters[rm.currentCharacter] then
+        factionCharacters[rm.currentCharacter] = {}
     end
 end
 

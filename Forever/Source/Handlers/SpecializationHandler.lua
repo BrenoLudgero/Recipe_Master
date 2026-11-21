@@ -47,6 +47,24 @@ local professionsWithMultipleSpecializations = {
     [164] = true, -- Blacksmithing: Weaponsmith and Master Axesmith, Hammersmith or Swordsmith
 }
 
+-- Spellbook spell IDs that differ from the ones above
+local specializationAliases = {
+    [10657] = 165, -- Vanilla's ID for Dragonscale Leatherworking; the database uses 10656
+}
+
+-- Returns the base profession of a specialization spell (e.g. Armorsmith -> Blacksmithing)
+function rm.getProfessionIDBySpecialization(spellID)
+    if specializationAliases[spellID] then
+        return specializationAliases[spellID]
+    end
+    for professionID, specs in pairs(specializationIDs) do
+        if rm.tableContains(specs, spellID) then
+            return professionID
+        end
+    end
+    return false
+end
+
 local function professionHasSpecializations(professionID)
     return specializationIDs[professionID] ~= nil
 end

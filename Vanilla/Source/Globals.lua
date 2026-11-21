@@ -93,8 +93,77 @@ function rm.getSavedVariablesForCurrentCharacter()
     return rm.getSavedVariablesForCurrentServerAndFaction()[rm.currentCharacter]
 end
 
+-- Class files are kept apart from the characters' profession data, which is iterated by profession ID
+-- RecipeMasterProfessionsAndSkills[server]["classes"][character] = classFile (e.g. "DRUID")
+local function getSavedClasses()
+    local currentServerSavedVariables = RecipeMasterProfessionsAndSkills[rm.currentServer]
+    currentServerSavedVariables["classes"] = currentServerSavedVariables["classes"] or {}
+    return currentServerSavedVariables["classes"]
+end
+
+function rm.saveCurrentCharacterClass()
+    getSavedClasses()[rm.currentCharacter] = select(2, UnitClass("player"))
+end
+
+-- A character's class is only stored when it logs in
+-- Guilded alts are filled in from the guild roster so that their names are class colored right away
+local function isClassMissingForAnySavedCharacter()
+    local savedClasses = getSavedClasses()
+    for characterName in pairs(rm.getSavedVariablesForCurrentServerAndAllFactions()) do
+        if not savedClasses[characterName] then
+            return true
+        end
+    end
+    return false
+end
+
+function rm.requestGuildRosterIfClassesAreMissing()
+    if IsInGuild() and C_GuildInfo and isClassMissingForAnySavedCharacter() then
+        C_GuildInfo.GuildRoster()
+    end
+end
+
+function rm.saveGuildMembersClasses()
+    if not IsInGuild() or not isClassMissingForAnySavedCharacter() then
+        return
+    end
+    local savedClasses = getSavedClasses()
+    local savedCharacters = rm.getSavedVariablesForCurrentServerAndAllFactions()
+    for i = 1, GetNumGuildMembers() do
+        local memberName, _, _, _, _, _, _, _, _, _, classFile = GetGuildRosterInfo(i)
+        if memberName and classFile then
+            local characterName, realm = strsplit("-", memberName)
+            local isCurrentServer = not realm or realm == rm.currentServer:gsub("[%s%-]", "")
+            if isCurrentServer and savedCharacters[characterName] and not savedClasses[characterName] then
+                savedClasses[characterName] = classFile
+            end
+        end
+    end
+end
+
+-- Supports class color add-ons. Falls back to white for characters whose class is unknown yet
+function rm.getClassColoredCharacterName(characterName)
+    local class = getSavedClasses()[characterName]
+    local classColor = class and ((CUSTOM_CLASS_COLORS and CUSTOM_CLASS_COLORS[class]) or RAID_CLASS_COLORS[class])
+    if not classColor then
+        return characterName
+    end
+    local classColorHex = string.format(
+        "ff%02X%02X%02X",
+        math.floor(classColor.r * 255),
+        math.floor(classColor.g * 255),
+        math.floor(classColor.b * 255)
+    )
+    return WrapTextInColorCode(characterName, classColorHex)
+end
+
 function rm.getProfessionID(professionName)
     return tInvert(L.professions)[professionName]
+end
+
+-- Includes gathering professions (e.g. Herbalism), which are tracked but have no recipes
+function rm.getTrackedProfessionID(professionName)
+    return rm.getProfessionID(professionName) or tInvert(L.gatheringProfessions)[professionName]
 end
 
 function rm.getIDFromLink(link)
