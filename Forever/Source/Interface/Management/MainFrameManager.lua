@@ -76,7 +76,7 @@ end
 local function onTradeSkillMasterVisibilityChanged(isVisible, frame)
     rm.tradeSkillMasterFrame = isVisible and frame or nil
     -- Waits for TSM to show the default frame when switching to it
-    RunNextFrame(function()
+    rm.runNextFrameOutOfCombat(function()
         if rm.getProfessionFrame() then
             rm.setParentDependentFramesPosition()
         end

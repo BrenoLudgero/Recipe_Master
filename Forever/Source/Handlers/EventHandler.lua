@@ -109,12 +109,12 @@ local function hookProfessionsBook()
         return
     end
     ProfessionsFrame.BookPage:HookScript("OnShow", function()
-        RunNextFrame(function()
+        rm.runNextFrameOutOfCombat(function()
             handleProfessionFrameClosed(getDisplayedProfession)
         end)
     end)
     ProfessionsFrame.BookPage:HookScript("OnHide", function()
-        RunNextFrame(function()
+        rm.runNextFrameOutOfCombat(function()
             if rm.getProfessionFrame() then
                 handleProfessionFrameOpened(getDisplayedProfession)
             end
@@ -135,14 +135,14 @@ function rm.handleProfessionFrame(event)
     local delayInSeconds = 0.05
     -- Delayed for a bit to ensure that RM will be displayed / closed reliably and ASAP
     if event == "TRADE_SKILL_SHOW" then
-        C_Timer.After(delayInSeconds, function() 
+        C_Timer.After(delayInSeconds, rm.outOfCombat(function() 
             hookProfessionsBook()
             handleProfessionFrameOpened(getDisplayedProfession)
-        end)
+        end))
     elseif event == "TRADE_SKILL_LIST_UPDATE" then
         handleProfessionListUpdated()
     elseif event == "TRADE_SKILL_CLOSE" then
-        RunNextFrame(function() 
+        rm.runNextFrameOutOfCombat(function() 
             handleProfessionFrameClosed(getDisplayedProfession)
         end)
     end

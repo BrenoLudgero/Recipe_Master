@@ -203,7 +203,7 @@ function rm.createRecipeRow(recipe, color, desaturateIcon)
     local recipeNameWidth = recipeNameText:GetWidth()
     local recipeInfoWidth = 0
     if recipeNameText.additionalInfo then
-        recipeInfoText = recipeNameText.additionalInfo
+        local recipeInfoText = recipeNameText.additionalInfo
         recipeInfoWidth = recipeInfoText:GetWidth()
     end
     rm.storeWidestRecipeTextWidth(recipeNameWidth, recipeInfoWidth)
