@@ -33,6 +33,7 @@ local function storeLearnedProfession(currentProfessions, professionID, skillInf
     if skillInfo then
         currentProfessions[professionID] = {
             ["level"] = skillInfo.rank,
+            ["maxLevel"] = skillInfo.maxRank,
             ["rank"] = getRankName(skillInfo.maxRank),
             ["skills"] = {},
             ["specialization"] = false,
@@ -78,6 +79,10 @@ local function updateSavedProfessions(currentProfessions)
         local savedProfessionRank = rm.getSavedProfessionByID(professionID)["rank"]
         local professionSpecialization = professionData["specialization"]
         local savedProfessionSpecialization = rm.getSavedSpecializationByProfessionID(professionID)
+        -- Stored separately as it is only needed to display the characters' progress in tooltips
+        if professionData["maxLevel"] ~= rm.getSavedProfessionByID(professionID)["maxLevel"] then
+            rm.getSavedProfessionByID(professionID)["maxLevel"] = professionData["maxLevel"]
+        end
         if professionLevel ~= savedProfessionLevel then
             rm.getSavedProfessionByID(professionID)["level"] = professionLevel
         elseif professionRank ~= savedProfessionRank then

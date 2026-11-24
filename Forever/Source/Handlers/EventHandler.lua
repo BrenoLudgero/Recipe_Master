@@ -9,6 +9,7 @@ rm.frame:RegisterEvent("NEW_RECIPE_LEARNED")
 rm.frame:RegisterEvent("TRADE_SKILL_SHOW")
 rm.frame:RegisterEvent("TRADE_SKILL_LIST_UPDATE")
 rm.frame:RegisterEvent("TRADE_SKILL_CLOSE")
+rm.frame:RegisterEvent("GUILD_ROSTER_UPDATE")
 
 -- Scales the interface elements based on the UI Scale setting + scale preference
 -- The restoreButton ignores the scale preference to match the profession tabs
@@ -27,6 +28,7 @@ function rm.handleAddonLoaded(event, addon)
         rm.createSavedVariables()
         rm.updateSavedVariables()
         rm.updateSavedCharacters()
+        rm.saveCurrentCharacterClass()
         rm.createAllFrameElements()
         rm.registerTradeSkillMasterCallback()
         rm.createChatCommand()
@@ -39,7 +41,16 @@ end
 function rm.handleSkillChange(event)
     if event == "SKILL_LINES_CHANGED" then
         rm.updateCharacterProfessions()
+        rm.saveKnownRecipeSpells()
         rm.refreshRecipesListIfOpen()
+        rm.requestGuildRosterIfClassesAreMissing()
+    end
+end
+
+-- Stores the class of the character's guilded alts, used to color their names in tooltips
+function rm.handleGuildRosterUpdate(event)
+    if event == "GUILD_ROSTER_UPDATE" then
+        rm.saveGuildMembersClasses()
     end
 end
 
@@ -99,12 +110,12 @@ local function hookProfessionsBook()
         return
     end
     ProfessionsFrame.BookPage:HookScript("OnShow", function()
-        RunNextFrame(function()
+        rm.runNextFrameOutOfCombat(function()
             handleProfessionFrameClosed(getDisplayedProfession)
         end)
     end)
     ProfessionsFrame.BookPage:HookScript("OnHide", function()
-        RunNextFrame(function()
+        rm.runNextFrameOutOfCombat(function()
             if rm.getProfessionFrame() then
                 handleProfessionFrameOpened(getDisplayedProfession)
             end
@@ -125,14 +136,14 @@ function rm.handleProfessionFrame(event)
     local delayInSeconds = 0.05
     -- Delayed for a bit to ensure that RM will be displayed / closed reliably and ASAP
     if event == "TRADE_SKILL_SHOW" then
-        C_Timer.After(delayInSeconds, function() 
+        C_Timer.After(delayInSeconds, rm.outOfCombat(function() 
             hookProfessionsBook()
             handleProfessionFrameOpened(getDisplayedProfession)
-        end)
+        end))
     elseif event == "TRADE_SKILL_LIST_UPDATE" then
         handleProfessionListUpdated()
     elseif event == "TRADE_SKILL_CLOSE" then
-        RunNextFrame(function() 
+        rm.runNextFrameOutOfCombat(function() 
             handleProfessionFrameClosed(getDisplayedProfession)
         end)
     end
