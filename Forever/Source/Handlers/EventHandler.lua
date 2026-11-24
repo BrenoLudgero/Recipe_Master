@@ -41,6 +41,7 @@ end
 function rm.handleSkillChange(event)
     if event == "SKILL_LINES_CHANGED" then
         rm.updateCharacterProfessions()
+        rm.saveKnownRecipeSpells()
         rm.refreshRecipesListIfOpen()
         rm.requestGuildRosterIfClassesAreMissing()
     end

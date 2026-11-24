@@ -72,6 +72,20 @@ function rm.saveLearnedTradeSkills()
     return savedNewSkill
 end
 
+-- Recipes are otherwise only saved while their profession is open, so the ones learned before Recipe Master
+-- was installed (or while it was disabled) went missing, showing the character as needing them
+-- A recipe's spell is the one saved for it (see getTaughtSkill), and rankup recipes teach a rank name instead
+function rm.saveKnownRecipeSpells()
+    for professionID in pairs(rm.getSavedVariablesForCurrentCharacter()) do
+        for recipeID, recipeData in pairs(rm.recipeDB[professionID] or {}) do
+            local spellID = recipeData.isSpell and recipeID or recipeData.teaches
+            if type(spellID) == "number" and IsPlayerSpell(spellID) then
+                saveNewSkill(professionID, spellID)
+            end
+        end
+    end
+end
+
 -- newSkillID: The learned recipe's spell, which can be learned while its profession is closed (e.g. from a trainer)
 function rm.saveNewlyLearnedSkill(newSkillID)
     local tradeSkillID, _, parentTradeSkillID = C_TradeSkillUI.GetTradeSkillLineForRecipe(newSkillID)
