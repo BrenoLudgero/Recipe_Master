@@ -92,26 +92,33 @@ local function handleProfessionFrameClosed(getDisplayedProfessionFunction)
     handleProfessionFrameOpened(getDisplayedProfessionFunction)
 end
 
--- The default profession frame's first tab is the professions book, which hides the profession without closing it
-local isProfessionsBookHooked = false
-local function hookProfessionsBook()
-    if isProfessionsBookHooked or not (ProfessionsFrame and ProfessionsFrame.BookPage) then
+-- The default profession frame's first tab is the professions book, which hides the profession without closing it.
+-- Its show/hide are followed through EventRegistry rather than HookScript on ProfessionsFrame.BookPage:
+-- hooking that frame taints its own updates, which are then blocked in combat (spell buttons' SetShown / cooldowns)
+local wasProfessionsBookPageVisible = false
+
+local function isProfessionsBookPageVisible()
+    return ProfessionsFrame and ProfessionsFrame.BookPage and ProfessionsFrame.BookPage:IsVisible() or false
+end
+
+-- The standalone professions book (ProfessionsBookFrame) fires the same events, so only changes of the page count
+local function handleProfessionsBookToggled()
+    local isVisible = isProfessionsBookPageVisible()
+    if isVisible == wasProfessionsBookPageVisible then
         return
     end
-    ProfessionsFrame.BookPage:HookScript("OnShow", function()
-        RunNextFrame(function()
+    wasProfessionsBookPageVisible = isVisible
+    RunNextFrame(function()
+        if isVisible then
             handleProfessionFrameClosed(getDisplayedProfession)
-        end)
+        elseif rm.getProfessionFrame() then
+            handleProfessionFrameOpened(getDisplayedProfession)
+        end
     end)
-    ProfessionsFrame.BookPage:HookScript("OnHide", function()
-        RunNextFrame(function()
-            if rm.getProfessionFrame() then
-                handleProfessionFrameOpened(getDisplayedProfession)
-            end
-        end)
-    end)
-    isProfessionsBookHooked = true
 end
+
+EventRegistry:RegisterCallback("ProfessionsBookFrame.Show", handleProfessionsBookToggled, rm)
+EventRegistry:RegisterCallback("ProfessionsBookFrame.Hide", handleProfessionsBookToggled, rm)
 
 -- The profession's recipes can finish loading after it's shown
 -- The list is only refreshed when new recipes are found, as it's also updated after every craft
@@ -125,8 +132,7 @@ function rm.handleProfessionFrame(event)
     local delayInSeconds = 0.05
     -- Delayed for a bit to ensure that RM will be displayed / closed reliably and ASAP
     if event == "TRADE_SKILL_SHOW" then
-        C_Timer.After(delayInSeconds, function() 
-            hookProfessionsBook()
+        C_Timer.After(delayInSeconds, function()
             handleProfessionFrameOpened(getDisplayedProfession)
         end)
     elseif event == "TRADE_SKILL_LIST_UPDATE" then

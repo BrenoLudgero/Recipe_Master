@@ -23,13 +23,62 @@ local function storeCachedCraftedItem(recipeID, professionID)
     storeCraftedItem(rm.craftedItems, recipe.craftedItem, recipe, professionID)
 end
 
+-- Private replacement for Spell:ContinueOnSpellLoad / Item:ContinueOnItemLoad.
+-- Those write into Blizzard's shared SpellEventListener / ItemEventListener tables, which taints them.
+-- Blizzard UI that later loads the same IDs (e.g. the professions book loading its spell buttons)
+-- then runs tainted: its protected SetShown calls get blocked and CooldownFrame_Set errors on secret values.
+local pendingLoads = {
+    SPELL_DATA_LOAD_RESULT = {},
+    ITEM_DATA_LOAD_RESULT = {},
+}
+
+local loaderFrame = CreateFrame("Frame")
+loaderFrame:RegisterEvent("SPELL_DATA_LOAD_RESULT")
+loaderFrame:RegisterEvent("ITEM_DATA_LOAD_RESULT")
+loaderFrame:SetScript("OnEvent", function(_, event, id, success)
+    local pending = pendingLoads[event]
+    local callbacks = pending and pending[id]
+    if not callbacks then
+        return
+    end
+    pending[id] = nil
+    -- Same as Blizzard's listeners: item callbacks run even on failure, spell callbacks only on success
+    if success or event == "ITEM_DATA_LOAD_RESULT" then
+        for _, callback in ipairs(callbacks) do
+            xpcall(callback, geterrorhandler())
+        end
+    end
+end)
+
+local function continueOnLoad(event, id, isCached, requestLoad, callback)
+    if isCached(id) then
+        callback()
+        return
+    end
+    local pending = pendingLoads[event]
+    if pending[id] then
+        table.insert(pending[id], callback)
+        return
+    end
+    pending[id] = {callback} -- Set before requesting, as the result may fire synchronously
+    requestLoad(id)
+end
+
+local function continueOnSpellLoad(spellID, callback)
+    continueOnLoad("SPELL_DATA_LOAD_RESULT", spellID, C_Spell.IsSpellDataCached, C_Spell.RequestLoadSpellData, callback)
+end
+
+local function continueOnItemLoad(itemID, callback)
+    continueOnLoad("ITEM_DATA_LOAD_RESULT", itemID, C_Item.IsItemDataCachedByID, C_Item.RequestLoadItemDataByID, callback)
+end
+
 -- Spells have no quality, so they take the one of the item they craft
 local function cacheCraftedItemQuality(recipeID, professionID)
     local recipe = rm.cachedRecipes[professionID][recipeID]
     if recipe.craftedItem and C_Item.DoesItemExistByID(recipe.craftedItem) then
-        local craftedItem = Item:CreateFromItemID(recipe.craftedItem)
-        craftedItem:ContinueOnItemLoad(function()
-            recipe.quality = craftedItem:GetItemQuality() or recipe.quality
+        local craftedItemID = recipe.craftedItem
+        continueOnItemLoad(craftedItemID, function()
+            recipe.quality = C_Item.GetItemQualityByID(craftedItemID) or recipe.quality
         end)
     end
 end
@@ -54,16 +103,14 @@ local function cacheAllRecipes()
         rm.recipesBySource[professionID] = {}
         for recipeID, rawRecipeData in pairs(rm.recipeDB[professionID]) do
             if rawRecipeData.isSpell then
-                local spell = Spell:CreateFromSpellID(recipeID)
-                spell:ContinueOnSpellLoad(function()
+                continueOnSpellLoad(recipeID, function()
                     rm.storeSpellData(recipeID, rawRecipeData, professionID)
                     storeCachedCraftedItem(recipeID, professionID)
                     cacheCraftedItemQuality(recipeID, professionID)
                     storeCachedRecipeBySource(recipeID, professionID)
                 end)
             else
-                local recipe = Item:CreateFromItemID(recipeID)
-                recipe:ContinueOnItemLoad(function()
+                continueOnItemLoad(recipeID, function()
                     rm.storeRecipeData(recipeID, rawRecipeData, professionID)
                     storeCachedCraftedItem(recipeID, professionID)
                     storeCachedRecipeBySource(recipeID, professionID)
@@ -79,9 +126,8 @@ local function cacheAllItemNames()
             if recipeSources["item"] then
                 for itemID in pairs(recipeSources["item"]) do
                     if not rm.cachedItemNames[itemID] then
-                        local item = Item:CreateFromItemID(itemID)
-                        item:ContinueOnItemLoad(function()
-                            rm.cachedItemNames[itemID] = item:GetItemName()
+                        continueOnItemLoad(itemID, function()
+                            rm.cachedItemNames[itemID] = C_Item.GetItemNameByID(itemID)
                         end)
                     end
                 end
